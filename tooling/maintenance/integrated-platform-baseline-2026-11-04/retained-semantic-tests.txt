@@ -1,0 +1,1430 @@
+test/semantic-mutation-execution.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import {
+  effectivePropertyMutationOperation,
+  hasPresentMutationValue,
+  isPropertyMutationOperation,
+  mutationDeltaFact,
+} from "../sdk/core/semantic-mutation-execution.mjs";
+
+test("property mutation family is authored without admitting context operations", () => {
+  for (const operation of ["setProperty", "appendProperty", "clearProperty", "setFact", "tombstoneFact", "addFact", "removeFact", "detachRelation"]) {
+    assert.equal(isPropertyMutationOperation(operation), true);
+  }
+  assert.equal(isPropertyMutationOperation("attachContext"), false);
+  assert.equal(isPropertyMutationOperation("unknown"), false);
+});
+test("property mutation facts author polarity, metadata absence, and exact value presence", () => {
+  assert.deepEqual(mutationDeltaFact("s", "p", "o"), { s: "s", p: "p", o: "o", pol: "is" });
+  assert.deepEqual(mutationDeltaFact("s", "p", "o", "is-not", { source: "test" }), {
+    s: "s", p: "p", o: "o", pol: "is-not", source: "test",
+  });
+  assert.equal(hasPresentMutationValue({ value: undefined }), true);
+  assert.equal(hasPresentMutationValue({}), false);
+  assert.equal(hasPresentMutationValue(null), false);
+});
+
+test("effective property operation preserves explicit cardinality symmetry", () => {
+  assert.equal(effectivePropertyMutationOperation("setFact", "many"), "appendProperty");
+  assert.equal(effectivePropertyMutationOperation("setFact", "one"), "setProperty");
+  assert.equal(effectivePropertyMutationOperation("addFact", "min1"), "appendProperty");
+  assert.equal(effectivePropertyMutationOperation("addFact", "optional"), "setProperty");
+  assert.equal(effectivePropertyMutationOperation("tombstoneFact", "one"), "clearProperty");
+  assert.equal(effectivePropertyMutationOperation("removeFact", "many"), "removeFact");
+});
+
+
+test/semantic-mutation-action-diagnostics-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationActionDiagnosticsPlanValue } from "../../expression-algebra/src/operations/mutation-action-diagnostics.mjs";
+
+const policy = { contextDetailField: "context", subjectNotVisibleCode: "not-visible", subjectNotVisibleMessage: "Unknown {subject}.", actorLacksAuthorityCode: "denied", actorLacksAuthorityMessage: "{actor} cannot mutate {subject}.", noDiscoverableActionsCode: "empty", noDiscoverableActionsMessage: "No actions for {subject}." };
+
+test("action diagnostics planning preserves input, visibility, authority, and empty-action precedence", () => {
+  assert.deepEqual(mutationActionDiagnosticsPlanValue({ input: [{ code: "input" }], subject: "s", policy }), [{ code: "input" }]);
+  assert.deepEqual(mutationActionDiagnosticsPlanValue({ subject: "s", policy }), [{ code: "not-visible", subject: "s", message: "Unknown s." }]);
+  assert.deepEqual(mutationActionDiagnosticsPlanValue({ subject: "s", actor: "a", context: "ctx", subjectVisible: true, policy }), [{ code: "denied", actor: "a", subject: "s", context: "ctx", message: "a cannot mutate s." }]);
+  assert.deepEqual(mutationActionDiagnosticsPlanValue({ subject: "s", subjectVisible: true, authority: true, actionCount: 0, policy }), [{ code: "empty", actor: undefined, subject: "s", message: "No actions for s." }]);
+});
+
+
+test/semantic-mutation-action-inputs-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { normalizeSemanticActionDiscoveryInput } from "../sdk/core/semantic-mutation-action-discovery-input.mjs";
+import { actionDiscoveryInputDiagnostics } from "../sdk/core/semantic-mutation-action-diagnostics-input.mjs";
+
+test("action-input algebra preserves authored absence and refusal semantics", () => {
+  const discovery = normalizeSemanticActionDiscoveryInput();
+  assert.equal(discovery.actor, "");
+  assert.equal(discovery.context, "");
+  assert.deepEqual(actionDiscoveryInputDiagnostics("", "").map(issue => issue.code), ["missing-subject", "missing-actor"]);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-action-inputs-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-action-row-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { semanticActionRow, semanticMutationDescriptor } from "../sdk/core/semantic-mutation-action-row.mjs";
+
+test("action-row algebra preserves authored row and descriptor fields", () => {
+  const action = { kind: "semanticMutation" };
+  assert.deepEqual(semanticActionRow("edit", action), { kind: "context", text: "edit", action, semanticColorRole: "commandFg" });
+  assert.deepEqual(semanticMutationDescriptor("setProperty", "item", "", { predicate: "name" }), { kind: "semanticMutation", mutation: { operation: "setProperty", subject: "item", context: "", predicate: "name" } });
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-action-row-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-actions-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { buildSemanticMutationAction, buildDeleteSubjectAction, canonicalSemanticMutationOperations } from "../sdk/core/semantic-mutation-actions.mjs";
+test("canonical action adapter preserves operation vocabulary and descriptor shape", () => {
+  assert.deepEqual(canonicalSemanticMutationOperations(), ["setProperty", "addFact", "removeFact", "detachRelation", "deleteSubject", "reclassify", "createFacts"]);
+  assert.deepEqual(buildSemanticMutationAction({ operation: "setProperty", subject: "item", predicate: "name", value: "A", mutation: { extra: true } }), { kind: "semanticMutation", mutation: { operation: "setProperty", subject: "item", predicate: "name", value: "A", extra: true } });
+  assert.equal(buildDeleteSubjectAction({ subject: "item" }).title, "Delete subject");
+  assert.throws(() => buildSemanticMutationAction({ operation: "unknown" }), /Unsupported canonical semantic mutation operation/);
+});
+test("action builder contract declares no authority effect and explicit falsifiers", () => {
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-actions.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /unsupportedOperationProducesAction/);
+  assert.match(source, /suppliedMutationFieldsAreDropped/);
+});
+
+
+test/semantic-mutation-adapter-choice-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAdapterChoiceDetailsValue, mutationRequiresStrictChoiceValidationValue } from "../../expression-algebra/src/operations/mutation-adapter-choice.mjs";
+
+const policy = { adapterInterface: "Adapter", adapterPredicate: "mapping" };
+const contract = { iface: { type: "Adapter" }, slot: { predicate: "mapping" } };
+
+test("adapter-choice algebra derives exact and unnecessary transform rows", () => {
+  const rows = mutationAdapterChoiceDetailsValue({ contract, sourceType: "A", targetType: "B", transforms: [{ subject: "t", value: "A to B", sourceType: "A", targetType: "B" }], policy });
+  assert.deepEqual(rows[0], { value: "t", label: "A to B", disabled: false, reason: "" });
+  assert.equal(mutationAdapterChoiceDetailsValue({ contract, sourceType: "A", targetType: "A", transforms: [{ subject: "t", value: "A to A", sourceType: "A", targetType: "A" }], policy })[0].disabled, true);
+});
+
+test("adapter-choice algebra preserves non-adapter and missing-type absence", () => {
+  assert.equal(mutationAdapterChoiceDetailsValue({ contract: { iface: { type: "Thing" }, slot: { predicate: "mapping" } }, sourceType: "A", targetType: "B", policy }), null);
+  assert.deepEqual(mutationAdapterChoiceDetailsValue({ contract, sourceType: "", targetType: "B", transforms: [], policy }), []);
+  assert.equal(mutationRequiresStrictChoiceValidationValue(contract, policy), true);
+});
+
+
+test/semantic-mutation-admission-result-fields-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAdmissionResultFieldsValue } from "../../expression-algebra/src/operations/mutation-admission-result-fields.mjs";
+
+test("admission-result field algebra derives changed subjects and filters basis facts", () => {
+  const fields = mutationAdmissionResultFieldsValue({ delta: [{ s: "a" }, { s: "b" }, { s: "a" }], basisFacts: [{ s: "b", p: "x" }, { s: "c", p: "y" }] });
+  assert.deepEqual([...fields.changedSubjects], ["a", "b"]);
+  assert.deepEqual(fields.basisFacts, [{ s: "b", p: "x" }]);
+});
+
+test("admission-result field algebra preserves empty inputs", () => {
+  const fields = mutationAdmissionResultFieldsValue({});
+  assert.equal(fields.changedSubjects.size, 0);
+  assert.deepEqual(fields.basisFacts, []);
+});
+
+
+test/semantic-mutation-assignment-resolution-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAssignmentParentSubjectsValue, mutationAssignmentPredicateValue } from "../../expression-algebra/src/operations/mutation-assignment-resolution.mjs";
+
+test("assignment resolution algebra preserves predicate fallback and trimming", () => {
+  assert.equal(mutationAssignmentPredicateValue({ recordPredicate: "  direct  ", resolvedPredicate: "fallback" }), "direct");
+  assert.equal(mutationAssignmentPredicateValue({ recordPredicate: "", resolvedPredicate: "  fallback  " }), "fallback");
+  assert.equal(mutationAssignmentPredicateValue({ recordPredicate: undefined, resolvedPredicate: undefined }), "");
+});
+
+test("assignment resolution algebra preserves parent fact order and polarity filtering", () => {
+  assert.deepEqual(mutationAssignmentParentSubjectsValue([{ s: "p1", p: "parent", pol: "is" }, { s: "p2", p: "parent", pol: "is-not" }, { s: "p3", p: "other", pol: "is" }], "parent", "is-not"), ["p1"]);
+});
+
+
+test/semantic-mutation-authored-fact-tuple-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAuthoredFactTupleValue } from "../../expression-algebra/src/operations/mutation-authored-fact-tuple.mjs";
+
+const canonicalize = (type, value) => `${type}:${value}`;
+
+test("authored-fact tuple algebra canonicalizes every field and missing polarity", () => {
+  assert.deepEqual(mutationAuthoredFactTupleValue({ s: "subject", p: "predicate", o: "object" }, canonicalize, "is"), { s: "ref:subject", p: "string:predicate", o: "string:object", pol: "string:is" });
+});
+
+test("authored-fact tuple algebra preserves explicit polarity and rejects non-objects", () => {
+  assert.equal(mutationAuthoredFactTupleValue({ s: 42, p: undefined, o: null, pol: "is-not" }, canonicalize, "is").pol, "string:is-not");
+  assert.throws(() => mutationAuthoredFactTupleValue(null, canonicalize, "is"), /must be an object/);
+});
+
+
+test/semantic-mutation-authored-facts-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationUniqueReferenceListValue, mutationNonEmptyStringValue, mutationOneFactValueValue, mutationManyFactValuesValue } from "../../expression-algebra/src/operations/mutation-authored-facts.mjs";
+
+test("authored-facts collections preserve truthy first-occurrence and authored order", () => {
+  assert.deepEqual(mutationUniqueReferenceListValue(["a", "", "b", "a"]), ["a", "b"]);
+  assert.equal(mutationNonEmptyStringValue(" A "), "A");
+  assert.equal(mutationNonEmptyStringValue(""), "");
+  const facts = [{ s: "s", p: "p", o: "a" }, { s: "s", p: "p", o: "b" }];
+  assert.deepEqual(mutationOneFactValueValue(facts, "s", "p"), { ok: false, value: "", count: 2 });
+  assert.deepEqual(mutationManyFactValuesValue(facts, "s", "p"), ["a", "b"]);
+});
+
+
+test/semantic-mutation-authority-resolution-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAuthorityResolutionValue, mutationSanitizeReferencePartValue } from "../../expression-algebra/src/operations/mutation-authority-resolution.mjs";
+
+test("authority resolution preserves subject, helper, scope, and refusal precedence", () => {
+  assert.deepEqual(mutationAuthorityResolutionValue({ subject: "s", subjectAuthorized: true, helperTargets: ["h"] }), { allowed: true, mode: "subject", authoritySubject: "s", helperTargets: [] });
+  assert.deepEqual(mutationAuthorityResolutionValue({ subject: "s", helperTargets: ["h"], scopedTargets: ["z"], authorizedTarget: "z" }), { allowed: true, mode: "scope-target", authoritySubject: "z", helperTargets: ["h", "z"] });
+  assert.equal(mutationAuthorityResolutionValue({ subject: "s", helperTargets: ["h"] }).allowed, false);
+});
+
+test("reference-part sanitization preserves authored fallback and safe identity alphabet", () => {
+  assert.equal(mutationSanitizeReferencePartValue(" A/B ", "fallback"), "A_B");
+  assert.equal(mutationSanitizeReferencePartValue("!!!", "fallback"), "fallback");
+});
+
+
+test/semantic-mutation-authority-scope-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationScopedAuthorityTargetsValue } from "../../expression-algebra/src/operations/mutation-authority-scope.mjs";
+
+test("scope traversal follows direct targets before related targets", () => {
+  const direct = { root: "target", related: "" };
+  const related = { root: ["related"], related: [] };
+  assert.deepEqual(mutationScopedAuthorityTargetsValue("root", subject => direct[subject], subject => related[subject]), ["target"]);
+});
+
+test("scope traversal terminates cycles and preserves stable discovery order", () => {
+  const related = { a: ["b"], b: ["a", "c"], c: [] };
+  assert.deepEqual(mutationScopedAuthorityTargetsValue("a", subject => subject === "c" ? "target" : "", subject => related[subject]), ["target"]);
+  assert.deepEqual(mutationScopedAuthorityTargetsValue("", () => "", () => ["x"]), []);
+});
+
+
+test/semantic-mutation-binding-actions-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationBindingActionRowsValue } from "../../expression-algebra/src/operations/mutation-binding-actions.mjs";
+
+const policy = { actionKind: "SemanticMutationAction", rowKind: "SemanticMutationActionRow", rowColor: "mutation", renameBindingOperation: "rename", representBindingOperation: "represent", detachBindingOperation: "detach" };
+
+test("binding action algebra builds authorized rows and preserves binding defaults", () => {
+  const rows = mutationBindingActionRowsValue({ subject: "alice", context: "ctx", contextName: "Context", binding: { subject: "alice", name: "A", representation: "Alpha" }, authorized: { rename: true, represent: true, detach: true }, policy });
+  assert.deepEqual(rows.map(row => row.text), ["rename in [Context]...", "set representation in [Context]...", "detach from [Context]"]);
+  assert.equal(rows[0].action.prompt.defaultValue, "A");
+  assert.equal(rows[1].action.prompt.defaultValue, "Alpha");
+  assert.equal(rows[2].action.mutation.operation, "detach");
+});
+
+test("binding action algebra omits unauthorized and unbound detach rows", () => {
+  const rows = mutationBindingActionRowsValue({ subject: "alice", context: "ctx", binding: undefined, authorized: { rename: true, represent: true, detach: true }, policy });
+  assert.equal(rows.length, 2);
+  assert.equal(rows[0].action.prompt.defaultValue, "");
+});
+
+
+test/semantic-mutation-choice-rows-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { enumerationChoiceDetails } from "../sdk/core/semantic-mutation-choice-enumeration.mjs";
+import { adapterTransformChoiceRow } from "../sdk/core/semantic-mutation-choice-adapter-row.mjs";
+
+test("choice-row algebra preserves disabled reasons and exact transform matching", () => {
+  assert.deepEqual(enumerationChoiceDetails(["a", 2], new Set(["a"])), [
+    { value: "a", label: "a", disabled: true, reason: "already present" },
+    { value: "2", label: "2", disabled: false, reason: "" },
+  ]);
+  assert.equal(adapterTransformChoiceRow({ subject: "t", value: "T", sourceType: "a", targetType: "b" }, "a", "b", false).disabled, false);
+  assert.equal(adapterTransformChoiceRow({ subject: "t", value: "T", sourceType: "a", targetType: "b" }, "x", "b", false).disabled, true);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-choice-rows-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-choice-source-selection-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationChoiceSourceSelectionValue } from "../../expression-algebra/src/operations/mutation-choice-source-selection.mjs";
+
+test("choice-source algebra preserves provider, enumeration, adapter, reference precedence", () => {
+  const provider = [{ value: "provider" }];
+  const enumeration = [{ value: "enum" }];
+  const adapter = [{ value: "adapter" }];
+  const reference = [{ value: "reference" }];
+  assert.equal(mutationChoiceSourceSelectionValue({ provider, enumeration, adapter, reference, slotValueType: "ref" }), provider);
+  assert.equal(mutationChoiceSourceSelectionValue({ provider: null, enumeration, adapter, reference, slotValueType: "ref" }), enumeration);
+  assert.equal(mutationChoiceSourceSelectionValue({ provider: null, enumeration: null, adapter, reference, slotValueType: "ref" }), adapter);
+  assert.equal(mutationChoiceSourceSelectionValue({ provider: null, enumeration: null, adapter: null, reference, slotValueType: "ref" }), reference);
+});
+
+test("choice-source algebra refuses reference fallback for non-reference slots", () => {
+  assert.deepEqual(mutationChoiceSourceSelectionValue({ provider: null, enumeration: null, adapter: null, reference: [{ value: "ref" }], slotValueType: "string" }), []);
+});
+
+
+test/semantic-mutation-choice-validation-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationChoiceValidationPlanValue } from "../../expression-algebra/src/operations/mutation-choice-validation.mjs";
+
+test("choice validation planning preserves skip, valid, invalid, and disabled states", () => {
+  const choices = [{ value: "a", disabled: false }, { value: "b", disabled: true, reason: "already present" }];
+  assert.deepEqual(mutationChoiceValidationPlanValue({ strict: false, choices, value: "x" }), { status: "skip" });
+  assert.equal(mutationChoiceValidationPlanValue({ strict: true, choices, value: "a", subject: "s", predicate: "p" }).status, "ok");
+  assert.deepEqual(mutationChoiceValidationPlanValue({ strict: true, choices, value: "x", subject: "s", predicate: "p" }), { status: "invalid", subject: "s", predicate: "p", allowed: ["a"] });
+  assert.deepEqual(mutationChoiceValidationPlanValue({ strict: true, choices, value: "b", subject: "s", predicate: "p" }), { status: "disabled", subject: "s", predicate: "p", reason: "already present" });
+});
+
+
+test/semantic-mutation-compatible-contract-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationFirstCompatibleContractValue } from "../../expression-algebra/src/operations/mutation-compatible-contract.mjs";
+
+const first = { iface: { type: "Thing" }, slot: { predicate: "name", valueType: "string" }, editorKind: "text", canonicalValueType: "string" };
+
+test("compatible-contract algebra returns the first equivalent contract", () => {
+  assert.equal(mutationFirstCompatibleContractValue([first, { ...first, subject: "other" }]), first);
+});
+
+test("compatible-contract algebra refuses empty and mismatched candidates", () => {
+  assert.equal(mutationFirstCompatibleContractValue([]), null);
+  assert.equal(mutationFirstCompatibleContractValue([first, { ...first, slot: { predicate: "age", valueType: "number" } }]), null);
+});
+
+
+test/semantic-mutation-context-actions-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextActionRowsValue } from "../../expression-algebra/src/operations/mutation-context-actions.mjs";
+
+const policy = { actionKind: "SemanticMutationAction", rowKind: "SemanticMutationActionRow", rowColor: "mutation", attachOperation: "attach", referenceOperation: "reference" };
+
+test("context action algebra orders attach before reference and emits prompts", () => {
+  const rows = mutationContextActionRowsValue({ subject: "alice", spec: { subject: "ctx", name: "Context" }, member: false, hasReference: false, authorized: { attach: true, reference: true }, policy });
+  assert.deepEqual(rows.map(row => row.text), ["attach to [Context]...", "reference in [Context]..."]);
+  assert.equal(rows[0].action.prompt.allowBlank, true);
+  assert.equal(rows[1].action.mutation.context, "ctx");
+});
+
+test("context action algebra suppresses member and existing-reference rows", () => {
+  assert.deepEqual(mutationContextActionRowsValue({ subject: "alice", spec: { subject: "ctx", name: "Context" }, member: true, hasReference: false, authorized: { attach: true, reference: true }, policy }), []);
+  const rows = mutationContextActionRowsValue({ subject: "alice", spec: { subject: "ctx", name: "Context" }, member: false, hasReference: true, authorized: { attach: false, reference: true }, policy });
+  assert.deepEqual(rows, []);
+});
+
+
+test/semantic-mutation-context-edit-plan-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextEditPlanValue } from "../../expression-algebra/src/operations/mutation-context-edit-plan.mjs";
+
+const policy = { removeReferenceOperation: "remove-reference", renameReferenceOperation: "rename-reference", renameBindingOperation: "rename-binding", missingReference: "", missingName: "", missingRepresentation: "" };
+
+test("context edit plan classifies operations and authors defaults", () => {
+  assert.deepEqual(mutationContextEditPlanValue({ operation: "remove-reference", mutation: {}, policy }), { kind: "remove", reference: "", name: "", representation: "" });
+  assert.equal(mutationContextEditPlanValue({ operation: "rename-binding", mutation: { name: "Alias" }, policy }).kind, "rename");
+  assert.equal(mutationContextEditPlanValue({ operation: "represent-binding", mutation: { representation: "Thing" }, policy }).kind, "representation");
+});
+
+test("context edit plan preserves explicit values", () => {
+  assert.deepEqual(mutationContextEditPlanValue({ operation: "rename-reference", mutation: { reference: "r", name: "Alias", representation: "Thing" }, policy }), { kind: "rename", reference: "r", name: "Alias", representation: "Thing" });
+});
+
+
+test/semantic-mutation-context-execution-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextOperationPreparationValue } from "../../expression-algebra/src/operations/mutation-context-execution.mjs";
+
+test("context operation preparation classifies authored routes and defaults missing context", () => {
+  const routes = new Map([["attachContext", "attach"], ["renameReference", "referenceEdit"]]);
+  assert.deepEqual(mutationContextOperationPreparationValue("attachContext", undefined, routes, ""), { kind: "attach", context: "" });
+  assert.deepEqual(mutationContextOperationPreparationValue("unknown", "ctx", routes, ""), { kind: undefined, context: "ctx" });
+});
+
+
+test/semantic-mutation-context-execution-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextExecutionRefusalValue } from "../../expression-algebra/src/operations/mutation-context-execution-refusal.mjs";
+
+const policy = { unknownOperationDiagnostic: "unknown-op", unknownOperationStatus: 400, unknownContextDiagnostic: "unknown-context", unknownContextStatus: 404, deniedDiagnostic: "denied", deniedStatus: 403 };
+
+test("context-execution refusal algebra preserves unknown operation/context and authority cases", () => {
+  assert.equal(mutationContextExecutionRefusalValue({ reason: "unknown-operation", operation: "bad", policy }).statusCode, 400);
+  assert.equal(mutationContextExecutionRefusalValue({ reason: "unknown-context", context: "ctx", policy }).message, "Unknown context: ctx.");
+  assert.equal(mutationContextExecutionRefusalValue({ reason: "authority", actor: "a", subject: "s", context: "ctx", operation: "attach", scope: { authority: "edit", grant: "g" }, policy }).details.grant, "g");
+});
+
+test("context-execution refusal algebra returns no refusal for accepted paths", () => {
+  assert.equal(mutationContextExecutionRefusalValue({ reason: "accepted", policy }), null);
+});
+
+
+test/semantic-mutation-context-optional-fields-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextOptionalFieldsValue } from "../../expression-algebra/src/operations/mutation-context-optional-fields.mjs";
+
+test("optional context-field algebra trims supplied name and representation", () => {
+  assert.deepEqual(mutationContextOptionalFieldsValue({ name: " Alias ", representation: " Thing " }), { name: "Alias", representation: "Thing" });
+});
+
+test("optional context-field algebra makes absent and blank values explicit", () => {
+  assert.deepEqual(mutationContextOptionalFieldsValue({ name: "  ", representation: null }), { name: "", representation: "" });
+  assert.deepEqual(mutationContextOptionalFieldsValue(undefined), { name: "", representation: "" });
+});
+
+
+test/semantic-mutation-context-routes-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { semanticMutationRouteMap } from "../sdk/core/semantic-mutation-context-routes.mjs";
+
+test("context mutation route adapter preserves authored route rows and refusals", () => {
+  assert.deepEqual([...semanticMutationRouteMap(["attachContext|attach", "referenceContext|reference"])], [["attachContext", "attach"], ["referenceContext", "reference"]]);
+  assert.throws(() => semanticMutationRouteMap(["|attach"]), /Invalid context mutation route/);
+  assert.throws(() => semanticMutationRouteMap(["attachContext"]), /Invalid context mutation route/);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-context-routes.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /malformedRowIsSilentlyTruncated/);
+});
+
+
+test/semantic-mutation-context-state-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationActiveSubjectBindingsValue, mutationActiveSubjectReferencesValue, mutationExplicitBindingValue, mutationExplicitReferenceValue } from "../../expression-algebra/src/operations/mutation-context-state.mjs";
+
+test("context state selection filters bindings and references by target subject", () => {
+  assert.deepEqual(mutationActiveSubjectBindingsValue([{ memberSubject: "s" }, { memberSubject: "other" }], "s"), [{ memberSubject: "s" }]);
+  assert.deepEqual(mutationActiveSubjectReferencesValue([{ targetSubject: "s" }, { targetSubject: "other" }], "s"), [{ targetSubject: "s" }]);
+});
+
+test("explicit context selection preserves missing, unique, and requested reference semantics", () => {
+  const binding = { subject: "binding" };
+  assert.equal(mutationExplicitBindingValue([binding]), binding);
+  const references = [{ subject: "r1" }, { subject: "r2" }];
+  assert.equal(mutationExplicitReferenceValue(references, "r2").subject, "r2");
+  assert.equal(mutationExplicitReferenceValue(references), null);
+  assert.equal(mutationExplicitReferenceValue([{ subject: "r1" }]).subject, "r1");
+});
+
+
+test/semantic-mutation-context-visibility-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContextVisibilityRefusalValue } from "../../expression-algebra/src/operations/mutation-context-visibility-refusal.mjs";
+
+const policy = { invalidDiagnostic: "invalid" };
+
+test("context visibility refusal algebra preserves all authored reason messages", () => {
+  assert.equal(mutationContextVisibilityRefusalValue({ reason: "already-visible", subject: "s", context: "ctx", policy }).message, "Subject s is already visible in ctx.");
+  assert.equal(mutationContextVisibilityRefusalValue({ reason: "already-referenced", subject: "s", context: "ctx", policy }).message, "Subject s is already referenced in ctx.");
+  assert.equal(mutationContextVisibilityRefusalValue({ reason: "taxonomy-only", subject: "s", context: "ctx", policy }).message, "Subject s is only visible in ctx through taxonomy-wide membership.");
+  assert.equal(mutationContextVisibilityRefusalValue({ reason: "no-binding", subject: "s", context: "ctx", policy }).message, "Subject s has no explicit context binding in ctx.");
+});
+
+test("context visibility refusal algebra preserves unknown reason absence", () => {
+  assert.equal(mutationContextVisibilityRefusalValue({ reason: "accepted", subject: "s", context: "ctx", policy }), null);
+});
+
+
+test/semantic-mutation-contract-intrinsic-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationTimestampValidationValue } from "../../expression-algebra/src/operations/mutation-contract-intrinsic.mjs";
+
+test("timestamp validation admits canonical timezone forms and refuses noncanonical values", () => {
+  assert.equal(mutationTimestampValidationValue("2026-11-02T12:00:00Z"), "");
+  assert.equal(mutationTimestampValidationValue("2026-11-02T12:00:00.123+08:00"), "");
+  assert.match(mutationTimestampValidationValue("2026-11-02"), /canonical ISO 8601/);
+});
+
+
+test/semantic-mutation-contract-policy-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContractPolicyMergeValue } from "../../expression-algebra/src/operations/mutation-contract-policy.mjs";
+
+test("contract policy merge preserves provider precedence and field categories", () => {
+  const contract = { subject: "s", editorKind: "text", nested: { a: 1 } };
+  const merged = mutationContractPolicyMergeValue(contract, { editorKind: "choice", nested: { a: 2 } }, { editorKind: "number", nested: { b: 3 } }, ["editorKind"], ["nested"]);
+  assert.deepEqual(merged, { subject: "s", editorKind: "number", nested: { b: 3 } });
+  assert.strictEqual(mutationContractPolicyMergeValue(contract, null, null, ["editorKind"], ["nested"]), contract);
+});
+
+
+test/semantic-mutation-contract-prompt-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContractPromptValidationValue } from "../../expression-algebra/src/operations/mutation-contract-prompt.mjs";
+
+test("contract prompt validation preserves numeric and sibling-bound rules", () => {
+  assert.equal(mutationContractPromptValidationValue({ kind: "positiveNumber" }, 1), "");
+  assert.match(mutationContractPromptValidationValue({ kind: "positiveNumber" }, 0), /positive number/);
+  assert.equal(mutationContractPromptValidationValue({ kind: "lessThanSiblingNumber", siblingPredicate: "max", siblingValue: 10 }, 9), "");
+  assert.match(mutationContractPromptValidationValue({ kind: "lessThanSiblingNumber", siblingPredicate: "max", siblingValue: 10 }, 10), /must stay below max 10/);
+  assert.match(mutationContractPromptValidationValue({ kind: "greaterThanSiblingNumber", siblingValue: 10 }, 10, "the paired value"), /must stay above the paired value 10/);
+});
+
+
+test/semantic-mutation-contract-resolution-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPreferredSiblingTextValue, mutationAssignmentSiblingValueValue } from "../../expression-algebra/src/operations/mutation-contract-resolution.mjs";
+
+test("contract resolution prefers projected sibling values over current values", () => {
+  assert.equal(mutationPreferredSiblingTextValue("projected", "current", "missing"), "projected");
+  assert.equal(mutationPreferredSiblingTextValue("", "current", "missing"), "current");
+  assert.equal(mutationPreferredSiblingTextValue("", "", "missing"), "missing");
+});
+
+test("assignment sibling selection preserves candidate order and predicate matching", () => {
+  assert.equal(mutationAssignmentSiblingValueValue([
+    { projectedPredicate: "other", currentPredicate: "", projectedValue: "x", currentValue: "" },
+    { projectedPredicate: "name", currentPredicate: "", projectedValue: "Projected", currentValue: "Current" },
+  ], "name", "missing"), "Projected");
+  assert.equal(mutationAssignmentSiblingValueValue([], "name", "missing"), "missing");
+});
+
+
+test/semantic-mutation-contract-validation-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationContractValidationPlanValue } from "../../expression-algebra/src/operations/mutation-contract-validation.mjs";
+
+test("contract validation planning preserves intrinsic-before-duplicate ordering and normalized fields", () => {
+  assert.deepEqual(mutationContractValidationPlanValue({ intrinsicReason: "bad timestamp", duplicateReason: "duplicate", subject: "s", predicate: "p", value: "x" }), { status: "invalid", subject: "s", diagnosticSubject: "s", predicate: "p", value: "x", reason: "bad timestamp" });
+  assert.deepEqual(mutationContractValidationPlanValue({ duplicateReason: "duplicate", subject: undefined, predicate: undefined, value: "x" }), { status: "invalid", subject: "<unknown>", diagnosticSubject: "", predicate: "", value: "x", reason: "duplicate" });
+  assert.deepEqual(mutationContractValidationPlanValue({}), { status: "ok" });
+});
+
+
+test/semantic-mutation-contract-values-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { currentRecordValue, existingContractValues } from "../sdk/core/semantic-mutation-contract-values.mjs";
+
+test("contract-value algebra preserves scalar, array, and assignment absence semantics", () => {
+  assert.equal(currentRecordValue({ name: ["A", "B"] }, "name"), "A");
+  assert.equal(currentRecordValue({ name: null }, "name"), "");
+  assert.deepEqual(existingContractValues({ viaAssignment: true, slot: { predicate: "name" }, record: { name: "A" } }), []);
+  assert.deepEqual(existingContractValues({ slot: { predicate: "name" }, record: { name: ["A", "B"] } }), ["A", "B"]);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-contract-values-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-create-facts-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationCreateFactsSubjectTypesValue } from "../../expression-algebra/src/operations/mutation-create-facts.mjs";
+
+test("create-facts subject types preserve authored order and remove duplicates", () => {
+  assert.deepEqual(mutationCreateFactsSubjectTypesValue([{ p: "isa", o: "Person" }, { p: "name", o: "A" }, { p: "isa", o: "Person" }, { p: "isa", o: "Team" }]), ["Person", "Team"]);
+});
+
+
+test/semantic-mutation-delete-subject-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationDeleteSubjectDeltaValue } from "../../expression-algebra/src/operations/mutation-delete-subject.mjs";
+
+test("delete-subject delta negates every supplied current positive fact in order", () => {
+  const deltaFact = (s, p, o, pol, meta) => ({ s, p, o, pol, meta });
+  assert.deepEqual(mutationDeleteSubjectDeltaValue("s", [{ p: "isa", o: "Person" }, { p: "name", o: "A" }], "is-not", deltaFact, { source: "test" }), [
+    { s: "s", p: "isa", o: "Person", pol: "is-not", meta: { source: "test" } },
+    { s: "s", p: "name", o: "A", pol: "is-not", meta: { source: "test" } },
+  ]);
+});
+
+
+test/semantic-mutation-delete-subject-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationDeleteSubjectRefusalValue } from "../../expression-algebra/src/operations/mutation-delete-subject-refusal.mjs";
+
+const policy = { incomingDiagnostic: "incoming", incomingStatus: 409, emptyDiagnostic: "empty", emptyStatus: 404 };
+
+test("delete-subject refusal algebra preserves incoming-reference evidence", () => {
+  const refusal = mutationDeleteSubjectRefusalValue({ reason: "incoming", subject: "s", references: [{ s: "other", p: "link" }], policy });
+  assert.deepEqual(refusal.details.references, [{ subject: "other", predicate: "link" }]);
+  assert.equal(refusal.statusCode, 409);
+});
+
+test("delete-subject refusal algebra preserves empty-current-facts refusal", () => {
+  assert.equal(mutationDeleteSubjectRefusalValue({ reason: "empty", subject: "s", policy }).message, "Subject s has no current facts to delete.");
+  assert.equal(mutationDeleteSubjectRefusalValue({ reason: "accepted", subject: "s", policy }), null);
+});
+
+
+test/semantic-mutation-dispatch-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { classifySemanticMutationDispatch } from "../sdk/core/semantic-mutation-dispatch.mjs";
+
+test("mutation dispatch preserves exact, property, and context precedence", () => {
+  const helpers = { isPropertyOperation: operation => operation === "setProperty" };
+  const options = { exactRoutes: new Map([["deleteSubject", "subject"]]), propertyRoute: "property", contextRoute: "context" };
+  assert.equal(classifySemanticMutationDispatch("deleteSubject", { ...helpers }), "delete");
+  assert.equal(classifySemanticMutationDispatch("setProperty", { ...helpers }), "property");
+  assert.equal(classifySemanticMutationDispatch("attachContext", { ...helpers }), "contextCandidate");
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-dispatch-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-duplicate-choice-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationDuplicateChoiceReasonValue } from "../../expression-algebra/src/operations/mutation-duplicate-choice.mjs";
+
+const policy = { duplicateReferenceReason: "duplicate reference", duplicateScalarReason: "duplicate scalar" };
+
+test("duplicate-choice algebra preserves operation, eligibility, and slot polarity", () => {
+  assert.equal(mutationDuplicateChoiceReasonValue({ operation: "append", duplicateOperation: "append", value: "x", existingValues: ["x"], compatibleRefType: "Thing", refSlot: true, policy }), "duplicate reference");
+  assert.equal(mutationDuplicateChoiceReasonValue({ operation: "append", duplicateOperation: "append", value: "x", existingValues: ["x"], allowedValues: ["x"], refSlot: false, policy }), "duplicate scalar");
+});
+
+test("duplicate-choice algebra refuses non-duplicates and ineligible contracts", () => {
+  assert.equal(mutationDuplicateChoiceReasonValue({ operation: "set", duplicateOperation: "append", value: "x", existingValues: ["x"], compatibleRefType: "Thing", policy }), "");
+  assert.equal(mutationDuplicateChoiceReasonValue({ operation: "append", duplicateOperation: "append", value: "x", existingValues: ["y"], allowedValues: ["x"], policy }), "");
+  assert.equal(mutationDuplicateChoiceReasonValue({ operation: "append", duplicateOperation: "append", value: "x", existingValues: ["x"], policy }), "");
+});
+
+
+test/semantic-mutation-editable-prompt-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { normalizeMutationEditablePromptInputValue, mutationEditablePromptModeValue } from "../../expression-algebra/src/operations/mutation-editable-prompt.mjs";
+
+test("editable prompt input normalization preserves supplied providers and defaults", () => {
+  const normalized = normalizeMutationEditablePromptInputValue({ subject: "s", predicate: "p", mode: "add" }, { missingCurrentContext: "none", missingMode: "set", missingProfiler: null });
+  assert.equal(normalized.subject, "s");
+  assert.equal(normalized.currentContext, "none");
+  assert.deepEqual(normalized.choiceDetailsProviders, []);
+  assert.equal(normalized.profiler, null);
+});
+
+test("editable prompt mode derives add/set and assignment labels", () => {
+  const policy = { addMode: "add", setMode: "set", manyCardinality: "many" };
+  assert.deepEqual(mutationEditablePromptModeValue({ slot: { cardinality: "many", predicate: "tag" } }, "set", "tag", policy), { adding: true, mode: "add", fieldLabel: "tag" });
+  assert.deepEqual(mutationEditablePromptModeValue({ viaAssignment: true, slot: { cardinality: "one", predicate: "name" } }, "set", "alias", policy), { adding: false, mode: "set", fieldLabel: "name" });
+});
+
+
+test/semantic-mutation-editable-prompt-default-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationEditablePromptDefaultValue } from "../../expression-algebra/src/operations/mutation-editable-prompt-default.mjs";
+
+test("editable-prompt default algebra preserves assignment and add defaults", () => {
+  const canonical = (slot, record) => record[slot?.predicate] || "canonical";
+  assert.equal(mutationEditablePromptDefaultValue({ contract: { viaAssignment: true, slot: { predicate: "value" } }, record: { requested: 42 }, requestedPredicate: "requested", adding: false, currentCanonicalDefault: canonical }), "42");
+  assert.equal(mutationEditablePromptDefaultValue({ contract: { slot: { predicate: "value" } }, record: {}, adding: true, currentCanonicalDefault: canonical }), "canonical");
+});
+
+test("editable-prompt default algebra uses current record for set mode", () => {
+  const canonical = (slot, record, typed) => typed[slot.predicate] || record[slot.predicate] || "none";
+  assert.equal(mutationEditablePromptDefaultValue({ contract: { slot: { predicate: "value" } }, record: { value: "current" }, typedRecord: { value: "typed" }, adding: false, currentCanonicalDefault: canonical }), "typed");
+  assert.equal(mutationEditablePromptDefaultValue({ contract: { viaAssignment: true, slot: { predicate: "value" } }, record: {}, requestedPredicate: "requested", adding: false, currentCanonicalDefault: canonical }), "");
+});
+
+
+test/semantic-mutation-editable-prompt-shape-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationEditablePromptEditorValue, mutationEditablePromptShapeValue } from "../../expression-algebra/src/operations/mutation-editable-prompt-shape.mjs";
+
+const policy = { choiceEditor: "choice", timestampEditor: "timestamp", referenceValueType: "ref" };
+
+test("editable-prompt editor algebra prioritizes choices and canonical types", () => {
+  assert.deepEqual(mutationEditablePromptEditorValue({ slot: { valueType: "string" }, spec: { editorKind: "text", canonicalValueType: "date" }, choiceDetails: [], policy }), { editorKind: "text", valueType: "date" });
+  assert.equal(mutationEditablePromptEditorValue({ slot: { valueType: "ref" }, spec: {}, choiceDetails: [{ value: "x" }], policy }).editorKind, "choice");
+});
+
+test("editable-prompt shape algebra preserves choices, validation, merges, and ref fallback", () => {
+  const prompt = mutationEditablePromptShapeValue({ base: { message: "M", editorKind: "text", valueType: "ref" }, contract: { slot: { valueType: "ref" } }, choiceDetails: [{ value: "x", disabled: true }], mergeCandidates: [{ value: "x" }], validation: { kind: "required" }, fallbackPrompt: { manual: true }, policy });
+  assert.deepEqual(prompt.choices, ["x"]);
+  assert.deepEqual(prompt.choiceDetails, [{ value: "x", disabled: true }]);
+  assert.deepEqual(prompt.mergeCandidates, [{ value: "x" }]);
+  assert.deepEqual(prompt.contractValidation, { kind: "required" });
+  assert.equal(prompt.manual, true);
+  const empty = mutationEditablePromptShapeValue({ base: { valueType: "ref" }, contract: { slot: { valueType: "ref" } }, fallbackPrompt: { manual: true }, policy });
+  assert.equal(empty.manual, true);
+});
+
+
+test/semantic-mutation-fact-state-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { mutationPolarityDelta, latestMutationPredicateValue } from "../sdk/core/semantic-mutation-fact-polarity.mjs";
+import { activeMutationEntries } from "../sdk/core/semantic-mutation-fact-fold.mjs";
+
+const policy = { positivePolarity: "is", negativePolarity: "is-not" };
+test("fact-state algebra preserves polarity, latest-value, and active-fold behavior", () => {
+  assert.equal(mutationPolarityDelta(policy, "is"), 1);
+  assert.equal(mutationPolarityDelta(policy, "is-not"), -1);
+  assert.equal(latestMutationPredicateValue(policy, [{ pol: "is", o: "old" }, { pol: "is-not", o: "old" }, { pol: "is", o: "new" }]), "new");
+  assert.deepEqual(activeMutationEntries(policy, [{ s: "x", pol: "is" }, { s: "x", pol: "is-not" }, { s: "y", pol: "is" }], fact => fact.s, fact => fact.s), ["y"]);
+  assert.throws(() => mutationPolarityDelta(policy, "unknown"), /Unknown mutation fact polarity/);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-fact-state-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /unknownPolarityIsSilentlyAccepted/);
+});
+
+
+test/semantic-mutation-known-context-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationKnownContextValue } from "../../expression-algebra/src/operations/mutation-known-context.mjs";
+
+test("known-context algebra selects the first exact subject match", () => {
+  const match = { subject: "ctx", name: "Context" };
+  assert.equal(mutationKnownContextValue([{ subject: "other" }, match, { subject: "ctx", name: "later" }], "ctx"), match);
+});
+
+test("known-context algebra preserves missing-context absence", () => {
+  assert.equal(mutationKnownContextValue([{ subject: "ctx" }], "missing"), undefined);
+  assert.equal(mutationKnownContextValue(undefined, "ctx"), undefined);
+});
+
+
+test/semantic-mutation-lifecycle-values-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { deriveSemanticMutationProvenance } from "../sdk/core/semantic-mutation-lifecycle-provenance.mjs";
+import { normalizeSemanticMutationOptions as normalizeOptions } from "../sdk/core/semantic-mutation-lifecycle-options.mjs";
+
+test("lifecycle algebra preserves provenance and explicit option defaults", () => {
+  assert.deepEqual(deriveSemanticMutationProvenance("actor", { operation: "setProperty", subject: "item" }), { actor: "actor", authoredBy: { mutation: "setProperty" } });
+  const options = normalizeOptions();
+  assert.equal(options.actor, "anon");
+  assert.deepEqual(options.createFactsHandlers, []);
+  assert.equal(options.profiler, null);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-lifecycle-values.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /absentOptionGetsAuthoredDefault/);
+});
+
+
+test/semantic-mutation-merge-candidate-row-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationMergeCandidateRowValue } from "../../expression-algebra/src/operations/mutation-merge-candidate-row.mjs";
+
+const policy = { relationKind: "Assignment", targetFamily: "AssignmentTarget", unknownSubjectLabel: "?", unknownSlotLabel: "?", unknownValueLabel: "?", disabledState: "disabled", currentState: "current", availableState: "available", blockedReasonFallback: "blocked", addOperation: "append", setOperation: "set", eligibleValueType: "ref" };
+
+test("merge-candidate row algebra derives available and commit descriptor fields", () => {
+  const row = mutationMergeCandidateRowValue({ contract: { subject: "target", parentSubject: "parent", slot: { predicate: "assignment" } }, choice: { value: "source", label: "Source" }, mode: "add", state: "available", outcomeClass: "committable", policy });
+  assert.equal(row.id, "Assignment:target:assignment:source");
+  assert.equal(row.title, "Bind Source");
+  assert.equal(row.commitDescriptor.operation, "append");
+  assert.equal(row.ownerSubject, "parent");
+});
+
+test("merge-candidate row algebra preserves current and disabled refusal language", () => {
+  const args = { contract: { subject: "target", slot: { predicate: "assignment" } }, choice: { value: "source", label: "Source", reason: "incompatible" }, mode: "set", policy };
+  assert.equal(mutationMergeCandidateRowValue({ ...args, state: "current", outcomeClass: "current" }).detail, "Source is already bound to target.assignment.");
+  const disabled = mutationMergeCandidateRowValue({ ...args, state: "disabled", outcomeClass: "blocked" });
+  assert.equal(disabled.detail, "Cannot bind Source to target.assignment: incompatible.");
+  assert.equal(disabled.disabledReason, "incompatible");
+});
+
+
+test/semantic-mutation-merge-state-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { mergeCandidateState, mergeCandidateOutcomeClass } from "../sdk/core/semantic-mutation-merge-candidate-state.mjs";
+
+test("merge candidate algebra preserves disabled/current/available symmetry", () => {
+  assert.equal(mergeCandidateState({ disabled: true, value: "x" }, "x"), "blocked");
+  assert.equal(mergeCandidateState({ disabled: false, value: "x" }, "x"), "staged");
+  assert.equal(mergeCandidateState({ disabled: false, value: "y" }, "x"), "committable");
+  assert.equal(mergeCandidateOutcomeClass("blocked"), "conflict");
+  assert.equal(mergeCandidateOutcomeClass("committable"), "composition");
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-merge-state-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-presentation-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { slotEditorCopy } from "../sdk/core/semantic-mutation-presentation-editor.mjs";
+import { currentCanonicalDefault } from "../sdk/core/semantic-mutation-presentation-default.mjs";
+
+test("presentation algebra preserves editor copy and canonical default symmetry", () => {
+  assert.equal(slotEditorCopy({ valueType: "string" }, "add").title, "Add");
+  assert.equal(slotEditorCopy({ valueType: "ref" }, "set").title, "Change");
+  assert.equal(currentCanonicalDefault({ predicate: "enabled", valueType: "boolean", allowed: [] }, {}, {}), "false");
+  assert.equal(currentCanonicalDefault({ predicate: "state", valueType: "string", allowed: ["ready"] }, {}, {}), "ready");
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-presentation-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-presentation-reference-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationFallbackReferencePromptValue } from "../../expression-algebra/src/operations/mutation-presentation-reference.mjs";
+
+test("fallback reference prompt remains empty without an authored compatible type", () => {
+  assert.deepEqual(mutationFallbackReferencePromptValue({}), {});
+});
+
+test("fallback reference prompt composes the optional visible context", () => {
+  assert.deepEqual(mutationFallbackReferencePromptValue({ compatibleRefType: "Person" }, "workspace"), { fallbackMessage: "No compatible Person visible in workspace is currently visible. Enter a reference manually." });
+});
+
+
+test/semantic-mutation-projection-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationVisibleRecordValue, mutationIncomingProjectionReferencesValue, mutationActiveInterfaceValue, mutationSlotForPredicateValue } from "../../expression-algebra/src/operations/mutation-projection.mjs";
+
+const policy = { typeField: "isa", slotPredicateField: "predicate", missingTargetSubject: "" };
+
+test("projection algebra derives visible records and incoming references", () => {
+  const projection = { a: { isa: ["Person"], friend: ["b"] }, b: { isa: ["Person"] }, hidden: { friend: ["b"] } };
+  assert.equal(mutationVisibleRecordValue(projection, "a", policy), projection.a);
+  assert.deepEqual(mutationIncomingProjectionReferencesValue(projection, "b", policy), [{ subject: "a", predicate: "friend" }]);
+});
+
+test("projection algebra selects the first active interface and exact slot", () => {
+  const interfaces = new Map([["Person", { type: "Person", slots: [{ predicate: "name" }] }]]);
+  const iface = mutationActiveInterfaceValue({ isa: ["Person"] }, interfaces, policy);
+  assert.equal(iface.type, "Person");
+  assert.deepEqual(mutationSlotForPredicateValue(iface, "name", policy), { predicate: "name" });
+  assert.equal(mutationSlotForPredicateValue(iface, "missing", policy), null);
+});
+
+
+test/semantic-mutation-property-canonicalization-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyCanonicalizationRefusalValue } from "../../expression-algebra/src/operations/mutation-property-canonicalization-refusal.mjs";
+
+const policy = { missingValueType: "value", invalidValueDiagnostic: "invalid-value", invalidValueStatus: 400 };
+
+test("property-canonicalization refusal algebra preserves value type and evidence", () => {
+  const refusal = mutationPropertyCanonicalizationRefusalValue({ subject: "item", slot: { predicate: "count", valueType: "number" }, value: "x", errorMessage: "not numeric", policy });
+  assert.deepEqual(refusal, { code: "invalid-value", message: "Mutation value for item.count is not a canonical number: not numeric", details: { subject: "item", predicate: "count", valueType: "number", value: "x" }, statusCode: 400 });
+});
+
+test("property-canonicalization refusal algebra uses authored missing value type", () => {
+  assert.equal(mutationPropertyCanonicalizationRefusalValue({ subject: "item", slot: { predicate: "value" }, value: "x", errorMessage: "bad", policy }).message, "Mutation value for item.value is not a canonical value: bad");
+});
+
+
+test/semantic-mutation-property-clear-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyClearPlanValue } from "../../expression-algebra/src/operations/mutation-property-clear.mjs";
+
+test("property clear planning preserves clearability and current-value refusal states", () => {
+  assert.deepEqual(mutationPropertyClearPlanValue({ clearable: false }), { ok: false, reason: "not-clearable" });
+  assert.deepEqual(mutationPropertyClearPlanValue({ clearable: true, current: null }), { ok: false, reason: "not-set" });
+  assert.deepEqual(mutationPropertyClearPlanValue({ clearable: true, current: "a", hasMutationValue: true, canonicalValue: "b", cardinality: "one", unboundedCardinality: "many" }), { ok: false, reason: "not-current", target: "b" });
+  assert.deepEqual(mutationPropertyClearPlanValue({ clearable: true, current: "a", cardinality: "one", unboundedCardinality: "many" }), { ok: true, target: "a" });
+});
+
+
+test/semantic-mutation-property-clear-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyClearRefusalValue } from "../../expression-algebra/src/operations/mutation-property-clear-refusal.mjs";
+
+const policy = { clearDiagnostic: "clear", notSetDiagnostic: "not-set", notFoundStatus: 404 };
+
+test("property-clear refusal algebra preserves clearability and missing-value diagnostics", () => {
+  assert.equal(mutationPropertyClearRefusalValue({ reason: "not-clearable", subject: "s", predicate: "p", cardinality: "one", policy }).code, "clear");
+  assert.equal(mutationPropertyClearRefusalValue({ reason: "not-set", subject: "s", predicate: "p", policy }).message, "Subject s has no current p value to clear.");
+  assert.equal(mutationPropertyClearRefusalValue({ reason: "not-current", subject: "s", predicate: "p", target: "x", current: "y", policy }).statusCode, 404);
+});
+
+test("property-clear refusal algebra returns no refusal for accepted plans", () => {
+  assert.equal(mutationPropertyClearRefusalValue({ reason: undefined, subject: "s", predicate: "p", policy }), null);
+});
+
+
+test/semantic-mutation-property-plan.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { planPropertyMutation } from "../sdk/core/semantic-mutation-property-plan.mjs";
+import { readFileSync } from "node:fs";
+
+test("platform property planner preserves authored operation semantics", () => {
+  assert.equal(planPropertyMutation({ operation: "addFact", slot: { predicate: "name", cardinality: "one" } }).effectiveOperation, "setProperty");
+  const result = planPropertyMutation({ operation: "addFact", slot: { subject: "s", predicate: "name", cardinality: "one" }, currentValue: "old" });
+  assert.deepEqual(result.refusal, { code: "property-already-set", message: "Subject s already has name; addFact only fills an empty slot.", statusCode: 409, details: { subject: "s", predicate: "name", cardinality: "one" } });
+});
+
+test("property planner contract keeps authority and falsifiers explicit", () => {
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-property-plan.rel", import.meta.url), "utf8");
+  assert.match(source, /\("module\.semanticMutationPropertyPlan", "authorityEffect", "none"\)/);
+  assert.match(source, /occupiedSingleAddIsAccepted/);
+  assert.match(source, /appendToSingleSlotIsAccepted/);
+  assert.match(source, /nonReferenceDetachIsAccepted/);
+});
+
+
+test/semantic-mutation-property-removal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyRemovalPlanValue } from "../../expression-algebra/src/operations/mutation-property-removal.mjs";
+
+test("property removal planning preserves cardinality, membership, and minimum-one refusal states", () => {
+  const policy = { singleCardinality: "one", minimumOneCardinality: "min1" };
+  assert.deepEqual(mutationPropertyRemovalPlanValue({ current: ["a"], target: "a", cardinality: "one", ...policy }), { ok: false, reason: "not-removable" });
+  assert.deepEqual(mutationPropertyRemovalPlanValue({ current: [], target: "", cardinality: "many", ...policy }), { ok: false, reason: "not-set" });
+  assert.deepEqual(mutationPropertyRemovalPlanValue({ current: ["a"], target: "b", cardinality: "many", ...policy }), { ok: false, reason: "not-current" });
+  assert.deepEqual(mutationPropertyRemovalPlanValue({ current: ["a"], target: "a", cardinality: "min1", ...policy }), { ok: false, reason: "minimum-one" });
+  assert.deepEqual(mutationPropertyRemovalPlanValue({ current: ["a", "b"], target: "a", cardinality: "many", ...policy }), { ok: true, target: "a" });
+});
+
+
+test/semantic-mutation-property-removal-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyRemovalRefusalValue } from "../../expression-algebra/src/operations/mutation-property-removal-refusal.mjs";
+
+const policy = { removeDiagnostic: "remove", notSetDiagnostic: "not-set", notFoundStatus: 404, conflictStatus: 409 };
+
+test("property-removal refusal algebra preserves reason-specific messages", () => {
+  assert.equal(mutationPropertyRemovalRefusalValue({ reason: "not-removable", subject: "s", predicate: "p", cardinality: "one", policy }).code, "remove");
+  assert.equal(mutationPropertyRemovalRefusalValue({ reason: "not-current", subject: "s", predicate: "p", target: "x", current: ["y"], policy }).statusCode, 404);
+  assert.equal(mutationPropertyRemovalRefusalValue({ reason: "minimum-one", subject: "s", predicate: "p", cardinality: "min1", policy }).statusCode, 409);
+});
+
+test("property-removal refusal algebra returns no refusal for accepted plans", () => {
+  assert.equal(mutationPropertyRemovalRefusalValue({ reason: undefined, subject: "s", predicate: "p", policy }), null);
+});
+
+
+test/semantic-mutation-property-target-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyRemovalTargetValue } from "../../expression-algebra/src/operations/mutation-property-target.mjs";
+
+test("property removal target prefers explicit canonical value, then singleton current value", () => {
+  assert.deepEqual(mutationPropertyRemovalTargetValue({ hasMutationValue: true, canonicalValue: "b", current: ["a", "b"] }), { ok: true, target: "b" });
+  assert.deepEqual(mutationPropertyRemovalTargetValue({ current: ["a"] }), { ok: true, target: "a" });
+  assert.deepEqual(mutationPropertyRemovalTargetValue({ current: ["a", "b"] }), { ok: false, target: undefined });
+});
+
+
+test/semantic-mutation-property-write-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPropertyWriteDeltaValue } from "../../expression-algebra/src/operations/mutation-property-write.mjs";
+
+const deltaFact = (s, p, o, pol, meta) => meta === undefined ? ({ s, p, o, pol }) : ({ s, p, o, pol, meta });
+
+test("property write delta derives one value fact and optional blob MIME fact", () => {
+  assert.deepEqual(mutationPropertyWriteDeltaValue({ subject: "s", predicate: "name", value: "A", valueType: "string", polarity: "is" }, deltaFact), [{ s: "s", p: "name", o: "A", pol: "is" }]);
+  assert.deepEqual(mutationPropertyWriteDeltaValue({ subject: "s", predicate: "data", value: "blob", valueType: "blob", mimePredicate: "mimeType", mimeType: "text/plain", polarity: "is" }, deltaFact), [
+    { s: "s", p: "data", o: "blob", pol: "is" },
+    { s: "s", p: "mimeType", o: "text/plain", pol: "is" },
+  ]);
+});
+
+
+test/semantic-mutation-reclassification-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationAuthoredInterfaceTypesValue, mutationReclassificationPreservedPredicatesValue, mutationChoiceDefaultValue } from "../../expression-algebra/src/operations/mutation-reclassification.mjs";
+
+test("reclassification values preserve authored interface and predicate filtering", () => {
+  const interfaces = new Map([["Person", {}], ["Other", {}]]);
+  assert.deepEqual(mutationAuthoredInterfaceTypesValue({ isa: ["Person", "Missing", "Other"] }, interfaces), ["Person", "Other"]);
+  assert.deepEqual(mutationReclassificationPreservedPredicatesValue({ subject: "s", isa: ["Person"], name: "A", extra: true }, { mode: "closed", slots: [{ predicate: "name" }] }, { reservedPredicates: ["subject", "isa"], openMode: "open" }), ["name"]);
+});
+
+test("reclassification choice default prefers enabled values then deterministic fallback", () => {
+  assert.equal(mutationChoiceDefaultValue([{ value: "a", disabled: true }, { value: "b", disabled: false }]), "b");
+  assert.equal(mutationChoiceDefaultValue([{ value: "a", disabled: true }]), "a");
+  assert.equal(mutationChoiceDefaultValue([]), "");
+});
+
+
+test/semantic-mutation-reclassification-choice-rows-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReclassificationChoiceRowsValue } from "../../expression-algebra/src/operations/mutation-reclassification-choice-rows.mjs";
+
+test("reclassification choice algebra preserves current, unavailable, and incompatible rows", () => {
+  const interfaces = new Map([["A", {}], ["B", {}]]);
+  const rows = mutationReclassificationChoiceRowsValue({ knownTypes: ["A", "B", "C"], authoredTypes: ["A"], interfaces, compatibleIssues: iface => iface === interfaces.get("B") ? [{ reason: "missing required slot" }] : [] });
+  assert.deepEqual(rows, [{ value: "A", label: "A", disabled: false, reason: "" }, { value: "B", label: "B", disabled: true, reason: "missing required slot" }, { value: "C", label: "C", disabled: true, reason: "interface unavailable" }]);
+});
+
+test("reclassification choice algebra keeps known order and filters unknown current types", () => {
+  const rows = mutationReclassificationChoiceRowsValue({ knownTypes: ["B"], authoredTypes: ["A"], interfaces: new Map([["B", {}]]) });
+  assert.deepEqual(rows, [{ value: "B", label: "B", disabled: false, reason: "" }]);
+});
+
+
+test/semantic-mutation-reclassification-compatibility-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationPredicateCompatibilityIssuesValue, mutationRequiredSlotCompatibilityIssuesValue } from "../../expression-algebra/src/operations/mutation-reclassification-compatibility.mjs";
+
+test("compatibility planner preserves closed predicates, cardinality, and validator ordering", () => {
+  const policy = { closedMode: "closed" };
+  assert.deepEqual(mutationPredicateCompatibilityIssuesValue({ predicate: "x", values: [], targetIface: { type: "T", mode: "closed" }, policy }), [{ predicate: "x", reason: "x is not allowed on T" }]);
+  assert.deepEqual(mutationPredicateCompatibilityIssuesValue({ predicate: "x", values: ["a", "b"], slot: { many: false }, targetIface: { type: "T" }, policy }), [{ predicate: "x", reason: "x would violate T.x cardinality" }]);
+  assert.deepEqual(mutationPredicateCompatibilityIssuesValue({ predicate: "x", values: ["a"], slot: { many: true }, targetIface: { type: "T" }, policy, validateValue: () => "bad" }), [{ predicate: "x", reason: "bad" }]);
+});
+
+test("required compatibility refuses only absent required slots", () => {
+  const targetIface = { type: "T" };
+  assert.deepEqual(mutationRequiredSlotCompatibilityIssuesValue({ values: [], targetIface, slot: { predicate: "name", required: true } }), [{ predicate: "name", reason: "name is required by T" }]);
+  assert.deepEqual(mutationRequiredSlotCompatibilityIssuesValue({ values: ["A"], targetIface, slot: { predicate: "name", required: true } }), []);
+});
+
+
+test/semantic-mutation-reclassification-delta-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReclassificationTypeDeltaValue } from "../../expression-algebra/src/operations/mutation-reclassification-delta.mjs";
+
+test("reclassification type deltas replace authored interface types exactly", () => {
+  const deltaFact = (s, p, o, pol) => ({ s, p, o, pol });
+  assert.deepEqual(mutationReclassificationTypeDeltaValue("s", ["Person", "Old"], "New", "isa", "is-not", "is", deltaFact), [
+    { s: "s", p: "isa", o: "Person", pol: "is-not" },
+    { s: "s", p: "isa", o: "Old", pol: "is-not" },
+    { s: "s", p: "isa", o: "New", pol: "is" },
+  ]);
+  assert.deepEqual(mutationReclassificationTypeDeltaValue("s", ["New"], "New", "isa", "is-not", "is", deltaFact), []);
+});
+
+
+test/semantic-mutation-reclassification-prompt-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReclassificationPromptValue } from "../../expression-algebra/src/operations/mutation-reclassification-prompt.mjs";
+
+test("reclassification prompt algebra preserves order, enabled default, and details", () => {
+  const choices = [{ value: "A", disabled: true }, { value: "B", disabled: false }];
+  assert.deepEqual(mutationReclassificationPromptValue({ subject: "alice", choices }), { message: "Reclassify alice. Known types: A, B", defaultValue: "B", editorKind: "choice", choices: ["A", "B"], choiceDetails: choices });
+});
+
+test("reclassification prompt algebra falls back deterministically", () => {
+  assert.equal(mutationReclassificationPromptValue({ subject: "alice", choices: [{ value: "A", disabled: true }] }).defaultValue, "A");
+  assert.equal(mutationReclassificationPromptValue({ subject: "alice", choices: [] }).defaultValue, "");
+});
+
+
+test/semantic-mutation-reclassification-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReclassificationRefusalValue } from "../../expression-algebra/src/operations/mutation-reclassification-refusal.mjs";
+
+const policy = { deniedDiagnostic: "denied", deniedStatus: 403, invalidDiagnostic: "invalid", unknownTargetStatus: 404, incompatibleStatus: 409 };
+
+test("reclassification refusal algebra preserves authority, target, and compatibility evidence", () => {
+  assert.equal(mutationReclassificationRefusalValue({ reason: "authority", actor: "a", subject: "s", operation: "reclassify", scope: { authority: "classify", grant: "g" }, policy }).statusCode, 403);
+  assert.equal(mutationReclassificationRefusalValue({ reason: "unknown-target", subject: "s", type: "Missing", policy }).message, "Unknown interface type: Missing.");
+  assert.deepEqual(mutationReclassificationRefusalValue({ reason: "incompatible", subject: "s", type: "Thing", issues: [{ reason: "missing" }], policy }).details.issues, [{ reason: "missing" }]);
+});
+
+test("reclassification refusal algebra returns no refusal for accepted paths", () => {
+  assert.equal(mutationReclassificationRefusalValue({ reason: "accepted", subject: "s", policy }), null);
+});
+
+
+test/semantic-mutation-reference-actions-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceActionRowsValue } from "../../expression-algebra/src/operations/mutation-reference-actions.mjs";
+
+const policy = { actionKind: "semanticMutation", rowKind: "context", rowColor: "commandFg", renameReferenceOperation: "renameReference", representReferenceOperation: "representReference", removeReferenceOperation: "removeReference" };
+
+test("reference action rows preserve authorization order and authored prompt defaults", () => {
+  const rows = mutationReferenceActionRowsValue({ subject: "s", context: "ctx", contextName: "Context", reference: { subject: "ref", name: "Old", representation: "label" }, authorized: { rename: true, represent: true, remove: true }, policy });
+  assert.deepEqual(rows.map(row => row.text), ["rename reference in [Context]...", "set reference representation in [Context]...", "remove reference from [Context]"]);
+  assert.equal(rows[0].action.prompt.defaultValue, "Old");
+  assert.equal(rows[2].action.mutation.reference, "ref");
+});
+
+
+test/semantic-mutation-reference-choice-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceChoiceDetailsValue } from "../../expression-algebra/src/operations/mutation-reference-choice.mjs";
+
+test("reference choice rows sort candidates and preserve authored compatibility reasons", () => {
+  const rows = mutationReferenceChoiceDetailsValue(["b", "a"], { a: { isa: ["Person"], label: "Alice" }, b: { isa: ["Thing"], name: "Bee" } }, "Person", new Set(["a"]), "already present");
+  assert.deepEqual(rows, [
+    { value: "a", label: "Alice (a)", disabled: true, reason: "already present" },
+    { value: "b", label: "Bee (b)", disabled: true, reason: "not a Person" },
+  ]);
+});
+
+
+test/semantic-mutation-reference-creation-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceCreationRefusalValue } from "../../expression-algebra/src/operations/mutation-reference-creation-refusal.mjs";
+
+const policy = { invalidDiagnostic: "invalid", requiredNameStatus: 400 };
+
+test("reference-creation refusal algebra preserves visible/reference/name refusal semantics", () => {
+  assert.equal(mutationReferenceCreationRefusalValue({ reason: "already-visible", subject: "s", context: "ctx", policy }).message, "Subject s is already visible in ctx.");
+  assert.equal(mutationReferenceCreationRefusalValue({ reason: "already-referenced", subject: "s", context: "ctx", policy }).message, "Subject s is already referenced in ctx.");
+  assert.equal(mutationReferenceCreationRefusalValue({ reason: "missing-name", subject: "s", context: "ctx", policy }).statusCode, 400);
+});
+
+test("reference-creation refusal algebra returns no refusal for accepted paths", () => {
+  assert.equal(mutationReferenceCreationRefusalValue({ reason: "accepted", subject: "s", context: "ctx", policy }), null);
+});
+
+
+test/semantic-mutation-reference-edit-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceEditRefusalValue } from "../../expression-algebra/src/operations/mutation-reference-edit-refusal.mjs";
+
+const policy = { invalidDiagnostic: "invalid", requiredNameStatus: 400 };
+
+test("reference-edit refusal algebra preserves missing-reference and empty-name cases", () => {
+  assert.equal(mutationReferenceEditRefusalValue({ reason: "missing-reference", subject: "s", context: "ctx", policy }).message, "Subject s has no explicit context reference in ctx.");
+  assert.equal(mutationReferenceEditRefusalValue({ reason: "empty-name", subject: "s", context: "ctx", policy }).statusCode, 400);
+});
+
+test("reference-edit refusal algebra returns no refusal for accepted paths", () => {
+  assert.equal(mutationReferenceEditRefusalValue({ reason: "accepted", subject: "s", context: "ctx", policy }), null);
+});
+
+
+test/semantic-mutation-reference-representation-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceRepresentationAuthorityRefusalValue } from "../../expression-algebra/src/operations/mutation-reference-representation-refusal.mjs";
+
+test("reference-representation refusal algebra preserves authority evidence", () => {
+  assert.deepEqual(mutationReferenceRepresentationAuthorityRefusalValue({ actor: "a", subject: "s", context: "ctx", operation: "represent-reference", authority: "edit", grant: "g", policy: { deniedDiagnostic: "denied", deniedStatus: 403 } }), { code: "denied", message: "Actor a lacks represent-reference authority for s in ctx.", details: { actor: "a", subject: "s", context: "ctx", operation: "represent-reference", requiredAuthority: "edit", grant: "g" }, statusCode: 403 });
+});
+
+
+test/semantic-mutation-removal-actions-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationSingleRemovalActionValue, mutationMultipleRemovalActionValue } from "../../expression-algebra/src/operations/mutation-removal-actions.mjs";
+
+const policy = { referenceTitle: "Detach", ordinaryTitle: "Remove", referenceVerb: "detach", ordinaryVerb: "remove", fallbackValueType: "string", referenceOperation: "detachRelation", ordinaryOperation: "removeFact", answerField: "value", editorKind: "choice", stage: "value" };
+
+test("single removal builders preserve canonical ordinary and reference operations", () => {
+  assert.equal(mutationSingleRemovalActionValue("s", { predicate: "name", valueType: "string" }, "A", false, policy).mutation.operation, "removeFact");
+  assert.equal(mutationSingleRemovalActionValue("s", { predicate: "friend", valueType: "ref" }, "p", true, policy).mutation.operation, "detachRelation");
+});
+
+test("multiple removal builders preserve labelled choice prompts", () => {
+  const action = mutationMultipleRemovalActionValue("s", { predicate: "friend", valueType: "ref" }, ["p", "q"], { p: { label: "Pat" } }, true, policy);
+  assert.deepEqual(action.prompt.choices, ["p", "q"]);
+  assert.equal(action.prompt.defaultValue, "p");
+  assert.equal(action.mutation.operation, "detachRelation");
+});
+
+
+test/semantic-mutation-removal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationRemovalChoiceDetailsValue, mutationRemovalEligibilityValue } from "../../expression-algebra/src/operations/mutation-removal.mjs";
+
+test("removal choice details derive stable labels from projection records", () => {
+  assert.deepEqual(mutationRemovalChoiceDetailsValue(["a", "b"], { a: { label: "Alpha" }, b: { name: "Beta" } }), [
+    { value: "a", label: "Alpha (a)", disabled: false, reason: "" },
+    { value: "b", label: "Beta (b)", disabled: false, reason: "" },
+  ]);
+});
+
+test("removal eligibility preserves cardinality refusal semantics", () => {
+  const policy = { singleCardinality: "one", minimumOneCardinality: "min1" };
+  assert.equal(mutationRemovalEligibilityValue({ cardinality: "one" }, ["a", "b"], policy), false);
+  assert.equal(mutationRemovalEligibilityValue({ cardinality: "min1" }, ["a"], policy), false);
+  assert.equal(mutationRemovalEligibilityValue({ cardinality: "many" }, ["a"], policy), true);
+  assert.equal(mutationRemovalEligibilityValue({}, [], policy), false);
+});
+
+
+test/semantic-mutation-removal-selection-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationRemovalActionRowValue, mutationRemovalActionSelectionValue } from "../../expression-algebra/src/operations/mutation-removal-selection.mjs";
+
+const policy = { referenceTitle: "Remove reference", ordinaryTitle: "Remove", editorKind: "choice", actionRowKind: "row", actionRowColor: "mutation" };
+
+test("removal selection algebra distinguishes ineligible, single, and multiple", () => {
+  assert.equal(mutationRemovalActionSelectionValue({ values: ["x"], eligible: false, policy }), "none");
+  assert.equal(mutationRemovalActionSelectionValue({ values: ["x"], eligible: true, policy }), "single");
+  assert.equal(mutationRemovalActionSelectionValue({ values: ["x", "y"], eligible: true, policy }), "multiple");
+});
+
+test("removal row algebra preserves title and choice affordance", () => {
+  const action = { prompt: { editorKind: "choice" } };
+  assert.deepEqual(mutationRemovalActionRowValue({ action, slot: { predicate: "tag" }, reference: true, policy }), { kind: "row", text: "Remove reference tag...", action, semanticColorRole: "mutation" });
+  assert.equal(mutationRemovalActionRowValue({ action: null, slot: { predicate: "tag" }, policy }), null);
+});
+
+
+test/semantic-mutation-restore-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationReferenceSetsEqualValue, mutationMissingRestoreRequiredPredicatesValue } from "../../expression-algebra/src/operations/mutation-restore.mjs";
+
+test("restore reference-set comparison is order-independent and duplicate-insensitive", () => {
+  assert.equal(mutationReferenceSetsEqualValue(["b", "a", "a"], ["a", "b"]), true);
+  assert.equal(mutationReferenceSetsEqualValue(["a"], ["b"]), false);
+});
+
+test("restore required-slot planning returns only absent required predicates", () => {
+  assert.deepEqual(mutationMissingRestoreRequiredPredicatesValue([{ s: "x", p: "isa" }, { s: "x", p: "name" }], [{ predicate: "name", cardinality: "one" }, { predicate: "age", cardinality: "one" }], "isa", ["one"]), [{ subject: "x", predicate: "age" }]);
+});
+
+
+test/semantic-mutation-restore-facts-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationRestoreFactValidityValue } from "../../expression-algebra/src/operations/mutation-restore-facts.mjs";
+
+test("restore fact validity distinguishes missing fields from wrong polarity", () => {
+  assert.deepEqual(mutationRestoreFactValidityValue({ s: "s", p: "name", o: "A", pol: "is" }), { ok: true, reason: "" });
+  assert.deepEqual(mutationRestoreFactValidityValue({ s: "", p: "name", o: "A", pol: "is" }), { ok: false, reason: "fields" });
+  assert.deepEqual(mutationRestoreFactValidityValue({ s: "s", p: "name", o: "A", pol: "is-not" }), { ok: false, reason: "polarity" });
+});
+
+
+test/semantic-mutation-restore-interface-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationRestoreInterfaceMatchValue, mutationRestoreSlotValue } from "../../expression-algebra/src/operations/mutation-restore-interface.mjs";
+
+test("restore interface matching preserves authored type order and available matches", () => {
+  const interfaces = new Map([["Person", { type: "Person", slots: [{ predicate: "name" }] }]]);
+  const result = mutationRestoreInterfaceMatchValue([{ s: "s", p: "isa", o: "Person" }, { s: "s", p: "isa", o: "Missing" }], "s", interfaces, "isa");
+  assert.deepEqual(result.types, ["Person", "Missing"]);
+  assert.deepEqual(result.matches, ["Person"]);
+  assert.equal(result.interface.type, "Person");
+});
+
+test("restore slot lookup is exact and absent-safe", () => {
+  const iface = { slots: [{ predicate: "name" }] };
+  assert.deepEqual(mutationRestoreSlotValue(iface, "name"), { predicate: "name" });
+  assert.equal(mutationRestoreSlotValue(iface, "missing"), null);
+});
+
+
+test/semantic-mutation-restore-request-plan-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationRestoreRequestPlanValue } from "../../expression-algebra/src/operations/mutation-restore-request-plan.mjs";
+
+test("restore-request plan accepts matching subjects and authority anchors", () => {
+  assert.equal(mutationRestoreRequestPlanValue({ restoredSubjects: ["a", "b"], descriptorRestoredSubjects: ["b", "a"], authorityTargets: ["root"] }), null);
+});
+
+test("restore-request plan preserves explicit refusal precedence and evidence", () => {
+  assert.equal(mutationRestoreRequestPlanValue({ restoredSubjects: [], descriptorRestoredSubjects: [], authorityTargets: [], restoredSubjectsExplicit: false }).message, "restoreDeletedCluster restoredSubjects must be an explicit array.");
+  const mismatch = mutationRestoreRequestPlanValue({ restoredSubjects: ["a"], descriptorRestoredSubjects: ["b"], authorityTargets: ["root"] });
+  assert.deepEqual(mismatch.details, { restoredSubjects: ["a"], descriptorRestoredSubjects: ["b"] });
+  assert.equal(mutationRestoreRequestPlanValue({ restoredSubjects: ["a"], descriptorRestoredSubjects: ["a"], authorityTargets: [] }).message, "restoreDeletedCluster requires at least one authority target anchor.");
+});
+
+
+test/semantic-mutation-runtime-fields-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationProposalTraceFieldsValue, mutationStaleRevisionEvidenceFieldsValue, mutationRevisionForFactCountValue, mutationProjectedCommittedRevisionValue } from "../../expression-algebra/src/operations/mutation-runtime-fields.mjs";
+
+test("runtime trace fields prefer explicit values and preserve envelope fallback", () => {
+  assert.deepEqual(mutationProposalTraceFieldsValue({ envelope: { envelopeId: "e", routeSubject: "from-envelope" }, routeSubject: "explicit", sessionId: "s" }), { envelopeId: "e", routeSubject: "explicit", sessionId: "s" });
+});
+
+test("stale evidence and committed revisions preserve authored aliases", () => {
+  assert.deepEqual(mutationStaleRevisionEvidenceFieldsValue({ staleRevisionPolicy: "p", staleRevisionPolicyStrategy: "reject", baseRevision: "facts:1", currentRevision: "facts:2" }), { staleRevisionBaseRevision: "facts:1", staleRevisionCurrentRevision: "facts:2", staleRevisionPolicy: "p", staleRevisionPolicyStrategy: "reject" });
+  assert.equal(mutationRevisionForFactCountValue(4), "facts:4");
+  assert.equal(mutationProjectedCommittedRevisionValue({ facts: { size: 2 }, revision: "facts:2" }, [{}, {}]), "facts:4");
+});
+
+
+test/semantic-mutation-scoped-name-conflicts-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationScopedNameConflictsValue } from "../../expression-algebra/src/operations/mutation-scoped-name-conflicts.mjs";
+
+test("scoped-name conflict algebra preserves binding/reference conflict order", () => {
+  const conflicts = mutationScopedNameConflictsValue({ name: "Alias", existingBinding: "keep", bindings: [{ subject: "b1", memberSubject: "s1", name: "Alias" }, { subject: "keep", memberSubject: "s2", name: "Alias" }], references: [{ subject: "r1", targetSubject: "s3", name: "Alias" }] });
+  assert.deepEqual(conflicts, [{ entry: "b1", entryType: "ContextBinding", subject: "s1", name: "Alias" }, { entry: "r1", entryType: "ContextReference", subject: "s3", name: "Alias" }]);
+});
+
+test("scoped-name conflict algebra suppresses other names and subjectless entries", () => {
+  assert.deepEqual(mutationScopedNameConflictsValue({ name: "Alias", bindings: [{ subject: "b", memberSubject: "", name: "Alias" }], references: [{ subject: "r", targetSubject: "s", name: "Other" }] }), []);
+});
+
+
+test/semantic-mutation-slot-action-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationSlotActionModeValue, mutationIntrinsicSlotPromptValue } from "../../expression-algebra/src/operations/mutation-slot-action.mjs";
+
+const policy = { autoMode: "auto", addMode: "add", setMode: "set", manyCardinality: "many", optionalCardinality: "optional", choiceEditor: "choice" };
+
+test("slot action mode preserves explicit mode and authored auto rule", () => {
+  assert.equal(mutationSlotActionModeValue({ predicate: "tags", cardinality: "many" }, {}, "auto", policy), "add");
+  assert.equal(mutationSlotActionModeValue({ predicate: "name", cardinality: "one" }, { name: "A" }, "auto", policy), "set");
+  assert.equal(mutationSlotActionModeValue({ cardinality: "one" }, {}, "set", policy), "set");
+});
+
+test("intrinsic slot prompt preserves defaults, optional blank, and choices", () => {
+  const copy = () => ({ message: "Set", connector: "for" });
+  const current = (slot, record) => record[slot.predicate] || "default";
+  const prompt = mutationIntrinsicSlotPromptValue({ predicate: "name", cardinality: "optional", allowed: ["A", "B"] }, "s", {}, {}, "set", policy, copy, current);
+  assert.equal(prompt.defaultValue, "default");
+  assert.equal(prompt.allowBlank, true);
+  assert.deepEqual(prompt.choices, ["A", "B"]);
+});
+
+
+test/semantic-mutation-slot-action-plan-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationSlotActionPlanValue } from "../../expression-algebra/src/operations/mutation-slot-action-plan.mjs";
+
+const policy = { addMode: "add", addOperation: "append", setOperation: "set", fallbackValueType: "string" };
+
+test("slot-action plan derives authored title, operation, and resolved value type", () => {
+  assert.deepEqual(mutationSlotActionPlanValue({ copy: { title: "Set" }, resolved: { fieldLabel: "Label", valueType: "ref" }, slot: { predicate: "name", valueType: "string" }, mode: "set", subject: "alice", policy }), { title: "Set Label", operation: "set", subject: "alice", predicate: "name", valueType: "ref" });
+});
+
+test("slot-action plan uses append and explicit fallbacks for add mode", () => {
+  const plan = mutationSlotActionPlanValue({ copy: { title: "Add" }, resolved: null, slot: { predicate: "tag" }, mode: "add", subject: "alice", policy });
+  assert.equal(plan.operation, "append");
+  assert.equal(plan.valueType, "string");
+});
+
+
+test/semantic-mutation-slot-label-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { slotActionLabel } from "../sdk/core/semantic-mutation-presentation-action.mjs";
+
+test("slot action labels preserve scalar, collection, reference, and presence symmetry", () => {
+  assert.equal(slotActionLabel({ predicate: "name", valueType: "string", cardinality: "one" }, false), "add name...");
+  assert.equal(slotActionLabel({ predicate: "name", valueType: "string", cardinality: "one" }, true), "set name...");
+  assert.equal(slotActionLabel({ predicate: "tags", valueType: "string", cardinality: "many" }, true), "append tags...");
+  assert.equal(slotActionLabel({ predicate: "owner", valueType: "ref", cardinality: "many" }, true), "attach owner...");
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-slot-label-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-slot-values-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { slotIsMany, slotIsRef, requiredSlot, valueListFromRecord } from "../sdk/core/semantic-mutation-slots.mjs";
+
+test("slot-value algebra preserves authored cardinality, reference, and list semantics", () => {
+  assert.equal(slotIsMany({ cardinality: "many" }), true);
+  assert.equal(slotIsRef({ valueType: "ref" }), true);
+  assert.equal(requiredSlot({ cardinality: "min1" }), true);
+  assert.deepEqual(valueListFromRecord({ tags: ["a", 2] }, "tags"), ["a", "2"]);
+  assert.throws(() => slotIsMany({ cardinality: "unknown" }), /Unsupported slot cardinality/);
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-slot-values-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /unknownCardinalityIsAccepted/);
+});
+
+
+test/semantic-mutation-subject-authority-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationSubjectAuthorityRefusalValue } from "../../expression-algebra/src/operations/mutation-subject-authority-refusal.mjs";
+
+const policy = { deniedDiagnostic: "authority-denied", deniedStatus: 403 };
+
+test("subject-authority refusal algebra preserves actor, operation, and helper evidence", () => {
+  assert.deepEqual(mutationSubjectAuthorityRefusalValue({ actor: "actor", subject: "subject", operation: "set", helperTargets: ["helper"], policy }), { code: "authority-denied", message: "Actor actor lacks subject mutation authority for subject.", details: { actor: "actor", subject: "subject", operation: "set", helperTargets: ["helper"] }, statusCode: 403 });
+});
+
+test("subject-authority refusal algebra omits empty helper evidence", () => {
+  assert.deepEqual(mutationSubjectAuthorityRefusalValue({ actor: "actor", subject: "subject", operation: "set", helperTargets: [], policy }).details, { actor: "actor", subject: "subject", operation: "set" });
+});
+
+
+test/semantic-mutation-target-facts-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { semanticTargetFactsFingerprintValue } from "../../expression-algebra/src/operations/mutation-target-facts.mjs";
+
+test("target-fact algebra preserves visibility, active folds, and stable fingerprints", () => {
+  const facts = [
+    { s: "item", p: "name", o: "old", pol: "is" },
+    { s: "item", p: "name", o: "old", pol: "is-not" },
+    { s: "item", p: "name", o: "new", pol: "is" },
+  ];
+  assert.equal(semanticTargetFactsFingerprintValue(facts), "item\u0001name\u0001new\u0001is\u0002item\u0001name\u0001old\u0001is");
+  assert.equal(semanticTargetFactsFingerprintValue([...facts].reverse()), "item\u0001name\u0001new\u0001is\u0002item\u0001name\u0001old\u0001is");
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-target-facts-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+});
+
+
+test/semantic-mutation-target-metadata-algebra.test.mjs
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { normalizeMutationTargetMetadataValue } from "../../expression-algebra/src/operations/mutation-target-metadata.mjs";
+
+test("command/runtime target metadata normalization preserves authored aliases", () => {
+  assert.deepEqual(normalizeMutationTargetMetadataValue({ durable: false, laneSubject: "lane", sessionId: "session" }), { targetDurability: "ephemeral", targetLaneSubject: "lane", targetSessionId: "session", targetFactsFingerprint: "" });
+  const source = readFileSync(new URL("../sdk/core/semantic-mutation-target-metadata-algebra.rel", import.meta.url), "utf8");
+  assert.match(source, /authorityEffect\", \"none/);
+  assert.match(source, /explicitEphemeralDurabilityIsDropped/);
+});
+
+
+test/semantic-mutation-unknown-representation-refusal-algebra.test.mjs
+import test from "node:test";
+import assert from "node:assert/strict";
+import { mutationUnknownRepresentationRefusalValue } from "../../expression-algebra/src/operations/mutation-unknown-representation-refusal.mjs";
+
+test("unknown-representation refusal algebra preserves diagnostic and evidence", () => {
+  assert.deepEqual(mutationUnknownRepresentationRefusalValue({ subject: "s", context: "ctx", representation: "missing", policy: { invalidDiagnostic: "invalid", unknownRepresentationStatus: 400 } }), { code: "invalid", message: "Unknown context representation subject: missing.", details: { subject: "s", context: "ctx", representation: "missing" }, statusCode: 400 });
+});

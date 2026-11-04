@@ -1,0 +1,58 @@
+✖ canonical action adapter preserves operation vocabulary and descriptor shape (2.5943ms)
+✖ action builder contract declares no authority effect and explicit falsifiers (0.5195ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 0
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 154.1325
+
+✖ failing tests:
+
+test at retained-tests\semantic-mutation-actions-algebra.test.mjs:5:1
+✖ canonical action adapter preserves operation vocabulary and descriptor shape (2.5943ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'setProperty',
+  -   'addFact',
+  -   'removeFact',
+  -   'detachRelation',
+  -   'deleteSubject',
+  -   'reclassify',
+  -   'createFacts'
+  - ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-validation-2026-11-04/semantic-candidate/retained-tests/semantic-mutation-actions-algebra.test.mjs:6:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'setProperty', 'addFact', 'removeFact', 'detachRelation', 'deleteSubject', 'reclassify', 'createFacts' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at retained-tests\semantic-mutation-actions-algebra.test.mjs:11:1
+✖ action builder contract declares no authority effect and explicit falsifiers (0.5195ms)
+  Error: ENOENT: no such file or directory, open 'C:\Users\aaron\grand-theory\.platform-reconstitution\integrated-validation-2026-11-04\semantic-candidate\sdk\core\semantic-mutation-actions.rel'
+      at readFileSync (node:fs:483:20)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-validation-2026-11-04/semantic-candidate/retained-tests/semantic-mutation-actions-algebra.test.mjs:12:18)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\integrated-validation-2026-11-04\\semantic-candidate\\sdk\\core\\semantic-mutation-actions.rel'
+  }

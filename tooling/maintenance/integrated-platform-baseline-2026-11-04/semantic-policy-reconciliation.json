@@ -1,0 +1,90 @@
+{
+  "changes": [
+    {
+      "path": "sdk/core/semantic-mutation-slot-action.mjs",
+      "before": "return buildSemanticMutationAction({",
+      "after": "return buildSemanticMutationAction({\n    policyFacts: prog?.facts || prog,"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-action-discovery-subject.mjs",
+      "before": "buildDeleteSubjectAction({ subject: request.subject })",
+      "after": "buildDeleteSubjectAction({ policyFacts: semantic.facts, subject: request.subject })"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-reclassification-choices.mjs",
+      "before": "return buildReclassifyAction({",
+      "after": "return buildReclassifyAction({\n    policyFacts: prog?.facts || prog,"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal.mjs",
+      "before": "function removableValueAction(subject, slot, values, projection)",
+      "after": "function removableValueAction(subject, slot, values, projection, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal.mjs",
+      "before": "singleRemovalAction(subject, slot, values[0], reference)",
+      "after": "singleRemovalAction(subject, slot, values[0], reference, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal.mjs",
+      "before": "multipleRemovalAction(subject, slot, values, projection, reference)",
+      "after": "multipleRemovalAction(subject, slot, values, projection, reference, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal.mjs",
+      "before": "function removableValueActions(subject, slot, values, projection)",
+      "after": "function removableValueActions(subject, slot, values, projection, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal.mjs",
+      "before": "const action = removableValueAction(subject, slot, values, projection);",
+      "after": "const action = removableValueAction(subject, slot, values, projection, policyFacts);"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal-single.mjs",
+      "before": "function singleRemovalAction(subject, slot, value, reference)",
+      "after": "function singleRemovalAction(subject, slot, value, reference, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal-single.mjs",
+      "before": "const options = {",
+      "after": "const options = {\n    policyFacts,"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal-multiple.mjs",
+      "before": "function multipleRemovalAction(subject, slot, values, projection, reference)",
+      "after": "function multipleRemovalAction(subject, slot, values, projection, reference, policyFacts)"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-removal-multiple.mjs",
+      "before": "return buildSemanticMutationAction({",
+      "after": "return buildSemanticMutationAction({\n    policyFacts,"
+    },
+    {
+      "path": "sdk/core/semantic-mutation-action-discovery-slots.mjs",
+      "before": "removableValueActions(request.subject, slot, current, request.projection)",
+      "after": "removableValueActions(request.subject, slot, current, request.projection, semantic.facts)"
+    },
+    {
+      "path": "test/semantic-mutation-action-discovery.test.mjs",
+      "amendment": "Fixture supplies selected authored stdlib policies; all assertion expressions unchanged."
+    },
+    {
+      "path": "test/semantic-mutation-action-diagnostics.test.mjs",
+      "amendment": "Fixture supplies selected authored stdlib policies; all assertion expressions unchanged."
+    },
+    {
+      "path": "test/semantic-mutation-authority.test.mjs",
+      "amendment": "Fixture supplies selected authored stdlib policies; all assertion expressions unchanged."
+    },
+    {
+      "path": "test/semantic-mutation-slot-action.test.mjs",
+      "amendment": "Fixture supplies selected authored stdlib policies; all assertion expressions unchanged."
+    },
+    {
+      "path": "test/semantic-mutation-removal.test.mjs",
+      "amendment": "Explicit authored policy facts argument, preserving assertions."
+    }
+  ],
+  "scope": "Retain selected authored policy, wire recovered callers explicitly; no default grant or private operation fallback."
+}
