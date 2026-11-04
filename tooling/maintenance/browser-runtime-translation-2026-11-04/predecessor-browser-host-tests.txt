@@ -1,0 +1,344 @@
+✖ conflict refresh without revision refuses before rebasing (3.946ms)
+✖ throwing renderer mount clears its partial DOM and preserves failure identity (1.3593ms)
+✖ telemetry event constructor failure is contained at the public emitter (0.2611ms)
+✖ unknown inherited renderer and chart names refuse after initialization (0.3036ms)
+✖ own renderer and chart registration supports constructor (0.2591ms)
+✖ own renderer and chart registration supports toString (0.1193ms)
+✖ own renderer and chart registration supports __proto__ (0.173ms)
+✔ duplicate renderer refusal preserves the last admitted registry (0.5556ms)
+✔ duplicate chart and workbench providers refuse without replacing registry (0.4184ms)
+✔ provider failure retains exact identity and previous state (0.7501ms)
+✔ projection reset restores initialization refusal precedence (0.1825ms)
+✔ semantic registry preserves category and source order and copies caller arrays (0.4454ms)
+✔ semantic registry admission failure preserves current state (0.1294ms)
+✔ successful legacy save orders lane observation render and publication (0.2813ms)
+✔ committed receipt reconciles speculation and suppresses duplicate render/publication (0.4238ms)
+✖ save refuses missing or invalid server revision undefined (0.2709ms)
+✖ save refuses missing or invalid server revision  (0.1978ms)
+✖ save refuses missing or invalid server revision     (0.1714ms)
+✖ save refuses missing or invalid server revision 23 (0.1823ms)
+✖ telemetry sink faults cannot turn an acknowledged save into failure (0.2001ms)
+✔ non-stale save failure retains identity without refresh or lane mutation (0.3137ms)
+✖ post-save stale-shaped publication failure never replays an accepted save (0.3694ms)
+✔ stale reject with zero retries refreshes then records authored conflict (0.4403ms)
+✔ stale refreshConfirm with zero retries refreshes then records authored conflict (0.2881ms)
+✔ stale refreshRetry with zero retries refreshes then records authored conflict (0.2442ms)
+✖ motion releases active state even when commit throws (0.7528ms)
+✖ placement releases active state even when commit throws (0.5017ms)
+✔ blocked placement never invokes commit and releases the interaction (0.158ms)
+✔ direct manipulation activates at the exact threshold and releases before callback (0.1541ms)
+✖ renderer mount validation disposes an invalid acquired controller (0.321ms)
+✖ renderer telemetry observer and event host failures leave rendering live (0.2418ms)
+✖ authored renderer teardown disposes and clears once (0.543ms)
+✖ failed frontend mount preserves original failure despite renderer disposal fault (0.6211ms)
+✔ materialization refuses missing runtime envelope (0.3842ms)
+✔ actor-private materialization removes denied subjects and incoming references (0.3669ms)
+✔ event custody clones update records and keeps unknown event projections isolated (0.4422ms)
+✔ hydrated DOM controller disposes once and ignores later renders (0.5992ms)
+✔ DOM event patch removes obsolete wrappers and dispatches current event exactly once (0.6122ms)
+✔ DOM boolean props require explicit authored presence semantics (0.4126ms)
+✔ keyed projected children preserve identity across reordering (0.6425ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 21
+ℹ fail 19
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 352.265
+
+✖ failing tests:
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:18:1
+✖ conflict refresh without revision refuses before rebasing (3.946ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:18:112)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { kind: 'invalid-save-evidence' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:19:1
+✖ throwing renderer mount clears its partial DOM and preserves failure identity (1.3593ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:19:399)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:20:1
+✖ telemetry event constructor failure is contained at the public emitter (0.2611ms)
+  Error: constructor
+      at new CustomEvent (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:20:241)
+      at Module.announceCommandPerformanceSample (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:3011:22)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:20:93)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:21:1
+✖ unknown inherited renderer and chart names refuse after initialization (0.3036ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:21:202)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'unknown-renderer' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:22:58
+✖ own renderer and chart registration supports constructor (0.2591ms)
+  Error: Duplicate chart renderer registration: constructor.
+      at rendererError (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:9:17)
+      at Module.initializeProjectionRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:143:15)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:22:182)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'duplicate-chart-renderer',
+    renderer: 'constructor',
+    plugin: 'projection runtime #1'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:22:58
+✖ own renderer and chart registration supports toString (0.1193ms)
+  Error: Duplicate chart renderer registration: toString.
+      at rendererError (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:9:17)
+      at Module.initializeProjectionRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:143:15)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:22:182)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'duplicate-chart-renderer',
+    renderer: 'toString',
+    plugin: 'projection runtime #1'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:22:58
+✖ own renderer and chart registration supports __proto__ (0.173ms)
+  Error: Duplicate chart renderer registration: __proto__.
+      at rendererError (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:9:17)
+      at Module.initializeProjectionRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/renderer-registry.mjs:143:15)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:22:182)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'duplicate-chart-renderer',
+    renderer: '__proto__',
+    plugin: 'projection runtime #1'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:31:47
+✖ save refuses missing or invalid server revision undefined (0.2709ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:31:166)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { kind: 'invalid-save-evidence' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:31:47
+✖ save refuses missing or invalid server revision  (0.1978ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:31:166)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { kind: 'invalid-save-evidence' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:31:47
+✖ save refuses missing or invalid server revision     (0.1714ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:31:166)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { kind: 'invalid-save-evidence' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:31:47
+✖ save refuses missing or invalid server revision 23 (0.1823ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:31:166)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { kind: 'invalid-save-evidence' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:32:1
+✖ telemetry sink faults cannot turn an acknowledged save into failure (0.2001ms)
+  Error: observer
+      at onPerformanceSample (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:32:156)
+      at saveWithPolicy (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:2724:9)
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:34:1
+✖ post-save stale-shaped publication failure never replays an accepted save (0.3694ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: must not refresh
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:34:195)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: must not refresh
+        at stateFetcher (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:34:345)
+        at saveWithPolicy (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:2789:28)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:34:195)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:36:42
+✖ motion releases active state even when commit throws (0.7528ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:36:453)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:36:42
+✖ placement releases active state even when commit throws (0.5017ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:36:453)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:39:1
+✖ renderer mount validation disposes an invalid acquired controller (0.321ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:39:323)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:40:1
+✖ renderer telemetry observer and event host failures leave rendering live (0.2418ms)
+  Error: sink
+      at onPerformanceSample (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:40:473)
+      at onPerformanceSample (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:3043:32)
+      at Object.mountPage (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:40:199)
+      at Module.mountPageRenderer (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:3051:54)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:40:290)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:41:1
+✖ authored renderer teardown disposes and clears once (0.543ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  2 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:41:399)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 2,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\browser-runtime-validation-2026-11-04\predecessor\browser-host.test.mjs:42:1
+✖ failed frontend mount preserves original failure despite renderer disposal fault (0.6211ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+  
+  Caught error:
+  
+  Error: dispose
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:42:152)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: dispose
+        at Object.dispose (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:42:387)
+        at Module.mountAuthoredPageRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/frontend.mjs:3334:17)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/browser-runtime-validation-2026-11-04/predecessor/browser-host.test.mjs:42:152)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    operator: 'rejects',
+    diff: 'simple'
+  }

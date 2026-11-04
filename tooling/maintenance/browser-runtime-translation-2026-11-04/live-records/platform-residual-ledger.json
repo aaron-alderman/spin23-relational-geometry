@@ -1,0 +1,329 @@
+{
+  "kind": "platform-reconstitution-residual-ledger",
+  "authority": {
+    "path": ".platform-reconstitution/sourcery-platform-reconciled",
+    "sourceCommit": "a5ced5348523bf12d18087ce4111213677e1cd99",
+    "localReceiptCommit": "a5ced5348523bf12d18087ce4111213677e1cd99",
+    "runtimeAssurance": "Current runtime catalogue and module edges qualified; historical module/decomposition and global thin/default obligations remain open."
+  },
+  "residuals": [
+    {
+      "id": "core.semanticMutation.contractPolicy",
+      "domain": "sdk/plugins/core",
+      "kind": "pure-semantic-mjs",
+      "file": "sdk/plugins/core/semantic-mutation-runtime.mjs",
+      "evidence": "coreContractPolicyProvider contains a closed slot-to-policy lookup and timestamp classification with no external effects.",
+      "algebraStatus": "resolved-in-schema-algebra",
+      "resolution": "expects and editorKind facts were added to sdk/plugins/core/stdlib.rel; the MJS adapter now projects authored slot policy without a private lookup table.",
+      "verification": "semantic-mutation-policy.test.mjs and platform runtime assurance passed"
+    },
+    {
+      "id": "platform.sdk.semanticInventory",
+      "domain": "sdk",
+      "kind": "programme-wide",
+      "evidence": "All selected retained contracts have explicit runtime/domain or assurance owners. Generic algebra, recovered decomposition, semantic-zero and architectural completion are not inferred from these passes.",
+      "algebraStatus": "domain-inventory-classified-heuristic",
+      "verification": "semantic-module-inventory.test.mjs and semantic-domain-inventory.test.mjs regenerate deterministic complete-coverage inventories; classifications remain triage evidence, not semantic-zero proof",
+      "requiredAction": "replace heuristic classifications with direct domain ownership/effect receipts, then migrate complete semantic and mixed domains into executable algebra; continue core policy and semantic-runtime tranches",
+      "currentInventory": {
+        "mjsModules": 868,
+        "runtimeModules": 559,
+        "runtimeLines": 185359,
+        "semanticCandidates": 648,
+        "mixedBoundaryCandidates": 208,
+        "effectBoundaryCandidates": 12,
+        "semanticZeroStatus": "unproven"
+      },
+      "qualificationTranches": [
+        {
+          "id": "auth-provider-projections-2026-11-04",
+          "sourceCommit": "f9cc5e4726ef803465673cc72fca713912291828",
+          "retainedTests": 2,
+          "scope": "diagnostics and session/cookie value projections; actual persistence, authentication, permission resolution and cookies remain existing effect boundaries",
+          "verification": {
+            "platform-tests.txt": {
+              "passed": 48,
+              "sha256": "b7cf36adddfe041cbdc0d842ddc2d9351f722195943732540ed20744b700b023"
+            },
+            "core-tests.txt": {
+              "passed": 71,
+              "sha256": "17b85a4f8fd7090787d5e87385af1f38145ea0d05de788a2a16a793cc5e4bd53"
+            },
+            "auth-provider-tests.txt": {
+              "passed": 7,
+              "sha256": "3b01068bfe5577e3e1716aca958d975b56e6a87591d11649a0f5fbf53897ee61"
+            },
+            "existing-forwarded-identity-tests.txt": {
+              "passed": 2,
+              "sha256": "21d81b86d7d0434bdfacbc0254e94cb5292098b599a5054dad86540efadccb41"
+            }
+          },
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        },
+        {
+          "id": "routing-owner-2026-11-04",
+          "sourceCommit": "dd39e52b7552f9fd1f18730afb460b2f8c6071d5",
+          "retainedTestsReowned": 3,
+          "assertionsPreserved": 11,
+          "unresolvedContractDifferences": 1,
+          "verification": {
+            "platform-tests.txt": {
+              "passed": 60,
+              "sha256": "7a35ff7686742e24c867cc5309cdb7adc68e4f9d3e14adfad60df3baff94562c"
+            },
+            "routing-tests.txt": {
+              "passed": 12,
+              "sha256": "3b253dcb91c8021b7a7f61ce71b57d8a4b99eb50de62fb002da5d1fa7b796e6f"
+            },
+            "core-tests.txt": {
+              "passed": 71,
+              "sha256": "e32d0c06fbd28647a1e08455fb91b008551d3c4a141d5b30017aec3d91ed2bda"
+            },
+            "shared-algebra-tests.txt": {
+              "passed": 99,
+              "sha256": "91782ce0463e2653244e046199db3c43a2658138a8ee48a8aa58ce740759e12a"
+            }
+          },
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        },
+        {
+          "id": "routing-selector-2026-11-04",
+          "sourceCommit": "dd39e52b7552f9fd1f18730afb460b2f8c6071d5",
+          "sourceChanged": false,
+          "retainedTestsReowned": 2,
+          "assertionsPreserved": 8,
+          "additionalContractDifferences": 1,
+          "verification": {
+            "routing-tests.txt": {
+              "passed": 9,
+              "sha256": "5d568ec2c150ceaa1f46796737a3805729394e9770bd84c7d41f524dcae3ba85"
+            },
+            "platform-tests.txt": {
+              "passed": 60,
+              "sha256": "fa452d69467e461b042cc29f3f97605c15a475e4018c8f60e24da6e6a38cada3"
+            },
+            "core-tests.txt": {
+              "passed": 71,
+              "sha256": "489790c5c7f265e6bea7559ae9ed72c1c4ff86b996c75aa5d6c8c3c5a2e05a55"
+            },
+            "shared-algebra-tests.txt": {
+              "passed": 99,
+              "sha256": "4271aab01a8fba0792791365db98de7642becc6f205525814b06d3ebfab1c51a"
+            }
+          },
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        },
+        {
+          "id": "integrated-semantic-2026-11-04",
+          "sourceCommit": "c57f2679c3500174390e8f06c173a62bc90a0cbb",
+          "historicalTests": 38,
+          "historicalCases": 90,
+          "historicalExpectedAssertions": 314,
+          "publicIntegrationCases": 6,
+          "retainedMigrationFilesReviewed": 83,
+          "retainedOriginalsPassing": 1,
+          "retainedOriginalsUnresolved": 82,
+          "verification": "tooling/maintenance/integrated-platform-baseline-2026-11-04/integrated-verification.json",
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        },
+        {
+          "id": "semantic-contracts-2026-11-04",
+          "sourceCommit": "f534f34d2562df684fa8a6be48f0297a6b5a62c9",
+          "retainedFilesQualified": 82,
+          "expectedFilesPreserved": 80,
+          "expectationAmendments": 2,
+          "cases": 130,
+          "assertions": 329,
+          "locallyReconstitutedSpecifications": 16,
+          "valueExports": 97,
+          "staticDomainConsumerModules": 63,
+          "verification": "tooling/maintenance/semantic-contract-resolution-2026-11-04/integrated-verification.json",
+          "counterexamples": "tooling/maintenance/semantic-contract-resolution-2026-11-04/counterexamples.json",
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        },
+        {
+          "id": "integrated-contracts-2026-11-04",
+          "sourceCommit": "6d7c51d1d1c2567ef22a89390d6e8c3135db8c95",
+          "retainedFilesQualified": 54,
+          "selectedCohortQualified": 145,
+          "unresolvedSelected": 0,
+          "expectedAssertionAndCaseNamesPreserved": 47,
+          "explicitAmendments": 8,
+          "syntaxRepairs": 3,
+          "verification": "tooling/maintenance/integrated-contract-migration-2026-11-04/integrated-verification.json",
+          "architecturalAssurance": "tooling/maintenance/integrated-contract-migration-2026-11-04/current-assurance.json",
+          "algebraStatus": "not-proved-by-runtime-conformance"
+        }
+      ]
+    },
+    {
+      "id": "postgres.semanticMutation.contractPolicy",
+      "domain": "sdk/plugins/postgres-rel",
+      "kind": "pure-semantic-mjs",
+      "file": "sdk/plugins/postgres-rel/semantic-mutation-runtime.mjs",
+      "algebraStatus": "resolved-in-schema-algebra",
+      "resolution": "expects, editorKind, and canonicalValueType facts were added to schema.rel; the MJS adapter now projects authored slot policy.",
+      "verification": "semantic-mutation-policy.test.mjs and platform runtime assurance passed"
+    },
+    {
+      "id": "data-space.semanticMutation.operationInventory",
+      "domain": "sdk/plugins/data-space/deferred",
+      "kind": "programme-preparatory-contract",
+      "file": "sdk/plugins/data-space/deferred/runtime/semantic-mutation-runtime.mjs",
+      "evidence": "19 createFacts mutation handlers previously had operation identity only in MJS guards and export order.",
+      "algebraStatus": "partial-semantic-policy-lowered",
+      "resolution": "19 DataSpaceMutationOperation subjects now declare kind, handler, stage, effectClass, and exact source in deferred/stdlib.rel; trusted-bridge vocabularies and issue-action defaults/transitions are now read from authored policy facts.",
+      "verification": "data-space-operation-contract.test.mjs proves one-to-one authored operation coverage against runtime guards; trusted-bridge allowed values/template defaults, issue-action transitions, and paired issue-suppression creation/removal policy now derive from authored schema; focused policy and platform assurance passed",
+      "requiredAction": "lower each operation's validation/planning semantics into executable algebra while retaining only append/custody adapters in MJS"
+    },
+    {
+      "id": "bootstrap.github-only",
+      "domain": "platform",
+      "kind": "bootstrap",
+      "evidence": "The retained sourcery-platform authority does contain composition.rel and composition.plugin.rel plus historical projection manifests, but no retained src/kernel/composition.mjs and no matching composeLayerWorkspaces/readLayerManifest implementation. The current Temple bootstrap/materialization path is independently exercised by the workspace runtime suite (thin-fork, seal/reopen, and bounded projection tests); the older four-layer clean-assembly path still fails immediately against retained claimipedia-core because that interpreter source is absent. No four-layer bootstrap target was produced.",
+      "algebraStatus": "resolved-local-source-assembly",
+      "resolution": "Selected source 04ded4687761514008c6c7a356f58a8a22c6a67a materializes 13039 composed files with exact object verification, full consumer import/reexport closure and the scoped programme-completion check. A local linked-materialization adapter avoids duplicating large generated payloads; it is explicitly not a canonical Core byte-copy composition certificate for this final revision.",
+      "verification": "full clean assembly and integrated programme completion passed",
+      "requiredAction": "retain receipt and continue programme-wide semantic/effect boundary audit",
+      "previousResolution": "Fresh assembly of retained candidate 6d05a67755cf5e88c4cd9999f96e6713b113d0a7 verified 12906 unique files, composition proof e2d66ab4011912a19851f975ba0e7a5d6d5b300c90aa7d05325f7923117142c5, runtime payload da60e72e332241d5946cf77eebb3adf5b6289024e6ea3016089cf8ce220f1be5; receipt tooling/maintenance/consolidation-2026-11-04/assembly-proof.json. Retained local projections are verified; equivalence to current upstream main is not established.",
+      "latestVerification": {
+        "sourceCommit": "04ded4687761514008c6c7a356f58a8a22c6a67a",
+        "receipt": "tooling/maintenance/platform-reconciliation-2026-11-04/assembly-proof.json",
+        "fileCount": 13039,
+        "materialization": "hardlinks between generated workspaces; no retained source files linked",
+        "scope": "Local full runtime verification; generated hardlinks are not a deployable standalone copy."
+      }
+    },
+    {
+      "id": "bootstrap.runtimeConsumerAssurance",
+      "domain": "platform/runtime-dependencies",
+      "kind": "assurance-contract",
+      "algebraStatus": "resolved-explicit-optional-dynamic-boundary",
+      "evidence": "The executable artifact js.sourcery.appFoundation.browserEvidence is an optional dynamic-only browser adapter. Playwright is explicitly declared optional-not-admitted in runtime-dependencies.sources.json and sealed runtime-dependencies.json; the verifier now distinguishes declared dependencies from observed static/dynamic import modes. Full clean assembly passed with playwright and terser present only as optional dynamic-only declarations and no runtime payload.",
+      "verification": "platform-runtime-native-dependency tests passed; full clean assembly platform runtime proof valid",
+      "requiredAction": "retain receipt and monitor future dependency declarations through assurance"
+    },
+    {
+      "id": "source.upstreamReconciliation",
+      "domain": "platform/source-authority",
+      "kind": "provenance",
+      "algebraStatus": "resolved-local-integration-source",
+      "evidence": {
+        "selectedSource": "04ded4687761514008c6c7a356f58a8a22c6a67a",
+        "bothRecordedHeadsAreAncestors": true,
+        "receipt": "tooling/maintenance/platform-reconciliation-2026-11-04/source-reconciliation.json"
+      },
+      "requiredAction": "No remaining divergence between the two pinned histories. Review separately preserved legacy migration tranches; remote publication remains separate.",
+      "previousEvidence": {
+        "observedAt": "2026-11-04T02:33:35.421Z",
+        "repository": "https://github.com/sourcerytech/sourcery-platform.git",
+        "transport": "authenticated Git clone; connector returned 404",
+        "upstreamMain": "9c7f73fe58a3b6ae030f9bbd2407ca49efef44c3",
+        "candidate": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+        "mergeBase": "49924654f7476f0a2b73597680fa8dc3ac2ce5e5",
+        "candidateOnlyCommits": 37,
+        "upstreamOnlyCommits": 52,
+        "candidateOrigin": "C:\\Users\\aaron\\sourcery\\sourcery-platform",
+        "localSourceHead": "9c2be0eaa95c44c45abbd8d45dd7f5e293cbba6e",
+        "status": "diverged; reconciliation required; candidate is not current upstream main"
+      },
+      "resolution": "Both recorded heads are ancestors of the selected local source. Upstream source-only deletions retained; local authored policies and workspace runtime retained; SDK exports unioned and shared reader helpers adopted.",
+      "verification": {
+        "sourceCommit": "04ded4687761514008c6c7a356f58a8a22c6a67a",
+        "tests": {
+          "platform-tests.txt": {
+            "passed": 41,
+            "sha256": "656d84ec22d98c53abb7ec32f291fc8f2a1e1127642cd3f0175f1443a865bb16"
+          },
+          "verification-boundary-tests.txt": {
+            "passed": 5,
+            "sha256": "afbb89091d4992f4366ce3ec5546d12593715658840fdc7ebd0de230d90f2723"
+          },
+          "core-selected-sdk-tests.txt": {
+            "passed": 71,
+            "sha256": "3ceb7e078abc6ad3b68632c65291e78a536c71616a0c9efd46470ed6a8f05ac3"
+          },
+          "core-against-reconciled-sdk-tests.txt": {
+            "passed": 71,
+            "sha256": "5e801783fa1ec7dd3ca79f80c98318e3048a8a4933747555282666ba56d02c10"
+          },
+          "claimipedia-provenance-tests.txt": {
+            "passed": 9,
+            "sha256": "3955bda901a6b6fde1df435edbf6bdbcc2ae0f8d54c296be73670ddb4506905b"
+          }
+        },
+        "assemblyProofSha256": "5cb9d63580da688e357963ee40f1ee5d21fa49378817eea7e29b69231ef1e9bd"
+      }
+    }
+  ],
+  "counts": {
+    "open": 2,
+    "runtimeSemanticMjsResiduals": 648,
+    "runtimeSemanticMjsResidualsBasis": "Conservative all-source semantic-candidate count, including tests/tooling; not a directly audited runtime residual count.",
+    "assuranceRegressions": null,
+    "assuranceRegressionsStatus": "not-comparable-across-legacy-regex-and-AST-policies"
+  },
+  "architecturalAssurance": {
+    "receipt": "tooling/maintenance/browser-runtime-translation-2026-11-04/current-assurance.json",
+    "complete": false,
+    "driftAccepted": false,
+    "metricPolicy": "sourcery/javascript-ast-metrics.v1",
+    "unownedActiveSemanticMjs": 0,
+    "findings": 5074,
+    "findingOccurrences": 5170,
+    "scope": "Current source modules and static source edges qualified; historical module findings, dynamic execution, external package availability, thin/default-free obligations and generic algebra remain separate."
+  },
+  "localBootstrap": {
+    "receipt": "tooling/maintenance/browser-runtime-translation-2026-11-04/bootstrap-comparison.json",
+    "inputs": "tooling/maintenance/browser-runtime-translation-2026-11-04/bootstrap-inputs.json",
+    "equal": true,
+    "sourceIdentity": "f7f0edf63f4f0c70d05b6c33b45ed928b24f84c0594fa36515af7a98d2127303",
+    "runtimeModuleGate": true,
+    "mode": "nonproduction-loopback-reader",
+    "productionActivated": false,
+    "scientificAcceptance": false,
+    "globalArchitecturalCompletion": false
+  },
+  "historicalAssuranceCounts": {
+    "receipt": "tooling/maintenance/integrated-contract-migration-2026-11-04/current-assurance.json",
+    "metricPolicy": "sourcery/legacy-regex-metrics.v1",
+    "regressions": 700
+  },
+  "activeRuntimeModules": {
+    "valid": true,
+    "modules": 886,
+    "seeds": 614,
+    "staticSourceEdges": 1825,
+    "dynamicBoundaries": 17,
+    "externalPackages": [
+      "pg",
+      "terser"
+    ],
+    "externalAvailabilityProved": false,
+    "dynamicExecutionAdmitted": false,
+    "scope": "Static ESM closure; dynamic import/effect execution requires explicit owner admission. No scientific or generic algebra acceptance.",
+    "legacyDecompositionsResolved": false,
+    "sourceCommit": "a5ced5348523bf12d18087ce4111213677e1cd99",
+    "receipt": "tooling/maintenance/browser-runtime-translation-2026-11-04/assembled-runtime-module-verification.json",
+    "reconciliation": "tooling/maintenance/active-runtime-reconciliation-2026-11-04/decomposition-reconciliation.json",
+    "executableAlgebraProved": false,
+    "scientificAcceptance": false
+  },
+  "semanticContractTranslation": {
+    "valid": true,
+    "contracts": 73,
+    "cases": 269,
+    "passedCases": 269,
+    "amendedContracts": 61,
+    "specificationFiles": 27,
+    "documentSha256": "9f1ccae6a534335b819a10cb61e4b922a21c2e366c8c29bec2d6d03641163277",
+    "scope": "Bounded current-runtime behavioral qualification with retained obligations and explicit amendments; not universal equivalence or generic executable algebra.",
+    "universalEquivalenceProved": false,
+    "scientificAcceptance": false,
+    "sourceCommit": "a5ced5348523bf12d18087ce4111213677e1cd99",
+    "receipt": "tooling/maintenance/browser-runtime-translation-2026-11-04/assembled-semantic-contract-verification.json",
+    "ledger": "tooling/maintenance/browser-runtime-translation-2026-11-04/translation-ledger.json",
+    "untranslatedDeclarations": 351,
+    "originalGenericApisRestored": false
+  }
+}

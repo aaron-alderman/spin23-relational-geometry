@@ -1,0 +1,8 @@
+{
+  "setupOrderObservation": {
+    "receipt": "setup-order-observation.txt",
+    "cause": "A supplementary prior-contract aggregation helper was called before integrated-verification.json existed. Its --prepare-only call had already succeeded and prepared all 8 witnesses / 14 cases.",
+    "impact": "No source, application or admission change. All fifteen final suites must run and produce their own complete receipt before finalization.",
+    "resolution": "Run verify-assembly-consumers.cjs after fixture preparation; it already executes and records the same 14 prior-contract cases."
+  }
+}
