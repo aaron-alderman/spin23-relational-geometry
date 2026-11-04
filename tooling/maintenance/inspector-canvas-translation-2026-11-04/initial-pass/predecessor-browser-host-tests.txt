@@ -1,0 +1,637 @@
+✔ inspector bootstrap reads backend before frontend and mounts after selection cleanup (6.4426ms)
+✖ inspector rolls back partial setup {"failConstruct":true} (1.3439ms)
+✖ inspector rolls back partial setup {"failAdd":"backend.meta"} (0.5492ms)
+✖ inspector rolls back partial setup {"failWindow":true} (0.4397ms)
+✖ inspector attempts every owned teardown after host fault {"failClose":true} (0.9634ms)
+✖ inspector attempts every owned teardown after host fault {"failRemove":true} (0.4845ms)
+✖ inspector bfcache hide parks publication processing and pageshow resumes (0.6407ms)
+✖ disposed inspector callbacks cannot mutate or render (1.5529ms)
+✔ ordinary inspector pagehide disposes exactly once (0.7649ms)
+✖ canvas persistent snapshot clones values and drops editor buffers histories and callbacks (0.8756ms)
+✖ canvas draft snapshot does not alias editable state (0.4588ms)
+✖ malformed canvas restore refuses before mutation null (0.4716ms)
+✖ malformed canvas restore refuses before mutation [] (0.1948ms)
+✖ malformed canvas restore refuses before mutation {} (0.1699ms)
+✖ malformed canvas restore refuses before mutation {"viewState":[]} (0.1225ms)
+✖ malformed canvas restore refuses before mutation {"viewState":{},"runtime":[]} (0.1061ms)
+✖ malformed canvas restore refuses before mutation {"viewState":{},"runtime":{"workbenchUi":[]}} (0.1038ms)
+✖ canvas restore clones its input while retaining current transient editor/history state (0.1924ms)
+✖ canvas snapshot observation does not create missing workbench runtime state (0.2411ms)
+✖ runtime asset identity retains distinct Node files sharing a browser path (0.2343ms)
+✖ explicit empty runtime asset list overrides legacy aliases (0.348ms)
+✖ malformed runtime assets refuse instead of silently disappearing (0.1967ms)
+✖ unknown declared startup formats refuse (0.1725ms)
+✔ inline startup canonical S takes precedence over compatibility text and fetch (1.0935ms)
+✖ deferred startup cycle refuses after one fetch with no repeated request (24.8794ms)
+✖ startup network failure retains identity and malformed asset headers refuse before mount (1.3129ms)
+✖ diagnostics preserve typed coordinates transport status cause kind and runtime evidence (0.7926ms)
+✖ unknown thrown value remains explicit diagnostic null (0.1335ms)
+✖ unknown thrown value remains explicit diagnostic thrown text (0.0717ms)
+✖ unknown thrown value remains explicit diagnostic 23 (0.0602ms)
+✖ unknown thrown value remains explicit diagnostic Error: untyped refusal (0.1161ms)
+﹣ canvas vocabulary runtime families retain authored order and immutable outputs (0.0468ms) # SKIP
+✖ deferred URLs refuse cross-origin protocol-relative and non-HTTP targets (0.2135ms)
+✖ draft restore treats prototype-named keys as own state entries (0.3061ms)
+﹣ pinned canvas vocabulary matches every observed syntax family and primary source hash (0.041ms) # SKIP
+ℹ tests 35
+ℹ suites 0
+ℹ pass 3
+ℹ fail 30
+ℹ cancelled 0
+ℹ skipped 2
+ℹ todo 0
+ℹ duration_ms 413.1247
+
+✖ failing tests:
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:21:87
+✖ inspector rolls back partial setup {"failConstruct":true} (1.3439ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:21:232)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:21:87
+✖ inspector rolls back partial setup {"failAdd":"backend.meta"} (0.5492ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:21:232)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:21:87
+✖ inspector rolls back partial setup {"failWindow":true} (0.4397ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:21:232)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:22:58
+✖ inspector attempts every owned teardown after host fault {"failClose":true} (0.9634ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:22:247)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:22:58
+✖ inspector attempts every owned teardown after host fault {"failRemove":true} (0.4845ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:22:247)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:23:1
+✖ inspector bfcache hide parks publication processing and pageshow resumes (0.6407ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:23:270)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:24:1
+✖ disposed inspector callbacks cannot mutate or render (1.5529ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  ... Skipped lines
+  
+    {
+      actor: '',
+      appliedBackendRevision: 'r1',
+      backendRequiredProjectionUpdates: [],
+      backendRevision: 'r1',
+  ...
+      sessionDurability: 'durable',
+  +   sessionEventMetadata: {
+  +     backend: {
+  +       actor: '',
+  +       backendHighWater: null,
+  +       backendRevision: 'late',
+  +       dispatcherId: '',
+  +       eventName: '',
+  +       frontendHighWater: null,
+  +       publicationId: '',
+  +       reason: '',
+  +       route: '',
+  +       sequence: 0,
+  +       sessionHighWater: null,
+  +       sessionId: '',
+  +       sinkCount: 0,
+  +       stateHighWater: null,
+  +       stateRevision: 'late'
+  +     }
+  +   },
+      sessionId: 'one',
+      sessionPublicationSequence: 0,
+  +   sessionStatus: 'streaming'
+  -   sessionStatus: 'loaded'
+    }
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:24:275)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { actor: '', identifier: '', csrfToken: '', canAccessOperator: false, canRead: false, canWrite: false, canExecute: false, capabilities: [], renderTarget: 'client', sessionId: 'one', sessionStatus: 'streaming', sessionDurability: 'durable', backendRevision: 'r1', backendRequiredProjectionUpdates: [], appliedBackendRevision: 'r1', pendingSessionPublications: [], sessionPublicationSequence: 0, frontendRequiredProjectionUpdates: [], sessionEventMetadata: { backend: [Object] } },
+    expected: { actor: '', identifier: '', csrfToken: '', canAccessOperator: false, canRead: false, canWrite: false, canExecute: false, capabilities: [], renderTarget: 'client', sessionId: 'one', sessionStatus: 'loaded', sessionDurability: 'durable', backendRevision: 'r1', backendRequiredProjectionUpdates: [], appliedBackendRevision: 'r1', pendingSessionPublications: [], sessionPublicationSequence: 0, frontendRequiredProjectionUpdates: [] },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:27:1
+✖ canvas persistent snapshot clones values and drops editor buffers histories and callbacks (0.8756ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  3 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:27:184)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:28:1
+✖ canvas draft snapshot does not alias editable state (0.4588ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'value',
+  +   'changed'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:28:175)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'value', 'changed' ],
+    expected: [ 'value' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation null (0.4716ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation [] (0.1948ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation {} (0.1699ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation {"viewState":[]} (0.1225ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation {"viewState":{},"runtime":[]} (0.1061ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:29:118
+✖ malformed canvas restore refuses before mutation {"viewState":{},"runtime":{"workbenchUi":[]}} (0.1038ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:29:245)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-workbench-snapshot' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:30:1
+✖ canvas restore clones its input while retaining current transient editor/history state (0.1924ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  9 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:30:259)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 9,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:31:1
+✖ canvas snapshot observation does not create missing workbench runtime state (0.2411ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + {
+  +   workbenchUi: {}
+  + }
+  - {}
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:31:169)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { workbenchUi: {} },
+    expected: {},
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:32:1
+✖ runtime asset identity retains distinct Node files sharing a browser path (0.2343ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:32:94)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:33:1
+✖ explicit empty runtime asset list overrides legacy aliases (0.348ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + [
+  +   {
+  +     browserPath: '/legacy',
+  +     file: '',
+  +     id: '',
+  +     kind: 'frontend'
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:33:79)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { id: '', kind: 'frontend', browserPath: '/legacy', file: '' } ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:34:1
+✖ malformed runtime assets refuse instead of silently disappearing (0.1967ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:34:120)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-startup-runtime-asset' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:35:1
+✖ unknown declared startup formats refuse (0.1725ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:35:60)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-startup-transfer-format' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:37:1
+✖ deferred startup cycle refuses after one fetch with no repeated request (24.8794ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:37:376)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'cyclic-startup-transfer' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:38:1
+✖ startup network failure retains identity and malformed asset headers refuse before mount (1.3129ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + Comparison {}
+  - Comparison {
+  -   code: 'invalid-startup-runtime-asset'
+  - }
+  
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:38:426)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: Malformed runtime asset header: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+        at parseRuntimeAssetHeaderValue (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/frontend.mjs:471:11)
+        at runtimeAssetsFromHeaders (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/frontend.mjs:477:23)
+        at fetchProgramBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/frontend.mjs:540:20)
+        at async Module.resolveInlineStartupProgram (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/frontend.mjs:655:21)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:38:426)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:974:7),
+    expected: { code: 'invalid-startup-runtime-asset' },
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:39:1
+✖ diagnostics preserve typed coordinates transport status cause kind and runtime evidence (0.7926ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'record'
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:39:451)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'record',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:40:73
+✖ unknown thrown value remains explicit diagnostic null (0.1335ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'code')
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:40:225)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:40:73
+✖ unknown thrown value remains explicit diagnostic thrown text (0.0717ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'code')
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:40:225)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:40:73
+✖ unknown thrown value remains explicit diagnostic 23 (0.0602ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'code')
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:40:225)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:40:73
+✖ unknown thrown value remains explicit diagnostic Error: untyped refusal (0.1161ms)
+  TypeError [Error]: Cannot read properties of undefined (reading 'code')
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:40:225)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:42:1
+✖ deferred URLs refuse cross-origin protocol-relative and non-HTTP targets (0.2135ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:42:191)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: { code: 'invalid-startup-transfer-url' },
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\inspector-canvas-validation-2026-11-04\predecessor\browser-host.test.mjs:43:1
+✖ draft restore treats prototype-named keys as own state entries (0.3061ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" to be reference-equal to "expected":
+  + actual - expected
+  
+  + {
+  +   polluted: true
+  + }
+  - [Object: null prototype] {}
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/inspector-canvas-validation-2026-11-04/predecessor/browser-host.test.mjs:43:227)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { polluted: true },
+    expected: {},
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
