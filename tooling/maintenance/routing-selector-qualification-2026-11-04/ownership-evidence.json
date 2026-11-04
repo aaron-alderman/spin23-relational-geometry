@@ -1,0 +1,116 @@
+{
+  "observedAt": "2026-11-04T04:25:39.410Z",
+  "sourceCommit": "dd39e52b7552f9fd1f18730afb460b2f8c6071d5",
+  "sourceChanged": false,
+  "selectedOwner": "Sourcery authored route, renderer and PageBoot policy",
+  "scope": "Explicit input-domain amendments; runtime/source conformance only, not restoration of missing generic operations or executable algebra.",
+  "amendments": [
+    {
+      "name": "boot-query-param-algebra.test.mjs",
+      "inputChange": "Generic record becomes authored facts plus boot subject; preserve expected value and missing-parameter refusal.",
+      "originalSha256": "5a865837fb1de837d6b8b58b38ebaff3e631ce16c1bc78097b59042058543e4e",
+      "selectedTestSha256": "efc05daaf83d40e26043393318644db59294cd2aac18c2da404d615c1bbd40d5",
+      "contract": {
+        "testNames": [
+          "boot query projection preserves explicit subject and parameter",
+          "boot query projection refuses absent required parameter"
+        ],
+        "assertions": [
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": "token"
+            }
+          },
+          {
+            "method": "throws",
+            "expected": {
+              "type": "Literal",
+              "value": {
+                "regex": "Missing required boot\\.main\\.queryParam",
+                "flags": ""
+              },
+              "regex": {
+                "pattern": "Missing required boot\\.main\\.queryParam",
+                "flags": ""
+              }
+            }
+          }
+        ]
+      },
+      "diff": "diff --git \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\boot-query-param-algebra.test.mjs\" \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\tooling\\\\maintenance\\\\routing-selector-qualification-2026-11-04\\\\boot-query-param-algebra.test.mjs\"\nindex b80640f0..165ea0fc 100644\n--- \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\boot-query-param-algebra.test.mjs\"\n+++ \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\tooling\\\\maintenance\\\\routing-selector-qualification-2026-11-04\\\\boot-query-param-algebra.test.mjs\"\n@@ -1,11 +1,11 @@\n import test from 'node:test';\n import assert from 'node:assert/strict';\n-import {bootQueryParamValue} from '../../expression-algebra/src/index.mjs';\n+import {bootQueryParamForBoot} from '../../../.platform-reconstitution/sourcery-platform-reconciled/sdk/core/route-runtime.mjs';\n \n test('boot query projection preserves explicit subject and parameter',()=>{\n- assert.equal(bootQueryParamValue({subject:'boot.main',queryParam:'token'}),'token');\n+ assert.equal(bootQueryParamForBoot([{s:'boot.main',p:'queryParam',o:'token'}],'boot.main'),'token');\n });\n \n test('boot query projection refuses absent required parameter',()=>{\n- assert.throws(()=>bootQueryParamValue({bootSubject:'boot.main',queryParam:''}),/Missing required boot\\.main\\.queryParam/);\n+ assert.throws(()=>bootQueryParamForBoot([{s:'boot.main',p:'queryParam',o:''}],'boot.main'),/Missing required boot\\.main\\.queryParam/);\n });\n"
+    },
+    {
+      "name": "route-selector-algebra.test.mjs",
+      "inputChange": "Generic record-array/mode selection becomes authored RouteTarget facts and separate role/subject selectors. Generic renderer record becomes PageRendererContract facts. No mode dispatcher or generic API added.",
+      "originalSha256": "1c6de37ba21825aabad99244c31fe10b819161344f642c1926cd83ec3764309c",
+      "selectedTestSha256": "d729725be2a9ce8142d9decffa8de970c67501bb2052ed41fdbb77d66c00f274",
+      "contract": {
+        "testNames": [
+          "route selectors preserve role and subject lookup with explicit empty refusal",
+          "page renderer SSR support is an explicit hydration-mode check"
+        ],
+        "assertions": [
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": "target.b"
+            }
+          },
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": "authenticatedDefault"
+            }
+          },
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": null
+            }
+          },
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": true
+            }
+          },
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": false
+            }
+          },
+          {
+            "method": "equal",
+            "expected": {
+              "type": "Literal",
+              "value": false
+            }
+          }
+        ]
+      },
+      "diff": "diff --git \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-selector-algebra.test.mjs\" \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\tooling\\\\maintenance\\\\routing-selector-qualification-2026-11-04\\\\route-selector-algebra.test.mjs\"\nindex 3d12ade5..00ea9fc2 100644\n--- \"a/C:\\\\Users\\\\aaron\\\\grand-theory\\\\.platform-reconstitution\\\\sourcery-platform\\\\test\\\\route-selector-algebra.test.mjs\"\n+++ \"b/C:\\\\Users\\\\aaron\\\\grand-theory\\\\tooling\\\\maintenance\\\\routing-selector-qualification-2026-11-04\\\\route-selector-algebra.test.mjs\"\n@@ -1,17 +1,18 @@\n import test from 'node:test';\n import assert from 'node:assert/strict';\n-import {routeTargetSelectValue,pageRendererSupportsDomSsrValue} from '../../expression-algebra/src/index.mjs';\n+import {routeTargetByRole,routeTargetBySubject,pageRendererSupportsDomSsr} from '../../../.platform-reconstitution/sourcery-platform-reconciled/sdk/core/route-runtime.mjs';\n \n-const targets=[{subject:'target.a',role:'authenticatedDefault'},{subject:'target.b',role:'operatorDefault'}];\n+const targets=[{s:'target.a',p:'isa',o:'RouteTarget'},{s:'target.a',p:'role',o:'authenticatedDefault'},{s:'target.b',p:'isa',o:'RouteTarget'},{s:'target.b',p:'role',o:'operatorDefault'}];\n+const rendererFacts=mode=>[{s:'renderer.contract',p:'isa',o:'PageRendererContract'},{s:'renderer.contract',p:'renderer',o:'renderer.main'},...(mode===undefined?[]:[{s:'renderer.contract',p:'serverRenderMode',o:mode}])];\n \n test('route selectors preserve role and subject lookup with explicit empty refusal',()=>{\n- assert.equal(routeTargetSelectValue({mode:'role',value:'operatorDefault',targets}).subject,'target.b');\n- assert.equal(routeTargetSelectValue({mode:'subject',value:'target.a',targets}).role,'authenticatedDefault');\n- assert.equal(routeTargetSelectValue({mode:'role',value:'',targets}),null);\n+ assert.equal(routeTargetByRole(targets,'operatorDefault').subject,'target.b');\n+ assert.equal(routeTargetBySubject(targets,'target.a').role,'authenticatedDefault');\n+ assert.equal(routeTargetByRole(targets,''),null);\n });\n \n test('page renderer SSR support is an explicit hydration-mode check',()=>{\n- assert.equal(pageRendererSupportsDomSsrValue({serverRenderMode:'domHydration'}),true);\n- assert.equal(pageRendererSupportsDomSsrValue({serverRenderMode:'other'}),false);\n- assert.equal(pageRendererSupportsDomSsrValue({}),false);\n+ assert.equal(pageRendererSupportsDomSsr(rendererFacts('domHydration'),'renderer.main'),true);\n+ assert.equal(pageRendererSupportsDomSsr(rendererFacts('other'),'renderer.main'),false);\n+ assert.equal(pageRendererSupportsDomSsr(rendererFacts(),'renderer.main'),false);\n });\n"
+    }
+  ],
+  "sourceHashes": {
+    "sdk/core/route-runtime.mjs": "905f953ebe64c99109b4ad6861057970386d88adf42c6d36c69dc26c0bbfd49d",
+    "sdk/core/page-boot-runtime.mjs": "9de7de2b69f01139b8a01b326818b4433d0fbbb64a9a41826c515629cf792804",
+    "PLATFORM.md": "07f237e5d2812679329a8077a260e904ebd093c1a97a29014efbe95652c5214a"
+  },
+  "sharedOwnerReadmeSha256": "96bad84673feabc8d159e5edfdcc20aedcee337baa622cfd310b2ebc2ded8ae0",
+  "normalizationDifference": {
+    "path": "test/route-target-normalization-algebra.test.mjs",
+    "originalSha256": "1f98a9bd6ff54f6868d8f9d0ff0d59c79c9d16cdc66008ab2b59575a6377182d",
+    "expectation": "Unknown mode must throw /Unknown route target normalization mode/",
+    "selectedContract": "Separate path, port and href functions; no mode argument or dispatcher.",
+    "disposition": "blocked-owner-contract-difference",
+    "conclusion": "Four value expectations can be reproduced; fifth dispatcher refusal cannot be claimed covered. No dispatcher invented."
+  }
+}
