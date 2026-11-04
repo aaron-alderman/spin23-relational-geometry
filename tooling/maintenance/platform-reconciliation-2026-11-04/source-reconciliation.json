@@ -1,0 +1,64 @@
+{
+  "observedAt": "2026-11-04T03:14:23.570Z",
+  "selected": "04ded4687761514008c6c7a356f58a8a22c6a67a",
+  "branch": "codex/reconcile-platform-sources",
+  "remote": "https://github.com/sourcerytech/sourcery-platform.git",
+  "parents": [
+    "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "9c7f73fe58a3b6ae030f9bbd2407ca49efef44c3"
+  ],
+  "mergeCommit": "282c53c829176a9e6b8b4948846fc14fc24951bf",
+  "overlapDecisions": [
+    {
+      "path": ".sourcery-layer/manifest.json",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    },
+    {
+      "path": "runtime-dependencies.json",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    },
+    {
+      "path": "runtime-dependencies.sources.json",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    },
+    {
+      "path": "scripts/verify-platform-runtime.mjs",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    },
+    {
+      "path": "sdk/SOURCERY-PAYLOAD.json",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    },
+    {
+      "path": "sdk/package.json",
+      "resolution": "versionless upstream source manifest plus retained workspace export and explicit reader entrypoints"
+    },
+    {
+      "path": "test/platform-runtime-native-dependency.test.mjs",
+      "resolution": "accept upstream source-only deletion; original retained in preservation; validation tooling remains external"
+    }
+  ],
+  "sourceChangesVersusUpstream": "A\tscripts/generate-semantic-domain-inventory.mjs\nA\tscripts/generate-semantic-module-inventory.mjs\nM\tsdk/core/rel-core.mjs\nM\tsdk/core/runtime-build-policy.mjs\nM\tsdk/core/semantic-mutation-actions.mjs\nM\tsdk/core/semantic-mutation-reclassification.mjs\nM\tsdk/core/semantic-mutation.mjs\nM\tsdk/core/semantic-runtime.mjs\nM\tsdk/package.json\nA\tsdk/plugins/core/semantic-mutation-policy.test.mjs\nM\tsdk/plugins/core/semantic-mutation-runtime.mjs\nM\tsdk/plugins/core/stdlib.rel\nA\tsdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs\nM\tsdk/plugins/data-space/deferred/runtime/semantic-mutation-runtime.mjs\nM\tsdk/plugins/data-space/deferred/stdlib.rel\nM\tsdk/plugins/postgres-rel/schema.rel\nA\tsdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs\nM\tsdk/plugins/postgres-rel/semantic-mutation-runtime.mjs\nM\tsdk/project/project-loader.mjs\nM\tsdk/runtime/engine.mjs\nA\tsdk/semantic-domain-inventory.json\nA\tsdk/semantic-module-inventory.json\nA\tsdk/temple-workspace/authority-custody.mjs\nA\tsdk/temple-workspace/development-mcp.mjs\nA\tsdk/temple-workspace/index.mjs\nA\tsdk/temple-workspace/joint-migration-contract.mjs\nA\tsdk/temple-workspace/manager-local-bridge.mjs\nA\tsdk/temple-workspace/manager-mcp.mjs\nA\tsdk/temple-workspace/sealed-bootstrap.mjs\nA\tsdk/temple-workspace/security.mjs\nA\tsdk/temple-workspace/split-base.mjs\nA\tsdk/temple-workspace/supervisor-local-bridge.mjs\nA\tsdk/temple-workspace/supervisor-mcp.mjs\nA\tsdk/temple-workspace/temple-fs.mjs\nA\ttest/runtime-build-policy-authoring.test.mjs\nA\ttest/semantic-authority-policy.test.mjs\nA\ttest/semantic-domain-inventory.test.mjs\nA\ttest/semantic-module-inventory.test.mjs\nA\ttest/semantic-mutation-action-policy.test.mjs\nM\ttest/shared-expression-algebra.test.mjs\nA\ttest/temple-joint-migration-contract.test.mjs\nA\ttest/temple-storage-aligned-base.test.mjs\nA\ttest/temple-supervisor.test.mjs\nA\ttest/temple-workspace-runtime.test.mjs",
+  "retainedLocalHistory": true,
+  "retainedUpstreamHistory": true,
+  "testCommand": "node --test test/*.test.mjs sdk/plugins/core/semantic-mutation-policy.test.mjs sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+  "localInstallationLinks": [
+    {
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/node_modules/@sourcerytech/expression-algebra",
+      "target": ".platform-reconstitution/expression-algebra"
+    },
+    {
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/node_modules/acorn",
+      "target": ".platform-reconstitution/sourcery-platform-authority/runtime-dependency-payloads/acorn"
+    },
+    {
+      "path": ".platform-reconstitution/claimipedia-core/node_modules/@temple2/platform-sdk",
+      "target": ".platform-reconstitution/sourcery-platform-reconciled/sdk",
+      "previousTarget": ".platform-reconstitution/sourcery-platform/sdk",
+      "previousJunctionUnlinkedWithoutTraversal": true
+    }
+  ],
+  "coreAdoptionCommit": "ecc6dbc",
+  "sourceStatus": "",
+  "remotePush": false
+}

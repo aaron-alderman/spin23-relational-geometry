@@ -1,0 +1,16 @@
+node:internal/fs/promises:1327
+  return await PromisePrototypeThen(
+         ^
+
+Error: ENOSPC: no space left on device, copyfile 'C:\Users\aaron\grand-theory\.platform-reconstitution\sourcery-applications\experiments\sqlite-temple-fs-sidecar\retirement-candidates\2026-10-14-workspace-qcat4.json' -> 'C:\Users\aaron\grand-theory\.platform-reconstitution\reconciled-validation-2026-11-04-final\assembled\experiments\sqlite-temple-fs-sidecar\retirement-candidates\2026-10-14-workspace-qcat4.json'
+    at async copyFile (node:internal/fs/promises:1327:10)
+    at async Module.composeLayerWorkspaces (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-core/src/kernel/composition.mjs:95:7)
+    at async file:///C:/Users/aaron/grand-theory/.platform-reconstitution/reconciled-validation-2026-11-04-final/platform/scripts/assemble-source-clean-workspace.mjs:27:22 {
+  errno: -4055,
+  code: 'ENOSPC',
+  syscall: 'copyfile',
+  path: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-applications\\experiments\\sqlite-temple-fs-sidecar\\retirement-candidates\\2026-10-14-workspace-qcat4.json',
+  dest: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\reconciled-validation-2026-11-04-final\\assembled\\experiments\\sqlite-temple-fs-sidecar\\retirement-candidates\\2026-10-14-workspace-qcat4.json'
+}
+
+Node.js v24.22.1

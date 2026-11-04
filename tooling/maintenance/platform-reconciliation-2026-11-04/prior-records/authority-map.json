@@ -1,0 +1,106 @@
+{
+  "kind": "platform-reconstitution-authority-map",
+  "asOf": "2026-11-04",
+  "rule": "Only a source with explicit repository identity, branch, remote, and reproducible checkout may be promoted to canonical authority.",
+  "canonicalCandidate": {
+    "path": "C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-authority",
+    "repository": "https://github.com/sourcerytech/sourcery-platform.git",
+    "branch": "main",
+    "commit": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "localReceiptCommit": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "mjsFiles": 324,
+    "runtimeMjsFiles": 288,
+    "runtimeLines": 183452,
+    "relFiles": 136,
+    "status": "clean local recovery candidate; fresh full assembly verified; upstream history diverged; canonical promotion remains open"
+  },
+  "sourceWitness": {
+    "path": "C:/Users/aaron/sourcery/sourcery-platform",
+    "status": "dirty source witness; not authority"
+  },
+  "recoveredSources": [
+    {
+      "path": ".platform-reconstitution/sourcery-core",
+      "repository": "https://github.com/sourcerytech/sourcery-core.git",
+      "commit": "5b1097ffe8cadadf7e86fa988c4b4dda88e2dfd4",
+      "status": "retained upstream-tracked source; composition interpreter recovered"
+    },
+    {
+      "path": ".platform-reconstitution/sourcery-capabilities",
+      "repository": "https://github.com/sourcerytech/sourcery-capabilities.git",
+      "commit": "c069d2824af5a3967f6597b4c0df5df919576930",
+      "status": "derived retained projection from clean qualification worktree; manifest verified"
+    },
+    {
+      "path": ".platform-reconstitution/sourcery-applications",
+      "repository": "https://github.com/sourcerytech/sourcery-applications.git",
+      "commit": "10c3b0b0734aac8d02093fba85de3a20ada02a2f",
+      "status": "derived retained tracked-source projection; 15 duplicate capability-owned paths excluded and manifest resealed"
+    }
+  ],
+  "reconstitutedWitnesses": [
+    {
+      "path": ".platform-reconstitution/expression-algebra",
+      "commit": "5bcde83eb3ff167ba49df57a1463ce242ad389dc",
+      "mjsFiles": 162,
+      "relFiles": 12,
+      "status": "local witness; not upstream authority"
+    },
+    {
+      "path": ".platform-reconstitution/claimipedia-core",
+      "commit": "ad513ec3d5b2fb6b69940db17c6fdb8f5f9b33d5",
+      "mjsFiles": 141,
+      "relFiles": 7,
+      "status": "local witness; exact historical oracle objects recovered; source check and 71/71 tests pass; not upstream authority"
+    },
+    {
+      "path": ".platform-reconstitution/sourcery-platform/sdk",
+      "commit": "8494631ea8594f9a120f0a138206b258b309c0de",
+      "mjsFiles": 56,
+      "relFiles": 5,
+      "status": "local runtime adapter witness; shared algebra helpers repaired and Core 71/71 tests passed; not upstream authority"
+    }
+  ],
+  "consumerRepository": {
+    "path": ".platform-reconstitution/claimipedia",
+    "repository": "https://github.com/sourcerytech/claimipedia.git",
+    "branch": "codex/remove-vendored-rel",
+    "commit": "c91f49b485accf1d3db1683aa87bfd2094bce2e7",
+    "status": "consumer worktree; dirty-state and dependency closure require reconciliation"
+  },
+  "promotionGates": [
+    "canonical candidate clean-tree receipt",
+    "all executable domains inventoried",
+    "dependency closure from retained GitHub contents",
+    "blank bootstrap succeeds without external local paths",
+    "platform-wide semantic/effect boundary audit"
+  ],
+  "observedBlockers": [
+    "legacy sourcery-platform worktree has unreconciled changes",
+    "candidate and current GitHub main have diverged",
+    "programme-wide direct semantic/effect ownership assurance remains open",
+    "Epistemic Core and Claimipedia Science exact pre-incident local histories remain unrecovered"
+  ],
+  "verifiedUpstreamLineage": {
+    "observedAt": "2026-11-04T02:34:46.886Z",
+    "repository": "https://github.com/sourcerytech/sourcery-platform.git",
+    "transport": "authenticated Git clone; connector returned 404",
+    "upstreamMain": "9c7f73fe58a3b6ae030f9bbd2407ca49efef44c3",
+    "candidate": "6d05a67755cf5e88c4cd9999f96e6713b113d0a7",
+    "mergeBase": "49924654f7476f0a2b73597680fa8dc3ac2ce5e5",
+    "candidateOnlyCommits": 37,
+    "upstreamOnlyCommits": 52,
+    "candidateOrigin": "C:\\Users\\aaron\\sourcery\\sourcery-platform",
+    "localSourceHead": "9c2be0eaa95c44c45abbd8d45dd7f5e293cbba6e",
+    "status": "diverged; reconciliation required; candidate is not current upstream main"
+  },
+  "latestAssembly": {
+    "observedAt": "2026-11-04T02:34:46.886Z",
+    "receipt": "tooling/maintenance/consolidation-2026-11-04/assembly-proof.json",
+    "sha256": "7aaad980670742e5a0339bc3dcc28a7729f4ea61e63d3e49ceac0c082e234709",
+    "fileCount": 12906,
+    "proofHash": "e2d66ab4011912a19851f975ba0e7a5d6d5b300c90aa7d05325f7923117142c5",
+    "payloadHash": "da60e72e332241d5946cf77eebb3adf5b6289024e6ea3016089cf8ce220f1be5",
+    "applicationAuthority": false
+  }
+}
