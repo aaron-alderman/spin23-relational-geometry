@@ -1,0 +1,55 @@
+{
+  "commit": "b3f3473039e7fb54d9bf259a7f9d89d1e039f0bb",
+  "records": [
+    {
+      "path": "sdk/browser/frontend.mjs",
+      "commit": "b3f3473039e7fb54d9bf259a7f9d89d1e039f0bb",
+      "retainedSha256": "4f80081883854726b276c6ebdfd3b0952e4aac2405f544b1d38f207ca965742c",
+      "fixtureSha256": "357bafa3ef9fe1d8ba349e5fe0f189265e2ef0d968aef3c4660fa5e56d65e57e"
+    },
+    {
+      "path": "sdk/browser/frontend-action-runtime.mjs",
+      "commit": "b3f3473039e7fb54d9bf259a7f9d89d1e039f0bb",
+      "retainedSha256": "1749f242058ce5c9f39146c407f6872c12c19fe2691185c2f25f57fb227e50f9",
+      "fixtureSha256": "1df3b0845fb3b8ba6d05acb2dab1b1e2c55dc5e4a24a4bc4ac5a4b2b35e31030"
+    }
+  ],
+  "observations": [
+    {
+      "id": "inherited-local-action",
+      "before": "inherited Object.prototype method executed",
+      "after": "unhandled callback"
+    },
+    {
+      "id": "host-duplicate-target",
+      "before": "first duplicate silently redirects",
+      "after": "ambiguous-route-target refusal"
+    },
+    {
+      "id": "inline-primitive",
+      "before": null,
+      "after": "invalid-startup-payload"
+    },
+    {
+      "id": "inline-text-host-fault",
+      "before": "host fault wrapped as malformed JSON",
+      "after": "exact host fault identity"
+    },
+    {
+      "id": "warmup-sync-fault",
+      "before": "scheduler callback throws",
+      "after": "observed once and contained"
+    },
+    {
+      "id": "mount-cleanup-masking",
+      "before": "container clear failure masks original mount fault",
+      "after": "original mount fault retained"
+    },
+    {
+      "id": "teardown-first-fault",
+      "before": "later clear failure replaces renderer failure",
+      "after": "first escaping cleanup failure retained; repeat inert"
+    }
+  ],
+  "scope": "Exact predecessor bodies with import locations rewritten and private helpers exposed. Selected boundary counterexamples only, not a historical whole-checkout bootstrap or universal equivalence proof."
+}

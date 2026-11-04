@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {parse} from '../../../.platform-reconstitution/sourcery-platform-authority/runtime-dependency-payloads/acorn/dist/acorn.mjs';
+const root='.platform-reconstitution/sourcery-platform-reconciled',bytes=readFileSync(root+'/sdk/browser/canvas-renderer.mjs'),groups=new Map();
+function add(family,label){if(typeof label!=='string')return;const values=groups.get(family)||new Set();values.add(label);groups.set(family,values);}
+function walk(node){if(!node||typeof node!=='object')return;
+ if(node.type==='BinaryExpression'&&['===','!==','==','!='].includes(node.operator))for(const operand of [node.left,node.right])if(operand.type==='Literal')add('direct-string-comparison',operand.value);
+ if(node.type==='SwitchCase'&&node.test?.type==='Literal')add('switch-label',node.test.value);
+ if(node.type==='CallExpression'&&node.callee?.name==='dispatchKeyword'&&typeof node.arguments[1]?.value==='string'&&node.arguments[4]?.type==='ObjectExpression')for(const prop of node.arguments[4].properties)add('keyword-dispatch:'+node.arguments[1].value,prop.key?.name||prop.key?.value);
+ if(node.type==='VariableDeclarator'&&['LENS_MODES','LIST_TARGET_ACTION_KINDS'].includes(node.id?.name)){const array=node.init?.arguments?.[0];if(array?.type==='ArrayExpression')for(const value of array.elements)add(node.id.name,value?.value);}
+ for(const child of Object.values(node))if(Array.isArray(child))child.forEach(walk);else if(child&&typeof child==='object'&&child.type)walk(child);
+}walk(parse(bytes.toString(),{ecmaVersion:'latest',sourceType:'module'}));
+const families=Object.fromEntries([...groups].sort(([a],[b])=>a.localeCompare(b)).map(([key,values])=>[key,[...values].sort()])),record={protocol:'sourcery/observed-canvas-vocabulary.v1',source:'sdk/browser/canvas-renderer.mjs',sha256:createHash('sha256').update(bytes).digest('hex'),families,scope:'Closed characterization only of these explicit literal syntax families. No computed/indirect vocabulary, complete Canvas schema, executable algebra or admission is inferred.',scientificAcceptance:false};writeFileSync(root+'/assurance/canvas-vocabulary.json',JSON.stringify(record,null,2)+'\n');console.log(Object.fromEntries(Object.entries(families).map(([k,v])=>[k,v.length])));

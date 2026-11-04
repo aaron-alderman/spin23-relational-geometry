@@ -1,0 +1,85 @@
+✔ local actions precede registry lookup and preserve argument identity (4.4134ms)
+✔ inherited local action constructor never executes (0.4662ms)
+✔ inherited local action toString never executes (0.2881ms)
+✔ inherited local action __proto__ never executes (0.2164ms)
+✔ own prototype-named action remains callable and default argument arrays are fresh (0.4911ms)
+✔ registry dispatch constructs only its reached context and retains native failures (1.4416ms)
+✔ host login consumes teardown before page lookup and keeps a frozen capability map (1.7664ms)
+✔ host refuses inherited local commands (0.6205ms)
+✔ host duplicate or malformed targets refuse before mounting (1.1816ms)
+✔ resolved ordinary page disposes mounts then announces exact source (1.1597ms)
+✔ operator denial redirects without consuming the live teardown (0.7719ms)
+✔ authenticated login route redirects without acquiring renderer capabilities (0.3065ms)
+✔ host boot loaders settle before boot and schedule warmup after announcement (12.2163ms)
+✖ synchronous and asynchronous warmup failures are contained and observed once (3.4193ms)
+✔ scheduler registration failure keeps exact identity (0.8674ms)
+✔ login failure remounts the error page while successful login refetches session (0.9896ms)
+✔ logout completes remotely before teardown and login mount (0.3314ms)
+✔ boot loader failure preserves identity and prevents mount announcement (0.3951ms)
+✔ inline payload reads and parses exactly one element "" (0.6034ms)
+✔ inline payload reads and parses exactly one element "{\"page\":{\"subject\":\"p\"}}" (0.1395ms)
+✔ inline payload rejects primitives arrays missing nodes and malformed JSON (1.0394ms)
+✔ inline host lookup and text getter failures retain exact identity (0.4719ms)
+✔ mount observation stores detail before event dispatch with the same identity (0.5421ms)
+✔ mount observation without dispatch retains latest witness and native fault identity (0.3473ms)
+✔ yield invokes and awaits exactly one scheduler capability (0.3371ms)
+✔ yield is inert without browser or callable scheduler and propagates faults (0.3168ms)
+✔ auth session and login observe endpoints and update only explicit CSRF evidence (37.5935ms)
+✔ auth refusals and logout keep CSRF unchanged until successful server evidence (0.4142ms)
+✔ auth missing 401 diagnostic and native fetch failures propagate (0.2791ms)
+✔ conflict fields change as one witness while unrelated runtime survives (0.1252ms)
+✔ optimistic accepted save preserves server evidence and publishes once (1.0357ms)
+✔ committed receipt suppresses duplicate rendering and publication (0.7892ms)
+✔ rejected save and post-acceptance publication faults never trigger conflict retries (0.3875ms)
+✔ exhausted stale write refreshes authoritative lanes and records conflict (1.5669ms)
+✔ refresh retry replays through the actual command owner then saves once more (1.2572ms)
+✔ refresh retry budget bounds append attempts and ends in explicit conflict (0.4381ms)
+✔ bootstrap inline text wins over URL and canonical assets preserve explicit emptiness (0.339ms)
+✔ bootstrap blank identity refuses and wire formats preserve exact fact meaning (0.2069ms)
+✔ fetched bootstrap keeps program and runtime headers with one read (0.6412ms)
+✔ state bootstrap prefers structured facts over stale text and retains revision (0.3846ms)
+✔ render composition projects one reusable style node and native DOM errors (0.2895ms)
+✔ invalid renderer diagnostic retains exact typed coordinates (0.2129ms)
+✔ failed mount preserves original falsy fault despite both cleanup faults (1.2418ms)
+✔ teardown attempts all releases once then propagates the first falsy failure (0.3441ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 43
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3793.9149
+
+✖ failing tests:
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\semantic-translation-browser-composition.test.mjs:20:1
+✖ synchronous and asynchronous warmup failures are contained and observed once (3.4193ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n' +
+  +     '\n' +
+  +     '1 !== 0\n' +
+  +     '\n' +
+  +     '    at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-browser-composition.test.mjs:20:204',
+  +   'AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n' +
+  +     '\n' +
+  +     '1 !== 0\n' +
+  +     '\n' +
+  +     '    at scheduleSemanticMutationRuntimeWarmup.setTimeout.callback (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-browser-composition.test.mjs:20:269)'
+  -   'sync',
+  -   'async'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-browser-composition.test.mjs:20:470)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-browser-composition.test.mjs:20:204', 'AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n\n    at scheduleSemanticMutationRuntimeWarmup.setTimeout.callback (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-browser-composition.test.mjs:20:269)' ],
+    expected: [ 'sync', 'async' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

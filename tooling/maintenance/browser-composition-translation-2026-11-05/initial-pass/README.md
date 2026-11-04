@@ -1,0 +1,3 @@
+# Superseded initial candidate
+
+Source `745eafe3061f57571460ebe4c3b03673716d8407` passed 1048 source checks, 1396 artifact checks and two eleven-stage bootstraps. Final review found that deferred warmup forwarded an unintended undefined argument through Promise.then. The stronger zero-argument regression check refuses this candidate (43/44 focused checks); an explicit zero-argument wrapper repairs it (44/44). This candidate is not the accepted final baseline. Complete bundles and raw receipts remain. Snapshot helpers record their original bytes and paths; do not run these copied helpers against current source as a historical proof.
