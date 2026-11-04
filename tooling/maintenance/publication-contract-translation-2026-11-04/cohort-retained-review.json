@@ -1,0 +1,1543 @@
+{
+  "records": [
+    {
+      "subject": "module.publicationGatePolicy",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "AuthoredPublicationGateVocabulary"
+        ],
+        "targetDomain": [
+          "FrozenLogicOperatorAndValueKindSets"
+        ],
+        "forwardMap": [
+          "materializeExactAuthoredLabelsWithoutAliases"
+        ],
+        "reverseMapOrAbsence": [
+          "bijectiveWithinEachDeclaredVocabulary"
+        ],
+        "preservedInformation": [
+          "labelIdentityMembershipAndVocabularyBoundary"
+        ],
+        "lostInformation": [
+          "none"
+        ],
+        "identity": [
+          "exactLabelWithinNamedVocabulary"
+        ],
+        "partiality": [
+          "membershipOnlyForDeclaredLabels"
+        ],
+        "failure": [
+          "delegatedScalarAdmissionRefusesUnknownLabels"
+        ],
+        "authorityEffect": [
+          "pureVocabulary"
+        ],
+        "stateOwner": [
+          "algebra"
+        ],
+        "evidence": [
+          "frozenSets"
+        ],
+        "falsifier": [
+          "undeclaredLabelIsAdmitted"
+        ],
+        "default": [
+          "none"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateField",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "FieldSubjectAssetSubjectAndStoreFacts"
+        ],
+        "targetDomain": [
+          "SameAssetTypedDataFieldOrExactDiagnostic"
+        ],
+        "forwardMap": [
+          "requireDataFieldTypeAndExactOwningAsset"
+        ],
+        "reverseMapOrAbsence": [
+          "admittedFieldDoesNotRecoverOtherAssetFieldsOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "fieldIdentityTypeAndAssetIdentity"
+        ],
+        "lostInformation": [
+          "otherFieldsAndFactMetadata"
+        ],
+        "identity": [
+          "subjectFieldAndExpectedAsset"
+        ],
+        "partiality": [
+          "fieldMustBeTypedAndItsAssetMustEqualExpectedAsset"
+        ],
+        "failure": [
+          "missingTypeWrongTypeMissingAssetAndAssetMismatchRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyAdmission"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "fieldIdentityOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignAssetFieldAdmits"
+        ],
+        "default": [
+          "none"
+        ],
+        "symmetryBreak": [
+          "fieldActivityIsNotCheckedHereOnlyTypeAndOwningAsset"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateConditionExpressionParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "GateConditionExpressionFactsExpectedConditionAndAsset"
+        ],
+        "targetDomain": [
+          "AdmittedGateConditionExpressionRecord"
+        ],
+        "forwardMap": [
+          "requireExpressionTypeExactConditionSameAssetFieldOperatorAndValueKindThenNormalizeExpectedValueLabelAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectConditionFieldOperatorExpectedValueValueKindLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "optionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "conditionExpressionSubject"
+        ],
+        "partiality": [
+          "conditionMustMatchFieldMustBelongToAssetAndLabelsMustAdmit"
+        ],
+        "failure": [
+          "typeConditionFieldOperatorAndValueKindFailuresRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "expressionRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignConditionOrFieldProducesRecord"
+        ],
+        "default": [
+          "missingExpectedValueAndLabel=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "expectedValueAbsenceAndAuthoredEmptyBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionSetParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExpressionSetFactsAndExpectedPrecedence"
+        ],
+        "targetDomain": [
+          "AdmittedExpressionSetWithUnresolvedRootGroups"
+        ],
+        "forwardMap": [
+          "requireSetTypeTypedExactPrecedenceRetainGroupSubjectsAndNormalizeLabelAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverResolvedGroupsOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectPrecedenceRootGroupSubjectsLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "resolvedGroupsOptionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "expressionSetSubject"
+        ],
+        "partiality": [
+          "precedenceMustBeTypedAndEqualExpectedPrecedence"
+        ],
+        "failure": [
+          "typeMissingPrecedenceWrongPrecedenceTypeAndMismatchRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "expressionSetRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignPrecedenceProducesSet"
+        ],
+        "default": [
+          "missingRootGroups=empty;conditionGroups=emptyUntilResolution;missingLabel=empty;missingOrder=0"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionGroupParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExpressionGroupFactsAndExpectedExpressionSet"
+        ],
+        "targetDomain": [
+          "AdmittedGroupWithUnresolvedConditionsAndNextGroups"
+        ],
+        "forwardMap": [
+          "requireGroupTypeTypedExactSetAndAtLeastOneConditionOrNextGroupThenAdmitLogicAndNormalizeLabelAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverResolvedGraphOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectSetConditionSubjectsNextGroupSubjectsLogicLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "resolvedGraphOptionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "expressionGroupSubject"
+        ],
+        "partiality": [
+          "setMustMatchAtLeastOneEdgeMustExistAndLogicMustAdmit"
+        ],
+        "failure": [
+          "typeSetMismatchEmptyGroupAndUnknownLogicRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "groupRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "emptyOrForeignSetGroupProducesRecord"
+        ],
+        "default": [
+          "resolvedConditionsAndNextGroups=emptyUntilResolution;missingLabel=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "conditionAndNextGroupFactOrderIsRetainedHereAndCanonicalizedOnlyByTheResolver"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionConditionParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "6d59f405915e72507c30bdf5809e4a8443dfa6e6",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExpressionConditionFactsExpectedExpressionSetAndAsset"
+        ],
+        "targetDomain": [
+          "AdmittedExpressionConditionRecord"
+        ],
+        "forwardMap": [
+          "requireConditionTypeTypedExactSetSameAssetFieldOperatorAndValueKindThenNormalizeExpectedValueLabelAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectSetFieldOperatorExpectedValueValueKindLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "optionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "expressionConditionSubject"
+        ],
+        "partiality": [
+          "setMustMatchFieldMustBelongToAssetAndLabelsMustAdmit"
+        ],
+        "failure": [
+          "typeSetFieldOperatorAndValueKindFailuresRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "conditionRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignSetOrFieldProducesRecord"
+        ],
+        "default": [
+          "missingExpectedValueAndLabel=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "expectedValueAbsenceAndAuthoredEmptyBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionConditionResolver",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "f839caf2d94b21ad24388f2c09a586a65b5db2bf",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ConditionSubjectExpectedExpressionSetStoreAndAsset"
+        ],
+        "targetDomain": [
+          "SubjectCachedAdmittedExpressionCondition"
+        ],
+        "forwardMap": [
+          "returnFirstCachedSubjectResolutionOtherwiseParseAndCacheCondition"
+        ],
+        "reverseMapOrAbsence": [
+          "cacheDoesNotRecoverSubsequentExpectedSetArgumentsOrFailedAttempts"
+        ],
+        "preservedInformation": [
+          "firstConditionSubjectExpectedSetAssetAndParsedRecord"
+        ],
+        "lostInformation": [
+          "subsequentExpectedSetArgumentsFailedAttemptsAndLookupHistory"
+        ],
+        "identity": [
+          "conditionSubject"
+        ],
+        "partiality": [
+          "firstParseMustAdmit"
+        ],
+        "failure": [
+          "leafParseFailurePropagatesAndIsNotCached"
+        ],
+        "authorityEffect": [
+          "mutatesResolverLocalCacheOnly"
+        ],
+        "stateOwner": [
+          "resolverInstance"
+        ],
+        "evidence": [
+          "objectIdentityStableCachedCondition"
+        ],
+        "falsifier": [
+          "secondResolutionCreatesDistinctObject"
+        ],
+        "default": [
+          "emptyCacheAtConstruction"
+        ],
+        "symmetryBreak": [
+          "cacheIdentityIsConditionSubjectOnlyAndFirstSuccessfulExpectedExpressionSetWins"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionGroupResolver",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "f839caf2d94b21ad24388f2c09a586a65b5db2bf",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "GroupSubjectExpectedExpressionSetStoreAndConditionResolver"
+        ],
+        "targetDomain": [
+          "CanonicalAcyclicResolvedGroupGraphWithSubjectCache"
+        ],
+        "forwardMap": [
+          "returnCachedGroupOrDetectCycleParseResolveConditionsAndNextGroupsCanonicalizeAndCache"
+        ],
+        "reverseMapOrAbsence": [
+          "resolvedGraphDoesNotRecoverAuthoredEdgeOrderFailedTraversalsOrSubsequentExpectedSetArguments"
+        ],
+        "preservedInformation": [
+          "groupIdentityConditionsNextGroupsCanonicalOrderAndFirstExpectedSet"
+        ],
+        "lostInformation": [
+          "authoredEdgeOrderFailedTraversalHistoryAndSubsequentExpectedSetArguments"
+        ],
+        "identity": [
+          "groupSubject"
+        ],
+        "partiality": [
+          "groupGraphMustBeNonSelfReferentialAcyclicAndEveryNodeMustAdmit"
+        ],
+        "failure": [
+          "selfReferenceCycleAndDelegatedLeafFailuresRemainDistinctAndDoNotLeaveResolvingMarks"
+        ],
+        "authorityEffect": [
+          "mutatesResolverLocalCachesAndNewlyParsedGroupRecordsOnly"
+        ],
+        "stateOwner": [
+          "resolverInstance"
+        ],
+        "evidence": [
+          "canonicalResolvedGraphObjectIdentityAndCycleDiagnostics"
+        ],
+        "falsifier": [
+          "cycleAdmitsOrRepeatedSubjectProducesDistinctGroup"
+        ],
+        "default": [
+          "emptyCachesAndResolvingSetAtConstruction"
+        ],
+        "symmetryBreak": [
+          "conditionsAndNextGroupsCanonicalizeByNumericOrderThenSubjectAndSubjectOnlyCacheMakesFirstSuccessfulExpectedSetWin"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionResolver",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "f839caf2d94b21ad24388f2c09a586a65b5db2bf",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExpressionSetSubjectPrecedenceAssetAndCompleteStoreFacts"
+        ],
+        "targetDomain": [
+          "CanonicalRootedResolvedExpressionSetGraphWithSubjectCaches"
+        ],
+        "forwardMap": [
+          "parseSetDiscoverScopedGroupsResolveAuthoredRootsRequireRootWhenGroupsExistCanonicalizeAndCache"
+        ],
+        "reverseMapOrAbsence": [
+          "graphDoesNotRecoverAuthoredRootOrderDuplicateScopeFactsFailedAttemptsOrLookupHistory"
+        ],
+        "preservedInformation": [
+          "setIdentityPrecedenceRootIdentityResolvedGraphCanonicalOrderAndScopedGroupExistence"
+        ],
+        "lostInformation": [
+          "authoredRootOrderDuplicateScopeFactsFailedAttemptsAndLookupHistory"
+        ],
+        "identity": [
+          "expressionSetSubject"
+        ],
+        "partiality": [
+          "atLeastOneAuthoredRootMustResolveAndAuthoredScopedGroupsCannotRemainRootless"
+        ],
+        "failure": [
+          "missingRootRootlessAuthoredGraphAndDelegatedResolutionFailuresRemainDistinct"
+        ],
+        "authorityEffect": [
+          "mutatesResolverLocalCachesAndNewlyParsedRecordGraphsOnly"
+        ],
+        "stateOwner": [
+          "resolverInstance"
+        ],
+        "evidence": [
+          "canonicalResolvedSetGraphObjectIdentityAndRootDiagnostics"
+        ],
+        "falsifier": [
+          "rootlessAuthoredGraphAdmitsOrRepeatedSetProducesDistinctObject"
+        ],
+        "default": [
+          "emptyCachesAtConstruction"
+        ],
+        "symmetryBreak": [
+          "rootsCanonicalizeByNumericOrderThenSubjectScopedGroupDiscoveryDeduplicatesBySubjectAndSetCacheIsSubjectOnly"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateExpressionFlatten",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "f839caf2d94b21ad24388f2c09a586a65b5db2bf",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "OrderedResolvedRootGroups"
+        ],
+        "targetDomain": [
+          "DepthFirstFirstOccurrenceIdentityUniqueGroupList"
+        ],
+        "forwardMap": [
+          "depthFirstTraverseRootAndNextGroupsSkippingFalsyAndPreviouslyCollectedObjectIdentities"
+        ],
+        "reverseMapOrAbsence": [
+          "flatListDoesNotRecoverEdgeTopologyRepeatedPathsOrFalsyEntries"
+        ],
+        "preservedInformation": [
+          "firstOccurrenceObjectIdentityAndDepthFirstTraversalOrder"
+        ],
+        "lostInformation": [
+          "edgeTopologyRepeatedPathsFalsyEntriesAndUnreachableGroups"
+        ],
+        "identity": [
+          "groupObjectIdentityNotSubjectLabel"
+        ],
+        "partiality": [
+          "inputMustBeIterableAndNextGroupsWhenPresentMustBeIterable"
+        ],
+        "failure": [
+          "malformedNonIterableInputPropagatesNativeIterationFailure"
+        ],
+        "authorityEffect": [
+          "pureProjectionWithLocalAccumulator"
+        ],
+        "stateOwner": [
+          "call"
+        ],
+        "evidence": [
+          "orderedIdentityUniqueGroupList"
+        ],
+        "falsifier": [
+          "sharedGroupAppearsTwiceOrTopologyIsClaimedRecoverable"
+        ],
+        "default": [
+          "missingNextGroups=empty"
+        ],
+        "symmetryBreak": [
+          "sharedOrCyclicObjectIdentityAppearsOnlyAtItsFirstDepthFirstOccurrenceAndTopologyIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateConditionParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "5e1e2744d68f162884f00bc92f5a9b44ea931718",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "GateConditionFactsExpectedPrecedenceAndPublicationAsset"
+        ],
+        "targetDomain": [
+          "AdmittedGateConditionWithUnresolvedExpressionSubjects"
+        ],
+        "forwardMap": [
+          "requireConditionTypeTypedExactPrecedenceOptionalSameAssetFieldConditionKindOperatorAndLogicThenNormalizeScalarsAndUnresolvedLists"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverResolvedExpressionsOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectPrecedenceConditionKindLogicFieldOperatorExpectedValueExpressionSubjectsSetSubjectsLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "resolvedExpressionsOptionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "gateConditionSubject"
+        ],
+        "partiality": [
+          "precedenceMustMatchOptionalFieldMustBelongToAssetAndRequiredScalarsMustAdmit"
+        ],
+        "failure": [
+          "typePrecedenceFieldLogicAndRequiredScalarFailuresRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "conditionRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignPrecedenceOrFieldProducesCondition"
+        ],
+        "default": [
+          "missingLogicFieldExpectedValueAndLabel=empty;resolvedExpressionLists=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "optionalScalarAbsenceAndAuthoredEmptyBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateConditionGroupParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "5e1e2744d68f162884f00bc92f5a9b44ea931718",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ConditionGroupFactsExpectedPrecedenceAndActiveConditionIndex"
+        ],
+        "targetDomain": [
+          "AdmittedGroupWithResolvedConditionsAndUnresolvedNextGroups"
+        ],
+        "forwardMap": [
+          "requireGroupTypeTypedExactPrecedenceNonemptyConditionsResolveEveryActiveSamePrecedenceConditionAndAdmitLogic"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverOtherIndexEntriesResolvedNextGroupsOptionalAbsenceNumericLexemeOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "subjectPrecedenceConditionSubjectOrderResolvedObjectsNextSubjectsLogicLabelAndNumericOrder"
+        ],
+        "lostInformation": [
+          "otherIndexEntriesResolvedNextGroupsOptionalAbsenceNumericOrderLexemeAndFactMetadata"
+        ],
+        "identity": [
+          "conditionGroupSubject"
+        ],
+        "partiality": [
+          "atLeastOneConditionMustExistAndEveryConditionMustBeIndexedForExactPrecedence"
+        ],
+        "failure": [
+          "emptyMissingConditionCrossPrecedenceAndUnknownLogicRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "groupRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "emptyOrCrossPrecedenceGroupProducesRecord"
+        ],
+        "default": [
+          "missingNextGroups=empty;resolvedNextGroups=empty;missingLabel=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "conditionFactOrderIsPreservedRatherThanCanonicalizedAtThisLayer"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateRequirements",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "5e1e2744d68f162884f00bc92f5a9b44ea931718",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "PrecedenceRequirementFactsAndExpectedPublication"
+        ],
+        "targetDomain": [
+          "DistinctPrimaryAndFallbackRequirementSubjects"
+        ],
+        "forwardMap": [
+          "requireBothRequirementTypesSamePublicationOwnershipAndDistinctIdentity"
+        ],
+        "reverseMapOrAbsence": [
+          "pairDoesNotRecoverRequirementContentsOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "predicateRoleRequirementIdentityTypePublicationAndDistinctness"
+        ],
+        "lostInformation": [
+          "requirementContentsAndFactMetadata"
+        ],
+        "identity": [
+          "precedenceSubjectPredicateAndRequirementSubject"
+        ],
+        "partiality": [
+          "bothRequirementsMustBeTypedOwnedByExpectedPublicationAndDistinct"
+        ],
+        "failure": [
+          "missingWrongTypeForeignPublicationAndIdentityCollisionRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyAdmission"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "distinctRequirementPairOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "sameOrForeignRequirementPairAdmits"
+        ],
+        "default": [
+          "none"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGatePrecedenceParse",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "5e1e2744d68f162884f00bc92f5a9b44ea931718",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "PrecedenceFactsExpectedPublicationAssetAndCompatibilityValidationResultSet"
+        ],
+        "targetDomain": [
+          "AdmittedPrecedenceWithCanonicalConditionsAndUnresolvedGroupsAndSets"
+        ],
+        "forwardMap": [
+          "admitPublicationMemberAndDistinctRequirementsParseConditionsCanonicalizeByOrderThenSubjectRetainGroupAndSetSubjectsAndNormalizeRankPolicyLabelOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordDoesNotRecoverAuthoredConditionOrderResolvedGroupsSetsNumericLexemesFactMetadataOrCompatibilityValidationSet"
+        ],
+        "preservedInformation": [
+          "subjectPublicationRequirementsCanonicalConditionsGroupSetSubjectsRankRoutingPolicyLabelAndOrder"
+        ],
+        "lostInformation": [
+          "authoredConditionOrderResolvedGroupsSetsNumericLexemesFactMetadataAndCompatibilityValidationSet"
+        ],
+        "identity": [
+          "precedenceSubject"
+        ],
+        "partiality": [
+          "membershipRequirementsEveryConditionRankAndRoutingPolicyMustAdmit"
+        ],
+        "failure": [
+          "membershipRequirementConditionRankAndRoutingPolicyFailuresPropagate"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "precedenceRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "sameRequirementOrForeignConditionProducesPrecedence"
+        ],
+        "default": [
+          "missingConditionsGroupsSets=empty;resolvedGroupsSets=empty;missingLabel=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "conditionsCanonicalizeByNumericOrderThenSubjectWhileAuthoredValidationResultCompatibilityInputIsIgnored"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateGraphCompose",
+      "source": "sdk/plugins/data-space/publication-gates.rel",
+      "selectedCommit": "c92e29c84ff1013b234752c89d355d1964071da1",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ParsedPublicationsPrecedencesConditionsAndCompleteStoreFacts"
+        ],
+        "targetDomain": [
+          "ResolvedCanonicalPublicationGateGraphsAndSevenSubjectIndexes"
+        ],
+        "forwardMap": [
+          "attachConditionExpressionsResolveAndAttachExpressionSetsResolveConditionGroupsAttachNextGroupsThenProjectEditorIndexes"
+        ],
+        "reverseMapOrAbsence": [
+          "composedGraphsAndIndexesDoNotRecoverAuthoredOrderDuplicateSubjectCollisionsTraversalTopologyOrPreMutationRecords"
+        ],
+        "preservedInformation": [
+          "publicationPrecedenceConditionExpressionSetGroupRequirementIdentityResolvedReferencesAndCanonicalOrder"
+        ],
+        "lostInformation": [
+          "authoredOrderDuplicateSubjectCollisionsRepeatedExpressionGraphPathsTopologyAndPreMutationRecordState"
+        ],
+        "identity": [
+          "recordSubjectWithinEachProjectedIndexAndObjectIdentityAcrossAttachedReferences"
+        ],
+        "partiality": [
+          "everyReferencedExpressionSetConditionAndNextGroupMustExistInItsExpectedScope"
+        ],
+        "failure": [
+          "delegatedParseResolverMissingReferenceCrossPrecedenceAndDirectSelfEdgeFailuresRemainDistinct"
+        ],
+        "authorityEffect": [
+          "mutatesPassedParsedPublicationGraphsAndResolverLocalCachesOnly"
+        ],
+        "stateOwner": [
+          "callerOwnedParsedPublicationGraph"
+        ],
+        "evidence": [
+          "attachedObjectIdentityCanonicalGraphsAndCompleteNamedIndexes"
+        ],
+        "falsifier": [
+          "foreignReferenceAdmitsOrIndexPointsToARecordOtherThanTheAttachedGraph"
+        ],
+        "default": [
+          "noneBeyondDefaultsAlreadyMaterializedByLeafParsers"
+        ],
+        "symmetryBreak": [
+          "directSelfEdgesAreRefusedButLongerTopLevelConditionGroupCyclesRemainRepresentable",
+          "duplicateSubjectsWithinAnyIndexCollapseAndTheLastEncounteredRecordWins",
+          "expressionGraphFlatteningKeepsFirstDepthFirstObjectOccurrenceAndLosesTopology"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationEditorFoundation",
+      "source": "sdk/plugins/data-space/publication-editors.rel",
+      "selectedCommit": "f9803dd278e787165eeda4bbd410f37a64cc232f",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "EditorFactsExpectedPublicationMemberIndexesAndActiveEditAndValidationSets"
+        ],
+        "targetDomain": [
+          "AdmittedPlacementRequirementIdentityAndNavigationEditorRecords"
+        ],
+        "forwardMap": [
+          "requireEditorTypeResolveExactOwnedMemberRequirePredicateExactActiveEditTargetsAdmitValidationEvidenceAndNormalizeOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "editorRecordDoesNotRecoverOptionalAbsenceNumericLexemeOtherIndexEntriesOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "editorMemberPublicationEditTargetPredicateValidationIdentityAndNumericOrder"
+        ],
+        "lostInformation": [
+          "optionalAbsenceNumericOrderLexemeOtherIndexEntriesAndFactMetadata"
+        ],
+        "identity": [
+          "editorSubjectAndReferencedMemberSubject"
+        ],
+        "partiality": [
+          "memberMustBeActiveOwnedByExpectedPublicationAndEveryEditTargetMustBeActiveAndExact"
+        ],
+        "failure": [
+          "editorTypeMissingMemberInactiveMemberForeignPublicationInactiveValidationAndEditTargetMismatchRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "editorRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignMemberOrPredicateMismatchedEditTargetAdmits"
+        ],
+        "default": [
+          "missingValidationResult=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "missingValidationResultAndAuthoredEmptyBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateEditorLeaves",
+      "source": "sdk/plugins/data-space/publication-editors.rel",
+      "selectedCommit": "419cf60650dd7fd486d4fff4d7370b825015719e",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "GateLeafEditorFactsExpectedOwningConditionSetOrPrecedenceIndexesAndActiveEditAndValidationSets"
+        ],
+        "targetDomain": [
+          "AdmittedConditionExpressionSetConditionSetGroupAndPrecedenceGroupEditorRecords"
+        ],
+        "forwardMap": [
+          "requireExactEditorTypeResolveActiveLeafRequireExpectedOwnerRequireExactPredicateEditTargetsAdmitValidationAndNormalizeOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "recordsDoNotRecoverOptionalAbsenceNumericLexemeOtherIndexEntriesOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "editorLeafOwnerEditTargetPredicateValidationIdentityAndNumericOrder"
+        ],
+        "lostInformation": [
+          "optionalAbsenceNumericOrderLexemeOtherIndexEntriesAndFactMetadata"
+        ],
+        "identity": [
+          "editorSubjectAndReferencedGateLeafSubject"
+        ],
+        "partiality": [
+          "leafMustBeActiveOwnedByExpectedParentAndEveryEditTargetMustBeActiveAndExact"
+        ],
+        "failure": [
+          "typeInactiveLeafForeignOwnerInactiveValidationAndEditTargetMismatchRemainDistinct"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyParse"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "editorRecordOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignLeafOrPredicateMismatchedEditTargetAdmits"
+        ],
+        "default": [
+          "missingValidationResult=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "missingValidationResultAndAuthoredEmptyBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGateEditorComposition",
+      "source": "sdk/plugins/data-space/publication-editors.rel",
+      "selectedCommit": "e2ce5a53ff4f19422fc79a26f67528e04b94a15a",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ConditionAndExpressionSetEditorFactsScopedIndexesNestedEditorFactsAndActiveSets"
+        ],
+        "targetDomain": [
+          "AdmittedCanonicalConditionAndExpressionSetEditorTrees"
+        ],
+        "forwardMap": [
+          "resolveExactOwnedRootRequireEditTargetsComposeNestedLeafEditorsCanonicalizeThenAdmitValidationAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "editorTreesDoNotRecoverNestedAuthoredOrderOptionalAbsenceNumericLexemeOtherIndexEntriesOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "rootIdentityOwnershipExactEditPredicatesNestedEditorIdentityCanonicalOrderValidationAndNumericOrder"
+        ],
+        "lostInformation": [
+          "nestedAuthoredOrderOptionalAbsenceNumericOrderLexemeOtherIndexEntriesAndFactMetadata"
+        ],
+        "identity": [
+          "editorSubjectRootGateSubjectAndNestedEditorSubjects"
+        ],
+        "partiality": [
+          "rootAndEveryNestedLeafMustBeActiveOwnedByExpectedScopeWithExactEditTargets"
+        ],
+        "failure": [
+          "inactiveRootForeignOwnerNestedLeafAndEditTargetFailuresPropagateDistinctly"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyComposition"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "canonicalEditorTreeOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignRootOrNestedLeafAdmitsOrCanonicalOrderingDrifts"
+        ],
+        "default": [
+          "missingLogicKindEdit=empty;missingValidationResult=empty;missingNestedEditors=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "missingAndAuthoredEmptyOptionalEditAndValidationBecomeIndistinguishableNestedEditorsCanonicalizeAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationGatePrecedenceEditor",
+      "source": "sdk/plugins/data-space/publication-editors.rel",
+      "selectedCommit": "1c522074b5897bc0f9be18459da021e67515ba71",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "PrecedenceEditorFactsExpectedPublicationAllGateIndexesNestedEditorFactsAndActiveSets"
+        ],
+        "targetDomain": [
+          "AdmittedCanonicalPrecedenceEditorTree"
+        ],
+        "forwardMap": [
+          "resolveActiveOwnedPrecedenceComposeExpressionSetGroupAndConditionEditorsCanonicalizeRequireRankAndFallbackEditsThenAdmitValidationAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "treeDoesNotRecoverNestedAuthoredOrderOptionalAbsenceNumericLexemeOtherIndexEntriesOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "precedencePublicationExactEditPredicatesNestedEditorIdentitiesCanonicalOrdersValidationAndNumericOrder"
+        ],
+        "lostInformation": [
+          "nestedAuthoredOrderOptionalAbsenceNumericOrderLexemeOtherIndexEntriesAndFactMetadata"
+        ],
+        "identity": [
+          "precedenceEditorSubjectPrecedenceSubjectAndNestedEditorSubjects"
+        ],
+        "partiality": [
+          "precedenceAndEveryNestedEditorMustBeActiveOwnedAndExact"
+        ],
+        "failure": [
+          "inactivePrecedenceForeignPublicationNestedEditorAndEditTargetFailuresPropagateDistinctly"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyComposition"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "canonicalPrecedenceEditorTreeOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "foreignPrecedenceAdmitsOrNestedCanonicalOrderingDrifts"
+        ],
+        "default": [
+          "missingNestedEditors=empty;missingValidationResult=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "nestedEditorsCanonicalizeByNumericOrderThenReferencedIdentityAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.publicationEditorParse",
+      "source": "sdk/plugins/data-space/publication-editors.rel",
+      "selectedCommit": "7323f9994d946b942b45419428255a8dba2b75a1",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "PublicationEditorFactsActivePublicationSetCompletePublicationIndexesNestedEditorFactsAndActiveSets"
+        ],
+        "targetDomain": [
+          "AdmittedCanonicalCompletePublicationEditorTree"
+        ],
+        "forwardMap": [
+          "requireActiveTypedPublicationComposeFiveEditorFamiliesCanonicalizeRequireExactRootEditsThenAdmitValidationAndOrder"
+        ],
+        "reverseMapOrAbsence": [
+          "treeDoesNotRecoverNestedAuthoredOrderOptionalAbsenceNumericLexemeOtherIndexEntriesOrFactMetadata"
+        ],
+        "preservedInformation": [
+          "publicationIdentityAllRootEditPredicatesNestedEditorIdentitiesCanonicalOrdersValidationAndNumericOrder"
+        ],
+        "lostInformation": [
+          "nestedAuthoredOrderOptionalAbsenceNumericOrderLexemeOtherIndexEntriesAndFactMetadata"
+        ],
+        "identity": [
+          "publicationEditorSubjectPublicationSubjectAndNestedEditorSubjects"
+        ],
+        "partiality": [
+          "publicationAndEveryNestedEditorMustBeActiveOwnedAndExact"
+        ],
+        "failure": [
+          "inactivePublicationNestedEditorAndRootEditTargetFailuresPropagateDistinctly"
+        ],
+        "authorityEffect": [
+          "pureReadOnlyComposition"
+        ],
+        "stateOwner": [
+          "caller"
+        ],
+        "evidence": [
+          "canonicalCompletePublicationEditorTreeOrExactDiagnostic"
+        ],
+        "falsifier": [
+          "inactivePublicationAdmitsOrNestedCanonicalOrderingDrifts"
+        ],
+        "default": [
+          "missingNestedEditors=empty;missingModeNoteEdit=empty;missingValidationResult=empty;missingOrder=0"
+        ],
+        "symmetryBreak": [
+          "missingAndAuthoredEmptyOptionalModeNoteAndValidationBecomeIndistinguishableNestedEditorsCanonicalizeAndNumericOrderLexemeIsLost"
+        ]
+      }
+    },
+    {
+      "subject": "module.sessionPublicationWire",
+      "source": "sdk/browser/session-publication-wire.rel",
+      "selectedCommit": "ed59b2f3b3f0c012590201af879664c61e879cea",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "PublicationHeadersScalarIdentityValuesAndJsonSessionEventMetadataWithCanonicalCloneCapability"
+        ],
+        "targetDomain": [
+          "NormalizedPublicationIdentityAndAliasSymmetricSessionEventMetadata"
+        ],
+        "forwardMap": [
+          "ParsePositiveLeadingSequenceTrimPublicationIdentityApplyPreferredThenFallbackAliasesAndProjectClonedMetadata"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.NormalizedMetadataDoesNotReconstructJsonTextHeaderCasingAliasAuthorshipOrUnprojectedFields"
+        ],
+        "preservedInformation": [
+          "PreferredAndFallbackArrayStringScalarValuesPublicationIdentityPositiveSequenceKnownMetadataFieldsAndClonedProjectionUpdates"
+        ],
+        "lostInformation": [
+          "JsonFormattingUnknownFieldsAliasSourceWhenValuesCoincideHeaderCasingAndProjectionUpdateObjectIdentity"
+        ],
+        "identity": [
+          "OnePublicationHeaderOrOneSessionEventMetadataPayloadObservation"
+        ],
+        "partiality": [
+          "InvalidBlankNonobjectArrayOrMalformedMetadataReturnsNullAndInvalidSequenceOrIdentityReturnsExplicitEmptyValue"
+        ],
+        "failure": [
+          "JsonParseFailureReturnsNullWhileInjectedCloneFailurePropagatesUnchanged"
+        ],
+        "authorityEffect": [
+          "PureParsingAndCallerSuppliedCloneInvocationOnly"
+        ],
+        "stateOwner": [
+          "CallerOwnsInputAndCloneCapability;ReturnedMetadataOwnsClonedProjectionUpdateValue"
+        ],
+        "evidence": [
+          "FocusedHeaderAliasMalformedCloneAndPredecessorCanvasMetadataCharacterization"
+        ],
+        "falsifier": [
+          "FallbackPrecedesPreferredInvalidSequenceSurvivesUnknownFieldsProjectOrCloneIdentityIsRetained"
+        ],
+        "default": [
+          "InvalidSequenceMeansZeroInvalidPublicationIdentityMeansEmptyStringMissingStringAliasesMeanEmptyStringMissingScalarAliasesMeanNullAndMissingSinkCountMeansZero"
+        ],
+        "adapterSeam": [
+          "MetadataCustodyRevisionProjectionQueuesApplicationAndNetworkEffectsRemainOutsideThisPureWireOwner"
+        ],
+        "symmetryBreak": [
+          "StateBackendAndSessionFrontendAliasesAreBothProjectedWhilePreferredAliasWinsItsCanonicalField"
+        ],
+        "ordering": [
+          "ParseValidateResolveCanonicalAliasesResolveReverseAliasesCloneProjectionUpdatesThenNormalizeSinkCount"
+        ],
+        "lifecycle": [
+          "OneBoundedPureParseProjectionReturnOrNull"
+        ],
+        "semanticOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "targetOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "interpreter": [
+          "sdk/browser/session-event-metadata.mjs"
+        ],
+        "interpreterComponent": [
+          "sdk/browser/publication-identity.mjs",
+          "sdk/browser/publication-alias.mjs"
+        ]
+      }
+    },
+    {
+      "subject": "module.pendingPublicationCustody",
+      "source": "sdk/browser/pending-publication.rel",
+      "selectedCommit": "f2c29dc736e281852d1803afc2fd096f7c1c23bb",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "CallerRuntimePendingPublicationEntriesSnapshotsFactsPublicationIdentitySequenceAndAcknowledgementOptions"
+        ],
+        "targetDomain": [
+          "OrderedPendingPublicationQueueAndMonotonicAcknowledgedPublicationSequence"
+        ],
+        "forwardMap": [
+          "NormalizeQueueAndSequenceAppendClonedWitnessEntryThenAcknowledgeLongestSequencePrefixOrExactPublicationIdentityPrefix"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.RemainingQueueAndHighWaterDoNotReconstructAcknowledgedEntriesPriorMalformedQueueOrOriginalFactsArrayIdentity"
+        ],
+        "preservedInformation": [
+          "QueueOrderPublicationIdentityNormalizedSequenceSnapshotTextAndFactElementIdentityWithinClonedArray"
+        ],
+        "lostInformation": [
+          "PriorQueueShapeAcknowledgedEntriesOriginalFactsArrayIdentityAndNonleadingSequenceSuffix"
+        ],
+        "identity": [
+          "OneOrderedPendingPublicationQueuePerCallerRuntime"
+        ],
+        "partiality": [
+          "AbsentRuntimeUsesInvocationLocalCustodyAndUnmatchedAcknowledgementLeavesQueueUnchanged"
+        ],
+        "failure": [
+          "NoniterableTruthyFactsAndSnapshotParseFailuresPropagateWhileMalformedQueueIsReplacedByEmptyQueue"
+        ],
+        "authorityEffect": [
+          "MutateCallerOwnedPendingQueueAndSessionPublicationSequenceOnly"
+        ],
+        "stateOwner": [
+          "CallerRuntimeOwnsQueueAndHighWater;PublicationWireOwnsIdentityParsing;ApplicationAndNetworkOwnersRemainDistinct"
+        ],
+        "evidence": [
+          "FocusedAppendCloneWitnessSequencePrefixIdentityPrefixMonotonicHighWaterAndMalformedQueueCharacterization"
+        ],
+        "falsifier": [
+          "AcknowledgementRemovesSuffixSequenceSearchRunsForwardIdentityPrecedesSequenceOrHighWaterDecreases"
+        ],
+        "default": [
+          "MalformedOrAbsentQueueMeansFreshEmptyArrayInvalidSequenceMeansZeroInvalidIdentityAndSnapshotMeanEmptyStringAndAbsentFactsMeanFreshEmptyArray"
+        ],
+        "adapterSeam": [
+          "PublicationWireOwnsIdentityParsingTransferParserOwnsSnapshotDecodeAndPublishedLaneApplicationRemainsOutside"
+        ],
+        "symmetryBreak": [
+          "SequenceAcknowledgementPrecedesIdentityAndRemovesTheLongestMatchedPrefixWhileFactArrayIsShallowCloned"
+        ],
+        "ordering": [
+          "EnsureQueueNormalizeHighWaterAppendInCallOrderThenForAcknowledgementSearchSequenceFromTailBeforeIdentityAndSplicePrefix"
+        ],
+        "lifecycle": [
+          "QueuePersistsInCallerRuntimeUntilAcknowledgedOrExplicitlyClearedByExistingCommitOwner"
+        ],
+        "semanticOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "targetOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "interpreter": [
+          "sdk/browser/pending-publication-state.mjs"
+        ],
+        "interpreterComponent": [
+          "sdk/browser/pending-publication-reconcile.mjs"
+        ]
+      }
+    },
+    {
+      "subject": "module.browserPublicationApplication",
+      "source": "sdk/browser/browser-publication.rel",
+      "selectedCommit": "9b99ed17493e7a021ca317dae19c0975e9dd25be",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "BrowserPublicationEventNameMetadataPublicationDeltaLaneIdentitiesMemoryAndExistingBackendFrontendApplicationCapabilities"
+        ],
+        "targetDomain": [
+          "CanonicalBackendOrFrontendPublicationMetadataAndDelegatedLaneApplicationResult"
+        ],
+        "forwardMap": [
+          "ValidatePublicationProjectCommonFieldsNormalizeRoleAliasesThenDelegateExactlyOneBackendOrFrontendApplication"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.NormalizedMetadataAndApplicationResultDoNotReconstructAliasAuthorshipPriorMemoryOrUnprojectedPublicationFields"
+        ],
+        "preservedInformation": [
+          "PublicationIdentitySequenceSessionRouteClonedProjectionUpdatesRoleFactsDeltaSRevisionAndDelegatedResultIdentity"
+        ],
+        "lostInformation": [
+          "UnknownFieldsAliasChoiceWhenEquivalentPriorBackendRevisionAndProjectionUpdateObjectIdentity"
+        ],
+        "identity": [
+          "OneBrowserPublicationObservationForOneExplicitEventRole"
+        ],
+        "partiality": [
+          "InvalidPublicationNormalizesToNullUnknownEventRoleReturnsFalseAndDelegatedCapabilitiesOwnLaneAdmission"
+        ],
+        "failure": [
+          "CloneRevisionAndDelegatedApplicationFailuresPropagateUnchanged"
+        ],
+        "authorityEffect": [
+          "MaySetCallerRuntimeBackendRevisionThenInvokeOneExistingBackendOrFrontendApplicationCapabilityOnly"
+        ],
+        "stateOwner": [
+          "CallerMemoryOwnsRevisionAndLanes;ExistingApplicationOwnersRetainLaneMutation;ThisOwnerRetainsNoState"
+        ],
+        "evidence": [
+          "FocusedBackendFrontendAliasDeltaFallbackUnknownRoleCloneAndDelegationOrderCharacterization"
+        ],
+        "falsifier": [
+          "GenericAliasPrecedesRoleAliasFrontendDeltaOverridesExplicitDeltaOrDelegationOccursBeforeBackendRevisionProjection"
+        ],
+        "default": [
+          "InvalidSequenceMeansZeroAbsentOptionalStringsAreOmittedAbsentMetadataUsesPublicationAbsentFrontendOptimisticLaneUsesPublishedLane"
+        ],
+        "adapterSeam": [
+          "WireCustodyRevisionPendingQueueAndLaneApplicationOwnersRemainCanonicalAndInjected"
+        ],
+        "symmetryBreak": [
+          "RoleSpecificAliasesProjectToBothCanonicalAndCompatibilityNamesAndMetadataInputPrecedesPublicationInput"
+        ],
+        "ordering": [
+          "ValidateThenCommonNormalizeThenRoleNormalizeThenForBackendProjectRevisionBeforeDelegationOrForFrontendResolveLaneThenDelegate"
+        ],
+        "lifecycle": [
+          "OneSynchronousNormalizationAndDelegatedApplicationWithNoRetainedCustody"
+        ],
+        "semanticOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "targetOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "interpreter": [
+          "sdk/browser/browser-publication-apply.mjs"
+        ],
+        "interpreterComponent": [
+          "sdk/browser/browser-publication-normalize.mjs",
+          "sdk/browser/browser-publication-common.mjs",
+          "sdk/browser/browser-publication-backend.mjs",
+          "sdk/browser/browser-publication-frontend.mjs",
+          "sdk/browser/browser-publication-values.mjs"
+        ]
+      }
+    },
+    {
+      "subject": "module.sessionSnapshotPublicationNetwork",
+      "source": "sdk/browser/session-publication-network.rel",
+      "selectedCommit": "88700501e48c5ba9e6f49fdb1b9b138db40acc31",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExplicitNetSessionIdCanonicalFactsAndInjectedFetchEffect"
+        ],
+        "targetDomain": [
+          "OneSessionPublicationPostResponseOrPublicationIdentity"
+        ],
+        "forwardMap": [
+          "SelectDeclaredWirePayloadPostJsonWithCsrfThenProjectPublicationIdentityHeaders"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.PublicationIdentityDoesNotReconstructFactsPayloadHeadersResponseOrServerState"
+        ],
+        "preservedInformation": [
+          "SessionEndpointSelectedWireFactsCsrfHeaderPublicationIdAndPublicationSequence"
+        ],
+        "lostInformation": [
+          "ResponseBodyUnrecognizedHeadersFetchTimingAndServerInternalPublicationState"
+        ],
+        "identity": [
+          "OneExplicitSessionSnapshotPublicationAttempt"
+        ],
+        "partiality": [
+          "OnlyCanonicalFactArrayV1AndCanonicalFactsSV1PayloadModesAreAdmitted"
+        ],
+        "failure": [
+          "UnsupportedPayloadFetchAndHeaderFailuresPropagate;NonOkResponseBecomesExactStatusStatusTextSessionPublishError"
+        ],
+        "authorityEffect": [
+          "MayIssueOnePostToNetUrlForSessionWithCsrfAndJsonBody;MayNotRetryApplyQueueOrMutateSessionState"
+        ],
+        "stateOwner": [
+          "RemoteSessionEndpointOwnsPublishedState;CallerOwnsCsrfAndResponseCustody;AdapterRetainsNoState"
+        ],
+        "evidence": [
+          "FocusedEndpointMethodHeaderPayloadIdentityAndFailureCharacterization"
+        ],
+        "falsifier": [
+          "AnyRetryGetRequestNonSessionEndpointMissingCsrfOrResponseBodyApplication"
+        ],
+        "default": [
+          "AbsentOrFalsyFactsSerializeAsEmptyFactsAndMissingModeIsNamedMissingInFailure"
+        ],
+        "adapterSeam": [
+          "WireIdentityPendingQueueAndBrowserApplicationOwnersRemainCanonicalAndOutsideThisEffect"
+        ],
+        "symmetryBreak": [
+          "AuthoredPayloadModeSelectsFactArrayOrFactsSAndHttpFailureCollapsesResponseToStatusIdentity"
+        ],
+        "ordering": [
+          "ResolveEndpointThenPayloadThenHeadersThenOneFetchThenOkCheckThenIdentityProjection"
+        ],
+        "lifecycle": [
+          "OneAttemptWithNoInternalRetryRebaseQueueApplicationOrRetainedCustody"
+        ],
+        "semanticOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "targetOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "interpreter": [
+          "sdk/browser/session-publication-snapshot-network.mjs"
+        ],
+        "interpreterComponent": [
+          "sdk/browser/session-publication-payload.mjs"
+        ]
+      }
+    },
+    {
+      "subject": "module.sessionDeltaAppendNetwork",
+      "source": "sdk/browser/session-publication-network.rel",
+      "selectedCommit": "88700501e48c5ba9e6f49fdb1b9b138db40acc31",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "ExplicitNetDeltaBackendRevisionCommandArgsSessionTraceAndInjectedFetchEffect"
+        ],
+        "targetDomain": [
+          "OneSavePostResponseProjectedRevisionDeltaRuntimeReceiptResolutionOrClassifiedFailure"
+        ],
+        "forwardMap": [
+          "SelectCommandJsonOrSerializedDeltaProtocolPostWithPreconditionThenDecodeProtocolSpecificResponse"
+        ],
+        "reverseMapOrAbsence": [
+          "absent.SaveResultDoesNotReconstructPriorRevisionDeltaCommandRequestHeadersResponseOrServerState"
+        ],
+        "preservedInformation": [
+          "SaveEndpointQuotedRevisionTraceCommandArgsSessionDeltaNextRevisionReceiptResolutionIssuesStatusAndFailureKind"
+        ],
+        "lostInformation": [
+          "UnrecognizedHeadersAndBodyFieldsFetchTimingServerInternalsAndMalformedCommandResponseBodyText"
+        ],
+        "identity": [
+          "OneExplicitBackendSaveAttempt"
+        ],
+        "partiality": [
+          "NonemptyStringCommandSelectsCommandProtocolOtherwiseSerializedDeltaProtocol"
+        ],
+        "failure": [
+          "FetchAndSerializationFailuresPropagate;Command412IsStaleWrite;Command428IsMissingPrecondition;OtherNonOkOrBodyIsErrorIsCommandSaveError;LegacyDelta412Or428PreservesPredecessorNullBodyTypeFailure"
+        ],
+        "authorityEffect": [
+          "MayIssueOnePostToSaveUrlWithCsrfAndIfMatch;MayNotRetryRebaseRenderPublishQueueOrMutateCallerMemory"
+        ],
+        "stateOwner": [
+          "RemoteSaveEndpointOwnsCommittedState;PersistOptimisticDeltaOwnsRetryAndCallerMutation;AdapterRetainsNoState"
+        ],
+        "evidence": [
+          "FocusedDualProtocolHeaderBodySuccessCommandConflictAndFailureCharacterizationPlusExactPredecessorLegacyNullBodySemantics"
+        ],
+        "falsifier": [
+          "AnyInternalRetryRebasePublishRenderOrOmissionOfQuotedIfMatch"
+        ],
+        "default": [
+          "AbsentCommandArgsSessionAndTraceAreSuppliedByThinCallerAsEmptyStringEmptyArrayEmptyStringAndEmptyString"
+        ],
+        "adapterSeam": [
+          "PersistOptimisticDeltaRetainsRetryConflictRebaseRenderAndPublicationOrchestrationAuthority"
+        ],
+        "symmetryBreak": [
+          "CommandProtocolUsesJsonAndParsesJsonResponseWhileDeltaProtocolUsesRELSerializationAndDoesNotReadResponseBody"
+        ],
+        "ordering": [
+          "ConstructHeadersAndBodyThenOneFetchThenProjectRevisionThenConditionallyReadJsonThenClassifyThenReturn"
+        ],
+        "lifecycle": [
+          "OneAttemptOnlyWithNoInternalRetryAndNoRetainedCustody"
+        ],
+        "semanticOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "targetOwner": [
+          "repository.sourceryPlatform"
+        ],
+        "interpreter": [
+          "sdk/browser/session-delta-network.mjs"
+        ],
+        "interpreterComponent": [
+          "sdk/browser/session-delta-request.mjs",
+          "sdk/browser/session-delta-response.mjs",
+          "sdk/browser/session-delta-failure.mjs",
+          "sdk/browser/session-delta-result.mjs"
+        ]
+      }
+    },
+    {
+      "subject": "module.browserPublicationLaneReconciliation",
+      "source": "sdk/browser/browser-canvas-baseline.rel",
+      "selectedCommit": "798a4f431fc63d08ce22b491b2989dc1f6a9302a",
+      "facts": {
+        "isa": [
+          "AlgebraModule"
+        ],
+        "sourceDomain": [
+          "CanonicalBackendOrFrontendPublicationEnvelopeLaneSnapshotsPendingPublicationsAndRevisionState"
+        ],
+        "targetDomain": [
+          "DeterministicDurablePublishedAndOptimisticLaneTransitionsWithAcknowledgementEvidence"
+        ],
+        "forwardMap": [
+          "normalizeWireAliasesRejectStaleSequenceApplySnapshotOrDeltaAcknowledgePendingPublicationAndReconcileOptimisticProjection"
+        ],
+        "reverseMapOrAbsence": [
+          "partial.NextLanesDoNotRecoverPriorFactsAcknowledgedPendingEntriesWireAliasCarrierOrEventObject"
+        ],
+        "preservedInformation": [
+          "publicationIdSequenceSessionIdRevisionFactsDeltaProjectionUpdatesLaneRolesAndPendingLocalFacts"
+        ],
+        "lostInformation": [
+          "wireAliasCarrierBrowserEventObjectAcknowledgedQueueEntriesAndPriorLaneOrderingBeyondCanonicalFacts"
+        ],
+        "identity": [
+          "eventNamePublicationSequencePublicationIdRevisionAndLaneRole"
+        ],
+        "partiality": [
+          "unknownEventNameMalformedMetadataMissingLaneOrNonmonotonicPublicationIsRefusedOrExplicitNoChange"
+        ],
+        "failure": [
+          "typedPublicationDiagnosticWithoutPartialCrossLaneApplication"
+        ],
+        "authorityEffect": [
+          "pureLaneTransitionPlanningOnly"
+        ],
+        "stateOwner": [
+          "serverForDurableRevisionPublishedStreamForPublishedLaneAndClientForPendingOptimisticFacts"
+        ],
+        "evidence": [
+          "beforeLanesEnvelopePendingQueueAfterLanesAndAcknowledgementSet"
+        ],
+        "falsifier": [
+          "olderSequenceOverwritesNewerPublishedStateOrBackendAliasChangesSemantics"
+        ],
+        "default": [
+          "none"
+        ],
+        "adapterSeam": [
+          "eventSourceAndSessionPublicationWireCodec"
+        ],
+        "symmetryBreak": [
+          "stateBackendAndSessionFrontendAliasesNormalizeToOneEnvelopeAndOriginalAliasIsNotRetained"
+        ]
+      }
+    }
+  ]
+}

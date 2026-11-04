@@ -1,0 +1,118 @@
+✔ pending append clones the fact array while preserving fact references and normalized identity (1.4162ms)
+✔ publication network posts one authored snapshot with exact endpoint CSRF and identity headers (24.9086ms)
+✔ publication network uses declared S wire format and does not consume success body (0.8291ms)
+✔ publication network refuses missing wire mode before fetch (0.5625ms)
+✔ publication network preserves fetch failure identity and makes no retry (0.2655ms)
+✔ publication network propagates exact non-success status without retry (0.2752ms)
+✔ publication network preserves header observer failures (0.189ms)
+✖ session retrieval derives text from structured facts despite stale compatibility text (2.4345ms)
+✔ session retrieval preserves explicit empty facts over stale nonempty text (0.4467ms)
+✖ session retrieval canonicalizes S payload and alias array precedence (1.5582ms)
+✖ state retrieval preserves revision and structured-data authority (0.7484ms)
+✔ session retrieval preserves fetch faults and requests JSON once (0.2118ms)
+✔ delivery refuses unknown lane before any delta queue or projection mutation (0.5529ms)
+✔ backend malformed payload refuses before revision and projection mutation (0.6ms)
+✔ frontend malformed payload refuses before queue and projection mutation (0.413ms)
+✔ delivery materialization isolates embedded coordinate separators and retractions (0.4402ms)
+✔ sequenced backend delivery agrees with a high-water oracle across delivery orderings (1.1245ms)
+✔ pending acknowledgement obeys sequence priority and preserves later local overlay (0.5581ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 15
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 348.0028
+
+✖ failing tests:
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\semantic-translation-publication-delivery.test.mjs:21:1
+✖ session retrieval derives text from structured facts despite stale compatibility text (2.4345ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      {
+  +     authoredBy: undefined,
+  +     file: undefined,
+  +     line: 1,
+  +     module: undefined,
+        o: 'actual',
+        p: 'p',
+        pol: 'is',
+        s: 's'
+      }
+  
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:21:288
+      at async mockFetch (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:5:95)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:21:104)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { s: 's', p: 'p', o: 'actual', pol: 'is', file: undefined, module: undefined, line: 1, authoredBy: undefined } ],
+    expected: [ { s: 's', p: 'p', o: 'actual', pol: 'is' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\semantic-translation-publication-delivery.test.mjs:23:1
+✖ session retrieval canonicalizes S payload and alias array precedence (1.5582ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      {
+  +     authoredBy: undefined,
+  +     file: undefined,
+  +     line: 1,
+  +     module: undefined,
+        o: 'actual',
+        p: 'p',
+        pol: 'is',
+        s: 's'
+      }
+  
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:23:371
+      at async mockFetch (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:5:95)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:23:282)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { s: 's', p: 'p', o: 'actual', pol: 'is', file: undefined, module: undefined, line: 1, authoredBy: undefined } ],
+    expected: [ { s: 's', p: 'p', o: 'actual', pol: 'is' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\semantic-translation-publication-delivery.test.mjs:24:1
+✖ state retrieval preserves revision and structured-data authority (0.7484ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      {
+  +     authoredBy: undefined,
+  +     file: undefined,
+  +     line: 1,
+  +     module: undefined,
+        o: 'actual',
+        p: 'p',
+        pol: 'is',
+        s: 's'
+      }
+  
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:24:359
+      at async mockFetch (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:5:95)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/semantic-translation-publication-delivery.test.mjs:24:83)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ { s: 's', p: 'p', o: 'actual', pol: 'is', file: undefined, module: undefined, line: 1, authoredBy: undefined } ],
+    expected: [ { s: 's', p: 'p', o: 'actual', pol: 'is' } ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

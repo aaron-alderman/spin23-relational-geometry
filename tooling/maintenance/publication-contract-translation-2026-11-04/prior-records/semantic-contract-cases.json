@@ -1,0 +1,8991 @@
+{
+  "protocol": "sourcery/semantic-contract-cases.v1",
+  "scope": "Bounded normative behavior witnesses. No universal equivalence, executable generic algebra, scientific acceptance or authority grant.",
+  "cases": [
+    {
+      "id": "vocabulary-frozen",
+      "operation": "diagnostic-vocabulary",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "INVALID_PROPOSAL"
+          ],
+          "equals": "invalid-proposal"
+        },
+        {
+          "path": [
+            "value",
+            "SOURCE_AUTHORITY_DENIED"
+          ],
+          "equals": "source-authority-denied"
+        },
+        {
+          "path": [
+            "value",
+            "SEMANTIC_AUTHORITY_DENIED"
+          ],
+          "equals": "semantic-authority-denied"
+        }
+      ],
+      "subjects": [
+        "module.admissibilityDiagnosticVocabulary"
+      ]
+    },
+    {
+      "id": "issue-defaults",
+      "operation": "diagnostic-normalize",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "code": "admissibility-error",
+            "message": "Admissibility check failed.",
+            "severity": "error"
+          }
+        }
+      ],
+      "subjects": [
+        "module.admissibilityIssueNormalization"
+      ]
+    },
+    {
+      "id": "issue-defined-falsy",
+      "operation": "diagnostic-normalize",
+      "input": {
+        "issue": {
+          "subject": "s",
+          "line": 0,
+          "enabled": false,
+          "count": 0,
+          "code": "specific",
+          "message": "exact"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "line"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "value",
+            "enabled"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "count"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "observations",
+            "keys"
+          ],
+          "equals": [
+            "code",
+            "message",
+            "severity",
+            "subject",
+            "line",
+            "enabled",
+            "count"
+          ]
+        }
+      ],
+      "subjects": [
+        "module.admissibilityIssueNormalization"
+      ]
+    },
+    {
+      "id": "issue-null-refuses",
+      "operation": "diagnostic-normalize",
+      "input": {
+        "issue": null
+      },
+      "subjects": [
+        "module.admissibilityIssueNormalization"
+      ],
+      "throws": {
+        "name": "TypeError"
+      }
+    },
+    {
+      "id": "issue-first-occurrence",
+      "operation": "diagnostic-unique",
+      "input": {
+        "issues": [
+          {},
+          {
+            "code": "admissibility-error",
+            "message": "Admissibility check failed.",
+            "severity": "error"
+          },
+          {
+            "code": "second",
+            "message": "two"
+          },
+          {}
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            1,
+            "code"
+          ],
+          "equals": "second"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.admissibilityIssueSet"
+      ]
+    },
+    {
+      "id": "issue-insertion-identity",
+      "operation": "diagnostic-unique",
+      "input": {
+        "issues": [
+          {
+            "code": "x",
+            "a": 1,
+            "b": 2
+          },
+          {
+            "code": "x",
+            "b": 2,
+            "a": 1
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 2
+        }
+      ],
+      "subjects": [
+        "module.admissibilityIssueSet"
+      ]
+    },
+    {
+      "id": "issue-error-first",
+      "operation": "diagnostic-error",
+      "input": {
+        "issues": [
+          {
+            "code": "first",
+            "message": "one"
+          },
+          {
+            "code": "second",
+            "message": "two"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "name"
+          ],
+          "equals": "AdmissibilityError"
+        },
+        {
+          "path": [
+            "value",
+            "code"
+          ],
+          "equals": "first"
+        },
+        {
+          "path": [
+            "value",
+            "message"
+          ],
+          "equals": "one"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.admissibilityFailure"
+      ]
+    },
+    {
+      "id": "issue-error-empty",
+      "operation": "diagnostic-error",
+      "input": {
+        "issues": [],
+        "options": {
+          "message": "explicit"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "code"
+          ],
+          "equals": "admissibility-error"
+        },
+        {
+          "path": [
+            "value",
+            "message"
+          ],
+          "equals": "explicit"
+        }
+      ],
+      "subjects": [
+        "module.admissibilityFailure"
+      ]
+    },
+    {
+      "id": "source-empty",
+      "operation": "source-authority",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "observations",
+            "frozenIssues"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.sourceAuthority"
+      ]
+    },
+    {
+      "id": "source-owner-conflict",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "right",
+              "file": "right.rel",
+              "subject": "rightModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "Other",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "code"
+          ],
+          "equals": "source-authority-denied"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "provenance",
+            "owner",
+            "context"
+          ],
+          "equals": "left"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "provenance",
+            "challenger",
+            "context"
+          ],
+          "equals": "right"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "subject"
+          ],
+          "equals": "x"
+        }
+      ],
+      "subjects": [
+        "module.sourceAuthority"
+      ]
+    },
+    {
+      "id": "source-same-boundary",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "rightModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "Other",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.sourceAuthority"
+      ]
+    },
+    {
+      "id": "extension-qualified",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "ns.extra",
+              "file": "extension.rel",
+              "subject": "ext",
+              "imports": [
+                "T"
+              ],
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "ns.note",
+                  "o": "v",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.importedSubjectExtension",
+        "module.sourceAuthority"
+      ]
+    },
+    {
+      "id": "extension-missing-import",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "ns.extra",
+              "file": "extension.rel",
+              "subject": "ext",
+              "imports": [],
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "ns.note",
+                  "o": "v",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "code"
+          ],
+          "equals": "source-authority-denied"
+        }
+      ],
+      "subjects": [
+        "module.importedSubjectExtension"
+      ]
+    },
+    {
+      "id": "extension-foreign-predicate",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "module",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "ns.extra",
+              "file": "extension.rel",
+              "subject": "ext",
+              "imports": [
+                "T"
+              ],
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "foreign.note",
+                  "o": "v",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        }
+      ],
+      "subjects": [
+        "module.importedSubjectExtension"
+      ]
+    },
+    {
+      "id": "extension-plugin-self",
+      "operation": "source-authority",
+      "input": {
+        "configuration": {
+          "contexts": [
+            {
+              "kind": "plugin",
+              "context": "left",
+              "file": "left.rel",
+              "subject": "leftModule",
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "isa",
+                  "o": "T",
+                  "pol": "is"
+                }
+              ]
+            },
+            {
+              "kind": "module",
+              "context": "ns.extra",
+              "file": "extension.rel",
+              "subject": "x",
+              "imports": [],
+              "facts": [
+                {
+                  "s": "x",
+                  "p": "other",
+                  "o": "v",
+                  "pol": "is"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.importedSubjectExtension"
+      ]
+    },
+    {
+      "id": "actor-empty",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.actorAuthority"
+      ]
+    },
+    {
+      "id": "actor-denied",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a",
+          "facts": [
+            {
+              "s": "sem.semanticAuthorityPolicy",
+              "p": "subjectAuthority",
+              "o": "authority.own",
+              "pol": "is"
+            }
+          ]
+        },
+        "request": {
+          "proposal": {
+            "facts": [
+              {
+                "s": "x",
+                "p": "p",
+                "o": "o",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "code"
+          ],
+          "equals": "semantic-authority-denied"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "actor"
+          ],
+          "equals": "a"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "requiredAuthority"
+          ],
+          "equals": "authority.own"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "subject"
+          ],
+          "equals": "x"
+        }
+      ],
+      "subjects": [
+        "module.actorAuthority"
+      ]
+    },
+    {
+      "id": "actor-explicit-subject",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a",
+          "allowedSubjects": [
+            "x"
+          ]
+        },
+        "request": {
+          "proposal": {
+            "facts": [
+              {
+                "s": "x",
+                "p": "p",
+                "o": "o",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.actorAuthority"
+      ]
+    },
+    {
+      "id": "actor-new-subject",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a",
+          "facts": [
+            {
+              "s": "old",
+              "p": "p",
+              "o": "o",
+              "pol": "is"
+            }
+          ],
+          "allowGeneratedSubjects": true
+        },
+        "request": {
+          "proposal": {
+            "facts": [
+              {
+                "s": "x",
+                "p": "p",
+                "o": "o",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.actorAuthority"
+      ]
+    },
+    {
+      "id": "actor-known-subject-denied",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a",
+          "facts": [
+            {
+              "s": "x",
+              "p": "p",
+              "o": "old",
+              "pol": "is"
+            },
+            {
+              "s": "sem.semanticAuthorityPolicy",
+              "p": "subjectAuthority",
+              "o": "authority.own",
+              "pol": "is"
+            }
+          ],
+          "allowGeneratedSubjects": true
+        },
+        "request": {
+          "proposal": {
+            "facts": [
+              {
+                "s": "x",
+                "p": "p",
+                "o": "o",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        }
+      ],
+      "subjects": [
+        "module.actorAuthority"
+      ]
+    },
+    {
+      "id": "unrestricted-admit",
+      "operation": "unrestricted-authority",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "observations",
+            "frozenIssues"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.unrestrictedAuthority"
+      ]
+    },
+    {
+      "id": "derived-provenance",
+      "operation": "unrestricted-authority",
+      "input": {
+        "derived": true,
+        "provenance": {
+          "source": "trace"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "provenance",
+            "source"
+          ],
+          "equals": "trace"
+        },
+        {
+          "path": [
+            "observations",
+            "frozenProvenance"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.unrestrictedAuthority"
+      ]
+    },
+    {
+      "id": "proposal-input-array",
+      "operation": "proposal-normalize",
+      "input": {
+        "form": "array",
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "o",
+            "pol": "is"
+          },
+          {
+            "s": "y",
+            "p": "p",
+            "o": "z",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "s"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            1,
+            "s"
+          ],
+          "equals": "y"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozenFacts"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factProposalInput",
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-input-store",
+      "operation": "proposal-normalize",
+      "input": {
+        "form": "store",
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "o",
+            "pol": "is"
+          },
+          {
+            "s": "y",
+            "p": "p",
+            "o": "z",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "s"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            1,
+            "s"
+          ],
+          "equals": "y"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozenFacts"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factProposalInput",
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-input-wrapper",
+      "operation": "proposal-normalize",
+      "input": {
+        "form": "wrapper",
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "o",
+            "pol": "is"
+          },
+          {
+            "s": "y",
+            "p": "p",
+            "o": "z",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "s"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            1,
+            "s"
+          ],
+          "equals": "y"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozenFacts"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factProposalInput",
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-input-to-array",
+      "operation": "proposal-normalize",
+      "input": {
+        "form": "to-array",
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "o",
+            "pol": "is"
+          },
+          {
+            "s": "y",
+            "p": "p",
+            "o": "z",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "s"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            1,
+            "s"
+          ],
+          "equals": "y"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozenFacts"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factProposalInput",
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-defaults",
+      "operation": "proposal-normalize",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value",
+            "source"
+          ],
+          "equals": ""
+        },
+        {
+          "path": [
+            "value",
+            "mode"
+          ],
+          "equals": "authored"
+        },
+        {
+          "path": [
+            "value",
+            "facts"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "observations",
+            "frozenProvenance"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-provenance-overlay",
+      "operation": "proposal-normalize",
+      "input": {
+        "proposal": {
+          "source": "src",
+          "facts": [
+            {
+              "s": "x",
+              "p": "p",
+              "o": 0,
+              "provenance": {
+                "shared": 2
+              }
+            }
+          ],
+          "provenance": {
+            "shared": 1,
+            "root": 3
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "o"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "value",
+            "facts",
+            0,
+            "provenance"
+          ],
+          "equals": {
+            "shared": 2,
+            "root": 3
+          }
+        },
+        {
+          "path": [
+            "value",
+            "provenance"
+          ],
+          "equals": {
+            "shared": 1,
+            "root": 3
+          }
+        },
+        {
+          "path": [
+            "value",
+            "source"
+          ],
+          "equals": "src"
+        }
+      ],
+      "subjects": [
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-existing-identity",
+      "operation": "proposal-normalize",
+      "input": {
+        "proposal": {
+          "kind": "fact-proposal",
+          "facts": [
+            {
+              "s": "x",
+              "p": "p",
+              "o": "o",
+              "pol": "is"
+            }
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "observations",
+            "sameIdentity"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": false
+        }
+      ],
+      "subjects": [
+        "module.factProposalNormalization"
+      ]
+    },
+    {
+      "id": "proposal-existing-invalid-empty",
+      "operation": "proposal-normalize",
+      "input": {
+        "proposal": {
+          "kind": "fact-proposal",
+          "facts": [
+            {
+              "s": "",
+              "p": "p",
+              "o": "o",
+              "pol": "is"
+            }
+          ]
+        }
+      },
+      "subjects": [
+        "module.factProposalNormalization"
+      ],
+      "throws": {
+        "name": "AdmissibilityError",
+        "code": "invalid-proposal"
+      }
+    },
+    {
+      "id": "proposal-existing-invalid-null",
+      "operation": "proposal-normalize",
+      "input": {
+        "proposal": {
+          "kind": "fact-proposal",
+          "facts": [
+            null
+          ]
+        }
+      },
+      "subjects": [
+        "module.factProposalNormalization"
+      ],
+      "throws": {
+        "name": "AdmissibilityError",
+        "code": "invalid-proposal"
+      }
+    },
+    {
+      "id": "proposal-new-invalid",
+      "operation": "proposal-normalize",
+      "input": {
+        "facts": [
+          {
+            "s": "x",
+            "p": "",
+            "o": "o",
+            "pol": "is"
+          }
+        ]
+      },
+      "subjects": [
+        "module.factProposalNormalization"
+      ],
+      "throws": {
+        "code": "invalid-proposal"
+      }
+    },
+    {
+      "id": "declaration-message-default",
+      "operation": "declaration-issue",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value",
+            "code"
+          ],
+          "equals": "project-validation-error"
+        },
+        {
+          "path": [
+            "value",
+            "message"
+          ],
+          "equals": "Declaration validation failed."
+        }
+      ],
+      "subjects": [
+        "module.declarationIssue"
+      ]
+    },
+    {
+      "id": "declaration-provenance-precedence",
+      "operation": "declaration-issue",
+      "input": {
+        "message": {
+          "message": "old",
+          "code": "old",
+          "subject": "x"
+        },
+        "provenance": {
+          "code": "new",
+          "line": 0
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "code"
+          ],
+          "equals": "new"
+        },
+        {
+          "path": [
+            "value",
+            "message"
+          ],
+          "equals": "old"
+        },
+        {
+          "path": [
+            "value",
+            "subject"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "value",
+            "line"
+          ],
+          "equals": 0
+        }
+      ],
+      "subjects": [
+        "module.declarationIssue"
+      ]
+    },
+    {
+      "id": "declaration-specialize-only-generic",
+      "operation": "declaration-specialize",
+      "input": {
+        "issues": [
+          {
+            "code": "project-validation-error",
+            "message": "one",
+            "line": 0
+          },
+          {
+            "code": "specific",
+            "message": "two"
+          }
+        ],
+        "code": "selected"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "selected"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "line"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "value",
+            1,
+            "code"
+          ],
+          "equals": "specific"
+        }
+      ],
+      "subjects": [
+        "module.declarationIssueSpecialization"
+      ]
+    },
+    {
+      "id": "page-boot-default",
+      "operation": "page-boot",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": null
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-latest-active-array",
+      "operation": "page-boot",
+      "input": {
+        "form": "array",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            0,
+            "lane"
+          ],
+          "equals": "old"
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole",
+            "durable",
+            "lane"
+          ],
+          "equals": "old"
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-retracted-binding-array",
+      "operation": "page-boot",
+      "input": {
+        "form": "array",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole"
+          ],
+          "equals": {}
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-latest-active-store",
+      "operation": "page-boot",
+      "input": {
+        "form": "store",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            0,
+            "lane"
+          ],
+          "equals": "old"
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole",
+            "durable",
+            "lane"
+          ],
+          "equals": "old"
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-retracted-binding-store",
+      "operation": "page-boot",
+      "input": {
+        "form": "store",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole"
+          ],
+          "equals": {}
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-latest-active-buffer",
+      "operation": "page-boot",
+      "input": {
+        "form": "buffer",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            0,
+            "lane"
+          ],
+          "equals": "old"
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole",
+            "durable",
+            "lane"
+          ],
+          "equals": "old"
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-retracted-binding-buffer",
+      "operation": "page-boot",
+      "input": {
+        "form": "buffer",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole"
+          ],
+          "equals": {}
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-latest-active-to-array",
+      "operation": "page-boot",
+      "input": {
+        "form": "to-array",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            0,
+            "lane"
+          ],
+          "equals": "old"
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole",
+            "durable",
+            "lane"
+          ],
+          "equals": "old"
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-retracted-binding-to-array",
+      "operation": "page-boot",
+      "input": {
+        "form": "to-array",
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "role",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "old",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "lane",
+            "o": "new",
+            "pol": "is-not"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "laneBindingByRole"
+          ],
+          "equals": {}
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-reassert-order",
+      "operation": "page-boot",
+      "input": {
+        "subject": "boot",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "a",
+            "pol": "is-not"
+          },
+          {
+            "s": "boot",
+            "p": "laneBinding",
+            "o": "a",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            0,
+            "subject"
+          ],
+          "equals": "b"
+        },
+        {
+          "path": [
+            "value",
+            "laneBindings",
+            1,
+            "subject"
+          ],
+          "equals": "a"
+        }
+      ],
+      "subjects": [
+        "module.pageBootProjection"
+      ]
+    },
+    {
+      "id": "boot-explicit-view",
+      "operation": "boot-identity",
+      "input": {
+        "binding": {
+          "role": "published",
+          "lane": "a",
+          "viewId": " explicit "
+        },
+        "options": {
+          "sessionId": "s"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "explicit"
+        }
+      ],
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ]
+    },
+    {
+      "id": "boot-published-session",
+      "operation": "boot-identity",
+      "input": {
+        "binding": {
+          "role": "published",
+          "lane": "Lane A"
+        },
+        "options": {
+          "sessionId": " session / 1 "
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "view.published.Lane.A.session.1"
+        }
+      ],
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ]
+    },
+    {
+      "id": "boot-private-session-omitted",
+      "operation": "boot-identity",
+      "input": {
+        "binding": {
+          "role": "durable",
+          "lane": "Lane A"
+        },
+        "options": {
+          "sessionId": "session"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "view.durable.Lane.A"
+        }
+      ],
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ]
+    },
+    {
+      "id": "boot-required-refusal",
+      "operation": "boot-identity",
+      "input": {
+        "action": "required",
+        "boot": {
+          "subject": "boot"
+        },
+        "role": "durable"
+      },
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ],
+      "throws": {
+        "name": "Error",
+        "messageIncludes": "Missing required boot lane binding"
+      }
+    },
+    {
+      "id": "boot-surface-fallback",
+      "operation": "boot-identity",
+      "input": {
+        "action": "surface",
+        "binding": {},
+        "fallback": "durable"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "durable"
+        }
+      ],
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ]
+    },
+    {
+      "id": "lifecycle-no-backing",
+      "operation": "lifecycle-backing",
+      "input": {
+        "action": "run"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "backings"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "backing"
+          ],
+          "equals": null
+        }
+      ],
+      "subjects": [
+        "module.recursiveWorkBacking"
+      ]
+    },
+    {
+      "id": "lifecycle-gate-order",
+      "operation": "lifecycle-backing",
+      "input": {
+        "program": [
+          {
+            "s": "z",
+            "p": "isa",
+            "o": "ActionBacking",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "command",
+            "o": "run",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "actionContract",
+            "o": "contract",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "workItem",
+            "o": "work",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "contract",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          }
+        ],
+        "action": "run"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "backings"
+          ],
+          "equals": [
+            "z"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "backing",
+            "gates"
+          ],
+          "equals": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "backing",
+            "actionContract"
+          ],
+          "equals": "contract"
+        }
+      ],
+      "subjects": [
+        "module.recursiveWorkBacking"
+      ]
+    },
+    {
+      "id": "lifecycle-ambiguity",
+      "operation": "lifecycle-issues",
+      "input": {
+        "program": [
+          {
+            "s": "z",
+            "p": "isa",
+            "o": "ActionBacking",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "command",
+            "o": "run",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "actionContract",
+            "o": "contract",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "workItem",
+            "o": "work",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "contract",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "isa",
+            "o": "ActionBacking",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "command",
+            "o": "run",
+            "pol": "is"
+          }
+        ],
+        "action": "run",
+        "actor": "actor"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "ambiguous-action-backing"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "actionBacking"
+          ],
+          "equals": "a,z"
+        }
+      ],
+      "subjects": [
+        "module.recursiveWorkAdmission"
+      ]
+    },
+    {
+      "id": "lifecycle-failure-order",
+      "operation": "lifecycle-issues",
+      "input": {
+        "program": [
+          {
+            "s": "z",
+            "p": "isa",
+            "o": "ActionBacking",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "command",
+            "o": "run",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "actionContract",
+            "o": "contract",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "workItem",
+            "o": "work",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "contract",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "work",
+            "p": "status",
+            "o": "blocked",
+            "pol": "is"
+          }
+        ],
+        "action": "run",
+        "actor": "actor"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 4
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "action-contract-not-admissible"
+        },
+        {
+          "path": [
+            "value",
+            1,
+            "gate"
+          ],
+          "equals": "a"
+        },
+        {
+          "path": [
+            "value",
+            2,
+            "gate"
+          ],
+          "equals": "b"
+        },
+        {
+          "path": [
+            "value",
+            3,
+            "code"
+          ],
+          "equals": "work-item-blocked"
+        }
+      ],
+      "subjects": [
+        "module.recursiveWorkAdmission"
+      ]
+    },
+    {
+      "id": "lifecycle-admitted",
+      "operation": "lifecycle-issues",
+      "input": {
+        "program": [
+          {
+            "s": "z",
+            "p": "isa",
+            "o": "ActionBacking",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "command",
+            "o": "run",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "actionContract",
+            "o": "contract",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "workItem",
+            "o": "work",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "b",
+            "pol": "is"
+          },
+          {
+            "s": "contract",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "z",
+            "p": "gate",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "contract",
+            "p": "status",
+            "o": "admissible",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "status",
+            "o": "passed",
+            "pol": "is"
+          },
+          {
+            "s": "b",
+            "p": "status",
+            "o": "passed",
+            "pol": "is"
+          }
+        ],
+        "action": "run",
+        "actor": "actor"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.recursiveWorkAdmission"
+      ]
+    },
+    {
+      "id": "query-tuple-identity",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "a\u001fb",
+            "p": "c",
+            "o": "d",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "b\u001fc",
+            "o": "d",
+            "pol": "is"
+          }
+        ],
+        "query": {
+          "where": [
+            "$s",
+            "$p",
+            "$o"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "s"
+          ],
+          "equals": "a\u001fb"
+        },
+        {
+          "path": [
+            "value",
+            1,
+            "s"
+          ],
+          "equals": "a"
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "query-retraction-isolation",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "a\u001fb",
+            "p": "c",
+            "o": "d",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "b\u001fc",
+            "o": "d",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "b\u001fc",
+            "o": "d",
+            "pol": "is-not"
+          }
+        ],
+        "query": {
+          "where": [
+            "$s",
+            "$p",
+            "$o"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "s"
+          ],
+          "equals": "a\u001fb"
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "query-history-retained",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is-not"
+          }
+        ],
+        "query": {
+          "mode": "history",
+          "where": [
+            "$s",
+            "$p",
+            "$o"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "observations",
+            "history",
+            "length"
+          ],
+          "equals": 2
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "query-active-default",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is-not"
+          }
+        ],
+        "query": {
+          "where": [
+            "$s",
+            "$p",
+            "$o"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "query-optional-bindings",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "x",
+            "p": "isa",
+            "o": "T",
+            "pol": "is"
+          }
+        ],
+        "query": {
+          "where": [
+            [
+              "$s",
+              "isa",
+              "T"
+            ],
+            [
+              "$s",
+              "missing",
+              "$value?"
+            ]
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "s"
+          ],
+          "equals": "x"
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "query-order-limit",
+      "operation": "fact-query",
+      "input": {
+        "facts": [
+          {
+            "s": "b",
+            "p": "p",
+            "o": "2",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "p",
+            "o": "1",
+            "pol": "is"
+          }
+        ],
+        "query": {
+          "where": [
+            "$s",
+            "p",
+            "$o"
+          ],
+          "orderBy": "s",
+          "limit": 1,
+          "select": "$s"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": [
+            "a"
+          ]
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "persistence-current-model",
+      "operation": "persistence-model",
+      "input": {
+        "facts": [
+          {
+            "s": "x",
+            "p": "isa",
+            "o": "Page",
+            "pol": "is"
+          },
+          {
+            "s": "x",
+            "p": "p",
+            "o": "metadata",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "facts",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "observations",
+            "newArray"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "sameFirstFact"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "keys"
+          ],
+          "equals": [
+            "facts"
+          ]
+        }
+      ],
+      "subjects": [
+        "module.declarationPersistenceModel"
+      ]
+    },
+    {
+      "id": "persistence-inspector-optional",
+      "operation": "persistence-inspector",
+      "input": {
+        "boot": "boot",
+        "kind": "sessionInspectorPage",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "isa",
+            "o": "PageBoot",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.declarationInspectorPageValidation"
+      ]
+    },
+    {
+      "id": "persistence-inspector-unknown",
+      "operation": "persistence-inspector",
+      "input": {
+        "boot": "boot",
+        "kind": "sessionInspectorPage",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "isa",
+            "o": "PageBoot",
+            "pol": "is"
+          },
+          {
+            "s": "boot",
+            "p": "inspectorPage",
+            "o": "missing",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 2
+        }
+      ],
+      "subjects": [
+        "module.declarationInspectorPageValidation"
+      ]
+    },
+    {
+      "id": "persistence-field-required",
+      "operation": "persistence-field",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "predicate": "custom",
+        "expectedType": "",
+        "facts": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "result"
+          ],
+          "equals": ""
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "predicate"
+          ],
+          "equals": "custom"
+        }
+      ],
+      "subjects": [
+        "module.declarationRequiredBootField"
+      ]
+    },
+    {
+      "id": "persistence-field-retracted",
+      "operation": "persistence-field",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "predicate": "custom",
+        "expectedType": "",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "custom",
+            "o": "gone",
+            "pol": "is"
+          },
+          {
+            "s": "boot",
+            "p": "custom",
+            "o": "gone",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "result"
+          ],
+          "equals": ""
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 1
+        }
+      ],
+      "subjects": [
+        "module.declarationRequiredBootField"
+      ]
+    },
+    {
+      "id": "persistence-field-type-explicit",
+      "operation": "persistence-field",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "predicate": "custom",
+        "facts": []
+      },
+      "subjects": [
+        "module.declarationRequiredBootField"
+      ],
+      "throws": {
+        "name": "TypeError",
+        "messageIncludes": "expectedType must be an explicit"
+      }
+    },
+    {
+      "id": "persistence-field-failure-order",
+      "operation": "persistence-field",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "predicate": "custom",
+        "expectedType": "Page",
+        "facts": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 3
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "message"
+          ],
+          "equals": "facts: PageBoot boot of kind unknown requires custom."
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            1,
+            "message"
+          ],
+          "equals": "facts: PageBoot boot.custom references unknown subject \"\"."
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            2,
+            "message"
+          ],
+          "equals": "facts: PageBoot boot.custom must reference a Page; found \"\"."
+        }
+      ],
+      "subjects": [
+        "module.declarationRequiredBootField"
+      ]
+    },
+    {
+      "id": "persistence-field-type-retracted",
+      "operation": "persistence-field",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "predicate": "custom",
+        "expectedType": "Page",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "custom",
+            "o": "page",
+            "pol": "is"
+          },
+          {
+            "s": "page",
+            "p": "isa",
+            "o": "Page",
+            "pol": "is"
+          },
+          {
+            "s": "page",
+            "p": "isa",
+            "o": "Page",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "result"
+          ],
+          "equals": "page"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 1
+        }
+      ],
+      "subjects": [
+        "module.declarationRequiredBootField"
+      ]
+    },
+    {
+      "id": "persistence-kind-unknown",
+      "operation": "persistence-kind",
+      "input": {
+        "boot": "boot",
+        "kind": "unknown",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "isa",
+            "o": "PageBoot",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.declarationBootKindProfile"
+      ]
+    },
+    {
+      "id": "persistence-kind-required",
+      "operation": "persistence-kind",
+      "input": {
+        "boot": "boot",
+        "kind": "sessionInspectorPage",
+        "facts": [
+          {
+            "s": "boot",
+            "p": "isa",
+            "o": "PageBoot",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "issues",
+            "length"
+          ],
+          "equals": 6
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            0,
+            "role"
+          ],
+          "equals": "durable"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            1,
+            "role"
+          ],
+          "equals": "published"
+        },
+        {
+          "path": [
+            "value",
+            "issues",
+            5,
+            "expectedType"
+          ],
+          "equals": "Lane"
+        }
+      ],
+      "subjects": [
+        "module.declarationBootKindProfile"
+      ]
+    },
+    {
+      "id": "runtime-diagnostic-empty",
+      "operation": "runtime-diagnostics",
+      "input": {},
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "Runtime error with 0 issues."
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "runtime-diagnostic-order",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "issues": [
+          {
+            "message": "first",
+            "file": "a.rel",
+            "line": 2,
+            "method": "GET",
+            "route": "/a",
+            "binding": "b",
+            "action": "act",
+            "details": "detail"
+          },
+          {
+            "message": "second",
+            "file": "a.rel"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "Runtime error with 2 issues across 1 file.\n1. a.rel:2\n   first\n   Context: GET /a | binding b | action act\n   Detail: detail\n2. a.rel\n   second"
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "runtime-redactor-precedence",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "issues": [
+          {
+            "message": "private"
+          }
+        ],
+        "redactor": "disclosure-first"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "Runtime error with 1 issue.\n1. unknown location\n   disclosure"
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "runtime-redactor-refusal",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "issues": [
+          {
+            "message": "private"
+          }
+        ],
+        "redactor": "throw"
+      },
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ],
+      "throws": {
+        "name": "Error",
+        "messageIncludes": "explicit-redactor-refusal"
+      }
+    },
+    {
+      "id": "runtime-null-input-precondition",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "issues": [
+          null
+        ]
+      },
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ],
+      "throws": {
+        "name": "TypeError"
+      }
+    },
+    {
+      "id": "runtime-typed-error",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "action": "typed",
+        "issues": [
+          {
+            "code": "specific",
+            "message": "one"
+          }
+        ],
+        "options": {
+          "code": "override",
+          "statusCode": 409,
+          "title": "Conflict"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "code"
+          ],
+          "equals": "override"
+        },
+        {
+          "path": [
+            "value",
+            "statusCode"
+          ],
+          "equals": 409
+        },
+        {
+          "path": [
+            "value",
+            "title"
+          ],
+          "equals": "Conflict"
+        },
+        {
+          "path": [
+            "value",
+            "name"
+          ],
+          "equals": "RuntimeDiagnosticError"
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "runtime-foreign-error-context",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "action": "foreign",
+        "message": "foreign",
+        "options": {
+          "title": "Foreign",
+          "context": {
+            "file": "foreign.mjs",
+            "line": 4,
+            "method": "POST",
+            "route": "/x"
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "Foreign with 1 issue across 1 file.\n1. foreign.mjs:4\n   foreign\n   Context: POST /x"
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "runtime-typed-redaction",
+      "operation": "runtime-diagnostics",
+      "input": {
+        "action": "format-typed",
+        "issues": [
+          {
+            "message": "private"
+          }
+        ],
+        "options": {
+          "title": "Typed"
+        },
+        "redactor": "disclosure-first"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "Typed with 1 issue.\n1. unknown location\n   disclosure"
+        }
+      ],
+      "subjects": [
+        "module.runtimeDiagnostics"
+      ]
+    },
+    {
+      "id": "boot-required-lane",
+      "operation": "boot-identity",
+      "input": {
+        "action": "required",
+        "boot": {
+          "subject": "boot",
+          "laneBindingByRole": {
+            "durable": {
+              "lane": " lane "
+            }
+          }
+        },
+        "role": "durable"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "lane"
+        }
+      ],
+      "subjects": [
+        "module.pageBootLaneIdentity"
+      ]
+    },
+    {
+      "id": "query-buffer-source",
+      "operation": "fact-query",
+      "input": {
+        "form": "buffer",
+        "facts": [
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is"
+          },
+          {
+            "s": "x",
+            "p": "p",
+            "o": "a",
+            "pol": "is-not"
+          },
+          {
+            "s": "y",
+            "p": "p",
+            "o": "b",
+            "pol": "is"
+          }
+        ],
+        "query": {
+          "where": [
+            "$s",
+            "$p",
+            "$o"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "s"
+          ],
+          "equals": "y"
+        }
+      ],
+      "subjects": [
+        "module.factQueryRuntime"
+      ]
+    },
+    {
+      "id": "actor-missing-authored-policy",
+      "operation": "actor-authority",
+      "input": {
+        "configuration": {
+          "actor": "a"
+        },
+        "request": {
+          "proposal": {
+            "facts": [
+              {
+                "s": "x",
+                "p": "p",
+                "o": "o",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      },
+      "subjects": [
+        "module.actorAuthority"
+      ],
+      "throws": {
+        "name": "Error",
+        "messageIncludes": "requires authored values"
+      }
+    },
+    {
+      "id": "route-empty-admission",
+      "operation": "route-admission",
+      "input": {
+        "action": "admit",
+        "facts": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "issues"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-declared-action",
+      "operation": "route-admission",
+      "input": {
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-retracted-keyword-array",
+      "operation": "route-admission",
+      "input": {
+        "form": "array",
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "invalid-route-action-keyword-declaration"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-retracted-keyword-store",
+      "operation": "route-admission",
+      "input": {
+        "form": "store",
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "invalid-route-action-keyword-declaration"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-retracted-keyword-to-array",
+      "operation": "route-admission",
+      "input": {
+        "form": "to-array",
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "invalid-route-action-keyword-declaration"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-retracted-keyword-wrapper",
+      "operation": "route-admission",
+      "input": {
+        "form": "wrapper",
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "invalid-route-action-keyword-declaration"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-retracted-type",
+      "operation": "route-admission",
+      "input": {
+        "facts": [
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "invalid",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-reasserted-keyword",
+      "operation": "route-admission",
+      "input": {
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is-not"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-mutable-sequence",
+      "operation": "route-admission",
+      "input": {
+        "action": "mutate",
+        "facts": [
+          {
+            "s": "keyword",
+            "p": "isa",
+            "o": "Keyword",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "family",
+            "o": "routeAction",
+            "pol": "is"
+          },
+          {
+            "s": "keyword",
+            "p": "value",
+            "o": "render",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "render",
+            "pol": "is"
+          }
+        ],
+        "append": [
+          {
+            "s": "r",
+            "p": "as",
+            "o": "invalid",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "before"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            "after",
+            "length"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "after",
+            0,
+            "subject"
+          ],
+          "equals": "r"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ],
+      "inputUnchanged": false
+    },
+    {
+      "id": "route-admission-refusal",
+      "operation": "route-admission",
+      "input": {
+        "action": "admit",
+        "facts": [
+          {
+            "s": "r",
+            "p": "isa",
+            "o": "Route",
+            "pol": "is"
+          },
+          {
+            "s": "r",
+            "p": "as",
+            "o": "bad",
+            "pol": "is"
+          }
+        ]
+      },
+      "subjects": [
+        "module.routeContracts"
+      ],
+      "throws": {
+        "name": "AdmissibilityError",
+        "code": "invalid-route-action-keyword-declaration"
+      }
+    },
+    {
+      "id": "route-target-unknown",
+      "operation": "route-admission",
+      "input": {
+        "action": "contract",
+        "facts": [
+          {
+            "s": "net",
+            "p": "surfaceTarget",
+            "o": "unknown",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "code"
+          ],
+          "equals": "invalid-route-target-declaration"
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "route-target-retracted",
+      "operation": "route-admission",
+      "input": {
+        "action": "contract",
+        "facts": [
+          {
+            "s": "net",
+            "p": "surfaceTarget",
+            "o": "unknown",
+            "pol": "is"
+          },
+          {
+            "s": "net",
+            "p": "surfaceTarget",
+            "o": "unknown",
+            "pol": "is-not"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.routeContracts"
+      ]
+    },
+    {
+      "id": "publication-core",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "title"
+          ],
+          "equals": "One"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "identities"
+          ],
+          "equals": []
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "requirements"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.publicationParse"
+      ]
+    },
+    {
+      "id": "publication-missing-title",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationParse"
+      ],
+      "throws": {
+        "messageIncludes": "title"
+      }
+    },
+    {
+      "id": "publication-inactive-asset",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "asset.other",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset.other",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationParse",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "active DataSpace asset"
+      }
+    },
+    {
+      "id": "publication-identity-defaults",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "projectKey",
+            "o": "project.one",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "identities",
+            0,
+            "projectKey"
+          ],
+          "equals": "project.one"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "identities",
+            0,
+            "order"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "identities",
+            0,
+            "navigationLabel"
+          ],
+          "equals": ""
+        }
+      ],
+      "subjects": [
+        "module.publicationIdentityParse"
+      ]
+    },
+    {
+      "id": "publication-identity-owner-refusal",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "projectKey",
+            "o": "project.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.other",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.other",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationIdentityParse",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "must reference publication.one"
+      }
+    },
+    {
+      "id": "publication-identity-key-refusal",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationIdentityParse"
+      ],
+      "throws": {
+        "messageIncludes": "projectKey"
+      }
+    },
+    {
+      "id": "publication-placement-defaults",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "slot",
+            "o": "main",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "placements",
+            0,
+            "surface"
+          ],
+          "equals": "home"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "placements",
+            0,
+            "slot"
+          ],
+          "equals": "main"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "placements",
+            0,
+            "order"
+          ],
+          "equals": 0
+        }
+      ],
+      "subjects": [
+        "module.publicationPlacementParse"
+      ]
+    },
+    {
+      "id": "publication-placement-owner-refusal",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "slot",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "publication.other",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.other",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationPlacementParse",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "must reference publication.one"
+      }
+    },
+    {
+      "id": "publication-placement-required-slot",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationPlacementParse"
+      ],
+      "throws": {
+        "messageIncludes": "slot"
+      }
+    },
+    {
+      "id": "publication-navigation-members",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "projectKey",
+            "o": "project.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "slot",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "navigationGroup",
+            "o": "group.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "isa",
+            "o": "DataPublicationNavigationGroup",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "groupKey",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "navigationGroups",
+            0,
+            "identities"
+          ],
+          "equals": [
+            "identity.one"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "navigationGroups",
+            0,
+            "placements"
+          ],
+          "equals": [
+            "placement.one"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "navigationGroups",
+            0,
+            "label"
+          ],
+          "equals": ""
+        }
+      ],
+      "subjects": [
+        "module.publicationNavigationGroupParse",
+        "module.publicationNavigationMembers"
+      ]
+    },
+    {
+      "id": "publication-navigation-unknown-member",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "projectKey",
+            "o": "project.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "slot",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "navigationGroup",
+            "o": "group.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "isa",
+            "o": "DataPublicationNavigationGroup",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "groupKey",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "identity",
+            "o": "missing",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationNavigationGroupParse",
+        "module.publicationNavigationMembers",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "missing.isa is required"
+      }
+    },
+    {
+      "id": "publication-navigation-cross-owner",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "isa",
+            "o": "DataPublicationIdentity",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "projectKey",
+            "o": "project.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "isa",
+            "o": "DataPublicationPlacement",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "placementKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "surface",
+            "o": "home",
+            "pol": "is"
+          },
+          {
+            "s": "placement.one",
+            "p": "slot",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "navigationGroup",
+            "o": "group.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "isa",
+            "o": "DataPublicationNavigationGroup",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "groupKey",
+            "o": "main",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "identity",
+            "o": "identity.one",
+            "pol": "is"
+          },
+          {
+            "s": "group.one",
+            "p": "placement",
+            "o": "placement.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.other",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "identity.one",
+            "p": "publication",
+            "o": "publication.other",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationNavigationMembers",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "publication.one"
+      }
+    },
+    {
+      "id": "publication-requirement-active",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "isa",
+            "o": "DataValidationResult",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "validation",
+            "o": "validation",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "state",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "requirement",
+            "o": "requirement.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "isa",
+            "o": "DataPublicationRequirement",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "routingPolicy",
+            "o": "block",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0,
+            "requirements",
+            0,
+            "validationResult"
+          ],
+          "equals": "valid"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "requirements",
+            0,
+            "routingPolicy"
+          ],
+          "equals": "block"
+        },
+        {
+          "path": [
+            "value",
+            0,
+            "requirements",
+            0,
+            "order"
+          ],
+          "equals": 0
+        }
+      ],
+      "subjects": [
+        "module.publicationRequirementParse"
+      ]
+    },
+    {
+      "id": "publication-requirement-inactive",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "isa",
+            "o": "DataValidationResult",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "validation",
+            "o": "validation",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "state",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "requirement",
+            "o": "requirement.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "isa",
+            "o": "DataPublicationRequirement",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "routingPolicy",
+            "o": "block",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationRequirementParse",
+        "module.publicationMemberGuards"
+      ],
+      "throws": {
+        "messageIncludes": "active DataSpace validationResult"
+      }
+    },
+    {
+      "id": "publication-requirement-routing-required",
+      "operation": "publication-parse",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "isa",
+            "o": "DataValidationResult",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "validation",
+            "o": "validation",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "state",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "requirement",
+            "o": "requirement.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "isa",
+            "o": "DataPublicationRequirement",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "subjects": [
+        "module.publicationRequirementParse"
+      ],
+      "throws": {
+        "messageIncludes": "routingPolicy"
+      }
+    },
+    {
+      "id": "publication-card-unadmitted",
+      "operation": "publication-card",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.trustedPublicationCardBridge"
+      ]
+    },
+    {
+      "id": "publication-card-projection",
+      "operation": "publication-card",
+      "input": {
+        "facts": [
+          {
+            "s": "space",
+            "p": "isa",
+            "o": "DataSpace",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "title",
+            "o": "Space",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "isa",
+            "o": "DataSource",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "source",
+            "o": "raw",
+            "pol": "is"
+          },
+          {
+            "s": "source",
+            "p": "sourceKind",
+            "o": "rel",
+            "pol": "is"
+          },
+          {
+            "s": "raw",
+            "p": "isa",
+            "o": "RelSource",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "isa",
+            "o": "DataAsset",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "source",
+            "o": "source",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "sourceObject",
+            "o": "object",
+            "pol": "is"
+          },
+          {
+            "s": "asset",
+            "p": "assetKind",
+            "o": "relRelation",
+            "pol": "is"
+          },
+          {
+            "s": "object",
+            "p": "isa",
+            "o": "RelRelation",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "isa",
+            "o": "DataPublication",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "asset",
+            "o": "asset",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "title",
+            "o": "One",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "publicationKind",
+            "o": "card",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "state",
+            "o": "ready",
+            "pol": "is"
+          },
+          {
+            "s": "space",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "isa",
+            "o": "DataValidationResult",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "validation",
+            "o": "validation",
+            "pol": "is"
+          },
+          {
+            "s": "valid",
+            "p": "state",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "requirement",
+            "o": "requirement.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "isa",
+            "o": "DataPublicationRequirement",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "publication",
+            "o": "publication.one",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          },
+          {
+            "s": "requirement.one",
+            "p": "routingPolicy",
+            "o": "block",
+            "pol": "is"
+          },
+          {
+            "s": "publication.one",
+            "p": "validationResult",
+            "o": "valid",
+            "pol": "is"
+          }
+        ],
+        "subject": "space"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            0
+          ],
+          "equals": {
+            "s": "card.one.bridge",
+            "p": "isa",
+            "o": "TrustedPublicationCard",
+            "pol": "is"
+          }
+        },
+        {
+          "path": [
+            "value",
+            1,
+            "o"
+          ],
+          "equals": "publication.one"
+        }
+      ],
+      "subjects": [
+        "module.trustedPublicationCardBridge"
+      ]
+    },
+    {
+      "id": "frontend-own-action-toString",
+      "operation": "frontend-registry",
+      "input": {
+        "registries": [
+          {
+            "actions": [
+              "toString"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "actions"
+          ],
+          "equals": [
+            "toString"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "actionResults",
+            "toString"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "observations",
+            "frozenActions"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ]
+    },
+    {
+      "id": "frontend-own-action-constructor",
+      "operation": "frontend-registry",
+      "input": {
+        "registries": [
+          {
+            "actions": [
+              "constructor"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "actions"
+          ],
+          "equals": [
+            "constructor"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "actionResults",
+            "constructor"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "observations",
+            "frozenActions"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ]
+    },
+    {
+      "id": "frontend-own-action-__proto__",
+      "operation": "frontend-registry",
+      "input": {
+        "registries": [
+          {
+            "actions": [
+              "__proto__"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "actions"
+          ],
+          "equals": [
+            "__proto__"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "actionResults",
+            "__proto__"
+          ],
+          "equals": 0
+        },
+        {
+          "path": [
+            "observations",
+            "frozenActions"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ]
+    },
+    {
+      "id": "frontend-unregistered-prototype",
+      "operation": "frontend-registry",
+      "input": {
+        "action": "unregistered",
+        "name": "toString"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "resolved"
+          ],
+          "equals": null
+        }
+      ],
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ]
+    },
+    {
+      "id": "frontend-duplicate-refuses",
+      "operation": "frontend-registry",
+      "input": {
+        "registries": [
+          {
+            "actions": [
+              "x"
+            ]
+          },
+          {
+            "actions": [
+              "x"
+            ]
+          }
+        ]
+      },
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ],
+      "throws": {
+        "code": "duplicate-frontend-action"
+      }
+    },
+    {
+      "id": "frontend-invalid-handler",
+      "operation": "frontend-registry",
+      "input": {
+        "invalidHandler": true,
+        "registries": [
+          {
+            "actions": [
+              "x"
+            ]
+          }
+        ]
+      },
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ],
+      "throws": {
+        "code": "invalid-frontend-action-handler"
+      }
+    },
+    {
+      "id": "frontend-hooks-order",
+      "operation": "frontend-registry",
+      "input": {
+        "registries": [
+          {
+            "actions": [
+              "x"
+            ]
+          },
+          {
+            "actions": [
+              "y"
+            ]
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": [
+            "defaults:0",
+            "defaults:1",
+            "refresh:0",
+            "refresh:1"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "sameMemory"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "sameContext"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "observations",
+            "frozenDefaults"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.frontendRuntimeRegistry"
+      ]
+    },
+    {
+      "id": "keyboard-preferred-before-priority",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "preferred": "preferred",
+        "events": [
+          {
+            "key": "z",
+            "ctrlKey": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            true
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "surface"
+          ],
+          "equals": "preferred"
+        },
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "sameEvent"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "effects"
+          ],
+          "equals": [
+            "add:keydown",
+            "prevent",
+            "remove:keydown"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "afterDispose"
+          ],
+          "equals": false
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-refuse-editing",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "key": "z",
+            "ctrlKey": true,
+            "target": {
+              "tagName": "INPUT",
+              "type": "text"
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            false
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-refuse-composition",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "key": "z",
+            "ctrlKey": true,
+            "isComposing": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            false
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-refuse-repeated",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "key": "z",
+            "ctrlKey": true,
+            "repeat": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            false
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-refuse-prevented",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "key": "z",
+            "ctrlKey": true,
+            "defaultPrevented": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            false
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-falsy-falls-through",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": false
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "bindings": [
+              {
+                "chord": "Mod+Z",
+                "command": "undo"
+              }
+            ],
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "key": "z",
+            "metaKey": true
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "calls",
+            "length"
+          ],
+          "equals": 2
+        },
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            true
+          ]
+        }
+      ],
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ]
+    },
+    {
+      "id": "keyboard-missing-surface",
+      "operation": "keyboard-routing",
+      "input": {
+        "surfaces": [
+          {}
+        ]
+      },
+      "subjects": [
+        "module.keyboardCommandRouter"
+      ],
+      "throws": {
+        "messageIncludes": "surfaceId"
+      }
+    },
+    {
+      "id": "pointer-preferred",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "handled": true
+          }
+        ],
+        "preferred": "preferred",
+        "events": [
+          {
+            "type": "click",
+            "pointerId": 7
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "surface"
+          ],
+          "equals": "preferred"
+        },
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "sameEvent"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "afterDispose"
+          ],
+          "equals": false
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-native-control-refused",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "handled": true
+          }
+        ],
+        "events": [
+          {
+            "type": "click",
+            "target": {
+              "tagName": "BUTTON"
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            false
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-native-control-opt-in",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true,
+            "acceptsNativeControls": true
+          }
+        ],
+        "events": [
+          {
+            "type": "click",
+            "target": {
+              "tagName": "BUTTON"
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "results"
+          ],
+          "equals": [
+            true
+          ]
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-capture-precedence-cancel",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "handled": true
+          }
+        ],
+        "capture": {
+          "surfaceId": "preferred",
+          "pointerId": 7
+        },
+        "events": [
+          {
+            "type": "pointermove",
+            "pointerId": 7
+          },
+          {
+            "type": "pointercancel",
+            "pointerId": 7
+          },
+          {
+            "type": "click",
+            "pointerId": 7
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "captured"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "calls",
+            0,
+            "surface"
+          ],
+          "equals": "preferred"
+        },
+        {
+          "path": [
+            "value",
+            "calls",
+            2,
+            "surface"
+          ],
+          "equals": "high"
+        },
+        {
+          "path": [
+            "value",
+            "effects"
+          ],
+          "equals": [
+            "release:cancel"
+          ]
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-capture-dispose",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "handled": true
+          }
+        ],
+        "capture": {
+          "surfaceId": "high",
+          "pointerId": 1
+        },
+        "events": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "effects"
+          ],
+          "equals": [
+            "cancel:dispose"
+          ]
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-unregister-clears-capture",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "handled": true
+          },
+          {
+            "surfaceId": "preferred",
+            "priority": 0,
+            "handled": true
+          }
+        ],
+        "capture": {
+          "surfaceId": "high",
+          "pointerId": 1
+        },
+        "removeFirst": true,
+        "events": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "effects"
+          ],
+          "equals": []
+        }
+      ],
+      "subjects": [
+        "module.pointerCommandRouter"
+      ]
+    },
+    {
+      "id": "pointer-missing-surface",
+      "operation": "pointer-routing",
+      "input": {
+        "surfaces": [
+          {}
+        ]
+      },
+      "subjects": [
+        "module.pointerCommandRouter"
+      ],
+      "throws": {
+        "messageIncludes": "surfaceId"
+      }
+    },
+    {
+      "id": "history-preferred",
+      "operation": "surface-history",
+      "input": {
+        "providers": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "canUndo": true,
+            "handled": true,
+            "description": "high"
+          },
+          {
+            "surfaceId": "preferred",
+            "canUndo": true,
+            "handled": true,
+            "description": "preferred"
+          }
+        ],
+        "preferred": "preferred",
+        "direction": "undo"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "resolved"
+          ],
+          "equals": "preferred"
+        },
+        {
+          "path": [
+            "value",
+            "description"
+          ],
+          "equals": "preferred"
+        },
+        {
+          "path": [
+            "value",
+            "calls"
+          ],
+          "equals": [
+            [
+              "preferred",
+              "undo",
+              true
+            ]
+          ]
+        },
+        {
+          "path": [
+            "observations",
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ]
+    },
+    {
+      "id": "history-unavailable-falls-through",
+      "operation": "surface-history",
+      "input": {
+        "providers": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "canUndo": false,
+            "handled": true,
+            "description": "high"
+          },
+          {
+            "surfaceId": "preferred",
+            "canUndo": true,
+            "handled": true,
+            "description": "preferred"
+          }
+        ],
+        "direction": "undo"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "resolved"
+          ],
+          "equals": "preferred"
+        }
+      ],
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ]
+    },
+    {
+      "id": "history-unregister",
+      "operation": "surface-history",
+      "input": {
+        "providers": [
+          {
+            "surfaceId": "high",
+            "priority": 10,
+            "canUndo": true,
+            "handled": true,
+            "description": "high"
+          },
+          {
+            "surfaceId": "preferred",
+            "canUndo": true,
+            "handled": true,
+            "description": "preferred"
+          }
+        ],
+        "removeFirst": true,
+        "direction": "undo"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "resolved"
+          ],
+          "equals": "preferred"
+        }
+      ],
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ]
+    },
+    {
+      "id": "history-no-provider",
+      "operation": "surface-history",
+      "input": {
+        "direction": "redo"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "handled"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "description"
+          ],
+          "equals": ""
+        }
+      ],
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ]
+    },
+    {
+      "id": "history-unknown-direction",
+      "operation": "surface-history",
+      "input": {
+        "direction": "other"
+      },
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ],
+      "throws": {
+        "messageIncludes": "Unknown history direction"
+      }
+    },
+    {
+      "id": "history-missing-surface",
+      "operation": "surface-history",
+      "input": {
+        "providers": [
+          {}
+        ],
+        "direction": "undo"
+      },
+      "subjects": [
+        "module.surfaceHistoryRegistry"
+      ],
+      "throws": {
+        "messageIncludes": "surfaceId"
+      }
+    },
+    {
+      "id": "storage-key",
+      "operation": "lane-storage",
+      "input": {
+        "action": "key",
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "options": {
+          "projectName": "demo"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "rel-lane-storage:demo:project:lane.one"
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-alias-mapping",
+      "operation": "lane-storage",
+      "input": {
+        "action": "mappings",
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          },
+          {
+            "s": "project",
+            "p": "name",
+            "o": "demo",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "isa",
+            "o": "LaneStorageMapping",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "lane",
+            "o": "lane.one",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "environment",
+            "o": "browser",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "storageMode",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "adapter",
+            "o": "localStorage",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "projectName"
+          ],
+          "equals": "demo"
+        },
+        {
+          "path": [
+            "value",
+            "lanes",
+            0,
+            1,
+            "adapter"
+          ],
+          "equals": "adapter.browser.localStorage"
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-unsupported-refuses",
+      "operation": "lane-storage",
+      "input": {
+        "action": "mappings",
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          },
+          {
+            "s": "project",
+            "p": "name",
+            "o": "demo",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "isa",
+            "o": "LaneStorageMapping",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "lane",
+            "o": "lane.one",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "environment",
+            "o": "browser",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "storageMode",
+            "o": "durable",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "adapter",
+            "o": "localStorage",
+            "pol": "is"
+          },
+          {
+            "s": "mapping",
+            "p": "adapter",
+            "o": "other",
+            "pol": "is"
+          }
+        ]
+      },
+      "subjects": [
+        "module.browserLaneStorage"
+      ],
+      "throws": {
+        "code": "unsupported-browser-lane-storage-adapter"
+      }
+    },
+    {
+      "id": "storage-roundtrip",
+      "operation": "lane-storage",
+      "input": {
+        "action": "roundtrip",
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "facts": [
+          {
+            "s": "s",
+            "p": "p",
+            "o": "v",
+            "pol": "is"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "persisted",
+            "persisted"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "restored"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "facts",
+            0,
+            "s"
+          ],
+          "equals": "s"
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "facts",
+            0,
+            "o"
+          ],
+          "equals": "v"
+        },
+        {
+          "path": [
+            "value",
+            "persisted",
+            "record",
+            "version"
+          ],
+          "equals": 1
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-get-failure",
+      "operation": "lane-storage",
+      "input": {
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "fault": "get"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "restored",
+            "restored"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "error",
+            "code"
+          ],
+          "equals": "browser-lane-storage-restore-failed"
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "error",
+            "sameIdentity"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-set-failure",
+      "operation": "lane-storage",
+      "input": {
+        "action": "persist",
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "facts": [
+          {
+            "s": "s",
+            "p": "p",
+            "o": "v",
+            "pol": "is"
+          }
+        ],
+        "fault": "set"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "persisted",
+            "persisted"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "persisted",
+            "error",
+            "code"
+          ],
+          "equals": "browser-lane-storage-persist-failed"
+        },
+        {
+          "path": [
+            "value",
+            "persisted",
+            "error",
+            "sameIdentity"
+          ],
+          "equals": true
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-absent",
+      "operation": "lane-storage",
+      "input": {
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "encoded": null
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "restored",
+            "restored"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "error"
+          ],
+          "equals": null
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-corrupt",
+      "operation": "lane-storage",
+      "input": {
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "encoded": "{"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "restored",
+            "restored"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "error",
+            "code"
+          ],
+          "equals": "browser-lane-storage-restore-failed"
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-wrong-version",
+      "operation": "lane-storage",
+      "input": {
+        "mapping": {
+          "lane": "lane.one",
+          "adapter": "localStorage",
+          "partition": "project"
+        },
+        "encoded": "{\"version\":2,\"environment\":\"browser\",\"lane\":\"lane.one\",\"adapter\":\"localStorage\",\"facts\":[]}"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "restored",
+            "restored"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "restored",
+            "error",
+            "message"
+          ],
+          "equals": "Invalid browser lane storage snapshot for lane.one."
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-key-colon-coordinates",
+      "operation": "lane-storage",
+      "input": {
+        "action": "key",
+        "mapping": {
+          "partition": "b:c",
+          "lane": "d"
+        },
+        "options": {
+          "projectName": "a"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "rel-lane-storage:a:b%3Ac:d"
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    },
+    {
+      "id": "storage-key-escape-marker",
+      "operation": "lane-storage",
+      "input": {
+        "action": "key",
+        "mapping": {
+          "partition": "b",
+          "lane": "%3A"
+        },
+        "options": {
+          "projectName": "a:c"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "rel-lane-storage:a%3Ac:b:%253A"
+        }
+      ],
+      "subjects": [
+        "module.browserLaneStorage"
+      ]
+    }
+  ]
+}

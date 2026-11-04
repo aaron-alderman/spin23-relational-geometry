@@ -1,0 +1,100 @@
+{
+  "sourceCommit": "c604f723b76cefa0bfa99103ab45d88c470fd2bb",
+  "sourceHashes": {
+    "sdk/plugins/data-space/index.mjs": "b2e79f9bec1376d2352200096eb9e97c541141fbb5bb99cfd6ecabbeff1e6034",
+    "sdk/browser/frontend.mjs": "83c7d277da7717d921ab6ddf28376f44ba01346533a921a5b36ca083feaf1c17"
+  },
+  "sharedGroup": {
+    "value": [
+      {
+        "subject": "set",
+        "groupOwner": "set"
+      },
+      {
+        "subject": "set.other",
+        "groupOwner": "set"
+      }
+    ]
+  },
+  "sharedLeaf": {
+    "value": [
+      {
+        "subject": "set",
+        "leafOwner": "set"
+      },
+      {
+        "subject": "set.other",
+        "leafOwner": "set"
+      }
+    ]
+  },
+  "conditionCycle": {
+    "value": true
+  },
+  "partialApplication": {
+    "value": {
+      "before": {
+        "runtime": {
+          "pendingSessionPublications": [
+            {
+              "sequence": 1,
+              "publicationId": "one",
+              "facts": []
+            }
+          ]
+        },
+        "lanes": {
+          "published": [
+            {
+              "s": "s",
+              "p": "p",
+              "o": "old",
+              "pol": "is"
+            }
+          ],
+          "optimistic": []
+        }
+      },
+      "after": {
+        "runtime": {
+          "pendingSessionPublications": [],
+          "sessionPublicationSequence": 2
+        },
+        "lanes": {
+          "published": [
+            {
+              "s": "s",
+              "p": "p",
+              "o": "old",
+              "pol": "is"
+            },
+            {
+              "s": "s",
+              "p": "p",
+              "o": "old",
+              "pol": "is-not"
+            },
+            {
+              "s": "s",
+              "p": "p",
+              "o": "new",
+              "pol": "is"
+            }
+          ],
+          "optimistic": []
+        }
+      },
+      "error": "Unknown lane: missing"
+    }
+  },
+  "staleProjection": {
+    "value": {
+      "changed": false,
+      "updates": [
+        "stale"
+      ]
+    }
+  },
+  "unsafeSequence": 9007199254740992,
+  "sessionPublisherExported": false
+}

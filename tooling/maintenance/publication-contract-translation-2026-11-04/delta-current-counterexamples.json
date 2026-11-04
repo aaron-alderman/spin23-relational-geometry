@@ -1,0 +1,42 @@
+{
+  "baselineCommit": "b1578b1262b283f6237e30ec3d33baabea5f09a2",
+  "observability": "Current repaired implementation; injected fetch only.",
+  "baselineFunctionSha256": "0cd2bfd839fe5f76072ac093d2f32810cd5df141512f4873ec3f89637009fb26",
+  "observedFunctionSha256": "22f76cb65ffa4ba99d25c145c5bc577e79b0940f9f2bda773ef092c229c35100",
+  "normalizedFunctionBodyMatchesBaseline": false,
+  "rows": [
+    {
+      "status": 412,
+      "command": "",
+      "error": {
+        "name": "Error",
+        "message": "412 Refused for save",
+        "kind": "stale-write",
+        "revision": "r2",
+        "status": 412
+      }
+    },
+    {
+      "status": 428,
+      "command": "",
+      "error": {
+        "name": "Error",
+        "message": "428 Refused for save",
+        "kind": "missing-precondition",
+        "revision": "r2",
+        "status": 428
+      }
+    },
+    {
+      "status": 412,
+      "command": "save",
+      "error": {
+        "name": "Error",
+        "message": "412 Refused for save",
+        "kind": "stale-write",
+        "revision": "r2",
+        "status": 412
+      }
+    }
+  ]
+}

@@ -1,0 +1,1700 @@
+[
+  {
+    "s": "space",
+    "p": "isa",
+    "o": "DataSpace",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "title",
+    "o": "Space",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "source",
+    "o": "source",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "asset",
+    "o": "asset",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "publication",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "validationResult",
+    "o": "valid",
+    "pol": "is"
+  },
+  {
+    "s": "source",
+    "p": "isa",
+    "o": "DataSource",
+    "pol": "is"
+  },
+  {
+    "s": "source",
+    "p": "source",
+    "o": "raw",
+    "pol": "is"
+  },
+  {
+    "s": "source",
+    "p": "sourceKind",
+    "o": "rel",
+    "pol": "is"
+  },
+  {
+    "s": "raw",
+    "p": "isa",
+    "o": "RelSource",
+    "pol": "is"
+  },
+  {
+    "s": "asset",
+    "p": "isa",
+    "o": "DataAsset",
+    "pol": "is"
+  },
+  {
+    "s": "asset",
+    "p": "source",
+    "o": "source",
+    "pol": "is"
+  },
+  {
+    "s": "asset",
+    "p": "sourceObject",
+    "o": "object",
+    "pol": "is"
+  },
+  {
+    "s": "asset",
+    "p": "assetKind",
+    "o": "relRelation",
+    "pol": "is"
+  },
+  {
+    "s": "object",
+    "p": "isa",
+    "o": "RelRelation",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "isa",
+    "o": "DataPublication",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "asset",
+    "o": "asset",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "title",
+    "o": "Publication",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "publicationKind",
+    "o": "card",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "state",
+    "o": "ready",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "requirement",
+    "o": "primary",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "requirement",
+    "o": "fallback",
+    "pol": "is"
+  },
+  {
+    "s": "pub",
+    "p": "gatePrecedence",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "valid",
+    "p": "isa",
+    "o": "DataValidationResult",
+    "pol": "is"
+  },
+  {
+    "s": "valid",
+    "p": "validation",
+    "o": "rule",
+    "pol": "is"
+  },
+  {
+    "s": "valid",
+    "p": "state",
+    "o": "valid",
+    "pol": "is"
+  },
+  {
+    "s": "primary",
+    "p": "isa",
+    "o": "DataPublicationRequirement",
+    "pol": "is"
+  },
+  {
+    "s": "primary",
+    "p": "publication",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "primary",
+    "p": "validationResult",
+    "o": "valid",
+    "pol": "is"
+  },
+  {
+    "s": "primary",
+    "p": "routingPolicy",
+    "o": "block",
+    "pol": "is"
+  },
+  {
+    "s": "fallback",
+    "p": "isa",
+    "o": "DataPublicationRequirement",
+    "pol": "is"
+  },
+  {
+    "s": "fallback",
+    "p": "publication",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "fallback",
+    "p": "validationResult",
+    "o": "valid",
+    "pol": "is"
+  },
+  {
+    "s": "fallback",
+    "p": "routingPolicy",
+    "o": "block",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "isa",
+    "o": "DataPublicationGatePrecedence",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "publication",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "primaryRequirement",
+    "o": "primary",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "fallbackRequirement",
+    "o": "fallback",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "fallbackRoutingPolicy",
+    "o": "allow",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "precedenceRank",
+    "o": "1",
+    "pol": "is"
+  },
+  {
+    "s": "field",
+    "p": "isa",
+    "o": "DataField",
+    "pol": "is"
+  },
+  {
+    "s": "field",
+    "p": "asset",
+    "o": "asset",
+    "pol": "is"
+  },
+  {
+    "s": "field",
+    "p": "sourceField",
+    "o": "raw.field",
+    "pol": "is"
+  },
+  {
+    "s": "field",
+    "p": "inferenceState",
+    "o": "accepted",
+    "pol": "is"
+  },
+  {
+    "s": "raw.field",
+    "p": "isa",
+    "o": "RelField",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "expressionSet",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "set",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionSet",
+    "pol": "is"
+  },
+  {
+    "s": "set",
+    "p": "precedence",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "set",
+    "p": "conditionGroup",
+    "o": "group",
+    "pol": "is"
+  },
+  {
+    "s": "group",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionConditionGroup",
+    "pol": "is"
+  },
+  {
+    "s": "group",
+    "p": "expressionSet",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "group",
+    "p": "logicKind",
+    "o": "all",
+    "pol": "is"
+  },
+  {
+    "s": "group",
+    "p": "condition",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionCondition",
+    "pol": "is"
+  },
+  {
+    "s": "leaf",
+    "p": "expressionSet",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "leaf",
+    "p": "field",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "leaf",
+    "p": "operator",
+    "o": "equals",
+    "pol": "is"
+  },
+  {
+    "s": "leaf",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "condition",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "isa",
+    "o": "DataPublicationGateCondition",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "precedence",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "conditionKind",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "operator",
+    "o": "equals",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "expression",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "condition",
+    "p": "expressionSet",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "expression",
+    "p": "isa",
+    "o": "DataPublicationGateConditionExpression",
+    "pol": "is"
+  },
+  {
+    "s": "expression",
+    "p": "gateCondition",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "expression",
+    "p": "field",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "expression",
+    "p": "operator",
+    "o": "equals",
+    "pol": "is"
+  },
+  {
+    "s": "expression",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate",
+    "p": "conditionGroup",
+    "o": "condition.group",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group",
+    "p": "isa",
+    "o": "DataPublicationGateConditionGroup",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group",
+    "p": "precedence",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group",
+    "p": "logicKind",
+    "o": "all",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group",
+    "p": "condition",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "isa",
+    "o": "DataPublicationEditor",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "publication",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "publicationEditor",
+    "o": "editor",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "titleEdit",
+    "o": "editor.titleEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "editor.titleEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "target",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "predicate",
+    "o": "title",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "label",
+    "o": "titleEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.titleEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "publicationKindEdit",
+    "o": "editor.publicationKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "editor.publicationKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "target",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "predicate",
+    "o": "publicationKind",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "label",
+    "o": "publicationKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.publicationKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "stateEdit",
+    "o": "editor.stateEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "editor.stateEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "target",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "predicate",
+    "o": "state",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "label",
+    "o": "stateEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.stateEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "plaintextPolicyEdit",
+    "o": "editor.plaintextPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "editor.plaintextPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "target",
+    "o": "pub",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "predicate",
+    "o": "plaintextPolicy",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "label",
+    "o": "plaintextPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "editor.plaintextPolicyEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "editor",
+    "p": "gatePrecedenceEditor",
+    "o": "gate.editor",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "isa",
+    "o": "DataPublicationGatePrecedenceEditor",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "precedence",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "precedenceRankEdit",
+    "o": "gate.editor.precedenceRankEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "gate.editor.precedenceRankEdit",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "target",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "predicate",
+    "o": "precedenceRank",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "label",
+    "o": "precedenceRankEdit",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.precedenceRankEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "fallbackRoutingPolicyEdit",
+    "o": "gate.editor.fallbackRoutingPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "gate.editor.fallbackRoutingPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "target",
+    "o": "gate",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "predicate",
+    "o": "fallbackRoutingPolicy",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "label",
+    "o": "fallbackRoutingPolicyEdit",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor.fallbackRoutingPolicyEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "expressionSetEditor",
+    "o": "set.editor",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionSetEditor",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor",
+    "p": "expressionSet",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor",
+    "p": "labelEdit",
+    "o": "set.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "set.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "target",
+    "o": "set",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "predicate",
+    "o": "label",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "label",
+    "o": "labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor.labelEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor",
+    "p": "conditionGroupEditor",
+    "o": "group.editor",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionConditionGroupEditor",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor",
+    "p": "conditionGroup",
+    "o": "group",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor",
+    "p": "logicKindEdit",
+    "o": "group.editor.logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "group.editor.logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "target",
+    "o": "group",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "predicate",
+    "o": "logicKind",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "label",
+    "o": "logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.logicKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor",
+    "p": "labelEdit",
+    "o": "group.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "group.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "target",
+    "o": "group",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "predicate",
+    "o": "label",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "label",
+    "o": "labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "group.editor.labelEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "set.editor",
+    "p": "conditionEditor",
+    "o": "leaf.editor",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "isa",
+    "o": "DataPublicationGateExpressionConditionEditor",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "condition",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "fieldEdit",
+    "o": "leaf.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "leaf.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "target",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "predicate",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "label",
+    "o": "fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.fieldEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "operatorEdit",
+    "o": "leaf.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "leaf.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "target",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "predicate",
+    "o": "operator",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "label",
+    "o": "operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.operatorEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "expectedValueEdit",
+    "o": "leaf.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "leaf.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "target",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "predicate",
+    "o": "expectedValue",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "label",
+    "o": "expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.expectedValueEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor",
+    "p": "valueKindEdit",
+    "o": "leaf.editor.valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "leaf.editor.valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "target",
+    "o": "leaf",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "predicate",
+    "o": "valueKind",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "label",
+    "o": "valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "leaf.editor.valueKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "conditionEditor",
+    "o": "condition.editor",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "isa",
+    "o": "DataPublicationGateConditionEditor",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "gateCondition",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "conditionKindEdit",
+    "o": "condition.editor.conditionKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.editor.conditionKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "target",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "predicate",
+    "o": "conditionKind",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "label",
+    "o": "conditionKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.conditionKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "fieldEdit",
+    "o": "condition.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "target",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "predicate",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "label",
+    "o": "fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.fieldEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "operatorEdit",
+    "o": "condition.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "target",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "predicate",
+    "o": "operator",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "label",
+    "o": "operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.operatorEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "expectedValueEdit",
+    "o": "condition.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "target",
+    "o": "condition",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "predicate",
+    "o": "expectedValue",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "label",
+    "o": "expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor.expectedValueEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "condition.editor",
+    "p": "expressionEditor",
+    "o": "expression.editor",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "isa",
+    "o": "DataPublicationGateConditionExpressionEditor",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "expression",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "fieldEdit",
+    "o": "expression.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "expression.editor.fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "target",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "predicate",
+    "o": "field",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "label",
+    "o": "fieldEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.fieldEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "operatorEdit",
+    "o": "expression.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "expression.editor.operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "target",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "predicate",
+    "o": "operator",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "label",
+    "o": "operatorEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.operatorEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "expectedValueEdit",
+    "o": "expression.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "expression.editor.expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "target",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "predicate",
+    "o": "expectedValue",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "label",
+    "o": "expectedValueEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.expectedValueEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor",
+    "p": "valueKindEdit",
+    "o": "expression.editor.valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "expression.editor.valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "target",
+    "o": "expression",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "predicate",
+    "o": "valueKind",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "label",
+    "o": "valueKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "expression.editor.valueKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "gate.editor",
+    "p": "conditionGroupEditor",
+    "o": "condition.group.editor",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor",
+    "p": "isa",
+    "o": "DataPublicationGateConditionGroupEditor",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor",
+    "p": "conditionGroup",
+    "o": "condition.group",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor",
+    "p": "logicKindEdit",
+    "o": "condition.group.editor.logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.group.editor.logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "target",
+    "o": "condition.group",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "predicate",
+    "o": "logicKind",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "label",
+    "o": "logicKindEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.logicKindEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor",
+    "p": "labelEdit",
+    "o": "condition.group.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "space",
+    "p": "editTarget",
+    "o": "condition.group.editor.labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "isa",
+    "o": "DataEditTarget",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "target",
+    "o": "condition.group",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "predicate",
+    "o": "label",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "family",
+    "o": "publication",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "label",
+    "o": "labelEdit",
+    "pol": "is"
+  },
+  {
+    "s": "condition.group.editor.labelEdit",
+    "p": "valueKind",
+    "o": "string",
+    "pol": "is"
+  }
+]

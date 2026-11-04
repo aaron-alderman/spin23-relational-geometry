@@ -1,0 +1,84 @@
+{
+  "sourceCommit": "943cf0778da7291dbcecff85974a0ca06362a1b3",
+  "sourceHashes": {
+    "sdk/plugins/data-space/index.mjs": "ce16e130f33e1b993e1b0d7c26e12bb22aea87c7c348f4fc87ec8ebbbdf8094e",
+    "sdk/browser/frontend.mjs": "be4eeea62dcea5fca47d34ed94017ed51718383546dd7b9a8321d85ec56aecf5"
+  },
+  "sharedGroup": {
+    "error": {
+      "name": "Error",
+      "message": "group.expressionSet must reference set.other, got set."
+    }
+  },
+  "sharedLeaf": {
+    "error": {
+      "name": "Error",
+      "message": "leaf.expressionSet must reference set.other, got set."
+    }
+  },
+  "conditionCycle": {
+    "error": {
+      "name": "Error",
+      "message": "a participates in a publication gate condition-group cycle."
+    }
+  },
+  "partialApplication": {
+    "value": {
+      "before": {
+        "runtime": {
+          "pendingSessionPublications": [
+            {
+              "sequence": 1,
+              "publicationId": "one",
+              "facts": []
+            }
+          ]
+        },
+        "lanes": {
+          "published": [
+            {
+              "s": "s",
+              "p": "p",
+              "o": "old",
+              "pol": "is"
+            }
+          ],
+          "optimistic": []
+        }
+      },
+      "after": {
+        "runtime": {
+          "pendingSessionPublications": [
+            {
+              "sequence": 1,
+              "publicationId": "one",
+              "facts": []
+            }
+          ]
+        },
+        "lanes": {
+          "published": [
+            {
+              "s": "s",
+              "p": "p",
+              "o": "old",
+              "pol": "is"
+            }
+          ],
+          "optimistic": []
+        }
+      },
+      "error": "Unknown or invalid publication lane: missing"
+    }
+  },
+  "staleProjection": {
+    "value": {
+      "changed": false,
+      "updates": [
+        "newer"
+      ]
+    }
+  },
+  "unsafeSequence": 0,
+  "sessionPublisherExported": true
+}

@@ -1,0 +1,46 @@
+{
+  "reason": "ENOSPC during ordinary-copy assembly and isolated Core test fixture copying; source checks and runtime/semantic gates passed. No successful final bootstrap receipt was emitted.",
+  "selectedSource": "943cf0778da7291dbcecff85974a0ca06362a1b3",
+  "failureFiles": [
+    {
+      "path": "assembly-inputs.json",
+      "sha256": "80dbba5a92b7a466426b751180b1cd54ef0b36d976f25c903fe33e1c275612c0",
+      "bytes": 305092
+    },
+    {
+      "path": "assembly-proof.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "assembly-stderr.txt",
+      "sha256": "9f679d5bbe773eb01dde28fc8a614e71db268861f5323fe44ec85b6ea42d49d1",
+      "bytes": 1458
+    },
+    {
+      "path": "bootstrap-inputs.json",
+      "sha256": "635faf1dc7c4f96c0d25911974da7397b1f66572bb7bf660698d23d2858dd0c4",
+      "bytes": 3818661
+    },
+    {
+      "path": "pins.json",
+      "sha256": "c72f53298e8fbeda0e94ffc06dfa963b814dc8c6274e00b04b64049fe7bdc074",
+      "bytes": 115
+    }
+  ],
+  "candidates": [
+    "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\publication-validation-2026-11-04",
+    "C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\publication-final-validation-2026-11-04"
+  ],
+  "junctionGuardPassed": true,
+  "sourceBundlesAndPriorReceiptsVerified": true,
+  "bootstrapFailure": {
+    "stage": "claimipedia-core --test test/*.test.mjs",
+    "errorCode": "ENOSPC",
+    "observedTests": 64,
+    "observedPasses": 61,
+    "observedFailures": 3,
+    "rawCapture": "Same-session tool error; no successful final-pass receipt emitted."
+  },
+  "observedAt": "2026-11-04T14:19:09.676Z"
+}
