@@ -1,0 +1,33 @@
+✔ authoring platform shell algebra owns complete CLI and executor semantics (1.6361ms)
+✖ public shell facades and components remain bounded (9.9635ms)
+ℹ tests 2
+ℹ suites 0
+ℹ pass 1
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173.8902
+
+✖ failing tests:
+
+test at test\original-migration-authoring-platform-shell-algebra.test.mjs:28:1
+✖ public shell facades and components remain bounded (9.9635ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(cli.split(/\r?\n/u).filter((line) => line.trim()).length < 20)
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-contract-validation-2026-11-04/retained-originals/test/original-migration-authoring-platform-shell-algebra.test.mjs:30:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

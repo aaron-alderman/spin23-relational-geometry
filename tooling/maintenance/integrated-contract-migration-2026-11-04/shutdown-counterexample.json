@@ -1,0 +1,21 @@
+{
+  "predecessor": "f534f34d2562df684fa8a6be48f0297a6b5a62c9",
+  "file": "sdk/platform-daemon/project-extension-host.mjs",
+  "exactExtractSha256": "6afe2bdef1380fc05c53e4888880ec408962e885c13e8c0e27117a9747c789f1",
+  "before": {
+    "registryCloses": 1,
+    "daemonCloses": 0,
+    "exactFault": true
+  },
+  "after": {
+    "registryCloses": 1,
+    "daemonCloses": 1,
+    "exactFault": true
+  },
+  "scope": "Exact retained predecessor finalization with injected registry refusal; new owner closes daemon in finally and preserves the refusal. Same-run counterexample, not independent or production evidence.",
+  "selectedSourceCommit": "6d7c51d1d1c2567ef22a89390d6e8c3135db8c95",
+  "regressionReceipts": [
+    "platform-qualified-tests.txt",
+    "assembled-migration-tests.txt"
+  ]
+}

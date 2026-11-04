@@ -1,0 +1,25 @@
+✔ MCP stable JSON algebra preserves compact sorted bytes and hash identity (13.8976ms)
+✖ MCP stable JSON and hash are executable evaluator operations (1.8056ms)
+✔ MCP stable JSON uses an explicit locale for deterministic Unicode key ordering (0.1558ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 2
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5835.6608
+
+✖ failing tests:
+
+test at test\original-migration-mcp-stable-json.test.mjs:18:1
+✖ MCP stable JSON and hash are executable evaluator operations (1.8056ms)
+  TypeError [Error]: Unsupported expression kind: mcpStableJson.
+      at evaluateExpression (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/expression-algebra/src/index.mjs:112:65)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-contract-validation-2026-11-04/retained-originals/test/original-migration-mcp-stable-json.test.mjs:22:16)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)

@@ -1,0 +1,9 @@
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-contract-validation-2026-11-04/assembly/platform/scripts/verify-platform-runtime.mjs:165
+      if (dependency.name !== "@sourcerytech/expression-algebra" || dependency.source !== "https://github.com/sourcerytech/expression-algebra.git" || !/^[a-f0-9]{40}$/u.test(dependency.sourceCommit || "") || !/^[a-f0-9]{40}$/u.test(dependency.sourceTree || "") || dependency.payloadHash !== sha256(JSON.stringify(dependency.files))) throw new Error(`Platform retained-source dependency ${dependency.name} provenance is incomplete or mismatched.`);
+                                                                                                                                                                                                                                                                                                                                                   ^
+
+Error: Platform retained-source dependency @sourcerytech/claimipedia-core provenance is incomplete or mismatched.
+    at verifyPlatformRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-contract-validation-2026-11-04/assembly/platform/scripts/verify-platform-runtime.mjs:165:340)
+    at async file:///C:/Users/aaron/grand-theory/.platform-reconstitution/integrated-contract-validation-2026-11-04/assembly/platform/scripts/assemble-source-clean-workspace.mjs:26:25
+
+Node.js v24.22.1
