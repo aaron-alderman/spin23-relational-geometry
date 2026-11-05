@@ -1,0 +1,2086 @@
+{
+  "records": [
+    {
+      "subject": "module.dataResolutionPolicy",
+      "source": "sdk/plugins/data-space/resolution.rel",
+      "variants": [
+        {
+          "commit": "d89babc0ecb26ca24d76fc8bb65708984b5c24e5",
+          "sha256": "9a07eeffd69fa6648fca768c74d5a8c5ab34fd4f2489a8d4c48708ea84dadd0d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ResolvedValueSourceLayer"
+            ],
+            "targetDomain": [
+              "IntegerPrecedenceRank"
+            ],
+            "forwardMap": [
+              "namedLayerToExplicitAscendingRank"
+            ],
+            "reverseMapOrAbsence": [
+              "rankCanRecoverKnownLayerButZeroConflatesUnknownLayers"
+            ],
+            "preservedInformation": [
+              "knownSourceLayerOrdering"
+            ],
+            "lostInformation": [
+              "unknownSourceLayerIdentity"
+            ],
+            "identity": [
+              "sourceLayerName"
+            ],
+            "partiality": [
+              "unknownLayerMapsToZero"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "purePolicyProjection"
+            ],
+            "stateOwner": [
+              "algebra"
+            ],
+            "evidence": [
+              "explicitLayerRankTable"
+            ],
+            "falsifier": [
+              "knownLayerRankChangesWithoutAlgebraChange"
+            ],
+            "default": [
+              "unknownLayer=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataResolutionValues",
+      "source": "sdk/plugins/data-space/resolution.rel",
+      "variants": [
+        {
+          "commit": "d89babc0ecb26ca24d76fc8bb65708984b5c24e5",
+          "sha256": "9a07eeffd69fa6648fca768c74d5a8c5ab34fd4f2489a8d4c48708ea84dadd0d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceResolvedValueCandidateMultiset"
+            ],
+            "targetDomain": [
+              "OneRankedResolutionOrConflictPerEditTarget"
+            ],
+            "forwardMap": [
+              "groupRankFindTopSignaturesThenResolveOrConflict"
+            ],
+            "reverseMapOrAbsence": [
+              "rankedCandidatesRecoverInputCandidatesButNotOriginalIntertargetOrder"
+            ],
+            "preservedInformation": [
+              "candidatePayloadTargetRankOrderSignatureAndConflictMembership"
+            ],
+            "lostInformation": [
+              "originalCandidateIntertargetOrderAndUnknownLayerIdentityAfterRank"
+            ],
+            "identity": [
+              "editTargetAndCandidateSubject"
+            ],
+            "partiality": [
+              "emptyCandidateSetProducesNoResolution"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureProjectionOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "rankedCandidatesTopCandidatesSignaturesAndState"
+            ],
+            "falsifier": [
+              "distinctTopSignaturesProduceNonconflictWinner"
+            ],
+            "default": [
+              "absentResolvedValues=[]"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataResolutionFacts",
+      "source": "sdk/plugins/data-space/resolution.rel",
+      "variants": [
+        {
+          "commit": "d89babc0ecb26ca24d76fc8bb65708984b5c24e5",
+          "sha256": "9a07eeffd69fa6648fca768c74d5a8c5ab34fd4f2489a8d4c48708ea84dadd0d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "RankedResolvedProperties"
+            ],
+            "targetDomain": [
+              "CanonicalDataResolvedPropertyFacts"
+            ],
+            "forwardMap": [
+              "deriveStableSubjectEmitStateCandidatesConflictsAndWinnerFields"
+            ],
+            "reverseMapOrAbsence": [
+              "factsRecoverResolutionExceptOriginalIndexAndNoncanonicalSubjectCharacters"
+            ],
+            "preservedInformation": [
+              "targetStateCandidateConflictWinnerPayloadAndCanonicalOrder"
+            ],
+            "lostInformation": [
+              "originalIndexAndCharactersNormalizedInDerivedSubject"
+            ],
+            "identity": [
+              "spaceSubjectAndEditTarget"
+            ],
+            "partiality": [
+              "winnerFieldsOnlyEmitForNonconflictValue"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureFactProjection"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "orderedCanonicalFacts"
+            ],
+            "falsifier": [
+              "conflictEmitsWinnerOrCandidateEvidenceIsLost"
+            ],
+            "default": [
+              "emptyNormalizedSuffix='property'"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataSpaceValueProjection",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceFactFieldsSubjectIdentityAndOrderedCandidateValues"
+            ],
+            "targetDomain": [
+              "CanonicalFactSuffixFirstTruthyValueAndExplicitArray"
+            ],
+            "forwardMap": [
+              "stringifyFactNormalizeSuffixSelectFirstTruthyAndValidateArray"
+            ],
+            "reverseMapOrAbsence": [
+              "normalizedValuesCannotRecoverFalsyKindsOrRemovedSubjectCharacters"
+            ],
+            "preservedInformation": [
+              "factFieldsPresentSubjectCharactersTruthyOrderAndArrayIdentity"
+            ],
+            "lostInformation": [
+              "falsyValueKindsAndNormalizedSubjectCharacters"
+            ],
+            "identity": [
+              "factTupleOrPresentValue"
+            ],
+            "partiality": [
+              "absentValuesProjectToAuthoredEmptyForms"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureProjectionOnly"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "canonicalValueProjection"
+            ],
+            "falsifier": [
+              "sameInputProjectsDifferentFactOrSuffix"
+            ],
+            "default": [
+              "emptySuffix='property';noTruthyValue='';nonArray=[]"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationResult",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceValidationOrderAndExplicitResultFields"
+            ],
+            "targetDomain": [
+              "CanonicalDataValidationResult"
+            ],
+            "forwardMap": [
+              "selectScopeDeriveSubjectAndProjectExplicitResultFields"
+            ],
+            "reverseMapOrAbsence": [
+              "derivedSubjectCannotRecoverFalsyScopeCandidates"
+            ],
+            "preservedInformation": [
+              "validationScopeStateMessageCountOrderAndTargetEvidence"
+            ],
+            "lostInformation": [
+              "unselectedScopeCandidatesAndFalsySampleCountKind"
+            ],
+            "identity": [
+              "dataSpaceValidationAndScope"
+            ],
+            "partiality": [
+              "absentOptionalTargetsProjectToEmptyIdentity"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureProjectionOnly"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "scopePrecedenceOrDerivedIdentityDrifts"
+            ],
+            "default": [
+              "scope=checkedSubjectThenEditTargetThenValidation;sampleCount=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationField",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceValidationRuleAndCandidateFieldProfiles"
+            ],
+            "targetDomain": [
+              "ResolvedFieldNumericBooleanAndRuleViews"
+            ],
+            "forwardMap": [
+              "resolveExplicitFieldOrScopedNameAndNormalizeScalarProfiles"
+            ],
+            "reverseMapOrAbsence": [
+              "resolvedFieldCannotRecoverSearchTraversalOrNumericLexeme"
+            ],
+            "preservedInformation": [
+              "fieldIdentityScopeNameFiniteNumberBooleanAndRuleOrder"
+            ],
+            "lostInformation": [
+              "searchTraversalNumericLexemeAndNontrueBooleanValues"
+            ],
+            "identity": [
+              "fieldSubjectOrFieldNameWithinOptionalAsset"
+            ],
+            "partiality": [
+              "unresolvedFieldAndNonfiniteNumberReturnNull"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyProjection"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "resolvedFieldAndNormalizedProfile"
+            ],
+            "falsifier": [
+              "fieldOutsideRuleScopeResolves"
+            ],
+            "default": [
+              "unresolvedField=null;absentOrNonfiniteNumber=null"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationReference",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceReferenceCollectionsAndInferenceStates"
+            ],
+            "targetDomain": [
+              "ReferenceInventoryAndInferenceValidationResults"
+            ],
+            "forwardMap": [
+              "classifyInventoryPresenceAndFirstRejectedStaleOrProposedField"
+            ],
+            "reverseMapOrAbsence": [
+              "resultCannotRecoverUnselectedFieldsOrCollectionPayload"
+            ],
+            "preservedInformation": [
+              "validationKindCollectionCountFirstExceptionalFieldAndState"
+            ],
+            "lostInformation": [
+              "unselectedFieldStatesAndCollectionPayload"
+            ],
+            "identity": [
+              "dataSpaceValidationAndExceptionalField"
+            ],
+            "partiality": [
+              "emptyCollectionsProduceEmptyState"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "rejectedOrStaleFieldProducesValidInferenceState"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationFieldType",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceFieldTypeValidationRule"
+            ],
+            "targetDomain": [
+              "CanonicalFieldTypeValidationResult"
+            ],
+            "forwardMap": [
+              "resolveFieldSelectAuthoredThenInferredTypeAndClassify"
+            ],
+            "reverseMapOrAbsence": [
+              "resultCannotRecoverUnselectedTypeOrSearchTraversal"
+            ],
+            "preservedInformation": [
+              "fieldRuleExpectedActualTypeTargetAndDiagnosticState"
+            ],
+            "lostInformation": [
+              "inferredTypeWhenAuthoredTypeWinsAndFieldTraversal"
+            ],
+            "identity": [
+              "ruleAndResolvedField"
+            ],
+            "partiality": [
+              "missingFieldExpectedTypeOrActualTypeProduceExplicitFailureStates"
+            ],
+            "failure": [
+              "diagnosticStateAndMessageAsData"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "mismatchedTypeProducesValidState"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationRequired",
+      "source": "sdk/plugins/data-space/validation-foundation.rel",
+      "variants": [
+        {
+          "commit": "8d31bafe77611801f4debae4d303eb4125459b44",
+          "sha256": "53ee37e2c1619bfadbabcff0cf322ee01e3caf401db7e9b8fdf7595a68437c54",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceRequiredAndNonNullValidationRules"
+            ],
+            "targetDomain": [
+              "CanonicalRequiredAndNonNullValidationResults"
+            ],
+            "forwardMap": [
+              "resolveFieldThenClassifyPresenceAndNullCount"
+            ],
+            "reverseMapOrAbsence": [
+              "resultCannotRecoverFieldTraversalOrNullCountLexeme"
+            ],
+            "preservedInformation": [
+              "ruleFieldTargetPresenceNullCountStateAndMessage"
+            ],
+            "lostInformation": [
+              "fieldTraversalAndNullCountLexeme"
+            ],
+            "identity": [
+              "ruleAndResolvedField"
+            ],
+            "partiality": [
+              "missingFieldAndMissingProfileRemainDistinct"
+            ],
+            "failure": [
+              "diagnosticStateAndMessageAsData"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "missingRequiredFieldOrPositiveNullCountProducesValidState"
+            ],
+            "default": [
+              "absentSampleCount=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationUniqueProfile",
+      "source": "sdk/plugins/data-space/validation-rules.rel",
+      "variants": [
+        {
+          "commit": "d22b762216ff52df5d1d4140fa9e91644397cacc",
+          "sha256": "ef15bbbf35153f9e67e5c591cdd49b8002c7580c6edaffdc64d96576e476b558",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceAndUniqueValidationRule"
+            ],
+            "targetDomain": [
+              "ResolvedKeyFieldLabelsCompositeProfileAndDuplicateCount"
+            ],
+            "forwardMap": [
+              "resolveKeysFieldLabelsExactKeySetProfileAndNumericDuplicateCount"
+            ],
+            "reverseMapOrAbsence": [
+              "contextCannotRecoverProfileTraversalOrNumericLexeme"
+            ],
+            "preservedInformation": [
+              "keySubjectsFieldIdentityLabelsProfileIdentityAndDuplicateCount"
+            ],
+            "lostInformation": [
+              "profileTraversalNumericLexemeAndUnselectedFields"
+            ],
+            "identity": [
+              "ruleAndOrderedKeySubjects"
+            ],
+            "partiality": [
+              "missingFieldProfileOrCountRemainExplicitNull"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyProjection"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "resolvedUniquenessContext"
+            ],
+            "falsifier": [
+              "profileWithDifferentKeySetMatches"
+            ],
+            "default": [
+              "absentKeysAndProfiles=[]"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationUnique",
+      "source": "sdk/plugins/data-space/validation-rules.rel",
+      "variants": [
+        {
+          "commit": "d22b762216ff52df5d1d4140fa9e91644397cacc",
+          "sha256": "ef15bbbf35153f9e67e5c591cdd49b8002c7580c6edaffdc64d96576e476b558",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ResolvedUniquenessContext"
+            ],
+            "targetDomain": [
+              "CanonicalUniqueValidationResult"
+            ],
+            "forwardMap": [
+              "classifyMissingFieldProfileCountDuplicatesOrProof"
+            ],
+            "reverseMapOrAbsence": [
+              "resultCannotRecoverUnselectedProfilesOrCountLexeme"
+            ],
+            "preservedInformation": [
+              "ruleFieldProfileCountCompositeLabelsStateAndMessage"
+            ],
+            "lostInformation": [
+              "unselectedProfilesAndCountLexeme"
+            ],
+            "identity": [
+              "ruleFieldAndProfile"
+            ],
+            "partiality": [
+              "missingFieldProfileAndCountProduceDistinctStates"
+            ],
+            "failure": [
+              "diagnosticStateAndMessageAsData"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "positiveDuplicateCountProducesValidState"
+            ],
+            "default": [
+              "absentSampleCount=0"
+            ],
+            "symmetryBreak": [
+              "missingMonolithFieldDetailsOwnerIsReplacedByValidationDomainFieldLookup"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationRange",
+      "source": "sdk/plugins/data-space/validation-rules.rel",
+      "variants": [
+        {
+          "commit": "d22b762216ff52df5d1d4140fa9e91644397cacc",
+          "sha256": "ef15bbbf35153f9e67e5c591cdd49b8002c7580c6edaffdc64d96576e476b558",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceRangeValidationRule"
+            ],
+            "targetDomain": [
+              "CanonicalRangeValidationResult"
+            ],
+            "forwardMap": [
+              "resolveFieldNormalizeBoundsAndClassifyCoverage"
+            ],
+            "reverseMapOrAbsence": [
+              "resultCannotRecoverNumericLexemesOrFieldTraversal"
+            ],
+            "preservedInformation": [
+              "fieldObservedBoundsRuleBoundsStateAndMessage"
+            ],
+            "lostInformation": [
+              "numericLexemesAndFieldTraversal"
+            ],
+            "identity": [
+              "ruleAndResolvedField"
+            ],
+            "partiality": [
+              "missingFieldProfileOrBoundsProduceDistinctStates"
+            ],
+            "failure": [
+              "diagnosticStateAndMessageAsData"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "observedValueOutsideBoundProducesValidState"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationAllowed",
+      "source": "sdk/plugins/data-space/validation-rules.rel",
+      "variants": [
+        {
+          "commit": "d22b762216ff52df5d1d4140fa9e91644397cacc",
+          "sha256": "ef15bbbf35153f9e67e5c591cdd49b8002c7580c6edaffdc64d96576e476b558",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceAllowedValuesValidationRule"
+            ],
+            "targetDomain": [
+              "CanonicalAllowedValuesValidationResult"
+            ],
+            "forwardMap": [
+              "resolveFieldCompareObservedSetAgainstAllowedSetAndClassify"
+            ],
+            "reverseMapOrAbsence": [
+              "resultRetainsFirstInvalidOnlyNotAllInvalidOrdering"
+            ],
+            "preservedInformation": [
+              "fieldAllowedObservedFirstInvalidStateAndCount"
+            ],
+            "lostInformation": [
+              "invalidValuesBeyondFirstInMessage"
+            ],
+            "identity": [
+              "ruleAndResolvedField"
+            ],
+            "partiality": [
+              "missingFieldOrInsufficientSetsProduceDistinctStates"
+            ],
+            "failure": [
+              "diagnosticStateAndMessageAsData"
+            ],
+            "authorityEffect": [
+              "pureValidationOnly"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "canonicalValidationResult"
+            ],
+            "falsifier": [
+              "disallowedObservedValueProducesValidState"
+            ],
+            "default": [
+              "absentAllowedOrObservedValues=[]"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationRuleBacked",
+      "source": "sdk/plugins/data-space/validation-rules.rel",
+      "variants": [
+        {
+          "commit": "d22b762216ff52df5d1d4140fa9e91644397cacc",
+          "sha256": "ef15bbbf35153f9e67e5c591cdd49b8002c7580c6edaffdc64d96576e476b558",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceValidationOrderAndRuleValidator"
+            ],
+            "targetDomain": [
+              "OneEmptyResultOrOrderedRuleResults"
+            ],
+            "forwardMap": [
+              "selectMatchingRulesThenEmitEmptyOrValidateInOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "resultsCannotRecoverNonmatchingRules"
+            ],
+            "preservedInformation": [
+              "validationRuleOrderAndResultEvidence"
+            ],
+            "lostInformation": [
+              "nonmatchingRulesAndValidatorClosureIdentity"
+            ],
+            "identity": [
+              "validationAndRuleSubject"
+            ],
+            "partiality": [
+              "noRulesProduceExplicitEmptyResult"
+            ],
+            "failure": [
+              "validatorFailurePropagates"
+            ],
+            "authorityEffect": [
+              "pureValidationComposition"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "orderedValidationResults"
+            ],
+            "falsifier": [
+              "missingRulesProduceNoEvidence"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationPolicy",
+      "source": "sdk/plugins/data-space/validation-composition.rel",
+      "variants": [
+        {
+          "commit": "85bd15b045336149367acf1767f44c7bb65a6e52",
+          "sha256": "8b5ebffd9e383dde1658d4d994fb7e311b3a15fa91afae8c7d367f6879f3e277",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ExplicitNullableValidationPolicy"
+            ],
+            "targetDomain": [
+              "OrderedSupportedValidationKinds"
+            ],
+            "forwardMap": [
+              "absentPolicyToDefaultOrderOrFilterAuthoredOrderToSupportedKinds"
+            ],
+            "reverseMapOrAbsence": [
+              "effectiveListCannotRecoverUnsupportedAuthoredEntriesOrPolicyAbsence"
+            ],
+            "preservedInformation": [
+              "supportedAuthoredValidationKindsAndOrder"
+            ],
+            "lostInformation": [
+              "unsupportedEntriesAndAbsentVersusExplicitDefaultPolicy"
+            ],
+            "identity": [
+              "validationKindWithinOrder"
+            ],
+            "partiality": [
+              "unsupportedKindsAreExcluded"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "purePolicyProjection"
+            ],
+            "stateOwner": [
+              "algebra"
+            ],
+            "evidence": [
+              "effectiveValidationOrder"
+            ],
+            "falsifier": [
+              "unsupportedKindReachesDispatchOrDefaultOrderDrifts"
+            ],
+            "default": [
+              "sourceReference,assetReference,fieldReference,fieldType,inferenceState,requiredField,nonNull,unique,range,allowedValues"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationOrchestration",
+      "source": "sdk/plugins/data-space/validation-composition.rel",
+      "variants": [
+        {
+          "commit": "85bd15b045336149367acf1767f44c7bb65a6e52",
+          "sha256": "8b5ebffd9e383dde1658d4d994fb7e311b3a15fa91afae8c7d367f6879f3e277",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ParsedDataSpaceAndOrderedSupportedValidationKinds"
+            ],
+            "targetDomain": [
+              "GloballyOrderedValidationResults"
+            ],
+            "forwardMap": [
+              "dispatchEachValidationAtCurrentOrderAppendResultsAndAdvanceByResultCount"
+            ],
+            "reverseMapOrAbsence": [
+              "resultsRetainValidationOrderButNotDispatchClosureIdentity"
+            ],
+            "preservedInformation": [
+              "validationOrderRuleOrderResultCountAndAllDiagnosticEvidence"
+            ],
+            "lostInformation": [
+              "dispatchClosureIdentityAndUnselectedValidationKinds"
+            ],
+            "identity": [
+              "validationKindRuleSubjectAndGlobalOrder"
+            ],
+            "partiality": [
+              "requiresPolicyFilteredSupportedKinds"
+            ],
+            "failure": [
+              "validatorFailurePropagates"
+            ],
+            "authorityEffect": [
+              "pureValidationComposition"
+            ],
+            "stateOwner": [
+              "callerDataSpace"
+            ],
+            "evidence": [
+              "orderedValidationResults"
+            ],
+            "falsifier": [
+              "resultOrderOverlapsOrSkipsAfterMultiresultValidation"
+            ],
+            "default": [
+              "initialOrder=1"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationFacts",
+      "source": "sdk/plugins/data-space/validation-composition.rel",
+      "variants": [
+        {
+          "commit": "85bd15b045336149367acf1767f44c7bb65a6e52",
+          "sha256": "8b5ebffd9e383dde1658d4d994fb7e311b3a15fa91afae8c7d367f6879f3e277",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataSpaceSubjectAndOrderedValidationResults"
+            ],
+            "targetDomain": [
+              "CanonicalDataValidationResultFacts"
+            ],
+            "forwardMap": [
+              "emitRequiredResultFactsThenPresentOptionalTargetFacts"
+            ],
+            "reverseMapOrAbsence": [
+              "factsRecoverResultsExceptAbsentOptionalFieldRepresentation"
+            ],
+            "preservedInformation": [
+              "resultIdentityValidationStateMessageCountOrderTargetsAndPolarity"
+            ],
+            "lostInformation": [
+              "absentOptionalFieldRepresentationAndInputObjectIdentity"
+            ],
+            "identity": [
+              "dataSpaceSubjectAndResultSubject"
+            ],
+            "partiality": [
+              "optionalTargetsEmitOnlyWhenTruthy"
+            ],
+            "failure": [
+              "none"
+            ],
+            "authorityEffect": [
+              "pureFactProjection"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "canonicalOrderedFacts"
+            ],
+            "falsifier": [
+              "requiredResultEvidenceIsOmittedOrOptionalEmptyFactEmits"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationPolicyParse",
+      "source": "sdk/plugins/data-space/validation-parsing.rel",
+      "variants": [
+        {
+          "commit": "4fe5595b419d46ff21771e02e282e3c7c6150c1e",
+          "sha256": "0921a5ee34c42d2f3d3c0e71d1ade97d318bf8ef8e17d4a35273e1a4f01f35b3",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataValidationPolicyFacts"
+            ],
+            "targetDomain": [
+              "TypedOrderedValidationPolicyRecord"
+            ],
+            "forwardMap": [
+              "requirePolicyTypeAndProjectEveryValidationObjectInFactOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverFactPolarityLocationOrMultiplicityBeyondObjectList"
+            ],
+            "preservedInformation": [
+              "policySubjectValidationValuesAndOrder"
+            ],
+            "lostInformation": [
+              "factPolaritySourceLocationAndNonvalidationFacts"
+            ],
+            "identity": [
+              "policySubject"
+            ],
+            "partiality": [
+              "requiresDataValidationPolicyType"
+            ],
+            "failure": [
+              "typeGuardFailurePropagates"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "callerFactStore"
+            ],
+            "evidence": [
+              "policyRecord"
+            ],
+            "falsifier": [
+              "wrongTypeProducesPolicyRecordOrValidationOrderChanges"
+            ],
+            "default": [
+              "missingValidationFactsProduceExplicitEmptyList"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationRuleParse",
+      "source": "sdk/plugins/data-space/validation-parsing.rel",
+      "variants": [
+        {
+          "commit": "4fe5595b419d46ff21771e02e282e3c7c6150c1e",
+          "sha256": "0921a5ee34c42d2f3d3c0e71d1ade97d318bf8ef8e17d4a35273e1a4f01f35b3",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataValidationRuleFacts"
+            ],
+            "targetDomain": [
+              "CanonicalValidationRuleRecordWithUnresolvedRelationshipSubjects"
+            ],
+            "forwardMap": [
+              "requireRuleTypeAndValidationThenProjectOptionalScalarsOrderedRelationshipSubjectsAndEmptyResolvedRelationshipSlots"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceVersusEmptyFactMetadataOrLaterRelationshipResolution"
+            ],
+            "preservedInformation": [
+              "ruleSubjectKindTargetsConstraintsMessagesOrderAndEveryRelationshipSubject"
+            ],
+            "lostInformation": [
+              "optionalAbsenceVersusEmptyFactMetadataAndResolvedRelationshipObjectsNotYetJoined"
+            ],
+            "identity": [
+              "ruleSubject"
+            ],
+            "partiality": [
+              "requiresRuleTypeAndValidationKind"
+            ],
+            "failure": [
+              "typeOrRequiredValidationGuardFailurePropagates"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "callerFactStore"
+            ],
+            "evidence": [
+              "canonicalUnresolvedRuleRecord"
+            ],
+            "falsifier": [
+              "missingValidationProducesRecordOrRelationshipOrderChanges"
+            ],
+            "default": [
+              "missingOptionalScalars=empty;missingRelationshipFacts=emptyLists;unresolvedRelationshipObjects=emptyLists;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "allowedValueFactsAreRetainedAsBothRawAllowedValuesAndAllowedValuesForExistingConsumerCompatibility"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataUniquenessKeyParse",
+      "source": "sdk/plugins/data-space/validation-parsing.rel",
+      "variants": [
+        {
+          "commit": "4fe5595b419d46ff21771e02e282e3c7c6150c1e",
+          "sha256": "0921a5ee34c42d2f3d3c0e71d1ade97d318bf8ef8e17d4a35273e1a4f01f35b3",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "DataUniquenessKeyFactsActiveValidationRulesAndActiveFields"
+            ],
+            "targetDomain": [
+              "AdmittedUniquenessKeyRecord"
+            ],
+            "forwardMap": [
+              "requireKeyTypeTypedActiveRuleTypedActiveFieldThenNormalizeOptionalLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverFactMultiplicityOptionalAbsenceOrInactiveGraphMembers"
+            ],
+            "preservedInformation": [
+              "keySubjectRuleFieldLabelOrderAndActiveMembershipVerdicts"
+            ],
+            "lostInformation": [
+              "factMultiplicityOptionalAbsenceVersusEmptyAndOtherActiveMembers"
+            ],
+            "identity": [
+              "uniquenessKeySubject"
+            ],
+            "partiality": [
+              "ruleAndFieldMustBothBeTypedAndActive"
+            ],
+            "failure": [
+              "inactiveRuleAndInactiveFieldHavePredicateSpecificExactDiagnostics"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "callerFactStoreAndActiveIdentitySets"
+            ],
+            "evidence": [
+              "admittedKeyRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveRuleOrFieldProducesKeyRecord"
+            ],
+            "default": [
+              "missingLabel=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationResultParse",
+      "source": "sdk/plugins/data-space/validation-parsing.rel",
+      "variants": [
+        {
+          "commit": "4fe5595b419d46ff21771e02e282e3c7c6150c1e",
+          "sha256": "0921a5ee34c42d2f3d3c0e71d1ade97d318bf8ef8e17d4a35273e1a4f01f35b3",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ValidationResultFactsActiveEditTargetsAndKnownStoreSubjects"
+            ],
+            "targetDomain": [
+              "AdmittedValidationResultWithUnresolvedSampleFailureSubjects"
+            ],
+            "forwardMap": [
+              "requireResultTypeValidationAndStateValidateOptionalActiveEditTargetAndKnownCheckedSubjectThenNormalizeCountsLabelsAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceNumericLexemesFactMetadataOrResolvedSampleFailures"
+            ],
+            "preservedInformation": [
+              "subjectValidationTargetCheckedSubjectStateMessageNumericCountSampleFailureSubjectsAndNumericOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceNumericLexemesFactMetadataActiveSetAndResolvedSampleFailureObjects"
+            ],
+            "identity": [
+              "validationResultSubject"
+            ],
+            "partiality": [
+              "optionalEditTargetMustBeTypedAndActiveAndOptionalCheckedSubjectMustBeKnown"
+            ],
+            "failure": [
+              "typeRequiredFactInactiveTargetAndUnknownCheckedSubjectDiagnosticsRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "validationResultOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveTargetOrUnknownCheckedSubjectProducesRecord"
+            ],
+            "default": [
+              "missingEditTargetCheckedSubjectMessage=empty;missingSampleCountAndOrder=0;sampleFailures=emptyUntilResolution"
+            ],
+            "symmetryBreak": [
+              "authoredAbsenceAndEmptyOptionalScalarsBecomeIndistinguishableAndNumericLexemesAreLost"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.dataValidationSampleFailureParse",
+      "source": "sdk/plugins/data-space/validation-parsing.rel",
+      "variants": [
+        {
+          "commit": "4fe5595b419d46ff21771e02e282e3c7c6150c1e",
+          "sha256": "0921a5ee34c42d2f3d3c0e71d1ade97d318bf8ef8e17d4a35273e1a4f01f35b3",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "SampleFailureFactsAndActiveResultRuleAndFieldSets"
+            ],
+            "targetDomain": [
+              "AdmittedValidationSampleFailureRecord"
+            ],
+            "forwardMap": [
+              "requireFailureTypeTypedActiveResultRuleAndFieldThenRequireRowAndReasonAndNormalizeObservedValueLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceNumericLexemeFactMetadataOrOtherActiveSubjects"
+            ],
+            "preservedInformation": [
+              "subjectResultRuleFieldRowKeyObservedValueReasonLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceNumericOrderLexemeFactMetadataAndOtherActiveSubjects"
+            ],
+            "identity": [
+              "sampleFailureSubject"
+            ],
+            "partiality": [
+              "resultRuleAndFieldMustEachBeTypedActiveAndRequiredScalarsMustExist"
+            ],
+            "failure": [
+              "wrongTypeInactiveReferenceAndMissingScalarDiagnosticsRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "sampleFailureRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveResultRuleOrFieldProducesRecord"
+            ],
+            "default": [
+              "missingObservedValueAndLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "authoredAbsenceAndEmptyOptionalScalarsBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessPolicy",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "AuthoredCompositeUniquenessVocabulary"
+            ],
+            "targetDomain": [
+              "FrozenNullEquivalenceAndLineageKindSets"
+            ],
+            "forwardMap": [
+              "materializeExactAllowedNullAndLineageLabels"
+            ],
+            "reverseMapOrAbsence": [
+              "bijectiveWithinDeclaredLabels"
+            ],
+            "preservedInformation": [
+              "labelIdentityAndMembership"
+            ],
+            "lostInformation": [
+              "none"
+            ],
+            "identity": [
+              "exactLabel"
+            ],
+            "partiality": [
+              "onlyDeclaredLabelsAreMembers"
+            ],
+            "failure": [
+              "delegatedScalarAdmissionRefusesUnknownLabels"
+            ],
+            "authorityEffect": [
+              "pureVocabulary"
+            ],
+            "stateOwner": [
+              "algebra"
+            ],
+            "evidence": [
+              "frozenSets"
+            ],
+            "falsifier": [
+              "undeclaredLabelIsAdmitted"
+            ],
+            "default": [
+              "nullEquivalence=distinctNulls,equalNulls,ignoreNulls;lineageKind=measuresFrom,supersedes"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessFieldGuards",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "SubjectPredicateFieldFactsAndActiveFieldSet"
+            ],
+            "targetDomain": [
+              "OrderedActiveFieldListOrOptionalActiveField"
+            ],
+            "forwardMap": [
+              "requireEveryPresentFieldToBeTypedDataFieldAndActive"
+            ],
+            "reverseMapOrAbsence": [
+              "returnedFieldsDoNotRecoverOtherActiveFieldsOrFactMetadata"
+            ],
+            "preservedInformation": [
+              "fieldIdentityOrderTypeAndActiveMembership"
+            ],
+            "lostInformation": [
+              "otherActiveFieldsAndFactMetadata"
+            ],
+            "identity": [
+              "subjectPredicateAndField"
+            ],
+            "partiality": [
+              "presentFieldsMustBeTypedAndActive"
+            ],
+            "failure": [
+              "wrongTypeAndInactiveFieldDiagnosticsRemainExact"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyAdmission"
+            ],
+            "stateOwner": [
+              "callerFactStoreAndActiveFieldSet"
+            ],
+            "evidence": [
+              "orderedFieldsOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveFieldReturns"
+            ],
+            "default": [
+              "missingOptionalField=empty;missingFieldList=empty"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessScopeTemplateParse",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ScopeTemplateFactsAndActiveFields"
+            ],
+            "targetDomain": [
+              "AdmittedScopeTemplateRecord"
+            ],
+            "forwardMap": [
+              "requireTypeNullPolicyAndActivePartitionWindowFieldsThenNormalizeLabelsAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceFactMetadataOrOtherActiveFields"
+            ],
+            "preservedInformation": [
+              "subjectNullPolicyPartitionWindowSnapshotLabelLabelAndOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceFactMetadataAndOtherActiveFields"
+            ],
+            "identity": [
+              "templateSubject"
+            ],
+            "partiality": [
+              "policyAndEveryFieldMustAdmit"
+            ],
+            "failure": [
+              "componentGuardFailuresPropagate"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "templateRecord"
+            ],
+            "falsifier": [
+              "invalidPolicyOrFieldProducesRecord"
+            ],
+            "default": [
+              "missingWindowSnapshotLabelLabel=empty;missingPartitionFields=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessScopeParse",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ScopeFactsExpectedProfileAndActiveFields"
+            ],
+            "targetDomain": [
+              "AdmittedScopeRecordWithOptionalParsedTemplateAndUnresolvedLineages"
+            ],
+            "forwardMap": [
+              "requireTypeExactProfileNullPolicyAndActiveFieldsThenParseOptionalTemplateAndRetainLineageSubjects"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceOrResolvedLineages"
+            ],
+            "preservedInformation": [
+              "scopeProfileTemplatePolicyFieldsLabelsLineageSubjectsAndOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceFactMetadataAndResolvedLineageObjects"
+            ],
+            "identity": [
+              "scopeSubject"
+            ],
+            "partiality": [
+              "profileMustMatchAndAllComponentAdmissionsMustPass"
+            ],
+            "failure": [
+              "profileMismatchAndComponentFailuresRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "scopeRecord"
+            ],
+            "falsifier": [
+              "wrongProfileOrInvalidFieldProducesRecord"
+            ],
+            "default": [
+              "missingTemplate=null;missingWindowSnapshotLabelLabel=empty;lineages=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessProfileParse",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "ProfileFactsActiveRulesUniquenessKeyIndexAndActiveFields"
+            ],
+            "targetDomain": [
+              "AdmittedProfileRecordWithOrderedKeysAndOptionalScope"
+            ],
+            "forwardMap": [
+              "requireTypeActiveTypedRuleResolveSameRuleKeysSortByOrderThenSubjectAndParseOptionalScope"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverAuthoredKeyFactOrderOptionalAbsenceOrOtherIndexEntries"
+            ],
+            "preservedInformation": [
+              "profileRuleKeyIdentityCanonicalKeyOrderScopeCountsLabelAndOrder"
+            ],
+            "lostInformation": [
+              "authoredKeyFactOrderOptionalAbsenceAndOtherIndexEntries"
+            ],
+            "identity": [
+              "profileSubject"
+            ],
+            "partiality": [
+              "ruleAndEveryKeyMustBeActiveAndKeysMustBelongToRule"
+            ],
+            "failure": [
+              "inactiveRuleMissingKeyAndCrossRuleKeyRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "profileRecord"
+            ],
+            "falsifier": [
+              "crossRuleKeyOrWrongScopeProducesRecord"
+            ],
+            "default": [
+              "missingScope=null;missingCountsAndLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "keyOrderIsCanonicalizedByNumericOrderThenSubjectAndOriginalFactOrderIsLost"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.compositeUniquenessLineageParse",
+      "source": "sdk/plugins/data-space/composite-uniqueness.rel",
+      "variants": [
+        {
+          "commit": "87a7e946c97093dd8da9622199eb9e57f6898847",
+          "sha256": "15d5b1fddd114dcbd235f91f253b5f794cca8d342e3a21545b7fb83a77723687",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "LineageFactsExpectedScopeScopeIndexAndProfileIndex"
+            ],
+            "targetDomain": [
+              "AdmittedLineageRecordWithPriorScopeObject"
+            ],
+            "forwardMap": [
+              "requireExactCurrentDistinctActivePriorScopeAndCompatibleProfileRuleThenParseKindDeltasLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceOtherScopesProfilesOrNumericLexemes"
+            ],
+            "preservedInformation": [
+              "lineageScopePriorScopePriorObjectKindNumericDeltasLabelOrderAndRuleCompatibility"
+            ],
+            "lostInformation": [
+              "optionalAbsenceOtherIndexEntriesAndNumericLexemes"
+            ],
+            "identity": [
+              "lineageSubject"
+            ],
+            "partiality": [
+              "priorScopeMustExistDifferAndShareRuleWhenBothRulesAreKnown"
+            ],
+            "failure": [
+              "wrongCurrentMissingPriorSelfPriorCrossRuleAndScalarFailuresRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "lineageRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "selfOrCrossRulePriorScopeProducesRecord"
+            ],
+            "default": [
+              "missingDeltas=null;missingLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "ruleCompatibilityIsEnforcedOnlyWhenBothIndexedProfilesExposeRules"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValuePolicy",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "AuthoredAllowedValueLifecycleVocabulary"
+            ],
+            "targetDomain": [
+              "FrozenEntryPromotionWorkflowStepAndInventoryLabelSets"
+            ],
+            "forwardMap": [
+              "materializeExactAuthoredLabelsWithoutAliases"
+            ],
+            "reverseMapOrAbsence": [
+              "bijectiveWithinEachDeclaredVocabulary"
+            ],
+            "preservedInformation": [
+              "labelIdentityMembershipAndVocabularyBoundary"
+            ],
+            "lostInformation": [
+              "none"
+            ],
+            "identity": [
+              "exactLabelWithinNamedVocabulary"
+            ],
+            "partiality": [
+              "membershipOnlyForDeclaredLabels"
+            ],
+            "failure": [
+              "delegatedScalarAdmissionRefusesUnknownLabels"
+            ],
+            "authorityEffect": [
+              "pureVocabulary"
+            ],
+            "stateOwner": [
+              "algebra"
+            ],
+            "evidence": [
+              "frozenSets"
+            ],
+            "falsifier": [
+              "undeclaredLabelIsAdmitted"
+            ],
+            "default": [
+              "none"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueEntryParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "EntryFactsAndActiveValidationRuleSet"
+            ],
+            "targetDomain": [
+              "AdmittedAllowedValueEntryRecord"
+            ],
+            "forwardMap": [
+              "requireEntryTypeTypedActiveRuleValueAndEntryStateThenNormalizeLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceNumericLexemeOrOtherActiveRules"
+            ],
+            "preservedInformation": [
+              "subjectRuleValueStateLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceNumericOrderLexemeFactMetadataAndOtherActiveRules"
+            ],
+            "identity": [
+              "entrySubject"
+            ],
+            "partiality": [
+              "ruleMustBeTypedActiveAndRequiredFactsMustExist"
+            ],
+            "failure": [
+              "typeRequiredFactInactiveRuleAndUnknownStateDiagnosticsRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "entryRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveRuleOrUnknownStateProducesRecord"
+            ],
+            "default": [
+              "missingLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "numericOrderConversionLosesOriginalNumericLexeme"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueCandidateParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "CandidateFactsAndActiveValidationRuleSet"
+            ],
+            "targetDomain": [
+              "AdmittedAllowedValueCandidateRecord"
+            ],
+            "forwardMap": [
+              "requireCandidateTypeTypedActiveRuleAndValueThenNormalizeNormalizedValueLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceNumericLexemeOrOtherActiveRules"
+            ],
+            "preservedInformation": [
+              "subjectRuleValueNormalizedValueLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceNumericOrderLexemeFactMetadataAndOtherActiveRules"
+            ],
+            "identity": [
+              "candidateSubject"
+            ],
+            "partiality": [
+              "ruleMustBeTypedActiveAndValueMustExist"
+            ],
+            "failure": [
+              "typeRequiredFactAndInactiveRuleDiagnosticsRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "candidateRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "inactiveRuleProducesRecord"
+            ],
+            "default": [
+              "missingNormalizedValueAndLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "absenceAndAuthoredEmptyNormalizedValueOrLabelBecomeIndistinguishableAndNumericOrderLexemeIsLost"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueWorkflowStepParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "WorkflowStepFactsAndExpectedWorkflow"
+            ],
+            "targetDomain": [
+              "AdmittedWorkflowStepRecord"
+            ],
+            "forwardMap": [
+              "requireStepTypeTypedExactWorkflowStepKindAndStateThenNormalizeLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOptionalAbsenceOrNumericLexeme"
+            ],
+            "preservedInformation": [
+              "subjectWorkflowKindStateLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "optionalAbsenceFactMetadataAndNumericOrderLexeme"
+            ],
+            "identity": [
+              "workflowStepSubject"
+            ],
+            "partiality": [
+              "workflowMustBeTypedAndEqualExpectedWorkflowAndLabelsMustAdmit"
+            ],
+            "failure": [
+              "wrongTypeWorkflowMismatchUnknownKindAndUnknownStateRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "stepRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "wrongWorkflowOrUnknownStateProducesRecord"
+            ],
+            "default": [
+              "missingLabel=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueWorkflowStepInventoryParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "StepInventoryFactsExpectedWorkflowAndParsedStepIndex"
+            ],
+            "targetDomain": [
+              "AdmittedStepInventoryRecordWithStepObject"
+            ],
+            "forwardMap": [
+              "requireInventoryTypeExactWorkflowIndexedStepAndInventoryStateThenNormalizeLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOtherStepIndexEntriesOptionalAbsenceOrNumericLexeme"
+            ],
+            "preservedInformation": [
+              "subjectWorkflowStepStepObjectStateLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "otherStepIndexEntriesOptionalAbsenceFactMetadataAndNumericLexeme"
+            ],
+            "identity": [
+              "stepInventorySubject"
+            ],
+            "partiality": [
+              "workflowMustMatchAndStepMustExistInWorkflowIndex"
+            ],
+            "failure": [
+              "workflowMismatchMissingStepAndUnknownStateRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "inventoryRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "foreignStepProducesRecord"
+            ],
+            "default": [
+              "missingLabel=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueWorkflowInventoryParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "WorkflowInventoryFactsExpectedPromotionAndParsedWorkflowIndex"
+            ],
+            "targetDomain": [
+              "AdmittedWorkflowInventoryRecordWithWorkflowObject"
+            ],
+            "forwardMap": [
+              "requireInventoryTypeExactPromotionIndexedWorkflowAndInventoryStateThenNormalizeLabelAndOrder"
+            ],
+            "reverseMapOrAbsence": [
+              "recordDoesNotRecoverOtherWorkflowIndexEntriesOptionalAbsenceOrNumericLexeme"
+            ],
+            "preservedInformation": [
+              "subjectPromotionWorkflowWorkflowObjectStateLabelAndNumericOrder"
+            ],
+            "lostInformation": [
+              "otherWorkflowIndexEntriesOptionalAbsenceFactMetadataAndNumericLexeme"
+            ],
+            "identity": [
+              "workflowInventorySubject"
+            ],
+            "partiality": [
+              "promotionMustMatchAndWorkflowMustExistInPromotionIndex"
+            ],
+            "failure": [
+              "promotionMismatchMissingWorkflowAndUnknownStateRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyParse"
+            ],
+            "stateOwner": [
+              "caller"
+            ],
+            "evidence": [
+              "inventoryRecordOrExactDiagnostic"
+            ],
+            "falsifier": [
+              "foreignWorkflowProducesRecord"
+            ],
+            "default": [
+              "missingLabel=empty;missingOrder=0"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValueWorkflowParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "WorkflowFactsExpectedPromotionAndNestedStepFacts"
+            ],
+            "targetDomain": [
+              "AdmittedWorkflowWithCanonicalStepsInventoriesAndBidirectionalInventoryAnnotations"
+            ],
+            "forwardMap": [
+              "requireTypedExactPromotionParseAndCanonicalizeStepsAndInventoriesThenAnnotateIndexedSteps"
+            ],
+            "reverseMapOrAbsence": [
+              "partial.RecordsRetainNestedIdentityButNotAuthoredFactOrderOptionalAbsenceOrUnindexedFacts"
+            ],
+            "preservedInformation": [
+              "workflowPromotionActionsModesCanonicalNestedRecordsAndInventoryBackReferences"
+            ],
+            "lostInformation": [
+              "authoredNestedFactOrderOptionalAbsenceFactMetadataAndUnindexedFacts"
+            ],
+            "identity": [
+              "workflowSubjectAndNestedSubjectIdentities"
+            ],
+            "partiality": [
+              "promotionMustMatchAndEveryNestedRecordMustAdmit"
+            ],
+            "failure": [
+              "workflowAndNestedAdmissionFailuresPropagateWithoutFallback"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyFactParseWithMutationOfNewlyParsedStepRecordsOnly"
+            ],
+            "stateOwner": [
+              "callerOwnsReturnedRecordGraph"
+            ],
+            "evidence": [
+              "workflowRecordNestedRecordsAndInventoryAnnotations"
+            ],
+            "falsifier": [
+              "foreignInventoryAnnotatesStepOrAuthoredFactOrderDeterminesResult"
+            ],
+            "default": [
+              "missingNestedLists=empty;missingLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "stepsAndInventoriesAreCanonicalizedByNumericOrderThenSubjectAndInventoryRecordsAreAddedAsBackReferences"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "subject": "module.allowedValuePromotionParse",
+      "source": "sdk/plugins/data-space/allowed-value.rel",
+      "variants": [
+        {
+          "commit": "8e8883e301d84a657b2d17fc48e3ebb598c697f7",
+          "sha256": "edf72cff50bd9f08bb5a5aee7a3235a77d6ef70d20165ce68111a96230a9bf9d",
+          "facts": {
+            "isa": [
+              "AlgebraModule"
+            ],
+            "sourceDomain": [
+              "PromotionFactsActiveRulesCandidateEntryIndexesAndNestedWorkflowFacts"
+            ],
+            "targetDomain": [
+              "AdmittedPromotionWithCanonicalWorkflowsInventoriesAndResolvedEndpointObjects"
+            ],
+            "forwardMap": [
+              "requireTypedActiveRuleResolveSameRuleCandidateAndEntryParseCanonicalWorkflowsAndInventoriesThenAnnotateWorkflows"
+            ],
+            "reverseMapOrAbsence": [
+              "partial.RecordRetainsEndpointAndNestedIdentityButNotAuthoredOrderOptionalAbsenceOtherIndexEntriesOrFactMetadata"
+            ],
+            "preservedInformation": [
+              "promotionRuleEndpointIdentitiesResolvedObjectsStateCanonicalNestedRecordsLabelsAndOrder"
+            ],
+            "lostInformation": [
+              "authoredNestedFactOrderOptionalAbsenceOtherIndexEntriesFactMetadataAndNumericOrderLexeme"
+            ],
+            "identity": [
+              "promotionSubjectCandidateSubjectEntrySubjectAndNestedSubjectIdentities"
+            ],
+            "partiality": [
+              "ruleMustBeActiveEndpointsMustExistAndShareRuleAndEveryNestedRecordMustAdmit"
+            ],
+            "failure": [
+              "inactiveRuleMissingEndpointCrossRuleEndpointAndNestedFailuresRemainDistinct"
+            ],
+            "authorityEffect": [
+              "pureReadOnlyFactParseWithMutationOfNewlyParsedWorkflowRecordsOnly"
+            ],
+            "stateOwner": [
+              "callerOwnsReturnedRecordGraph"
+            ],
+            "evidence": [
+              "promotionRecordResolvedEndpointsNestedRecordsAndInventoryAnnotations"
+            ],
+            "falsifier": [
+              "crossRuleEndpointOrForeignWorkflowProducesPromotion"
+            ],
+            "default": [
+              "missingNestedLists=empty;missingLabel=empty;missingOrder=0"
+            ],
+            "symmetryBreak": [
+              "workflowsAndInventoriesAreCanonicalizedByNumericOrderThenSubjectAndInventoryRecordsAreAddedAsBackReferences"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
