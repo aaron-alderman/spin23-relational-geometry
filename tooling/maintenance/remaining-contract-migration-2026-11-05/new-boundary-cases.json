@@ -1,0 +1,1439 @@
+{
+  "cases": [
+    {
+      "id": "boundary-reference-own",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.item.value",
+        "environment": {
+          "request": {
+            "item": {
+              "value": false
+            }
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-array",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.0",
+        "environment": {
+          "request": [
+            "first"
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "first"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-2",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.constructor",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "Unsafe"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-3",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.__proto__",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "Unsafe"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-4",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.prototype",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "Unsafe"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-5",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$missing",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "own enumerable"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-6",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "$request.absent",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "own enumerable"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-reference-7",
+      "subjects": [
+        "module.strictProcessReference"
+      ],
+      "operation": "adjacent-strict-reference",
+      "input": {
+        "reference": "request",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "Exact"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-success-8",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null,
+          "value": null
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-success-9",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null,
+          "value": false
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-success-10",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null,
+          "value": 0
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": 0
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-success-11",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null,
+          "value": ""
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": ""
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-success-12",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null,
+          "value": {
+            "a": 1
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "a": 1
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-authored",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": {
+            "message": "absent",
+            "status": 404
+          },
+          "value": null
+        }
+      },
+      "throws": {
+        "messageIncludes": "absent",
+        "status": 404
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-bad-14",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": null
+        }
+      },
+      "throws": {
+        "messageIncludes": "envelope"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-bad-15",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": []
+      },
+      "throws": {
+        "messageIncludes": "envelope"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-bad-16",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": {
+            "message": "bad",
+            "status": 200
+          },
+          "value": null
+        }
+      },
+      "throws": {
+        "messageIncludes": "Invalid authored"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-result-bad-17",
+      "subjects": [
+        "module.refusalResult"
+      ],
+      "operation": "adjacent-refusal-result",
+      "input": {
+        "value": {
+          "refusal": {
+            "message": "bad",
+            "status": 404
+          },
+          "value": 1
+        }
+      },
+      "throws": {
+        "messageIncludes": "Invalid authored"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-uri-success",
+      "subjects": [
+        "module.uriDecode"
+      ],
+      "operation": "adjacent-uri",
+      "input": {
+        "value": "a%2Fb%20%C3%A9"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": true,
+            "value": "a/b é",
+            "error": null
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-uri-malformed",
+      "subjects": [
+        "module.uriDecode"
+      ],
+      "operation": "adjacent-uri",
+      "input": {
+        "value": "%xx"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": false,
+            "value": null,
+            "error": {
+              "code": "malformed-uri-component"
+            }
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-uri-nonstring",
+      "subjects": [
+        "module.uriDecode"
+      ],
+      "operation": "adjacent-uri",
+      "input": {
+        "value": 1
+      },
+      "throws": {
+        "messageIncludes": "primitive string"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-refusal-status-400",
+      "subjects": [
+        "module.refusalClass"
+      ],
+      "operation": "adjacent-refusal-brand",
+      "input": {
+        "message": "absent",
+        "status": 400
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 400
+          }
+        },
+        {
+          "path": [
+            "after"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 400
+          }
+        },
+        {
+          "path": [
+            "forged"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-refusal-status-404",
+      "subjects": [
+        "module.refusalClass"
+      ],
+      "operation": "adjacent-refusal-brand",
+      "input": {
+        "message": "absent",
+        "status": 404
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 404
+          }
+        },
+        {
+          "path": [
+            "after"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 404
+          }
+        },
+        {
+          "path": [
+            "forged"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-refusal-status-599",
+      "subjects": [
+        "module.refusalClass"
+      ],
+      "operation": "adjacent-refusal-brand",
+      "input": {
+        "message": "absent",
+        "status": 599
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 599
+          }
+        },
+        {
+          "path": [
+            "after"
+          ],
+          "equals": {
+            "message": "absent",
+            "status": 599
+          }
+        },
+        {
+          "path": [
+            "forged"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-refusal-status-invalid",
+      "subjects": [
+        "module.refusalClass"
+      ],
+      "operation": "adjacent-refusal-brand",
+      "input": {
+        "message": "bad",
+        "status": 200
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": null
+        },
+        {
+          "path": [
+            "after"
+          ],
+          "equals": null
+        },
+        {
+          "path": [
+            "forged"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-process-lazy",
+      "subjects": [
+        "module.surfaceProcessEngine"
+      ],
+      "operation": "adjacent-process-value",
+      "input": {
+        "value": [
+          "if",
+          true,
+          "$request.value",
+          "$missing"
+        ],
+        "environment": {
+          "request": {
+            "value": "chosen"
+          }
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "chosen"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-process-recursive",
+      "subjects": [
+        "module.surfaceProcessEngine"
+      ],
+      "operation": "adjacent-process-value",
+      "input": {
+        "value": {
+          "answer": [
+            "add",
+            2,
+            3
+          ],
+          "label": [
+            "concat",
+            "a",
+            "b"
+          ]
+        },
+        "environment": {}
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "answer": 5,
+            "label": "ab"
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-process-reference",
+      "subjects": [
+        "module.surfaceProcessEngine"
+      ],
+      "operation": "adjacent-process-value",
+      "input": {
+        "value": "$request.constructor",
+        "environment": {
+          "request": {}
+        }
+      },
+      "throws": {
+        "messageIncludes": "Unsafe"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-dom-escape",
+      "subjects": [
+        "module.domExpression"
+      ],
+      "operation": "adjacent-dom",
+      "input": {
+        "form": "element",
+        "tag": "p",
+        "attributes": {
+          "title": "a\"b"
+        },
+        "children": [
+          "<script>x</script>"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "<!doctype html>\n<p title=\"a&quot;b\" data-rel-key=\"view.node.0\">&lt;script&gt;x&lt;/script&gt;</p>"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-dom-unsafe-29",
+      "subjects": [
+        "module.domExpression"
+      ],
+      "operation": "adjacent-dom",
+      "input": {
+        "form": "element",
+        "tag": "p",
+        "attributes": {
+          "onclick": "bad"
+        },
+        "children": [
+          "x"
+        ]
+      },
+      "throws": {
+        "messageIncludes": "attribute"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-dom-unsafe-30",
+      "subjects": [
+        "module.domExpression"
+      ],
+      "operation": "adjacent-dom",
+      "input": {
+        "form": "element",
+        "tag": "a",
+        "attributes": {
+          "href": "javascript:bad"
+        },
+        "children": [
+          "x"
+        ]
+      },
+      "throws": {
+        "messageIncludes": "Unsafe reader attribute"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-json-valid",
+      "subjects": [
+        "module.jsonDecode"
+      ],
+      "operation": "adjacent-json-decode",
+      "input": {
+        "text": "{\"x\":false}"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": true,
+            "value": {
+              "x": false
+            },
+            "parsed": {
+              "x": false
+            }
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-json-nonstring",
+      "subjects": [
+        "module.jsonDecode"
+      ],
+      "operation": "adjacent-json-decode",
+      "input": {
+        "text": null
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "error",
+            "code"
+          ],
+          "equals": "invalid-input"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-json-parse",
+      "subjects": [
+        "module.jsonDecode"
+      ],
+      "operation": "adjacent-json-decode",
+      "input": {
+        "text": "{"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "error",
+            "code"
+          ],
+          "equals": "parse-error"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-json-schema",
+      "subjects": [
+        "module.jsonDecode"
+      ],
+      "operation": "adjacent-json-decode",
+      "input": {
+        "text": "{}",
+        "verdict": [
+          {
+            "path": "$.x",
+            "code": "required",
+            "message": "x required"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": false,
+            "error": {
+              "code": "schema-error",
+              "message": "x required",
+              "violations": [
+                {
+                  "path": "$.x",
+                  "code": "required",
+                  "message": "x required"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-json-transform",
+      "subjects": [
+        "module.jsonDecode"
+      ],
+      "operation": "adjacent-json-decode",
+      "input": {
+        "text": "{}",
+        "verdict": {
+          "ok": true,
+          "value": "transformed"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": true,
+            "value": "transformed",
+            "parsed": {}
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-blob-text",
+      "subjects": [
+        "module.blobDecode"
+      ],
+      "operation": "adjacent-blob-decode",
+      "input": {
+        "blob": {
+          "mimeType": "TEXT/PLAIN",
+          "stored": "aGk="
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "ok": true,
+            "value": "hi",
+            "mimeType": "text/plain",
+            "bytes": [
+              104,
+              105
+            ]
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-blob-mime-refusal",
+      "subjects": [
+        "module.blobDecode"
+      ],
+      "operation": "adjacent-blob-decode",
+      "input": {
+        "blob": {
+          "mimeType": "application/json",
+          "stored": "e30="
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "error",
+            "code"
+          ],
+          "equals": "blob-error"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-blob-encoding-refusal",
+      "subjects": [
+        "module.blobDecode"
+      ],
+      "operation": "adjacent-blob-decode",
+      "input": {
+        "blob": {
+          "mimeType": "text/plain",
+          "stored": "aGk="
+        },
+        "options": {
+          "encoding": "not-a-codec"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "value",
+            "error",
+            "code"
+          ],
+          "equals": "blob-error"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-startup-laneWitnessTexts",
+      "subjects": [
+        "module.startupRuntime"
+      ],
+      "operation": "adjacent-startup",
+      "input": {
+        "api": "laneWitnessTexts",
+        "args": [
+          {
+            "lanes": {
+              "__proto__": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "constructor": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "lane.a": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "constructor"
+          ],
+          "equals": "(\"a\", \"p\", \"x\", \"is\")\n"
+        },
+        {
+          "path": [
+            "value",
+            "__proto__"
+          ],
+          "equals": "(\"a\", \"p\", \"x\", \"is\")\n"
+        },
+        {
+          "path": [
+            "ownLaneKeys"
+          ],
+          "equals": [
+            "__proto__",
+            "constructor",
+            "lane.a"
+          ]
+        },
+        {
+          "path": [
+            "ordinaryPrototype"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-startup-laneWitnessesS",
+      "subjects": [
+        "module.startupRuntime"
+      ],
+      "operation": "adjacent-startup",
+      "input": {
+        "api": "laneWitnessesS",
+        "args": [
+          {
+            "lanes": {
+              "__proto__": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "constructor": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "lane.a": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "constructor"
+          ],
+          "equals": "(a(p(x)))\n"
+        },
+        {
+          "path": [
+            "value",
+            "__proto__"
+          ],
+          "equals": "(a(p(x)))\n"
+        },
+        {
+          "path": [
+            "ownLaneKeys"
+          ],
+          "equals": [
+            "__proto__",
+            "constructor",
+            "lane.a"
+          ]
+        },
+        {
+          "path": [
+            "ordinaryPrototype"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-startup-laneWitnessFacts",
+      "subjects": [
+        "module.startupRuntime"
+      ],
+      "operation": "adjacent-startup",
+      "input": {
+        "api": "laneWitnessFacts",
+        "args": [
+          {
+            "lanes": {
+              "__proto__": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "constructor": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              },
+              "lane.a": {
+                "witnesses": [
+                  {
+                    "s": "a",
+                    "p": "p",
+                    "o": "x",
+                    "pol": "is"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "constructor"
+          ],
+          "equals": [
+            {
+              "s": "a",
+              "p": "p",
+              "o": "x",
+              "pol": "is"
+            }
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "__proto__"
+          ],
+          "equals": [
+            {
+              "s": "a",
+              "p": "p",
+              "o": "x",
+              "pol": "is"
+            }
+          ]
+        },
+        {
+          "path": [
+            "ownLaneKeys"
+          ],
+          "equals": [
+            "__proto__",
+            "constructor",
+            "lane.a"
+          ]
+        },
+        {
+          "path": [
+            "ordinaryPrototype"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-startup-precedence",
+      "subjects": [
+        "module.startupRuntime"
+      ],
+      "operation": "adjacent-startup",
+      "input": {
+        "api": "laneWitnessesFromPayload",
+        "args": [
+          {
+            "lane": "(\"a\", \"p\", \"text\")\n"
+          },
+          {
+            "lane": [
+              {
+                "s": "a",
+                "p": "p",
+                "o": "x",
+                "pol": "is"
+              }
+            ]
+          },
+          {
+            "lane": "invalid ignored"
+          }
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "lane": [
+              {
+                "s": "a",
+                "p": "p",
+                "o": "x",
+                "pol": "is"
+              }
+            ]
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-retention-compatibility",
+      "subjects": [
+        "module.runtimeBuildPolicyResolution"
+      ],
+      "operation": "adjacent-build-policy",
+      "input": {
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          }
+        ],
+        "project": "project"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "retainSuccessfulGenerations"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "source"
+          ],
+          "equals": "compatibility-default"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-retention-exact",
+      "subjects": [
+        "module.runtimeBuildPolicyResolution"
+      ],
+      "operation": "adjacent-build-policy",
+      "input": {
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          },
+          {
+            "s": "default",
+            "p": "isa",
+            "o": "ProjectGenerationRetentionPolicy",
+            "pol": "is"
+          },
+          {
+            "s": "default",
+            "p": "retainSuccessfulGenerations",
+            "o": "2",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "isa",
+            "o": "ProjectGenerationRetentionPolicy",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "project",
+            "o": "project",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "retainSuccessfulGenerations",
+            "o": "3",
+            "pol": "is"
+          }
+        ],
+        "project": "project"
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "subject"
+          ],
+          "equals": "exact"
+        },
+        {
+          "path": [
+            "value",
+            "retainSuccessfulGenerations"
+          ],
+          "equals": 3
+        },
+        {
+          "path": [
+            "value",
+            "source"
+          ],
+          "equals": "project"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-retention-missing-default",
+      "subjects": [
+        "module.runtimeBuildPolicyResolution"
+      ],
+      "operation": "adjacent-build-policy",
+      "input": {
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "isa",
+            "o": "ProjectGenerationRetentionPolicy",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "project",
+            "o": "project",
+            "pol": "is"
+          },
+          {
+            "s": "exact",
+            "p": "retainSuccessfulGenerations",
+            "o": "3",
+            "pol": "is"
+          }
+        ],
+        "project": "project"
+      },
+      "throws": {
+        "messageIncludes": "exactly one unscoped"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "boundary-retention-invalid",
+      "subjects": [
+        "module.runtimeBuildPolicyResolution"
+      ],
+      "operation": "adjacent-build-policy",
+      "input": {
+        "facts": [
+          {
+            "s": "project",
+            "p": "isa",
+            "o": "Project",
+            "pol": "is"
+          },
+          {
+            "s": "default",
+            "p": "isa",
+            "o": "ProjectGenerationRetentionPolicy",
+            "pol": "is"
+          },
+          {
+            "s": "default",
+            "p": "retainSuccessfulGenerations",
+            "o": "0",
+            "pol": "is"
+          }
+        ],
+        "project": "project"
+      },
+      "throws": {
+        "messageIncludes": "positive safe integer"
+      },
+      "inputUnchanged": true
+    }
+  ]
+}

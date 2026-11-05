@@ -1,0 +1,44 @@
+import {isDeepStrictEqual} from 'node:util';
+import {readFileSync,writeFileSync} from 'node:fs';
+const file=new URL('../../../.platform-reconstitution/sourcery-platform-reconciled/assurance/semantic-contract-cases.json',import.meta.url),document=JSON.parse(readFileSync(file)),cases=[];
+const add=(id,subject,operation,input,checks,throws)=>cases.push({id:'boundary-'+id,subjects:['module.'+subject],operation:'adjacent-'+operation,input,...(throws?{throws}:{checks}),inputUnchanged:true}),eq=(path,equals)=>({path,equals}),val=v=>[eq(['value'],v)],ref=(id,s,op,input,message)=>add(id,s,op,input,null,{messageIncludes:message}),f=(s,p,o,pol='is')=>({s,p,o,pol});
+add('reference-own','strictProcessReference','strict-reference',{reference:'$request.item.value',environment:{request:{item:{value:false}}}},val(false));
+add('reference-array','strictProcessReference','strict-reference',{reference:'$request.0',environment:{request:['first']}},val('first'));
+for(const reference of ['$request.constructor','$request.__proto__','$request.prototype','$missing','$request.absent','request'])ref('reference-'+cases.length,'strictProcessReference','strict-reference',{reference,environment:{request:{}}},reference==='request'?'Exact':reference.includes('missing')||reference.includes('absent')?'own enumerable':'Unsafe');
+for(const value of [null,false,0,'',{a:1}])add('result-success-'+cases.length,'refusalResult','refusal-result',{value:{refusal:null,value}},val(value));
+add('result-authored','refusalResult','refusal-result',{value:{refusal:{message:'absent',status:404},value:null}},null,{messageIncludes:'absent',status:404});
+for(const value of [{refusal:null},[],{refusal:{message:'bad',status:200},value:null},{refusal:{message:'bad',status:404},value:1}])ref('result-bad-'+cases.length,'refusalResult','refusal-result',{value},value.refusal&&value.value===null||value.value===1?'Invalid authored':'envelope');
+add('uri-success','uriDecode','uri',{value:'a%2Fb%20%C3%A9'},val({ok:true,value:'a/b é',error:null}));
+add('uri-malformed','uriDecode','uri',{value:'%xx'},val({ok:false,value:null,error:{code:'malformed-uri-component'}}));
+ref('uri-nonstring','uriDecode','uri',{value:1},'primitive string');
+for(const status of [400,404,599])add('refusal-status-'+status,'refusalClass','refusal-brand',{message:'absent',status},[eq(['value'],{message:'absent',status}),eq(['after'],{message:'absent',status}),eq(['forged'],null)]);
+add('refusal-status-invalid','refusalClass','refusal-brand',{message:'bad',status:200},[eq(['value'],null),eq(['after'],null),eq(['forged'],null)]);
+add('process-lazy','surfaceProcessEngine','process-value',{value:['if',true,'$request.value','$missing'],environment:{request:{value:'chosen'}}},val('chosen'));
+add('process-recursive','surfaceProcessEngine','process-value',{value:{answer:['add',2,3],label:['concat','a','b']},environment:{}},val({answer:5,label:'ab'}));
+ref('process-reference','surfaceProcessEngine','process-value',{value:'$request.constructor',environment:{request:{}}},'Unsafe');
+add('dom-escape','domExpression','dom',{form:'element',tag:'p',attributes:{title:'a"b'},children:['<script>x</script>']},val('<!doctype html>\n<p title="a&quot;b" data-rel-key="view.node.0">&lt;script&gt;x&lt;/script&gt;</p>'));
+for(const attributes of [{onclick:'bad'},{href:'javascript:bad'}])ref('dom-unsafe-'+cases.length,'domExpression','dom',{form:'element',tag:attributes.href?'a':'p',attributes,children:['x']},attributes.href?'Unsafe reader attribute':'attribute');
+add('json-valid','jsonDecode','json-decode',{text:'{"x":false}'},val({ok:true,value:{x:false},parsed:{x:false}}));
+add('json-nonstring','jsonDecode','json-decode',{text:null},[eq(['value','ok'],false),eq(['value','error','code'],'invalid-input')] );
+add('json-parse','jsonDecode','json-decode',{text:'{'},[eq(['value','ok'],false),eq(['value','error','code'],'parse-error')]);
+add('json-schema','jsonDecode','json-decode',{text:'{}',verdict:[{path:'$.x',code:'required',message:'x required'}]},val({ok:false,error:{code:'schema-error',message:'x required',violations:[{path:'$.x',code:'required',message:'x required'}]}}));
+add('json-transform','jsonDecode','json-decode',{text:'{}',verdict:{ok:true,value:'transformed'}},val({ok:true,value:'transformed',parsed:{}}));
+add('blob-text','blobDecode','blob-decode',{blob:{mimeType:'TEXT/PLAIN',stored:'aGk='}},val({ok:true,value:'hi',mimeType:'text/plain',bytes:[104,105]}));
+add('blob-mime-refusal','blobDecode','blob-decode',{blob:{mimeType:'application/json',stored:'e30='}},[eq(['value','ok'],false),eq(['value','error','code'],'blob-error')]);
+add('blob-encoding-refusal','blobDecode','blob-decode',{blob:{mimeType:'text/plain',stored:'aGk='},options:{encoding:'not-a-codec'}},[eq(['value','ok'],false),eq(['value','error','code'],'blob-error')]);
+const facts=[f('a','p','x')];
+for(const api of ['laneWitnessTexts','laneWitnessesS','laneWitnessFacts']){
+ const lanes=Object.fromEntries(['__proto__','constructor','lane.a'].map(name=>[name,{witnesses:facts}]));
+ const expected=api==='laneWitnessFacts'?facts:api==='laneWitnessTexts'?'("a", "p", "x", "is")\n':'(a(p(x)))\n';
+ add('startup-'+api,'startupRuntime','startup',{api,args:[{lanes}]},[eq(['value','constructor'],expected),eq(['value','__proto__'],expected),eq(['ownLaneKeys'],['__proto__','constructor','lane.a']),eq(['ordinaryPrototype'],true)]);
+}
+add('startup-precedence','startupRuntime','startup',{api:'laneWitnessesFromPayload',args:[{lane:'("a", "p", "text")\n'},{lane:facts},{lane:'invalid ignored'}]},val({lane:facts}));
+const project=[f('project','isa','Project')];
+add('retention-compatibility','runtimeBuildPolicyResolution','build-policy',{facts:project,project:'project'},[eq(['value','retainSuccessfulGenerations'],1),eq(['value','source'],'compatibility-default')]);
+const policies=project.concat(f('default','isa','ProjectGenerationRetentionPolicy'),f('default','retainSuccessfulGenerations','2'),f('exact','isa','ProjectGenerationRetentionPolicy'),f('exact','project','project'),f('exact','retainSuccessfulGenerations','3'));
+add('retention-exact','runtimeBuildPolicyResolution','build-policy',{facts:policies,project:'project'},[eq(['value','subject'],'exact'),eq(['value','retainSuccessfulGenerations'],3),eq(['value','source'],'project')]);
+ref('retention-missing-default','runtimeBuildPolicyResolution','build-policy',{facts:project.concat(f('exact','isa','ProjectGenerationRetentionPolicy'),f('exact','project','project'),f('exact','retainSuccessfulGenerations','3')),project:'project'},'exactly one unscoped');
+ref('retention-invalid','runtimeBuildPolicyResolution','build-policy',{facts:project.concat(f('default','isa','ProjectGenerationRetentionPolicy'),f('default','retainSuccessfulGenerations','0')),project:'project'},'positive safe integer');
+if(process.argv.includes('--verify')){if(!isDeepStrictEqual(cases,document.cases.filter(c=>c.id.startsWith('boundary-'))))throw Error('Boundary case builder differs from the committed cases');console.log(JSON.stringify({builder:'boundary',cases:cases.length,exact:true}));process.exit(0);}
+for(const c of cases)if(document.cases.some(old=>old.id===c.id))throw Error('Fresh case IDs required');
+document.cases.push(...cases);writeFileSync(file,JSON.stringify(document,null,2)+'\n');writeFileSync(new URL('new-boundary-cases.json',import.meta.url),JSON.stringify({cases},null,2)+'\n');console.log(JSON.stringify({added:cases.length,total:document.cases.length}));

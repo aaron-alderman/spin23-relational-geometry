@@ -1,0 +1,1293 @@
+{
+  "cases": [
+    {
+      "id": "owner-pagerank-self",
+      "subjects": [
+        "module.pageRank"
+      ],
+      "operation": "adjacent-page-rank",
+      "input": {
+        "graphRows": [
+          {
+            "entries": [
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "teleport": [
+          1
+        ],
+        "mixing": 0.85,
+        "tolerance": 1e-8,
+        "maximumIterations": 10
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "rank"
+          ],
+          "equals": [
+            1
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "mass"
+          ],
+          "equals": 1
+        },
+        {
+          "path": [
+            "value",
+            "converged"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-pagerank-mixing",
+      "subjects": [
+        "module.pageRank"
+      ],
+      "operation": "adjacent-page-rank",
+      "input": {
+        "graphRows": [
+          {
+            "entries": [
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "teleport": [
+          1
+        ],
+        "mixing": 1,
+        "tolerance": 1e-8,
+        "maximumIterations": 10
+      },
+      "throws": {
+        "messageIncludes": "mixing"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-pagerank-distribution",
+      "subjects": [
+        "module.pageRank"
+      ],
+      "operation": "adjacent-page-rank",
+      "input": {
+        "graphRows": [
+          {
+            "entries": [
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "teleport": [
+          0.5
+        ],
+        "mixing": 0.85,
+        "tolerance": 1e-8,
+        "maximumIterations": 10
+      },
+      "throws": {
+        "messageIncludes": "teleport"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-pagerank-target",
+      "subjects": [
+        "module.pageRank"
+      ],
+      "operation": "adjacent-page-rank",
+      "input": {
+        "graphRows": [
+          {
+            "entries": [
+              [
+                1,
+                1
+              ]
+            ]
+          }
+        ],
+        "teleport": [
+          1
+        ],
+        "mixing": 0.85,
+        "tolerance": 1e-8,
+        "maximumIterations": 10
+      },
+      "throws": {
+        "messageIncludes": "target"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-pagerank-iteration",
+      "subjects": [
+        "module.pageRank"
+      ],
+      "operation": "adjacent-page-rank",
+      "input": {
+        "graphRows": [
+          {
+            "entries": [
+              [
+                0,
+                1
+              ]
+            ]
+          }
+        ],
+        "teleport": [
+          1
+        ],
+        "mixing": 0.85,
+        "tolerance": 1e-8,
+        "maximumIterations": 0
+      },
+      "throws": {
+        "messageIncludes": "maximumIterations"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-false",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "truthy",
+        "args": [
+          "false"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-zero-text",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "truthy",
+        "args": [
+          "0"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-equal",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "canonicalEquals",
+        "args": [
+          1,
+          "1"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-spelling",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "canonicalEquals",
+        "args": [
+          1,
+          "01"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-null",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "stringifyValue",
+        "args": [
+          null
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": ""
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-canonical",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "typedLiteralMatch",
+        "args": [
+          true,
+          "true"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-values-noncanonical",
+      "subjects": [
+        "module.valueSemantics"
+      ],
+      "operation": "adjacent-value-semantics",
+      "input": {
+        "api": "typedLiteralMatch",
+        "args": [
+          true,
+          "TRUE"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-json-order",
+      "subjects": [
+        "module.canonicalJson"
+      ],
+      "operation": "adjacent-canonical-json",
+      "input": {
+        "value": {
+          "z": 1,
+          "a": [
+            false,
+            null
+          ]
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "{\n  \"a\": [\n    false,\n    null\n  ],\n  \"z\": 1\n}\n"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-json-primitive",
+      "subjects": [
+        "module.canonicalJson"
+      ],
+      "operation": "adjacent-canonical-json",
+      "input": {
+        "value": "x"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "\"x\"\n"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-failure-brand",
+      "subjects": [
+        "module.authoredFailure"
+      ],
+      "operation": "adjacent-authored-failure",
+      "input": {
+        "args": [
+          "TypeError",
+          "refused",
+          "invalid-input",
+          "expression.x"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "kind": "TypeError",
+            "message": "refused",
+            "code": "invalid-input",
+            "origin": "expression.x"
+          }
+        },
+        {
+          "path": [
+            "name"
+          ],
+          "equals": "TypeError"
+        },
+        {
+          "path": [
+            "frozen"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "forged"
+          ],
+          "equals": null
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-failure-kind",
+      "subjects": [
+        "module.authoredFailure"
+      ],
+      "operation": "adjacent-authored-failure",
+      "input": {
+        "args": [
+          "ArbitraryError",
+          "refused",
+          "invalid",
+          "x"
+        ]
+      },
+      "throws": {
+        "messageIncludes": "kind"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-compile-literal",
+      "subjects": [
+        "module.compileExpressions"
+      ],
+      "operation": "adjacent-compile",
+      "input": {
+        "source": {
+          "profile": "sourcery/expression-reduction-values/1",
+          "roots": {
+            "result": {
+              "kind": "literal",
+              "value": "ok"
+            }
+          }
+        },
+        "options": {
+          "namespace": "bounded"
+        }
+      },
+      "checks": [
+        {
+          "path": [
+            "value",
+            "roots"
+          ],
+          "equals": [
+            "result"
+          ]
+        },
+        {
+          "path": [
+            "value",
+            "records"
+          ],
+          "equals": [
+            {
+              "s": "result",
+              "p": "kind",
+              "o": "literal",
+              "pol": "is"
+            },
+            {
+              "s": "result",
+              "p": "value",
+              "o": "ok",
+              "pol": "is"
+            }
+          ]
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-compile-empty",
+      "subjects": [
+        "module.compileExpressions"
+      ],
+      "operation": "adjacent-compile",
+      "input": {
+        "source": {}
+      },
+      "throws": {
+        "messageIncludes": "profile"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-graph-duplicates",
+      "subjects": [
+        "module.graphFromRecords"
+      ],
+      "operation": "adjacent-graph",
+      "input": {
+        "records": [
+          {
+            "s": "a",
+            "p": "p",
+            "o": "x",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "p",
+            "o": "x",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "p",
+            "o": "y",
+            "pol": "is"
+          }
+        ],
+        "subject": "a",
+        "predicate": "p"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": [
+            "x",
+            "x",
+            "y"
+          ]
+        },
+        {
+          "path": [
+            "one"
+          ],
+          "equals": "y"
+        },
+        {
+          "path": [
+            "frozen"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-graph-history",
+      "subjects": [
+        "module.graphFromRecords"
+      ],
+      "operation": "adjacent-graph",
+      "input": {
+        "records": [
+          {
+            "s": "a",
+            "p": "p",
+            "o": "x",
+            "pol": "is-not"
+          }
+        ],
+        "subject": "a",
+        "predicate": "p"
+      },
+      "throws": {
+        "messageIncludes": "is"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-array-20",
+      "subjects": [
+        "module.ownArrayValues"
+      ],
+      "operation": "adjacent-array",
+      "input": {
+        "value": []
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": []
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-array-21",
+      "subjects": [
+        "module.ownArrayValues"
+      ],
+      "operation": "adjacent-array",
+      "input": {
+        "value": [
+          1,
+          false,
+          null
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": [
+            1,
+            false,
+            null
+          ]
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-array-record",
+      "subjects": [
+        "module.ownArrayValues"
+      ],
+      "operation": "adjacent-array",
+      "input": {
+        "value": {}
+      },
+      "throws": {
+        "messageIncludes": "array"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-record-prototype",
+      "subjects": [
+        "module.recordFromEntries"
+      ],
+      "operation": "adjacent-record",
+      "input": {
+        "entries": [
+          [
+            "__proto__",
+            "safe"
+          ],
+          [
+            "constructor",
+            false
+          ],
+          [
+            "x",
+            null
+          ]
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "__proto__": "safe",
+            "constructor": false,
+            "x": null
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-record-duplicate",
+      "subjects": [
+        "module.recordFromEntries"
+      ],
+      "operation": "adjacent-record",
+      "input": {
+        "entries": [
+          [
+            "a",
+            1
+          ],
+          [
+            "a",
+            2
+          ]
+        ]
+      },
+      "throws": {
+        "messageIncludes": "duplicate"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-record-key",
+      "subjects": [
+        "module.recordFromEntries"
+      ],
+      "operation": "adjacent-record",
+      "input": {
+        "entries": [
+          [
+            1,
+            "x"
+          ]
+        ]
+      },
+      "throws": {
+        "messageIncludes": "string"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-sha-empty",
+      "subjects": [
+        "module.portableSha256"
+      ],
+      "operation": "adjacent-sha256",
+      "input": {
+        "text": ""
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-sha-abc",
+      "subjects": [
+        "module.portableSha256"
+      ],
+      "operation": "adjacent-sha256",
+      "input": {
+        "text": "abc"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-sha-bytes",
+      "subjects": [
+        "module.portableSha256"
+      ],
+      "operation": "adjacent-sha256",
+      "input": {
+        "bytes": [
+          97,
+          98,
+          99
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-spki-ed25519",
+      "subjects": [
+        "module.parseSpki"
+      ],
+      "operation": "adjacent-spki",
+      "input": {
+        "value": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAO2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=\n-----END PUBLIC KEY-----"
+      },
+      "checks": [
+        {
+          "path": [
+            "ok"
+          ],
+          "equals": true
+        },
+        {
+          "path": [
+            "keyType"
+          ],
+          "equals": "ed25519"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-spki-invalid-30",
+      "subjects": [
+        "module.parseSpki"
+      ],
+      "operation": "adjacent-spki",
+      "input": {
+        "value": null
+      },
+      "checks": [
+        {
+          "path": [
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "errorCode"
+          ],
+          "equals": "invalid-public-pem"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-spki-invalid-31",
+      "subjects": [
+        "module.parseSpki"
+      ],
+      "operation": "adjacent-spki",
+      "input": {
+        "value": {}
+      },
+      "checks": [
+        {
+          "path": [
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "errorCode"
+          ],
+          "equals": "invalid-public-pem"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-spki-invalid-32",
+      "subjects": [
+        "module.parseSpki"
+      ],
+      "operation": "adjacent-spki",
+      "input": {
+        "value": "PUBLIC KEY"
+      },
+      "checks": [
+        {
+          "path": [
+            "ok"
+          ],
+          "equals": false
+        },
+        {
+          "path": [
+            "errorCode"
+          ],
+          "equals": "invalid-public-pem"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-input-shadow",
+      "subjects": [
+        "module.withInputSurface"
+      ],
+      "operation": "adjacent-input",
+      "input": {
+        "context": {
+          "tag": "kept",
+          "typedSurfaces": {
+            "a": 1,
+            "b": 2
+          }
+        },
+        "name": "a",
+        "value": false
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": {
+            "tag": "kept",
+            "typedSurfaces": {
+              "a": false,
+              "b": 2
+            }
+          }
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-input-empty-name",
+      "subjects": [
+        "module.withInputSurface"
+      ],
+      "operation": "adjacent-input",
+      "input": {
+        "context": {},
+        "name": "",
+        "value": 1
+      },
+      "throws": {
+        "messageIncludes": "static name"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-input-null-context",
+      "subjects": [
+        "module.withInputSurface"
+      ],
+      "operation": "adjacent-input",
+      "input": {
+        "context": null,
+        "name": "a",
+        "value": 1
+      },
+      "throws": {
+        "messageIncludes": "context"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-ed25519-valid",
+      "subjects": [
+        "module.verifyEd25519"
+      ],
+      "operation": "adjacent-ed25519",
+      "input": {
+        "key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAO2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=\n-----END PUBLIC KEY-----",
+        "message": "",
+        "signature": "j4lbPK/iyVBgOdDipmOCVoAEZ0/o0jd4UJLkDWqvSD5PxgFocF8x8QFZYTjOIao1fA0yoGT0I9w+5Ko6v1P4Aw=="
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": true
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-ed25519-changed",
+      "subjects": [
+        "module.verifyEd25519"
+      ],
+      "operation": "adjacent-ed25519",
+      "input": {
+        "key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAO2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=\n-----END PUBLIC KEY-----",
+        "message": "changed",
+        "signature": "j4lbPK/iyVBgOdDipmOCVoAEZ0/o0jd4UJLkDWqvSD5PxgFocF8x8QFZYTjOIao1fA0yoGT0I9w+5Ko6v1P4Aw=="
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-ed25519-encoding",
+      "subjects": [
+        "module.verifyEd25519"
+      ],
+      "operation": "adjacent-ed25519",
+      "input": {
+        "key": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAO2onvM62pC1io6jQKm8Nc2UyFXcd4kOmOsBIoYtZ2ik=\n-----END PUBLIC KEY-----",
+        "message": "",
+        "signature": "bad"
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": false
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-ed25519-boundary",
+      "subjects": [
+        "module.verifyEd25519"
+      ],
+      "operation": "adjacent-ed25519",
+      "input": {
+        "key": {},
+        "message": "",
+        "signature": "j4lbPK/iyVBgOdDipmOCVoAEZ0/o0jd4UJLkDWqvSD5PxgFocF8x8QFZYTjOIao1fA0yoGT0I9w+5Ko6v1P4Aw=="
+      },
+      "throws": {
+        "messageIncludes": "SPKI"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-expression-add",
+      "subjects": [
+        "module.expressionEvaluator"
+      ],
+      "operation": "adjacent-expression",
+      "input": {
+        "source": {
+          "profile": "sourcery/expression-reduction-values/1",
+          "roots": {
+            "result": {
+              "kind": "add",
+              "left": {
+                "kind": "typedLiteral",
+                "valueType": "integer",
+                "value": "2"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "integer",
+                "value": "3"
+              }
+            }
+          }
+        },
+        "root": "result",
+        "context": {}
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": 5
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-expression-divide",
+      "subjects": [
+        "module.expressionEvaluator"
+      ],
+      "operation": "adjacent-expression",
+      "input": {
+        "source": {
+          "profile": "sourcery/expression-reduction-values/1",
+          "roots": {
+            "result": {
+              "kind": "divide",
+              "left": {
+                "kind": "typedLiteral",
+                "valueType": "integer",
+                "value": "1"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "integer",
+                "value": "0"
+              }
+            }
+          }
+        },
+        "root": "result",
+        "context": {}
+      },
+      "throws": {
+        "name": "RangeError",
+        "messageIncludes": "Zero denominator"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-canonical-boolean",
+      "subjects": [
+        "module.canonicalValues"
+      ],
+      "operation": "adjacent-canonical-values",
+      "input": {
+        "api": "canonicalizeValue",
+        "args": [
+          "boolean",
+          true
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "true"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-canonical-integer",
+      "subjects": [
+        "module.canonicalValues"
+      ],
+      "operation": "adjacent-canonical-values",
+      "input": {
+        "api": "canonicalizeValue",
+        "args": [
+          "integer",
+          1
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "1"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-canonical-mime",
+      "subjects": [
+        "module.canonicalValues"
+      ],
+      "operation": "adjacent-canonical-values",
+      "input": {
+        "api": "canonicalizeMimeType",
+        "args": [
+          "Text/Plain; Charset=UTF-8"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": "text/plain; charset=utf-8"
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-canonical-parse",
+      "subjects": [
+        "module.canonicalValues"
+      ],
+      "operation": "adjacent-canonical-values",
+      "input": {
+        "api": "parseCanonicalValue",
+        "args": [
+          "integer",
+          "1"
+        ]
+      },
+      "checks": [
+        {
+          "path": [
+            "value"
+          ],
+          "equals": 1
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-canonical-strict",
+      "subjects": [
+        "module.canonicalValues"
+      ],
+      "operation": "adjacent-canonical-values",
+      "input": {
+        "api": "parseCanonicalValue",
+        "args": [
+          "integer",
+          "01"
+        ]
+      },
+      "throws": {
+        "messageIncludes": "Invalid integer"
+      },
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-store-retraction",
+      "subjects": [
+        "module.relFactStore"
+      ],
+      "operation": "adjacent-fact-store",
+      "input": {
+        "facts": [
+          {
+            "s": "a",
+            "p": "p",
+            "o": "x",
+            "pol": "is"
+          },
+          {
+            "s": "a",
+            "p": "p",
+            "o": "x",
+            "pol": "is-not"
+          },
+          {
+            "s": "a",
+            "p": "p",
+            "o": "y",
+            "pol": "is"
+          }
+        ],
+        "subject": "a",
+        "predicate": "p",
+        "object": "y"
+      },
+      "checks": [
+        {
+          "path": [
+            "objects"
+          ],
+          "equals": [
+            "y"
+          ]
+        },
+        {
+          "path": [
+            "subjects"
+          ],
+          "equals": [
+            "a"
+          ]
+        }
+      ],
+      "inputUnchanged": true
+    },
+    {
+      "id": "owner-store-parse",
+      "subjects": [
+        "module.relFactStore"
+      ],
+      "operation": "adjacent-fact-store",
+      "input": {
+        "text": "(\"a\", \"p\", \"x\")\n",
+        "subject": "a",
+        "predicate": "p",
+        "object": "x"
+      },
+      "checks": [
+        {
+          "path": [
+            "objects"
+          ],
+          "equals": [
+            "x"
+          ]
+        },
+        {
+          "path": [
+            "subjects"
+          ],
+          "equals": [
+            "a"
+          ]
+        }
+      ],
+      "inputUnchanged": true
+    }
+  ],
+  "providerFixture": "Deterministic all-zero 32-byte Ed25519 seed; signature created by native Node crypto, fixed in the case document. Not an independent provider replication."
+}

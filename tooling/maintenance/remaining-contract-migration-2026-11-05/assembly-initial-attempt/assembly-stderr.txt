@@ -1,0 +1,18 @@
+node:events:505
+    throw er; // Unhandled 'error' event
+    ^
+
+Error: EBUSY: resource busy or locked, open 'C:\Users\aaron\grand-theory\tooling\maintenance\remaining-contract-migration-2026-11-05\assembly-stderr.txt'
+Emitted 'error' event on WriteStream instance at:
+    at WriteStream.onerror (node:internal/streams/readable:1054:14)
+    at WriteStream.emit (node:events:514:28)
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4082,
+  code: 'EBUSY',
+  syscall: 'open',
+  path: 'C:\\Users\\aaron\\grand-theory\\tooling\\maintenance\\remaining-contract-migration-2026-11-05\\assembly-stderr.txt'
+}
+
+Node.js v24.22.1

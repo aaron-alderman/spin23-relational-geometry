@@ -1,0 +1,16 @@
+node:internal/fs/promises:1327
+  return await PromisePrototypeThen(
+         ^
+
+Error: ENOSPC: no space left on device, copyfile 'C:\Users\aaron\grand-theory\.platform-reconstitution\sourcery-applications\products\world\policy-laboratory.rel' -> 'C:\Users\aaron\grand-theory\.platform-reconstitution\remaining-contract-validation-2026-11-05\assembly-final\assembled\products\world\policy-laboratory.rel'
+    at async copyFile (node:internal/fs/promises:1327:10)
+    at async Module.composeLayerWorkspaces (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-core/src/kernel/composition.mjs:95:7)
+    at async file:///C:/Users/aaron/grand-theory/.platform-reconstitution/remaining-contract-validation-2026-11-05/assembly-final/platform/scripts/assemble-source-clean-workspace.mjs:27:22 {
+  errno: -4055,
+  code: 'ENOSPC',
+  syscall: 'copyfile',
+  path: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-applications\\products\\world\\policy-laboratory.rel',
+  dest: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\remaining-contract-validation-2026-11-05\\assembly-final\\assembled\\products\\world\\policy-laboratory.rel'
+}
+
+Node.js v24.22.1
