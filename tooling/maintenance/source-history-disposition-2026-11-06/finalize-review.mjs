@@ -1,0 +1,10 @@
+import * as fs from 'node:fs';
+import {join,resolve} from 'node:path';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+const audit=import.meta.dirname,read=p=>JSON.parse(fs.readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex'),review=read(join(audit,'history-review.json'));
+const qualified='tooling/maintenance/auth-identity-decision-migration-2026-11-06',closure=read(qualified+'/closure-verification.json'),profile=read(qualified+'/profile/bootstrap-inputs.json');assert(closure.passed);assert.equal(closure.source,closure.qualification.source);
+for(const r of review.repositories){const owner=profile.repositories.find(p=>resolve('.platform-reconstitution',p.directory)===resolve(r.path));assert(owner);assert.equal(owner.commit,r.commit);assert.equal(sha(fs.readFileSync(owner.bundle)),owner.bundleSha256);for(const row of owner.files)assert.equal(sha(fs.readFileSync(join(r.path,row.path))),row.sha256);assert(r.survivors.every(s=>s.comparison==='current-byte-identical'));assert.equal(r.exactObjectLocated,false);}
+for(const [file,count] of [['assembled-epistemic-tests.txt',88],['assembled-reader-science-tests.txt',15]]){const text=fs.readFileSync(qualified+'/managed-receipts/'+file,'utf8');assert(text.includes('pass '+count)&&text.includes('fail 0')&&text.includes('skipped 0'));}
+review.status='complete-via-identified-reconstitution-route';review.integratedSource=closure.source;review.currentQualification=qualified+'/closure-verification.json';review.availableHistoryAndSourcePinsVerified=true;review.survivorFilesRetainedExactly=61;review.exactHistoryRecovered=false;review.remainingExactHistoryClaim='Unproved and not asserted. Unknown lost local-only content remains explicitly unknown; this disposition closes the authorized identified-reconstitution alternative, not historical equivalence.';review.globalBaselineComplete=false;
+fs.writeFileSync(join(audit,'history-review.json'),JSON.stringify(review,null,2)+'\n');console.log(JSON.stringify({package:'S2',status:review.status,survivors:61,exactHistoryRecovered:false,source:closure.source}));

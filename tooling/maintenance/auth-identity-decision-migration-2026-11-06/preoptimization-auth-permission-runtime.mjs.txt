@@ -1,0 +1,238 @@
+// auth-permission-runtime.mjs - generic actor/role permission checks over authored facts.
+
+import { ADMISSIBILITY_DIAGNOSTIC_CODES, admissibilityDiagnostic } from "./admissibility/diagnostics.mjs";
+import { FactStore } from "./rel-core.mjs";
+import { hasContextAuthority } from "./semantic-runtime.mjs";
+import { authDecisionPolicy } from "./auth-decision-policy.mjs";
+
+const asStore = facts => FactStore.from(facts);
+const resourcePolicyCaches = new WeakMap();
+const ACTOR_TYPE = authDecisionPolicy.resolve("actorType");
+const ROLE_PREDICATE = authDecisionPolicy.resolve("rolePredicate");
+const GLOBAL_PERMISSION_PREDICATE = authDecisionPolicy.resolve("globalPermissionPredicate");
+
+function roleSubjects(prog, actor) {
+  return asStore(prog).activeObjects(actor, ROLE_PREDICATE);
+}
+
+export function actorExists(prog, actor) {
+  return asStore(prog).activeTypes(actor).includes(ACTOR_TYPE);
+}
+
+export function hasPermission(prog, actor, predicate, object) {
+  const facts = asStore(prog);
+  const subjects = [actor, ...roleSubjects(prog, actor)];
+  return subjects.some(subject => (object == null
+    ? facts.activeObjects(subject, predicate).length > 0
+    : facts.hasActive(subject, predicate, object)));
+}
+
+function matchingPrincipals(prog, actor) {
+  return [actor, ...roleSubjects(prog, actor)];
+}
+
+function resourcePolicyFor(prog, resource) {
+  const facts = asStore(prog);
+  if (!resource) return null;
+  let cache = resourcePolicyCaches.get(facts);
+  if (!cache || cache.version !== facts.version) {
+    cache = { version: facts.version, policies: new Map() };
+    resourcePolicyCaches.set(facts, cache);
+  }
+  if (cache.policies.has(resource)) return cache.policies.get(resource);
+  const policies = facts.things("ResourcePermissionPolicy").filter(policy => facts.hasActive(policy, "resource", resource));
+  const policy = authDecisionPolicy.evaluate("uniqueResourcePolicy", { policies });
+  if (policy !== null) {
+      const resolved = {
+        subject: policy,
+        resource,
+        mode: authDecisionPolicy.evaluate("resourceMode", { mode: authDecisionPolicy.evaluate("uniqueResourceMode", { modes: facts.activeObjects(policy, "mode") }) }),
+        grants: facts.activeObjects(policy, "grant"),
+      };
+      cache.policies.set(resource, resolved);
+      return resolved;
+  }
+  cache.policies.set(resource, null);
+  return null;
+}
+
+function hasScopedGrant(prog, actor, permission, resource) {
+  const facts = asStore(prog);
+  const policy = resourcePolicyFor(prog, resource);
+  if (!policy) return false;
+  const principals = new Set(matchingPrincipals(prog, actor));
+  const permissionSubject = authDecisionPolicy.evaluate("permissionSubject", { permission });
+  if (!permissionSubject) return false;
+  return policy.grants.some(grant => {
+    const principal = authDecisionPolicy.evaluate("uniqueOptionalGrantField", { values: facts.activeObjects(grant, "principal") });
+    const scopedPermission = authDecisionPolicy.evaluate("uniqueOptionalGrantField", { values: facts.activeObjects(grant, "permission") });
+    return principals.has(principal) && scopedPermission === permissionSubject;
+  });
+}
+
+export function hasResolvedPermission(prog, actor, permission, resource = null) {
+  const globalAllowed = hasPermission(prog, actor, GLOBAL_PERMISSION_PREDICATE, permission);
+  const policy = resourcePolicyFor(prog, resource);
+  const mode = policy?.mode ?? null;
+  const scopedAllowed = authDecisionPolicy.evaluate("permissionNeedsScoped", { mode })
+    ? hasScopedGrant(prog, actor, permission, resource)
+    : false;
+  return authDecisionPolicy.evaluate("resourcePermission", { mode, globalAllowed, scopedAllowed });
+}
+
+function issue(base, message) {
+  return admissibilityDiagnostic(base.code, message, base);
+}
+
+function unknownActorIssue(actor, context = {}) {
+  return issue({
+    code: ADMISSIBILITY_DIAGNOSTIC_CODES.UNKNOWN_ACTOR,
+    actor,
+    permission: context.permission,
+    resource: context.resource,
+    command: context.command,
+    route: context.route,
+    surface: context.surface,
+    transport: context.transport,
+  }, `Unknown actor: ${actor}`);
+}
+
+function permissionDeniedIssue(actor, permission, context = {}) {
+  const target = context.command
+    ? ` command ${context.command}`
+    : context.route
+      ? ` route ${context.route}`
+      : "";
+  return issue({
+    code: ADMISSIBILITY_DIAGNOSTIC_CODES.PERMISSION_DENIED,
+    actor,
+    permission,
+    resource: context.resource,
+    command: context.command,
+    route: context.route,
+    surface: context.surface,
+    transport: context.transport,
+  }, `Actor ${actor} cannot ${permission}${target}.`);
+}
+
+function authorityWitnessOverlayRequired(prog, log) {
+  const program = FactStore.from(prog);
+  const stateBySubjectPredicate = new Map();
+  for (const fact of log || []) {
+    if (!authDecisionPolicy.evaluate("witnessAuthorityPredicate", { predicate: String(fact?.p || "") })) continue;
+    let byPredicate = stateBySubjectPredicate.get(fact.s);
+    if (!byPredicate) {
+      byPredicate = new Map();
+      stateBySubjectPredicate.set(fact.s, byPredicate);
+    }
+    let state = byPredicate.get(fact.p);
+    if (!state) {
+      state = { lastObject: undefined, activeByObject: new Map() };
+      byPredicate.set(fact.p, state);
+    }
+    state.lastObject = fact.o;
+    state.activeByObject.set(fact.o, fact.pol !== "is-not");
+  }
+  for (const [subject, byPredicate] of stateBySubjectPredicate) {
+    for (const [predicate, state] of byPredicate) {
+      // Appending the witness sequence makes its last object authoritative for
+      // one() and its last polarity authoritative for each mentioned object.
+      // If the supplied program already exposes that exact observable state,
+      // repeating the same witness sequence cannot change an authority query.
+      if (program.one(subject, predicate) !== state.lastObject) return true;
+      for (const [object, active] of state.activeByObject) {
+        if (program.hasActive(subject, predicate, object) !== active) return true;
+      }
+    }
+  }
+  return false;
+}
+
+function commandContextAuthorityIssues(prog, log, actor, command, context = {}) {
+  // The command program is immutable for this admission. Overlay the witness
+  // log with copy-on-write indexes instead of eagerly rebuilding the complete
+  // program for every authority decision.
+  const program = FactStore.from(prog);
+  const state = authorityWitnessOverlayRequired(program, log)
+    ? program.fork().appendMany(log)
+    : program;
+  const args = Array.isArray(context.args) ? context.args : [];
+  return state.things("CommandContextAuthorityPolicy")
+    .filter(policy => state.one(policy, "command") === command)
+    .flatMap(policy => {
+      const contextSubject = state.one(policy, "context") || "";
+      const authority = state.one(policy, "authority") || "";
+      const rawPosition = state.one(policy, "subjectArg") || "";
+      const position = rawPosition ? Number(rawPosition) : 0;
+      const subject = position > 0 ? String(args[position - 1] || "") : "";
+      const allowed = contextSubject && authority && (!rawPosition || (Number.isSafeInteger(position) && position > 0 && subject))
+        && hasContextAuthority(state, actor, authority, contextSubject, subject ? { subject } : {});
+      if (allowed) return [];
+      return [issue({
+        code: ADMISSIBILITY_DIAGNOSTIC_CODES.SEMANTIC_AUTHORITY_DENIED,
+        actor,
+        command,
+        resource: context.resource || command,
+        context: contextSubject,
+        authority,
+        subject,
+        policy,
+      }, `Actor ${actor} lacks ${authority || "required context authority"} for command ${command} in ${contextSubject || "its authored context"}.`)];
+    });
+}
+
+export function readPermissionIssues(prog, actor, context = {}) {
+  if (!actorExists(prog, actor)) return [unknownActorIssue(actor, context)];
+  if (!hasResolvedPermission(prog, actor, "read", context.resource)) {
+    return [permissionDeniedIssue(actor, "read", context)];
+  }
+  return [];
+}
+
+export function writePermissionIssues(prog, actor, context = {}) {
+  if (!actorExists(prog, actor)) return [unknownActorIssue(actor, context)];
+  if (!hasResolvedPermission(prog, actor, "write", context.resource)) {
+    return [permissionDeniedIssue(actor, "write", context)];
+  }
+  return [];
+}
+
+export function commandPermissionIssues(prog, actor, command, delta, log, context = {}) {
+  const fullContext = { ...context, command, resource: context.resource || command };
+  if (!actorExists(prog, actor)) return [unknownActorIssue(actor, fullContext)];
+
+  const issues = [];
+  if (!hasResolvedPermission(prog, actor, "execute", fullContext.resource)) {
+    issues.push(permissionDeniedIssue(actor, "execute", fullContext));
+  }
+  issues.push(...commandContextAuthorityIssues(prog, log, actor, command, fullContext));
+  if (!delta.length) {
+    if (!hasResolvedPermission(prog, actor, "read", fullContext.resource)) {
+      issues.push(permissionDeniedIssue(actor, "read", fullContext));
+    }
+    return issues;
+  }
+  if (!hasResolvedPermission(prog, actor, "write", fullContext.resource)) {
+    issues.push(permissionDeniedIssue(actor, "write", fullContext));
+  }
+  const witnessLog = asStore(log);
+  for (const fact of delta) {
+    if (fact.p !== "isa" || fact.pol !== "is") continue;
+    const anyExistingIsa = witnessLog.activeTypes(fact.s).length > 0;
+    if (anyExistingIsa && !hasResolvedPermission(prog, actor, "overwriteIsa", fullContext.resource)) {
+      issues.push(issue({
+        code: ADMISSIBILITY_DIAGNOSTIC_CODES.ISA_OVERWRITE_DENIED,
+        actor,
+        permission: "overwriteIsa",
+        command,
+        resource: fullContext.resource,
+        route: context.route,
+        surface: context.surface,
+        transport: context.transport,
+        fact: { s: fact.s, p: fact.p, o: fact.o, pol: fact.pol },
+        authoredBy: fact.authoredBy,
+      }, `Actor ${actor} cannot overwrite isa for ${fact.s}.`));
+    }
+  }
+  return issues;
+}

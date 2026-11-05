@@ -1,0 +1,29 @@
+✔ authored permission decisions exhaust the valid global/scoped truth table (1.0281ms)
+✔ actual role permissions preserve absent, inherit, extend and scoped policy behavior (1.851ms)
+✔ unknown and missing resource modes refuse rather than inherit global authority (0.8305ms)
+✔ multiple policies for one resource refuse in either authored order (0.3495ms)
+✔ a resource policy with two active modes refuses instead of selecting a last value (0.1983ms)
+✔ permission caches invalidate on facts, grants and role changes (0.628ms)
+✔ permission projection preserves typed read refusals and actor absence (1.01ms)
+✔ revoked permission values deny and ambiguous grant fields refuse (0.745ms)
+✔ invalid resource policy refuses command admission before a caller can apply its delta (0.3587ms)
+✔ authored policy changes actual decisions without changes to its generic adapter (3.5469ms)
+✔ the same canonical policy adapter executes a separately authored non-auth domain (0.2939ms)
+✔ authored policy refuses a mismatched evaluator profile and invalid authored defaults (4.6517ms)
+✔ actual authored credentials preserve acceptance, refusal and identifier projection (1.3575ms)
+✔ server auth session projections enforce the actual scoped permission policy (0.6458ms)
+✔ a malformed persisted SQLite expiry is unauthenticated and produces no session touch (59.6176ms)
+✔ host session touch occurs on its exact authored interval boundary (64.5163ms)
+✔ revoked and nonexistent host sessions return before reading the clock (60.2353ms)
+✔ suspended host principals cannot receive an authenticated session or a touch (57.6501ms)
+✔ signed forwarding obeys exact future and expiry clock-skew boundaries (4.7481ms)
+✔ signed forwarding keeps method and path binding while policy decisions are authored (1.1338ms)
+✔ Node-qualified auth policy does not enter the current browser static closure (11.92ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 460.4061

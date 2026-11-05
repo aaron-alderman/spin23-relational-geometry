@@ -1,0 +1,31 @@
+{
+  "priorChecks": 2146,
+  "currentChecks": 2167,
+  "addedChecks": [
+    "authored permission decisions exhaust the valid global/scoped truth table",
+    "actual role permissions preserve absent, inherit, extend and scoped policy behavior",
+    "unknown and missing resource modes refuse rather than inherit global authority",
+    "multiple policies for one resource refuse in either authored order",
+    "a resource policy with two active modes refuses instead of selecting a last value",
+    "permission caches invalidate on facts, grants and role changes",
+    "permission projection preserves typed read refusals and actor absence",
+    "revoked permission values deny and ambiguous grant fields refuse",
+    "invalid resource policy refuses command admission before a caller can apply its delta",
+    "authored policy changes actual decisions without changes to its generic adapter",
+    "the same canonical policy adapter executes a separately authored non-auth domain",
+    "authored policy refuses a mismatched evaluator profile and invalid authored defaults",
+    "actual authored credentials preserve acceptance, refusal and identifier projection",
+    "server auth session projections enforce the actual scoped permission policy",
+    "a malformed persisted SQLite expiry is unauthenticated and produces no session touch",
+    "host session touch occurs on its exact authored interval boundary",
+    "revoked and nonexistent host sessions return before reading the clock",
+    "suspended host principals cannot receive an authenticated session or a touch",
+    "signed forwarding obeys exact future and expiry clock-skew boundaries",
+    "signed forwarding keeps method and path binding while policy decisions are authored",
+    "Node-qualified auth policy does not enter the current browser static closure"
+  ],
+  "missing": [],
+  "helperModulesIncluded": 1,
+  "priorAssertingChecks": 2145,
+  "currentAssertingChecks": 2166
+}

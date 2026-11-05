@@ -1,0 +1,13 @@
+import {readFileSync as read,writeFileSync as write} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='.platform-reconstitution/sourcery-platform-reconciled',audit=import.meta.dirname,prior='tooling/maintenance/auth-session-policy-migration-2026-11-05';
+write(audit+'/.gitattributes','* -text\n');write(audit+'/.gitignore','!*.log\n');
+let source=read(prior+'/refresh-source-records.mjs','utf8').replace("['sdk/core/authored-policy.mjs','sdk/server/auth-session-policy.mjs'].includes(path)","path==='sdk/core/auth-decision-policy.mjs'").replace("owner:'Sourcery authored auth and session policy'","owner:'Sourcery authored authorization and identity decisions'");
+write(audit+'/refresh-source-records.mjs',source);write(audit+'/audit-current-source.mjs',read(prior+'/audit-current-source.mjs'));
+const file=root+'/assurance/auth-identity-inventory-baseline.json';write(file,JSON.stringify({protocol:'sourcery/auth-identity-inventory-extension.v1',priorBaselineSha256:createHash('sha256').update(read(root+'/assurance/auth-session-inventory-baseline.json')).digest('hex'),priorRuntimeModules:565,addedRuntimeModules:['sdk/core/auth-decision-policy.mjs'],authorityEffect:'inventory-only',genericAlgebraProved:false},null,2)+'\n');
+const test=root+'/test/semantic-domain-inventory.test.mjs';source=read(test,'utf8');
+source=source.replace('  const expectedModules =',`  const decisionExtension = JSON.parse(await readFile(join(root,"assurance","auth-identity-inventory-baseline.json"),"utf8"));
+  assert.equal(decisionExtension.protocol,"sourcery/auth-identity-inventory-extension.v1");
+  assert.equal(decisionExtension.priorBaselineSha256,createHash("sha256").update(await readFile(join(root,"assurance","auth-session-inventory-baseline.json"))).digest("hex"));
+  assert.deepEqual(decisionExtension.addedRuntimeModules,["sdk/core/auth-decision-policy.mjs"]);
+  const expectedModules =`).replace('...authExtension.addedRuntimeModules].sort()','...authExtension.addedRuntimeModules,...decisionExtension.addedRuntimeModules].sort()').replace('.size,565)','.size,566)').replace('.runtimeModules,565)','.runtimeModules,566)');write(test,source);
