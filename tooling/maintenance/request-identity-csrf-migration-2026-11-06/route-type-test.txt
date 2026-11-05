@@ -1,0 +1,8 @@
+
+
+test('CSRF route limits preserve strict authored kind types and one getter read',async()=>{
+ let coercions=0,getters=0;const boxed={toString(){coercions++;return 'sessionWrite';}};
+ for(const route of [undefined,null,'','/save',false,0,Symbol('route'),{}, {as:'sessionWrite'}, {as:'other'}, {as:boxed}, {as:new String('sessionWrite')}, {as:Symbol('as')}, {as:17}])assert.equal(csrfBodyLimitForRoute(route),route&&typeof route==='object'&&route.as==='sessionWrite'?BODY_LIMITS.sessionText:BODY_LIMITS.json);
+ assert.equal(coercions,0);assert.equal(csrfBodyLimitForRoute({get as(){getters++;return 'sessionWrite';}}),BODY_LIMITS.sessionText);assert.equal(getters,1);const failure={kind:'route-getter'};assert.throws(()=>csrfBodyLimitForRoute({get as(){throw failure;}}),e=>e===failure);
+ let limit;await enforceCookieCsrf(mutation({'content-type':'application/json'}),{authRuntime:csrfAuth,route:{as:boxed},readBodyBuffer:async(_req,options)=>{limit=options.limit;return Buffer.from('{"_csrf":"correct-token"}');}});assert.equal(limit,BODY_LIMITS.json);assert.equal(coercions,0);
+});

@@ -1,0 +1,29 @@
+{
+  "source": "37b332f387b34d6b6620154537b9d2a7393a9922",
+  "combinedChecks": 2187,
+  "combinedAssertingChecks": 2186,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "command": ["node", "--test", "test/*.test.mjs"],
+      "environment": {"GIT_CONFIG_COUNT":"1","GIT_CONFIG_KEY_0":"safe.directory","GIT_CONFIG_VALUE_0":"*"},
+      "checks": 2176
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "cwd": ".",
+      "command": [
+        "node", "--test",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/core/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/test/assurance-observation-input.mjs"
+      ],
+      "checks": 11
+    }
+  ],
+  "scope": "Two actual test executions, combined by exact assertion title and multiplicity. Not represented as a single process report. Every previous source assertion is preserved.",
+  "receipt": "source-assertion-preservation.json"
+}

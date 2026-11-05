@@ -1,0 +1,42 @@
+{
+  "source": "81630729c6c3c3efb65c2cada5e228dc3e071cdc",
+  "status": "proposal-only-not-admitted-to-runtime",
+  "mechanism": "Canonical expression decisions plus explicit synchronous caller capability envelopes; no private expression evaluator",
+  "files": [
+    {
+      "path": "protocol-runner.proposal.mjs",
+      "sha256": "11ab9f870e5e5004c970a77590986c883f442bdfd1b3c538e3991fbfd20283e6"
+    },
+    {
+      "path": "protocol-runner.proposal.test.mjs",
+      "sha256": "1fcfa8447583cc087ab180a01cc9d6f22580b48c3ba7334eed98b495570f3d56"
+    },
+    {
+      "path": "provider-normalization.proposal.json",
+      "sha256": "b1864b9d673df7f924dcf63f1d49cf7dbd6e8220b7d76629a72056e0e1744e2d"
+    },
+    {
+      "path": "provider-normalization.proposal.test.mjs",
+      "sha256": "43a7ad6878bef7ffe4663c86035a8d06365c571573a039eb6fc308e73f0eae63"
+    }
+  ],
+  "sourceControl": {
+    "path": "sdk/server/identity-runtime.mjs",
+    "sha256": "d37774284f957cbc75327a7943c9e1dd72f23c3f4adf9eb7e5878b8fcfd7d884",
+    "instrumentation": "Exact source body with one appended export exposing the private normalizer; imports use current dependency namespaces, not a transitive seal"
+  },
+  "checks": 18,
+  "checksCountedInCurrentManagedProfile": false,
+  "nonAuthDomain": "Quota admission with caller-owned staged persistence",
+  "authDomain": "Provider identity normalization, including getter/coercion/fallback/clone ordering",
+  "sourceModified": false,
+  "durablePortsQualified": false,
+  "asyncPortsQualified": false,
+  "automaticRollbackProved": false,
+  "budgetMayStopAfterPriorPortCalls": true,
+  "wholeAuthSubsystemComplete": false,
+  "next": "Combine explicit active credential selection, provider normalization, forwarded-claim rules and diagnostic/effect controls into the next source migration; then extend inventory/ownership/profile and run full source plus managed integration.",
+  "normalizationPrimitiveFieldMatrixCases": 84,
+  "getterAndCoercionFaultControl": true,
+  "latestNormalizerReceipt": "provider-proposal-tests-expanded.txt"
+}

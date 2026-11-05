@@ -1,0 +1,135 @@
+{
+  "source": "81630729c6c3c3efb65c2cada5e228dc3e071cdc",
+  "previousQualifiedSource": "92b3ab35ac1059216685dffef42c89564658246b",
+  "sourceBodies": [
+    {
+      "path": "sdk/server/auth-provider-runtime.mjs",
+      "function": "defaultAuthProvider",
+      "bodySha256": "074b292d22cb2bcc248bb7220c46920f14a4d4cae26ea78139461b5e0cc30e26",
+      "unchangedFromPreviousQualifiedSource": true
+    },
+    {
+      "path": "sdk/server/identity-runtime.mjs",
+      "function": "createAuthoredProjectIdentityProvider",
+      "bodySha256": "39e6070917752752c99221f2a8f6c57036b8975c00589fb9d052de83388341da",
+      "unchangedFromPreviousQualifiedSource": true
+    }
+  ],
+  "observations": [
+    {
+      "label": "active",
+      "activeCredentialType": true,
+      "activeFieldCounts": {
+        "identifier": 1,
+        "secret": 1,
+        "actor": 1
+      },
+      "defaultProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    },
+    {
+      "label": "secret-revoked",
+      "activeCredentialType": true,
+      "activeFieldCounts": {
+        "identifier": 1,
+        "secret": 0,
+        "actor": 1
+      },
+      "defaultProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    },
+    {
+      "label": "actor-revoked",
+      "activeCredentialType": true,
+      "activeFieldCounts": {
+        "identifier": 1,
+        "secret": 1,
+        "actor": 0
+      },
+      "defaultProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    },
+    {
+      "label": "identifier-revoked",
+      "activeCredentialType": true,
+      "activeFieldCounts": {
+        "identifier": 0,
+        "secret": 1,
+        "actor": 1
+      },
+      "defaultProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    },
+    {
+      "label": "credential-type-revoked",
+      "activeCredentialType": false,
+      "activeFieldCounts": {
+        "identifier": 1,
+        "secret": 1,
+        "actor": 1
+      },
+      "defaultProvider": {
+        "originalAccepted": false,
+        "replacementAccepted": false
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    },
+    {
+      "label": "secret-replaced",
+      "activeCredentialType": true,
+      "activeFieldCounts": {
+        "identifier": 1,
+        "secret": 1,
+        "actor": 1
+      },
+      "defaultProvider": {
+        "originalAccepted": false,
+        "replacementAccepted": true
+      },
+      "authoredProjectProvider": {
+        "originalAccepted": true,
+        "replacementAccepted": false
+      }
+    }
+  ],
+  "status": "open-next-A2-provider-selection-obligation",
+  "newMigrationRegression": false,
+  "causalFamilies": [
+    "historical credential fields versus active facts",
+    "authored project raw first-match projection"
+  ],
+  "evidence": "Same-run local engineering observations using synthetic development credentials",
+  "scope": "Two current development-provider projections disagree about revocation/replacement. This does not assert production deployment or policy authority beyond the observed APIs.",
+  "next": "Author and qualify explicit active credential selection, ambiguity/refusal and replacement semantics, preserve valid defaults and diagnostic/effect order, then carry the whole provider/claim migration through source and managed qualification.",
+  "realAccountsUsed": false,
+  "sourceModified": false,
+  "serverStarted": false,
+  "databaseOpened": false
+}

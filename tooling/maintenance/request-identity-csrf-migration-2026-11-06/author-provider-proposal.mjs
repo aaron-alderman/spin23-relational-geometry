@@ -1,0 +1,26 @@
+// Preparation only: emits a policy beside this audit, never into the pinned SDK.
+import {writeFileSync} from 'node:fs';
+const lit=value=>({kind:'typedLiteral',valueType:value===null?'null':typeof value,value:String(value)}),input=surface=>({kind:'input',surface}),field=(object,key)=>({kind:'field',object,field:key}),eq=(left,right)=>({kind:'strictEq',left,right}),choose=(condition,yes,no)=>({kind:'if',condition,then:yes,else:no}),not=value=>choose(value,lit(false),lit(true)),and=(...values)=>({kind:'and',entries:values.map(value=>({value}))}),list=values=>({kind:'list',entries:values.map(value=>({value}))}),record=entries=>({kind:'record',entries:Object.entries(entries).map(([name,value])=>({name,value}))});
+const state=input('state'),data=field(state,'data'),value=name=>field(data,name),request=input('request'),action=input('action');
+const raw=input('truthyInput'),type={kind:'typeOf',value:raw},truthy=expr=>({kind:'withInputSurface',surface:'truthyInput',value:expr,in:{ref:'truthy'}}),fallback=(expr,otherwise)=>choose(truthy(expr),expr,otherwise);
+const roots={truthy:and(not(eq(type,lit('undefined'))),not(eq(raw,lit(null))),not(eq(raw,lit(false))),not(eq(raw,lit(0))),not(eq(raw,lit(''))),eq(raw,raw),choose(eq(type,lit('bigint')),not(eq({kind:'toString',value:raw},lit('0'))),lit(true)))};
+const call=(port,payload,save,next)=>record({kind:lit('call'),port:lit(port),input:payload,save:lit(save),next:lit(next)}),read=(name,save,next)=>call('read',record({receiver:value('provider'),key:lit(name)}),save,next),text=(expr,save,next,trim=true)=>call(trim?'textTrim':'text',record({value:expr}),save,next);
+const result=claims=>record({kind:lit('return'),value:record(Object.fromEntries(['issuer','subject','principal','identifier','kind','assurance'].map(k=>[k,value(k)]).concat([['claims',claims]])))});
+roots.initial=record({root:choose(and(eq({kind:'typeOf',value:field(request,'provider')},lit('object')),not(eq(field(request,'provider'),lit(null)))),lit('issuer.read'),lit('return-null')),data:record({provider:field(request,'provider'),defaultIssuer:field(request,'defaultIssuer')})});
+roots.resume=record({root:field(action,'next'),data:{kind:'mergeRecords',left:data,right:{kind:'recordFromEntries',value:list([list([field(action,'save'),input('observation')])])}}});
+roots['return-null']=record({kind:lit('return'),value:lit(null)});
+roots['issuer.read']=read('issuer','issuerRaw','issuer.text');roots['issuer.text']=text(fallback(value('issuerRaw'),fallback(value('defaultIssuer'),lit(''))),'issuer','subject.read');
+roots['subject.read']=read('subject','subjectRaw','subject.select');roots['subject.select']=choose(truthy(value('subjectRaw')),text(value('subjectRaw'),'subject','principal.read'),read('identifier','subjectFallback','subject.fallback'));
+roots['subject.fallback']=text(fallback(value('subjectFallback'),lit('')),'subject','principal.read');
+roots['principal.read']=read('principal','principalRaw','principal.select');roots['principal.select']=choose(truthy(value('principalRaw')),text(value('principalRaw'),'principal','identifier.read'),read('actor','actorFallback','principal.fallback'));
+roots['principal.fallback']=text(fallback(value('actorFallback'),lit('')),'principal','identifier.read');
+roots['identifier.read']=read('identifier','identifierRaw','identifier.text');roots['identifier.text']=text(fallback(value('identifierRaw'),lit('')),'identifier','kind.read');
+roots['kind.read']=read('kind','kindRaw','kind.text');roots['kind.text']=text(fallback(value('kindRaw'),lit('user')),'kind','validate');
+const valid=and(not(eq(value('issuer'),lit(''))),not(eq(value('subject'),lit(''))),{kind:'matches',value:value('principal'),pattern:'^[A-Za-z0-9._:-]{1,160}$',flags:'u'},{kind:'includes',value:list(['user','agent','service'].map(lit)),search:value('kind')});
+roots.validate=choose(valid,read('assurance','assuranceRaw','assurance.text'),roots['return-null']);
+roots['assurance.text']=text(fallback(value('assuranceRaw'),lit('credential')),'assurance','claims.first',false);
+roots['claims.first']=read('claims','claimsFirst','claims.truthy');roots['claims.truthy']=choose(truthy(value('claimsFirst')),read('claims','claimsSecond','claims.type'),result(record({})));
+roots['claims.type']=choose(eq({kind:'typeOf',value:value('claimsSecond')},lit('object')),read('claims','claimsThird','claims.array'),result(record({})));
+roots['claims.array']=choose({kind:'isArray',value:value('claimsThird')},result(record({})),read('claims','claimsFourth','claims.clone'));
+roots['claims.clone']=call('clone',record({value:value('claimsFourth')}),'claims','complete');roots.complete=result(value('claims'));
+writeFileSync(new URL('provider-normalization.proposal.json',import.meta.url),JSON.stringify({protocol:'sourcery/authored-policy.v1',fields:{},expressions:{profile:'sourcery/expression-reduction-values/1',roots}},null,2)+'\n');console.log(JSON.stringify({proposalOnly:true,roots:Object.keys(roots).length,pinnedSourceModified:false}));

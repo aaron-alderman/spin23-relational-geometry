@@ -1,0 +1,6 @@
+--- a/sdk/server/security-runtime.mjs
++++ b/sdk/server/security-runtime.mjs
+@@ -468,1 +468,2 @@
+-  return BODY_LIMITS[authDecisionPolicy.evaluate("csrfBodyLimitName", { routeAs: route && typeof route === "object" ? String(route.as || "") : "" })];
++  const authoredKind = route && typeof route === "object" ? route.as : undefined;
++  return BODY_LIMITS[authDecisionPolicy.evaluate("csrfBodyLimitName", { routeAs: typeof authoredKind === "string" ? authoredKind : "" })];

@@ -1,0 +1,15 @@
+import * as vm from 'node:vm';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {FactStore} from '../../../.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs';
+import {createServerAuthRuntime} from '../../../.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs';
+const root=resolve('.platform-reconstitution/sourcery-platform-reconciled'),previous='92b3ab35ac1059216685dffef42c89564658246b',path='sdk/server/auth-provider-runtime.mjs',source=execFileSync('git',['-c','safe.directory='+root,'-C',root,'show',previous+':'+path]),identifier=pathToFileURL(resolve(root,path)).href;
+const module=new vm.SourceTextModule(source.toString(),{identifier});await module.link(async specifier=>{const namespace=await import(specifier.startsWith('.')?new URL(specifier,identifier).href:specifier),names=Object.keys(namespace);return new vm.SyntheticModule(names,function(){for(const key of names)this.setExport(key,namespace[key]);});});await module.evaluate();
+const failure={principal:'alice'},make=async create=>{let calls=0;const runtime=await create({prog:FactStore.from([{s:'alice',p:'isa',o:'Actor',pol:'is'}]),authUi:{unauthenticatedActor:'guest'},forwardedIdentityVerifier:{verifyRequest(){calls++;throw failure;}},now:()=>10000});return {runtime,calls:()=>calls};},before=await make(module.namespace.createServerAuthRuntime),after=await make(createServerAuthRuntime),request={headers:{}};
+assert.throws(()=>before.runtime.resolveActor(request),e=>e===failure);assert.equal(before.runtime.resolveActor(request),'alice');assert.equal(before.runtime.currentAuthSession(request).authenticated,true);assert.equal(before.calls(),1);
+for(const operation of [()=>after.runtime.resolveActor(request),()=>after.runtime.currentAuthSession(request),()=>after.runtime.assertRequestIdentity(request)])assert.throws(operation,e=>e===failure);assert.equal(after.calls(),1);
+const result={previous,path,sourceSha256:createHash('sha256').update(source).digest('hex'),sourceBodyUnmodified:true,imports:'Exact predecessor source body linked to current dependency namespaces; not a transitive predecessor checkout seal',firstFailurePreservedBefore:true,secondLookupAuthenticatedBefore:true,repeatedFailuresPreservedNow:true,verifierCallsBefore:before.calls(),verifierCallsNow:after.calls(),causalFamily:'request verifier failure/result cache distinction',evidence:'same-run local engineering negative control',computerUsePaused:true};writeFileSync(new URL('predecessor-control-results.json',import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
