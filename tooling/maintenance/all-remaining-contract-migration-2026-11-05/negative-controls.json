@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "sources": [
+    {
+      "path": "sdk/server/authorship-runtime.mjs",
+      "commit": "6ad050df1b48a689f4cddc49ed9ed111997f02e9",
+      "sha256": "6ddba2d1d59f044a94d167e902f744242c09b4a198350cfd8e8afe38716f0a9b",
+      "currentSha256": "d12a741df54a252f03b3fde952b28fe92872e631ee78ac86761d37ed7453fca6"
+    },
+    {
+      "path": "sdk/authoring-agent/protocol.mjs",
+      "commit": "6ad050df1b48a689f4cddc49ed9ed111997f02e9",
+      "sha256": "0cab67fb0f28d686f2ecd5e23b8e1f037155e41965170d494bbd20117b839463",
+      "currentSha256": "96271465d739ef519a3eb87d0600ae61d0da75ce96460b6697751134dd720b13"
+    },
+    {
+      "path": "sdk/core/adapter-transform-runtime.mjs",
+      "commit": "6ad050df1b48a689f4cddc49ed9ed111997f02e9",
+      "sha256": "ad878420332e34a6eeb94f148c93663929709b9d5df597773efd58f3d3c8f0dc",
+      "currentSha256": "073eeead73a9c4ee532ffc1459b54996521f927d445a7bfe49ca1deb4cba97fd"
+    }
+  ],
+  "causalFamilies": 3,
+  "authorship": {
+    "historicalCollision": true,
+    "currentNulRefusal": true,
+    "ordinaryIdsUnchanged": true
+  },
+  "protocol": {
+    "historical": {
+      "name": "TypeError"
+    },
+    "current": {
+      "name": "AgentProtocolError",
+      "code": "sourcery-agent-capability-missing",
+      "statusCode": 404
+    }
+  },
+  "adapter": {
+    "historicalInheritedExecutors": 3,
+    "currentAbsent": 3
+  },
+  "scope": "Same-run predecessor controls for three defects; repeated inputs and manifestations are not independent confirmations."
+}

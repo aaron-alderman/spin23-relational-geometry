@@ -1,0 +1,336 @@
+TAP version 13
+# sourcery-agent serve [--state-root <path>] [--discovery <path>] [--port <number>]
+# sourcery-agent register --workspace <path> --workspace-id <id> --adapter <relative.mjs> --slot <slot>=<remote>
+# sourcery-agent list [--state-root <path>]
+# Subtest: module.platformServiceCustody: canonical plans preserve ordering-independent identity and distinguish changed plans
+ok 1 - module.platformServiceCustody: canonical plans preserve ordering-independent identity and distinguish changed plans
+  ---
+  duration_ms: 57.6022
+  type: 'test'
+  ...
+# Subtest: module.authorshipEnvelope: automation and interactive envelopes retain explicit identities and immutable attribution
+ok 2 - module.authorshipEnvelope: automation and interactive envelopes retain explicit identities and immutable attribution
+  ---
+  duration_ms: 7.518
+  type: 'test'
+  ...
+# Subtest: module.authorshipEvidence: ordinary event IDs remain compatible and embedded delimiters refuse ambiguous identity
+not ok 3 - module.authorshipEvidence: ordinary event IDs remain compatible and embedded delimiters refuse ambiguous identity
+  ---
+  duration_ms: 1.8601
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:13:498)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.deploymentSelfDescription: source revision and byte accounting remain distinct from admission
+ok 4 - module.deploymentSelfDescription: source revision and byte accounting remain distinct from admission
+  ---
+  duration_ms: 39.9164
+  type: 'test'
+  ...
+# Subtest: module.runtimeEnvelope: derivation retains attribution and correlation but links a new immutable envelope
+ok 5 - module.runtimeEnvelope: derivation retains attribution and correlation but links a new immutable envelope
+  ---
+  duration_ms: 23.4192
+  type: 'test'
+  ...
+# Subtest: module.platformTestRuntime: an explicit empty test programme compiles and runs without inventing cases
+ok 6 - module.platformTestRuntime: an explicit empty test programme compiles and runs without inventing cases
+  ---
+  duration_ms: 9.4213
+  type: 'test'
+  ...
+# Subtest: module.deployTestAdmission: failed steps determine the first diagnostic and summary fields preserve explicit counts
+ok 7 - module.deployTestAdmission: failed steps determine the first diagnostic and summary fields preserve explicit counts
+  ---
+  duration_ms: 3.7638
+  type: 'test'
+  ...
+# Subtest: module.authoringAgentProtocol: installed capabilities normalize and inherited names receive typed missing-capability refusals
+not ok 8 - module.authoringAgentProtocol: installed capabilities normalize and inherited names receive typed missing-capability refusals
+  ---
+  duration_ms: 39.331
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:20:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The validation function is expected to return "true". Received false
+    
+    Caught error:
+    
+    TypeError: Cannot read properties of undefined (reading 'has')
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:20:415)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.witnessArchive: a checked archive segment validates bytes and detects corruption
+ok 9 - module.witnessArchive: a checked archive segment validates bytes and detects corruption
+  ---
+  duration_ms: 4.4178
+  type: 'test'
+  ...
+# Subtest: module.mutationWitnessStore: append reload and bounded hot state retain full history and immutable records
+ok 10 - module.mutationWitnessStore: append reload and bounded hot state retain full history and immutable records
+  ---
+  duration_ms: 42.825
+  type: 'test'
+  ...
+# Subtest: module.authoringWorkspaceRegistry: an empty owned registry refuses an unregistered deployment target
+ok 11 - module.authoringWorkspaceRegistry: an empty owned registry refuses an unregistered deployment target
+  ---
+  duration_ms: 4.6532
+  type: 'test'
+  ...
+# Subtest: module.authoringAgentRuntime: explicit discovery and state roots resolve without starting a server
+not ok 12 - module.authoringAgentRuntime: explicit discovery and state roots resolve without starting a server
+  ---
+  duration_ms: 178.8749
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:24:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'undefined'
+    - 'string'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'string'
+  actual: 'undefined'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:24:245)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.authoringAgentCli: help returns successfully without deployment effects
+ok 13 - module.authoringAgentCli: help returns successfully without deployment effects
+  ---
+  duration_ms: 5.7809
+  type: 'test'
+  ...
+# Subtest: module.authoringProjectExecutor: invalid timeout refuses before creating a worker
+ok 14 - module.authoringProjectExecutor: invalid timeout refuses before creating a worker
+  ---
+  duration_ms: 1.296
+  type: 'test'
+  ...
+# Subtest: module.authoringDeploymentWorker: the actual worker handles an already-aborted request without executing deployment
+not ok 15 - module.authoringDeploymentWorker: the actual worker handles an already-aborted request without executing deployment
+  ---
+  duration_ms: 1.1445
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:27:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The validation function is expected to return "true". Received false
+    
+    Caught error:
+    
+    Error: Sourcery agent stopped the project deployment.
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  stack: |-
+    async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:27:249)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.platformAppMcpSurface: unknown author and inspect tool names refuse without invoking deployment
+ok 16 - module.platformAppMcpSurface: unknown author and inspect tool names refuse without invoking deployment
+  ---
+  duration_ms: 118.6601
+  type: 'test'
+  ...
+# Subtest: module.statisticsCoreRuntime: explicit finite samples preserve moments quantiles and caller order
+not ok 17 - module.statisticsCoreRuntime: explicit finite samples preserve moments quantiles and caller order
+  ---
+  duration_ms: 52.3657
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:29:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    NaN !== null
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: ~
+  actual: NaN
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:29:309)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.htmlRelRuntime: HTML parsing emission and JSON IR round trip preserve text
+not ok 18 - module.htmlRelRuntime: HTML parsing emission and JSON IR round trip preserve text
+  ---
+  duration_ms: 40.5729
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /Hello &amp; world/. Input:
+    
+    '<p>Hello &amp;amp; world</p>'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: '<p>Hello &amp;amp; world</p>'
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:30:263)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.htmlRelProjectionOptions: explicit projection options preserve text and reject missing roots
+not ok 19 - module.htmlRelProjectionOptions: explicit projection options preserve text and reject missing roots
+  ---
+  duration_ms: 1.4728
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:31:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:31:178)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.htmlRelProjectionStoreRuntime: projection reads canonical fact stores without mutating their facts
+ok 20 - module.htmlRelProjectionStoreRuntime: projection reads canonical fact stores without mutating their facts
+  ---
+  duration_ms: 0.7069
+  type: 'test'
+  ...
+# Subtest: module.postgresRelRuntime: extraction validates authored connection identity before any client effects
+ok 21 - module.postgresRelRuntime: extraction validates authored connection identity before any client effects
+  ---
+  duration_ms: 9.9165
+  type: 'test'
+  ...
+# Subtest: module.resourceWorkbenchShellRuntime: action gates preserve readable writable and save authority separately
+ok 22 - module.resourceWorkbenchShellRuntime: action gates preserve readable writable and save authority separately
+  ---
+  duration_ms: 48.5438
+  type: 'test'
+  ...
+# Subtest: module.platformFileManagerRuntime: entry moves and tag replacements preserve declared fact coordinates
+ok 23 - module.platformFileManagerRuntime: entry moves and tag replacements preserve declared fact coordinates
+  ---
+  duration_ms: 4.6249
+  type: 'test'
+  ...
+# Subtest: module.layoutKitchenSinkRuntime: cancellation is effect-free and invalid split coordinates refuse
+not ok 24 - module.layoutKitchenSinkRuntime: cancellation is effect-free and invalid split coordinates refuse
+  ---
+  duration_ms: 68.362
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:36:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+    + {
+    +   allowed: false,
+    +   message: '',
+    +   outcome: '',
+    +   preview: null,
+    +   proposal: null,
+    +   sourceRegion: '',
+    +   state: 'blocked',
+    +   targetRegion: ''
+    + }
+    - []
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual:
+    sourceRegion: ''
+    targetRegion: ''
+    outcome: ''
+    state: 'blocked'
+    allowed: false
+    message: ''
+    proposal: ~
+    preview: ~
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:36:187)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.markdownDocumentRendererRuntime: modes normalize and draft clones keep source ownership
+not ok 25 - module.markdownDocumentRendererRuntime: modes normalize and draft clones keep source ownership
+  ---
+  duration_ms: 4.5243
+  type: 'test'
+  location: 'C:\\Users\\aaron\\grand-theory\\.platform-reconstitution\\sourcery-platform-reconciled\\assurance\\witnesses\\platform-boundaries.test.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: 'Markdown renderer mode must be standard, author, inspect, or design, got unknown.'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.normalizeMarkdownRendererMode (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/markdown-document-renderer/index.mjs:188:9)
+    TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/witnesses/platform-boundaries.test.mjs:37:266)
+    async Test.run (node:internal/test_runner/test:1409:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+  ...
+# Subtest: module.sharedProjectionRuntime: snapshot network and save refusals preserve exact request boundaries
+ok 26 - module.sharedProjectionRuntime: snapshot network and save refusals preserve exact request boundaries
+  ---
+  duration_ms: 29.3266
+  type: 'test'
+  ...
+# Subtest: module.admissionCompilationPolicy: optional absence remains explicit and required absence refuses
+ok 27 - module.admissionCompilationPolicy: optional absence remains explicit and required absence refuses
+  ---
+  duration_ms: 0.5966
+  type: 'test'
+  ...
+# Subtest: module.projectLoading: project diagnostics preserve issue text and typed validation identity
+ok 28 - module.projectLoading: project diagnostics preserve issue text and typed validation identity
+  ---
+  duration_ms: 0.7779
+  type: 'test'
+  ...
+# Subtest: module.sdkSurface: deployment diagnostics retain an explicit fallback and issue message
+ok 29 - module.sdkSurface: deployment diagnostics retain an explicit fallback and issue message
+  ---
+  duration_ms: 25.6243
+  type: 'test'
+  ...
+# Subtest: module.miscPluginRuntime: spatial motion hashes normalize stable canonical traces
+ok 30 - module.miscPluginRuntime: spatial motion hashes normalize stable canonical traces
+  ---
+  duration_ms: 151.5706
+  type: 'test'
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 21
+# fail 9
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1106.3026

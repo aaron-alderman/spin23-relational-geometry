@@ -1,0 +1,161 @@
+{
+  "protocol": "sourcery/four-layer-assembly-proof.v1",
+  "core": {
+    "repository": "sourcery-core",
+    "authority": {
+      "referenceHash": "4e3cb051d530dd1eb0ea73b8e707a035b29f34f3debc560ccdbba4f0701f3055",
+      "admissionHash": "c2b652a9e6465373a88ce5d940fffd5beb2d6873de77a7c800ff6cf970df42a9",
+      "kernelRoot": "32d640311bd7ccdb0ecbaecd189226ead933a61c98573700c9689eb00c67599c",
+      "coreBundleHash": "2ad277f53b567a34633f4e3f61233fc1cfc4eb499f46593c378a2f4407e09e1b"
+    }
+  },
+  "projection": {
+    "protocol": "sourcery/layer-composition-proof.v1",
+    "referenceHash": "4e3cb051d530dd1eb0ea73b8e707a035b29f34f3debc560ccdbba4f0701f3055",
+    "fileCount": 14129,
+    "layerDigests": [
+      {
+        "repository": "sourcery-platform",
+        "layerDigest": "797e802fe011120072cfceae7862ac5730e1deab9f197212ff78aae999ffc278"
+      },
+      {
+        "repository": "sourcery-capabilities",
+        "layerDigest": "f2dddfd0e5eb5677d769ae77ad009a17aebbbc56abad9a55442c5222fb3d0fe4"
+      },
+      {
+        "repository": "sourcery-applications",
+        "layerDigest": "24d88a025afcaed00fee5002522c3ed8d20de4d45658e35a76c23166b2c242c1"
+      }
+    ],
+    "projectionAuthority": false,
+    "proofHash": "3f91534e92ed485899171894d60269dc0dd208340d14a8e1df9a7bc8b3452af2",
+    "verifications": [
+      {
+        "repository": "sourcery-platform",
+        "layerDigest": "797e802fe011120072cfceae7862ac5730e1deab9f197212ff78aae999ffc278",
+        "verifiedObjectCount": 1913,
+        "valid": true
+      },
+      {
+        "repository": "sourcery-capabilities",
+        "layerDigest": "f2dddfd0e5eb5677d769ae77ad009a17aebbbc56abad9a55442c5222fb3d0fe4",
+        "verifiedObjectCount": 2507,
+        "valid": true
+      },
+      {
+        "repository": "sourcery-applications",
+        "layerDigest": "24d88a025afcaed00fee5002522c3ed8d20de4d45658e35a76c23166b2c242c1",
+        "verifiedObjectCount": 9709,
+        "valid": true
+      }
+    ]
+  },
+  "platformRuntime": {
+    "protocol": "sourcery/platform-runtime-payload-proof.v2",
+    "payloadHash": "1e31550b1755811d3559954bc4b8cab7e35d2848c60a8b4150380e74372714d9",
+    "fileCount": 873,
+    "byteCount": 12648491,
+    "dependencies": [
+      {
+        "name": "acorn",
+        "version": "8.15.0",
+        "fileCount": 10,
+        "payloadHash": "a4f0fbd5a8d1a97c2c8678797395a9b23075949ee5e4330f3e42d28ee62619ba"
+      },
+      {
+        "name": "sharp",
+        "version": "0.35.4",
+        "fileCount": 47,
+        "payloadHash": "698278f60ae450c5170b8fca6b358c4258b1dbfae0d3d71d889ea1a67a49190e"
+      },
+      {
+        "name": "@img/colour",
+        "version": "1.1.0",
+        "fileCount": 6,
+        "payloadHash": "37c78ec26cef61d38d8ee554c9cc51b3f8c4d05a3657df028f03dc7ae79576b7"
+      },
+      {
+        "name": "detect-libc",
+        "version": "2.1.2",
+        "fileCount": 8,
+        "payloadHash": "3e5c4a6e6dc8f3c8bde21659d76751a231070122183ac568b29c0e02deef20d5"
+      },
+      {
+        "name": "semver",
+        "version": "7.8.5",
+        "fileCount": 53,
+        "payloadHash": "caf0511f368097fe5bfb0643f6dd41c190769abb814fcd2e43d4ebde82694ef3"
+      },
+      {
+        "name": "@img/sharp-linux-x64",
+        "version": "0.35.4",
+        "fileCount": 5,
+        "payloadHash": "97c388ff1b947d418b41e1b025a7c36b666d5f76f3b44f52b8c28be18eb33fb2"
+      },
+      {
+        "name": "@img/sharp-libvips-linux-x64",
+        "version": "1.3.3",
+        "fileCount": 6,
+        "payloadHash": "daecae2f62b0dfabee82269ce7989e1a5d8211d90e3d1d024c124369a3207e5e"
+      },
+      {
+        "name": "terser",
+        "availability": "optional-not-admitted",
+        "loadMode": "dynamic-only"
+      },
+      {
+        "name": "playwright",
+        "availability": "optional-not-admitted",
+        "loadMode": "dynamic-only"
+      },
+      {
+        "name": "@sourcerytech/expression-algebra",
+        "fileCount": 179,
+        "payloadHash": "ff2dc98d4675ae7709961cf008a267b962b36306ba6b42a34f6d31be30b8b26d"
+      },
+      {
+        "name": "@sourcerytech/claimipedia-core",
+        "fileCount": 206,
+        "payloadHash": "fbd1d26474fd66e7ce765ad867b2e9f3bc8e7a883b9b4c6f1d5430675229adaa"
+      }
+    ],
+    "importClosure": {
+      "relativeImports": "resolved",
+      "semanticResources": "resolved",
+      "bareDependencies": [
+        "@sourcerytech/expression-algebra",
+        "playwright",
+        "sharp",
+        "terser"
+      ],
+      "packageExports": "resolved",
+      "consumerEntrypoints": 72,
+      "consumerBareDependencies": 2,
+      "reachableFiles": 393,
+      "reachableSemanticFiles": 36
+    },
+    "valid": true
+  },
+  "programmeCompletion": {
+    "protocol": "sourcery/integrated-programme-completion-proof.v1",
+    "auditHash": "ff40db0e8c1dd73e2ea6f5b54f438c2305b3f42bfd0c240bd720b72a4e986cf8",
+    "catalogueHash": "2e8b43f4fa9520454eb5da3b5695ed82b4ff1925c32b7d93a1599c3dfd70f93d",
+    "claimipediaSourceHash": "85fdf28462406dcb6ef5c882e101dc4473936600b872829c55d386477b0c42ed",
+    "integrationEvidenceRef": "sha256:17bf80023b12c9e5a1876e469655807e19c005e8fda3b9a552c05de53f3e6f8b",
+    "projectionHash": "6a48a4363b79f03dc4bf453f7857dee8c86f3bbb2c6d20394e0869599ad677ba",
+    "status": "complete"
+  },
+  "applicationAuthority": false,
+  "verification": {
+    "observedAt": "2026-11-05T10:08:34.196Z",
+    "sourceCommit": "213b942f94037f62c728849c1c70e0584c868179",
+    "verifierSha256": "2a5db851f5e913d181ef634baf859134fb39f97dbdb70b0fe1964336ad7b40ac",
+    "staticDependencyEdges": [
+      "import",
+      "export-from",
+      "export-all-from"
+    ],
+    "sourceAuthority": false,
+    "applicationAuthority": false
+  }
+}
