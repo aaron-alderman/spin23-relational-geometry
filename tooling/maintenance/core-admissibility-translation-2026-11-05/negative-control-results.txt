@@ -1,0 +1,293 @@
+✖ a newly appended documentation reference is validated when the same fact array is reused (3.2041ms)
+✖ replacement of a scalar fact is visible on the next validation (0.2985ms)
+✖ removal of the referenced subject invalidates the next documentation validation (0.2432ms)
+✖ fact-coordinate changes inside a frozen outer array do not reuse a stale declaration index (0.2079ms)
+✖ replacement of an interface descriptor updates its allowed-value validation plan (1.9852ms)
+✖ mutation of a caller-owned allowed-value array updates validation (0.5633ms)
+✖ replacement of slot cardinality is observed on the next validation (0.3546ms)
+✔ reusing unchanged inputs preserves results without modifying caller-owned facts (0.5365ms)
+✔ unchanged interface inputs retain the same compiled validation plan (0.2178ms)
+✖ changed MIME-slot schema dependency invalidates a reused interface plan (0.6165ms)
+✖ allowed-policy diagnostic provenance follows the current schema evidence (0.5308ms)
+✔ large allowed vocabularies compile and remain reusable without argument-count overflow (70.8947ms)
+✖ a failed declaration validation releases its invocation index before a later call (1.2575ms)
+✖ a profiling callback that changes facts between phases does not retain a previous index (3.0867ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 3
+ℹ fail 11
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 212.9848
+
+✖ failing tests:
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:5:1
+✖ a newly appended documentation reference is validated when the same fact array is reused (3.2041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:5:310)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:6:1
+✖ replacement of a scalar fact is visible on the next validation (0.2985ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:6:226)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:7:1
+✖ removal of the referenced subject invalidates the next documentation validation (0.2432ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:7:212)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:8:1
+✖ fact-coordinate changes inside a frozen outer array do not reuse a stale declaration index (0.2079ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:8:305)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:11:1
+✖ replacement of an interface descriptor updates its allowed-value validation plan (1.9852ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:11:411)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:12:1
+✖ mutation of a caller-owned allowed-value array updates validation (0.5633ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'invalid-allowed-value'
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:12:346)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'invalid-allowed-value',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:13:1
+✖ replacement of slot cardinality is observed on the next validation (0.3546ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:13:356)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:17:1
+✖ changed MIME-slot schema dependency invalidates a reused interface plan (0.6165ms)
+  AssertionError [ERR_ASSERTION]: Expected "actual" not to be reference-equal to "expected":
+  
+  {
+    byType: Map(1) {
+      'Record' => {
+        allowedPredicates: Set(2) {
+          'isa',
+          'payload'
+        },
+        iface: {
+          mode: 'closed',
+          slots: [
+            {
+              allowed: [],
+              cardinality: 'optional',
+              mimeSlot: 'mimeSlot',
+              predicate: 'payload',
+              subject: 'blobSlot',
+              valueType: 'blob'
+            }
+          ],
+          subject: 'iface',
+          type: 'Record'
+        },
+        slotPlans: [
+          {
+            allowedIssues: [],
+            allowedSet: null,
+            mimePredicate: 'contentType',
+            slot: {
+              allowed: [],
+              cardinality: 'optional',
+              mimeSlot: 'mimeSlot',
+              predicate: 'payload',
+              subject: 'blobSlot',
+              valueType: 'blob'
+            }
+          }
+        ]
+      }
+    }
+  }
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:17:477)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { byType: Map(1) { 'Record' => [Object] } },
+    expected: { byType: Map(1) { 'Record' => [Object] } },
+    operator: 'notStrictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:18:1
+✖ allowed-policy diagnostic provenance follows the current schema evidence (0.5308ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'first.rel'
+  - 'second.rel'
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:18:598)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'first.rel',
+    expected: 'second.rel',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:22:1
+✖ a failed declaration validation releases its invocation index before a later call (1.2575ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:22:436)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\negative-control.test.mjs:24:1
+✖ a profiling callback that changes facts between phases does not retain a previous index (3.0867ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/negative-control.test.mjs:24:289)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: /must reference a Steward/,
+    operator: 'throws',
+    diff: 'simple'
+  }

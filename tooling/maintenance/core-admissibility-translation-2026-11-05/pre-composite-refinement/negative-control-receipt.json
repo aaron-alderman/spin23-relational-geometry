@@ -1,0 +1,30 @@
+{
+  "revision": "c1fd716c0ad1bc0fd9f4d856eb13f0024a666d19",
+  "inputs": [
+    {
+      "file": "sdk/core/admissibility/schema.mjs",
+      "revision": "c1fd716c0ad1bc0fd9f4d856eb13f0024a666d19",
+      "originalSha256": "8ec494d45d08b11ccbaa4d9e823d300fc7f20153cc95670767e55497ece42371",
+      "adaptedSha256": "f26ee283fc0edb491c9cbd12b389984faa4e829c0198ff9a0a164d7b541263bb",
+      "adaptation": "Expose the existing schema plan helper and rebind relative imports only; historical owner function bodies retained."
+    },
+    {
+      "file": "sdk/core/admissibility/declarations.mjs",
+      "revision": "c1fd716c0ad1bc0fd9f4d856eb13f0024a666d19",
+      "originalSha256": "11cf31ed40aff3cec0c6b1ce775eefb51e66f15268c9da25230ea4d36073f946",
+      "adaptedSha256": "9075ee16b659af238e0cd88c93b072b4602af545bc9a9398760ad4397a01ac81",
+      "adaptation": "Expose the existing schema plan helper and rebind relative imports only; historical owner function bodies retained."
+    }
+  ],
+  "exitCode": 1,
+  "cases": 13,
+  "expectedFailures": 10,
+  "unchangedControlsPassed": 3,
+  "outputSha256": "e4c27eb9e12c2e61db79bd5b354dba0e295b88380bef841070d5944b0146b345",
+  "causalEvidenceFamilies": [
+    "mutable declaration array cache lifetime",
+    "mutable interface map and schema dependency cache lifetime"
+  ],
+  "independentEvidenceFamilies": 2,
+  "scientificAcceptance": false
+}

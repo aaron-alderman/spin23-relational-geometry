@@ -1,0 +1,165 @@
+✖ a newly appended documentation reference is validated when the same fact array is reused (2.4158ms)
+✖ replacement of a scalar fact is visible on the next validation (0.285ms)
+✖ removal of the referenced subject invalidates the next documentation validation (1.0366ms)
+✖ fact-coordinate changes inside a frozen outer array do not reuse a stale declaration index (0.245ms)
+✖ replacement of an interface descriptor updates its allowed-value validation plan (1.9143ms)
+✖ mutation of a caller-owned allowed-value array updates validation (0.5727ms)
+✖ replacement of slot cardinality is observed on the next validation (0.3743ms)
+✔ reusing unchanged inputs preserves results without modifying caller-owned facts (0.5379ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 1
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 373.3597
+
+✖ failing tests:
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:5:1
+✖ a newly appended documentation reference is validated when the same fact array is reused (2.4158ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:5:310)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:6:1
+✖ replacement of a scalar fact is visible on the next validation (0.285ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:6:226)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:7:1
+✖ removal of the referenced subject invalidates the next documentation validation (1.0366ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:7:212)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:8:1
+✖ fact-coordinate changes inside a frozen outer array do not reuse a stale declaration index (0.245ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:8:305)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:11:1
+✖ replacement of an interface descriptor updates its allowed-value validation plan (1.9143ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:11:411)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:12:1
+✖ mutation of a caller-owned allowed-value array updates validation (0.5727ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'invalid-allowed-value'
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:12:346)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'invalid-allowed-value',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\core-admissibility-translation-2026-11-05\cache-lifetime.test.mjs:13:1
+✖ replacement of slot cardinality is observed on the next validation (0.3743ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  0 !== 1
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/core-admissibility-translation-2026-11-05/cache-lifetime.test.mjs:13:356)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

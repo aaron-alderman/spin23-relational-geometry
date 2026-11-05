@@ -1,0 +1,47 @@
+{
+  "scope": "Same-process diagnostic benchmark; fresh outer fact arrays per admission, identical 5000-record inputs and assertions. Current and previous owner implementations. Timing is not independent evidence.",
+  "node": "v24.22.1",
+  "results": [
+    {
+      "name": "previous",
+      "rounds": 12,
+      "facts": 5000,
+      "medianMs": 2.859649999999995,
+      "timesMs": [
+        5.886099999999999,
+        2.4424000000000063,
+        2.89909999999999,
+        6.106499999999997,
+        5.936499999999995,
+        2.1531999999999982,
+        2.0862999999999943,
+        2.446099999999987,
+        2.756699999999995,
+        2.8202,
+        3.1666000000000025,
+        14.90079999999999
+      ]
+    },
+    {
+      "name": "current",
+      "rounds": 12,
+      "facts": 5000,
+      "medianMs": 2.1277999999999935,
+      "timesMs": [
+        2.233399999999989,
+        2.1351999999999975,
+        2.1203999999999894,
+        2.0200000000000102,
+        1.8491999999999962,
+        1.8956000000000017,
+        1.8783999999999992,
+        2.1596000000000117,
+        2.633899999999983,
+        2.804300000000012,
+        5.362299999999976,
+        2.1189999999999998
+      ]
+    }
+  ],
+  "currentToPreviousMedianRatio": 0.7440770723689952
+}
