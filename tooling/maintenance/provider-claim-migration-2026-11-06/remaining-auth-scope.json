@@ -1,0 +1,85 @@
+{
+  "source": "3fcf489c2acc5641c85ad2f37a81368bf011d6eb",
+  "package": "A2",
+  "wholePackageComplete": false,
+  "inspectionOnly": true,
+  "remaining": [
+    {
+      "paths": [
+        "sdk/core/auth-permission-runtime.mjs",
+        "sdk/core/semantic-runtime.mjs"
+      ],
+      "obligation": "Move diagnostic selection, command/context admission and witness-overlay decisions into authored policy using existing canonical mechanisms; preserve active-fact semantics, diagnostic order and lazy argument coercion.",
+      "controls": [
+        "unknown actor before context access",
+        "execute/context/read/write issue order",
+        "subjectArg missing/invalid/positive distinctions",
+        "witness last-object and per-object polarity",
+        "isa overwrite checks"
+      ]
+    },
+    {
+      "paths": [
+        "sdk/server/identity-runtime.mjs"
+      ],
+      "obligation": "Decompose SQLite schema/migrations, provider observations, principal linking, session lifecycle, status changes, audit projections and disposal with explicit effect/transaction custody.",
+      "controls": [
+        "refusal before provider/SQLite effects",
+        "clock/entropy/event ordering",
+        "transaction rollback and exact thrown identity",
+        "revision conflicts",
+        "last active link protection",
+        "session revocation and CSRF",
+        "close and reopen persistence"
+      ]
+    },
+    {
+      "paths": [
+        "sdk/server/auth-provider-runtime.mjs"
+      ],
+      "obligation": "Complete file-backed session restoration/pruning and plugin startup/capability admission; the current credential protocol migration does not cover these paths.",
+      "controls": [
+        "corrupt file versus clock faults",
+        "duplicate providers before import",
+        "entry and transitive identity scope",
+        "factory and provider interface refusals",
+        "cleanup on failed startup"
+      ]
+    },
+    {
+      "paths": [
+        "sdk/server/forwarded-identity-runtime.mjs",
+        "sdk/server/security-runtime.mjs"
+      ],
+      "obligation": "Complete key/environment custody, token codecs and remaining HTTP effect lifecycle beyond the qualified signing/verification continuations.",
+      "controls": [
+        "key rotation",
+        "malformed input refusal",
+        "secret-free receipts",
+        "cancellation boundaries",
+        "retained request/body effect limits"
+      ]
+    }
+  ],
+  "architecture": {
+    "newFindingIds": [
+      "possible-hidden-default:sourceryPlatform:sdk/core/authored-protocol.mjs",
+      "possible-hidden-default:sourceryPlatform:sdk/server/auth-provider-policy.mjs",
+      "possible-hidden-default:sourceryPlatform:test/auth-provider-claims.test.mjs",
+      "thick-mjs:sourceryPlatform:sdk/core/authored-protocol.mjs",
+      "thick-mjs:sourceryPlatform:sdk/server/auth-provider-policy.mjs"
+    ],
+    "disposition": "Retained as open candidates under unchanged A3/A4/A5 gates; generic mechanism custody and authored policy do not waive those gates."
+  },
+  "computerUsePaused": true,
+  "nativeOrRealConnectorQualification": false,
+  "globalComplete": false,
+  "knownLifecycleCounterexamples": [
+    {
+      "receipt": "identity-construction-counterexample.json",
+      "status": "open",
+      "sourceFixed": false,
+      "scope": "DatabaseSync construction succeeds, then first PRAGMA throws; no explicit close before propagation. Fixture releases the handle. Initialization region is byte-identical to prior source81630729."
+    }
+  ]
+}

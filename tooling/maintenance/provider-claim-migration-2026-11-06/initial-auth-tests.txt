@@ -1,0 +1,123 @@
+✔ authored permission decisions exhaust the valid global/scoped truth table (3.4951ms)
+✔ actual role permissions preserve absent, inherit, extend and scoped policy behavior (4.5158ms)
+✔ unknown and missing resource modes refuse rather than inherit global authority (2.34ms)
+✔ multiple policies for one resource refuse in either authored order (0.6074ms)
+✔ a resource policy with two active modes refuses instead of selecting a last value (0.3856ms)
+✔ permission caches invalidate on facts, grants and role changes (1.5115ms)
+✔ permission projection preserves typed read refusals and actor absence (1.9112ms)
+✔ revoked permission values deny and ambiguous grant fields refuse (1.457ms)
+✔ invalid resource policy refuses command admission before a caller can apply its delta (0.806ms)
+✔ authored policy changes actual decisions without changes to its generic adapter (8.4673ms)
+✔ the same canonical policy adapter executes a separately authored non-auth domain (0.5187ms)
+✔ authored policy refuses a mismatched evaluator profile and invalid authored defaults (11.6001ms)
+✔ actual authored credentials preserve acceptance, refusal and identifier projection (4.9052ms)
+✔ server auth session projections enforce the actual scoped permission policy (2.8001ms)
+✔ a malformed persisted SQLite expiry is unauthenticated and produces no session touch (65.7767ms)
+✔ host session touch occurs on its exact authored interval boundary (37.0316ms)
+✔ revoked and nonexistent host sessions return before reading the clock (32.4682ms)
+✔ suspended host principals cannot receive an authenticated session or a touch (33.3694ms)
+✔ signed forwarding obeys exact future and expiry clock-skew boundaries (12.2675ms)
+✔ signed forwarding keeps method and path binding while policy decisions are authored (4.0606ms)
+✔ Node-qualified auth policy does not enter the current browser static closure (40.8796ms)
+✔ request trust selection exhausts authored forwarded and local lanes (0.3687ms)
+✔ forwarded identity wins before any cookie or actor-header access (1.5156ms)
+✔ configured forwarded trust refuses local fallback even when host evidence is absent (0.4767ms)
+✔ every thrown verifier value remains a failure across all request identity APIs (1.3981ms)
+✔ forwarded cache ownership is per request and replacement runtime (0.7183ms)
+✔ local cookie evidence wins without reading the configured actor header (1.4971ms)
+✔ local fallback preserves configured header, array-first and anonymous precedence (1.5091ms)
+✔ revoked cookie sessions cannot retain actor authority after runtime replacement (0.8217ms)
+✔ expired cookie sessions fall back without returning a stale public session (0.6946ms)
+✔ authored safe methods normalize transport case and short circuit session effects (0.9453ms)
+✔ CSRF eligibility requires an actual cookie actor and session token (0.5601ms)
+✔ a valid CSRF header admits before content type or body effects (0.5274ms)
+✔ invalid headers refuse before a correct body can replace their evidence (0.7308ms)
+✔ JSON and form token bodies execute bounded reads once and reuse their buffer (1.1038ms)
+✔ malformed, unsupported and missing token bodies refuse without mutation effects (0.5708ms)
+✔ CSRF body read failures propagate exact identity and produce no token buffer (0.2093ms)
+✔ constant-time token port preserves UTF-8 matching and refuses unequal byte lengths (0.3265ms)
+✔ authored body limits preserve route semantics and bounded-stream refusal (2.8163ms)
+✔ authored request and CSRF choices can change without changing interpreter code (9.178ms)
+✔ CSRF authored refusal selection covers all presence and equality decisions (0.3903ms)
+✔ CSRF route limits preserve strict authored kind types and one getter read (0.7954ms)
+✔ authored policy retains the four runtime families' valid defaults (1.8264ms)
+✔ canonical policy decisions preserve the exact expiry boundary and epoch zero (0.2649ms)
+✔ authored defaults and expression changes alter decisions without changing the adapter (3.8529ms)
+✔ generic policy supports a separately authored field and refuses unknown roots (1.7483ms)
+✔ policy document and expression inputs refuse accessors without invoking them (1.042ms)
+✖ cookie sessions persist, reopen and expire exactly at the configured deadline (3.3537ms)
+✔ invalid cookie policy and clock refuse before provider and directory effects (3.7712ms)
+✖ reopened cookie repositories remove malformed and expired records (5.1202ms)
+✖ a clock failure during cookie reload preserves valid persisted sessions (3.6598ms)
+✔ legacy snapshot TTL rejects invalid limits before creating storage (3.9473ms)
+✔ host policy rejects invalid limits and clock before opening SQLite (3.6323ms)
+✔ host sessions use authored lifetimes, epoch zero and the configured failure threshold (47.2263ms)
+✔ forwarded limits refuse before key parsing and never accept infinite skew (0.655ms)
+✔ signed forwarded claims retain request binding and exact expiration with zero skew (12.923ms)
+✔ forwarded verifier rejects a nonfinite clock with a valid signature (5.4625ms)
+✔ forwarded environment round trips numeric limits and refuses malformed or partial configuration (0.5275ms)
+ℹ tests 58
+ℹ suites 0
+ℹ pass 55
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 965.4874
+
+✖ failing tests:
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\auth-session-policy.test.mjs:54:1
+✖ cookie sessions persist, reopen and expire exactly at the configured deadline (3.3537ms)
+  TypeError [Error]: source is not iterable
+      at FactStore.appendMany (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:1341:24)
+      at new FactStore (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:842:10)
+      at FactStore.from (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:846:51)
+      at authCredentialFacts (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-policy.mjs:23:20)
+      at defaultAuthProvider (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:209:17)
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:75
+      at phase (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:253:7)
+      at createServerAuthRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:44)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/auth-session-policy.test.mjs:57:19)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\auth-session-policy.test.mjs:69:1
+✖ reopened cookie repositories remove malformed and expired records (5.1202ms)
+  TypeError [Error]: source is not iterable
+      at FactStore.appendMany (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:1341:24)
+      at new FactStore (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:842:10)
+      at FactStore.from (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:846:51)
+      at authCredentialFacts (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-policy.mjs:23:20)
+      at defaultAuthProvider (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:209:17)
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:75
+      at phase (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:253:7)
+      at createServerAuthRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:44)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/auth-session-policy.test.mjs:72:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\auth-session-policy.test.mjs:74:1
+✖ a clock failure during cookie reload preserves valid persisted sessions (3.6598ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /clock/. Input:
+  
+  'TypeError: source is not iterable'
+  
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/auth-session-policy.test.mjs:78:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: source is not iterable
+        at FactStore.appendMany (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:1341:24)
+        at new FactStore (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:842:10)
+        at FactStore.from (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/rel-core.mjs:846:51)
+        at authCredentialFacts (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-policy.mjs:23:20)
+        at defaultAuthProvider (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:209:17)
+        at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:75
+        at phase (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:253:7)
+        at createServerAuthRuntime (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs:261:44)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25),
+    expected: /clock/,
+    operator: 'rejects',
+    diff: 'simple'
+  }

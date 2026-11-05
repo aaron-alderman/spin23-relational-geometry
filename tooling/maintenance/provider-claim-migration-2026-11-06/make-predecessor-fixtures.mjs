@@ -1,0 +1,16 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {resolve,basename} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const root=resolve('.platform-reconstitution/sourcery-platform-reconciled'),commit='81630729c6c3c3efb65c2cada5e228dc3e071cdc',directory=resolve(root,'test/fixtures/provider-claim-baseline');
+mkdirSync(directory,{recursive:true});
+const files=['sdk/server/identity-runtime.mjs','sdk/server/forwarded-identity-runtime.mjs'].map(path=>{const bytes=execFileSync('git',['-c','safe.directory='+root,'-C',root,'show',commit+':'+path],{maxBuffer:4*2**20}),file=basename(path)+'.txt';writeFileSync(resolve(directory,file),bytes);return {path,file,bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')};});
+writeFileSync(resolve(directory,'manifest.json'),JSON.stringify({commit,scope:'Exact retained predecessor module bytes for finite public-behavior controls. Dependencies resolve to current qualified namespaces; no transitive predecessor seal is claimed.',files},null,2)+'\n');
+const path=resolve(root,'test/auth-provider-claims.test.mjs');let text=readFileSync(path,'utf8');
+text=text.replace("import {execFileSync} from 'node:child_process';",'');
+const anchor="const bytes=previous?execFileSync('git',['-c','safe.directory='+root,'-C',root,'show',baseline+':'+path]):fs.readFileSync(resolve(root,path));";
+if(!text.includes(anchor))throw Error('Expected predecessor lookup changed');
+text=text.replace(anchor,"const bytes=previous?predecessorBytes(path):fs.readFileSync(resolve(root,path));");
+const marker='async function moduleAt(';
+const helper="const predecessorDirectory=resolve(root,'test/fixtures/provider-claim-baseline'),predecessorManifest=JSON.parse(fs.readFileSync(resolve(predecessorDirectory,'manifest.json')));assert.equal(predecessorManifest.commit,baseline);\nfunction predecessorBytes(path){const row=predecessorManifest.files.find(row=>row.path===path);assert(row,'Declared predecessor fixture required');const bytes=fs.readFileSync(resolve(predecessorDirectory,row.file));assert.equal(bytes.length,row.bytes);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),row.sha256);return bytes;}\n";
+text=text.replace(marker,helper+marker);writeFileSync(path,text);console.log(JSON.stringify({commit,files,ambientGitRequiredAtTestTime:false}));

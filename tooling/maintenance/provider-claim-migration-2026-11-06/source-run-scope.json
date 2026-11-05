@@ -1,0 +1,30 @@
+{
+  "source": "3fcf489c2acc5641c85ad2f37a81368bf011d6eb",
+  "combinedChecks": 2216,
+  "combinedAssertingChecks": 2215,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "checks": 2205,
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "test/*.test.mjs"
+      ],
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "environment": {
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "safe.directory",
+        "GIT_CONFIG_VALUE_0": "*"
+      }
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "checks": 11
+    }
+  ],
+  "scope": "Two actual test executions, combined by exact assertion title and multiplicity. Not represented as a single process report. Every previous source assertion is preserved. VM source-comparison controls require --experimental-vm-modules.",
+  "receipt": "source-assertion-preservation.json"
+}

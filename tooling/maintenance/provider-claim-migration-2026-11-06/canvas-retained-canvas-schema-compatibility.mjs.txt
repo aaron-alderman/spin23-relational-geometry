@@ -1,0 +1,78 @@
+import {FactStore} from '../core/rel-core.mjs';
+
+const activeTypes=(prog,subject)=>FactStore.from(prog)
+  .filter(fact=>fact.s === subject && fact.p === 'isa' && fact.pol !== 'is-not')
+  .map(fact=>fact.o);
+
+export function canvasStructuralTypeIssue(prog,{subject='',expectedType='',ownerSubject='',predicate='' }={}){
+  const actualTypes=activeTypes(prog,subject);
+  if(actualTypes.includes(expectedType)) return null;
+  return {
+    code:'canvas-structural-type-mismatch',
+    subject:ownerSubject || subject,
+    predicate,
+    details:`${predicate} must reference an explicit ${expectedType} subject.`,
+    message:`Canvas structural record ${subject || '<empty>'} requires isa ${expectedType}; observed ${actualTypes.join(',') || '<untyped>'}.`,
+    expectedType,
+    actualTypes,
+    referencedSubject:subject,
+  };
+}
+
+export function canvasSemanticColorRoleResolution(prog,{documentSubject='',role='',fallbackName='' }={}){
+  if(!role) return {colorName:fallbackName,role:'',source:'fallback',roleSubject:''};
+  const store=FactStore.from(prog);
+  const roleSubjects=store.filter(fact=>fact.s === documentSubject && fact.p === 'semanticColorRole' && fact.pol !== 'is-not')
+    .map(fact=>fact.o)
+    .filter(subject=>store.some(fact=>fact.s === subject && fact.p === 'name' && fact.o === role && fact.pol !== 'is-not'));
+  if(roleSubjects.length>1) return {
+    issue:{
+      code:'canvas-ambiguous-semantic-color-role',
+      subject:documentSubject,
+      predicate:'semanticColorRole',
+      details:'CanvasDocument semantic color role names must be unique.',
+      message:`CanvasDocument ${documentSubject} has multiple semantic color mappings named ${role}.`,
+      role,
+      roleSubjects,
+    },
+  };
+  const roleSubject=roleSubjects[0] || '';
+  if(!roleSubject) return {colorName:fallbackName,role,source:'fallback',roleSubject:''};
+  const colors=store.filter(fact=>fact.s === roleSubject && fact.p === 'color' && fact.pol !== 'is-not').map(fact=>fact.o);
+  if(colors.length!==1) return {
+    issue:{
+      code:'canvas-invalid-semantic-color-role',
+      subject:roleSubject,
+      predicate:'color',
+      details:'CanvasSemanticColorRole requires exactly one color name.',
+      message:`Canvas semantic color role ${roleSubject} has ${colors.length} active color values.`,
+      role,
+      roleSubject,
+      colors,
+    },
+  };
+  return {colorName:colors[0],role,source:'authoredRole',roleSubject};
+}
+
+function reportIssue(prog,issue,reportFailure){
+  if(issue) reportFailure(prog,issue.message,issue.subject,issue.predicate,issue.details,issue.code);
+}
+
+export function canvasStructuralSubjects(prog,{ownerSubject='',predicate='',expectedType='',linkDirection='' }={},reportFailure){
+  const store=FactStore.from(prog);
+  let subjects=[];
+  if(linkDirection === 'owner-to-record') subjects=store.objects(ownerSubject,predicate);
+  else if(linkDirection === 'record-to-owner') subjects=store.filter(fact=>fact.p === predicate && fact.o === ownerSubject && fact.pol !== 'is-not').map(fact=>fact.s);
+  else reportFailure(prog,`Canvas structural edge ${predicate} requires an explicit link direction.`,ownerSubject,predicate,'Expected owner-to-record or record-to-owner.','canvas-structural-link-direction');
+  return subjects
+    .map(subject=>{
+      reportIssue(prog,canvasStructuralTypeIssue(prog,{subject,expectedType,ownerSubject,predicate}),reportFailure);
+      return subject;
+    });
+}
+
+export function canvasSemanticColorName(prog,options,reportFailure){
+  const resolution=canvasSemanticColorRoleResolution(prog,options);
+  reportIssue(prog,resolution.issue,reportFailure);
+  return resolution.colorName;
+}

@@ -1,5 +1,5 @@
 // Source-only evidence. Full assembly/consumer/bootstrap execution belongs to run.mjs.
-import {readFileSync,writeFileSync} from 'node:fs';
+import {readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {resolve,join} from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -10,7 +10,7 @@ const [destination,predecessor,expected]=process.argv.slice(2);if(!destination||
 const root=resolve('.platform-reconstitution/sourcery-platform-reconciled'),audit=resolve(destination),prior=resolve(predecessor),read=p=>JSON.parse(readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex'),git=a=>execFileSync('git',['-c','safe.directory='+root,'-C',root,...a],{maxBuffer:64*2**20}),save=(name,value)=>writeFileSync(join(audit,name),JSON.stringify(value,null,2)+'\n');
 assert.equal(git(['status','--porcelain=v1']).toString().trim(),'','Committed clean source required');
 const previous=read(join(prior,'profile/pins.json')).platform,source=git(['rev-parse','HEAD']).toString().trim();
-const reports=['source-tests.txt','source-policy-tests.txt'].map(path=>({path,text:readFileSync(join(audit,path),'utf8')})),oldTests=readFileSync(join(prior,'source-tests.txt'),'utf8'),titles=text=>text.split(/\r?\n/u).filter(line=>line.startsWith('✔ ')).map(line=>line.replace(/^✔ /u,'').replace(/ \([\d.]+ms\)$/u,'')),old=titles(oldTests),current=reports.flatMap(r=>titles(r.text)),remaining=[...current];
+const reports=['source-tests.txt','source-policy-tests.txt'].map(path=>({path,text:readFileSync(join(audit,path),'utf8')})),priorReports=existsSync(join(prior,'source-run-scope.json'))?read(join(prior,'source-run-scope.json')).reports.map(r=>r.path):['source-tests.txt'],oldTests=priorReports.map(path=>readFileSync(join(prior,path),'utf8')).join('\n'),titles=text=>text.split(/\r?\n/u).filter(line=>line.startsWith('✔ ')).map(line=>line.replace(/^✔ /u,'').replace(/ \([\d.]+ms\)$/u,'')),old=titles(oldTests),current=reports.flatMap(r=>titles(r.text)),remaining=[...current];
 for(const report of reports){const count=titles(report.text).length;assert.match(report.text,new RegExp('(?:^|\\n)ℹ pass '+count+'\\r?(?:\\n|$)','u'));for(const label of ['fail','skipped','cancelled'])assert.match(report.text,new RegExp('(?:^|\\n)ℹ '+label+' 0\\r?(?:\\n|$)','u'));}assert.equal(current.length,Number(expected));
 for(const title of old){const i=remaining.indexOf(title);assert(i>=0,'Lost source assertion: '+title);remaining.splice(i,1);}save('source-assertion-preservation.json',{previous,source,priorChecks:old.length,currentChecks:current.length,addedChecks:remaining,priorAssertingChecks:old.length-1,currentAssertingChecks:current.length-1,observationHelperCount:1,missing:[]});
 const preserved=[];for(const path of ['assurance/semantic-contract-translations.json','assurance/semantic-contract-cases.json','assurance/retained-semantic-contracts.json','assurance/retained-runtime-boundaries.json']){const bytes=readFileSync(join(root,path));assert(git(['show',previous+':'+path]).equals(bytes),'Changed retained content: '+path);preserved.push({path,sha256:sha(bytes)});}

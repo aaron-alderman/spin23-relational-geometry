@@ -1,0 +1,3316 @@
+{
+  "observedAt": "2026-11-05T21:44:25.442Z",
+  "selectedRuntimeSource": "3fcf489c2acc5641c85ad2f37a81368bf011d6eb",
+  "scope": "S1 retained source/coordinate review; no runtime files changed or new canonical selection made.",
+  "priorSearchUsed": "sdk/plugins/canvas/canvas-stdlib.rel",
+  "retainedPath": "sdk/plugins/canvas/canvas.stdlib.rel",
+  "exactHyphenatedPathHistory": [],
+  "selectedDeclaration": {
+    "subject": "module.browserCanvasAuthoredVocabulary",
+    "commit": "d1cb05ba8e1a86826a0367bad4d8e4e97751e8ad",
+    "path": "sdk/browser/browser-canvas-baseline.rel",
+    "authorityEffect": [
+      "readOnlyDerivedCharacterization;canonicalCanvasVocabularyAuthorityIsSdkPluginsCanvasCanvasStdlibRel"
+    ],
+    "containsLiteralHyphenatedPath": false
+  },
+  "versions": [
+    {
+      "commit": "d1cb05ba8e1a86826a0367bad4d8e4e97751e8ad",
+      "path": "sdk/plugins/canvas/canvas.stdlib.rel",
+      "sha256": "ef3270d7a877f9f3955a36d8c59138a68cfaaeccba683a104812af4f712c953d",
+      "gitBlob": "63c07fd59e97a5daac3ba8789976236fb8914308",
+      "facts": 1685,
+      "types": {
+        "AlgebraModule": 1,
+        "Keyword": 84,
+        "Interface": 39,
+        "Slot": 201,
+        "AlgebraicResidual": 2
+      },
+      "families": {
+        "canvasWidgetType": [
+          "CanvasContextPicker",
+          "CanvasDetail",
+          "CanvasDetailPane",
+          "CanvasEditorText",
+          "CanvasFactEditorPane",
+          "CanvasFilterToggle",
+          "CanvasGrid",
+          "CanvasList",
+          "CanvasListPane",
+          "CanvasProjectionList",
+          "CanvasScope",
+          "CanvasScrollText",
+          "CanvasSplit",
+          "CanvasSurfaceMount",
+          "CanvasSwitch",
+          "CanvasTaxonomyPicker",
+          "CanvasText",
+          "CanvasTextField",
+          "CanvasWindow"
+        ],
+        "canvasExprKind": [
+          "concat",
+          "contextField",
+          "countLaneRecords",
+          "laneField",
+          "literal",
+          "recordField",
+          "recordSubject",
+          "runtimeField",
+          "selectedRecordField",
+          "stateField",
+          "surfaceField"
+        ],
+        "canvasActionKind": [
+          "activateFocused",
+          "applyMountTemplate",
+          "cancelEditorSession",
+          "clearHoverPreview",
+          "closeFloatingWindow",
+          "commitEditorSession",
+          "commitFloatingWindowPosition",
+          "commitFloatingWindowSize",
+          "contextHelp",
+          "dismissInspectionSuggestion",
+          "dismissLensNotice",
+          "enterContext",
+          "escapeContext",
+          "focusFloatingWindow",
+          "focusNext",
+          "focusPrevious",
+          "focusWorkbenchFieldIndex",
+          "focusWorkbenchObject",
+          "focusWorkbenchObjectIndex",
+          "followLensAdjacency",
+          "gotoSubject",
+          "historyBack",
+          "historyForward",
+          "incrementState",
+          "inspectInContext",
+          "inspectSubject",
+          "loadView",
+          "moveFirst",
+          "moveLast",
+          "moveNext",
+          "movePageNext",
+          "movePagePrevious",
+          "movePrevious",
+          "previewInspectionAdjacency",
+          "previewInspectionSuggestion",
+          "previewLensAdjacency",
+          "previewMountTemplate",
+          "removeAuthoredMountArg",
+          "saveView",
+          "secondaryActivateFocused",
+          "selectFirst",
+          "selectLast",
+          "selectNext",
+          "selectPageNext",
+          "selectPagePrevious",
+          "selectPrevious",
+          "semanticMutation",
+          "setEditorChoiceIndex",
+          "setEditorValue",
+          "setLensMode",
+          "setState",
+          "showInspectionSuggestion",
+          "toggleFloatingWindow",
+          "toggleWorkbenchMap"
+        ]
+      },
+      "slots": [
+        {
+          "subject": "slot.CanvasDocument.width",
+          "predicate": "width",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.height",
+          "predicate": "height",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.cellWidth",
+          "predicate": "cellWidth",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.cellHeight",
+          "predicate": "cellHeight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.palette",
+          "predicate": "palette",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.root",
+          "predicate": "root",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.focusTarget",
+          "predicate": "focusTarget",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.focusStateKey",
+          "predicate": "focusStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "focusTargetExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.initialFocusTarget",
+          "predicate": "initialFocusTarget",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "focusTargetExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.keyBinding",
+          "predicate": "keyBinding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.floatingWindow",
+          "predicate": "floatingWindow",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.activeBorderFg",
+          "predicate": "activeBorderFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.detailSelectedBg",
+          "predicate": "detailSelectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.detailSelectedFg",
+          "predicate": "detailSelectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.sectionFg",
+          "predicate": "sectionFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPalette.color",
+          "predicate": "color",
+          "cardinality": "min1",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasColor.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasColor.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowedFromKeywordFamily": "canvasExprKind",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "kind=literal",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.expr",
+          "predicate": "expr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.source",
+          "predicate": "source",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": [
+            "literal",
+            "stateField",
+            "runtimeField",
+            "selectedRecord",
+            "surfaceField"
+          ]
+        },
+        {
+          "subject": "slot.CanvasBinding.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.name",
+          "predicate": "name",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.surfaceRole",
+          "predicate": "surfaceRole",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.root",
+          "predicate": "root",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.parameter",
+          "predicate": "parameter",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.acceptsKind",
+          "predicate": "acceptsKind",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.template",
+          "predicate": "template",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "definition",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.definition",
+          "predicate": "definition",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.arg",
+          "predicate": "arg",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.parameter",
+          "predicate": "parameter",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.source",
+          "predicate": "source",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": [
+            "literal",
+            "stateField",
+            "runtimeField",
+            "selectedRecord",
+            "surfaceField"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScope.body",
+          "predicate": "body",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScope.binding",
+          "predicate": "binding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.valueBinding",
+          "predicate": "valueBinding",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.binding",
+          "predicate": "binding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.case",
+          "predicate": "case",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.defaultChild",
+          "predicate": "defaultChild",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.match",
+          "predicate": "match",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.child",
+          "predicate": "child",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "horizontal",
+            "vertical"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSplit.size",
+          "predicate": "size",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.first",
+          "predicate": "first",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.second",
+          "predicate": "second",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindow.body",
+          "predicate": "body",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.field",
+          "predicate": "field",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "property",
+            "context",
+            "section",
+            "plain"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailRow.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "kind=property",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.valueExpr",
+          "predicate": "valueExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "kind=property",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.semanticColorRole",
+          "predicate": "semanticColorRole",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.rows",
+          "predicate": "rows",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.columns",
+          "predicate": "columns",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.placement",
+          "predicate": "placement",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.child",
+          "predicate": "child",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.row",
+          "predicate": "row",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.column",
+          "predicate": "column",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.rowSpan",
+          "predicate": "rowSpan",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.columnSpan",
+          "predicate": "columnSpan",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowedFromKeywordFamily": "canvasActionKind",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.target",
+          "predicate": "target",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusAction.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "next",
+            "previous"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.scope",
+          "predicate": "scope",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "list",
+            "active"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "previous",
+            "next",
+            "pagePrevious",
+            "pageNext",
+            "first",
+            "last"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.target",
+          "predicate": "target",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "scope=list",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWorkbenchAction.operation",
+          "predicate": "operation",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "activateFocused",
+            "secondaryActivateFocused",
+            "escapeContext",
+            "historyBack",
+            "historyForward"
+          ]
+        },
+        {
+          "subject": "slot.CanvasWorkbenchAction.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.widget",
+          "predicate": "widget",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.key",
+          "predicate": "key",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.shiftKey",
+          "predicate": "shiftKey",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.altKey",
+          "predicate": "altKey",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.action",
+          "predicate": "action",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.borderFg",
+          "predicate": "borderFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.titleFg",
+          "predicate": "titleFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.statusFg",
+          "predicate": "statusFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.titleExpr",
+          "predicate": "titleExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.statusExpr",
+          "predicate": "statusExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetLeft",
+          "predicate": "bodyInsetLeft",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetTop",
+          "predicate": "bodyInsetTop",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetRight",
+          "predicate": "bodyInsetRight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetBottom",
+          "predicate": "bodyInsetBottom",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.recordIsa",
+          "predicate": "recordIsa",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.recordIsaStateKey",
+          "predicate": "recordIsaStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.scrollStateKey",
+          "predicate": "scrollStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "labelField",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.labelField",
+          "predicate": "labelField",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredUnless": "labelExpr",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.scrollStateKey",
+          "predicate": "scrollStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorStateKey",
+          "predicate": "cursorStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.lastSubjectStateKey",
+          "predicate": "lastSubjectStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorResetPolicy",
+          "predicate": "cursorResetPolicy",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "firstProperty",
+            "nearestProperty"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorTargetPolicy",
+          "predicate": "cursorTargetPolicy",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "propertyOnly",
+            "anyRow"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailLike.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.showWitnesses",
+          "predicate": "showWitnesses",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.actionModeStateKey",
+          "predicate": "actionModeStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.actionModeValue",
+          "predicate": "actionModeValue",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "actionModeStateKeyExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.row",
+          "predicate": "row",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.allText",
+          "predicate": "allText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFactEditorPane.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.content",
+          "predicate": "content",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "mountOrInstance",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.mount",
+          "predicate": "mount",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.instance",
+          "predicate": "instance",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.title",
+          "predicate": "title",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.titleExpr",
+          "predicate": "titleExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.closeTextExpr",
+          "predicate": "closeTextExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.closeAction",
+          "predicate": "closeAction",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialX",
+          "predicate": "initialX",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialY",
+          "predicate": "initialY",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialWidth",
+          "predicate": "initialWidth",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialHeight",
+          "predicate": "initialHeight",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialZ",
+          "predicate": "initialZ",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialVisible",
+          "predicate": "initialVisible",
+          "cardinality": "optional",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetLeft",
+          "predicate": "bodyInsetLeft",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetTop",
+          "predicate": "bodyInsetTop",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetRight",
+          "predicate": "bodyInsetRight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetBottom",
+          "predicate": "bodyInsetBottom",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        }
+      ],
+      "refs": [
+        "refs/recovery/route-runtime-variant-f8fbe25e",
+        "refs/recovery/semantic-mutation-596948ed",
+        "refs/tags/transition"
+      ]
+    },
+    {
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "path": "sdk/plugins/canvas/canvas.stdlib.rel",
+      "sha256": "41de9791032bcfe4dc93d5de0345afa08877f57587d458744ac89bcde8eac25f",
+      "gitBlob": "a5013769e1fa14916b2bf9cdd968dbbcb7511728",
+      "facts": 1689,
+      "types": {
+        "AlgebraModule": 1,
+        "Keyword": 84,
+        "Interface": 40,
+        "Slot": 200,
+        "SemanticDoc": 1,
+        "AlgebraicResidual": 2
+      },
+      "families": {
+        "canvasWidgetType": [
+          "CanvasContextPicker",
+          "CanvasDetail",
+          "CanvasDetailPane",
+          "CanvasEditorText",
+          "CanvasFactEditorPane",
+          "CanvasFilterToggle",
+          "CanvasGrid",
+          "CanvasList",
+          "CanvasListPane",
+          "CanvasProjectionList",
+          "CanvasScope",
+          "CanvasScrollText",
+          "CanvasSplit",
+          "CanvasSurfaceMount",
+          "CanvasSwitch",
+          "CanvasTaxonomyPicker",
+          "CanvasText",
+          "CanvasTextField",
+          "CanvasWindow"
+        ],
+        "canvasExprKind": [
+          "concat",
+          "contextField",
+          "countLaneRecords",
+          "laneField",
+          "literal",
+          "recordField",
+          "recordSubject",
+          "runtimeField",
+          "selectedRecordField",
+          "stateField",
+          "surfaceField"
+        ],
+        "canvasActionKind": [
+          "activateFocused",
+          "applyMountTemplate",
+          "cancelEditorSession",
+          "clearHoverPreview",
+          "closeFloatingWindow",
+          "commitEditorSession",
+          "commitFloatingWindowPosition",
+          "commitFloatingWindowSize",
+          "contextHelp",
+          "dismissInspectionSuggestion",
+          "dismissLensNotice",
+          "enterContext",
+          "escapeContext",
+          "focusFloatingWindow",
+          "focusNext",
+          "focusPrevious",
+          "focusWorkbenchFieldIndex",
+          "focusWorkbenchObject",
+          "focusWorkbenchObjectIndex",
+          "followLensAdjacency",
+          "gotoSubject",
+          "historyBack",
+          "historyForward",
+          "incrementState",
+          "inspectInContext",
+          "inspectSubject",
+          "loadView",
+          "moveFirst",
+          "moveLast",
+          "moveNext",
+          "movePageNext",
+          "movePagePrevious",
+          "movePrevious",
+          "previewInspectionAdjacency",
+          "previewInspectionSuggestion",
+          "previewLensAdjacency",
+          "previewMountTemplate",
+          "removeAuthoredMountArg",
+          "saveView",
+          "secondaryActivateFocused",
+          "selectFirst",
+          "selectLast",
+          "selectNext",
+          "selectPageNext",
+          "selectPagePrevious",
+          "selectPrevious",
+          "semanticMutation",
+          "setEditorChoiceIndex",
+          "setEditorValue",
+          "setLensMode",
+          "setState",
+          "showInspectionSuggestion",
+          "toggleFloatingWindow",
+          "toggleWorkbenchMap"
+        ]
+      },
+      "slots": [
+        {
+          "subject": "slot.CanvasDocument.width",
+          "predicate": "width",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.height",
+          "predicate": "height",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.cellWidth",
+          "predicate": "cellWidth",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.cellHeight",
+          "predicate": "cellHeight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.palette",
+          "predicate": "palette",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.root",
+          "predicate": "root",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.focusTarget",
+          "predicate": "focusTarget",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.focusStateKey",
+          "predicate": "focusStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "focusTargetExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.initialFocusTarget",
+          "predicate": "initialFocusTarget",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "focusTargetExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.keyBinding",
+          "predicate": "keyBinding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.floatingWindow",
+          "predicate": "floatingWindow",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDocument.semanticColorRole",
+          "predicate": "semanticColorRole",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPalette.color",
+          "predicate": "color",
+          "cardinality": "min1",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasColor.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasColor.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSemanticColorRole.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSemanticColorRole.color",
+          "predicate": "color",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowedFromKeywordFamily": "canvasExprKind",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "kind=literal",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExpr.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.expr",
+          "predicate": "expr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasExprArg.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.source",
+          "predicate": "source",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": [
+            "literal",
+            "stateField",
+            "runtimeField",
+            "selectedRecord",
+            "surfaceField"
+          ]
+        },
+        {
+          "subject": "slot.CanvasBinding.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasBinding.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.name",
+          "predicate": "name",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.surfaceRole",
+          "predicate": "surfaceRole",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.root",
+          "predicate": "root",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceTemplate.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.parameter",
+          "predicate": "parameter",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.name",
+          "predicate": "name",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.acceptsKind",
+          "predicate": "acceptsKind",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceParameter.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.template",
+          "predicate": "template",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "definition",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.definition",
+          "predicate": "definition",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.arg",
+          "predicate": "arg",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceMount.order",
+          "predicate": "order",
+          "cardinality": "optional",
+          "valueType": "number",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.parameter",
+          "predicate": "parameter",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.source",
+          "predicate": "source",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": [
+            "literal",
+            "stateField",
+            "runtimeField",
+            "selectedRecord",
+            "surfaceField"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSurfaceArg.selectionKey",
+          "predicate": "selectionKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScope.body",
+          "predicate": "body",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScope.binding",
+          "predicate": "binding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.valueBinding",
+          "predicate": "valueBinding",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.binding",
+          "predicate": "binding",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.case",
+          "predicate": "case",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitch.defaultChild",
+          "predicate": "defaultChild",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.match",
+          "predicate": "match",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.child",
+          "predicate": "child",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSwitchCase.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "horizontal",
+            "vertical"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSplit.size",
+          "predicate": "size",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.first",
+          "predicate": "first",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasSplit.second",
+          "predicate": "second",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindow.body",
+          "predicate": "body",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasScrollText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.field",
+          "predicate": "field",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasEditorText.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTextField.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.value",
+          "predicate": "value",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFilterToggle.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "property",
+            "context",
+            "section",
+            "plain"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailRow.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "kind=property",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.valueExpr",
+          "predicate": "valueExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "kind=property",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.textExpr",
+          "predicate": "textExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.semanticColorRole",
+          "predicate": "semanticColorRole",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailRow.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.rows",
+          "predicate": "rows",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.columns",
+          "predicate": "columns",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGrid.placement",
+          "predicate": "placement",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.child",
+          "predicate": "child",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.row",
+          "predicate": "row",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.column",
+          "predicate": "column",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.rowSpan",
+          "predicate": "rowSpan",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.columnSpan",
+          "predicate": "columnSpan",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasGridPlacement.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.kind",
+          "predicate": "kind",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowedFromKeywordFamily": "canvasActionKind",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.field",
+          "predicate": "field",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasAction.target",
+          "predicate": "target",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusAction.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "next",
+            "previous"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.scope",
+          "predicate": "scope",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "list",
+            "active"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.direction",
+          "predicate": "direction",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "previous",
+            "next",
+            "pagePrevious",
+            "pageNext",
+            "first",
+            "last"
+          ]
+        },
+        {
+          "subject": "slot.CanvasSelectionAction.target",
+          "predicate": "target",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredWhen": "scope=list",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWorkbenchAction.operation",
+          "predicate": "operation",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "activateFocused",
+            "secondaryActivateFocused",
+            "escapeContext",
+            "historyBack",
+            "historyForward"
+          ]
+        },
+        {
+          "subject": "slot.CanvasWorkbenchAction.value",
+          "predicate": "value",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.widget",
+          "predicate": "widget",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.action",
+          "predicate": "action",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFocusTarget.order",
+          "predicate": "order",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.key",
+          "predicate": "key",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.shiftKey",
+          "predicate": "shiftKey",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.altKey",
+          "predicate": "altKey",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasKeyBinding.action",
+          "predicate": "action",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.borderFg",
+          "predicate": "borderFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.titleFg",
+          "predicate": "titleFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.statusFg",
+          "predicate": "statusFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.titleExpr",
+          "predicate": "titleExpr",
+          "cardinality": "one",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.statusExpr",
+          "predicate": "statusExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetLeft",
+          "predicate": "bodyInsetLeft",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetTop",
+          "predicate": "bodyInsetTop",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetRight",
+          "predicate": "bodyInsetRight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasWindowLike.bodyInsetBottom",
+          "predicate": "bodyInsetBottom",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.recordIsa",
+          "predicate": "recordIsa",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.recordIsaStateKey",
+          "predicate": "recordIsaStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.scrollStateKey",
+          "predicate": "scrollStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.labelExpr",
+          "predicate": "labelExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "labelField",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.labelField",
+          "predicate": "labelField",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredUnless": "labelExpr",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasListLike.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.scrollStateKey",
+          "predicate": "scrollStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorStateKey",
+          "predicate": "cursorStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.lastSubjectStateKey",
+          "predicate": "lastSubjectStateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorResetPolicy",
+          "predicate": "cursorResetPolicy",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "firstProperty",
+            "nearestProperty"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailLike.cursorTargetPolicy",
+          "predicate": "cursorTargetPolicy",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": [
+            "propertyOnly",
+            "anyRow"
+          ]
+        },
+        {
+          "subject": "slot.CanvasDetailLike.initialScrollOffset",
+          "predicate": "initialScrollOffset",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.showWitnesses",
+          "predicate": "showWitnesses",
+          "cardinality": "one",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.actionModeStateKey",
+          "predicate": "actionModeStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.actionModeValue",
+          "predicate": "actionModeValue",
+          "cardinality": "optional",
+          "valueType": "string",
+          "requiredWhen": "actionModeStateKeyExists",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.row",
+          "predicate": "row",
+          "cardinality": "many",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasDetailLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.stateKey",
+          "predicate": "stateKey",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.bg",
+          "predicate": "bg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.fg",
+          "predicate": "fg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.selectedBg",
+          "predicate": "selectedBg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasPickerLike.selectedFg",
+          "predicate": "selectedFg",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.allText",
+          "predicate": "allText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.lane",
+          "predicate": "lane",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "laneStateKey",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.laneStateKey",
+          "predicate": "laneStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.context",
+          "predicate": "context",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasTaxonomyPicker.contextStateKey",
+          "predicate": "contextStateKey",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFactEditorPane.emptyText",
+          "predicate": "emptyText",
+          "cardinality": "one",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.content",
+          "predicate": "content",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "requiredUnless": "mountOrInstance",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.mount",
+          "predicate": "mount",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.instance",
+          "predicate": "instance",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.title",
+          "predicate": "title",
+          "cardinality": "optional",
+          "valueType": "string",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.titleExpr",
+          "predicate": "titleExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.closeTextExpr",
+          "predicate": "closeTextExpr",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.closeAction",
+          "predicate": "closeAction",
+          "cardinality": "optional",
+          "valueType": "ref",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialX",
+          "predicate": "initialX",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialY",
+          "predicate": "initialY",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialWidth",
+          "predicate": "initialWidth",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialHeight",
+          "predicate": "initialHeight",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialZ",
+          "predicate": "initialZ",
+          "cardinality": "optional",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.initialVisible",
+          "predicate": "initialVisible",
+          "cardinality": "optional",
+          "valueType": "boolean",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetLeft",
+          "predicate": "bodyInsetLeft",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetTop",
+          "predicate": "bodyInsetTop",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetRight",
+          "predicate": "bodyInsetRight",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        },
+        {
+          "subject": "slot.CanvasFloatingWindow.bodyInsetBottom",
+          "predicate": "bodyInsetBottom",
+          "cardinality": "one",
+          "valueType": "integer",
+          "allowed": []
+        }
+      ],
+      "refs": [
+        "refs/recovery/route-runtime-variant-f8fbe25e",
+        "refs/recovery/semantic-mutation-596948ed",
+        "refs/tags/transition"
+      ]
+    }
+  ],
+  "versionsAreAncestrallyOrdered": true,
+  "variantDiff": "diff --git a/sdk/plugins/canvas/canvas.stdlib.rel b/sdk/plugins/canvas/canvas.stdlib.rel\nindex 63c07fd..a501376 100644\n--- a/sdk/plugins/canvas/canvas.stdlib.rel\n+++ b/sdk/plugins/canvas/canvas.stdlib.rel\n@@ -111,6 +111,7 @@\n (\"iface.CanvasDocument\", \"isa\", \"Interface\") (\"iface.CanvasDocument\", \"type\", \"CanvasDocument\") (\"iface.CanvasDocument\", \"mode\", \"closed\")\n (\"iface.CanvasPalette\", \"isa\", \"Interface\") (\"iface.CanvasPalette\", \"type\", \"CanvasPalette\") (\"iface.CanvasPalette\", \"mode\", \"closed\")\n (\"iface.CanvasColor\", \"isa\", \"Interface\") (\"iface.CanvasColor\", \"type\", \"CanvasColor\") (\"iface.CanvasColor\", \"mode\", \"closed\")\n+(\"iface.CanvasSemanticColorRole\", \"isa\", \"Interface\") (\"iface.CanvasSemanticColorRole\", \"type\", \"CanvasSemanticColorRole\") (\"iface.CanvasSemanticColorRole\", \"mode\", \"closed\")\n (\"iface.CanvasExpr\", \"isa\", \"Interface\") (\"iface.CanvasExpr\", \"type\", \"CanvasExpr\") (\"iface.CanvasExpr\", \"mode\", \"closed\")\n (\"iface.CanvasExprArg\", \"isa\", \"Interface\") (\"iface.CanvasExprArg\", \"type\", \"CanvasExprArg\") (\"iface.CanvasExprArg\", \"mode\", \"closed\")\n (\"iface.CanvasBinding\", \"isa\", \"Interface\") (\"iface.CanvasBinding\", \"type\", \"CanvasBinding\") (\"iface.CanvasBinding\", \"mode\", \"closed\")\n@@ -152,7 +153,7 @@\n // CanvasDocument and palette.\n (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.width\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.height\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.cellWidth\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.cellHeight\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.palette\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.root\")\n (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.focusTarget\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.focusStateKey\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.initialFocusTarget\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.keyBinding\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.floatingWindow\")\n-(\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.activeBorderFg\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.detailSelectedBg\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.detailSelectedFg\") (\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.sectionFg\")\n+(\"iface.CanvasDocument\", \"slot\", \"slot.CanvasDocument.semanticColorRole\")\n (\"slot.CanvasDocument.width\", \"isa\", \"Slot\") (\"slot.CanvasDocument.width\", \"predicate\", \"width\") (\"slot.CanvasDocument.width\", \"cardinality\", \"one\") (\"slot.CanvasDocument.width\", \"valueType\", \"integer\")\n (\"slot.CanvasDocument.height\", \"isa\", \"Slot\") (\"slot.CanvasDocument.height\", \"predicate\", \"height\") (\"slot.CanvasDocument.height\", \"cardinality\", \"one\") (\"slot.CanvasDocument.height\", \"valueType\", \"integer\")\n (\"slot.CanvasDocument.cellWidth\", \"isa\", \"Slot\") (\"slot.CanvasDocument.cellWidth\", \"predicate\", \"cellWidth\") (\"slot.CanvasDocument.cellWidth\", \"cardinality\", \"one\") (\"slot.CanvasDocument.cellWidth\", \"valueType\", \"integer\")\n@@ -164,15 +165,16 @@\n (\"slot.CanvasDocument.initialFocusTarget\", \"isa\", \"Slot\") (\"slot.CanvasDocument.initialFocusTarget\", \"predicate\", \"initialFocusTarget\") (\"slot.CanvasDocument.initialFocusTarget\", \"cardinality\", \"optional\") (\"slot.CanvasDocument.initialFocusTarget\", \"valueType\", \"ref\") (\"slot.CanvasDocument.initialFocusTarget\", \"expects\", \"CanvasFocusTarget\") (\"slot.CanvasDocument.initialFocusTarget\", \"requiredWhen\", \"focusTargetExists\")\n (\"slot.CanvasDocument.keyBinding\", \"isa\", \"Slot\") (\"slot.CanvasDocument.keyBinding\", \"predicate\", \"keyBinding\") (\"slot.CanvasDocument.keyBinding\", \"cardinality\", \"many\") (\"slot.CanvasDocument.keyBinding\", \"valueType\", \"ref\") (\"slot.CanvasDocument.keyBinding\", \"expects\", \"CanvasKeyBinding\")\n (\"slot.CanvasDocument.floatingWindow\", \"isa\", \"Slot\") (\"slot.CanvasDocument.floatingWindow\", \"predicate\", \"floatingWindow\") (\"slot.CanvasDocument.floatingWindow\", \"cardinality\", \"many\") (\"slot.CanvasDocument.floatingWindow\", \"valueType\", \"ref\") (\"slot.CanvasDocument.floatingWindow\", \"expects\", \"CanvasFloatingWindow\")\n-(\"slot.CanvasDocument.activeBorderFg\", \"isa\", \"Slot\") (\"slot.CanvasDocument.activeBorderFg\", \"predicate\", \"activeBorderFg\") (\"slot.CanvasDocument.activeBorderFg\", \"cardinality\", \"optional\") (\"slot.CanvasDocument.activeBorderFg\", \"valueType\", \"string\") (\"slot.CanvasDocument.activeBorderFg\", \"default\", \"brightGreen\")\n-(\"slot.CanvasDocument.detailSelectedBg\", \"isa\", \"Slot\") (\"slot.CanvasDocument.detailSelectedBg\", \"predicate\", \"detailSelectedBg\") (\"slot.CanvasDocument.detailSelectedBg\", \"cardinality\", \"optional\") (\"slot.CanvasDocument.detailSelectedBg\", \"valueType\", \"string\") (\"slot.CanvasDocument.detailSelectedBg\", \"default\", \"darkGray\")\n-(\"slot.CanvasDocument.detailSelectedFg\", \"isa\", \"Slot\") (\"slot.CanvasDocument.detailSelectedFg\", \"predicate\", \"detailSelectedFg\") (\"slot.CanvasDocument.detailSelectedFg\", \"cardinality\", \"optional\") (\"slot.CanvasDocument.detailSelectedFg\", \"valueType\", \"string\") (\"slot.CanvasDocument.detailSelectedFg\", \"default\", \"white\")\n-(\"slot.CanvasDocument.sectionFg\", \"isa\", \"Slot\") (\"slot.CanvasDocument.sectionFg\", \"predicate\", \"sectionFg\") (\"slot.CanvasDocument.sectionFg\", \"cardinality\", \"optional\") (\"slot.CanvasDocument.sectionFg\", \"valueType\", \"string\") (\"slot.CanvasDocument.sectionFg\", \"default\", \"yellow\")\n+(\"slot.CanvasDocument.semanticColorRole\", \"isa\", \"Slot\") (\"slot.CanvasDocument.semanticColorRole\", \"predicate\", \"semanticColorRole\") (\"slot.CanvasDocument.semanticColorRole\", \"cardinality\", \"many\") (\"slot.CanvasDocument.semanticColorRole\", \"valueType\", \"ref\") (\"slot.CanvasDocument.semanticColorRole\", \"expects\", \"CanvasSemanticColorRole\")\n (\"iface.CanvasPalette\", \"slot\", \"slot.CanvasPalette.color\")\n (\"slot.CanvasPalette.color\", \"isa\", \"Slot\") (\"slot.CanvasPalette.color\", \"predicate\", \"color\") (\"slot.CanvasPalette.color\", \"cardinality\", \"min1\") (\"slot.CanvasPalette.color\", \"valueType\", \"ref\") (\"slot.CanvasPalette.color\", \"expects\", \"CanvasColor\")\n (\"iface.CanvasColor\", \"slot\", \"slot.CanvasColor.name\") (\"iface.CanvasColor\", \"slot\", \"slot.CanvasColor.value\")\n (\"slot.CanvasColor.name\", \"isa\", \"Slot\") (\"slot.CanvasColor.name\", \"predicate\", \"name\") (\"slot.CanvasColor.name\", \"cardinality\", \"one\") (\"slot.CanvasColor.name\", \"valueType\", \"string\")\n (\"slot.CanvasColor.value\", \"isa\", \"Slot\") (\"slot.CanvasColor.value\", \"predicate\", \"value\") (\"slot.CanvasColor.value\", \"cardinality\", \"one\") (\"slot.CanvasColor.value\", \"valueType\", \"string\")\n+(\"iface.CanvasSemanticColorRole\", \"slot\", \"slot.CanvasSemanticColorRole.name\") (\"iface.CanvasSemanticColorRole\", \"slot\", \"slot.CanvasSemanticColorRole.color\")\n+(\"slot.CanvasSemanticColorRole.name\", \"isa\", \"Slot\") (\"slot.CanvasSemanticColorRole.name\", \"predicate\", \"name\") (\"slot.CanvasSemanticColorRole.name\", \"cardinality\", \"one\") (\"slot.CanvasSemanticColorRole.name\", \"valueType\", \"string\")\n+(\"slot.CanvasSemanticColorRole.color\", \"isa\", \"Slot\") (\"slot.CanvasSemanticColorRole.color\", \"predicate\", \"color\") (\"slot.CanvasSemanticColorRole.color\", \"cardinality\", \"one\") (\"slot.CanvasSemanticColorRole.color\", \"valueType\", \"string\")\n+(\"sem.CanvasSemanticColorRole.meaning\", \"isa\", \"SemanticDoc\") (\"sem.CanvasSemanticColorRole.meaning\", \"about\", \"iface.CanvasSemanticColorRole\") (\"sem.CanvasSemanticColorRole.meaning\", \"kind\", \"meaning\") (\"sem.CanvasSemanticColorRole.meaning\", \"order\", \"1\") (\"sem.CanvasSemanticColorRole.meaning\", \"text\", \"A semantic role name maps to one palette color name. Renderers resolve role records referenced by CanvasDocument and never reinterpret the role name as a predicate.\")\n \n // Expressions and bindings reuse the generic expression/mutation owners; Canvas only authors vocabulary and references.\n (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.kind\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.value\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.field\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.stateKey\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.lane\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.laneStateKey\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.context\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.contextStateKey\") (\"iface.CanvasExpr\", \"slot\", \"slot.CanvasExpr.selectionKey\")\n@@ -441,14 +443,18 @@\n \n // Boundary and uncertainty accounting.\n (\"residual.canvas.dynamicSemanticColorRole\", \"isa\", \"AlgebraicResidual\")\n-(\"residual.canvas.dynamicSemanticColorRole\", \"status\", \"retained\")\n+(\"residual.canvas.dynamicSemanticColorRole\", \"status\", \"closed\")\n (\"residual.canvas.dynamicSemanticColorRole\", \"identity\", \"CanvasDocumentPredicateNamedByWorkbenchPreferredSubjectColorRole\")\n (\"residual.canvas.dynamicSemanticColorRole\", \"evidence\", \"subjectColorReadsWorkbenchHookRoleThenUsesItAsCanvasDocumentPredicate\")\n-(\"residual.canvas.dynamicSemanticColorRole\", \"loss\", \"closedStaticCatalogueCannotEnumerateAdapterSuppliedRoleNames\")\n-(\"residual.canvas.dynamicSemanticColorRole\", \"resolution\", \"replaceDynamicPredicateLookupWithAuthoredCanvasSemanticColorRoleRecordsBeforeRendererExtraction\")\n+(\"residual.canvas.dynamicSemanticColorRole\", \"loss\", \"roleLookupNowPreservesAuthoredRoleIdentityAndFallsBackOnlyToTheExplicitCallerFallbackWhenNoMappingExists\")\n+(\"residual.canvas.dynamicSemanticColorRole\", \"resolution\", \"CanvasSemanticColorRoleRecordsOwnNameToPaletteColorMappingAndTheThinInterpreterNeverUsesRoleNamesAsPredicates\")\n+(\"residual.canvas.dynamicSemanticColorRole\", \"closureEvidence\", \"sdk/browser/canvas-schema-compatibility.mjs\")\n+(\"residual.canvas.dynamicSemanticColorRole\", \"falsifier\", \"rendererUsesAnAdapterSuppliedRoleNameAsAFactPredicateOrAcceptsAmbiguousRoleMappings\")\n (\"residual.canvas.structuralRecordIsa\", \"isa\", \"AlgebraicResidual\")\n-(\"residual.canvas.structuralRecordIsa\", \"status\", \"retained\")\n+(\"residual.canvas.structuralRecordIsa\", \"status\", \"closed\")\n (\"residual.canvas.structuralRecordIsa\", \"identity\", \"CanvasExprArgCanvasSurfaceParameterCanvasSwitchCaseCanvasDetailRowCanvasGridPlacement\")\n (\"residual.canvas.structuralRecordIsa\", \"evidence\", \"currentRendererDiscoversStructuralRecordsByReversePredicateWithoutCheckingIsa\")\n-(\"residual.canvas.structuralRecordIsa\", \"loss\", \"runtimeAcceptsUntypedRecordsWhileCanonicalCatalogueRequiresExplicitTypes\")\n-(\"residual.canvas.structuralRecordIsa\", \"resolution\", \"requireCanonicalIsaDuringInterpreterExtractionWithCharacterizedCompatibilityDiagnostic\")\n+(\"residual.canvas.structuralRecordIsa\", \"loss\", \"untypedAndWronglyTypedReverseLinkedRecordsNowRetainExactExpectedAndActualTypeEvidenceInAProjectionDiagnostic\")\n+(\"residual.canvas.structuralRecordIsa\", \"resolution\", \"thinCompatibilityDiagnosticRequiresCanonicalIsaBeforeReadingEveryNamedReverseLinkedStructuralRecord\")\n+(\"residual.canvas.structuralRecordIsa\", \"closureEvidence\", \"sdk/browser/canvas-schema-compatibility.mjs\")\n+(\"residual.canvas.structuralRecordIsa\", \"falsifier\", \"rendererReadsCanvasExprArgCanvasSurfaceParameterCanvasSwitchCaseCanvasDetailRowOrCanvasGridPlacementWithoutCanonicalIsa\")\n",
+  "consumerKeywordComparisons": [
+    {
+      "commit": "d1cb05ba8e1a86826a0367bad4d8e4e97751e8ad",
+      "families": [
+        {
+          "family": "canvasActionKind",
+          "current": 27,
+          "retained": 54,
+          "missingFromRetained": [],
+          "retainedOnly": [
+            "applyMountTemplate",
+            "cancelEditorSession",
+            "clearHoverPreview",
+            "closeFloatingWindow",
+            "commitEditorSession",
+            "commitFloatingWindowPosition",
+            "commitFloatingWindowSize",
+            "contextHelp",
+            "dismissInspectionSuggestion",
+            "dismissLensNotice",
+            "focusFloatingWindow",
+            "focusWorkbenchFieldIndex",
+            "focusWorkbenchObject",
+            "focusWorkbenchObjectIndex",
+            "followLensAdjacency",
+            "inspectSubject",
+            "previewInspectionAdjacency",
+            "previewInspectionSuggestion",
+            "previewLensAdjacency",
+            "previewMountTemplate",
+            "removeAuthoredMountArg",
+            "setEditorChoiceIndex",
+            "setEditorValue",
+            "setLensMode",
+            "showInspectionSuggestion",
+            "toggleFloatingWindow",
+            "toggleWorkbenchMap"
+          ]
+        },
+        {
+          "family": "canvasExprKind",
+          "current": 11,
+          "retained": 11,
+          "missingFromRetained": [],
+          "retainedOnly": []
+        },
+        {
+          "family": "canvasWidgetType",
+          "current": 19,
+          "retained": 19,
+          "missingFromRetained": [],
+          "retainedOnly": []
+        }
+      ]
+    },
+    {
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "families": [
+        {
+          "family": "canvasActionKind",
+          "current": 27,
+          "retained": 54,
+          "missingFromRetained": [],
+          "retainedOnly": [
+            "applyMountTemplate",
+            "cancelEditorSession",
+            "clearHoverPreview",
+            "closeFloatingWindow",
+            "commitEditorSession",
+            "commitFloatingWindowPosition",
+            "commitFloatingWindowSize",
+            "contextHelp",
+            "dismissInspectionSuggestion",
+            "dismissLensNotice",
+            "focusFloatingWindow",
+            "focusWorkbenchFieldIndex",
+            "focusWorkbenchObject",
+            "focusWorkbenchObjectIndex",
+            "followLensAdjacency",
+            "inspectSubject",
+            "previewInspectionAdjacency",
+            "previewInspectionSuggestion",
+            "previewLensAdjacency",
+            "previewMountTemplate",
+            "removeAuthoredMountArg",
+            "setEditorChoiceIndex",
+            "setEditorValue",
+            "setLensMode",
+            "showInspectionSuggestion",
+            "toggleFloatingWindow",
+            "toggleWorkbenchMap"
+          ]
+        },
+        {
+          "family": "canvasExprKind",
+          "current": 11,
+          "retained": 11,
+          "missingFromRetained": [],
+          "retainedOnly": []
+        },
+        {
+          "family": "canvasWidgetType",
+          "current": 19,
+          "retained": 19,
+          "missingFromRetained": [],
+          "retainedOnly": []
+        }
+      ]
+    }
+  ],
+  "retainedActionsNotObservedInCurrentSyntaxFamilies": [],
+  "recoveredCompatibilityFiles": [
+    {
+      "path": "sdk/browser/canvas-schema-compatibility.mjs",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "sha256": "c922e33804e72ebf7e889c28b4ec08dce6d72daa432b69abb384fac81d09a92a",
+      "bytes": 3640,
+      "retainedFile": "canvas-retained-canvas-schema-compatibility.mjs.txt"
+    },
+    {
+      "path": "test/canvas-schema-compatibility.test.mjs",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "sha256": "debd5cfd7cce89b16f43b9b3bb70db0bbedf260565fed42ec04e52da5f31f031",
+      "bytes": 5481,
+      "retainedFile": "canvas-retained-canvas-schema-compatibility.test.mjs.txt"
+    }
+  ],
+  "currentRenderer": {
+    "path": "sdk/browser/canvas-renderer.mjs",
+    "sha256": "2ba8d852285bd93d69be5442a3ebff8d5516f50fa952870ae122b03ee936c5a2",
+    "stillReadsRoleAsPredicate": true,
+    "compatibilityAdapterImported": false
+  },
+  "variantWarning": "The later schema declares authored semantic color role records and closes structural-type residuals through a retained compatibility adapter absent from the current checkout. Do not promote those closure claims to current runtime proof. Original d1cb schema retains both residuals.",
+  "derived205EntryCatalogueRemainsCharacterization": true,
+  "originalPreReconstitutionHistoryRecovered": false,
+  "canonicalSelectionMade": false,
+  "wholePackageComplete": false,
+  "next": "Review slot/default behavior and retained variant differences against current consumers; select an explicitly identified source under the closure plan authority contract before integrating it. The hyphen-only search did not test this dotted coordinate."
+}
