@@ -1,0 +1,274 @@
+[
+  {
+    "id": "boundary-01",
+    "observation": {
+      "module": "claimipedia/src/profiles/frontier-physics/routes.mjs",
+      "sha256": "08d1be06c8e4ec1a87d950f8538cfcc162e2c075c52630aff6e60e78f780c51c",
+      "kind": "dynamic-import",
+      "expression": "pathToFileURL(resolve(programmeRoot,'src/corpus-history.mjs'))",
+      "line": 19
+    },
+    "custodian": "claimipedia/src/profiles/frontier-physics/routes.mjs",
+    "binding": "The received programmeRoot supplies src/corpus-history.mjs; materialization must preserve that programme owner and relative source coordinate.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-02",
+    "observation": {
+      "module": "sourceryPlatform/sdk/authoring-agent/deployment-worker.mjs",
+      "sha256": "d8ae855791cadbec5eb7ec0ee4475665cdd3902bd4bfb1fde4fdf17f16f1d7a9",
+      "kind": "dynamic-import",
+      "expression": "pathToFileURL(resolve(platformRoot, \"sdk\", \"index.mjs\")).href",
+      "line": 75
+    },
+    "custodian": "sourceryPlatform/sdk/authoring-agent/deployment-worker.mjs",
+    "binding": "The explicit deployment message supplies the packaged SDK root and registered adapter path; packaged toolchain provenance and adapter executeSourceryDeployment interface are separately checked.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-03",
+    "observation": {
+      "module": "sourceryPlatform/sdk/authoring-agent/deployment-worker.mjs",
+      "sha256": "d8ae855791cadbec5eb7ec0ee4475665cdd3902bd4bfb1fde4fdf17f16f1d7a9",
+      "kind": "dynamic-import",
+      "expression": "pathToFileURL(adapterPath).href",
+      "line": 76
+    },
+    "custodian": "sourceryPlatform/sdk/authoring-agent/deployment-worker.mjs",
+    "binding": "The explicit deployment message supplies the packaged SDK root and registered adapter path; packaged toolchain provenance and adapter executeSourceryDeployment interface are separately checked.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-04",
+    "observation": {
+      "module": "sourceryPlatform/sdk/browser/browser-runtime-source.mjs",
+      "sha256": "39e6805518989efe593ae6687fd9924c546377ff22609d3af1b7f3ce6125311a",
+      "kind": "dynamic-import",
+      "expression": "specifier",
+      "line": 15
+    },
+    "custodian": "sourceryPlatform/sdk/browser/browser-runtime-source.mjs",
+    "binding": "Each owning browser registry supplies an explicit source descriptor, source resolver and capability; this shared loader preserves selection/import failures. Registry interfaces remain separately checked; source syntax custody grants neither dynamic execution nor scientific authority.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-05",
+    "observation": {
+      "module": "sourceryPlatform/sdk/plugins/html-canonicalizer/authored.mjs",
+      "sha256": "2f8adf155d4151740d19e2feff2b058b82c40e190226e822c213b473a94b7019",
+      "kind": "dynamic-import",
+      "expression": "pathToFileURL(modulePath).href",
+      "line": 433
+    },
+    "custodian": "sourceryPlatform/sdk/plugins/html-canonicalizer/authored.mjs",
+    "binding": "The authored canonicalizer binding supplies a resolved modulePath to import; canonicalizer availability remains an explicit host integration input.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-06",
+    "observation": {
+      "module": "sourceryPlatform/sdk/plugins/postgres-rel/server-service.mjs",
+      "sha256": "d9715126b21a74e64e8d0b697ce227a27d7c5077b727d17ea02549363b355eb3",
+      "kind": "external",
+      "specifier": "pg",
+      "line": 282,
+      "bindings": [],
+      "importKind": "dynamic-literal",
+      "target": "pg"
+    },
+    "custodian": "sourceryPlatform/sdk/plugins/postgres-rel/server-service.mjs",
+    "binding": "pg is loaded only when the default Postgres pool factory is requested. The retained dependency payload does not admit pg. An injected pool factory does not load the driver; missing default-driver imports return postgres-driver-unavailable with the original cause. Database service/connectivity remains unqualified.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-07",
+    "observation": {
+      "module": "sourceryPlatform/sdk/plugins/project-extension/durable-registry.mjs",
+      "sha256": "ca590980f1c3f6f80aebe8539e423530fba245db69ccf8801279034360e61757",
+      "kind": "require-call",
+      "expression": "require(\"node:sqlite\")",
+      "line": 41
+    },
+    "custodian": "sourceryPlatform/sdk/plugins/project-extension/durable-registry.mjs",
+    "binding": "createRequire loads the Node sqlite builtin for the explicitly selected durable registry; persistence requires the separate registry inputs and authority.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-08",
+    "observation": {
+      "module": "sourceryPlatform/sdk/project/runtime-loader.mjs",
+      "sha256": "c7dba94d0ae5ba6039e126a13ec94821665cb3f193676ba3245f52d8f7abcbab",
+      "kind": "dynamic-import",
+      "expression": "`${pathToFileURL(file).href}?content=${identity.importVersion}`",
+      "line": 100
+    },
+    "custodian": "sourceryPlatform/sdk/project/runtime-loader.mjs",
+    "binding": "The declared runtime source plan provides file and content importVersion; dynamic execution remains an effect of the explicit project load request.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-09",
+    "observation": {
+      "module": "sourceryPlatform/sdk/sdk/index.mjs",
+      "sha256": "abdda6dfa7a16ce828b4b6e4cec0b746a94a84f444a6916eccbac1c8711bc8e7",
+      "kind": "external",
+      "specifier": "terser",
+      "line": 1324,
+      "bindings": [],
+      "importKind": "dynamic-literal",
+      "target": "terser"
+    },
+    "custodian": "sourceryPlatform/sdk/sdk/index.mjs",
+    "binding": "terser is optional and required only for requested JavaScript minification. The loader resets a failed import and reports the missing optional package.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-10",
+    "custodian": "sourceryPlatform/sdk/server/runtime-module-source.mjs",
+    "binding": "Explicit caller-selected entry; canonical path and exact entry-byte SHA-256 key the Node namespace. Server auth, binding and asset facades delegate here.",
+    "limitation": "Entry source identity only, not a transitive dependency seal or concurrent mutation isolation; no dynamic execution or connector admission.",
+    "observation": {
+      "module": "sourceryPlatform/sdk/server/runtime-module-source.mjs",
+      "sha256": "8ac2090eb14ef6be355d1eebd6ba773c3e43d1e26cf342958847c02fd2ee5beb",
+      "kind": "dynamic-import",
+      "expression": "runtimeModuleSourceIdentity(file).url",
+      "line": 17
+    },
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-11",
+    "observation": {
+      "module": "sourceryPlatform/sdk/server/server-actions.mjs",
+      "sha256": "699f17388c07b5a9f992447cee319d9bd3e80b04fc2d37100ef3f6fd0bbb72da",
+      "kind": "external",
+      "specifier": "terser",
+      "line": 93,
+      "bindings": [],
+      "importKind": "dynamic-literal",
+      "target": "terser"
+    },
+    "custodian": "sourceryPlatform/sdk/server/server-actions.mjs",
+    "binding": "terser is loaded by the JavaScript minification path; minification/package availability is not established by source graph accounting.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-12",
+    "observation": {
+      "module": "sourceryPlatform/sdk/server/server-runtime-bundles.mjs",
+      "sha256": "b86018f9a7d56ceb32dc84ed89c4a2daded2644ca50f4777af8d9e0354580995",
+      "kind": "external",
+      "specifier": "terser",
+      "line": 662,
+      "bindings": [],
+      "importKind": "dynamic-literal",
+      "target": "terser"
+    },
+    "custodian": "sourceryPlatform/sdk/server/server-runtime-bundles.mjs",
+    "binding": "terser is loaded for requested bundle JavaScript minification; this catalogue does not qualify that optional execution path.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  },
+  {
+    "id": "boundary-13",
+    "observation": {
+      "module": "sourceryPlatform/sdk/temple-workspace/sealed-bootstrap.mjs",
+      "sha256": "95632f56e3f97217d346123c066553efe3797adfbb0c6292a096e887016ed3bc",
+      "kind": "dynamic-import",
+      "expression": "new URL(safeTemplePath(entry), 'temple:///').href",
+      "line": 117
+    },
+    "custodian": "sourceryPlatform/sdk/temple-workspace/sealed-bootstrap.mjs",
+    "binding": "The sealed bootstrap loads a safeTemplePath entry through the temple URL loader; loader admission and sealed bytes remain separately governed.",
+    "limitation": "Exact syntax/source custody only. This record neither admits dynamic execution nor proves external-package availability, native compatibility, database connectivity, scientific acceptance or production authority.",
+    "executionGranted": false,
+    "scientificAcceptance": false,
+    "packages": [
+      "E1",
+      "H2"
+    ],
+    "status": "admission-not-established"
+  }
+]

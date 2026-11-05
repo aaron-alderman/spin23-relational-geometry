@@ -1,0 +1,8 @@
+const fs=require('node:fs'),cp=require('node:child_process'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto');
+const scope='tooling/maintenance/integrated-baseline-closure-plan-2026-11-06/',git=args=>cp.execFileSync('git',args,{maxBuffer:128*2**20}),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const files=git(['ls-tree','-r','--name-only','-z','HEAD','--',scope]).toString().split('\0').filter(Boolean),working=[];
+for(const file of fs.readdirSync(scope)){const full=path.join(scope,file);assert(fs.lstatSync(full).isFile());working.push(full.replaceAll('\\','/'));}assert.deepEqual(working.sort(),[...files].sort());
+const batch=cp.spawnSync('git',['cat-file','--batch'],{input:files.map(f=>'HEAD:'+f+'\n').join(''),maxBuffer:128*2**20});assert.equal(batch.status,0);let offset=0;
+for(const file of files){const end=batch.stdout.indexOf(10,offset),match=/^[a-f0-9]{40} blob ([0-9]+)$/u.exec(batch.stdout.subarray(offset,end).toString());assert(match);const length=Number(match[1]);assert.equal(sha(batch.stdout.subarray(end+1,end+1+length)),sha(fs.readFileSync(file)),file);offset=end+1+length+1;}
+assert.equal(git(['diff','--cached','--name-only']).toString().trim(),'');assert(git(['diff','--binary']).equals(fs.readFileSync('.platform-reconstitution/bundles/preservation-2026-11-04/supplementary/main-unstaged.patch')));
+const receipt={commit:git(['rev-parse','HEAD']).toString().trim(),files:files.length,rawGitBlobsMatch:true,indexEmpty:true,originalUserDiffUnchanged:true};fs.writeFileSync('.platform-reconstitution/integrated-closure-plan-commit-verification-2026-11-06.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));

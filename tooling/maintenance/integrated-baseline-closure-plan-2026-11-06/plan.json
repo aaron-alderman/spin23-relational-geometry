@@ -1,0 +1,314 @@
+{
+  "protocol": "sourcery/integrated-baseline-closure-plan.v1",
+  "capturedAt": "2026-11-05T16:36:25.967Z",
+  "source": "6698bb52af183333692335c979618e15c9a02c45",
+  "baselineAudit": "1e930eb9cd51457bf7a8c1a2a0803cc3bb37ad7c",
+  "planningComplete": true,
+  "integratedBaselineComplete": false,
+  "computerUsePaused": true,
+  "executionGranted": false,
+  "scientificAcceptance": false,
+  "counts": {
+    "packages": 16,
+    "findings": 4561,
+    "findingOccurrences": 4648,
+    "findingsByKind": {
+      "duplicate-semantic-source": 2,
+      "module-interpreter-missing": 1589,
+      "module-source-kind-mismatch": 2,
+      "module-source-missing": 57,
+      "module-source-subject-missing": 3,
+      "possible-hidden-default": 1575,
+      "thick-mjs": 1333
+    },
+    "findingsByScope": {
+      "cross-source-comparison": 2,
+      "unresolved-catalogue-coordinate": 1646,
+      "catalogued-outside-current-runtime": 2339,
+      "current-runtime": 574
+    },
+    "runtimeModules": 892,
+    "dynamicSites": 13,
+    "sourceryThick": 296,
+    "sourceryDefaults": 348,
+    "newDriftFindings": 2241,
+    "driftRegressions": 1157,
+    "declarationObservations": 7
+  },
+  "evidence": [
+    {
+      "id": "prior:current-assurance",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/current-assurance.json",
+      "sha256": "5a651d44200dedf2206deb6e70c9c014e2a75f8d1fa42838877bed1d12b72d5c",
+      "bytes": 11787274
+    },
+    {
+      "id": "prior:closure",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/closure-verification.json",
+      "sha256": "914a53b4c79acd5caf879787a5bfe70d22a801ff277c388944f01974b1140770",
+      "bytes": 10037
+    },
+    {
+      "id": "prior:qualification",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/managed-receipts/qualification.json",
+      "sha256": "044c0e214d749d0687adddac3ff4e7564dfb9e01e4fb0ed5e9f1497318eece38",
+      "bytes": 433
+    },
+    {
+      "id": "prior:profile-inputs",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/profile/bootstrap-inputs.json",
+      "sha256": "affec2e6399d690198efa048295dcf66630be9fa61efe6b96f69a9c34abea666",
+      "bytes": 3907852
+    },
+    {
+      "id": "prior:goal-progress",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/goal-progress.json",
+      "sha256": "52ed431b7abd326bab2d4727b39972b31497b5853e2f0ceab97e42c9940318f9",
+      "bytes": 8693
+    },
+    {
+      "id": "prior:authority-map",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/live-records/authority-map.json",
+      "sha256": "315ee1c2c4cc46a2eed776ce2e08d1e734bba172e14ef89b15c0364593c51ba1",
+      "bytes": 19137
+    },
+    {
+      "id": "prior:canvas-disposition",
+      "path": "tooling/maintenance/browser-boundary-translation-2026-11-05/README.md",
+      "sha256": "a49aa83e8d5f82e94922fe453281726eaa33d7b09037e7f092554189806bad83",
+      "bytes": 7873
+    },
+    {
+      "id": "prior:recovery-report",
+      "path": "tooling/maintenance/consolidation-2026-11-03/README.md",
+      "sha256": "a906969505ad387796c23f071695f162f8ab70558e93d9bd15cac559337de300",
+      "bytes": 7008
+    },
+    {
+      "id": "prior:cache-audit",
+      "path": "tooling/maintenance/consolidation-2026-11-03/runtime-cache-audit.json",
+      "sha256": "c5430320526387b2ab42264c37d83e7b7d9fc6955522283424e8ed321aaa7cf5",
+      "bytes": 3595
+    },
+    {
+      "id": "prior:managed-runner",
+      "path": "tooling/maintenance/managed-validation/README.md",
+      "sha256": "0c0059f37a2b61f71b81739ee2df2bc2eadbc56923b26b82d5d4ed3b61e7c36c",
+      "bytes": 5884
+    },
+    {
+      "id": "prior:browser-disposition",
+      "path": "tooling/maintenance/auth-session-policy-migration-2026-11-05/managed-receipts/browser-verification-disposition.json",
+      "sha256": "c3e6f878a6bf714ff8c7901c893428bdb4bd0569a52db422675f42b9695a8c66",
+      "bytes": 10545
+    },
+    {
+      "id": "source:assurance/platform-reconstitution.rel",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/platform-reconstitution.rel",
+      "sha256": "1683e3832f4939644ccc31e9f758b26b375a0d149a7828e3316db63ca1a7ba18",
+      "bytes": 778322
+    },
+    {
+      "id": "source:assurance/platform-reconstitution-goal-audit.mjs",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/platform-reconstitution-goal-audit.mjs",
+      "sha256": "3d40ce53357a6e64eb240801c944316e32b918f186454914a93cd1605eabfdc5",
+      "bytes": 5644
+    },
+    {
+      "id": "source:assurance/platform-assurance-check.mjs",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/platform-assurance-check.mjs",
+      "sha256": "ce6812412c0af8c87dd05d80d9ebf327e8b15541401961305c9ad2c5fc36c70a",
+      "bytes": 1883
+    },
+    {
+      "id": "source:assurance/platform-assurance-source-text.mjs",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/platform-assurance-source-text.mjs",
+      "sha256": "3dd76d9ad41c7425139604b335b5f3bd94e9ab1cb1d6123f65f145609039e7b9",
+      "bytes": 5163
+    },
+    {
+      "id": "source:assurance/runtime-module-catalogue.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-module-catalogue.json",
+      "sha256": "01075e915addbf2dec5e3d6cddd1498ed9f3318bd6e19023e7d6e3a373fd1072",
+      "bytes": 3157100
+    },
+    {
+      "id": "source:assurance/runtime-module-boundaries.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-module-boundaries.json",
+      "sha256": "03dea9a8e4352ec936270346e4b95094e4f74074c65460184537d73990ee52e5",
+      "bytes": 12015
+    },
+    {
+      "id": "source:assurance/runtime-loading-qualification.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-loading-qualification.json",
+      "sha256": "e3a5602d2c799e0ea9386c3081eb86e870f72cdb12fc05f68f4bd13d08b2086a",
+      "bytes": 11142
+    },
+    {
+      "id": "source:assurance/runtime-ownership.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/runtime-ownership.json",
+      "sha256": "66087c9e36cb6aad68e6e4404eeeb4a82784fa27bfc8ba25408043e589b94423",
+      "bytes": 104358
+    },
+    {
+      "id": "source:assurance/source-capabilities.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/source-capabilities.json",
+      "sha256": "13d85f2ea3a1043c3218e9941e55c688bbc3df0f63f39b203fbc1e889fb97a85",
+      "bytes": 629667
+    },
+    {
+      "id": "source:assurance/retained-witness-migration.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/retained-witness-migration.json",
+      "sha256": "69f8e6fb931beeb944b757072d9f275a14251b8bffdb876d75725c137b0ff52e",
+      "bytes": 9098914
+    },
+    {
+      "id": "source:assurance/semantic-contract-translations.json",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/semantic-contract-translations.json",
+      "sha256": "3e5858b16f0f74a086189b9ee9005b64928c16ddad5662cd4c709acb6378fe4d",
+      "bytes": 3238197
+    },
+    {
+      "id": "source:assurance/witness-contracts/sourceryPlatform/canvas.catalogue.module.rel",
+      "path": ".platform-reconstitution/sourcery-platform-reconciled/assurance/witness-contracts/sourceryPlatform/canvas.catalogue.module.rel",
+      "sha256": "66f7f5c607025d515e502a63839eafd8f9752d0d2c2188514b36e6885eaf208c",
+      "bytes": 12339
+    },
+    {
+      "id": "live:worktrees",
+      "path": "tooling/maintenance/integrated-baseline-closure-plan-2026-11-06/worktrees.txt",
+      "sha256": "8088033f0733d543eb8fe0c86807dfb29e9dbbf199d7672d34f6093c22ba9e51",
+      "bytes": 297
+    }
+  ],
+  "formalRequirements": [
+    {
+      "id": "algebra-catalogue",
+      "status": "proven",
+      "evidence": "algebraSources=477",
+      "reason": "At least one authoritative algebra source is catalogued."
+    },
+    {
+      "id": "complete-drillable-catalogue",
+      "status": "proven",
+      "evidence": "internals=5720",
+      "reason": "Every discovered internal has a catalogue record."
+    },
+    {
+      "id": "semantic-ownership",
+      "status": "proven",
+      "evidence": "unownedActiveSemanticMjs=0",
+      "reason": "Active semantic modules have explicit owners."
+    },
+    {
+      "id": "canonical-authority-lock",
+      "status": "proven",
+      "evidence": "expression-algebra=canonicalInterpreter;processManifest=sourcery/temple-supervisor-runtime-manifest.v1;vendorProcessImports=0",
+      "reason": "Canonical process and expression algebra authorities are manifest-governed and vendor copies are not authority."
+    },
+    {
+      "id": "page-rank-module",
+      "status": "proven",
+      "evidence": "expressionAlgebra:src/modules/page-rank.rel",
+      "reason": "PageRank is represented as an authored module."
+    },
+    {
+      "id": "mcp-self-improvement-module",
+      "status": "proven",
+      "evidence": "sdk/plugins/mcp-self-improvement/self-improvement.rel",
+      "reason": "MCP self-improvement is represented as an authored module."
+    },
+    {
+      "id": "canonical-process-algebra-runtime",
+      "status": "proven",
+      "evidence": "claimipediaCore:components/process-interpreter/{algebra/surface-process.rel,src/surface-process-engine.mjs}",
+      "reason": "The manifest-governed process algebra is present in the extracted Claimipedia Core source, rather than only in an application vendor copy."
+    },
+    {
+      "id": "blank-bootstrap",
+      "status": "proven",
+      "evidence": "assurance/platform-reconstitution.rel, assurance/blank-platform-bootstrap.mjs, scripts/run-blank-platform.mjs, scripts/check-bootstrap-sources.mjs, assurance/contracts/algebra-source-catalogue-contract.rel, sdk/plugins/mcp-self-improvement/self-improvement.rel",
+      "reason": "Blank bootstrap and its source-check path are present."
+    },
+    {
+      "id": "no-github-actions",
+      "status": "proven",
+      "evidence": ".github/workflows",
+      "reason": "GitHub Actions are absent from the reconstitution repository."
+    },
+    {
+      "id": "declared-effects",
+      "status": "proven",
+      "evidence": "undeclared-effect=0",
+      "reason": "All Sourcery effect imports are declared."
+    },
+    {
+      "id": "drift-check",
+      "status": "incomplete",
+      "evidence": "new=2241;regressions=1157",
+      "reason": "The repository-owned drift check passes against its residual ledger."
+    },
+    {
+      "id": "thin-mjs-boundaries",
+      "status": "incomplete",
+      "evidence": "thick-mjs=296",
+      "reason": "Every executable boundary is thin; remaining thick modules are explicit unfinished work."
+    },
+    {
+      "id": "no-hidden-defaults",
+      "status": "incomplete",
+      "evidence": "possible-hidden-default=348",
+      "reason": "Every runtime default is authored in algebra; remaining candidates are explicit unfinished work."
+    }
+  ],
+  "sequence": [
+    [
+      "A1",
+      "S1",
+      "S2",
+      "R2"
+    ],
+    [
+      "A2",
+      "E1"
+    ],
+    [
+      "A3",
+      "A4",
+      "E2",
+      "R1"
+    ],
+    [
+      "A5"
+    ],
+    [
+      "F1"
+    ],
+    [
+      "H1",
+      "H2",
+      "R3"
+    ],
+    [
+      "F2"
+    ]
+  ],
+  "interpretation": "Dependencies gate closure, not useful preparatory work. Packages may progress partially in parallel; no sub-agent delegation or computer use is authorized by this plan. Counts overlap and are not independent defects or effort estimates.",
+  "scopePolicy": "The finite universe is this source snapshot, current runtime graph, complete assurance findings and named recovery/host/reproduction obligations. Future findings are appended with source identity and a crosswalk; none are silently dropped. Outside-current-runtime is a scope observation, not an exemption from repository-owned gates.",
+  "noShortcutRules": [
+    "Do not reset residual ledgers or raise ceilings to manufacture completion.",
+    "Do not treat a custody/default extraction or passing tests as generic algebra or execution authority.",
+    "Preserve all original user edits, overlays, source refs, bundles and historical evidence.",
+    "No cache, output, worktree or operator-state deletion is authorized by this plan.",
+    "Existing bounded contract qualification remains complete at its existing scope; do not relabel all 424 as newly unresolved."
+  ],
+  "recommendedNext": {
+    "package": "A1",
+    "deliverable": "Complete source/declaration/runtime correspondence map and authenticated runtime vertical-slice inventory; then execute A2 auth/identity/authorization with effect ports as one integrated migration.",
+    "parallelPreparatoryWork": [
+      "S1: consolidate Canvas recovery/variant evidence",
+      "S2: identify genuinely unsearched backups and prepare explicit reconstitution disposition",
+      "R2: refresh output family and input inventory without deletion"
+    ]
+  }
+}

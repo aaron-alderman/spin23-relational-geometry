@@ -1,0 +1,397 @@
+[
+  {
+    "id": "A1",
+    "area": "architecture",
+    "title": "Reconcile the authoritative source catalogue",
+    "owner": "repository source owners",
+    "mode": "autonomous",
+    "dependencies": [],
+    "scope": "Every indexed module-source/interpreter/subject/kind mismatch and duplicate-source finding; all retained variants stay preserved.",
+    "acceptance": [
+      "For each indexed finding, identify its retained declaration, actual implementation, owner and source hash; distinguish stale coordinates, missing content, deliberate historical evidence and real semantic gaps.",
+      "Restore or explicitly rebind actual implementation relationships with behavioral and negative witnesses. Do not manufacture placeholder files or remove historical declarations to silence findings.",
+      "Resolve the original finding or link it to a justified, explicit open obligation. Reclassification is not completion; unresolved authority routes to S1/S2."
+    ],
+    "evidence": [
+      "finding-index.json",
+      "prior:current-assurance",
+      "source:assurance/platform-reconstitution.rel"
+    ],
+    "blockers": [],
+    "nextAction": "Start with Sourcery catalogue relationships reachable from the current runtime, then adjacent owners and historical/test-only records.",
+    "status": "open"
+  },
+  {
+    "id": "A2",
+    "area": "architecture",
+    "title": "Complete runtime semantic and effect decomposition",
+    "owner": "runtime custodians named in runtime-index.json",
+    "mode": "autonomous",
+    "dependencies": [
+      "A1"
+    ],
+    "scope": "All 892 current runtime modules, the 336 bounded translations, 81 owner behavior specifications and seven declaration-only observations; the 565 SDK runtime libraries are included, not an additional count.",
+    "acceptance": [
+      "Every runtime module has a reviewed disposition: generic mechanism, authored domain policy or thin effect adapter, with source/data paths and executable evidence. A custody label alone does not satisfy this gate.",
+      "Domain decisions execute authored semantics through genuinely reusable interpreters; demonstrate another authored policy/domain, changed authored inputs and invalid-input refusal without changing the interpreter.",
+      "Map each of the seven declaration-only observations to its actual obligation and either supply executable/effect evidence or preserve a justified declaration-only scope without representing it as generic behavior proof.",
+      "Preserve all retained specifications, amendments and cases; explicitly qualify any necessary semantic changes rather than silently editing expectations."
+    ],
+    "evidence": [
+      "runtime-index.json",
+      "declaration-observations.json",
+      "source:assurance/semantic-contract-translations.json",
+      "source:assurance/retained-witness-migration.json"
+    ],
+    "blockers": [],
+    "nextAction": "Use authentication, authorization, credential/session lifecycle and effect ports as the first complete vertical slice; policy extraction alone is already qualified.",
+    "status": "open"
+  },
+  {
+    "id": "A3",
+    "area": "architecture",
+    "title": "Close thin-boundary findings",
+    "owner": "Sourcery and adjacent implementation owners",
+    "mode": "autonomous",
+    "dependencies": [
+      "A2"
+    ],
+    "scope": "Every indexed thick-mjs finding, with the 296 Sourcery findings separately identified from the wider report.",
+    "acceptance": [
+      "The existing goal audit reports thick-mjs=0 for Sourcery; handle all wider findings by their declared repository scope.",
+      "Extraction removes domain decisions from executable boundaries; splitting files solely to fall below a line/decision threshold is insufficient.",
+      "Preserve actual behavior and explicit effect ordering with focused subsystem evidence and managed integration qualification."
+    ],
+    "evidence": [
+      "finding-index.json",
+      "source:assurance/platform-reconstitution-goal-audit.mjs",
+      "source:assurance/platform-assurance-source-text.mjs"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "A4",
+    "area": "architecture",
+    "title": "Close hidden-default findings",
+    "owner": "domain policy owners",
+    "mode": "autonomous",
+    "dependencies": [
+      "A2"
+    ],
+    "scope": "Every indexed possible-hidden-default finding, including 348 Sourcery findings.",
+    "acceptance": [
+      "The existing goal audit reports possible-hidden-default=0 for Sourcery; authored policy/data owns each domain fallback and missing policy has explicit semantics.",
+      "Classify harmless syntax separately with exact evidence, but do not treat a review note as removing an unchanged formal finding.",
+      "Do not weaken detectors, move defaults into another private JavaScript table, raise budgets or reset the residual ledger. Any measurement-policy correction requires its own reviewed, versioned change and fresh baseline, without claiming the former gate passed."
+    ],
+    "evidence": [
+      "finding-index.json",
+      "source:assurance/platform-reconstitution-goal-audit.mjs",
+      "source:assurance/platform-assurance-source-text.mjs"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "A5",
+    "area": "architecture",
+    "title": "Pass the unchanged drift and architectural gates",
+    "owner": "assurance maintainer",
+    "mode": "autonomous",
+    "dependencies": [
+      "A1",
+      "A2",
+      "A3",
+      "A4"
+    ],
+    "scope": "The 2,241 new findings, 1,157 metric regressions and all 13 formal goal requirements in the recorded audit. These counts overlap other indexes and are not additive tasks.",
+    "acceptance": [
+      "checkPlatform reports pass=true, newFindings=0 and regressions=0 under the declared measurement policy; the complete goal audit reports complete=true.",
+      "Preserve the original residual evidence and criteria. New ceilings or broad acceptance entries cannot substitute for repair.",
+      "All seven report finding kinds have an explicit disposition; retain a crosswalk from this snapshot to resolved, superseded and still-open findings."
+    ],
+    "evidence": [
+      "drift-index.json",
+      "prior:current-assurance",
+      "source:assurance/platform-assurance-check.mjs",
+      "source:assurance/platform-reconstitution-goal-audit.mjs"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "E1",
+    "area": "execution-authority",
+    "title": "Define and enforce dynamic execution admission",
+    "owner": "the 13 boundary custodians",
+    "mode": "autonomous-design-and-local-controls",
+    "dependencies": [
+      "A1"
+    ],
+    "scope": "Every current dynamic/external/require boundary in boundary-index.json, preserving the 15 retained-site crosswalk.",
+    "acceptance": [
+      "For every boundary, declare allowed source/package identity, target, caller, capabilities, invocation conditions, failure semantics and an explicit denied state.",
+      "Enforce that contract before execution, with allow/deny, substituted-source, malformed-input and lifecycle controls. A hash, custody record or passing import alone is insufficient.",
+      "Scope admission to the verified local host/profile. External/native operation remains gated by H1/H2; no blanket arbitrary-plugin or production grant."
+    ],
+    "evidence": [
+      "boundary-index.json",
+      "source:assurance/runtime-module-boundaries.json",
+      "source:assurance/runtime-loading-qualification.json"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "E2",
+    "area": "execution-authority",
+    "title": "Complete effect and environment custody",
+    "owner": "effect adapter custodians",
+    "mode": "autonomous",
+    "dependencies": [
+      "A2",
+      "E1"
+    ],
+    "scope": "All declared effect modules and environment inputs in the evidence manifest; current declaration coverage passes, runtime permission is separate.",
+    "acceptance": [
+      "Every effect has explicit input/output schemas, source authority, capability owner, cancellation/disposal, persistence and error behavior.",
+      "Missing authority fails before effects; retries and recovery do not introduce undeclared writes or ambient configuration.",
+      "Keep unownedActiveSemanticMjs=0 and undeclared effects=0, refresh capability hashes and qualify controlled effect traces. Declared import coverage alone is not effect admission."
+    ],
+    "evidence": [
+      "source:assurance/source-capabilities.json",
+      "source:assurance/runtime-ownership.json",
+      "runtime-index.json"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "S1",
+    "area": "source-authority",
+    "title": "Resolve canonical Canvas schema authority",
+    "owner": "Canvas source owner",
+    "mode": "autonomous-search-then-authority-decision",
+    "dependencies": [],
+    "scope": "Missing sdk/plugins/canvas/canvas-stdlib.rel; the derived 205-entry vocabulary catalogue is not its authoritative replacement.",
+    "acceptance": [
+      "Locate and verify the authoritative source/history, or produce a specifically identified reconstitution with provenance, schema behavior, differences and remaining gaps.",
+      "Compare retained variants, consumer vocabulary/rendering behavior and migration rules; preserve all source evidence.",
+      "Record the canonical selection and its authority basis. Proceed under existing authorization where the source contract permits explicit reconstitution; request a decision only for an actual unresolved authority conflict. A local catalogue/test receipt alone is not canonical authority."
+    ],
+    "evidence": [
+      "prior:canvas-disposition",
+      "prior:authority-map",
+      "source:assurance/witness-contracts/sourceryPlatform/canvas.catalogue.module.rel"
+    ],
+    "blockers": [
+      "Authoritative schema/source selection is unresolved; a source-owner decision may be needed after the evidence packet is prepared."
+    ],
+    "nextAction": "Inventory already searched locations and retained variants first; search only additional identified sources before preparing an explicit reconstitution proposal.",
+    "status": "open"
+  },
+  {
+    "id": "S2",
+    "area": "source-authority",
+    "title": "Close the two missing-history obligations",
+    "owner": "Epistemic Core and Claimipedia Science source owners",
+    "mode": "autonomous-evidence-review-and-recovery",
+    "dependencies": [],
+    "scope": "Epistemic 274a2a541789ee2e8b6576ec3aeb5d9651165338 and Science 647e065a69867ee767c5d9b7dac04bdce1946d19; current tested reconstitutions already exist.",
+    "acceptance": [
+      "Audit the existing reconstitutions first. Close the already authorized identified-reconstitution route if its provenance, comparison limits and history-gap records satisfy the source contract; otherwise name the exact unmet requirement. Alternatively recover each exact commit and required object closure. Never claim exact recovery from a tested replacement.",
+      "Record searched backup/object-store/snapshot locations and results. Unlocated objects are not proof of impossibility; repeated local searches are not independent confirmations.",
+      "Preserve all branches, bundles, survivors and original Claimipedia overlays. Source-owner disposition is explicit; passing current application tests does not reconstruct lost history."
+    ],
+    "evidence": [
+      "prior:recovery-report",
+      "prior:authority-map",
+      "prior:profile-inputs"
+    ],
+    "blockers": [
+      "Additional backup/snapshot locations or access may require user input if exact objects are still required. Existing reconstitution is not assumed insufficient, nor is a fresh approval assumed mandatory."
+    ],
+    "nextAction": "Audit the already identified and tested reconstitutions against the existing authorized alternative; do not repeat their implementation or invent another approval gate. Establish precisely whether any stricter historical requirement remains.",
+    "status": "open"
+  },
+  {
+    "id": "H1",
+    "area": "host-verification",
+    "title": "Verify the final native browser and workbench",
+    "owner": "browser/workbench custodian",
+    "mode": "paused-by-user",
+    "dependencies": [
+      "A5",
+      "E1",
+      "S1",
+      "F1"
+    ],
+    "scope": "Final selected revision: reader/provenance, auth/session/CSRF, authored canvas, inspector/editor/history, publication/conflict persistence, reload and disposal/error paths.",
+    "acceptance": [
+      "Resume computer use only on user instruction, then execute a finite interaction matrix with expected state, persisted state, network/effect observations and cleanup for every row.",
+      "Exercise valid and invalid interactions, canvas coordinate behavior, conflict reload, lifecycle disposal and publication refusals against the final assembled revision.",
+      "Capture native receipts/source identity and verify all temporary hosts stop. Older native evidence and Node/loopback tests are supporting evidence, not current native completion."
+    ],
+    "evidence": [
+      "prior:browser-disposition",
+      "prior:qualification"
+    ],
+    "blockers": [
+      "Computer use remains paused by explicit user instruction."
+    ],
+    "status": "paused-by-user"
+  },
+  {
+    "id": "H2",
+    "area": "host-verification",
+    "title": "Qualify actual connector and host profiles",
+    "owner": "PostgreSQL, Temple, package and host custodians",
+    "mode": "autonomous-harness-then-configured-host",
+    "dependencies": [
+      "E1",
+      "E2",
+      "F1"
+    ],
+    "scope": "The pg, terser, SQLite, Temple and caller-selected module/browser boundaries in boundary-index.json; qualify each intended host profile separately.",
+    "acceptance": [
+      "For each boundary, name an actual supported host/version, pinned package/source, credentials/capabilities if needed and finite success/refusal/reconnect/disposal cases.",
+      "Use disposable local service profiles where supported; prove actual PostgreSQL operations and Temple snapshot/overlay loading rather than only stubs or imports. Distinguish local SQLite evidence already obtained from remaining host claims.",
+      "No access to production or third-party write targets is inferred. Unavailable/unconfigured profiles remain explicitly unqualified; remove an obligation only through an explicit scope decision, not a passing local mock."
+    ],
+    "evidence": [
+      "boundary-index.json",
+      "prior:qualification"
+    ],
+    "blockers": [
+      "Actual PostgreSQL/Temple target profiles, capabilities or credentials may be unavailable; browser interactions remain subject to H1's pause."
+    ],
+    "status": "open"
+  },
+  {
+    "id": "R1",
+    "area": "reproducibility-consolidation",
+    "title": "Establish runtime cache reproduction and active generation",
+    "owner": "runtime snapshot custodian",
+    "mode": "autonomous-inventory-and-reproduction",
+    "dependencies": [
+      "E1"
+    ],
+    "scope": "All three historically recorded runtime-cache generations; refresh current pointers, file identities and overlays before any retirement decision.",
+    "acceptance": [
+      "Identify the actual current generation from the owning runtime/snapshot/profile configuration, not timestamps or directory order.",
+      "Regenerate each superseded candidate in an owned managed workspace from named source snapshots, databases, overlays and tooling; compare exact hashes or an explicitly specified semantic equivalence.",
+      "Produce a per-generation retain/archive/retire proposal with dependencies and restoration evidence. Unknown or unreproducible generations remain retained."
+    ],
+    "evidence": [
+      "prior:cache-audit",
+      "prior:recovery-report"
+    ],
+    "blockers": [
+      "Recorded snapshot databases or overlay paths may no longer be accessible; no active-generation pointer was established by the historical audit."
+    ],
+    "status": "open"
+  },
+  {
+    "id": "R2",
+    "area": "reproducibility-consolidation",
+    "title": "Establish research-output reproduction",
+    "owner": "research/programme output owners",
+    "mode": "autonomous-inventory-then-input-dependent",
+    "dependencies": [],
+    "scope": "output/; historical readable content was about 0.40 GiB with 37 denied paths, not a fresh current size claim.",
+    "acceptance": [
+      "Refresh a non-traversing inventory, classify unreadable paths and identify each output family's source revision, inputs, seeds, tools and reproduction command.",
+      "Reproduce in owned bounded scratch and compare exact bytes or documented scientific invariants; record nondeterminism and all failures.",
+      "Unknown inputs, unreadable content or unproved reproduction imply retain. Engineering reproduction does not admit scientific conclusions."
+    ],
+    "evidence": [
+      "prior:recovery-report"
+    ],
+    "blockers": [
+      "Some source inputs or access to the historically denied paths may be unavailable."
+    ],
+    "status": "open"
+  },
+  {
+    "id": "R3",
+    "area": "reproducibility-consolidation",
+    "title": "Finish preservation-led consolidation",
+    "owner": "repository/worktree custodian",
+    "mode": "autonomous-preservation-and-review",
+    "dependencies": [
+      "S1",
+      "S2",
+      "R1",
+      "R2"
+    ],
+    "scope": "Remaining redundant source/worktree/cache/output candidates; saturation-refresh remains registered at plan capture and historically holds ignored Context Hub state.",
+    "acceptance": [
+      "Re-enumerate Git refs/worktrees and ignored operator state; preserve Context Hub state and previews with verified restoration evidence before retiring their checkout.",
+      "Require per-target source authority, byte/history preservation, demonstrated redundancy and explicit deletion scope. No general recursive cleanup or junction traversal.",
+      "Keep managed validation retention active and check scratch/lease release after failures as well as success. Protected recovery/source/history material is outside that retention policy."
+    ],
+    "evidence": [
+      "prior:recovery-report",
+      "prior:managed-runner",
+      "live:worktrees"
+    ],
+    "blockers": [
+      "Source/history and reproduction holds must close before their related copies can be retired."
+    ],
+    "status": "open"
+  },
+  {
+    "id": "F1",
+    "area": "final-baseline",
+    "title": "Qualify one final integrated source revision",
+    "owner": "integration maintainer",
+    "mode": "autonomous-after-dependencies",
+    "dependencies": [
+      "A5",
+      "E2",
+      "S1",
+      "S2"
+    ],
+    "scope": "One explicit committed source selection, all owner pins/overlays and the maintained managed profile.",
+    "acceptance": [
+      "Keep all 424 bounded specifications and their evidence crosswalk; update hashes and expectations explicitly when behavior actually changes.",
+      "Run appropriate focused/source checks, then the managed runner for ordinary-copy assembly, Claimipedia/all consumers, runtime/semantic gates and both isolated bootstraps. Preserve every existing assertion; append genuinely needed checks.",
+      "Require exact profiled totals, zero failures/skips/cancellations, matching bootstrap identities, reader meaning preserved, post-run source/artifact byte checks, stopped readers and absent owned scratch/harness/lease."
+    ],
+    "evidence": [
+      "prior:qualification",
+      "prior:profile-inputs",
+      "prior:managed-runner"
+    ],
+    "blockers": [],
+    "status": "open"
+  },
+  {
+    "id": "F2",
+    "area": "final-baseline",
+    "title": "Issue the final baseline certificate",
+    "owner": "integration/source authority owners",
+    "mode": "after-all-evidence",
+    "dependencies": [
+      "F1",
+      "H1",
+      "H2",
+      "R3"
+    ],
+    "scope": "The complete five-area obligation set, all original goal invariants and final source/host identities.",
+    "acceptance": [
+      "Every package has linked acceptance evidence and no unresolved required blocker. All original 13 formal goal requirements pass; additional source/host/reproducibility obligations also close.",
+      "Verify Git connectivity, bundles/refs, raw file identities, original user edits and consumer overlays; archive a bounded reproducible receipt with the actual final source/host scope.",
+      "Record what was recovered versus explicitly reconstituted and any accepted scope decision. Never substitute a certificate for absent history, native execution or scientific admission.",
+      "Only then mark the integrated platform baseline complete. Completion of this planning task does not complete that baseline."
+    ],
+    "evidence": [
+      "prior:goal-progress",
+      "prior:closure",
+      "prior:current-assurance"
+    ],
+    "blockers": [],
+    "status": "open"
+  }
+]
