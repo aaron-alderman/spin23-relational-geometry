@@ -1,0 +1,20 @@
+import {mountDataSpaceRenderer} from '/sdk/plugins/data-space/deferred/runtime/projection-runtime.mjs';
+import {mountCanvasRenderer} from '/sdk/browser/canvas-renderer.mjs';
+import {trustedBridgePolicyMatch} from '/sdk/plugins/data-space/trust-bridge.mjs';
+import {dataSpaceFacts,canvasFacts} from '/native-workbench-fixture.mjs';
+const output=document.querySelector('#status'),dataContainer=document.querySelector('#data'),canvasContainer=document.querySelector('#canvas');
+let dataController=null,canvasController=null,canvasMemory=null;
+const observations=[];
+async function report(kind,detail={}){const row={kind,...detail};observations.push(row);output.textContent=JSON.stringify(row);await fetch('/observations',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(row)});}
+function button(id,action){document.querySelector('#'+id).addEventListener('click',async()=>{try{await action();}catch(error){await report('error',{action:id,message:String(error.message)});}});}
+function mountData(prog,subject){dataController?.dispose();const started=performance.now();dataController=mountDataSpaceRenderer({prog,documentSubject:subject,container:dataContainer,document,memory:{runtime:{},viewState:{}},presentationMode:'embedded',onAction:(action,payload)=>report('data-action',{action,payload})});return performance.now()-started;}
+button('valid',async()=>{const elapsedMs=mountData(dataSpaceFacts,'space');await report('data-valid',{title:dataContainer.querySelector('h1')?.textContent,configurationFailure:/1 configuration issue/.test(dataContainer.textContent),elapsedMs});});
+button('invalid',async()=>{mountData([],'missing');await report('data-invalid',{configurationFailure:/1 configuration issue/.test(dataContainer.textContent),messageVisible:/configuration/i.test(dataContainer.textContent)});});
+button('dispose-data',async()=>{dataController?.dispose();dataController?.dispose();const result=dataController?.render();await report('data-disposed',{children:dataContainer.children.length,postDisposeRender:result===null?'null':String(result)});});
+button('mount-canvas',async()=>{canvasController?.dispose();canvasMemory={viewState:{},runtime:{}};const started=performance.now();canvasController=mountCanvasRenderer({prog:canvasFacts,memory:canvasMemory,documentSubject:'nativeCanvas',container:canvasContainer});const canvas=canvasContainer.querySelector('canvas');canvas.setAttribute('aria-label','Native qualification canvas');canvas.style.maxWidth='100%';canvas.addEventListener('click',()=>queueMicrotask(()=>report('canvas-click',{state:canvasMemory.viewState.nativeClick||'',width:canvas.width,height:canvas.height,cssWidth:canvas.getBoundingClientRect().width})));await report('canvas-mounted',{canvases:canvasContainer.querySelectorAll('canvas').length,width:canvas.width,height:canvas.height,elapsedMs:performance.now()-started});});
+button('dispose-canvas',async()=>{canvasController?.dispose();canvasController?.dispose();canvasMemory.viewState.nativeClick='';await report('canvas-disposed',{state:canvasMemory.viewState.nativeClick,canvases:canvasContainer.querySelectorAll('canvas').length});});
+const context={publication:{publicationKind:'card'}},condition={signalKind:'publicationKind',operator:'equals',expectedValue:'card'};
+button('policy-valid',async()=>{const result=trustedBridgePolicyMatch(context,[{subject:'native-policy',rules:[{subject:'native-rule',conditions:[condition]}]}]);await report('policy-valid',{policy:result?.policy?.subject||null,rule:result?.rule?.subject||null});});
+button('policy-invalid',async()=>{const result=trustedBridgePolicyMatch(context,[{subject:'must-not-match',rules:[{subject:'bad-rule',conditionGroups:[{logicKind:'unknown',conditions:[condition]}]}]}]);await report('policy-invalid',{matched:Boolean(result?.policy)});});
+button('stop',async()=>{await report('shutdown-requested');await fetch('/stop',{method:'POST'});output.textContent='Local qualification server stopped.';});
+await report('ready',{userAgent:navigator.userAgent,devicePixelRatio:window.devicePixelRatio});

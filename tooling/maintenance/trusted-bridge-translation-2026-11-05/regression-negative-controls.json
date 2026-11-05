@@ -1,0 +1,72 @@
+{
+  "previousCommit": "04b5fc52f5bed63b989bbde8f39fa84e24dfb204",
+  "indexSha256": "8cabb34996419189f8d8e1caeb99db4589ea038df89b23f9c0c9b585ba1e06cb",
+  "policySha256": "a07420468f9a43d1f4e74454ae53db6bd7fa47b6e13aed362ef5fd9ad450d066",
+  "method": "Exact preceding module bodies with only private test entry points exposed and static relative imports relocated. Policy controls do not call the imported parser. This isolates these branches rather than replaying the whole preceding application.",
+  "controls": [
+    {
+      "family": "cached-expression-owner",
+      "branch": "group",
+      "oldAccepted": true,
+      "currentRefused": true
+    },
+    {
+      "family": "cached-expression-owner",
+      "branch": "condition",
+      "oldAccepted": true,
+      "currentRefused": true
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "unknown-logic",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "missing-operator",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "unknown-signal",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "no-members",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "missing-pattern",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "malformed-eligibility",
+      "branch": "absent-numeric-evidence",
+      "oldMatched": true,
+      "currentMatched": false
+    },
+    {
+      "family": "nonarray-flatten",
+      "branch": "flattenTrustedBridgePolicyConditionGroups",
+      "oldError": "TypeError",
+      "currentValue": []
+    },
+    {
+      "family": "nonarray-flatten",
+      "branch": "flattenTrustedBridgeExpressionConditionGroups",
+      "oldError": "TypeError",
+      "currentValue": []
+    }
+  ],
+  "causalFamilies": 3,
+  "allDetected": true,
+  "sameRunEngineeringEvidence": true,
+  "independentScientificConfirmations": false
+}
