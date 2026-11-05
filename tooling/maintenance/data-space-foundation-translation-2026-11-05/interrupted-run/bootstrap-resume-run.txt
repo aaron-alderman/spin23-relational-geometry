@@ -1,0 +1,10 @@
+file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:16
+export async function readManifest(file){const manifest=JSON.parse(await readFile(file,'utf8'));if(manifest.protocol!=='sourcery/local-source-bootstrap-input.v1'||manifest.mode!=='nonProduction-loopback-readonly'||manifest.scientificAcceptance!==false||manifest.sourceAuthority!==false)throw Error('Explicit local non-production bootstrap input required.');if(manifest.nodeExecutable!==process.execPath)throw Error('Pinned Node executable mismatch.');if(digest(await readFile(manifest.nodeExecutable))!==manifest.nodeExecutableSha256||digest(await readFile(manifest.gitExecutable))!==manifest.gitExecutableSha256)throw Error('Bootstrap executable bytes changed.');return manifest;}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+
+Error: Bootstrap executable bytes changed.
+    at readManifest (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap-files.mjs:16:620)
+    at async runLocalSourceBootstrap (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/assurance/source-bootstrap.mjs:7:17)
+    at async file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/resume-bootstrap-b.mjs:9:161
+
+Node.js v24.22.1

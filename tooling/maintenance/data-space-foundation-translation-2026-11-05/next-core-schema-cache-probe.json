@@ -1,0 +1,23 @@
+{
+  "sourceCommit": "c1fd716c0ad1bc0fd9f4d856eb13f0024a666d19",
+  "finding": "Interface validation-plan WeakMap cache misses replacement of an interface descriptor in the same caller-owned Map.",
+  "reusedMapIssues": [],
+  "freshMapIssues": [
+    {
+      "code": "invalid-allowed-value",
+      "message": "facts: x.name value \"yes\" is not allowed. Allowed: no.",
+      "severity": "error",
+      "subject": "x",
+      "predicate": "name",
+      "object": "yes",
+      "allowed": [
+        "no"
+      ]
+    }
+  ],
+  "fixApplied": false,
+  "qualification": false,
+  "nextCohort": "core admissibility",
+  "causalEvidenceFamily": "mutable interface map cache lifetime",
+  "scientificAcceptance": false
+}

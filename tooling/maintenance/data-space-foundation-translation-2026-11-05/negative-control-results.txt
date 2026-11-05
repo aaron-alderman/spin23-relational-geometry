@@ -1,0 +1,177 @@
+✖ catalog depth follows ancestry even when descendants sort before parents (2.9482ms)
+✖ deep catalog ancestry and descendant counting avoid JavaScript recursion limits (19.7991ms)
+✖ prototype-named reset layers use unknown precedence and cannot conceal fallback conflicts (3.3821ms)
+✖ custom prototype-named source kind is treated like other unknown kind labels (0.6456ms)
+✖ custom prototype-named asset kinds retain the generic catalog asset fallback (0.4952ms)
+✖ unknown resolved-provider layers do not select inherited object members as policies (0.4641ms)
+✖ SQL metadata comments cannot inject executable lines (7.956ms)
+✖ REL experiment preview round-trips quoted and newline-bearing identities (1.0993ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 202.1822
+
+✖ failing tests:
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:6:1
+✖ catalog depth follows ancestry even when descendants sort before parents (2.9482ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 2
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:8:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 2,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:10:1
+✖ deep catalog ancestry and descendant counting avoid JavaScript recursion limits (19.7991ms)
+  RangeError [Error]: Maximum call stack size exceeded
+      at file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:61
+      at Array.reduce (<anonymous>)
+      at countDescendantAssets (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:34)
+      at file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:63
+      at Array.reduce (<anonymous>)
+      at countDescendantAssets (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:34)
+      at file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:63
+      at Array.reduce (<anonymous>)
+      at countDescendantAssets (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:34)
+      at file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:13952:63
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:14:1
+✖ prototype-named reset layers use unknown precedence and cannot conceal fallback conflicts (3.3821ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+  +   'next',
+  +   'blockedHigherLane'
+  -   'blockedConflict',
+  -   'blockedConflict'
+    ]
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:16:130)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 'next', 'blockedHigherLane' ],
+    expected: [ 'blockedConflict', 'blockedConflict' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:18:1
+✖ custom prototype-named source kind is treated like other unknown kind labels (0.6456ms)
+  TypeError [Error]: allowedTypes.includes is not a function
+      at requireSourceKind (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:560:21)
+      at Module.parseSource (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:588:3)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:19:183)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:21:1
+✖ custom prototype-named asset kinds retain the generic catalog asset fallback (0.4952ms)
+  TypeError [Error]: allowedSourceKinds.includes is not a function
+      at requireAssetSourceCompatibility (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:576:27)
+      at Module.parseAsset (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:609:3)
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:22:302)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7)
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:25:1
+✖ unknown resolved-provider layers do not select inherited object members as policies (0.4641ms)
+  AssertionError [ERR_ASSERTION]: Got unwanted exception.
+  Actual message: "allowedTypes.includes is not a function"
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:26:76)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: allowedTypes.includes is not a function
+        at Module.requireResolvedValueProviderFamily (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control-index.mjs:1485:21)
+        at file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:26:98
+        at getActual (node:assert:611:5)
+        at strict.doesNotThrow (node:assert:779:32)
+        at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:26:76)
+        at Test.runInAsyncScope (node:async_hooks:227:14)
+        at Test.run (node:internal/test_runner/test:1402:25)
+        at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+        at Test.postRun (node:internal/test_runner/test:1542:19)
+        at Test.run (node:internal/test_runner/test:1467:12),
+    expected: undefined,
+    operator: 'doesNotThrow',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:28:1
+✖ SQL metadata comments cannot inject executable lines (7.956ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(!sql.split(/\r?\n/).some(line=>/^(DROP|DELETE)/.test(line)))
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:30:50)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\data-space-foundation-translation-2026-11-05\negative-control.test.mjs:32:1
+✖ REL experiment preview round-trips quoted and newline-bearing identities (1.0993ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + undefined
+  - 'asset"\\quoted'
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/data-space-foundation-translation-2026-11-05/negative-control.test.mjs:34:77)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'asset"\\quoted',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

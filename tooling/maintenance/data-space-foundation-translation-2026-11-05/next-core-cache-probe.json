@@ -1,0 +1,19 @@
+{
+  "sourceCommit": "c1fd716c0ad1bc0fd9f4d856eb13f0024a666d19",
+  "finding": "Declaration fact-index WeakMap cache misses a new seeAlso edge when the same caller-owned fact array is reused after an append.",
+  "reusedArrayIssues": [],
+  "freshArrayIssues": [
+    {
+      "code": "invalid-semantic-documentation-declaration",
+      "message": "facts: SemanticDoc doc.seeAlso references unknown subject \"missing\". Expected values: doc, target.",
+      "severity": "error",
+      "subject": "doc",
+      "predicate": "seeAlso"
+    }
+  ],
+  "fixApplied": false,
+  "qualification": false,
+  "nextCohort": "core admissibility",
+  "causalEvidenceFamily": "mutable declaration array cache lifetime",
+  "scientificAcceptance": false
+}

@@ -1,0 +1,30 @@
+{
+  "revision": "201be0b28367ccb77805883d6c64febd7872c210",
+  "inputs": [
+    {
+      "file": "sdk/plugins/data-space/index.mjs",
+      "revision": "201be0b28367ccb77805883d6c64febd7872c210",
+      "originalSha256": "6b61bea121461d87c4b7100bfa538c9215f629c73ffe5005a4169f5775d46ae7",
+      "adaptedSha256": "2ff1be9da7386db0ca7ff45d954400cca761a3282a2ac6315013e933a18491ac",
+      "adaptation": "Expose the same existing private functions; rebind relative imports to the selected source tree. Historical function bodies retained."
+    },
+    {
+      "file": "sdk/plugins/data-space/export-bridge.mjs",
+      "revision": "201be0b28367ccb77805883d6c64febd7872c210",
+      "originalSha256": "57b977c00c3b9643853d4d66c88a39e007aa01695d8930ab6ffe92bf824c6fea",
+      "adaptedSha256": "3cd2eb45630310be3cabef1b96e2c26beb7666c529eca22edfb2d83127d84676",
+      "adaptation": "Expose the same existing private functions; rebind relative imports to the selected source tree. Historical function bodies retained."
+    }
+  ],
+  "exitCode": 1,
+  "expectedFailures": 8,
+  "outputSha256": "893c569ebdf6d1ce20469bae46de2741f2a8a6b1e1f66df85e07600b57632864",
+  "causalFamilies": [
+    "catalog ancestry and recursion",
+    "prototype-sensitive policy lookup and reset precedence",
+    "SQL comment containment",
+    "REL string serialization"
+  ],
+  "independentEvidenceFamilies": 4,
+  "scientificAcceptance": false
+}
