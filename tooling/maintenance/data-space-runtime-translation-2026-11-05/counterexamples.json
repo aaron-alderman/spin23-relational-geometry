@@ -1,0 +1,86 @@
+{
+  "commit": "8400b0ee5cf6623df7a2848eef6268a7a955c14a",
+  "records": [
+    {
+      "path": "sdk/plugins/data-space/deferred/runtime/frontend-runtime.mjs",
+      "commit": "8400b0ee5cf6623df7a2848eef6268a7a955c14a",
+      "retainedSha256": "437df65fb28f860e31470b442c8cd5adec44aa2be0001940ed9bbe2252337342",
+      "fixtureSha256": "437df65fb28f860e31470b442c8cd5adec44aa2be0001940ed9bbe2252337342"
+    },
+    {
+      "path": "sdk/plugins/data-space/deferred/runtime/projection-runtime.mjs",
+      "commit": "8400b0ee5cf6623df7a2848eef6268a7a955c14a",
+      "retainedSha256": "caf8f7620cbe23f4e5d2f1af953e9a6ac1d6eac7fe27eb259d17e0de48dfb5a3",
+      "fixtureSha256": "b21450cf9acfa0a69fa134df74b7639aee4a1767f288305e9d6e8cbb07ea9b13"
+    },
+    {
+      "path": "sdk/plugins/data-space/deferred/runtime/semantic-mutation-runtime.mjs",
+      "commit": "8400b0ee5cf6623df7a2848eef6268a7a955c14a",
+      "retainedSha256": "5cee849ba99ee5e6a4969ac4271a79de81b9f369d24f1ae8744e525afeda9aa2",
+      "fixtureSha256": "0c1dbad64b3be2ec2cc3a55b113ae19e5fa274fe768583b93bc9a4d60a782bd6"
+    }
+  ],
+  "observations": [
+    {
+      "id": "own-subject-key",
+      "before": "__proto__ query lost through prototype setter",
+      "after": "own query property retained"
+    },
+    {
+      "id": "inherited-query",
+      "before": "inherited override selected",
+      "after": "authored default selected"
+    },
+    {
+      "id": "missing-capability-pending",
+      "before": "pending after refused dispatch",
+      "after": "failure after refused dispatch"
+    },
+    {
+      "id": "stale-success",
+      "before": "old success copied onto refused action",
+      "after": "explicit failure"
+    },
+    {
+      "id": "throwing-dispatch-pending",
+      "before": "throw preserves pending state",
+      "after": "throw preserves fault and records failure"
+    },
+    {
+      "id": "wrong-parent-space",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "wrong-parent-picker",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "non-ready-result",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "unlisted-page",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "unlisted-asset",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "unlisted-group",
+      "before": "proposed hydration delta returned",
+      "after": "typed 409 refusal"
+    },
+    {
+      "id": "canonical-default-action",
+      "before": "raw relation order selects rotate and rejects fetch result",
+      "after": "canonical order selects fetch and accepts matching result"
+    }
+  ],
+  "scope": "Exact three predecessor source bodies with relative import locations rewritten to current dependency locations. Selected runtime counterexamples only; not a historical whole-checkout/bootstrap or universal equivalence proof."
+}
