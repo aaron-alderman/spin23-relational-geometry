@@ -1,0 +1,389 @@
+(node:35440) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ declarations/d1cb05ba :: canonical Canvas catalogue parses and every interface slot is complete (19.1625ms)
+✔ declarations/d1cb05ba :: allowed vocabularies and all defaults are visible algebra (18.1148ms)
+✔ declarations/d1cb05ba :: authority failure effects symmetry and information loss are explicit (1.8195ms)
+✔ declarations/d1cb05ba :: every renderer-dispatched Canvas type and expression kind is catalogue-owned (10.7508ms)
+✔ declarations/d1cb05ba :: every literal authored predicate consumed by Canvas projection is catalogued (6.9898ms)
+✔ declarations/34502e9f :: canonical Canvas catalogue parses and every interface slot is complete (22.1241ms)
+✔ declarations/34502e9f :: allowed vocabularies and all defaults are visible algebra (4.8323ms)
+✔ declarations/34502e9f :: authority failure effects symmetry and information loss are explicit (1.1957ms)
+✔ declarations/34502e9f :: every renderer-dispatched Canvas type and expression kind is catalogue-owned (10.8036ms)
+✔ declarations/34502e9f :: every literal authored predicate consumed by Canvas projection is catalogued (4.3125ms)
+✖ current-renderer/retained-adapter :: semantic color roles resolve through authored records rather than dynamic predicates (2.5275ms)
+✔ current-renderer/retained-adapter :: ambiguous semantic color role names fail with exact evidence (0.219ms)
+✔ current-renderer/retained-adapter :: structural compatibility diagnostic preserves expected actual owner and edge identity (0.2657ms)
+✔ current-renderer/retained-adapter :: structural link direction is explicit and has no fallback (0.222ms)
+✖ current-renderer/retained-adapter :: renderer refuses an untyped CanvasGridPlacement before reading its slots (24.2075ms)
+✖ current-renderer/retained-adapter :: both exact Canvas residual identities are closed with falsifiers and closure evidence (0.6826ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 13
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 504.1773
+
+✖ failing tests:
+
+test at tooling\maintenance\identity-lifecycle-migration-2026-11-06\canvas-source-controls.test.mjs:19:91
+✖ current-renderer/retained-adapter :: semantic color roles resolve through authored records rather than dynamic predicates (2.5275ms)
+  AssertionError [ERR_ASSERTION]: The input was expected to not match the regular expression /one\(prog,\s*documentSubject,\s*role\)/u. Input:
+  
+  'import { isCanonicalValue, parseCanonicalValue } from "../core/canonical-values.mjs";\n' +
+    'import { createMotionInteractionController, createPreviewLifecycleController } from "./interaction-kernel.mjs";\n' +
+    'import { createKeyboardCommandRouter } from "./keyboard-command-router.mjs";\n' +
+    'import { createPointerCommandRouter } from "./pointer-command-router.mjs";\n' +
+    'import { createSurfaceHistoryRegistry } from "./surface-history.mjs";\n' +
+    'import { dispatchKeyword, keywordValues } from "../core/keyword-runtime.mjs";\n' +
+    'import {\n' +
+    '  asInt,\n' +
+    '  bySubject,\n' +
+    '  clamp,\n' +
+    '  countProjectionThings,\n' +
+    '  one,\n' +
+    '  pageState,\n' +
+    '  renderSurfaces,\n' +
+    '  requireDocumentSubject,\n' +
+    '  requireSurface,\n' +
+    '  sortSubjectsByOrder,\n' +
+    '  stringifyValue,\n' +
+    '  subjectsOfType,\n' +
+    '} from "../runtime/engine.mjs";\n' +
+    'import { lanes } from "../core/lane-runtime.mjs";\n' +
+    'import { projectionInvariant } from "../runtime/projection-diagnostics.mjs";\n' +
+    'import { contextSpecs, contextVisibleEntries } from "../core/context-runtime.mjs";\n' +
+    'import { FactStore } from "../core/rel-core.mjs";\n' +
+    'import { applyViewAction } from "./view-actions.mjs";\n' +
+    '\n' +
+    'const BOX = { tl: "+", tr: "+", bl: "+", br: "+", h: "-", v: "|" };\n' +
+    'const CANVAS_RENDERER = "canvas";\n' +
+    'const LIST_TARGET_ACTION_KINDS = new Set([\n' +
+    '  "selectPrevious",\n' +
+    '  "selectNext",\n' +
+    '  "selectPagePrevious",\n' +
+    '  "selectPageNext",\n' +
+    '  "selectFirst",\n' +
+    '  "selectLast",\n' +
+    ']);\n' +
+    '\n' +
+    'const DEFAULT_CANVAS_WORKBENCH = Object.freeze({\n' +
+    '  buildDetailRows() {\n' +
+    '    return [{ kind: "plain", text: "" }];\n' +
+    '  },\n' +
+    '  enterContext() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  escapeContext() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  gotoSubject() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  inspectInContext() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  navigateHistory() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  preferredSubjectColorRole() {\n' +
+    '    return "";\n' +
+    '  },\n' +
+    '  pushHistory() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '  semanticFieldAction() {\n' +
+    '    return null;\n' +
+    '  },\n' +
+    '  shouldTrackSetStateHistory() {\n' +
+    '    return false;\n' +
+    '  },\n' +
+    '});\n' +
+    'const SUPPORTED_CANVAS_BINDING_SOURCES = Object.freeze(["literal", "stateField", "runtimeField", "selectedRecord", "surfaceField"]);\n' +
+    'const SEMANTIC_EDITOR_POPUP_ROW_COUNT = 8;\n' +
+    'const LENS_MODES = Object.freeze(["focus", "structure", "options", "relations"]);\n' +
+    'const DEFAULT_LENS_MODE = "options";\n' +
+    'export function canvasAuthoredVocabulary() {\n' +
+    '  return Object.freeze({lensModes:LENS_MODES,defaultLensMode:DEFAULT_LENS_MODE,listTargetActions:Object.freeze([...LIST_TARGET_ACTION_KINDS])});\n' +
+    '}\n' +
+    'const DEBUG_CANVAS_RENDERER = globalThis.process?.env?.REL_DEBUG_CANVAS === "1";\n' +
+    '\n' +
+    'function debugCanvas(...args) {\n' +
+    '  if (DEBUG_CANVAS_RENDERER) console.log(...args);\n' +
+    '}\n' +
+    '\n' +
+    'function canvasWorkbenchHooks(hooks = null) {\n' +
+    '  return hooks && typeof hooks === "object"\n' +
+    '    ? { ...DEFAULT_CANVAS_WORKBENCH, ...hooks }\n' +
+    '    : DEFAULT_CANVAS_WORKBENCH;\n' +
+    '}\n' +
+    '\n' +
+    'const authoredCanvasProgramCache = new WeakMap();\n' +
+    '\n' +
+    'function authoredCanvasProgram(prog, state) {\n' +
+    '  const activeLane = String(state?.viewState?.activeLane || "").trim();\n' +
+    '  const witnesses = activeLane ? state?.lanes?.[activeLane]?.witnesses : null;\n' +
+    '  if (!state || !witnesses) return FactStore.from(prog);\n' +
+    '  const witnessVersion = typeof witnesses.version === "number" ? witnesses.version : null;\n' +
+    '  const cached = authoredCanvasProgramCache.get(state);\n' +
+    '  if (\n' +
+    '    cached &&\n' +
+    '    cached.prog === prog &&\n' +
+    '    cached.activeLane === activeLane &&\n' +
+    '    cached.witnesses === witnesses &&\n' +
+    '    cached.witnessVersion === witnessVersion\n' +
+    '  ) {\n' +
+    '    return cached.authoredProg;\n' +
+    '  }\n' +
+    '  const authoredProg = FactStore.concat(prog, witnesses);\n' +
+    '  authoredCanvasProgramCache.set(state, {\n' +
+    '    prog,\n' +
+    '    activeLane,\n' +
+    '    witnesses,\n' +
+    '    witnessVersion,\n' +
+    '    authoredProg,\n' +
+    '  });\n' +
+    '  return authoredProg;\n' +
+    '}\n' +
+    '\n' +
+    'function failCanvas(prog, message, subject, predicate = "", details = "", code = "canvas-invalid-shape") {\n' +
+    '  projectionInvariant(prog, CANVAS_RENDERER, message, {\n' +
+    '    code,\n' +
+    '    details,\n' +
+    '    subject,\n' +
+    '    predicate,\n' +
+    '  });\n' +
+    '}\n' +
+    '\n' +
+    'function requireCanvasRef(prog, subject, predicate, details = "") {\n' +
+    '  const value = one(prog, subject, predicate);\n' +
+    '  if (value) return value;\n' +
+    '  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n' +
+    '}\n' +
+    '\n' +
+    'function requireCanvasExprRef(prog, subject, predicate, details = "") {\n' +
+    '  return requireCanvasRef(prog, subject, predicate, details || `${subject} requires one expression for ${predicate}.`);\n' +
+    '}\n' +
+    '\n' +
+    'function hasActiveFact(prog, subject, predicate) {\n' +
+    '  return prog.some(fact => fact.s === subject && fact.p === predicate && fact.pol !== "is-not");\n' +
+    '}\n' +
+    '\n' +
+    'function requireCanvasSlotValue(prog, subject, predicate, details = "") {\n' +
+    '  const value = one(prog, subject, predicate);\n' +
+    '  if (value || (value === "" && hasActiveFact(prog, subject, predicate))) return value;\n' +
+    '  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n' +
+    '}\n' +
+    '\n' +
+    'function displayValue(value) {\n' +
+    '  if (Array.isArray(value)) return value.map(item => stringifyValue(item)).join(", ");\n' +
+    '  return typeof value === "object" && value != null ? JSON.stringify(value) : stringifyValue(value);\n' +
+    '}\n' +
+    '\n' +
+    'function paletteMap(prog, palette) {\n' +
+    '  const colors = {};\n' +
+    '  for (const color of bySubject(prog, "color", palette)) colors[one(prog, color, "name")] = one(prog, color, "value");\n' +
+    '  return colors;\n' +
+    '}\n' +
+    '\n' +
+    'function canvasColor(palette, name, fallback) {\n' +
+    '  return palette[name] || fallback;\n' +
+    '}\n' +
+    '\n' +
+    'function semanticColorName(prog, documentSubject, role, fallbackName = "") {\n' +
+    '  return role ? (one(prog, documentSubject, role) || fallbackName) : fallbackName;\n' +
+    '}\n' +
+    '\n' +
+    'function semanticColor(prog, documentSubject, palette, role, fallback, fallbackName = "") {\n' +
+    '  return canvasColor(palette, semanticColorName(prog, documentSubject, role, fallbackName), fallback);\n' +
+    '}\n' +
+    '\n' +
+    'function subjectColor(prog, documentSubject, palette, workbenchHooks, record, fallback, clickable = false) {\n' +
+    '  const role = workbenchHooks.preferredSubjectColorRole(record, clickable);\n' +
+    '  return role ? semanticColor(prog, documentSubject, palette, role, fallback) : fallback;\n' +
+    '}\n' +
+    '\n' +
+    'function createFramebuffer(cols, rows, fg, bg) {\n' +
+    '  return Array.from({ length: rows }, () => Array.from({ length: cols }, () => ({ ch: " ", fg, bg })));\n' +
+    '}\n' +
+    '\n' +
+    'function fillRect(frame, rect, bg, fg) {\n' +
+    '  for (let y = rect.y; y < rect.y + rect.h; y += 1) {\n' +
+    '    if (!frame[y]) continue;\n' +
+    '    for (let x = rect.x; x < rect.x + rect.w; x += 1) {\n' +
+    '      if (!frame[y][x]) continue;\n' +
+    '      frame[y][x] = { ...frame[y][x], bg, fg: fg || frame[y][x].fg, ch: " " };\n' +
+    '    }\n' +
+    '  }\n' +
+    '}\n' +
+    '\n' +
+    'function putCell(frame, x, y, ch, fg, bg) {\n' +
+    '  if (!frame[y] || !frame[y][x]) return;\n' +
+    '  frame[y][x] = { ch, fg, bg };\n' +
+    '}\n' +
+    '\n' +
+    'function drawText(frame, x, y, text, fg, bg, width) {\n' +
+    '  const clipped = width == null ? text : text.slice(0, Math.max(0, width));\n' +
+    '  for (let i = 0; i < clipped.length; i += 1) putCell(frame, x + i, y, clipped[i], fg, bg);\n' +
+    '}\n' +
+    '\n' +
+    'function viewportWindow(total, span, offset = 0) {\n' +
+    '  const visibleSpan = Math.max(0, span);\n' +
+    '  const visibleTotal = Math.max(0, total);\n' +
+    '  const maxOffset = Math.max(0, visibleTotal - visibleSpan);\n' +
+    '  const start = clamp(offset, 0, maxOffset);\n' +
+    '  const end = Math.min(visibleTotal, start + visibleSpan);\n' +
+    '  return {\n' +
+    '    total: visibleTotal,\n' +
+    '    span: visibleSpan,\n' +
+    '    offset: start,\n' +
+    '    maxOffset,\n' +
+    '    end,\n' +
+    '    visible: Math.max(0, end - start),\n' +
+    '    hiddenBefore: start,\n' +
+    '    hiddenAfter: Math.max(0, visibleTotal - end),\n' +
+    '    windowed: visibleTotal > visibleSpan,\n' +
+    '  };\n' +
+    '}\n' +
+    '\n' +
+    'function viewportFromState(state, stateKey, total, span, initialOffset, reset = false) {\n' +
+    '  const currentOffset = reset ? initialOffset : (pageState(state)[stateKey] ?? initialOffset);\n' +
+    '  const viewport = viewportWindow(total, span, currentOffset);\n' +
+    '  pageState(state)[stateKey] = viewport.offset;\n' +
+    '  return viewport;\n' +
+    '}\n' +
+    '\n' +
+    'function animatedViewport(total, span, tick = 0) {\n' +
+    '  const viewport = viewportWindow(total, span, 0);\n' +
+    '  if (viewport.maxOffset <= 0) return viewport;\n' +
+    '  const dwell = 1;\n' +
+    '  const cycle = Math.max(1, viewport.maxOffset * 2 + dwell * 2);\n' +
+    '  const phase = ((tick % cycle) + cycle) % cycle;\n' +
+    '  let offset = 0;\n' +
+    '  if (phase <= dwell) offset = 0;\n' +
+    '  else if (phase <= dwell + viewport.maxOffset) offset = phase - dwell;\n' +
+    '  else if (phase <= dwell + viewport.maxOffset + dwell) offset = viewport.maxOffset;\n' +
+    '  else offset = cycle - phase;\n' +
+    '  return viewportWindow(total, span, offset);\n' +
+    '}\n' +
+    '\n' +
+    'function windowedSlice(values, viewport) {\n' +
+    '  return values.slice(viewport.offset, viewport.end);\n' +
+    '}\n' +
+    '\n' +
+    'function windowedText(text, viewport) {\n' +
+    '  return String(text || "").slice(viewport.offset, viewport.end);\n' +
+    '}\n' +
+    '\n' +
+    'function textWindowMechanism({ stateKey = "", autoAnimate = false, viewport }) {\n' +
+    '  if (stateKey) return "page-state-scroll";\n' +
+    '  if (autoAnimate && viewport.maxOffset > 0) return "animated-overflow";\n' +
+    '  return "fixed-clip";\n' +
+    '}\n' +
+    '\n' +
+    'function recordTextIntrospection(ctx, {\n' +
+    '  subject,\n' +
+    '  widgetType,\n' +
+    '  role = "text",\n' +
+    '  rect,\n' +
+    '  text,\n' +
+    '  viewport,\n' +
+    '  stateKey = "",\n' +
+    '  autoAnimate = false,\n' +
+    '  ...meta\n' +
+    '}) {\n' +
+    '  if (!ctx?.projectionIntrospection) return;\n' +
+    '  const visibleText = windowedText(text, viewport);\n' +
+    '  ctx.projectionIntrospection.clipping.push({\n' +
+    '    subject,\n' +
+    '    widgetType,\n' +
+    '    role,\n' +
+    '    axis: "horizontal",\n' +
+    '    rect,\n' +
+    '    viewport,\n' +
+    '    textLength: String(text || "").length,\n' +
+    '    visibleText,\n' +
+    '    clipped: viewport.hiddenBefore > 0 || viewport.hiddenAfter > 0,\n' +
+    '    mechanism: textWindowMechanism({ stateKey, autoAnimate, viewport }),\n' +
+    '    stateKey,\n' +
+    '    animated: autoAnimate && viewport.maxOffset > 0,\n' +
+    '    ...meta,\n' +
+    '  });\n' +
+    '}\n' +
+    '\n' +
+    'function recordWindowingIntrospection(ctx, entry) {\n' +
+    '  if (!ctx?.projectionIntrospection) return;\n' +
+    '  const viewport = entry?.viewport || viewportWindow(0, 0, 0);\n' +
+    '  ctx.projectionIntrospection.windowing.push({\n' +
+    '    axis: "vertical",\n' +
+    '    visibleCount: viewport.visible,\n' +
+    '    hiddenBefore: viewport.hiddenBefore,\n' +
+    '    hiddenAfter: viewport.hiddenAfter,\n' +
+    '    windowed: viewport.windowed,\n' +
+    '    ...entry,\n' +
+    '  });\n' +
+    '}\n' +
+    '\n' +
+    'function recordSelectionIntrospection(ctx, entry) {\n' +
+    '  if (!ctx?.projectionIntrospection?.focusSelection) return;\n' +
+    '  ctx.projectionIntrospection.focusSelection.selections.push(entry);\n' +
+    '}\n' +
+    '\n' +
+    'function recordViewStateKeyIntrospection(ctx, entry) {\n' +
+    '  if (!ctx?.projectionIntrospection) return;\n' +
+    '  ctx.projectionIntrospection.viewStateKeys.push(entry);\n' +
+    '}\n' +
+    '\n' +
+    'function recordQueryIntrospection(ctx, entry) {\n' +
+    '  if (!ctx?.projectionI'... 277577 more characters
+  
+      at TestContext.<anonymous> (retained://34502e9fbf19be78b8c58e4940dd474704f6a946/test/canvas-schema-compatibility.test.mjs:21:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'import { isCanonicalValue, parseCanonicalValue } from "../core/canonical-values.mjs";\nimport { createMotionInteractionController, createPreviewLifecycleController } from "./interaction-kernel.mjs";\nimport { createKeyboardCommandRouter } from "./keyboard-command-router.mjs";\nimport { createPointerCommandRouter } from "./pointer-command-router.mjs";\nimport { createSurfaceHistoryRegistry } from "./surface-history.mjs";\nimport { dispatchKeyword, keywordValues } from "../core/keyword-runtime.mjs";\nimport {\n  asInt,\n  bySubject,\n  clamp,\n  countProjectionThings,\n  one,\n  pageState,\n  renderSurfaces,\n  requireDocumentSubject,\n  requireSurface,\n  sortSubjectsByOrder,\n  stringifyValue,\n  subjectsOfType,\n} from "../runtime/engine.mjs";\nimport { lanes } from "../core/lane-runtime.mjs";\nimport { projectionInvariant } from "../runtime/projection-diagnostics.mjs";\nimport { contextSpecs, contextVisibleEntries } from "../core/context-runtime.mjs";\nimport { FactStore } from "../core/rel-core.mjs";\nimport { applyViewAction } from "./view-actions.mjs";\n\nconst BOX = { tl: "+", tr: "+", bl: "+", br: "+", h: "-", v: "|" };\nconst CANVAS_RENDERER = "canvas";\nconst LIST_TARGET_ACTION_KINDS = new Set([\n  "selectPrevious",\n  "selectNext",\n  "selectPagePrevious",\n  "selectPageNext",\n  "selectFirst",\n  "selectLast",\n]);\n\nconst DEFAULT_CANVAS_WORKBENCH = Object.freeze({\n  buildDetailRows() {\n    return [{ kind: "plain", text: "" }];\n  },\n  enterContext() {\n    return false;\n  },\n  escapeContext() {\n    return false;\n  },\n  gotoSubject() {\n    return false;\n  },\n  inspectInContext() {\n    return false;\n  },\n  navigateHistory() {\n    return false;\n  },\n  preferredSubjectColorRole() {\n    return "";\n  },\n  pushHistory() {\n    return false;\n  },\n  semanticFieldAction() {\n    return null;\n  },\n  shouldTrackSetStateHistory() {\n    return false;\n  },\n});\nconst SUPPORTED_CANVAS_BINDING_SOURCES = Object.freeze(["literal", "stateField", "runtimeField", "selectedRecord", "surfaceField"]);\nconst SEMANTIC_EDITOR_POPUP_ROW_COUNT = 8;\nconst LENS_MODES = Object.freeze(["focus", "structure", "options", "relations"]);\nconst DEFAULT_LENS_MODE = "options";\nexport function canvasAuthoredVocabulary() {\n  return Object.freeze({lensModes:LENS_MODES,defaultLensMode:DEFAULT_LENS_MODE,listTargetActions:Object.freeze([...LIST_TARGET_ACTION_KINDS])});\n}\nconst DEBUG_CANVAS_RENDERER = globalThis.process?.env?.REL_DEBUG_CANVAS === "1";\n\nfunction debugCanvas(...args) {\n  if (DEBUG_CANVAS_RENDERER) console.log(...args);\n}\n\nfunction canvasWorkbenchHooks(hooks = null) {\n  return hooks && typeof hooks === "object"\n    ? { ...DEFAULT_CANVAS_WORKBENCH, ...hooks }\n    : DEFAULT_CANVAS_WORKBENCH;\n}\n\nconst authoredCanvasProgramCache = new WeakMap();\n\nfunction authoredCanvasProgram(prog, state) {\n  const activeLane = String(state?.viewState?.activeLane || "").trim();\n  const witnesses = activeLane ? state?.lanes?.[activeLane]?.witnesses : null;\n  if (!state || !witnesses) return FactStore.from(prog);\n  const witnessVersion = typeof witnesses.version === "number" ? witnesses.version : null;\n  const cached = authoredCanvasProgramCache.get(state);\n  if (\n    cached &&\n    cached.prog === prog &&\n    cached.activeLane === activeLane &&\n    cached.witnesses === witnesses &&\n    cached.witnessVersion === witnessVersion\n  ) {\n    return cached.authoredProg;\n  }\n  const authoredProg = FactStore.concat(prog, witnesses);\n  authoredCanvasProgramCache.set(state, {\n    prog,\n    activeLane,\n    witnesses,\n    witnessVersion,\n    authoredProg,\n  });\n  return authoredProg;\n}\n\nfunction failCanvas(prog, message, subject, predicate = "", details = "", code = "canvas-invalid-shape") {\n  projectionInvariant(prog, CANVAS_RENDERER, message, {\n    code,\n    details,\n    subject,\n    predicate,\n  });\n}\n\nfunction requireCanvasRef(prog, subject, predicate, details = "") {\n  const value = one(prog, subject, predicate);\n  if (value) return value;\n  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n}\n\nfunction requireCanvasExprRef(prog, subject, predicate, details = "") {\n  return requireCanvasRef(prog, subject, predicate, details || `${subject} requires one expression for ${predicate}.`);\n}\n\nfunction hasActiveFact(prog, subject, predicate) {\n  return prog.some(fact => fact.s === subject && fact.p === predicate && fact.pol !== "is-not");\n}\n\nfunction requireCanvasSlotValue(prog, subject, predicate, details = "") {\n  const value = one(prog, subject, predicate);\n  if (value || (value === "" && hasActiveFact(prog, subject, predicate))) return value;\n  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n}\n\nfunction displayValue(value) {\n  if (Array.isArray(value)) return value.map(item => stringifyValue(item)).join(", ");\n  return typeof value === "object" && value != null ? JSON.stringify(value) : stringifyValue(value);\n}\n\nfunction paletteMap(prog, palette) {\n  const colors = {};\n  for (const color of bySubject(prog, "color", palette)) colors[one(prog, color, "name")] = one(prog, color, "value");\n  return colors;\n}\n\nfunction canvasColor(palette, name, fallback) {\n  return palette[name] || fallback;\n}\n\nfunction semanticColorName(prog, documentSubject, role, fallbackName = "") {\n  return role ? (one(prog, documentSubject, role) || fallbackName) : fallbackName;\n}\n\nfunction semanticColor(prog, documentSubject, palette, role, fallback, fallbackName = "") {\n  return canvasColor(palette, semanticColorName(prog, documentSubject, role, fallbackName), fallback);\n}\n\nfunction subjectColor(prog, documentSubject, palette, workbenchHooks, record, fallback, clickable = false) {\n  const role = workbenchHooks.preferredSubjectColorRole(record, clickable);\n  return role ? semanticColor(prog, documentSubject, palette, role, fallback) : fallback;\n}\n\nfunction createFramebuffer(cols, rows, fg, bg) {\n  return Array.from({ length: rows }, () => Array.from({ length: cols }, () => ({ ch: " ", fg, bg })));\n}\n\nfunction fillRect(frame, rect, bg, fg) {\n  for (let y = rect.y; y < rect.y + rect.h; y += 1) {\n    if (!frame[y]) continue;\n    for (let x = rect.x; x < rect.x + rect.w; x += 1) {\n      if (!frame[y][x]) continue;\n      frame[y][x] = { ...frame[y][x], bg, fg: fg || frame[y][x].fg, ch: " " };\n    }\n  }\n}\n\nfunction putCell(frame, x, y, ch, fg, bg) {\n  if (!frame[y] || !frame[y][x]) return;\n  frame[y][x] = { ch, fg, bg };\n}\n\nfunction drawText(frame, x, y, text, fg, bg, width) {\n  const clipped = width == null ? text : text.slice(0, Math.max(0, width));\n  for (let i = 0; i < clipped.length; i += 1) putCell(frame, x + i, y, clipped[i], fg, bg);\n}\n\nfunction viewportWindow(total, span, offset = 0) {\n  const visibleSpan = Math.max(0, span);\n  const visibleTotal = Math.max(0, total);\n  const maxOffset = Math.max(0, visibleTotal - visibleSpan);\n  const start = clamp(offset, 0, maxOffset);\n  const end = Math.min(visibleTotal, start + visibleSpan);\n  return {\n    total: visibleTotal,\n    span: visibleSpan,\n    offset: start,\n    maxOffset,\n    end,\n    visible: Math.max(0, end - start),\n    hiddenBefore: start,\n    hiddenAfter: Math.max(0, visibleTotal - end),\n    windowed: visibleTotal > visibleSpan,\n  };\n}\n\nfunction viewportFromState(state, stateKey, total, span, initialOffset, reset = false) {\n  const currentOffset = reset ? initialOffset : (pageState(state)[stateKey] ?? initialOffset);\n  const viewport = viewportWindow(total, span, currentOffset);\n  pageState(state)[stateKey] = viewport.offset;\n  return viewport;\n}\n\nfunction animatedViewport(total, span, tick = 0) {\n  const viewport = viewportWindow(total, span, 0);\n  if (viewport.maxOffset <= 0) return viewport;\n  const dwell = 1;\n  const cycle = Math.max(1, viewport.maxOffset * 2 + dwell * 2);\n  const phase = ((tick % cycle) + cycle) % cycle;\n  let offset = 0;\n  if (phase <= dwell) offset = 0;\n  else if (phase <= dwell + viewport.maxOffset) offset = phase - dwell;\n  else if (phase <= dwell + viewport.maxOffset + dwell) offset = viewport.maxOffset;\n  else offset = cycle - phase;\n  return viewportWindow(total, span, offset);\n}\n\nfunction windowedSlice(values, viewport) {\n  return values.slice(viewport.offset, viewport.end);\n}\n\nfunction windowedText(text, viewport) {\n  return String(text || "").slice(viewport.offset, viewport.end);\n}\n\nfunction textWindowMechanism({ stateKey = "", autoAnimate = false, viewport }) {\n  if (stateKey) return "page-state-scroll";\n  if (autoAnimate && viewport.maxOffset > 0) return "animated-overflow";\n  return "fixed-clip";\n}\n\nfunction recordTextIntrospection(ctx, {\n  subject,\n  widgetType,\n  role = "text",\n  rect,\n  text,\n  viewport,\n  stateKey = "",\n  autoAnimate = false,\n  ...meta\n}) {\n  if (!ctx?.projectionIntrospection) return;\n  const visibleText = windowedText(text, viewport);\n  ctx.projectionIntrospection.clipping.push({\n    subject,\n    widgetType,\n    role,\n    axis: "horizontal",\n    rect,\n    viewport,\n    textLength: String(text || "").length,\n    visibleText,\n    clipped: viewport.hiddenBefore > 0 || viewport.hiddenAfter > 0,\n    mechanism: textWindowMechanism({ stateKey, autoAnimate, viewport }),\n    stateKey,\n    animated: autoAnimate && viewport.maxOffset > 0,\n    ...meta,\n  });\n}\n\nfunction recordWindowingIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection) return;\n  const viewport = entry?.viewport || viewportWindow(0, 0, 0);\n  ctx.projectionIntrospection.windowing.push({\n    axis: "vertical",\n    visibleCount: viewport.visible,\n    hiddenBefore: viewport.hiddenBefore,\n    hiddenAfter: viewport.hiddenAfter,\n    windowed: viewport.windowed,\n    ...entry,\n  });\n}\n\nfunction recordSelectionIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection?.focusSelection) return;\n  ctx.projectionIntrospection.focusSelection.selections.push(entry);\n}\n\nfunction recordViewStateKeyIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection) return;\n  ctx.projectionIntrospection.viewStateKeys.push(entry);\n}\n\nfunction recordQueryIntrospection(ctx, entry) {\n  if (!ctx?.projectionI'... 277577 more characters,
+    expected: /one\(prog,\s*documentSubject,\s*role\)/u,
+    operator: 'doesNotMatch',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\identity-lifecycle-migration-2026-11-06\canvas-source-controls.test.mjs:19:91
+✖ current-renderer/retained-adapter :: renderer refuses an untyped CanvasGridPlacement before reading its slots (24.2075ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (retained://34502e9fbf19be78b8c58e4940dd474704f6a946/test/canvas-schema-compatibility.test.mjs:74:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tooling\maintenance\identity-lifecycle-migration-2026-11-06\canvas-source-controls.test.mjs:19:91
+✖ current-renderer/retained-adapter :: both exact Canvas residual identities are closed with falsifiers and closure evidence (0.6826ms)
+  AssertionError [ERR_ASSERTION]: CanvasExprArg
+      at TestContext.<anonymous> (retained://34502e9fbf19be78b8c58e4940dd474704f6a946/test/canvas-schema-compatibility.test.mjs:89:44)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'import { isCanonicalValue, parseCanonicalValue } from "../core/canonical-values.mjs";\nimport { createMotionInteractionController, createPreviewLifecycleController } from "./interaction-kernel.mjs";\nimport { createKeyboardCommandRouter } from "./keyboard-command-router.mjs";\nimport { createPointerCommandRouter } from "./pointer-command-router.mjs";\nimport { createSurfaceHistoryRegistry } from "./surface-history.mjs";\nimport { dispatchKeyword, keywordValues } from "../core/keyword-runtime.mjs";\nimport {\n  asInt,\n  bySubject,\n  clamp,\n  countProjectionThings,\n  one,\n  pageState,\n  renderSurfaces,\n  requireDocumentSubject,\n  requireSurface,\n  sortSubjectsByOrder,\n  stringifyValue,\n  subjectsOfType,\n} from "../runtime/engine.mjs";\nimport { lanes } from "../core/lane-runtime.mjs";\nimport { projectionInvariant } from "../runtime/projection-diagnostics.mjs";\nimport { contextSpecs, contextVisibleEntries } from "../core/context-runtime.mjs";\nimport { FactStore } from "../core/rel-core.mjs";\nimport { applyViewAction } from "./view-actions.mjs";\n\nconst BOX = { tl: "+", tr: "+", bl: "+", br: "+", h: "-", v: "|" };\nconst CANVAS_RENDERER = "canvas";\nconst LIST_TARGET_ACTION_KINDS = new Set([\n  "selectPrevious",\n  "selectNext",\n  "selectPagePrevious",\n  "selectPageNext",\n  "selectFirst",\n  "selectLast",\n]);\n\nconst DEFAULT_CANVAS_WORKBENCH = Object.freeze({\n  buildDetailRows() {\n    return [{ kind: "plain", text: "" }];\n  },\n  enterContext() {\n    return false;\n  },\n  escapeContext() {\n    return false;\n  },\n  gotoSubject() {\n    return false;\n  },\n  inspectInContext() {\n    return false;\n  },\n  navigateHistory() {\n    return false;\n  },\n  preferredSubjectColorRole() {\n    return "";\n  },\n  pushHistory() {\n    return false;\n  },\n  semanticFieldAction() {\n    return null;\n  },\n  shouldTrackSetStateHistory() {\n    return false;\n  },\n});\nconst SUPPORTED_CANVAS_BINDING_SOURCES = Object.freeze(["literal", "stateField", "runtimeField", "selectedRecord", "surfaceField"]);\nconst SEMANTIC_EDITOR_POPUP_ROW_COUNT = 8;\nconst LENS_MODES = Object.freeze(["focus", "structure", "options", "relations"]);\nconst DEFAULT_LENS_MODE = "options";\nexport function canvasAuthoredVocabulary() {\n  return Object.freeze({lensModes:LENS_MODES,defaultLensMode:DEFAULT_LENS_MODE,listTargetActions:Object.freeze([...LIST_TARGET_ACTION_KINDS])});\n}\nconst DEBUG_CANVAS_RENDERER = globalThis.process?.env?.REL_DEBUG_CANVAS === "1";\n\nfunction debugCanvas(...args) {\n  if (DEBUG_CANVAS_RENDERER) console.log(...args);\n}\n\nfunction canvasWorkbenchHooks(hooks = null) {\n  return hooks && typeof hooks === "object"\n    ? { ...DEFAULT_CANVAS_WORKBENCH, ...hooks }\n    : DEFAULT_CANVAS_WORKBENCH;\n}\n\nconst authoredCanvasProgramCache = new WeakMap();\n\nfunction authoredCanvasProgram(prog, state) {\n  const activeLane = String(state?.viewState?.activeLane || "").trim();\n  const witnesses = activeLane ? state?.lanes?.[activeLane]?.witnesses : null;\n  if (!state || !witnesses) return FactStore.from(prog);\n  const witnessVersion = typeof witnesses.version === "number" ? witnesses.version : null;\n  const cached = authoredCanvasProgramCache.get(state);\n  if (\n    cached &&\n    cached.prog === prog &&\n    cached.activeLane === activeLane &&\n    cached.witnesses === witnesses &&\n    cached.witnessVersion === witnessVersion\n  ) {\n    return cached.authoredProg;\n  }\n  const authoredProg = FactStore.concat(prog, witnesses);\n  authoredCanvasProgramCache.set(state, {\n    prog,\n    activeLane,\n    witnesses,\n    witnessVersion,\n    authoredProg,\n  });\n  return authoredProg;\n}\n\nfunction failCanvas(prog, message, subject, predicate = "", details = "", code = "canvas-invalid-shape") {\n  projectionInvariant(prog, CANVAS_RENDERER, message, {\n    code,\n    details,\n    subject,\n    predicate,\n  });\n}\n\nfunction requireCanvasRef(prog, subject, predicate, details = "") {\n  const value = one(prog, subject, predicate);\n  if (value) return value;\n  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n}\n\nfunction requireCanvasExprRef(prog, subject, predicate, details = "") {\n  return requireCanvasRef(prog, subject, predicate, details || `${subject} requires one expression for ${predicate}.`);\n}\n\nfunction hasActiveFact(prog, subject, predicate) {\n  return prog.some(fact => fact.s === subject && fact.p === predicate && fact.pol !== "is-not");\n}\n\nfunction requireCanvasSlotValue(prog, subject, predicate, details = "") {\n  const value = one(prog, subject, predicate);\n  if (value || (value === "" && hasActiveFact(prog, subject, predicate))) return value;\n  failCanvas(prog, `${subject} is missing ${predicate}.`, subject, predicate, details);\n}\n\nfunction displayValue(value) {\n  if (Array.isArray(value)) return value.map(item => stringifyValue(item)).join(", ");\n  return typeof value === "object" && value != null ? JSON.stringify(value) : stringifyValue(value);\n}\n\nfunction paletteMap(prog, palette) {\n  const colors = {};\n  for (const color of bySubject(prog, "color", palette)) colors[one(prog, color, "name")] = one(prog, color, "value");\n  return colors;\n}\n\nfunction canvasColor(palette, name, fallback) {\n  return palette[name] || fallback;\n}\n\nfunction semanticColorName(prog, documentSubject, role, fallbackName = "") {\n  return role ? (one(prog, documentSubject, role) || fallbackName) : fallbackName;\n}\n\nfunction semanticColor(prog, documentSubject, palette, role, fallback, fallbackName = "") {\n  return canvasColor(palette, semanticColorName(prog, documentSubject, role, fallbackName), fallback);\n}\n\nfunction subjectColor(prog, documentSubject, palette, workbenchHooks, record, fallback, clickable = false) {\n  const role = workbenchHooks.preferredSubjectColorRole(record, clickable);\n  return role ? semanticColor(prog, documentSubject, palette, role, fallback) : fallback;\n}\n\nfunction createFramebuffer(cols, rows, fg, bg) {\n  return Array.from({ length: rows }, () => Array.from({ length: cols }, () => ({ ch: " ", fg, bg })));\n}\n\nfunction fillRect(frame, rect, bg, fg) {\n  for (let y = rect.y; y < rect.y + rect.h; y += 1) {\n    if (!frame[y]) continue;\n    for (let x = rect.x; x < rect.x + rect.w; x += 1) {\n      if (!frame[y][x]) continue;\n      frame[y][x] = { ...frame[y][x], bg, fg: fg || frame[y][x].fg, ch: " " };\n    }\n  }\n}\n\nfunction putCell(frame, x, y, ch, fg, bg) {\n  if (!frame[y] || !frame[y][x]) return;\n  frame[y][x] = { ch, fg, bg };\n}\n\nfunction drawText(frame, x, y, text, fg, bg, width) {\n  const clipped = width == null ? text : text.slice(0, Math.max(0, width));\n  for (let i = 0; i < clipped.length; i += 1) putCell(frame, x + i, y, clipped[i], fg, bg);\n}\n\nfunction viewportWindow(total, span, offset = 0) {\n  const visibleSpan = Math.max(0, span);\n  const visibleTotal = Math.max(0, total);\n  const maxOffset = Math.max(0, visibleTotal - visibleSpan);\n  const start = clamp(offset, 0, maxOffset);\n  const end = Math.min(visibleTotal, start + visibleSpan);\n  return {\n    total: visibleTotal,\n    span: visibleSpan,\n    offset: start,\n    maxOffset,\n    end,\n    visible: Math.max(0, end - start),\n    hiddenBefore: start,\n    hiddenAfter: Math.max(0, visibleTotal - end),\n    windowed: visibleTotal > visibleSpan,\n  };\n}\n\nfunction viewportFromState(state, stateKey, total, span, initialOffset, reset = false) {\n  const currentOffset = reset ? initialOffset : (pageState(state)[stateKey] ?? initialOffset);\n  const viewport = viewportWindow(total, span, currentOffset);\n  pageState(state)[stateKey] = viewport.offset;\n  return viewport;\n}\n\nfunction animatedViewport(total, span, tick = 0) {\n  const viewport = viewportWindow(total, span, 0);\n  if (viewport.maxOffset <= 0) return viewport;\n  const dwell = 1;\n  const cycle = Math.max(1, viewport.maxOffset * 2 + dwell * 2);\n  const phase = ((tick % cycle) + cycle) % cycle;\n  let offset = 0;\n  if (phase <= dwell) offset = 0;\n  else if (phase <= dwell + viewport.maxOffset) offset = phase - dwell;\n  else if (phase <= dwell + viewport.maxOffset + dwell) offset = viewport.maxOffset;\n  else offset = cycle - phase;\n  return viewportWindow(total, span, offset);\n}\n\nfunction windowedSlice(values, viewport) {\n  return values.slice(viewport.offset, viewport.end);\n}\n\nfunction windowedText(text, viewport) {\n  return String(text || "").slice(viewport.offset, viewport.end);\n}\n\nfunction textWindowMechanism({ stateKey = "", autoAnimate = false, viewport }) {\n  if (stateKey) return "page-state-scroll";\n  if (autoAnimate && viewport.maxOffset > 0) return "animated-overflow";\n  return "fixed-clip";\n}\n\nfunction recordTextIntrospection(ctx, {\n  subject,\n  widgetType,\n  role = "text",\n  rect,\n  text,\n  viewport,\n  stateKey = "",\n  autoAnimate = false,\n  ...meta\n}) {\n  if (!ctx?.projectionIntrospection) return;\n  const visibleText = windowedText(text, viewport);\n  ctx.projectionIntrospection.clipping.push({\n    subject,\n    widgetType,\n    role,\n    axis: "horizontal",\n    rect,\n    viewport,\n    textLength: String(text || "").length,\n    visibleText,\n    clipped: viewport.hiddenBefore > 0 || viewport.hiddenAfter > 0,\n    mechanism: textWindowMechanism({ stateKey, autoAnimate, viewport }),\n    stateKey,\n    animated: autoAnimate && viewport.maxOffset > 0,\n    ...meta,\n  });\n}\n\nfunction recordWindowingIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection) return;\n  const viewport = entry?.viewport || viewportWindow(0, 0, 0);\n  ctx.projectionIntrospection.windowing.push({\n    axis: "vertical",\n    visibleCount: viewport.visible,\n    hiddenBefore: viewport.hiddenBefore,\n    hiddenAfter: viewport.hiddenAfter,\n    windowed: viewport.windowed,\n    ...entry,\n  });\n}\n\nfunction recordSelectionIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection?.focusSelection) return;\n  ctx.projectionIntrospection.focusSelection.selections.push(entry);\n}\n\nfunction recordViewStateKeyIntrospection(ctx, entry) {\n  if (!ctx?.projectionIntrospection) return;\n  ctx.projectionIntrospection.viewStateKeys.push(entry);\n}\n\nfunction recordQueryIntrospection(ctx, entry) {\n  if (!ctx?.projectionI'... 277577 more characters,
+    expected: /"CanvasExprArg"/u,
+    operator: 'match',
+    diff: 'simple'
+  }

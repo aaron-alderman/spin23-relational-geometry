@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {baseline,subjects,values} from './canvas-interface-catalogue-fixture.mjs';
+
+test('authority failure effects symmetry and information loss are explicit',()=>{
+  const accounting=['sourceDomain','targetDomain','forwardMap','reverseMapOrAbsence',
+    'preservedInformation','lostInformation','identity','partiality','failure','authorityEffect',
+    'stateOwner','evidence','falsifier','default','adapterSeam','symmetryBreak'];
+  for(const predicate of accounting)
+    assert.equal(values('canvas.catalogue.module',predicate).length,1,predicate);
+  const residuals=subjects('isa','AlgebraicResidual');
+  assert.deepEqual(new Set(residuals),
+    new Set(['residual.canvas.dynamicSemanticColorRole','residual.canvas.structuralRecordIsa']));
+  for(const residual of residuals)
+    for(const predicate of ['status','identity','evidence','loss','resolution'])
+      assert.equal(values(residual,predicate).length,1,`${residual}.${predicate}`);
+  assert.match(baseline,/"residual\.blankBootstrapCanvasInterfaceCatalogue", "status", "closed"/u);
+});

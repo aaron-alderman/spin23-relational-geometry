@@ -1,0 +1,78 @@
+(node:27640) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ resource capabilities are admitted before acquisition (1.4746ms)
+✔ acquisition faults never dispose an unacquired resource (0.2707ms)
+✔ failed initialization disposes before preserving every exact primary fault (0.955ms)
+✔ construction compound faults retain a retry capability without enumerable resource disclosure (0.3253ms)
+✔ normal ownership transfer prepares and disposes once; repeated close is inert (0.2199ms)
+✔ shutdown preparation faults cannot prevent disposal, including falsy faults (0.2262ms)
+✔ failed disposal remains retryable without repeating preparation (0.1782ms)
+✔ compound shutdown faults preserve ordering and release uncertainty (0.1787ms)
+✔ reentrant shutdown refuses while still completing the outer disposal (0.1647ms)
+✔ initializers can close an owned resource without accidentally reopening its state (0.2815ms)
+✔ the same ownership mechanism releases a cache lease without altering other entries (0.2145ms)
+✔ the same mechanism removes event subscriptions when setup fails or shutdown preparation throws (0.266ms)
+✔ real SQLite initialization faults close the acquired handle and preserve all falsy faults (103.5692ms)
+✔ the retained predecessor confirms initialization left the SQLite handle open (3.4542ms)
+✔ later migration and CSRF setup failures also release the acquired database (65.1067ms)
+✔ clock failure after database acquisition closes the handle without replacing the fault (23.4631ms)
+✔ CSRF statement preparation precedes entropy and wins simultaneous fault precedence (51.7245ms)
+✔ real SQLite construction compound failures expose a working cleanup retry (3.6428ms)
+✔ checkpoint failure still closes SQLite and preserves the exact shutdown fault (19.8662ms)
+✔ the retained predecessor confirms checkpoint failure prevented SQLite close (18.1921ms)
+✔ successful SQLite shutdown is idempotent (21.5367ms)
+✔ initialization admits own callable capabilities before any SQLite property access (0.2172ms)
+✔ unknown or operation-mismatched SQL names refuse before preparing or executing (0.333ms)
+✔ invalid transaction callbacks refuse before BEGIN (0.4434ms)
+✔ transactions commit values and preserve opaque Promise result identity synchronously (20.0809ms)
+✔ operation faults roll back real SQLite mutations and preserve every exact fault (135.1758ms)
+✔ commit faults roll back mutations before propagating the exact fault (32.5101ms)
+✔ rollback failure quarantines the connection, closes it and preserves the primary fault (36.1929ms)
+✔ failed quarantine disposal remains denied and can be retried through the resource owner (34.4867ms)
+✔ all 44 authored SQL strings retain their predecessor identities (0.5473ms)
+✔ initialization, login, session claims and logout preserve predecessor observable order (79.5205ms)
+✔ audit limit coercion remains after statement and method lookup (57.0973ms)
+✔ authored entropy parameters change actual SQLite runtime effects without changing mechanisms (90.9867ms)
+✖ a clock that closes the runtime cannot yield a late authenticated session claim (43.0399ms)
+ℹ tests 34
+ℹ suites 0
+ℹ pass 33
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1208.1062
+
+✖ failing tests:
+
+test at .platform-reconstitution\sourcery-platform-reconciled\test\identity-lifecycle.test.mjs:145:1
+✖ a clock that closes the runtime cannot yield a late authenticated session claim (43.0399ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    Comparison {
+  +   code: 'ERR_INVALID_STATE'
+  -   code: 'identity-runtime-closed'
+    }
+  
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:146:285
+      at async fixture (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:77:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: database is not open
+        at TrackingDatabase.prepare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:68:88)
+        at prepareIdentityStatement (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/identity-lifecycle-policy.mjs:37:67)
+        at SqliteHostIdentityRuntime.identityRow (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/identity-runtime.mjs:237:17)
+        at invoke (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/identity-lifecycle-policy.mjs:115:29)
+        at executeAuthoredProtocol (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/core/authored-protocol.mjs:74:51)
+        at runIdentityLifecycle (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/identity-lifecycle-policy.mjs:123:10)
+        at SqliteHostIdentityRuntime.authenticateRequest (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/sdk/server/identity-runtime.mjs:534:12)
+        at assert.throws.code (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:146:304)
+        at getActual (node:assert:611:5)
+        at strict.throws (node:assert:759:24),
+    expected: { code: 'identity-runtime-closed' },
+    operator: 'throws',
+    diff: 'simple'
+  }

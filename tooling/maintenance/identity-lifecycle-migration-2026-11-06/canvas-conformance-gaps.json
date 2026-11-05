@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-11-05T23:33:41.380Z",
+  "source": "710ba87766b73defdeb33bd9319338f9336b1938",
+  "inputsSha256": "b2598fb8375d2b4df9aedecb72d838967779b409662461ef8c976732dd06c6b7",
+  "reportSha256": "c614e2a0a1779cf669dfc7a682d0d1e26d02365ad572aeaa5b51841348fecb8c",
+  "reportBytes": 39348,
+  "tests": 16,
+  "passed": 13,
+  "failed": 3,
+  "declarationChecksPassed": 10,
+  "retainedAdapterChecksPassed": 3,
+  "failures": [
+    "current-renderer/retained-adapter :: semantic color roles resolve through authored records rather than dynamic predicates",
+    "current-renderer/retained-adapter :: renderer refuses an untyped CanvasGridPlacement before reading its slots",
+    "current-renderer/retained-adapter :: both exact Canvas residual identities are closed with falsifiers and closure evidence"
+  ],
+  "currentRendererConformsToLaterRetainedSchema": false,
+  "canonicalSelectionMade": false,
+  "wholePackageComplete": false,
+  "sourceRuntimeChanged": false,
+  "scope": "Exact retained assertion bodies, rebinding imports/test-name prefixes only. All declaration checks pass while three current-renderer compatibility assertions fail. Green catalogue checks alone do not establish runtime conformance.",
+  "remaining": [
+    "Current renderer still reads semantic role names as predicates.",
+    "Current buildCanvasFrame does not reject the supplied untyped/wrong-direction CanvasGridPlacement graph as required by the retained compatibility contract.",
+    "Current renderer lacks the retained structural/color adapter integration claimed by the later schema."
+  ],
+  "next": "Reconcile the intended canonical schema variant and implement/qualify any accepted data migration and renderer changes; do not claim the retained closed residuals as current proof."
+}

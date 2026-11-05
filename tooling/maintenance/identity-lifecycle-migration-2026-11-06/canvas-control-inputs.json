@@ -1,0 +1,66 @@
+{
+  "source": "710ba87766b73defdeb33bd9319338f9336b1938",
+  "versions": [
+    {
+      "commit": "d1cb05ba8e1a86826a0367bad4d8e4e97751e8ad",
+      "baseline": {
+        "file": "canvas-baseline-d1cb05ba.rel",
+        "sha256": "c7e28dfb414db3695516b8f44af8060d7ca126d9aadf94d0373a3be86e1ab623"
+      },
+      "schema": {
+        "file": "../provider-claim-migration-2026-11-06/canvas-retained-d1cb05ba.rel",
+        "sha256": "ef3270d7a877f9f3955a36d8c59138a68cfaaeccba683a104812af4f712c953d"
+      }
+    },
+    {
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "baseline": {
+        "file": "canvas-baseline-34502e9f.rel",
+        "sha256": "c7e28dfb414db3695516b8f44af8060d7ca126d9aadf94d0373a3be86e1ab623"
+      },
+      "schema": {
+        "file": "../provider-claim-migration-2026-11-06/canvas-retained-34502e9f.rel",
+        "sha256": "41de9791032bcfe4dc93d5de0345afa08877f57587d458744ac89bcde8eac25f"
+      }
+    }
+  ],
+  "tests": [
+    {
+      "path": "test/canvas-interface-catalogue-structure.test.mjs",
+      "file": "retained-canvas-interface-catalogue-structure.test.mjs.txt",
+      "sha256": "05d604e8f12e0a3fd7c12c6d15e253d070af19e6c56197e77232672500699e30",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "compatibility": false
+    },
+    {
+      "path": "test/canvas-interface-catalogue-accounting.test.mjs",
+      "file": "retained-canvas-interface-catalogue-accounting.test.mjs.txt",
+      "sha256": "38cc31f91087a8d4e9b33bea04e33ed23af2f9cb03d124f9f06d0469d5d24845",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "compatibility": false
+    },
+    {
+      "path": "test/canvas-interface-catalogue-coverage.test.mjs",
+      "file": "retained-canvas-interface-catalogue-coverage.test.mjs.txt",
+      "sha256": "8bbd3498862a48fcddaae3c6f919e3502f4559c13ced739282442120e8243a9c",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "compatibility": false
+    },
+    {
+      "path": "test/canvas-schema-compatibility.test.mjs",
+      "file": "retained-canvas-schema-compatibility.test.mjs.txt",
+      "sha256": "debd5cfd7cce89b16f43b9b3bb70db0bbedf260565fed42ec04e52da5f31f031",
+      "commit": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+      "compatibility": true
+    }
+  ],
+  "adapter": {
+    "file": "../provider-claim-migration-2026-11-06/canvas-retained-canvas-schema-compatibility.mjs.txt",
+    "sha256": "c922e33804e72ebf7e889c28b4ec08dce6d72daa432b69abb384fac81d09a92a"
+  },
+  "renderer": {
+    "path": "sdk/browser/canvas-renderer.mjs",
+    "sha256": "2ba8d852285bd93d69be5442a3ebff8d5516f50fa952870ae122b03ee936c5a2"
+  },
+  "scope": "Exact retained assertions, with only import namespaces and test-name prefixes rebound. Current parser and renderer; retained schema/declaration variants and retained compatibility adapter. No native browser execution or current renderer integration of that adapter implied."
+}

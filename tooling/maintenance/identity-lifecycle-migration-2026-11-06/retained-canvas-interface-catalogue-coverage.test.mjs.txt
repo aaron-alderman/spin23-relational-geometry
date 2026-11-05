@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {baseline,renderer,subjects,values} from './canvas-interface-catalogue-fixture.mjs';
+
+test('every renderer-dispatched Canvas type and expression kind is catalogue-owned',()=>{
+  const interfaceTypes=new Set(subjects('isa','Interface').map(subject=>values(subject,'type')[0]).filter(Boolean));
+  const keywords=family=>new Set(subjects('isa','Keyword')
+    .filter(subject=>values(subject,'family')[0] === family).map(subject=>values(subject,'value')[0]));
+  const widgets=keywords('canvasWidgetType');
+  const expressions=keywords('canvasExprKind');
+  const actions=keywords('canvasActionKind');
+  for(const match of renderer.matchAll(/\n\s{4}(Canvas[A-Z][A-Za-z]+): \(\) =>/gu)) {
+    assert.ok(widgets.has(match[1]),`missing widget keyword ${match[1]}`);
+    assert.ok(interfaceTypes.has(match[1]),`missing interface ${match[1]}`);
+  }
+  const expressionNames=['literal','concat','runtimeField','stateField','laneField','contextField',
+    'countLaneRecords','recordField','recordSubject','selectedRecordField','surfaceField'];
+  for(const match of renderer.matchAll(/\n\s{4}([a-z][A-Za-z]+): \(\) =>/gu))
+    if(expressionNames.includes(match[1])) assert.ok(expressions.has(match[1]),`missing expression keyword ${match[1]}`);
+  const types=[...baseline.matchAll(/\("policy\.browserCanvasVocabulary", "canvasType", "([^"]+)"\)/gu)];
+  for(const match of types) assert.ok(interfaceTypes.has(match[1]),`observed type lacks canonical interface: ${match[1]}`);
+  const observed=[...baseline.matchAll(/\("policy\.browserCanvasActionVocabulary", "actionKind", "([^"]+)"\)/gu)]
+    .map(match=>match[1]);
+  assert.deepEqual(actions,new Set(observed));
+});
+
+test('every literal authored predicate consumed by Canvas projection is catalogued',()=>{
+  const slotPredicates=new Set(subjects('isa','Slot').flatMap(slot=>values(slot,'predicate')));
+  const adjacentPredicates=new Set(['isa','text']);
+  const call=/\b(?:one|bySubject|requireCanvasRef|requireCanvasExprRef|requireCanvasSlotValue|parseRequiredBoolean|parseRequiredInteger)\(prog,\s*[^,]+,\s*["']([^"']+)["']/gu;
+  const consumed=new Set([...renderer.matchAll(call)].map(match=>match[1]));
+  const missing=[...consumed]
+    .filter(predicate=>!slotPredicates.has(predicate) && !adjacentPredicates.has(predicate)).sort();
+  assert.deepEqual(missing,[]);
+});

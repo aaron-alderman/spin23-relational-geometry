@@ -1,0 +1,32 @@
+file:///C:/Users/aaron/grand-theory/tooling/maintenance/identity-lifecycle-migration-2026-11-06/async-protocol-proposal.test.mjs:7
+test('proposal preserves exact synchronous and awaited falsy faults',async()=>{for(const awaited of [false,true])for(const fault of [undefined,null,false,0,'',{fixture:'failure'}]){let commits=0;const run=executeAsyncAuthoredProtocol(compileAuthoredProtocol(document()),'delivery',{}, {ports:{prepare(){if(!awaited)throw fault;return{value:undefined};},wait:()=>({value:Promise.reject(fault)}),commit(){commits++;return{value:1};}});let observed=false;await run.then(()=>assert.fail('Expected rejection'),error=>{observed=true;assert.equal(error,fault);});assert(observed);assert.equal(commits,0);}});
+                                                                                                                                                                                                                                                                                                                                                                                                                                               ^
+
+SyntaxError: Unexpected token ')'
+    at compileSourceTextModule (node:internal/modules/esm/utils:319:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:89:18)
+    at #translate (node:internal/modules/esm/loader:438:20)
+    at afterLoad (node:internal/modules/esm/loader:506:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:511:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:564:36)
+    at afterResolve (node:internal/modules/esm/loader:611:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:617:12)
+    at node:internal/modules/esm/loader:636:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:370:14)
+
+Node.js v24.22.1
+✖ tooling\maintenance\identity-lifecycle-migration-2026-11-06\async-protocol-proposal.test.mjs (84.2856ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.9727
+
+✖ failing tests:
+
+test at tooling\maintenance\identity-lifecycle-migration-2026-11-06\async-protocol-proposal.test.mjs:1:1
+✖ tooling\maintenance\identity-lifecycle-migration-2026-11-06\async-protocol-proposal.test.mjs (84.2856ms)
+  'test failed'

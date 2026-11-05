@@ -1,0 +1,93 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import test from 'node:test';
+import {parse} from '../sdk/core/rel-core.mjs';
+import {buildCanvasFrame} from '../sdk/browser/canvas-renderer.mjs';
+import {canvasSemanticColorRoleResolution,canvasStructuralSubjects,canvasStructuralTypeIssue} from '../sdk/browser/canvas-schema-compatibility.mjs';
+import {source as catalogueSource,renderer,values} from './canvas-interface-catalogue-fixture.mjs';
+
+test('semantic color roles resolve through authored records rather than dynamic predicates',()=>{
+  const prog=parse([
+    '("doc", "isa", "CanvasDocument")',
+    '("doc", "semanticColorRole", "role.command")',
+    '("role.command", "isa", "CanvasSemanticColorRole")',
+    '("role.command", "name", "commandFg")',
+    '("role.command", "color", "brightCyan")',
+  ].join('\n'));
+  assert.deepEqual(canvasSemanticColorRoleResolution(prog,{documentSubject:'doc',role:'commandFg',fallbackName:'white'}),
+    {colorName:'brightCyan',role:'commandFg',source:'authoredRole',roleSubject:'role.command'});
+  assert.deepEqual(canvasSemanticColorRoleResolution(prog,{documentSubject:'doc',role:'unknown',fallbackName:'white'}),
+    {colorName:'white',role:'unknown',source:'fallback',roleSubject:''});
+  assert.doesNotMatch(renderer,/one\(prog,\s*documentSubject,\s*role\)/u);
+});
+
+test('ambiguous semantic color role names fail with exact evidence',()=>{
+  const prog=parse([
+    '("doc", "semanticColorRole", "role.one")',
+    '("doc", "semanticColorRole", "role.two")',
+    '("role.one", "name", "commandFg")',
+    '("role.one", "color", "cyan")',
+    '("role.two", "name", "commandFg")',
+    '("role.two", "color", "blue")',
+  ].join('\n'));
+  const result=canvasSemanticColorRoleResolution(prog,{documentSubject:'doc',role:'commandFg'});
+  assert.equal(result.issue.code,'canvas-ambiguous-semantic-color-role');
+  assert.deepEqual(result.issue.roleSubjects,['role.one','role.two']);
+});
+
+test('structural compatibility diagnostic preserves expected actual owner and edge identity',()=>{
+  const prog=parse('(\"arg\", \"isa\", \"OtherRecord\")\n(\"typed\", \"isa\", \"CanvasExprArg\")');
+  assert.equal(canvasStructuralTypeIssue(prog,{subject:'typed',expectedType:'CanvasExprArg'}),null);
+  const issue=canvasStructuralTypeIssue(prog,{subject:'arg',expectedType:'CanvasExprArg',ownerSubject:'expr',predicate:'expr'});
+  assert.deepEqual(issue,{
+    code:'canvas-structural-type-mismatch',subject:'expr',predicate:'expr',
+    details:'expr must reference an explicit CanvasExprArg subject.',
+    message:'Canvas structural record arg requires isa CanvasExprArg; observed OtherRecord.',
+    expectedType:'CanvasExprArg',actualTypes:['OtherRecord'],referencedSubject:'arg',
+  });
+});
+
+test('structural link direction is explicit and has no fallback',()=>{
+  const failures=[];
+  assert.deepEqual(canvasStructuralSubjects(parse('("grid", "placement", "placement")'),{
+    ownerSubject:'grid',predicate:'placement',expectedType:'CanvasGridPlacement',
+  },(...args)=>failures.push(args)),[]);
+  assert.equal(failures.length,1);
+  assert.equal(failures[0][5],'canvas-structural-link-direction');
+});
+
+test('renderer refuses an untyped CanvasGridPlacement before reading its slots',()=>{
+  const program=[
+    catalogueSource,
+    '("doc", "isa", "CanvasDocument")',
+    '("doc", "width", "10")', '("doc", "height", "10")',
+    '("doc", "cellWidth", "1")', '("doc", "cellHeight", "1")',
+    '("doc", "palette", "palette")', '("doc", "root", "grid")',
+    '("palette", "isa", "CanvasPalette")', '("palette", "color", "black")', '("palette", "color", "white")',
+    '("black", "isa", "CanvasColor")', '("black", "name", "black")', '("black", "value", "#000000")',
+    '("white", "isa", "CanvasColor")', '("white", "name", "white")', '("white", "value", "#ffffff")',
+    '("grid", "isa", "CanvasGrid")', '("grid", "rows", "1")', '("grid", "columns", "1")', '("grid", "placement", "placement")',
+    '("placement", "child", "text")', '("placement", "row", "1")', '("placement", "column", "1")', '("placement", "order", "1")',
+    '("text", "isa", "CanvasText")', '("text", "textExpr", "literal")',
+    '("literal", "isa", "CanvasExpr")', '("literal", "kind", "literal")', '("literal", "value", "ok")',
+  ].join('\n');
+  assert.throws(()=>buildCanvasFrame(parse(program),{viewState:{},runtime:{},lanes:{}}),error=>{
+    assert.equal(error.issues?.[0]?.code,'canvas-structural-type-mismatch');
+    assert.equal(error.issues?.[0]?.subject,'grid');
+    assert.equal(error.issues?.[0]?.predicate,'placement');
+    return true;
+  });
+});
+
+test('both exact Canvas residual identities are closed with falsifiers and closure evidence',()=>{
+  for(const residual of ['residual.canvas.dynamicSemanticColorRole','residual.canvas.structuralRecordIsa']){
+    assert.deepEqual(values(residual,'status'),['closed']);
+    assert.equal(values(residual,'closureEvidence')[0],'sdk/browser/canvas-schema-compatibility.mjs');
+    assert.equal(values(residual,'falsifier').length,1);
+  }
+  const expectedChecks=['CanvasExprArg','CanvasSurfaceParameter','CanvasSwitchCase','CanvasDetailRow','CanvasGridPlacement'];
+  for(const type of expectedChecks) assert.match(renderer,new RegExp(`"${type}"`,'u'),type);
+  assert.match(renderer,/import \{ canvasSemanticColorName, canvasStructuralSubjects \}/gu);
+  assert.match(renderer,/linkDirection: "record-to-owner"/gu);
+  assert.equal(renderer.match(/linkDirection: "owner-to-record"/gu)?.length,4);
+});

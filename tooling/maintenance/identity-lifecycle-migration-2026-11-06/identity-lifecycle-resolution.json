@@ -1,0 +1,20 @@
+{
+  "source": "710ba87766b73defdeb33bd9319338f9336b1938",
+  "passed": true,
+  "scope": "The specific synchronous identity lifecycle counterexamples exercised by the 41-check suite, not the complete authentication subsystem.",
+  "predecessor": "3fcf489c2acc5641c85ad2f37a81368bf011d6eb",
+  "priorCounterexample": "tooling/maintenance/provider-claim-migration-2026-11-06/identity-construction-counterexample.json",
+  "sourceTest": "test/identity-lifecycle.test.mjs",
+  "focusedReport": "focused-final-tests.txt",
+  "fullSourceReport": "source-run-scope.json",
+  "resolutions": [
+    "Initialization faults explicitly dispose the acquired real SQLite handle; exact falsy primary faults propagate.",
+    "Checkpoint preparation faults cannot bypass SQLite close; failed disposal exposes a bounded retry capability.",
+    "Rollback failure quarantines the connection before attempting disposal, preserves the primary fault and refuses further SDK SQL even if disposal fails.",
+    "A clock hook that disposes the owner cannot cause authentication to return a late authenticated claim.",
+    "Captured statement methods preserve preparation-before-entropy fault order and recheck current admission before invocation."
+  ],
+  "comparisonLimit": "The exact predecessor module is hash-verified; dependencies are explicitly current namespaces. This is a finite observable comparison rather than a transitive predecessor seal.",
+  "wholePackageComplete": false,
+  "scientificAcceptance": false
+}

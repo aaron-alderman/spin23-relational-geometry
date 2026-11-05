@@ -1,0 +1,18 @@
+✔ resource capabilities are admitted before acquisition (1.8971ms)
+✔ acquisition faults never dispose an unacquired resource (0.2445ms)
+✔ failed initialization disposes before preserving every exact primary fault (0.9157ms)
+✔ construction compound faults retain a retry capability without enumerable resource disclosure (0.3261ms)
+✔ normal ownership transfer prepares and disposes once; repeated close is inert (0.2229ms)
+✔ shutdown preparation faults cannot prevent disposal, including falsy faults (0.2346ms)
+✔ failed disposal remains retryable without repeating preparation (0.1728ms)
+✔ compound shutdown faults preserve ordering and release uncertainty (0.1685ms)
+✔ reentrant shutdown refuses while still completing the outer disposal (0.2302ms)
+✔ initializers can close an owned resource without accidentally reopening its state (0.237ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 109.3348

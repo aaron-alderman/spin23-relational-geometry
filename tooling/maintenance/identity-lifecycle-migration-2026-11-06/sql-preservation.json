@@ -1,0 +1,314 @@
+{
+  "baseline": "3fcf489c2acc5641c85ad2f37a81368bf011d6eb",
+  "sourceSha256": "78408575adba52b2d005d294315335a67db068683f56ebc7a8c05c1bbc39341e",
+  "queries": [
+    {
+      "name": "sql.constructor.exec.0",
+      "method": "constructor",
+      "operation": "exec",
+      "sql": "PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA busy_timeout=10000; PRAGMA foreign_keys=ON;",
+      "sha256": "5a0e8b89135a425dbce80636ac952309a195103b4cf1c1e37afe1321d5371db6"
+    },
+    {
+      "name": "sql.constructor.exec.1",
+      "method": "constructor",
+      "operation": "exec",
+      "sql": "\n      CREATE TABLE IF NOT EXISTS host_identity_schema_migrations (\n        version INTEGER PRIMARY KEY,\n        name TEXT NOT NULL,\n        applied_at TEXT NOT NULL\n      );\n      CREATE TABLE IF NOT EXISTS host_identity_metadata (\n        key TEXT PRIMARY KEY,\n        value TEXT NOT NULL\n      );\n      CREATE TABLE IF NOT EXISTS platform_principals (\n        platform_principal_id TEXT PRIMARY KEY,\n        principal TEXT NOT NULL UNIQUE,\n        kind TEXT NOT NULL CHECK(kind IN ('user', 'agent', 'service')),\n        status TEXT NOT NULL CHECK(status IN ('active', 'suspended', 'revoked')),\n        revision INTEGER NOT NULL,\n        created_at TEXT NOT NULL,\n        updated_at TEXT NOT NULL\n      );\n      CREATE TABLE IF NOT EXISTS host_identities (\n        identity_id TEXT PRIMARY KEY,\n        platform_principal_id TEXT NOT NULL DEFAULT '',\n        issuer TEXT NOT NULL,\n        external_subject TEXT NOT NULL,\n        principal TEXT NOT NULL,\n        identifier TEXT NOT NULL DEFAULT '',\n        kind TEXT NOT NULL,\n        assurance TEXT NOT NULL,\n        status TEXT NOT NULL CHECK(status IN ('active', 'suspended', 'revoked')),\n        revision INTEGER NOT NULL,\n        created_at TEXT NOT NULL,\n        updated_at TEXT NOT NULL,\n        profile TEXT NOT NULL DEFAULT '{}',\n        UNIQUE(issuer, external_subject)\n      );\n      CREATE INDEX IF NOT EXISTS host_identities_principal ON host_identities(principal, status);\n      CREATE TABLE IF NOT EXISTS host_identity_sessions (\n        session_hash TEXT PRIMARY KEY,\n        identity_id TEXT NOT NULL,\n        issued_at TEXT NOT NULL,\n        expires_at TEXT NOT NULL,\n        last_seen_at TEXT NOT NULL,\n        revoked_at TEXT NOT NULL DEFAULT '',\n        FOREIGN KEY(identity_id) REFERENCES host_identities(identity_id)\n      );\n      CREATE INDEX IF NOT EXISTS host_identity_sessions_identity ON host_identity_sessions(identity_id, expires_at);\n      CREATE TABLE IF NOT EXISTS host_identity_failures (\n        identifier_hash TEXT NOT NULL,\n        occurred_at TEXT NOT NULL\n      );\n      CREATE INDEX IF NOT EXISTS host_identity_failures_identifier ON host_identity_failures(identifier_hash, occurred_at);\n      CREATE TABLE IF NOT EXISTS host_identity_events (\n        sequence INTEGER PRIMARY KEY AUTOINCREMENT,\n        event_id TEXT NOT NULL UNIQUE,\n        kind TEXT NOT NULL,\n        identity_id TEXT NOT NULL DEFAULT '',\n        principal TEXT NOT NULL DEFAULT '',\n        occurred_at TEXT NOT NULL,\n        detail TEXT NOT NULL DEFAULT '{}'\n      );\n      CREATE INDEX IF NOT EXISTS host_identity_events_occurred ON host_identity_events(occurred_at DESC);\n    ",
+      "sha256": "db8dc011349fa79a0f2d02c1321d06f943342aa3c713b2da3b56218926582253"
+    },
+    {
+      "name": "sql.constructor.prepare.0",
+      "method": "constructor",
+      "operation": "prepare",
+      "sql": "INSERT OR IGNORE INTO host_identity_schema_migrations (version, name, applied_at) VALUES (1, 'verified-identities-and-sessions', ?)",
+      "sha256": "70f52e12a766011dd49dacca67b69cf111364683a86969da0cf0d510cb2386cc"
+    },
+    {
+      "name": "sql.constructor.prepare.1",
+      "method": "constructor",
+      "operation": "prepare",
+      "sql": "PRAGMA table_info(host_identities)",
+      "sha256": "e445fcaa4ace6431d87a4372714b8234dff869c7ece8ea428c9f8acbcbe3f2e1"
+    },
+    {
+      "name": "sql.constructor.exec.2",
+      "method": "constructor",
+      "operation": "exec",
+      "sql": "ALTER TABLE host_identities ADD COLUMN platform_principal_id TEXT NOT NULL DEFAULT ''",
+      "sha256": "17ecb2a39fb0189f753f7d6b8f9ff5c67a129448bcc214037d396e547f9cda32"
+    },
+    {
+      "name": "sql.constructor.exec.3",
+      "method": "constructor",
+      "operation": "exec",
+      "sql": "CREATE INDEX IF NOT EXISTS host_identities_platform_principal ON host_identities(platform_principal_id, status)",
+      "sha256": "31c361860f48311a0ed4c304929ca65f8a45263f028e6ce370e43c0eb02b7be1"
+    },
+    {
+      "name": "sql.constructor.prepare.2",
+      "method": "constructor",
+      "operation": "prepare",
+      "sql": "INSERT OR IGNORE INTO host_identity_schema_migrations (version, name, applied_at) VALUES (2, 'platform-principals-and-external-links', ?)",
+      "sha256": "d53504b982480ee7b600e3d31a193a1f10af8786c93a0501083242a1d75cfbf2"
+    },
+    {
+      "name": "sql.constructor.prepare.3",
+      "method": "constructor",
+      "operation": "prepare",
+      "sql": "INSERT OR IGNORE INTO host_identity_metadata (key, value) VALUES ('csrf_key', ?)",
+      "sha256": "01e8bb0b6707ed68ff60861e49e146f0f8f77e4884333a72024f6de4c508bdf9"
+    },
+    {
+      "name": "sql.constructor.prepare.4",
+      "method": "constructor",
+      "operation": "prepare",
+      "sql": "SELECT value FROM host_identity_metadata WHERE key = 'csrf_key'",
+      "sha256": "dd1e660b63c500da37f809dc0c1b64aeebab5ea8acea66c22e703f43741d3df8"
+    },
+    {
+      "name": "sql.transaction.exec.0",
+      "method": "transaction",
+      "operation": "exec",
+      "sql": "BEGIN IMMEDIATE",
+      "sha256": "930a7770399087898ae6ac96ce5375048117486e06b21da4523d2c3c75113c32"
+    },
+    {
+      "name": "sql.transaction.exec.1",
+      "method": "transaction",
+      "operation": "exec",
+      "sql": "COMMIT",
+      "sha256": "79663c1d3b43ceaf9ee728e501c64b57ae2e4d6cb36ff5c65eddcda1de27342f"
+    },
+    {
+      "name": "sql.transaction.exec.2",
+      "method": "transaction",
+      "operation": "exec",
+      "sql": "ROLLBACK",
+      "sha256": "587fa628a9fe4642ac0e22825a97e81d388af674f7251a9fb699f96901dcb710"
+    },
+    {
+      "name": "sql.migratePlatformPrincipals.prepare.0",
+      "method": "migratePlatformPrincipals",
+      "operation": "prepare",
+      "sql": "\n      SELECT principal, kind, COUNT(DISTINCT kind) AS kindCount\n      FROM host_identities\n      WHERE platform_principal_id = ''\n      GROUP BY principal\n      ORDER BY principal\n    ",
+      "sha256": "d5fb2dd52e472bdffde2a84d28afd3b4fcd46731a38c8727a124283f4aedbea5"
+    },
+    {
+      "name": "sql.migratePlatformPrincipals.prepare.1",
+      "method": "migratePlatformPrincipals",
+      "operation": "prepare",
+      "sql": "\n          INSERT OR IGNORE INTO platform_principals (\n            platform_principal_id, principal, kind, status, revision, created_at, updated_at\n          ) VALUES (?, ?, ?, 'active', 1, ?, ?)\n        ",
+      "sha256": "6af16185b3de7713b7b8ddb7c5f102dbc56ba7ef3f4e80b079256546ff553f04"
+    },
+    {
+      "name": "sql.migratePlatformPrincipals.prepare.2",
+      "method": "migratePlatformPrincipals",
+      "operation": "prepare",
+      "sql": "\n          UPDATE host_identities SET platform_principal_id = ?\n          WHERE principal = ? AND platform_principal_id = ''\n        ",
+      "sha256": "03f789187468abdeff4997ba7d49adc4e6454ccbf29dbe1f0590e20c118ac8b0"
+    },
+    {
+      "name": "sql.recordEvent.prepare.0",
+      "method": "recordEvent",
+      "operation": "prepare",
+      "sql": "INSERT INTO host_identity_events (event_id, kind, identity_id, principal, occurred_at, detail) VALUES (?, ?, ?, ?, ?, ?)",
+      "sha256": "c430ddc5664081e2eeb10c1fe59e9cd411df506cfa7b9123260b4c2ae701aba4"
+    },
+    {
+      "name": "sql.prune.prepare.0",
+      "method": "prune",
+      "operation": "prepare",
+      "sql": "DELETE FROM host_identity_sessions WHERE expires_at <= ? OR (revoked_at <> '' AND revoked_at < ?)",
+      "sha256": "6932adbd22f7db0147d8e06cc9d98a3b1f5fb559d31d94a87661e0d3ce1608b6"
+    },
+    {
+      "name": "sql.prune.prepare.1",
+      "method": "prune",
+      "operation": "prepare",
+      "sql": "DELETE FROM host_identity_failures WHERE occurred_at < ?",
+      "sha256": "5b5021e72301210ffd59d8a65c2cdb10c45cb8946952343ea17bf08472885b0d"
+    },
+    {
+      "name": "sql.failureState.prepare.0",
+      "method": "failureState",
+      "operation": "prepare",
+      "sql": "SELECT occurred_at AS occurredAt FROM host_identity_failures WHERE identifier_hash = ? AND occurred_at >= ? ORDER BY occurred_at DESC",
+      "sha256": "d06b8356407a38959023b026721bfcf2063446edbdcfad20248b388835fd4b4d"
+    },
+    {
+      "name": "sql.recordFailure.prepare.0",
+      "method": "recordFailure",
+      "operation": "prepare",
+      "sql": "INSERT INTO host_identity_failures (identifier_hash, occurred_at) VALUES (?, ?)",
+      "sha256": "8d81836edf6af644b9d7b2c13614da79741c746b40e6db0657b33d96730e9ca6"
+    },
+    {
+      "name": "sql.clearFailures.prepare.0",
+      "method": "clearFailures",
+      "operation": "prepare",
+      "sql": "DELETE FROM host_identity_failures WHERE identifier_hash = ?",
+      "sha256": "ada59527e287f4efe74fc6c6819e910fcc1dc07a6596aea1676dc1fb4a83cc7c"
+    },
+    {
+      "name": "sql.identityRow.prepare.0",
+      "method": "identityRow",
+      "operation": "prepare",
+      "sql": "\n      SELECT identity.identity_id AS identityId,\n        identity.platform_principal_id AS platformPrincipalId,\n        identity.issuer,\n        identity.external_subject AS subject,\n        principal.principal,\n        identity.identifier,\n        principal.kind,\n        identity.assurance,\n        identity.status,\n        identity.revision,\n        identity.created_at AS createdAt,\n        identity.updated_at AS updatedAt,\n        identity.profile,\n        principal.status AS principalStatus,\n        principal.revision AS principalRevision\n      FROM host_identities AS identity\n      JOIN platform_principals AS principal\n        ON principal.platform_principal_id = identity.platform_principal_id\n      WHERE identity.identity_id = ?\n    ",
+      "sha256": "8c8445818abe93ad9be975ac7cd481e8525f6e61ed21d47a9d40016abb298bba"
+    },
+    {
+      "name": "sql.platformPrincipalRow.prepare.0",
+      "method": "platformPrincipalRow",
+      "operation": "prepare",
+      "sql": "\n      SELECT platform_principal_id AS platformPrincipalId, principal, kind, status,\n        revision, created_at AS createdAt, updated_at AS updatedAt\n      FROM platform_principals\n      WHERE platform_principal_id = ?\n    ",
+      "sha256": "98e23124130877ca1adbc07d2f525947d95e194178ddcf566e293ec4ae59d241"
+    },
+    {
+      "name": "sql.platformPrincipalForPrincipal.prepare.0",
+      "method": "platformPrincipalForPrincipal",
+      "operation": "prepare",
+      "sql": "\n      SELECT platform_principal_id AS platformPrincipalId, principal, kind, status,\n        revision, created_at AS createdAt, updated_at AS updatedAt\n      FROM platform_principals\n      WHERE principal = ?\n    ",
+      "sha256": "6687c9fd1e1eed21ee4f40e1cd5c80f2236e1b2fe1734809821715abe0082578"
+    },
+    {
+      "name": "sql.identityLinksForPrincipal.prepare.0",
+      "method": "identityLinksForPrincipal",
+      "operation": "prepare",
+      "sql": "\n      SELECT identity_id AS identityId\n      FROM host_identities\n      WHERE platform_principal_id = ?\n      ORDER BY created_at, identity_id\n    ",
+      "sha256": "a21537c0c6cdf312b4f62ded93fb8337efac1a3c030d55e32fc32085fe061bc0"
+    },
+    {
+      "name": "sql.provisionIdentity.prepare.0",
+      "method": "provisionIdentity",
+      "operation": "prepare",
+      "sql": "\n          INSERT INTO platform_principals (\n            platform_principal_id, principal, kind, status, revision, created_at, updated_at\n          ) VALUES (?, ?, ?, 'active', 1, ?, ?)\n        ",
+      "sha256": "52e74349b5bc664c9bd2ce4ea6f973137fea27624bab907d8fd5e9680778bce1"
+    },
+    {
+      "name": "sql.provisionIdentity.prepare.1",
+      "method": "provisionIdentity",
+      "operation": "prepare",
+      "sql": "\n        INSERT INTO host_identities (\n          identity_id, platform_principal_id, issuer, external_subject, principal, identifier, kind, assurance,\n          status, revision, created_at, updated_at, profile\n        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?)\n        ON CONFLICT(identity_id) DO UPDATE SET\n          identifier = excluded.identifier,\n          kind = excluded.kind,\n          assurance = excluded.assurance,\n          revision = excluded.revision,\n          updated_at = excluded.updated_at,\n          profile = excluded.profile\n      ",
+      "sha256": "8d1d0e1db14ade63538387001640b80f928f87b0bd8540881663de43cdc3e4ff"
+    },
+    {
+      "name": "sql.login.prepare.0",
+      "method": "login",
+      "operation": "prepare",
+      "sql": "INSERT INTO host_identity_sessions (session_hash, identity_id, issued_at, expires_at, last_seen_at, revoked_at) VALUES (?, ?, ?, ?, ?, '')",
+      "sha256": "28fa3097d6bd6ee8395a7ad09a8c26b28eb8caa32a2bf21c35c2793166456e00"
+    },
+    {
+      "name": "sql.linkExternalIdentity.prepare.0",
+      "method": "linkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n          INSERT INTO host_identities (\n            identity_id, platform_principal_id, issuer, external_subject, principal,\n            identifier, kind, assurance, status, revision, created_at, updated_at, profile\n          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'active', 1, ?, ?, ?)\n        ",
+      "sha256": "a3a13b4622c1b5f569316247765dc682b2378ccc10abdc29aef2e184441e83d1"
+    },
+    {
+      "name": "sql.linkExternalIdentity.prepare.1",
+      "method": "linkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n          UPDATE platform_principals\n          SET revision = revision + 1, updated_at = ?\n          WHERE platform_principal_id = ?\n        ",
+      "sha256": "631983e5e5233dd059da8858bb8116bb5ccf0b47a26e432167a5e5acdba234a1"
+    },
+    {
+      "name": "sql.unlinkExternalIdentity.prepare.0",
+      "method": "unlinkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n        SELECT COUNT(*) AS count\n        FROM host_identities\n        WHERE platform_principal_id = ? AND status = 'active'\n      ",
+      "sha256": "f49616a82786d89ce76ea9606d8b15f7136adf905259b7f3c65a6529416cb258"
+    },
+    {
+      "name": "sql.unlinkExternalIdentity.prepare.1",
+      "method": "unlinkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n          UPDATE host_identities\n          SET status = 'revoked', revision = ?, updated_at = ?\n          WHERE identity_id = ?\n        ",
+      "sha256": "dafc6b2d5c181eae35d781afee1ea590e05ec7e084012f086bab4e86f120f2f8"
+    },
+    {
+      "name": "sql.unlinkExternalIdentity.prepare.2",
+      "method": "unlinkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n          UPDATE host_identity_sessions\n          SET revoked_at = ?\n          WHERE identity_id = ? AND revoked_at = ''\n        ",
+      "sha256": "dd04965237242feb09b3e6fc5c4ddcecfdaa0ad17383b73230eabce52edf828c"
+    },
+    {
+      "name": "sql.unlinkExternalIdentity.prepare.3",
+      "method": "unlinkExternalIdentity",
+      "operation": "prepare",
+      "sql": "\n          UPDATE platform_principals\n          SET revision = revision + 1, updated_at = ?\n          WHERE platform_principal_id = ?\n        ",
+      "sha256": "631983e5e5233dd059da8858bb8116bb5ccf0b47a26e432167a5e5acdba234a1"
+    },
+    {
+      "name": "sql.authenticateRequest.prepare.0",
+      "method": "authenticateRequest",
+      "operation": "prepare",
+      "sql": "\n      SELECT session_hash AS sessionHash, identity_id AS identityId, issued_at AS issuedAt,\n        expires_at AS expiresAt, last_seen_at AS lastSeenAt, revoked_at AS revokedAt\n      FROM host_identity_sessions WHERE session_hash = ?\n    ",
+      "sha256": "fadea48c921f4908eff360bc0de1d55dde11290771e02a4c762032c6126a0b53"
+    },
+    {
+      "name": "sql.authenticateRequest.prepare.1",
+      "method": "authenticateRequest",
+      "operation": "prepare",
+      "sql": "UPDATE host_identity_sessions SET last_seen_at = ? WHERE session_hash = ?",
+      "sha256": "1f5ce2562167e9acd6bd9c2b5850198b1b35b720eb6e69c438cc29fd71077ac2"
+    },
+    {
+      "name": "sql.logout.prepare.0",
+      "method": "logout",
+      "operation": "prepare",
+      "sql": "UPDATE host_identity_sessions SET revoked_at = ? WHERE session_hash = ? AND revoked_at = ''",
+      "sha256": "8d4988394d3fb3053f3bff721081f5dfbaba2ae66d69ab7f79c06e8e82df99f8"
+    },
+    {
+      "name": "sql.setIdentityStatus.prepare.0",
+      "method": "setIdentityStatus",
+      "operation": "prepare",
+      "sql": "UPDATE host_identities SET status = ?, revision = ?, updated_at = ? WHERE identity_id = ?",
+      "sha256": "a81b992d95aee14a875446c01a8d06d2116ad4f4f0fb19092e38942df50e1094"
+    },
+    {
+      "name": "sql.setIdentityStatus.prepare.1",
+      "method": "setIdentityStatus",
+      "operation": "prepare",
+      "sql": "UPDATE host_identity_sessions SET revoked_at = ? WHERE identity_id = ? AND revoked_at = ''",
+      "sha256": "94e80772597ede958eee47ab4e733b785bc9d0136bb9dded00d2b5062e56eb52"
+    },
+    {
+      "name": "sql.auditEvents.prepare.0",
+      "method": "auditEvents",
+      "operation": "prepare",
+      "sql": "\n      SELECT event_id AS eventId, kind, identity_id AS identityId, principal, occurred_at AS occurredAt, detail\n      FROM host_identity_events ORDER BY sequence DESC LIMIT ?\n    ",
+      "sha256": "7d8c66d479db6116fdd379b465d1956465809d48ca8b0f9b28bb77fca5b199f5"
+    },
+    {
+      "name": "sql.operatorSnapshot.prepare.0",
+      "method": "operatorSnapshot",
+      "operation": "prepare",
+      "sql": "\n      SELECT kind, status, COUNT(*) AS count\n      FROM host_identities GROUP BY kind, status ORDER BY kind, status\n    ",
+      "sha256": "6853a9648413fb073f4541805b6ca8de18fff4ebbae02fb0b3913d31b9a3db78"
+    },
+    {
+      "name": "sql.operatorSnapshot.prepare.1",
+      "method": "operatorSnapshot",
+      "operation": "prepare",
+      "sql": "\n      SELECT COUNT(*) AS count FROM host_identity_sessions\n      WHERE revoked_at = '' AND expires_at > ?\n    ",
+      "sha256": "6855dde2226b1635b4e0c8cde77847b5dbc01b2f60f5b3adf54801b8db800f1e"
+    },
+    {
+      "name": "sql.operatorSnapshot.prepare.2",
+      "method": "operatorSnapshot",
+      "operation": "prepare",
+      "sql": "\n      SELECT kind, status, COUNT(*) AS count\n      FROM platform_principals\n      GROUP BY kind, status\n      ORDER BY kind, status\n    ",
+      "sha256": "b9469f730f59691b67e2367d2a8d84f17540626491027d5dcd0ccc536b6e23e4"
+    },
+    {
+      "name": "sql.close.exec.0",
+      "method": "close",
+      "operation": "exec",
+      "sql": "PRAGMA wal_checkpoint(TRUNCATE); PRAGMA optimize;",
+      "sha256": "52030ed5ebaf5d790a585ca90013aa52838234d98d5f4e40c18ca9b8da071926"
+    }
+  ]
+}

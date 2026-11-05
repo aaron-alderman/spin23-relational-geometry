@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {subjects,values} from './canvas-interface-catalogue-fixture.mjs';
+
+test('canonical Canvas catalogue parses and every interface slot is complete',()=>{
+  const interfaces=subjects('isa','Interface').filter(subject=>values(subject,'type')[0]?.startsWith('Canvas'));
+  assert.ok(interfaces.length >= 39,`expected full Canvas catalogue, got ${interfaces.length}`);
+  const linkedSlots=new Set();
+  for(const iface of interfaces) {
+    assert.equal(values(iface,'mode')[0],'closed',iface);
+    for(const slot of values(iface,'slot')) linkedSlots.add(slot);
+  }
+  assert.ok(linkedSlots.size >= 100,`expected complete slot catalogue, got ${linkedSlots.size}`);
+  for(const slot of linkedSlots) {
+    assert.ok(values(slot,'isa').includes('Slot'),`${slot}.isa`);
+    assert.equal(values(slot,'predicate').length,1,`${slot}.predicate`);
+    assert.equal(values(slot,'cardinality').length,1,`${slot}.cardinality`);
+    assert.equal(values(slot,'valueType').length,1,`${slot}.valueType`);
+  }
+});
+
+test('allowed vocabularies and all defaults are visible algebra',()=>{
+  const requiredAllowed={
+    'slot.CanvasSplit.direction':['horizontal','vertical'],
+    'slot.CanvasFocusAction.direction':['next','previous'],
+    'slot.CanvasSelectionAction.scope':['list','active'],
+    'slot.CanvasSelectionAction.direction':['previous','next','pagePrevious','pageNext','first','last'],
+    'slot.CanvasWorkbenchAction.operation':['activateFocused','secondaryActivateFocused','escapeContext','historyBack','historyForward'],
+    'slot.CanvasDetailLike.cursorResetPolicy':['firstProperty','nearestProperty'],
+    'slot.CanvasDetailLike.cursorTargetPolicy':['propertyOnly','anyRow'],
+    'slot.CanvasBinding.source':['literal','stateField','runtimeField','selectedRecord','surfaceField'],
+    'slot.CanvasSurfaceArg.source':['literal','stateField','runtimeField','selectedRecord','surfaceField'],
+  };
+  for(const [slot,allowed] of Object.entries(requiredAllowed))
+    assert.deepEqual(new Set(values(slot,'allowed')),new Set(allowed),slot);
+  for(const slot of subjects('isa','Slot'))
+    if(values(slot,'cardinality')[0] === 'one')
+      assert.equal(values(slot,'default').length,0,`${slot} must not hide a default`);
+  assert.equal(values('catalogue.canvas.floatingWindowDefaults','status')[0],
+    'explicitlyCataloguedLegacyRendererDefaultsPendingAlgebraicRemoval');
+});
