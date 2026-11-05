@@ -1,0 +1,28 @@
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: unable to access 'C:\Users\aaron/.config/git/ignore': Permission denied
+warning: in the working copy of '.gitignore', CRLF will be replaced by LF the next time Git touches it
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert(git(root,['diff','--binary']).equals(fs.readFileSync(path.resolve('.platform-reconstitution/bundles/preservation-2026-11-04/supplementary/main-unstaged.patch'))))
+
+    at Object.<anonymous> (C:\Users\aaron\grand-theory\tooling\maintenance\runtime-loading-reconciliation-2026-11-05\verify-closure.cjs:12:1)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.1

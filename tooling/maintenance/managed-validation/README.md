@@ -8,7 +8,7 @@ node tooling/maintenance/managed-validation/run.mjs
 node --test --test-concurrency=1 tooling/maintenance/managed-validation/test/workspaces.test.mjs
 ```
 
-The default profile is the verified `a06d40d43da8ad22f8aa32f052d708c38c36a1eb` checkpoint in `all-remaining-contract-migration-2026-11-05`. It runs the same assembly and 15 artifact suites / 2,462 checks, the standalone runtime and semantic gates, and two isolated 18-stage bootstraps. It refuses changed owner commits, working states, source bundles or executable identities. Qualification of a new source revision requires an explicitly reviewed profile update, including its counts and input identities.
+The explicit `profile.json` separates frozen base verification recipes from the current committed input profile. The runtime-loading reconciliation profile preserves all 15 base suites / 2,462 checks and adds its 16-check source-loading suite: **16 artifact suites / 2,478 checks**, standalone runtime and semantic gates, and two **19-stage** isolated bootstraps. The runtime graph expectation is **890 modules**. It refuses changed owner commits, working states, source bundles, executable identities or module counts. Qualification of a new source revision requires an explicitly reviewed profile update, including its actual counts and input identities.
 
 ## Storage lifecycle
 
@@ -26,10 +26,10 @@ Earlier one-off drivers required fresh destinations and deliberately preserved e
 
 Receipts are under `.platform-reconstitution/managed-validation/receipts/<run-id>`. `status.json` records the outcome and observed working-byte peak. `recipe-inputs.json` records original and adapted driver hashes. `qualification.json` records passed engineering gates. Paths in receipts identify the materialization used during execution; `materializationRetained: false` explicitly records that those disposable copies have been retired. The source bundles and exact input manifests remain available for reproduction.
 
-Recipe adaptation changes generated destination paths and the immutable historical ledger reference. Assertions and test counts remain unchanged. Native computer use is not part of this runner. This does not certify generic algebra, scientific admission, production activation, historical recovery or cache/research-output reproducibility.
+Recipe adaptation changes generated destination paths, the immutable historical ledger reference and the explicitly profiled runtime-module count. Every base assertion is preserved; additional tests append to the artifact and bootstrap lists. Additional reports require exact test/pass totals and zero failures, cancellations and skips. Source bytes are verified again after the additional isolated stages. Unknown recipe structures, unsafe test paths and duplicated tests refuse instead of weakening gates. Native computer use is not part of this runner. This does not certify generic algebra, scientific admission, production activation, historical recovery or cache/research-output reproducibility.
 
 ## Recovery
 
 Run the same command again after an unclean process exit. An expired lease is reclaimed only when its owner and all recorded children are absent. If a process is still alive, another run refuses rather than silently creating a new destination. If ownership metadata is malformed, inspect it and the process state before any manual recovery; do not delete arbitrary workspace directories to bypass the check.
 
-Fifteen tests use small independent temporary fixtures and prove bounded retention across repeated pass/fail runs, crash recovery, refusal of live leases and unowned directories across retries, cleanup of junctions to an external source sentinel, disk/work/receipt/log budgets, argument fidelity, lexical escape refusal, cancellation and normal-exit cleanup of real descendants, child-registration failure and reclamation of an interrupted 5 MiB temporary payload. They do not replace the real full qualification run.
+Twenty tests cover the fifteen storage/process lifecycle cases plus explicit profile totals, refusal of unsafe or duplicate additions, preservation of the actual frozen base recipes and exact report-count checks. They do not replace the real full qualification run.

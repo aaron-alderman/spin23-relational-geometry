@@ -1,0 +1,18 @@
+{
+  "revision": "a06d40d43da8ad22f8aa32f052d708c38c36a1eb",
+  "worker": {
+    "source": "sdk/authoring-agent/deployment-worker.mjs",
+    "sha256": "b64d6a1f083c36622a73ab921a01109cd2bbc8293c7e212e9dff5ff6b17961cb",
+    "fixture": "test/fixtures/runtime-loading-predecessor-worker.mjs"
+  },
+  "loader": {
+    "source": "sdk/server/server-runtime-assets.mjs",
+    "sourceSha256": "2761ab8f518493773c85d320cc5234603cbcfddcc88f8f7af5ffdb7f62c75ba6",
+    "functionText": "export async function importFreshRuntimeModule(file) {\n  const version = statSync(file).mtimeMs;\n  const href = pathToFileURL(file).href;\n  return import(`${href}?v=${version}`);\n}\n",
+    "functionSha256": "3740825cc0e7ee8062ca2d163d8512298fc96bc543521ffaf22aa240656624f8",
+    "fixture": "test/fixtures/runtime-loading-predecessor-loader.mjs",
+    "fixtureSha256": "edf8dd8e2749930b431402416a475bc8b323d1eb13a22c641844396c6518c901"
+  },
+  "causalFamilies": 2,
+  "independentScientificConfirmation": false
+}
