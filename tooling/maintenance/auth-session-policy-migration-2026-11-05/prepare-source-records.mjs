@@ -1,0 +1,16 @@
+import {readFileSync as read,writeFileSync as write} from 'node:fs';
+import {createHash} from 'node:crypto';
+const root='.platform-reconstitution/sourcery-platform-reconciled',audit=import.meta.dirname,prior='tooling/maintenance/runtime-loading-reconciliation-2026-11-05';
+write(audit+'/.gitattributes','* -text\n');write(audit+'/.gitignore','!*.log\n');
+let s=read(prior+'/refresh-source-records.mjs','utf8');
+s=s.replace("else if(path==='sdk/server/runtime-module-source.mjs')","else if(['sdk/core/authored-policy.mjs','sdk/server/auth-session-policy.mjs'].includes(path))");
+s=s.replace("owner:'Sourcery server runtime entry loading',role:'effect-runtime',rationale:'Canonical entry path and content-keyed Node import; no transitive seal or execution admission.'","owner:'Sourcery authored auth and session policy',role:path.startsWith('sdk/core/')?'domain-runtime':'effect-runtime',rationale:'Canonical expression policy interpretation and explicit authored policy document loading; no execution admission.'");
+write(audit+'/refresh-source-records.mjs',s);write(audit+'/audit-current-source.mjs',read(prior+'/audit-current-source.mjs'));
+write(root+'/assurance/auth-session-inventory-baseline.json',JSON.stringify({protocol:'sourcery/auth-session-inventory-extension.v1',priorBaselineSha256:createHash('sha256').update(read(root+'/assurance/runtime-loading-inventory-baseline.json')).digest('hex'),priorRuntimeModules:563,addedRuntimeModules:['sdk/core/authored-policy.mjs','sdk/server/auth-session-policy.mjs'],authorityEffect:'inventory-only',genericAlgebraProved:false},null,2)+'\n');
+const path=root+'/test/semantic-domain-inventory.test.mjs';s=read(path,'utf8');
+s=s.replace('  const expectedModules =',`  const authExtension = JSON.parse(await readFile(join(root,"assurance","auth-session-inventory-baseline.json"),"utf8"));
+  assert.equal(authExtension.protocol,"sourcery/auth-session-inventory-extension.v1");
+  assert.equal(authExtension.priorBaselineSha256,createHash("sha256").update(await readFile(join(root,"assurance","runtime-loading-inventory-baseline.json"))).digest("hex"));
+  assert.deepEqual(authExtension.addedRuntimeModules,["sdk/core/authored-policy.mjs","sdk/server/auth-session-policy.mjs"]);
+  const expectedModules =`).replace('...extension.addedRuntimeModules].sort()','...extension.addedRuntimeModules,...authExtension.addedRuntimeModules].sort()').replace('.size,563)','.size,565)').replace('.runtimeModules,563)','.runtimeModules,565)');
+write(path,s);

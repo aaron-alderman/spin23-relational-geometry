@@ -8,7 +8,7 @@ node tooling/maintenance/managed-validation/run.mjs
 node --test --test-concurrency=1 tooling/maintenance/managed-validation/test/workspaces.test.mjs
 ```
 
-The explicit `profile.json` separates frozen base verification recipes from the current committed input profile. The runtime-loading reconciliation profile preserves all 15 base suites / 2,462 checks and adds its 16-check source-loading suite: **16 artifact suites / 2,478 checks**, standalone runtime and semantic gates, and two **19-stage** isolated bootstraps. The runtime graph expectation is **890 modules**. It refuses changed owner commits, working states, source bundles, executable identities or module counts. Qualification of a new source revision requires an explicitly reviewed profile update, including its actual counts and input identities.
+The explicit `profile.json` separates frozen base verification recipes from the current committed input profile. The auth/session policy profile preserves all 15 base suites / 2,462 checks, the 16-check source-loading suite and adds the 16-check auth/session suite: **17 artifact suites / 2,494 checks**, standalone runtime and semantic gates, and two **20-stage** isolated bootstraps. The runtime graph expectation is **892 modules**. It refuses changed owner commits, working states, source bundles, executable identities or module counts. Qualification of a new source revision requires an explicitly reviewed profile update, including its actual counts and input identities.
 
 ## Storage lifecycle
 

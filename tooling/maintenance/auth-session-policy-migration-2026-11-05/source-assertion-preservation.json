@@ -1,0 +1,26 @@
+{
+  "priorChecks": 2130,
+  "currentChecks": 2146,
+  "addedChecks": [
+    "authored policy retains the four runtime families' valid defaults",
+    "canonical policy decisions preserve the exact expiry boundary and epoch zero",
+    "authored defaults and expression changes alter decisions without changing the adapter",
+    "generic policy supports a separately authored field and refuses unknown roots",
+    "policy document and expression inputs refuse accessors without invoking them",
+    "cookie sessions persist, reopen and expire exactly at the configured deadline",
+    "invalid cookie policy and clock refuse before provider and directory effects",
+    "reopened cookie repositories remove malformed and expired records",
+    "a clock failure during cookie reload preserves valid persisted sessions",
+    "legacy snapshot TTL rejects invalid limits before creating storage",
+    "host policy rejects invalid limits and clock before opening SQLite",
+    "host sessions use authored lifetimes, epoch zero and the configured failure threshold",
+    "forwarded limits refuse before key parsing and never accept infinite skew",
+    "signed forwarded claims retain request binding and exact expiration with zero skew",
+    "forwarded verifier rejects a nonfinite clock with a valid signature",
+    "forwarded environment round trips numeric limits and refuses malformed or partial configuration"
+  ],
+  "missing": [],
+  "helperModulesIncluded": 1,
+  "priorAssertingChecks": 2129,
+  "currentAssertingChecks": 2145
+}
