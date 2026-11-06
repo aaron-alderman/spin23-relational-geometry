@@ -19,6 +19,14 @@ An unchanged destination is an observation. It does not establish that the relat
 
 An identity mapping can legitimately resolve to the same value for multiple identities. Conversely, four different images do not establish that the destination content carries those identities.
 
+## Threads and Map journeys
+
+Each identity has explicit, shareable routes under `/worlds/{identity}/`: a homepage, three authored reading threads, a Map with identity-specific framing and highlighted recommendations, a Questions destination, and contextual versions of all forty readings. The perspective travels in ordinary links, without relying on browser storage. The cross updates both entrance and header navigation.
+
+The four Maps deliberately share the original forty-place terrain and coordinates. Each has its own introductory artwork, copy and recommended places. Reading text, sources and underlying visited-place identities remain shared; identity adds a reading prompt and return navigation. Marked links offer an explicit exit to the shared corpus or shared reading.
+
+The algebra-owned `identity.journey.rebase` query resolves internal URLs through the existing generic URL mechanism and preserves query strings, fragments and external destinations. `identity.journey.check` checks generated destination bytes. `assurance/identity-journeys.json` records content, artwork, links, homepage/Questions returns and all forty contextual readings for each identity. The Threads and Map assurance rows require that downstream evidence as well as their source fields and cross writers. A wired entrance alone cannot close these two rows.
+
 ## Authority and reproduction
 
 Canonical declarations are `IdentityAssuranceMapping` facts in [source/hierarchy.rel](../../applications/aaronalderman-hierarchy/source/hierarchy.rel). The `identity.assurance.classify` and `identity.assurance.build` queries in [algebra/publication.process.json](../../applications/aaronalderman-hierarchy/algebra/publication.process.json) own classification and report composition. The application catalogue is [source/hierarchy.json](../../applications/aaronalderman-hierarchy/source/hierarchy.json).
