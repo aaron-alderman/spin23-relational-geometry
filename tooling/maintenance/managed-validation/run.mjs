@@ -12,8 +12,9 @@ import {qualificationProfile,adaptQualificationRecipe,verifyAdditionalTestReport
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'../../..'),base=join(root,'.platform-reconstitution'),source=join(base,'sourcery-platform-reconciled'),sha=b=>createHash('sha256').update(b).digest('hex'),read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
 const settings=qualificationProfile(await read(new URL('./profile.json',import.meta.url)),root),profile=settings.engine;
-const args=process.argv.slice(2);if(args.some(a=>!['--check','--help'].includes(a)))throw Error('Supported options: --check, --help');
-if(args.includes('--help')){console.log('Run pinned assembly, Claimipedia and both isolated bootstraps with disposable workspaces. --check validates the profile without allocating scratch.');process.exit(0);}
+const args=process.argv.slice(2);if(args.some(a=>!['--check','--help','--source-only'].includes(a)))throw Error('Supported options: --check, --help, --source-only');
+if(args.includes('--source-only')&&args.includes('--check'))throw Error('Source-only and metadata-only checks are separate modes');
+if(args.includes('--help')){console.log('Run pinned assembly, Claimipedia and both isolated bootstraps with disposable workspaces. --check validates the profile without allocating scratch; --source-only executes explicitly counted source suites under the same storage/process lifecycle.');process.exit(0);}
 process.chdir(root);
 const pins=await read(join(settings.inputs,'pins.json')),manifest=await read(join(settings.inputs,'bootstrap-inputs.json'));
 for(const repo of manifest.repositories){const dir=join(base,repo.directory),git=a=>execFileSync('git',['-c','safe.directory='+dir,'-C',dir,...a],{maxBuffer:16*2**20});assert.equal(git(['rev-parse','HEAD']).toString().trim(),repo.commit,'Pinned owner changed; qualify a new profile explicitly');assert.equal(git(['status','--porcelain=v1']).toString(),repo.status,'Pinned owner working state changed');assert.equal(sha(readFileSync(repo.bundle)),repo.bundleSha256,'Retained bundle changed');}
@@ -22,11 +23,18 @@ assert.equal((await read(join(source,'assurance/runtime-module-catalogue.json'))
 for(const kind of ['node','git'])assert.equal(sha(readFileSync(manifest[kind+'Executable'])),manifest[kind+'ExecutableSha256']);
 if(args.includes('--check')){console.log(JSON.stringify({profile,inputProfile:settings.inputs,source:pins.platform,artifactSuites:settings.artifactSuites,artifactChecks:settings.artifactChecks,bootstrapStages:settings.bootstrapStages,valid:true,scratchAllocated:false}));process.exit(0);}
 
+if(args.includes('--source-only')){for(const key of ['platform','algebra','policy'])if(!Number.isSafeInteger(settings.sourceChecks?.[key])||settings.sourceChecks[key]<1)throw Error('Explicit source check counts required');}
 const controller=new AbortController(),interrupt=()=>controller.abort(Error('Validation interrupted'));process.on('SIGINT',interrupt);process.on('SIGTERM',interrupt);
 const environment={...process.env,GIT_CONFIG_COUNT:'1',GIT_CONFIG_KEY_0:'safe.directory',GIT_CONFIG_VALUE_0:'*'};delete environment.SOURCERY_RECONCILIATION_REUSE_TARGET;delete environment.SOURCERY_RECONCILIATION_COMPOSER;delete environment.NODE_TEST_CONTEXT;
 const recipes=['assemble-reconciled.cjs','verify-reconciled-runtime.mjs','prepare-claimipedia-assembly.cjs','prepare-platform-proxy.cjs','verify-prior-contracts.cjs','verify-assembly-consumers.cjs','verify-assembled-runtime.cjs','verify-semantic-projection.cjs','verify-input-hash-guard.cjs','record-browser-deferment.cjs'];
 try{
  const result=await withManagedWorkspace({root:join(base,'managed-validation')},async lease=>{
+  if(args.includes('--source-only')){
+   const jobs=[['source-platform',source,['--experimental-vm-modules','--test','--test-concurrency=2','test/*.test.mjs'],settings.sourceChecks.platform],['source-algebra',join(base,'expression-algebra'),['--test','--test-concurrency=2','test/*.test.mjs'],settings.sourceChecks.algebra],['source-policy',root,['--test','--test-concurrency=2',...['sdk/plugins/core/semantic-mutation-policy.test.mjs','sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs','sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs','test/assurance-observation-input.mjs'].map(path=>'.platform-reconstitution/sourcery-platform-reconciled/'+path)],settings.sourceChecks.policy]],phases=[];
+   for(const [name,cwd,args,expected]of jobs){console.log(JSON.stringify({phase:name,scope:'source-only'}));phases.push(await runCommand(lease,{name,args,cwd,env:environment,signal:controller.signal}));verifyAdditionalTestReport(await fs.readFile(join(lease.receipts,name+'.log'),'utf8'),expected);await lease.checkBudget();}
+   let files=0;for(const owner of manifest.repositories){const repository=join(base,owner.directory),state=execFileSync('git',['-c','safe.directory='+repository,'-C',repository,'status','--porcelain=v1'],{encoding:'utf8'});assert.equal(state,owner.status);for(const row of owner.files){assert.equal(sha(await fs.readFile(join(repository,row.path))),row.sha256,'Source bytes changed during checks');files++;}}
+   const summary={scope:'source-only',source:pins.platform,owners:manifest.repositories.map(row=>({directory:row.directory,commit:row.commit})),counts:settings.sourceChecks,verifiedSourceFiles:files,phases,passed:true,integratedQualification:false};await fs.writeFile(join(lease.receipts,'source-checks.json'),JSON.stringify(summary,null,2)+'\n');return summary;
+  }
   const phases=[],recipeInputs=[];let bodyFailure;
   const save=async(name,value)=>fs.writeFile(join(lease.receipts,name),JSON.stringify(value,null,2)+'\n');
   const collect=async()=>{for(const name of await fs.readdir(lease.harness)){if(/\.(json|txt)$/u.test(name))await fs.copyFile(join(lease.harness,name),join(lease.receipts,name));}};

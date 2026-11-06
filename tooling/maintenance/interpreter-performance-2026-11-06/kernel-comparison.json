@@ -1,0 +1,123 @@
+{
+  "observedAt": "2026-11-06T05:10:46.871Z",
+  "scope": "Interleaved same-process native-realm pinned kernel comparison, fixed clock, no I/O. Seven samples per side with exact same repository inputs and identity checks. This is a helper microbenchmark, not end-to-end latency.",
+  "rows": [
+    {
+      "sessions": 0,
+      "iterationsPerSample": 100,
+      "nanoseconds": {
+        "previous": [
+          179187,
+          141977,
+          138267,
+          129771,
+          131872,
+          136734,
+          123192
+        ],
+        "current": [
+          57415,
+          48852,
+          41631,
+          39537,
+          44068,
+          43480,
+          37066
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 136734,
+        "current": 43480
+      },
+      "speedup": 3.14475620975161
+    },
+    {
+      "sessions": 1,
+      "iterationsPerSample": 50,
+      "nanoseconds": {
+        "previous": [
+          288486,
+          299808,
+          286872,
+          296106,
+          294208,
+          316936,
+          285552
+        ],
+        "current": [
+          77952,
+          62962,
+          71208,
+          67356,
+          67014,
+          79412,
+          66846
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 294208,
+        "current": 67356
+      },
+      "speedup": 4.367955341766138
+    },
+    {
+      "sessions": 10,
+      "iterationsPerSample": 9,
+      "nanoseconds": {
+        "previous": [
+          1678300,
+          1744655.5555555555,
+          1651711.111111111,
+          1634022.2222222222,
+          1661344.4444444445,
+          1812088.888888889,
+          1626311.111111111
+        ],
+        "current": [
+          363711.1111111111,
+          299533.3333333333,
+          339555.55555555556,
+          337766.6666666667,
+          312122.22222222225,
+          332533.3333333333,
+          324211.1111111111
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 1661344.4444444445,
+        "current": 332533.3333333333
+      },
+      "speedup": 4.996023790430367
+    },
+    {
+      "sessions": 100,
+      "iterationsPerSample": 5,
+      "nanoseconds": {
+        "previous": [
+          15510500,
+          15052800,
+          15480160,
+          15228200,
+          15302980,
+          15149900,
+          15203360
+        ],
+        "current": [
+          2870660,
+          2745420,
+          2672000,
+          2953960,
+          2687500,
+          2659900,
+          2681560
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 15228200,
+        "current": 2687500
+      },
+      "speedup": 5.6663069767441865
+    }
+  ],
+  "sink": 5080
+}

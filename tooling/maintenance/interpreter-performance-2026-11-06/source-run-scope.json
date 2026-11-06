@@ -1,0 +1,41 @@
+{
+  "source": "dbff8b84571384570ce5dc54cf74fbbd07e4e1d0",
+  "combinedChecks": 2347,
+  "combinedAssertingChecks": 2346,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "--test-concurrency=2",
+        "test/*.test.mjs"
+      ],
+      "environment": {
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "safe.directory",
+        "GIT_CONFIG_VALUE_0": "*"
+      },
+      "checks": 2336
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=2",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/core/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/test/assurance-observation-input.mjs"
+      ],
+      "checks": 11
+    }
+  ],
+  "scope": "Managed source-only execution of platform and supplemental policy suites, combined by exact assertion title and multiplicity. Separately the same managed lease executes all 111 algebra library checks. The 23 added platform checks include 12 imported prepared-expression controls, ten protocol groups and one complete-library delegation; repeated library runs are not independent evidence. Every predecessor assertion must be preserved.",
+  "receipt": "source-assertion-preservation.json"
+}

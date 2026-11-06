@@ -1,0 +1,111 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "predecessor": "8a20b15b878a3c7793dce164db51f6219ad09e91",
+  "operation": "In-memory repository get including pruning of all live sessions, fixed clock and no I/O",
+  "samplesPerCase": 5,
+  "concurrentManagedBootstrap": true,
+  "scope": "Same-process interleaved observational microbenchmark. Source bodies are exact with a VM-only private factory export and explicitly current transitive dependencies. No end-to-end latency or statistical isolation claim.",
+  "rows": [
+    {
+      "sessions": 0,
+      "iterationsPerSample": 100,
+      "nanosecondsPerGet": {
+        "previous": [
+          320,
+          223,
+          192,
+          130,
+          386
+        ],
+        "current": [
+          64459,
+          55045,
+          51914,
+          42062,
+          49349
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 223,
+        "current": 51914
+      },
+      "medianRatio": 232.7982062780269
+    },
+    {
+      "sessions": 1,
+      "iterationsPerSample": 50,
+      "nanosecondsPerGet": {
+        "previous": [
+          2090,
+          1414,
+          1320,
+          942,
+          1732
+        ],
+        "current": [
+          87016,
+          149924,
+          110636,
+          68672,
+          78614
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 1414,
+        "current": 87016
+      },
+      "medianRatio": 61.53889674681754
+    },
+    {
+      "sessions": 10,
+      "iterationsPerSample": 9,
+      "nanosecondsPerGet": {
+        "previous": [
+          5000,
+          4055.5555555555557,
+          3622.222222222222,
+          4266.666666666667,
+          3755.5555555555557
+        ],
+        "current": [
+          316055.55555555556,
+          317888.8888888889,
+          305655.55555555556,
+          349444.44444444444,
+          336044.44444444444
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 4055.5555555555557,
+        "current": 317888.8888888889
+      },
+      "medianRatio": 78.3835616438356
+    },
+    {
+      "sessions": 100,
+      "iterationsPerSample": 3,
+      "nanosecondsPerGet": {
+        "previous": [
+          17366.666666666668,
+          19033.333333333332,
+          14900,
+          18666.666666666668,
+          15533.333333333334
+        ],
+        "current": [
+          2685900,
+          2757066.6666666665,
+          2887700,
+          3182833.3333333335,
+          2915566.6666666665
+        ]
+      },
+      "medianNanoseconds": {
+        "previous": 17366.666666666668,
+        "current": 2887700
+      },
+      "medianRatio": 166.27831094049904
+    }
+  ],
+  "sink": 3250
+}

@@ -1,0 +1,1444 @@
+{
+  "protocol": "sourcery/authored-policy.v1",
+  "fields": {
+    "actorType": {
+      "default": "Actor",
+      "check": "nonemptyString"
+    },
+    "rolePredicate": {
+      "default": "role",
+      "check": "nonemptyString"
+    },
+    "globalPermissionPredicate": {
+      "default": "can",
+      "check": "nonemptyString"
+    },
+    "defaultRequestMethod": {
+      "default": "GET",
+      "check": "nonemptyString"
+    },
+    "csrfHeaderName": {
+      "default": "x-rel-csrf-token",
+      "check": "nonemptyString"
+    }
+  },
+  "expressions": {
+    "profile": "sourcery/expression-reduction-values/1",
+    "roots": {
+      "nonemptyString": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "typeOf",
+                "value": {
+                  "kind": "input",
+                  "surface": "value"
+                }
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "string"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "lessThan",
+              "left": {
+                "kind": "typedLiteral",
+                "valueType": "number",
+                "value": "0"
+              },
+              "right": {
+                "kind": "length",
+                "value": {
+                  "kind": "input",
+                  "surface": "value"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "uniqueResourcePolicy": {
+        "kind": "if",
+        "condition": {
+          "kind": "lessThan",
+          "left": {
+            "kind": "length",
+            "value": {
+              "kind": "input",
+              "surface": "policies"
+            }
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "number",
+            "value": "2"
+          }
+        },
+        "then": {
+          "kind": "if",
+          "condition": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "length",
+              "value": {
+                "kind": "input",
+                "surface": "policies"
+              }
+            },
+            "right": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "0"
+            }
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          },
+          "else": {
+            "kind": "get",
+            "object": {
+              "kind": "input",
+              "surface": "policies"
+            },
+            "key": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "0"
+            }
+          }
+        },
+        "else": {
+          "kind": "raise",
+          "errorType": "TypeError",
+          "errorCode": "ambiguous-resource-permission-policy",
+          "message": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "Multiple ResourcePermissionPolicy subjects apply to one resource."
+          }
+        }
+      },
+      "uniqueResourceMode": {
+        "kind": "if",
+        "condition": {
+          "kind": "strictEq",
+          "left": {
+            "kind": "length",
+            "value": {
+              "kind": "input",
+              "surface": "modes"
+            }
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "number",
+            "value": "1"
+          }
+        },
+        "then": {
+          "kind": "get",
+          "object": {
+            "kind": "input",
+            "surface": "modes"
+          },
+          "key": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "0"
+          }
+        },
+        "else": {
+          "kind": "raise",
+          "errorType": "TypeError",
+          "errorCode": "ambiguous-resource-permission-mode",
+          "message": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "ResourcePermissionPolicy requires exactly one active mode."
+          }
+        }
+      },
+      "uniqueOptionalGrantField": {
+        "kind": "if",
+        "condition": {
+          "kind": "lessThan",
+          "left": {
+            "kind": "length",
+            "value": {
+              "kind": "input",
+              "surface": "values"
+            }
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "number",
+            "value": "2"
+          }
+        },
+        "then": {
+          "kind": "if",
+          "condition": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "length",
+              "value": {
+                "kind": "input",
+                "surface": "values"
+              }
+            },
+            "right": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "0"
+            }
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          },
+          "else": {
+            "kind": "get",
+            "object": {
+              "kind": "input",
+              "surface": "values"
+            },
+            "key": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "0"
+            }
+          }
+        },
+        "else": {
+          "kind": "raise",
+          "errorType": "TypeError",
+          "errorCode": "ambiguous-resource-permission-grant",
+          "message": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "Scoped permission grant fields must have at most one active value."
+          }
+        }
+      },
+      "resourceMode": {
+        "kind": "if",
+        "condition": {
+          "kind": "includes",
+          "value": {
+            "kind": "list",
+            "entries": [
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "inherit"
+                }
+              },
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "extend"
+                }
+              },
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "scoped"
+                }
+              }
+            ]
+          },
+          "search": {
+            "kind": "input",
+            "surface": "mode"
+          }
+        },
+        "then": {
+          "kind": "input",
+          "surface": "mode"
+        },
+        "else": {
+          "kind": "raise",
+          "errorType": "TypeError",
+          "errorCode": "invalid-resource-permission-mode",
+          "message": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "ResourcePermissionPolicy mode must be inherit, extend or scoped."
+          }
+        }
+      },
+      "permissionNeedsScoped": {
+        "kind": "if",
+        "condition": {
+          "kind": "strictEq",
+          "left": {
+            "kind": "input",
+            "surface": "mode"
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "boolean",
+          "value": "false"
+        },
+        "else": {
+          "kind": "if",
+          "condition": {
+            "kind": "includes",
+            "value": {
+              "kind": "list",
+              "entries": [
+                {
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "inherit"
+                  }
+                },
+                {
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "extend"
+                  }
+                },
+                {
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "scoped"
+                  }
+                }
+              ]
+            },
+            "search": {
+              "kind": "input",
+              "surface": "mode"
+            }
+          },
+          "then": {
+            "kind": "if",
+            "condition": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "mode"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "inherit"
+              }
+            },
+            "then": {
+              "kind": "typedLiteral",
+              "valueType": "boolean",
+              "value": "false"
+            },
+            "else": {
+              "kind": "typedLiteral",
+              "valueType": "boolean",
+              "value": "true"
+            }
+          },
+          "else": {
+            "kind": "raise",
+            "errorType": "TypeError",
+            "errorCode": "invalid-resource-permission-mode",
+            "message": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "ResourcePermissionPolicy mode must be inherit, extend or scoped."
+            }
+          }
+        }
+      },
+      "resourcePermission": {
+        "kind": "if",
+        "condition": {
+          "kind": "if",
+          "condition": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "input",
+              "surface": "mode"
+            },
+            "right": {
+              "kind": "typedLiteral",
+              "valueType": "null",
+              "value": "null"
+            }
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "boolean",
+            "value": "true"
+          },
+          "else": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "input",
+              "surface": "mode"
+            },
+            "right": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "inherit"
+            }
+          }
+        },
+        "then": {
+          "kind": "input",
+          "surface": "globalAllowed"
+        },
+        "else": {
+          "kind": "if",
+          "condition": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "input",
+              "surface": "mode"
+            },
+            "right": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "extend"
+            }
+          },
+          "then": {
+            "kind": "if",
+            "condition": {
+              "kind": "input",
+              "surface": "globalAllowed"
+            },
+            "then": {
+              "kind": "typedLiteral",
+              "valueType": "boolean",
+              "value": "true"
+            },
+            "else": {
+              "kind": "input",
+              "surface": "scopedAllowed"
+            }
+          },
+          "else": {
+            "kind": "if",
+            "condition": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "mode"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "scoped"
+              }
+            },
+            "then": {
+              "kind": "input",
+              "surface": "scopedAllowed"
+            },
+            "else": {
+              "kind": "raise",
+              "errorType": "TypeError",
+              "errorCode": "invalid-resource-permission-mode",
+              "message": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "ResourcePermissionPolicy mode must be inherit, extend or scoped."
+              }
+            }
+          }
+        }
+      },
+      "permissionSubject": {
+        "kind": "if",
+        "condition": {
+          "kind": "hasOwn",
+          "object": {
+            "kind": "record",
+            "entries": [
+              {
+                "name": "read",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.read"
+                }
+              },
+              {
+                "name": "write",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.write"
+                }
+              },
+              {
+                "name": "execute",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.execute"
+                }
+              },
+              {
+                "name": "overwriteIsa",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.overwriteIsa"
+                }
+              }
+            ]
+          },
+          "key": {
+            "kind": "input",
+            "surface": "permission"
+          }
+        },
+        "then": {
+          "kind": "get",
+          "object": {
+            "kind": "record",
+            "entries": [
+              {
+                "name": "read",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.read"
+                }
+              },
+              {
+                "name": "write",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.write"
+                }
+              },
+              {
+                "name": "execute",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.execute"
+                }
+              },
+              {
+                "name": "overwriteIsa",
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "perm.overwriteIsa"
+                }
+              }
+            ]
+          },
+          "key": {
+            "kind": "input",
+            "surface": "permission"
+          }
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "null",
+          "value": "null"
+        }
+      },
+      "authorityWitnessPredicates": {
+        "kind": "list",
+        "entries": [
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "isa"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "name"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "kind"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "binding"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "reference"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "subject"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "memberIsa"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "includeDerived"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "representation"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "type"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "parentType"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "participant"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "steward"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "principal"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "authority"
+            }
+          },
+          {
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "context"
+            }
+          }
+        ]
+      },
+      "witnessAuthorityPredicate": {
+        "kind": "includes",
+        "value": {
+          "ref": "authorityWitnessPredicates"
+        },
+        "search": {
+          "kind": "input",
+          "surface": "predicate"
+        }
+      },
+      "credentialResult": {
+        "kind": "if",
+        "condition": {
+          "kind": "strictEq",
+          "left": {
+            "kind": "input",
+            "surface": "credential"
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "null",
+          "value": "null"
+        },
+        "else": {
+          "kind": "if",
+          "condition": {
+            "kind": "strictEq",
+            "left": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "credential"
+              },
+              "field": "secret"
+            },
+            "right": {
+              "kind": "input",
+              "surface": "secret"
+            }
+          },
+          "then": {
+            "kind": "record",
+            "entries": [
+              {
+                "name": "actor",
+                "value": {
+                  "kind": "field",
+                  "object": {
+                    "kind": "input",
+                    "surface": "credential"
+                  },
+                  "field": "actor"
+                }
+              },
+              {
+                "name": "identifier",
+                "value": {
+                  "kind": "field",
+                  "object": {
+                    "kind": "input",
+                    "surface": "credential"
+                  },
+                  "field": "identifier"
+                }
+              }
+            ]
+          },
+          "else": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          }
+        }
+      },
+      "storedSessionActive": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "createdAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "now"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "lessThan",
+              "left": {
+                "kind": "input",
+                "surface": "now"
+              },
+              "right": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          }
+        ]
+      },
+      "hostSessionNeedsClock": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "present"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "revokedAt"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": ""
+              }
+            }
+          }
+        ]
+      },
+      "hostSessionActive": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "ref": "hostSessionNeedsClock"
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "now"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "lessThan",
+              "left": {
+                "kind": "input",
+                "surface": "now"
+              },
+              "right": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          }
+        ]
+      },
+      "hostIdentityActive": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "present"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "status"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "active"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "principalStatus"
+              },
+              "right": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "active"
+              }
+            }
+          }
+        ]
+      },
+      "hostSessionTouch": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "lastSeenAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "now"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "lessThan",
+                "left": {
+                  "kind": "subtract",
+                  "left": {
+                    "kind": "input",
+                    "surface": "now"
+                  },
+                  "right": {
+                    "kind": "input",
+                    "surface": "intervalMs"
+                  }
+                },
+                "right": {
+                  "kind": "input",
+                  "surface": "lastSeenAt"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          }
+        ]
+      },
+      "forwardedLifetimeValid": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "issuedAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "isFinite",
+              "value": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "lessThan",
+              "left": {
+                "kind": "input",
+                "surface": "issuedAt"
+              },
+              "right": {
+                "kind": "input",
+                "surface": "expiresAt"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "lessThan",
+                "left": {
+                  "kind": "input",
+                  "surface": "maximumTtlMs"
+                },
+                "right": {
+                  "kind": "subtract",
+                  "left": {
+                    "kind": "input",
+                    "surface": "expiresAt"
+                  },
+                  "right": {
+                    "kind": "input",
+                    "surface": "issuedAt"
+                  }
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          }
+        ]
+      },
+      "forwardedNotYetValid": {
+        "kind": "lessThan",
+        "left": {
+          "kind": "add",
+          "left": {
+            "kind": "input",
+            "surface": "now"
+          },
+          "right": {
+            "kind": "input",
+            "surface": "clockSkewMs"
+          }
+        },
+        "right": {
+          "kind": "input",
+          "surface": "issuedAt"
+        }
+      },
+      "forwardedExpired": {
+        "kind": "if",
+        "condition": {
+          "kind": "lessThan",
+          "left": {
+            "kind": "subtract",
+            "left": {
+              "kind": "input",
+              "surface": "now"
+            },
+            "right": {
+              "kind": "input",
+              "surface": "clockSkewMs"
+            }
+          },
+          "right": {
+            "kind": "input",
+            "surface": "expiresAt"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "boolean",
+          "value": "false"
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "boolean",
+          "value": "true"
+        }
+      },
+      "requestIdentityLane": {
+        "kind": "if",
+        "condition": {
+          "kind": "input",
+          "surface": "hasForwardedPrincipal"
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "forwarded"
+        },
+        "else": {
+          "kind": "if",
+          "condition": {
+            "kind": "input",
+            "surface": "forwardingConfigured"
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "anonymous"
+          },
+          "else": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "local"
+          }
+        }
+      },
+      "localIdentityLane": {
+        "kind": "if",
+        "condition": {
+          "kind": "input",
+          "surface": "hasCookieActor"
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "cookie"
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "header"
+        }
+      },
+      "requestMutating": {
+        "kind": "if",
+        "condition": {
+          "kind": "includes",
+          "value": {
+            "kind": "list",
+            "entries": [
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "GET"
+                }
+              },
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "HEAD"
+                }
+              },
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "OPTIONS"
+                }
+              },
+              {
+                "value": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "TRACE"
+                }
+              }
+            ]
+          },
+          "search": {
+            "kind": "input",
+            "surface": "method"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "boolean",
+          "value": "false"
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "boolean",
+          "value": "true"
+        }
+      },
+      "csrfSessionEligible": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "input",
+              "surface": "hasActor"
+            }
+          },
+          {
+            "value": {
+              "kind": "input",
+              "surface": "hasToken"
+            }
+          }
+        ]
+      },
+      "bodyLimits": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "json",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "1048576"
+            }
+          },
+          {
+            "name": "form",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "1048576"
+            }
+          },
+          {
+            "name": "sessionText",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "2097152"
+            }
+          },
+          {
+            "name": "assetUpload",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "26214400"
+            }
+          },
+          {
+            "name": "deployPayload",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "number",
+              "value": "52428800"
+            }
+          }
+        ]
+      },
+      "csrfBodyTokenKind": {
+        "kind": "if",
+        "condition": {
+          "kind": "includes",
+          "value": {
+            "kind": "input",
+            "surface": "contentType"
+          },
+          "search": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "application/json"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "json"
+        },
+        "else": {
+          "kind": "if",
+          "condition": {
+            "kind": "includes",
+            "value": {
+              "kind": "input",
+              "surface": "contentType"
+            },
+            "search": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "application/x-www-form-urlencoded"
+            }
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "form"
+          },
+          "else": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "none"
+          }
+        }
+      },
+      "csrfNeedsBody": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "input",
+                "surface": "hasToken"
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "input",
+                  "surface": "bodyTokenKind"
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "none"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          }
+        ]
+      },
+      "csrfBodyLimitName": {
+        "kind": "if",
+        "condition": {
+          "kind": "strictEq",
+          "left": {
+            "kind": "input",
+            "surface": "routeAs"
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "sessionWrite"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "sessionText"
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "json"
+        }
+      },
+      "csrfFailure": {
+        "kind": "if",
+        "condition": {
+          "kind": "input",
+          "surface": "hasToken"
+        },
+        "then": {
+          "kind": "if",
+          "condition": {
+            "kind": "input",
+            "surface": "matches"
+          },
+          "then": {
+            "kind": "typedLiteral",
+            "valueType": "null",
+            "value": "null"
+          },
+          "else": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "csrf-token-invalid"
+          }
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "csrf-token-missing"
+        }
+      },
+      "csrfFailureMessage": {
+        "kind": "if",
+        "condition": {
+          "kind": "strictEq",
+          "left": {
+            "kind": "input",
+            "surface": "code"
+          },
+          "right": {
+            "kind": "typedLiteral",
+            "valueType": "string",
+            "value": "csrf-token-invalid"
+          }
+        },
+        "then": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "CSRF token is invalid for the authenticated session."
+        },
+        "else": {
+          "kind": "typedLiteral",
+          "valueType": "string",
+          "value": "CSRF token is required for cookie-authenticated mutations."
+        }
+      }
+    }
+  }
+}

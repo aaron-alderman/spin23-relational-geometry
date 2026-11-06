@@ -1,0 +1,90 @@
+{
+  "scope": "source-only",
+  "source": "dbff8b84571384570ce5dc54cf74fbbd07e4e1d0",
+  "owners": [
+    {
+      "directory": "expression-algebra",
+      "commit": "bfe9649ddcfcba6ce45ad4326b61aadea569aab0"
+    },
+    {
+      "directory": "sourcery-platform-reconciled",
+      "commit": "dbff8b84571384570ce5dc54cf74fbbd07e4e1d0"
+    },
+    {
+      "directory": "claimipedia-core",
+      "commit": "6db7e2281df108eb3883160a4544c69bea951298"
+    },
+    {
+      "directory": "epistemic-core",
+      "commit": "9e5f44d243079ad7e49d26d2e5a2c4b09ab48828"
+    },
+    {
+      "directory": "claimipedia-science",
+      "commit": "dfc997a19ad77f3fcd825ffeb16106cecb9031eb"
+    },
+    {
+      "directory": "science-programme",
+      "commit": "7c61fe98b9e36be62a642a2fc145774041531885"
+    },
+    {
+      "directory": "qualification-runner",
+      "commit": "161a6d47172d38a659a3766d04c4a6fe86427994"
+    },
+    {
+      "directory": "git-receiving",
+      "commit": "fa6bb2621c9efe527ff668b31522ddd00fa4fe0c"
+    },
+    {
+      "directory": "frontier-physics-programme",
+      "commit": "609495b5ffa1c9c87fee8f089901b87ed5f9232f"
+    },
+    {
+      "directory": "claimipedia",
+      "commit": "ac2c854918a1c76b867cc64de477518b2ca67840"
+    }
+  ],
+  "counts": {
+    "platform": 2336,
+    "algebra": 111,
+    "policy": 11
+  },
+  "verifiedSourceFiles": 9161,
+  "phases": [
+    {
+      "name": "source-platform",
+      "args": [
+        "--experimental-vm-modules",
+        "--test",
+        "--test-concurrency=2",
+        "test/*.test.mjs"
+      ],
+      "code": 0,
+      "logBytes": 193165
+    },
+    {
+      "name": "source-algebra",
+      "args": [
+        "--test",
+        "--test-concurrency=2",
+        "test/*.test.mjs"
+      ],
+      "code": 0,
+      "logBytes": 10238
+    },
+    {
+      "name": "source-policy",
+      "args": [
+        "--test",
+        "--test-concurrency=2",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/core/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/test/assurance-observation-input.mjs"
+      ],
+      "code": 0,
+      "logBytes": 991
+    }
+  ],
+  "passed": true,
+  "integratedQualification": false
+}

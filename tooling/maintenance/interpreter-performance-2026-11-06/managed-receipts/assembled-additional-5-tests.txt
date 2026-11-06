@@ -1,0 +1,51 @@
+(node:35368) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ resource capabilities are admitted before acquisition (1.4915ms)
+✔ acquisition faults never dispose an unacquired resource (0.2368ms)
+✔ failed initialization disposes before preserving every exact primary fault (0.8924ms)
+✔ construction compound faults retain a retry capability without enumerable resource disclosure (0.308ms)
+✔ normal ownership transfer prepares and disposes once; repeated close is inert (0.2265ms)
+✔ shutdown preparation faults cannot prevent disposal, including falsy faults (0.2135ms)
+✔ failed disposal remains retryable without repeating preparation (0.1947ms)
+✔ compound shutdown faults preserve ordering and release uncertainty (0.1856ms)
+✔ reentrant shutdown refuses while still completing the outer disposal (0.1955ms)
+✔ initializers can close an owned resource without accidentally reopening its state (0.1959ms)
+✔ the same ownership mechanism releases a cache lease without altering other entries (0.2222ms)
+✔ the same mechanism removes event subscriptions when setup fails or shutdown preparation throws (0.2517ms)
+✔ real SQLite initialization faults close the acquired handle and preserve all falsy faults (229.0093ms)
+✔ the retained predecessor confirms initialization left the SQLite handle open (3.7247ms)
+✔ later migration and CSRF setup failures also release the acquired database (60.2939ms)
+✔ clock failure after database acquisition closes the handle without replacing the fault (15.4905ms)
+✔ CSRF statement preparation precedes entropy and wins simultaneous fault precedence (34.7478ms)
+✔ real SQLite construction compound failures expose a working cleanup retry (4.0259ms)
+✔ checkpoint failure still closes SQLite and preserves the exact shutdown fault (22.3956ms)
+✔ the retained predecessor confirms checkpoint failure prevented SQLite close (17.6114ms)
+✔ successful SQLite shutdown is idempotent (20.063ms)
+✔ initialization admits own callable capabilities before any SQLite property access (0.2364ms)
+✔ unknown or operation-mismatched SQL names refuse before preparing or executing (0.3869ms)
+✔ invalid transaction callbacks refuse before BEGIN (0.5587ms)
+✔ transactions commit values and preserve opaque Promise result identity synchronously (20.9742ms)
+✔ operation faults roll back real SQLite mutations and preserve every exact fault (130.0823ms)
+✔ commit faults roll back mutations before propagating the exact fault (21.5729ms)
+✔ rollback failure quarantines the connection, closes it and preserves the primary fault (22.228ms)
+✔ failed quarantine disposal remains denied and can be retried through the resource owner (20.4876ms)
+✔ all 44 authored SQL strings retain their predecessor identities (0.4889ms)
+✔ initialization, login, session claims and logout preserve predecessor observable order (66.9584ms)
+✔ audit limit coercion remains after statement and method lookup (39.5781ms)
+✔ authored entropy parameters change actual SQLite runtime effects without changing mechanisms (73.2775ms)
+✔ late disposal refuses a session claim that the retained predecessor returned after close (56.5382ms)
+✔ pure continuations execute a non-auth counter using only canonical expressions (1.1393ms)
+✔ pure continuations cannot cross the entry continuation boundary (0.9463ms)
+✔ pure continuation loops consume the authored step budget (0.8521ms)
+✔ continuation accessor state refuses without invoking its getter (0.6478ms)
+✔ authored retention changes actual pruning boundaries without changing host code (70.8704ms)
+✔ prepared capabilities bind the original event receiver and reject foreign-scope tokens (0.3031ms)
+✔ prepared capabilities recheck current epoch admission before every effect (0.166ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 41
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1234.7955
