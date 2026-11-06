@@ -19,6 +19,25 @@ An unchanged destination is an observation. It does not establish that the relat
 
 An identity mapping can legitimately resolve to the same value for multiple identities. Conversely, four different images do not establish that the destination content carries those identities.
 
+## The eight reviewed relationships
+
+| Relationship | Decision | Scope and reason |
+| --- | --- | --- |
+| Shared tools and perspective changes | Intentionally invariant | Workshop and full-screen reader destinations and explicit exit wording are shared. Local journey returns remain identity-mapped, and role choices enter explicit identity URLs. |
+| Sharing metadata | Identity-mapped | Canonical identity URLs describe their own title, description and artwork. The cross updates selected-world metadata and a native link to that world's shareable address. |
+| Structural labels and directory | Intentionally invariant | Stable section labels and complete-directory wording orient the reader. Curated headings, introductions, membership and order remain identity-mapped. |
+| Purpose colours and braid interaction | Intentionally invariant | Purpose selects the pigment. A shared fine braid and finite hover/focus glisten compose with identity surfaces, with reduced-motion and forced-colour behaviour. |
+| Display typography | Identity-mapped | Each world declares a heading font stack. Prose and brand typography remain shared; installed fallback fonts are outside this structural guarantee. |
+| Semantic brief, palette and artwork assignment | Identity-mapped | The brief and visual assignments belong to each identity. Their presence and bindings can be verified; semantic or visual fitness still requires human judgment. |
+| Common footer | Intentionally invariant | Signature, personal statement and external/stewardship destinations are shared within each page family. Compact Map layout and identity-specific return URLs are separately scoped. |
+| Questions article | Identity-mapped | The leading question, article, illustration, daylight palette and reflection destinations belong to the selected identity. |
+
+These are scoped editorial decisions, not deductions from equal outputs. The algebra reads generated HTML and scoped CSS and retains missing fragments. Declared intent, structural verification and human semantic review remain distinct fields in the report. A declaration without complete evidence for all four identities stays missing.
+
+The Author Questions mismatch was a real counterexample: its active Questions palette and illustration were lavender while its larger world was evergreen and parchment gold. The active REL palette now uses sage daylight surfaces and forest-green actions, and the hero selects the existing evergreen manuscript illustration. Questions and catalogue surfaces consume the same identity palette; the stylesheet version follows the common publication token. Daylight eyebrow text consumes the darker Questions accent rather than the pale accent intended for dark pages. Original image-generation receipts remain historical provenance, while active colours and artwork assignments are owned by REL facts and checked separately.
+
+The decision evidence is published as `assurance/identity-decisions.json`. Negative checks reintroduce the lavender paper token or predecessor illustration, replace a contextual Questions canonical URL with its legacy alias, remove a world's evidence and contradict the declared decision type. These must produce failed verification rather than a green status. Resolving the semantic mapping does not discharge the report's human-review obligation.
+
 ## Threads and Map journeys
 
 Each identity has explicit, shareable routes under `/worlds/{identity}/`: a homepage, three authored reading threads, a Map with identity-specific framing and highlighted recommendations, a Questions destination, and contextual versions of all forty readings. The perspective travels in ordinary links, without relying on browser storage. The cross updates both entrance and header navigation.
