@@ -1,0 +1,30 @@
+{
+  "source": "8a20b15b878a3c7793dce164db51f6219ad09e91",
+  "combinedChecks": 2286,
+  "combinedAssertingChecks": 2285,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "test/*.test.mjs"
+      ],
+      "environment": {
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "safe.directory",
+        "GIT_CONFIG_VALUE_0": "*"
+      },
+      "checks": 2275
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "checks": 11
+    }
+  ],
+  "scope": "Two actual executions combined by exact assertion title/multiplicity; every predecessor assertion remains required.",
+  "receipt": "source-assertion-preservation.json"
+}

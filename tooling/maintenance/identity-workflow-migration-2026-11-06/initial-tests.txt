@@ -1,0 +1,78 @@
+(node:27124) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ resource capabilities are admitted before acquisition (1.5703ms)
+✔ acquisition faults never dispose an unacquired resource (0.2696ms)
+✔ failed initialization disposes before preserving every exact primary fault (0.9323ms)
+✔ construction compound faults retain a retry capability without enumerable resource disclosure (0.3324ms)
+✔ normal ownership transfer prepares and disposes once; repeated close is inert (0.2638ms)
+✔ shutdown preparation faults cannot prevent disposal, including falsy faults (0.2772ms)
+✔ failed disposal remains retryable without repeating preparation (0.2195ms)
+✔ compound shutdown faults preserve ordering and release uncertainty (0.2257ms)
+✔ reentrant shutdown refuses while still completing the outer disposal (0.2055ms)
+✔ initializers can close an owned resource without accidentally reopening its state (0.2143ms)
+✔ the same ownership mechanism releases a cache lease without altering other entries (0.4748ms)
+✔ the same mechanism removes event subscriptions when setup fails or shutdown preparation throws (0.3584ms)
+✔ real SQLite initialization faults close the acquired handle and preserve all falsy faults (350.1728ms)
+✔ the retained predecessor confirms initialization left the SQLite handle open (33.7273ms)
+✔ later migration and CSRF setup failures also release the acquired database (65.7279ms)
+✔ clock failure after database acquisition closes the handle without replacing the fault (24.8065ms)
+✔ CSRF statement preparation precedes entropy and wins simultaneous fault precedence (51.372ms)
+✔ real SQLite construction compound failures expose a working cleanup retry (4.3251ms)
+✔ checkpoint failure still closes SQLite and preserves the exact shutdown fault (29.1799ms)
+✔ the retained predecessor confirms checkpoint failure prevented SQLite close (20.3781ms)
+✔ successful SQLite shutdown is idempotent (23.1835ms)
+✔ initialization admits own callable capabilities before any SQLite property access (0.2182ms)
+✔ unknown or operation-mismatched SQL names refuse before preparing or executing (0.3341ms)
+✔ invalid transaction callbacks refuse before BEGIN (0.4606ms)
+✔ transactions commit values and preserve opaque Promise result identity synchronously (24.2702ms)
+✔ operation faults roll back real SQLite mutations and preserve every exact fault (143.3072ms)
+✔ commit faults roll back mutations before propagating the exact fault (21.6972ms)
+✔ rollback failure quarantines the connection, closes it and preserves the primary fault (32.7552ms)
+✔ failed quarantine disposal remains denied and can be retried through the resource owner (20.6713ms)
+✔ all 44 authored SQL strings retain their predecessor identities (0.4611ms)
+✔ initialization, login, session claims and logout preserve predecessor observable order (74.2079ms)
+✔ audit limit coercion remains after statement and method lookup (42.108ms)
+✖ authored entropy parameters change actual SQLite runtime effects without changing mechanisms (85.8752ms)
+✔ late disposal refuses a session claim that the retained predecessor returned after close (58.955ms)
+✔ pure continuations execute a non-auth counter using only canonical expressions (1.0734ms)
+✔ pure continuations cannot cross the entry continuation boundary (0.8898ms)
+✔ pure continuation loops consume the authored step budget (0.7886ms)
+✔ continuation accessor state refuses without invoking its getter (0.5819ms)
+✔ authored retention changes actual pruning boundaries without changing host code (69.7025ms)
+✔ prepared capabilities bind the original event receiver and reject foreign-scope tokens (0.3521ms)
+✔ prepared capabilities recheck current epoch admission before every effect (0.1412ms)
+ℹ tests 41
+ℹ suites 0
+ℹ pass 40
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5132.2366
+
+✖ failing tests:
+
+test at test\identity-lifecycle.test.mjs:143:1
+✖ authored entropy parameters change actual SQLite runtime effects without changing mechanisms (85.8752ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      24,
+  +   32,
+  -   40,
+      12
+    ]
+  
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:144:335
+      at async fixture (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:78:12)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-lifecycle.test.mjs:144:172)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [ 24, 32, 12 ],
+    expected: [ 24, 40, 12 ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,18 @@
+{
+  "retainedSource": "34502e9fbf19be78b8c58e4940dd474704f6a946",
+  "retainedPath": "sdk/browser/canvas-schema-compatibility.mjs",
+  "adapterSha256": "c922e33804e72ebf7e889c28b4ec08dce6d72daa432b69abb384fac81d09a92a",
+  "report": "retained-canvas-retraction-controls.txt",
+  "command": "node --experimental-vm-modules --test tooling/maintenance/identity-workflow-migration-2026-11-06/retained-canvas-retraction-controls.test.mjs",
+  "characterizationsPassed": 3,
+  "meaning": "Each pass reproduces a retained adapter defect against current FactStore active queries; these are not passing normative conformance checks.",
+  "counterexamples": [
+    "Retracted CanvasExprArg type remains admitted as typed.",
+    "Retracted semanticColorRole edge still supplies cyan instead of the fallback.",
+    "Retracted role name still matches commandFg and supplies cyan."
+  ],
+  "currentCanvasRuntimeChanged": false,
+  "canonicalSelectionMade": false,
+  "wholePackageComplete": false,
+  "nextAction": "Reconcile the recovered schema and migration contracts while replacing historical-positive scans with the corresponding current active-fact queries. Preserve the exact retained bytes and all existing consumer tests."
+}

@@ -1,0 +1,30 @@
+{
+  "source": "8a20b15b878a3c7793dce164db51f6219ad09e91",
+  "passed": true,
+  "scope": "Specific identity workflow continuation, timing and authority failures exercised by 29 added checks; not complete authentication or generic external-effect admission.",
+  "predecessor": "710ba87766b73defdeb33bd9319338f9336b1938",
+  "reports": [
+    "focused-final-tests.txt",
+    "source-run-scope.json"
+  ],
+  "resolved": [
+    {
+      "issue": "Extra Promise adoption delayed login against competing microtasks",
+      "counterexample": "completion-order-control.txt",
+      "correction": "Native async hosts directly drive the same single-use canonical continuation mechanism."
+    },
+    {
+      "issue": "Logout or session substitution during provider await could still authorize linking",
+      "counterexample": "revoked-continuation-counterexample.txt",
+      "correction": "Fresh post-await CSRF/session check and exact initiating session/identity/principal binding."
+    },
+    {
+      "issue": "Clock callback revocation after post-await admission still allowed a new link",
+      "counterexample": "late-link-revocation-counterexample.txt",
+      "correction": "Exact session and active identity reread inside SQLite transaction after clock callbacks and before insertion.",
+      "correctedProbe": "late-link-revocation-corrected.txt"
+    }
+  ],
+  "wholePackageComplete": false,
+  "scientificAcceptance": false
+}

@@ -1,0 +1,23 @@
+✔ repeated successful and failed runs retain only two passes and one failure, with no materializations (475.0654ms)
+✔ failure cleanup unlinks a Windows junction without touching its external target (66.0213ms)
+✔ unowned pre-existing roots and unleased scratch are refused without deletion (200.4331ms)
+✔ exclusive lease refuses overlapping validation allocations (77.4721ms)
+✔ disk admission and working-byte limits refuse and clean up without leaking copies (134.3861ms)
+✔ receipt quota discards oversized payload and retains an explicit failed disposition (68.3306ms)
+✔ a genuinely killed owner is recovered on the next run, including partial copies (239.7497ms)
+✔ a stale owner with a live tracked child cannot trigger reclamation or another allocation (215.6159ms)
+✔ real subprocess deadlines terminate its descendant writer before scratch cleanup (5302.902ms)
+✔ abort and output quotas terminate commands and remove the allocated workspace (1353.5253ms)
+✔ command arguments preserve spaces, quotes, trailing slashes, empty values and Unicode (1001.012ms)
+✔ scratch release refuses lexical escapes into receipts or the ownership marker (75.3968ms)
+✔ normal command completion closes the Windows job and terminates leftover descendants (1287.2447ms)
+✔ failure to record a newly launched child stops it before releasing the workspace (104.4108ms)
+✔ cancelled child temporary payloads stay inside managed scratch and are reclaimed (1060.5848ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11778.2477

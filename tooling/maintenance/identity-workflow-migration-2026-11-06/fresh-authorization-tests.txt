@@ -1,0 +1,91 @@
+✔ async protocol refuses async entries through the sync API before any effect (6.3815ms)
+✔ async protocol yields only at the authored await and preserves reference async port order (4.439ms)
+✔ async protocol preserves exact synchronous and awaited falsy faults (17.8772ms)
+✔ async protocol stops an aborted continuation after awaiting and before commit (1.873ms)
+✔ async protocol keeps ordinary Promise observations opaque in synchronous entries (1.2969ms)
+✔ async protocol admits execution metadata and await capabilities before their effects (2.4587ms)
+✔ async step observations are single-use and revoked after advancing or closing (1.6057ms)
+✔ async step cancellation is rechecked immediately before the admitted effect (1.1145ms)
+(node:36992) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ identity workflows preserve exact predecessor fixtures without ambient Git metadata (2.6362ms)
+✔ new, unchanged and revised provisioning preserves SQLite traces, values and getter order (271.2284ms)
+✔ provisioning collision, revoked identity and inactive principal retain refusal and rollback order (130.8961ms)
+✔ asynchronous login preserves receiver, provider rotation observation and SQLite effect order (101.4647ms)
+✔ invalid credentials and login lockout preserve failure persistence and diagnostic order (137.2581ms)
+✔ provider synchronous and awaited falsy failures preserve exact rejection identities without session effects (288.2108ms)
+✔ login argument-destructuring failures remain asynchronous rejections before effects (24.4346ms)
+✖ link and unlink preserve successful transaction, session revocation and event traces (147.7371ms)
+✖ relinking an existing identity and unlinking an already revoked link retain idempotent observations (137.2363ms)
+✖ link kind conflicts, collisions and revoked links preserve authored error fields and rollback (136.4871ms)
+✔ unlink missing, unknown, stale and last-active-link refusals preserve order and diagnostics (112.8788ms)
+✔ identity status transitions preserve revisions, session revocation, public projections and traces (108.2828ms)
+✔ invalid status, unknown identity and stale revision preserve exact refusal fields (104.5226ms)
+✔ closure during an awaited provider call refuses before observing the late provider or generating entropy (63.5556ms)
+✔ workflow entry and own-capability admission refuse before owner getters or host effects (0.3678ms)
+✔ login completion retains predecessor ordering against competing microtasks (92.1026ms)
+✔ link authorization is revoked when logout occurs during provider authentication (143.1218ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 22
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2389.899
+
+✖ failing tests:
+
+test at test\identity-workflow.test.mjs:79:1
+✖ link and unlink preserve successful transaction, session revocation and event traces (147.7371ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(added[0][1].includes('FROM host_sessions'))
+  
+      at compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:48:7)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:80:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\identity-workflow.test.mjs:82:1
+✖ relinking an existing identity and unlinking an already revoked link retain idempotent observations (137.2363ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(added[0][1].includes('FROM host_sessions'))
+  
+      at compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:48:7)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:83:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at test\identity-workflow.test.mjs:85:1
+✖ link kind conflicts, collisions and revoked links preserve authored error fields and rollback (136.4871ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(added[0][1].includes('FROM host_sessions'))
+  
+      at compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:48:7)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:86:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

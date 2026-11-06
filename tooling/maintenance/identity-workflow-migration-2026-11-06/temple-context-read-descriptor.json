@@ -1,0 +1,81 @@
+{
+  "observedAt": "2026-11-06T00:49:58.141Z",
+  "readOnly": true,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"protocol\":\"sourcery/mcp-structured-result-summary.v1\",\"operationId\":\"temple_system_describe_operation\",\"bytes\":1047,\"sha256\":\"a9d13107c798e0dd32342042b4c051272c751fdec413e99694a9745eeab0461f\"}"
+      }
+    ],
+    "structuredContent": {
+      "name": "temple_application_context_read",
+      "description": "Read the fixed SQLite-captured Claimipedia operator corpus with exact source identity. Not a live application, public projection, mutation or admission.",
+      "inputSchema": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operation"
+        ],
+        "properties": {
+          "operation": {
+            "enum": [
+              "status",
+              "list",
+              "inspect"
+            ]
+          },
+          "collection": {
+            "enum": [
+              "claims",
+              "claimVersions",
+              "evidence",
+              "relationships",
+              "challenges",
+              "declarationReceipts",
+              "contributions",
+              "contributionReviews",
+              "thirdOrderAudits",
+              "platformIdentities",
+              "attributionRelationships",
+              "perspectives",
+              "coalitions",
+              "memberships",
+              "constitutions",
+              "constitutionVersions",
+              "programs",
+              "programVersions",
+              "programExamples",
+              "evaluations",
+              "metrics",
+              "performancePolicy"
+            ]
+          },
+          "offset": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
+          },
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "expectedSourceHash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "openWorldHint": false
+      }
+    }
+  }
+}

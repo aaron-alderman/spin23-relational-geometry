@@ -1,0 +1,63 @@
+✔ async protocol refuses async entries through the sync API before any effect (6.4486ms)
+✔ async protocol yields only at the authored await and preserves reference async port order (2.5193ms)
+✔ async protocol preserves exact synchronous and awaited falsy faults (15.298ms)
+✔ async protocol stops an aborted continuation after awaiting and before commit (1.7696ms)
+✔ async protocol keeps ordinary Promise observations opaque in synchronous entries (1.2415ms)
+✔ async protocol admits execution metadata and await capabilities before their effects (2.6225ms)
+(node:15552) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ identity workflows preserve exact predecessor fixtures without ambient Git metadata (2.3177ms)
+✔ new, unchanged and revised provisioning preserves SQLite traces, values and getter order (221.8695ms)
+✖ provisioning collision, revoked identity and inactive principal retain refusal and rollback order (59.1936ms)
+✔ asynchronous login preserves receiver, provider rotation observation and SQLite effect order (94.4353ms)
+✔ invalid credentials and login lockout preserve failure persistence and diagnostic order (126.5325ms)
+✔ provider synchronous and awaited falsy failures preserve exact rejection identities without session effects (259.6948ms)
+✔ login argument-destructuring failures remain asynchronous rejections before effects (21.6937ms)
+✔ link and unlink preserve successful transaction, session revocation and event traces (112.2566ms)
+✔ relinking an existing identity and unlinking an already revoked link retain idempotent observations (124.4746ms)
+✖ link kind conflicts, collisions and revoked links preserve authored error fields and rollback (84.1052ms)
+✔ unlink missing, unknown, stale and last-active-link refusals preserve order and diagnostics (102.4985ms)
+✔ identity status transitions preserve revisions, session revocation, public projections and traces (102.0159ms)
+✔ invalid status, unknown identity and stale revision preserve exact refusal fields (105.9938ms)
+✔ closure during an awaited provider call refuses before observing the late provider or generating entropy (56.4231ms)
+✔ workflow entry and own-capability admission refuse before owner getters or host effects (0.2653ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 19
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1821.6616
+
+✖ failing tests:
+
+test at test\identity-workflow.test.mjs:49:1
+✖ provisioning collision, revoked identity and inactive principal retain refusal and rollback order (59.1936ms)
+  Error: no such column: identityId
+      at TrackingDatabase.prepare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:25:68)
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:50:193
+      at async fixture (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:33:12)
+      at async compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:40:89)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:50:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 1,
+    errstr: 'SQL logic error'
+  }
+
+test at test\identity-workflow.test.mjs:70:1
+✖ link kind conflicts, collisions and revoked links preserve authored error fields and rollback (84.1052ms)
+  Error: no such column: platformPrincipalId
+      at TrackingDatabase.prepare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:25:68)
+      at file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:71:435
+      at async fixture (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:33:12)
+      at async compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:40:89)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:71:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    code: 'ERR_SQLITE_ERROR',
+    errcode: 1,
+    errstr: 'SQL logic error'
+  }

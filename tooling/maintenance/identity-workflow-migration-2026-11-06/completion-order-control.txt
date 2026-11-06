@@ -1,0 +1,51 @@
+(node:30872) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✖ login completion retains predecessor ordering against competing microtasks (236.2375ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 550.0106
+
+✖ failing tests:
+
+test at test\identity-workflow.test.mjs:88:1
+✖ login completion retains predecessor ordering against competing microtasks (236.2375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    [
+      'tick0',
+  +   'tick1',
+      'login',
+  -   'tick1',
+      'tick2',
+      'tick3',
+      'tick4',
+      'tick5',
+      'tick6'
+  
+      at compare (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:40:126)
+      at async TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/.platform-reconstitution/sourcery-platform-reconciled/test/identity-workflow.test.mjs:89:3)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [
+      'tick0', 'tick1',
+      'login', 'tick2',
+      'tick3', 'tick4',
+      'tick5', 'tick6'
+    ],
+    expected: [
+      'tick0', 'login',
+      'tick1', 'tick2',
+      'tick3', 'tick4',
+      'tick5', 'tick6'
+    ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,1007 @@
+{
+  "observedAt": "2026-11-06T00:49:21.651Z",
+  "operation": "temple_system_describe",
+  "readOnly": true,
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"protocol\":\"sourcery/mcp-structured-result-summary.v1\",\"operationId\":\"temple_system_describe\",\"bytes\":32535,\"sha256\":\"82dc8e6966aaf618babcae2a64f99f4b5a3090399231e339013ac125f9fb9d2c\"}"
+      }
+    ],
+    "structuredContent": {
+      "protocol": "sourcery/temple-supervisor-state.v1",
+      "activeGenerationId": "sqlite-sourcery-mcp-live-interaction-v5",
+      "baselineSchemaHash": "8e3851b9ff8a9f246d9535af80d3ee450557360898346f0912a7f51e879e084b",
+      "activationId": "2a7de4bd-98a4-41ef-8cb1-504dcfb258fe",
+      "typedToolCount": 21,
+      "activeOperationCount": 33,
+      "kernelToolCount": 9,
+      "workerAvailable": true,
+      "servingGenerationId": "sqlite-sourcery-mcp-live-interaction-v5",
+      "workerStartupFailure": null,
+      "guide": {
+        "protocol": "sourcery/temple-help-guide.v1",
+        "appliesToGenerationId": "sqlite-sourcery-mcp-live-interaction-v5",
+        "authorityBoundary": "Help is explanatory and read-only. Execution, admission and activation remain subject to their normal authority and state checks.",
+        "glossary": {
+          "lane": "A mutable, leased line of work backed by a thin overlay.",
+          "snapshot": "An immutable identity for one composed workspace state.",
+          "projection": "A disposable native-filesystem view created for bounded editing or tooling.",
+          "receipt": "A snapshot containing evidence from a bounded operation such as a test.",
+          "proposal": "An exact tested task-lane head offered to an integration lane.",
+          "blessing": "The accepted exact snapshot of an integration lane.",
+          "seal": "A successor Temple package composed from a blessed integration snapshot.",
+          "admission": "A signed, bounded authorization to activate a checked generation."
+        },
+        "workflows": {
+          "inspect": [
+            "temple_system_describe",
+            "temple_workspace_list",
+            "temple_workspace_status",
+            "temple_workspace_list_files",
+            "temple_workspace_read"
+          ],
+          "develop": [
+            "temple_workspace_open",
+            "temple_runtime_package",
+            "temple_workspace_commit",
+            "temple_workspace_test",
+            "temple_workspace_propose"
+          ],
+          "integrate": [
+            "temple_workspace_open",
+            "temple_workspace_merge",
+            "temple_workspace_test",
+            "temple_workspace_bless"
+          ],
+          "activate": [
+            "temple_runtime_package",
+            "temple_system_check",
+            "temple_system_admit",
+            "temple_system_activate"
+          ],
+          "recover": [
+            "temple_system_recover",
+            "temple_host_recover"
+          ]
+        },
+        "operations": [
+          {
+            "operationId": "scientific_derivation_compose",
+            "alias": "scientific.derivation.compose",
+            "group": "workspace.other",
+            "summary": "Compose bounded typed scientific derivation paths into proposal-only candidates with explicit assumptions,losses,evidence and rejection receipts. No entailment,empirical authority,corpus admission or application activation.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "sourcery_context_read",
+            "alias": "sourcery.context.read",
+            "group": "workspace.other",
+            "summary": "Read a host-resolved local context at an exact state and interpretation. Does not grant authority or start services.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_algebra_prepare_work_observed",
+            "alias": "temple.algebra.prepare.work.observed",
+            "group": "workspace.other",
+            "summary": "Prepare an algebra-first work commit using one exact immutable-snapshot,hash-bound prior capability observation. No application activation,deployment or business authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_algebra_prepare_work_session",
+            "alias": "temple.algebra.prepare.work.session",
+            "group": "workspace.other",
+            "summary": "Legacy bounded inert-JSON preparation session. Use v2 for status,cancel and explicit limits.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_algebra_prepare_work_session_v2",
+            "alias": "temple.algebra.prepare.work.session.v2",
+            "group": "workspace.other",
+            "summary": "Stage,inspect or cancel bounded inert JSON chunks by exact sequence and hash,then invoke observed algebra preparation after exact aggregate reassembly. Send at most 100000 characters per append;status never returns staged payload bytes. No supplied code execution or application authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_application_context_load",
+            "alias": "temple.application.context.load",
+            "group": "workspace.other",
+            "summary": "Load the fixed SQLite-backed Claimipedia project declarations and inspect authored contexts using existing owners. Read-only; not application runtime extension loading or admission.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_application_context_read",
+            "alias": "temple.application.context.read",
+            "group": "workspace.other",
+            "summary": "Read the fixed SQLite-captured Claimipedia operator corpus with exact source identity. Not a live application, public projection, mutation or admission.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_application_surface",
+            "alias": "temple.application.surface",
+            "group": "workspace.other",
+            "summary": "Owned SQLite-backed application read projection lifecycle. Explicit captured sources and resource limits;no business mutation or application-author grant.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_context_binding",
+            "alias": "temple.context.binding",
+            "group": "workspace.other",
+            "summary": "Inspect, initialize, prepare, admit and select exact reader-registry successors in SQLite. Does not activate a runtime or grant business authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_context_surface",
+            "alias": "temple.context.surface",
+            "group": "workspace.other",
+            "summary": "Start, inspect, stop or select an exact SQLite-published work context. Selection grants no product activation or new authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_mcp_surface",
+            "alias": "temple.mcp.surface",
+            "group": "workspace.other",
+            "summary": "Return the current Sourcery MCP surface and connection interaction context. List returns filters and pagination immediately; select binds a workspace for subsequent Status. Context selection does not acquire a writer lease.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_runtime_package",
+            "alias": "temple.runtime.package",
+            "group": "workspace.other",
+            "summary": "Legacy governed create-only runtime installation and qualification. Use temple_runtime_package_v2 for bounded resumable authoring. No activation or launcher modification.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_runtime_package_v2",
+            "alias": "temple.runtime.package.v2",
+            "group": "workspace.other",
+            "summary": "Governed create-only runtime installation,qualification and resumable work preparation. prepare-session requires phase and session;status and cancel are bounded lifecycle actions. Exact SQLite package,discovery,review and installation admission required. No activation or launcher modification.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_runtime_package_v3",
+            "alias": "temple.runtime.package.v3",
+            "group": "workspace.other",
+            "summary": "Governed create-only runtime installation,qualification and resumable work preparation. Phase-specific session arguments are schema-visible;status and cancel are bounded lifecycle actions. No activation or launcher modification.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_runtime_review_admission",
+            "alias": "temple.runtime.review.admission",
+            "group": "workspace.other",
+            "summary": "Inspect or explicitly admit a changed inactive runtime-package review. Signed expiring eligibility only;no installation,activation or business authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_system_activate",
+            "alias": "system.activate",
+            "group": "system.transition",
+            "summary": "Atomically activate an admitted generation after rechecking its exact bytes and baseline schema.",
+            "readOnly": false,
+            "destructive": true,
+            "preconditions": [
+              "The admission basis is still current.",
+              "Exact generation bytes and baseline compatibility still hold."
+            ],
+            "effects": [
+              "Atomically activates the admitted generation.",
+              "Retains the predecessor for recovery."
+            ],
+            "usualNext": [
+              "temple_system_describe",
+              "temple_system_recover"
+            ]
+          },
+          {
+            "operationId": "temple_system_admit",
+            "alias": "system.admit",
+            "group": "system.transition",
+            "summary": "Sign an explicit bounded admission for a passing check against the current generation.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The check passed against the currently active generation."
+            ],
+            "effects": [
+              "Creates a signed bounded admission.",
+              "Does not activate the generation."
+            ],
+            "usualNext": [
+              "temple_system_activate"
+            ]
+          },
+          {
+            "operationId": "temple_system_check",
+            "alias": "system.check",
+            "group": "system.transition",
+            "summary": "Execute protected-runtime, transport and baseline-schema checks for a staged generation.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The generation is staged."
+            ],
+            "effects": [
+              "Checks protected runtime bytes, transport initialization and baseline schema compatibility.",
+              "Creates signed check evidence."
+            ],
+            "usualNext": [
+              "temple_system_admit"
+            ]
+          },
+          {
+            "operationId": "temple_system_describe",
+            "alias": "system.describe",
+            "group": "system.inspect",
+            "summary": "Describe the active fossil/runtime generation, retained transition evidence, compact workflows and operation catalogue.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Returns active generation identity, transition evidence, workflows and an operation catalogue."
+            ]
+          },
+          {
+            "operationId": "temple_system_describe_operation",
+            "alias": "system.describe.operation",
+            "group": "system.inspect",
+            "summary": "Describe any operation in the active worker catalog, including successor-only operations.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Returns the live descriptor for a known active worker operation."
+            ]
+          },
+          {
+            "operationId": "temple_system_execute_operation",
+            "alias": "system.execute.operation",
+            "group": "system.extension",
+            "summary": "Execute an operation from the active worker catalog through the stable extension surface.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "operationId is present in the active worker catalogue.",
+              "The caller is authorized for the delegated operation."
+            ],
+            "effects": [
+              "Delegates to the named active-generation operation; effects are those of that operation."
+            ]
+          },
+          {
+            "operationId": "temple_system_help",
+            "alias": "system.help",
+            "group": "system.inspect",
+            "summary": "Return version-bound, read-only help for a Temple topic, operation or current lane context.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Returns version-bound explanatory guidance.",
+              "Does not grant authority or execute another operation."
+            ]
+          },
+          {
+            "operationId": "temple_system_recover",
+            "alias": "system.recover",
+            "group": "system.transition",
+            "summary": "Create a signed recovery transition to the predecessor retained by an activation.",
+            "readOnly": false,
+            "destructive": true,
+            "preconditions": [
+              "The referenced activation successor is currently active.",
+              "The activation retained a predecessor."
+            ],
+            "effects": [
+              "Rechecks, admits and activates the retained predecessor through a signed recovery transition."
+            ]
+          },
+          {
+            "operationId": "temple_system_stage",
+            "alias": "system.stage",
+            "group": "system.transition",
+            "summary": "Stage a named generation from the supervisor-controlled manifest directory.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "A controlled generation manifest and protected runtime package exist."
+            ],
+            "effects": [
+              "Records the exact generation manifest after verifying protected runtime bytes."
+            ],
+            "usualNext": [
+              "temple_system_check"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_archive",
+            "alias": "workspace.archive",
+            "group": "workspace.lifecycle",
+            "summary": "Logically archive a closed lane with a terminal disposition; bytes are not deleted.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is closed.",
+              "A terminal disposition is supplied."
+            ],
+            "effects": [
+              "Marks the lane archived.",
+              "Does not delete retained bytes."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_bless",
+            "alias": "workspace.bless",
+            "group": "workspace.promotion",
+            "summary": "Bless the exact tested head of an integration lane.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is an integration lane.",
+              "snapshotId is its exact current tested head."
+            ],
+            "effects": [
+              "Moves the lane blessing to the exact snapshot."
+            ],
+            "usualNext": [
+              "temple_workspace_seal",
+              "temple_workspace_fork"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_checkout",
+            "alias": "workspace.checkout",
+            "group": "workspace.author",
+            "summary": "Create a registered sparse editor projection inside the manager-controlled lane directory.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is open and snapshotId is its current head.",
+              "All editable paths are declared."
+            ],
+            "effects": [
+              "Creates a registered sparse disposable projection.",
+              "Does not change the lane head."
+            ],
+            "usualNext": [
+              "temple_workspace_save",
+              "temple_workspace_discard"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_close",
+            "alias": "workspace.close",
+            "group": "workspace.lifecycle",
+            "summary": "Release one lane lease without an implicit commit.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The caller holds the lane lease."
+            ],
+            "effects": [
+              "Releases the lease.",
+              "Does not commit unrecorded filesystem changes."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_commit",
+            "alias": "workspace.commit",
+            "group": "workspace.author",
+            "summary": "Commit explicit changes to an open lane head.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is open and leased by the caller.",
+              "baseSnapshotId is the current lane head."
+            ],
+            "effects": [
+              "Commits exactly the declared changes.",
+              "Advances the lane head to a new immutable snapshot."
+            ],
+            "usualNext": [
+              "temple_workspace_test",
+              "temple_workspace_checkout"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_discard",
+            "alias": "workspace.discard",
+            "group": "workspace.author",
+            "summary": "Discard a registered editor projection and delete its disposable files without committing.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The projection is registered to the lane."
+            ],
+            "effects": [
+              "Deletes the disposable projection.",
+              "Does not commit projection changes."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_fork",
+            "alias": "workspace.fork",
+            "group": "workspace.lifecycle",
+            "summary": "Create a thin task lane from the exact blessed snapshot of a closed integration lane.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The source is a closed integration lane.",
+              "sourceSnapshotId is its exact blessed snapshot."
+            ],
+            "effects": [
+              "Creates a thin task lane and acquires its writer lease."
+            ],
+            "usualNext": [
+              "temple_workspace_checkout",
+              "temple_workspace_commit"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_heartbeat",
+            "alias": "workspace.heartbeat",
+            "group": "workspace.lifecycle",
+            "summary": "Renew an open lane writer lease.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The caller holds the open lane lease."
+            ],
+            "effects": [
+              "Renews the writer lease without changing the lane head."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_ingest",
+            "alias": "workspace.ingest",
+            "group": "workspace.bridge",
+            "summary": "Commit the exact delta from a disposable projection.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The projection is based on snapshotId.",
+              "The lane head has not become stale."
+            ],
+            "effects": [
+              "Commits the exact projection delta.",
+              "Advances the lane head."
+            ],
+            "usualNext": [
+              "temple_workspace_test"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_list",
+            "alias": "workspace.list",
+            "group": "workspace.inspect",
+            "summary": "List registered lanes without opening their overlay databases for writing.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Returns registered lanes without opening overlays for writing."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_list_files",
+            "alias": "workspace.list.files",
+            "group": "workspace.inspect",
+            "summary": "List files in one open lane snapshot.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Lists the immutable contents of the specified lane snapshot."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_materialize",
+            "alias": "workspace.materialize",
+            "group": "workspace.bridge",
+            "summary": "Create a disposable native projection for a filesystem-only tool.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The target directory is permitted and suitable for a disposable projection."
+            ],
+            "effects": [
+              "Creates a native-filesystem projection for a filesystem-only tool.",
+              "Does not change the lane head."
+            ],
+            "usualNext": [
+              "temple_workspace_ingest"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_merge",
+            "alias": "workspace.merge",
+            "group": "workspace.promotion",
+            "summary": "Merge a proposal from a registered source lane into an open integration lane.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The target is an open integration lane.",
+              "The proposal belongs to the declared source task lane."
+            ],
+            "effects": [
+              "Merges the proposed exact head into a new integration snapshot."
+            ],
+            "usualNext": [
+              "temple_workspace_test"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_migrate",
+            "alias": "workspace.migrate",
+            "group": "workspace.other",
+            "summary": "Create a fenced verified parallel successor lane on a new exact base without changing the source lane or reusing its snapshot identities.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_object_transfer",
+            "alias": "workspace.object.transfer",
+            "group": "workspace.other",
+            "summary": "Upload an exact workspace object in bounded hash-verified chunks or read it by bounded byte range. Each action declares its required arguments;object references are lane-and-snapshot bound and grant no authority.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_open",
+            "alias": "workspace.open",
+            "group": "workspace.lifecycle",
+            "summary": "Create or reopen a named task or integration lane and acquire its writer lease.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane identifier is within the caller authority scope."
+            ],
+            "effects": [
+              "Creates or reopens a lane and acquires its writer lease."
+            ],
+            "usualNext": [
+              "temple_workspace_status",
+              "temple_workspace_commit",
+              "temple_workspace_checkout"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_prepare_session",
+            "alias": "workspace.prepare.session",
+            "group": "workspace.other",
+            "summary": "Apply algebra-prepared workspace changes as ordered,hash-bound,restart-safe segments. Phase-specific session arguments are schema-visible;commits occur once at finalize and responses remain compact.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_prepare_session_v2",
+            "alias": "workspace.prepare.session.v2",
+            "group": "workspace.other",
+            "summary": "Apply algebra-prepared workspace changes through bounded segments while binding a large capability prior by exact immutable workspace reference. Prior bytes are verified internally and never cross the MCP request envelope;old preparation contracts remain unchanged.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_projection_list",
+            "alias": "workspace.projection.list",
+            "group": "workspace.inspect",
+            "summary": "List registered editor projections and their durable disposition.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Lists registered projections and their durable dispositions."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_propose",
+            "alias": "workspace.propose",
+            "group": "workspace.promotion",
+            "summary": "Propose the exact tested head of a task lane.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is a task lane.",
+              "Its exact current head has passing test evidence."
+            ],
+            "effects": [
+              "Creates a proposal bound to that exact tested head."
+            ],
+            "usualNext": [
+              "temple_workspace_merge",
+              "temple_workspace_close"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_propose_normalized",
+            "alias": "workspace.propose.normalized",
+            "group": "workspace.other",
+            "summary": "Propose an exact tested task head with canonical artifact lineage and intended endpoints.",
+            "readOnly": false,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_read",
+            "alias": "workspace.read",
+            "group": "workspace.inspect",
+            "summary": "Read one file from an open lane composed view.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Reads one file from the composed immutable snapshot."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_save",
+            "alias": "workspace.save",
+            "group": "workspace.author",
+            "summary": "Ingest the exact declared scope of a registered editor projection and delete its disposable files.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The projection remains open and is based on the current head.",
+              "No undeclared paths were added."
+            ],
+            "effects": [
+              "Commits the exact declared projection scope.",
+              "Advances the lane head.",
+              "Deletes the disposable projection after ingestion."
+            ],
+            "usualNext": [
+              "temple_workspace_test",
+              "temple_workspace_checkout"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_seal",
+            "alias": "workspace.seal",
+            "group": "workspace.promotion",
+            "summary": "Compose a blessed integration lane into a successor Temple package.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "snapshotId is the integration lane blessing."
+            ],
+            "effects": [
+              "Composes a successor Temple package at the controlled target."
+            ],
+            "usualNext": [
+              "temple_system_stage"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_status",
+            "alias": "workspace.status",
+            "group": "workspace.inspect",
+            "summary": "Inspect one registered lane and its durable head/lease state.",
+            "readOnly": true,
+            "destructive": false,
+            "effects": [
+              "Returns lane, lease, head and blessing state without changing them."
+            ]
+          },
+          {
+            "operationId": "temple_workspace_task_ownership",
+            "alias": "workspace.task.ownership",
+            "group": "workspace.other",
+            "summary": "Describe the exclusive writer ownership of one task lane without locking files or artifacts.",
+            "readOnly": true,
+            "destructive": false
+          },
+          {
+            "operationId": "temple_workspace_test",
+            "alias": "workspace.test",
+            "group": "workspace.assurance",
+            "summary": "Run a bounded Node test in a disposable full, test-file or declared-closure projection and advance the lane head to its scope-bound receipt snapshot.",
+            "readOnly": false,
+            "destructive": false,
+            "preconditions": [
+              "The lane is open and snapshotId is its current head.",
+              "The selected projection contains the test and its required closure."
+            ],
+            "effects": [
+              "Runs a bounded Node test.",
+              "Creates a scope-bound receipt snapshot whether the check passes or fails.",
+              "Advances the lane head to the receipt snapshot."
+            ],
+            "usualNext": [
+              "temple_workspace_propose",
+              "temple_workspace_bless"
+            ]
+          },
+          {
+            "operationId": "temple_workspace_test_v3",
+            "alias": "workspace.test.v3",
+            "group": "workspace.other",
+            "summary": "Run a bounded Node test in an explicitly selected disposable full, test-file or declared-closure projection and advance the lane head to its scope-bound telemetry receipt.",
+            "readOnly": false,
+            "destructive": false
+          }
+        ],
+        "algebraFirst": {
+          "status": "enforced",
+          "policyRevision": "mandatory-algebra-first-20261023-observed-preparation-session-r54+exact-prior-reference-and-bounded-discovery-r95-mcp-current-surface-r105",
+          "scope": "All Sourcery representation migrations use exact evidence. Static capabilities remain predecessors;new mature boundary capabilities enter through exact package-local declaration,qualification,grammar,phase,port,adapter and evidence closure.",
+          "noNewExecutableSource": true,
+          "noOpaqueCallbacks": true,
+          "legacyCode": "compatibility-only;unchanged use or deletion;extensions enter grammar",
+          "provenance": {
+            "protocol": "algebra-first-guide-provenance/1",
+            "enforcementOwner": "createAlgebraFirstGate",
+            "revisionSource": "algebra-first-binding.json#revision",
+            "guideDeclarationRevision": "mandatory-algebra-first-20261019-semantic-review-operation-r38",
+            "mismatchCorrected": true
+          },
+          "packageLocalCapabilities": {
+            "status": "enforced",
+            "declarationPath": "sourcery-boundary-capabilities.json",
+            "extensionRule": "new phases are package-local grammar data;new mechanisms remain explicit mature adapters",
+            "authority": "eligibility only"
+          }
+        },
+        "sourceAuthoring": {
+          "transport": "temple_system_execute_operation",
+          "operationId": "temple_runtime_package",
+          "action": "prepare-work",
+          "required": [
+            "laneId",
+            "baseSnapshotId",
+            "label",
+            "changes",
+            "workItem",
+            "grammarRef"
+          ],
+          "sequence": [
+            "open lane",
+            "begin temple_workspace_prepare_session_v2 with exact work item,grammar fossil and capabilityPriorRef",
+            "upload large individual objects through temple_workspace_object_transfer",
+            "append ordered hash-bound change segments using inline values or object references",
+            "finalize and run retained qualifier",
+            "use existing promotion/admission owner"
+          ],
+          "nextCallGrantsAuthority": false,
+          "largeEnvelopeTransport": {
+            "controlOperationId": "temple_workspace_prepare_session_v2",
+            "legacyControlOperationId": "temple_workspace_prepare_session",
+            "objectOperationId": "temple_workspace_object_transfer",
+            "sessionPhases": [
+              "begin",
+              "append",
+              "finalize",
+              "status"
+            ],
+            "objectActions": [
+              "upload-begin",
+              "upload-append",
+              "upload-finalize",
+              "status",
+              "read-range"
+            ],
+            "limits": {
+              "maximumChunkCharacters": 100000,
+              "maximumReadRangeBytes": 262144,
+              "maximumObjectBytes": 67108864
+            },
+            "semantics": "MCP carries bounded chunks,exact immutable references and compact hash-bound receipts;capability-prior and large object bytes remain server-side and are verified internally by lane,snapshot,path and object hash."
+          }
+        },
+        "deprecations": [
+          {
+            "operationId": "temple_workspace_checkout",
+            "status": "sealed-for-authoring",
+            "use": "temple_runtime_package action prepare-work,then its SQLite commit nextCall",
+            "why": "Prevent native filesystem or helper-code authoring from bypassing the common algebra."
+          },
+          {
+            "operationId": "temple_workspace_save",
+            "status": "sealed-for-authoring",
+            "use": "temple_runtime_package action prepare-work,then its SQLite commit nextCall",
+            "why": "Prevent native filesystem or helper-code authoring from bypassing the common algebra."
+          },
+          {
+            "operationId": "temple_workspace_ingest",
+            "status": "sealed-for-authoring",
+            "use": "temple_runtime_package action prepare-work,then its SQLite commit nextCall",
+            "why": "Prevent native filesystem or helper-code authoring from bypassing the common algebra."
+          },
+          {
+            "operationId": "temple_workspace_materialize",
+            "status": "sealed-for-authoring",
+            "use": "temple_runtime_package action prepare-work,then its SQLite commit nextCall",
+            "why": "Prevent native filesystem or helper-code authoring from bypassing the common algebra."
+          }
+        ]
+      },
+      "recentActivations": [
+        {
+          "activationId": "2a7de4bd-98a4-41ef-8cb1-504dcfb258fe",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v17",
+          "successorGenerationId": "sqlite-sourcery-mcp-live-interaction-v5",
+          "admissionId": "81d1e933-5602-4db7-870d-c24d1760d2ce",
+          "kind": "activation",
+          "createdAt": "2026-10-28T05:38:44.190Z",
+          "signature": "M_XSKD42e-oZXvpWZjjh5tQn9VEjK0fVKVlAlNhC4Qg"
+        },
+        {
+          "activationId": "e5bf4ee7-c4c2-4651-99d6-45057bb9c0f1",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v17",
+          "admissionId": "20b9eaba-d969-45db-8c13-a5d32583fb03",
+          "kind": "activation",
+          "createdAt": "2026-10-27T09:01:00.494Z",
+          "signature": "Zky0vffc3VV1_MW43QRTTu4BfygnVldJ6IG6OzQOqa0"
+        },
+        {
+          "activationId": "757a3bc9-d8f2-4111-a410-383ba604faba",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v16",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "admissionId": "06ef7c66-bd43-4479-83cf-d7868038a5a2",
+          "kind": "recovery",
+          "createdAt": "2026-10-27T08:57:41.953Z",
+          "signature": "jBPRU8DWPOVfX7UuVBe8vEEuTdni4GQnKjaVesPjCXY"
+        },
+        {
+          "activationId": "7e5b5d0c-a751-4107-9ad6-4dbed868ec01",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v16",
+          "admissionId": "f03f86ce-3693-4dc6-ba43-f6ef6ef9c85a",
+          "kind": "activation",
+          "createdAt": "2026-10-27T08:57:09.248Z",
+          "signature": "eyfx5HzirwfFxKJw3nQ3Ld4rNenmCwSsr2g8rhoSys0"
+        },
+        {
+          "activationId": "c421bb93-ea9f-4ceb-856f-6c9906cf351b",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v15",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "admissionId": "c897c231-bac9-4e41-a14c-ffc69c3336a6",
+          "kind": "recovery",
+          "createdAt": "2026-10-27T08:35:12.802Z",
+          "signature": "_KZ7GJHbmhpt2IJmyVHBS-9eIuB2TEa1KBZjn0DcYxg"
+        },
+        {
+          "activationId": "cddbbe3c-4a6c-4da5-9a0d-cc7ec31549b5",
+          "predecessorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v15",
+          "admissionId": "d4911137-9d3d-4e76-8b1e-5499572e0fff",
+          "kind": "activation",
+          "createdAt": "2026-10-27T08:33:36.912Z",
+          "signature": "ikkEbd_04MwZObxkHhUjd67iGRw7PvuyRsdR4IOpm4U"
+        },
+        {
+          "activationId": "52405e6e-b949-451f-9c58-94a13a04cb53",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r4",
+          "successorGenerationId": "sqlite-sourcery-internal-reference-seal-v3r8r6-v14",
+          "admissionId": "78dda2b8-b652-48cf-a567-c1675f27aac9",
+          "kind": "activation",
+          "createdAt": "2026-10-27T04:25:17.529Z",
+          "signature": "OT_xM6vNG_-SKjwDnRXqPdkvLi8pn3qw2IomcrqYoOU"
+        },
+        {
+          "activationId": "a0be4510-f637-4f90-809c-9b3e5c6c2dfe",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "successorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r4",
+          "admissionId": "3eba34ec-a529-45bd-b832-35f0a959360e",
+          "kind": "activation",
+          "createdAt": "2026-10-24T02:24:02.799Z",
+          "signature": "Qjl6VokTH6r_SVBre9Pz1InksCNPcP6nEukSjE4GX44"
+        },
+        {
+          "activationId": "fc3d067a-9ced-4e57-bc03-a090c9fb3963",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r3",
+          "successorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "admissionId": "0107e2fe-f96c-47aa-90cd-74118f6945f1",
+          "kind": "recovery",
+          "createdAt": "2026-10-24T02:16:35.086Z",
+          "signature": "Ak8PnjqyO_Z_TRPpWF5NWLYHii5bAxr0kq8Bgx8xHSU"
+        },
+        {
+          "activationId": "8653f933-187a-4f95-8378-c19d4852adbb",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "successorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r3",
+          "admissionId": "7427f99f-15ee-43c4-ad76-18255063796b",
+          "kind": "activation",
+          "createdAt": "2026-10-24T01:45:33.903Z",
+          "signature": "6xL0Ol5ZcUVeTUug8sxqeuEaC8XSQ6Ng2oFZIyTWGMk"
+        },
+        {
+          "activationId": "c0c50fdb-9554-4b4f-a74c-59ba8119a69a",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r2",
+          "successorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "admissionId": "6f662fae-3116-42f6-9ed9-654d69d437cc",
+          "kind": "recovery",
+          "createdAt": "2026-10-24T00:34:39.525Z",
+          "signature": "P-eSuQq0olq0cIl7JQ9QrJon2onxau9Qmr2HWP3UFAk"
+        },
+        {
+          "activationId": "e7ac54df-56e9-46ec-b39c-48c74be1f5be",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "successorGenerationId": "sqlite-sourcery-workspace-host-receiving-v3r8r2",
+          "admissionId": "2193bbf2-9569-4640-afb4-ccb062b13d0c",
+          "kind": "activation",
+          "createdAt": "2026-10-23T19:16:33.505Z",
+          "signature": "PwBUy-DsqeTItW-tsqvrZnXA0LI5MJ3WxdtkeKN04QU"
+        },
+        {
+          "activationId": "180ef493-a6bd-4470-9da9-03182883d30c",
+          "predecessorGenerationId": "sqlite-sourcery-activation-qualification-v3r4r16",
+          "successorGenerationId": "sqlite-sourcery-workspace-test-versioned-v3r7",
+          "admissionId": "4a61fbb6-b6a5-495d-a831-2c2ed299a6fc",
+          "kind": "activation",
+          "createdAt": "2026-10-22T00:34:13.827Z",
+          "signature": "EUuY0z4yVuPviXC-ZIbG6iLOTMVJXw-2L4MbtngflxY"
+        },
+        {
+          "activationId": "98c47b7c-2524-433e-85f6-72b80d7b1189",
+          "predecessorGenerationId": "sqlite-sourcery-surface-continuity-v3r3",
+          "successorGenerationId": "sqlite-sourcery-activation-qualification-v3r4r16",
+          "admissionId": "e6187fb3-6bc4-4d38-9bf4-7ea3969741ef",
+          "kind": "activation",
+          "createdAt": "2026-10-21T03:20:30.592Z",
+          "signature": "IgFrVMovopLSKt9LBqxwRW_ua7m7gzM1a7XXawNpHlA"
+        },
+        {
+          "activationId": "f66df227-2c0c-4695-951f-fb09b8a3237b",
+          "predecessorGenerationId": "sqlite-sourcery-application-binding-v3r2",
+          "successorGenerationId": "sqlite-sourcery-surface-continuity-v3r3",
+          "admissionId": "8b708b92-5f56-4745-8a46-8fedfbee7eb5",
+          "kind": "activation",
+          "createdAt": "2026-10-21T01:45:01.200Z",
+          "signature": "9bl6p7GLlLYkVpJdHHjq_ckzA40pOjzheWzFt_QQxtM"
+        },
+        {
+          "activationId": "03fe830f-953e-4452-94c9-a88e3187d986",
+          "predecessorGenerationId": "sqlite-sourcery-self-contained-release-v3r1",
+          "successorGenerationId": "sqlite-sourcery-application-binding-v3r2",
+          "admissionId": "a227c01a-6718-444e-b83b-470847d25144",
+          "kind": "activation",
+          "createdAt": "2026-10-21T01:41:25.060Z",
+          "signature": "b-O1hfEvpVBvE0uTNHxs8OCRr7gHj32CuUDuQzJD5mg"
+        },
+        {
+          "activationId": "b3ef7481-493a-4c29-bd7a-81bfc7d626f2",
+          "predecessorGenerationId": "sqlite-sourcery-routed-seal-v2r20",
+          "successorGenerationId": "sqlite-sourcery-self-contained-release-v3r1",
+          "admissionId": "32e7a083-1ee2-46ca-ae14-6b2ba6d87de8",
+          "kind": "activation",
+          "createdAt": "2026-10-21T00:51:34.665Z",
+          "signature": "M_JioaL4Mh_fsneepDw77Z3EqOMz8UbT2nxpmm5oF5I"
+        },
+        {
+          "activationId": "12a6b366-436e-425d-a832-980b817edca6",
+          "predecessorGenerationId": "sqlite-sourcery-workspace-owner-v1",
+          "successorGenerationId": "sqlite-sourcery-routed-seal-v2r20",
+          "admissionId": "e91aa7fd-84f6-4928-9a54-0a3bb6ba0d33",
+          "kind": "activation",
+          "createdAt": "2026-10-21T00:00:59.070Z",
+          "signature": "AlCtPKaeSqZSqUYC71EVgSZB9OwrvYSep7QdOo7f9ss"
+        },
+        {
+          "activationId": "877c1022-1188-441f-91af-738700c4a42a",
+          "predecessorGenerationId": "sqlite-claimipedia-lane-migration-v1",
+          "successorGenerationId": "sqlite-sourcery-workspace-owner-v1",
+          "admissionId": "b591458a-b15d-471a-bcb3-29133eaf86c5",
+          "kind": "activation",
+          "createdAt": "2026-10-20T23:14:19.258Z",
+          "signature": "1bhWPlCdQdwihJGk2AZa3cYHo3ZhjMHgTTd2FWKyHD8"
+        },
+        {
+          "activationId": "1090fbd3-9fcf-47fe-96be-40adfa62adc1",
+          "predecessorGenerationId": "sqlite-claimipedia-dual-base-router-v1r1",
+          "successorGenerationId": "sqlite-claimipedia-lane-migration-v1",
+          "admissionId": "9e261100-32a3-40c9-a3f5-83342a1967b4",
+          "kind": "activation",
+          "createdAt": "2026-10-19T09:58:31.648Z",
+          "signature": "trpTL7CqmLZKNYFMznJ0zd8C09KRDsAZc-BvEGeFXOI"
+        }
+      ]
+    }
+  }
+}

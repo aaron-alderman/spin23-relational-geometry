@@ -1,0 +1,34 @@
+✔ publication admits every own callable capability before acquiring a file (1.4726ms)
+✔ publication flushes and closes before replacing the previous value (0.8839ms)
+✔ failed acquisition never closes or discards a resource it did not acquire (0.4312ms)
+✔ write and flush faults preserve exact identities and the previous publication (0.7341ms)
+✔ replacement faults discard the closed staging resource without changing the old value (0.5681ms)
+✔ compound cleanup faults preserve every exact fault and retain a non-enumerable recovery capability (0.8576ms)
+✔ real filesystem publication replaces a non-auth configuration and removes its staging name (19.9101ms)
+✔ real partial writes preserve the existing configuration and remove staging bytes (5.1651ms)
+✔ real rename refusal leaves the previous configuration intact (5.2643ms)
+✔ cancellation before acquisition runs no file port (0.574ms)
+✔ cancellation at each pre-publication boundary closes and discards without replacement (0.4265ms)
+✔ cancellation inside completed publication cannot retry or discard the accepted value (0.2279ms)
+(node:22884) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ session repository draft uses the unchanged selected source as its finite predecessor (34.4414ms)
+✔ normal persistence, reopening, expiration and deletion preserve predecessor values and file bytes (68.0541ms)
+✔ memory-only mode samples clocks through pruning and executes no storage capability (2.8131ms)
+✔ read failures preserve each exact fault and never delete a valid persisted session (40.6964ms)
+✔ non-syntax parser failures preserve records and exact identities (32.8471ms)
+✔ malformed and expired content retains the predecessor cleanup rule (30.6661ms)
+✔ partial writes leave both the prior file and cached session unchanged (94.951ms)
+✔ flush and rename refusals retain the old file and deny cache publication (26.4012ms)
+✔ cleanup failure quarantines the repository until its exact owned staging resource is recovered (16.6166ms)
+✔ unowned staging-looking files are preserved during reload (20.1035ms)
+✔ authored active-session and directory limits refuse before new persistence effects (83.79ms)
+✔ invalid capability dictionaries and clock failures refuse before storage effects (1.0725ms)
+ℹ tests 24
+ℹ suites 0
+ℹ pass 24
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1303.3086
