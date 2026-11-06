@@ -14,6 +14,8 @@ node tooling/search/search_corpus.mjs --query "Casimir boundary response"
 
 ## The current story
 
+The [identity mapping assurance record](assurance/identity_mapping_assurance.md) documents an algebra-generated engineering report for the personal website: intentional invariants, identity mappings, missing connections and undecided relationships. Its scope and verification limits remain separate from scientific claims.
+
 The corpus is organized around an invariant relation rather than a single
 symmetry slogan. Its non-negotiable explanatory order is **Jordan admission and composition → typed admissibility region** (the living carrier and its admissible relations) **→ locally invariant carrier → Lie transformation and transport** of thing and mirror face **→ holonomy, dynamics, selection and records**. In the central exact model,
 \(M^T\Omega M=\Omega\): \(M\) moves the living carrier, \(M^{-T}\) is its
