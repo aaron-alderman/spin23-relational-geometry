@@ -14,3 +14,5 @@ The [licensing notice](LICENSE.md) states the software and content grants. The [
 - Archive or retire an older checkout explicitly when a successor is verified; its name or age alone does not establish that it is redundant.
 
 A clean working tree is not proof of architectural completeness, scientific truth, production readiness or independent review.
+
+The [6 November 2026 hygiene audit](docs/repository-stewardship-2026-11-06.json) records repository scope, metadata identities, upstream verification, retained boundaries and the bounded cleanup receipt.
