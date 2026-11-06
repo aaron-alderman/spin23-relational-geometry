@@ -135,3 +135,5 @@ The voluntary [Christian Stewardship Covenant](CHRISTIAN_STEWARDSHIP_COVENANT.md
 ## Scope boundary
 
 The repository excludes third-party working copies, local environments, caches, downloaded attachments and private review state. A mathematical correspondence in this corpus must not be described as a microscopic physical symmetry unless the required dynamical evidence has actually been supplied.
+
+Repository care: [licensing](LICENSE.md), [Christian stewardship covenant](CHRISTIAN_STEWARDSHIP_COVENANT.md), and [source/evidence hygiene](STEWARDSHIP.md).
