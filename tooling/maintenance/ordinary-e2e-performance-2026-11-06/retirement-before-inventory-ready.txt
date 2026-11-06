@@ -1,0 +1,19 @@
+node:fs:621
+  return binding.open(
+                 ^
+
+Error: ENOENT: no such file or directory, open 'C:\Users\aaron\grand-theory\tooling\maintenance\ordinary-e2e-performance-2026-11-06\incoming-link-inventory.json'
+    at Object.openSync (node:fs:621:18)
+    at Object.readFileSync (node:fs:487:35)
+    at read (file:///C:/Users/aaron/grand-theory/tooling/maintenance/ordinary-e2e-performance-2026-11-06/retire-generated-copies.mjs:5:143)
+    at file:///C:/Users/aaron/grand-theory/tooling/maintenance/ordinary-e2e-performance-2026-11-06/retire-generated-copies.mjs:11:180
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\aaron\\grand-theory\\tooling\\maintenance\\ordinary-e2e-performance-2026-11-06\\incoming-link-inventory.json'
+}
+
+Node.js v24.22.1

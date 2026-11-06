@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {evaluateExpression as original} from '../interpreter-performance-2026-11-06/kernel-reference/index.mjs';
+import {evaluateExpression as before} from './before-index.mjs';
+import {evaluateExpression as current,compileExpressions,graphFromRecords,REDUCTION_VALUES_PROFILE as profile} from '../../../.platform-reconstitution/expression-algebra/src/index.mjs';
+const I=surface=>({kind:'input',surface}),L=n=>({kind:'typedLiteral',valueType:'number',value:String(n)}),add={kind:'add',left:I('value'),right:L(2)},fixtures={scalar:add,record:{kind:'record',entries:Array.from({length:20},(_,i)=>({name:'field'+i,value:add}))},list:{kind:'list',entries:Array.from({length:20},()=>({value:add}))},lexical:{kind:'let',name:'v',value:add,in:{kind:'local',name:'v'}}},functions={original,before,current},rows=[];
+let sink=0;const trial=Number(process.argv[2]||0),label=process.argv[3],variant=process.argv[4]||'all';assert(/^(baseline|candidate)$/u.test(label));if(variant!=='all'){assert(Object.hasOwn(functions,variant));for(const key of Object.keys(functions))if(key!==variant)delete functions[key];}
+for(const [name,expression]of Object.entries(fixtures)){
+ const compiled=compileExpressions({profile,roots:{result:expression}}),graph=graphFromRecords(compiled.records),context={typedSurfaces:{value:3}},samples=Object.fromEntries(Object.keys(functions).map(key=>[key,[]]));
+ for(const evaluate of Object.values(functions))assert.deepEqual(evaluate(graph,'result',context,{profile}),original(graph,'result',context,{profile}));
+ const run=key=>{const value=functions[key](graph,'result',context,{profile});sink+=typeof value==='number'?value:(Array.isArray(value)?value[0]:value.field0);};
+ for(let i=0;i<5000;i++)for(const key of Object.keys(functions))run(key);
+ for(let sample=0;sample<11;sample++){const order=Object.keys(functions),offset=(sample+trial)%order.length;order.push(...order.splice(0,offset));for(const key of order){const start=process.hrtime.bigint();for(let i=0;i<3000;i++)run(key);samples[key].push(Number(process.hrtime.bigint()-start)/3000);}}
+ const median=values=>[...values].sort((a,b)=>a-b)[5],medians=Object.fromEntries(Object.entries(samples).map(([key,v])=>[key,median(v)]));rows.push({name,iterationsPerSample:3000,samples,medianNanoseconds:medians,currentOverBefore:medians.current/medians.before,currentOverOriginal:medians.current/medians.original,beforeOverOriginal:medians.before/medians.original});
+}
+const result={label,trial,variant,observedAt:new Date().toISOString(),scope:'Canonical public evaluators; pinned original 5bcde83, before bfe9649 and current source. Four fixtures, 5000 warmups/variant, eleven samples of 3000 evaluations. Single-variant mode admits only one evaluator to the timed call site in each fresh process. No I/O within samples or prepared execution. Finite observations, not a universal threshold or independent evidence.',rows,sink};fs.writeFileSync(new URL(`./canonical-${label}-${trial}${variant==='all'?'':'-'+variant}.json`,import.meta.url),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(rows.map(({name,medianNanoseconds,currentOverBefore,beforeOverOriginal,currentOverOriginal})=>({name,medianNanoseconds,currentOverBefore,beforeOverOriginal,currentOverOriginal}))));

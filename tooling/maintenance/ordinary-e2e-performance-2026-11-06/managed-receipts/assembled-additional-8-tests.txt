@@ -1,0 +1,21 @@
+✔ publication admits every own callable capability before acquiring a file (1.4667ms)
+✔ publication flushes and closes before replacing the previous value (1.0521ms)
+✔ failed acquisition never closes or discards a resource it did not acquire (0.6671ms)
+✔ write and flush faults preserve exact identities and the previous publication (0.6864ms)
+✔ replacement faults discard the closed staging resource without changing the old value (0.3448ms)
+✔ compound cleanup faults preserve every exact fault and retain a non-enumerable recovery capability (0.5602ms)
+✔ real filesystem publication replaces a non-auth configuration and removes its staging name (25.3879ms)
+✔ real partial writes preserve the existing configuration and remove staging bytes (3.2239ms)
+✔ real rename refusal leaves the previous configuration intact (6.6659ms)
+✔ cancellation before acquisition runs no file port (0.6416ms)
+✔ cancellation at each pre-publication boundary closes and discards without replacement (0.326ms)
+✔ cancellation inside completed publication cannot retry or discard the accepted value (0.1378ms)
+✔ file recovery authority cannot be forged by copying an error property (0.1689ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 159.1366

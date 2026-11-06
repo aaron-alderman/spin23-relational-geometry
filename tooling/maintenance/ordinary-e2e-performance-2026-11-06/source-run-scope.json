@@ -1,0 +1,41 @@
+{
+  "source": "6bd2145c78cf39c407a98cc9dca2de9df25a0027",
+  "combinedChecks": 2347,
+  "combinedAssertingChecks": 2346,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "--test-concurrency=2",
+        "test/*.test.mjs"
+      ],
+      "environment": {
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "safe.directory",
+        "GIT_CONFIG_VALUE_0": "*"
+      },
+      "checks": 2336
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=2",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/core/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/test/assurance-observation-input.mjs"
+      ],
+      "checks": 11
+    }
+  ],
+  "scope": "Same counted platform/policy executions as the predecessor, through the managed source mode. Every previous title and multiplicity preserved. Existing protected live-provider group adds seven assertions for ordinary lookup order, changing graph values and lexical context preservation; no new top-level group and no check removed. Algebra also executes separately and through the existing package delegation; these repeats are one evidence family.",
+  "receipt": "source-assertion-preservation.json"
+}

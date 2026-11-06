@@ -1,0 +1,12 @@
+import fs from 'node:fs';import {resolve} from 'node:path';import {pathToFileURL} from 'node:url';
+const a='tooling/maintenance/ordinary-e2e-performance-2026-11-06/',root=resolve('.platform-reconstitution/expression-algebra');
+let source=fs.readFileSync(root+'/src/index.mjs','utf8').replace(/(from\s*)(['"])(\.[^'"]+)\2/gu,(_,prefix,quote,path)=>prefix+quote+pathToFileURL(resolve(root,'src',path)).href+quote);
+source=source.replace('function evaluateIn(source,expression,context,options,evaluateAt){return evaluateAt?evaluateAt(expression,context):evaluateExpression(source,expression,context,options);}','function createContextEvaluator(source,options){return(expression,context)=>evaluateExpression(source,expression,context,options);}');
+const replacements=[
+ ["evaluateIn(source,one('fallback'),bindLocal(context,one('as')??'failure',failure),options,evaluateAt)","evaluateAt(one('fallback'),bindLocal(context,one('as')??'failure',failure))"],
+ ...['value','test','in'].map(field=>[`evaluateIn(source,one('${field}'),ctx,options,evaluateAt)`,`evaluateAt(one('${field}'),ctx)`]),
+ ["evaluateIn(source,one('in'),withInputSurface(context,one('surface'),evaluate(one('value'))),options,evaluateAt)","evaluateAt(one('in'),withInputSurface(context,one('surface'),evaluate(one('value'))))"],
+];let converted=0;
+source=source.split('\n').map(line=>{if(!['attempt','fold','withInputSurface','let','every','map'].some(kind=>line.trimStart().startsWith(`case '${kind}':`)))return line;const pos=line.indexOf(':')+1;let body=line.slice(pos);for(const[from,to]of replacements)body=body.replaceAll(from,to);converted++;return line.slice(0,pos)+' {evaluateAt??=createContextEvaluator(source,options);'+body+'}';}).join('\n');
+if(converted!==6||source.includes('evaluateIn('))throw Error('Expected six complete context dispatches');fs.writeFileSync(a+'index-frame-factory-proposal.mjs',source);
+let probe=fs.readFileSync(a+'prepared-context-probe.mjs','utf8').split('\n').map(line=>line.startsWith('import {prepareExpressionEvaluator as before}')?line.replace('./before-index.mjs','../../../.platform-reconstitution/expression-algebra/src/index.mjs'):line.startsWith('import {prepareExpressionEvaluator as current,')?line.replace('../../../.platform-reconstitution/expression-algebra/src/index.mjs','./index-frame-factory-proposal.mjs'):line).join('\n').replaceAll('prepared-context-probe-','factory-context-probe-');fs.writeFileSync(a+'factory-context-probe.mjs',probe);

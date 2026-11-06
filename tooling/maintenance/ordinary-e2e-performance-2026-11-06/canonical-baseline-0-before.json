@@ -1,0 +1,110 @@
+{
+  "label": "baseline",
+  "trial": 0,
+  "variant": "before",
+  "observedAt": "2026-11-06T06:59:41.071Z",
+  "scope": "Canonical public evaluators; pinned original 5bcde83, before bfe9649 and current source. Four fixtures, 5000 warmups/variant, eleven samples of 3000 evaluations. Single-variant mode admits only one evaluator to the timed call site in each fresh process. No I/O within samples or prepared execution. Finite observations, not a universal threshold or independent evidence.",
+  "rows": [
+    {
+      "name": "scalar",
+      "iterationsPerSample": 3000,
+      "samples": {
+        "before": [
+          1254.2333333333333,
+          1135.4666666666667,
+          1081.1333333333334,
+          1020.7333333333333,
+          1054.7333333333333,
+          835.7666666666667,
+          914.3,
+          831.7333333333333,
+          806.4,
+          794.2666666666667,
+          798.3666666666667
+        ]
+      },
+      "medianNanoseconds": {
+        "before": 914.3
+      },
+      "currentOverBefore": null,
+      "currentOverOriginal": null,
+      "beforeOverOriginal": null
+    },
+    {
+      "name": "record",
+      "iterationsPerSample": 3000,
+      "samples": {
+        "before": [
+          27462.5,
+          27421.166666666668,
+          26166.266666666666,
+          26584.366666666665,
+          28453.233333333334,
+          26667.933333333334,
+          29079,
+          27033.066666666666,
+          27705.4,
+          29916.766666666666,
+          28747.766666666666
+        ]
+      },
+      "medianNanoseconds": {
+        "before": 27462.5
+      },
+      "currentOverBefore": null,
+      "currentOverOriginal": null,
+      "beforeOverOriginal": null
+    },
+    {
+      "name": "list",
+      "iterationsPerSample": 3000,
+      "samples": {
+        "before": [
+          30362.633333333335,
+          25251.9,
+          23589.6,
+          25614.066666666666,
+          25794,
+          25669.233333333334,
+          22706.3,
+          23585.2,
+          24796.466666666667,
+          22411,
+          22800.666666666668
+        ]
+      },
+      "medianNanoseconds": {
+        "before": 24796.466666666667
+      },
+      "currentOverBefore": null,
+      "currentOverOriginal": null,
+      "beforeOverOriginal": null
+    },
+    {
+      "name": "lexical",
+      "iterationsPerSample": 3000,
+      "samples": {
+        "before": [
+          2330.6,
+          2561.4666666666667,
+          2401.0666666666666,
+          2536.866666666667,
+          2534.633333333333,
+          2222.6,
+          2227.233333333333,
+          2611.266666666667,
+          2205.5666666666666,
+          3773.5,
+          3717.0666666666666
+        ]
+      },
+      "medianNanoseconds": {
+        "before": 2534.633333333333
+      },
+      "currentOverBefore": null,
+      "currentOverOriginal": null,
+      "beforeOverOriginal": null
+    }
+  ],
+  "sink": 760000
+}
