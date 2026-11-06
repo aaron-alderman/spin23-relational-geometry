@@ -1,0 +1,372 @@
+import {recordIdentityEvent} from "file:///C:/Users/aaron/grand-theory/tooling/maintenance/file-session-custody-migration-2026-11-06/identity-event.proposal.mjs";
+import {runIdentityObservation} from "file:///C:/Users/aaron/grand-theory/tooling/maintenance/file-session-custody-migration-2026-11-06/identity-observation.proposal.mjs";
+import {runLegacyPrincipalMigration} from "file:///C:/Users/aaron/grand-theory/tooling/maintenance/file-session-custody-migration-2026-11-06/legacy-principal.proposal.mjs";
+import {identityValue} from "file:///C:/Users/aaron/grand-theory/tooling/maintenance/file-session-custody-migration-2026-11-06/identity-values.proposal.mjs";
+import {runIdentityWorkflow,createIdentityWorkflowExecution} from "./identity-workflow-policy.mjs";
+import {identityLifecyclePolicyValue,identityLifecycleParameter,admitIdentityDatabase,initializeIdentityDatabase,prepareIdentityStatement,executeIdentitySql,runIdentityTransaction,runIdentityLifecycle} from "./identity-lifecycle-policy.mjs";
+import {createOwnedResource} from "../core/owned-resource.mjs";
+import {normalizeAuthProviderIdentity as normalizeProviderIdentity,authProviderPolicyValue} from "./auth-provider-policy.mjs";
+export {createPolicyStaticIdentityProvider as createStaticIdentityProvider,createPolicyAuthoredProjectIdentityProvider as createAuthoredProjectIdentityProvider} from "./auth-provider-policy.mjs";
+import { createHash, createHmac, randomBytes, timingSafeEqual } from "node:crypto";
+import { mkdirSync } from "node:fs";
+import { dirname, resolve as resolvePath } from "node:path";
+
+import { cookieSecurityAttributes } from "./security-runtime.mjs";
+import { authSessionPolicy } from "./auth-session-policy.mjs";
+import { authDecisionPolicy } from "../core/auth-decision-policy.mjs";
+
+let DatabaseSync = null;
+try {
+  ({ DatabaseSync } = await import("node:sqlite"));
+} catch {
+  // Construction fails explicitly when this runtime is selected.
+}
+
+export const HOST_IDENTITY_COOKIE = authProviderPolicyValue("auth.hostCookie");
+export const HOST_IDENTITY_SCHEMA_VERSION = authProviderPolicyValue("auth.hostSchemaVersion");
+export const HOST_IDENTITY_CLAIM_VERSION = authProviderPolicyValue("auth.hostClaimVersion");
+const SAFE_PRINCIPAL = new RegExp(authProviderPolicyValue("auth.principalPattern"), authProviderPolicyValue("auth.principalFlags"));
+const IDENTITY_KINDS = new Set(authProviderPolicyValue("auth.kinds"));
+
+function nowMs(now) {
+  const value = typeof now === "function" ? now() : Date.now();
+  const timestamp = value instanceof Date ? value.getTime() : Number(value);
+  if (!authSessionPolicy.evaluate("clock", { value: timestamp })) throw new TypeError("Host identity clock must return finite epoch milliseconds.");
+  return timestamp;
+}
+
+function iso(timestamp) {
+  return new Date(timestamp).toISOString();
+}
+
+function digest(value) {
+  return createHash("sha256").update(String(value || "")).digest("hex");
+}
+
+function identityIdFor(issuer, subject) {
+  return `identity:${digest(`${issuer}\u0000${subject}`)}`;
+}
+
+function platformPrincipalIdFor(principal) {
+  return `principal:${digest(principal)}`;
+}
+
+function parseCookies(req) {
+  const header = String(req?.headers?.cookie || "");
+  const cookies = {};
+  for (const part of header.split(";")) {
+    const separator = part.indexOf("=");
+    if (separator <= 0) continue;
+    const name = part.slice(0, separator).trim();
+    try { cookies[name] = decodeURIComponent(part.slice(separator + 1).trim()); } catch { cookies[name] = ""; }
+  }
+  return cookies;
+}
+
+function safeEqual(left, right) {
+  const a = Buffer.from(String(left || ""));
+  const b = Buffer.from(String(right || ""));
+  return a.length === b.length && timingSafeEqual(a, b);
+}
+
+
+
+function normalizeAuthProvider(provider) {
+  if (!provider || typeof provider.authenticate !== "function") throw new Error("Host identity provider must expose authenticate({ identifier, secret }).");
+  return provider;
+}
+
+function publicIdentity(row) {return identityValue("publicIdentity",{row});}
+
+function publicPlatformPrincipal(row, links = []) {return identityValue("publicPrincipal",{row,links});}
+
+
+
+
+
+export class SqliteHostIdentityRuntime {
+  #databaseResource;
+  constructor({
+    databaseFile,
+    provider,
+    issuer = authProviderPolicyValue("auth.hostIssuer"),
+    cookieName = HOST_IDENTITY_COOKIE,
+    sessionTtlMs,
+    sessionTouchIntervalMs,
+    maximumFailures,
+    failureWindowMs,
+    lockoutMs,
+    now = null,
+  } = {}) {
+    if (!DatabaseSync) throw new Error("Host identity runtime requires a Node runtime with node:sqlite support.");
+    if (!databaseFile) throw new Error("Host identity runtime requires databaseFile.");
+    this.databaseFile = resolvePath(databaseFile);
+    this.provider = normalizeAuthProvider(provider);
+    this.issuer = String(issuer || authProviderPolicyValue("auth.hostIssuer"));
+    this.cookieName = String(cookieName || HOST_IDENTITY_COOKIE);
+    this.sessionTtlMs = authSessionPolicy.resolve("hostTtlMs", sessionTtlMs === undefined ? undefined : Number(sessionTtlMs));
+    this.sessionTouchIntervalMs = authSessionPolicy.resolve("hostTouchMs", sessionTouchIntervalMs === undefined ? undefined : Number(sessionTouchIntervalMs));
+    this.maximumFailures = authSessionPolicy.resolve("maximumFailures", maximumFailures === undefined ? undefined : Number(maximumFailures));
+    this.failureWindowMs = authSessionPolicy.resolve("failureWindowMs", failureWindowMs === undefined ? undefined : Number(failureWindowMs));
+    this.lockoutMs = authSessionPolicy.resolve("lockoutMs", lockoutMs === undefined ? undefined : Number(lockoutMs));
+    this.now = now;
+    nowMs(now);
+    mkdirSync(dirname(this.databaseFile), { recursive: true });
+    this.#databaseResource = createOwnedResource({
+      acquire: () => new DatabaseSync(this.databaseFile),
+      initialize: (database, ownership) => {
+        this.#databaseResource = ownership;
+        this.database = database;
+        initializeIdentityDatabase(database, {
+          clock: () => iso(nowMs(this.now)),
+          entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+          migrate: timestamp => this.migratePlatformPrincipals(timestamp),
+          assignKey: value => { this.csrfKey = value; },
+          prune: () => this.prune(),
+        });
+      },
+      prepareDispose: database => database.exec(identityLifecyclePolicyValue("sql.close.exec.0")),
+      dispose: database => database.close(),
+    });
+  }
+
+  transaction(operation) {
+    return runIdentityTransaction(this.database, operation, () => this.#databaseResource.close());
+  }
+
+  migratePlatformPrincipals(timestamp = iso(nowMs(this.now))) {return runLegacyPrincipalMigration(this,timestamp,{prepareStatement:prepareIdentityStatement,principalId:platformPrincipalIdFor});}
+
+  recordEvent(kind,options){return recordIdentityEvent(this,kind,options,{parameter:identityLifecycleParameter,entropy:(bytes,encoding)=>randomBytes(bytes).toString(encoding),clock:()=>iso(nowMs(this.now)),prepareStatement:prepareIdentityStatement});}
+
+  prune() {
+    return runIdentityLifecycle(this, "prune", {}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  failureState(identifier) {
+    return runIdentityLifecycle(this, "failureState", {identifier}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  recordFailure(identifier) {
+    return runIdentityLifecycle(this, "recordFailure", {identifier}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  clearFailures(identifier) {
+    return runIdentityLifecycle(this, "clearFailures", {identifier}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  identityRow(identityId) {
+    const row = prepareIdentityStatement(this.database, "sql.identityRow.prepare.0").get(identityId);
+    return row ? { ...row, profile: JSON.parse(row.profile || "{}") } : null;
+  }
+
+  platformPrincipalRow(platformPrincipalId) {
+    return prepareIdentityStatement(this.database, "sql.platformPrincipalRow.prepare.0").get(String(platformPrincipalId || "")) || null;
+  }
+
+  platformPrincipalForPrincipal(principal) {
+    return prepareIdentityStatement(this.database, "sql.platformPrincipalForPrincipal.prepare.0").get(String(principal || "")) || null;
+  }
+
+  identityLinksForPrincipal(platformPrincipalId) {
+    return prepareIdentityStatement(this.database, "sql.identityLinksForPrincipal.prepare.0").all(String(platformPrincipalId || "")).map(row => this.identityRow(row.identityId));
+  }
+
+  principalSnapshot(platformPrincipalId) {
+    const principal = this.platformPrincipalRow(platformPrincipalId);
+    return publicPlatformPrincipal(principal, principal ? this.identityLinksForPrincipal(platformPrincipalId) : []);
+  }
+
+  provisionIdentity(providerIdentity) {
+    return runIdentityWorkflow(this, "provision", {providerIdentity}, {
+      clock: () => nowMs(this.now),
+      entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+      digest,
+      normalize: normalizeProviderIdentity,
+      identityId: identityIdFor,
+      principalId: platformPrincipalIdFor,
+      publicIdentity,
+      cookies: parseCookies,
+      parameter: identityLifecycleParameter,
+      prepareStatement: prepareIdentityStatement,
+      admitDatabase: admitIdentityDatabase,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  csrfTokenFor(rawSessionToken) {
+    return createHmac("sha256", this.csrfKey).update(String(rawSessionToken || "")).digest("base64url");
+  }
+
+  sessionCookie(rawToken, req = {}) {
+    return `${this.cookieName}=${encodeURIComponent(rawToken)}; Path=/; Max-Age=${Math.floor(this.sessionTtlMs / 1000)}; ${cookieSecurityAttributes(req)}`;
+  }
+
+  clearCookie(req = {}) {
+    return `${this.cookieName}=; Path=/; Max-Age=0; ${cookieSecurityAttributes(req)}`;
+  }
+
+  async login({ identifier = "", secret = "", req = null } = {}) {
+    const execution = createIdentityWorkflowExecution(this, "login", {identifier,secret,req}, {
+      clock: () => nowMs(this.now),
+      entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+      digest,
+      normalize: normalizeProviderIdentity,
+      identityId: identityIdFor,
+      principalId: platformPrincipalIdFor,
+      publicIdentity,
+      cookies: parseCookies,
+      parameter: identityLifecycleParameter,
+      prepareStatement: prepareIdentityStatement,
+      admitDatabase: admitIdentityDatabase,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+    try {
+      let step = execution.next();
+      while (!step.done) {
+        const { observe, awaited } = step.value;
+        const value = observe();
+        step = execution.next(awaited ? await value : value);
+      }
+      return step.value;
+    } finally { execution.return(); }
+  }
+
+  currentPrincipal(req) {
+    const auth = this.authenticateRequest(req);
+    if (!auth.authenticated) {
+      const error = new Error("Authentication is required.");
+      error.code = "authentication-required";
+      error.statusCode = 401;
+      throw error;
+    }
+    return Object.freeze({
+      currentIdentityId: auth.identityId,
+      principal: this.principalSnapshot(auth.platformPrincipalId),
+    });
+  }
+
+  async linkExternalIdentity({ identifier = "", secret = "", req = null } = {}) {
+    const execution = createIdentityWorkflowExecution(this, "link", {identifier,secret,req}, {
+      clock: () => nowMs(this.now),
+      entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+      digest,
+      normalize: normalizeProviderIdentity,
+      identityId: identityIdFor,
+      principalId: platformPrincipalIdFor,
+      publicIdentity,
+      cookies: parseCookies,
+      parameter: identityLifecycleParameter,
+      prepareStatement: prepareIdentityStatement,
+      admitDatabase: admitIdentityDatabase,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+    try {
+      let step = execution.next();
+      while (!step.done) {
+        const { observe, awaited } = step.value;
+        const value = observe();
+        step = execution.next(awaited ? await value : value);
+      }
+      return step.value;
+    } finally { execution.return(); }
+  }
+
+  unlinkExternalIdentity(identityId, { req = null, expectedRevision = null } = {}) {
+    return runIdentityWorkflow(this, "unlink", {identityId,req,expectedRevision}, {
+      clock: () => nowMs(this.now),
+      entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+      digest,
+      normalize: normalizeProviderIdentity,
+      identityId: identityIdFor,
+      principalId: platformPrincipalIdFor,
+      publicIdentity,
+      cookies: parseCookies,
+      parameter: identityLifecycleParameter,
+      prepareStatement: prepareIdentityStatement,
+      admitDatabase: admitIdentityDatabase,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  verifiedClaim(identity, session = {}) {return identityValue("verifiedClaim",{identity,session});}
+
+  authenticateRequest(req) {
+    return runIdentityLifecycle(this, "authenticate", {req}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  requireCsrf(req, auth = null) {
+    const claim = auth?.authenticated ? auth : this.authenticateRequest(req);
+    if (!claim.authenticated) {
+      const error = new Error("Authentication is required.");
+      error.code = "authentication-required";
+      throw error;
+    }
+    const supplied = String(req?.headers?.["x-rel-csrf-token"] || "");
+    if (!supplied || !safeEqual(supplied, claim.csrfToken)) {
+      const error = new Error("A valid CSRF token is required.");
+      error.code = "invalid-csrf-token";
+      error.statusCode = 403;
+      throw error;
+    }
+    return claim;
+  }
+
+  logout(req) {
+    return runIdentityLifecycle(this, "logout", {req}, {
+      clock: () => nowMs(this.now),
+      digest,
+      cookies: parseCookies,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  setIdentityStatus(identityId, status, { actor, expectedRevision = null } = {}) {
+    return runIdentityWorkflow(this, "status", {identityId,status,actor,expectedRevision}, {
+      clock: () => nowMs(this.now),
+      entropy: (bytes, encoding) => randomBytes(bytes).toString(encoding),
+      digest,
+      normalize: normalizeProviderIdentity,
+      identityId: identityIdFor,
+      principalId: platformPrincipalIdFor,
+      publicIdentity,
+      cookies: parseCookies,
+      parameter: identityLifecycleParameter,
+      prepareStatement: prepareIdentityStatement,
+      admitDatabase: admitIdentityDatabase,
+      lifetimeState: () => this.#databaseResource.state,
+    });
+  }
+
+  auditEvents({ limit = identityLifecycleParameter("auditDefaultLimit") } = {}) {return runIdentityObservation(this,"audit",{limit},{prepareStatement:prepareIdentityStatement,parameter:identityLifecycleParameter});}
+
+  operatorSnapshot({ limit = identityLifecycleParameter("operatorDefaultLimit") } = {}) {const timestamp=iso(nowMs(this.now));return runIdentityObservation(this,"operator",{limit,timestamp},{prepareStatement:prepareIdentityStatement,parameter:identityLifecycleParameter});}
+
+  close() {
+    return this.#databaseResource.close();
+  }
+}

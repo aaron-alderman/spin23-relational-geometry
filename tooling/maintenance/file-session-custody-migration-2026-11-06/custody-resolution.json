@@ -1,0 +1,35 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "passed": true,
+  "scope": "35 file-session controls and three temporary fixture controls; no complete-auth, malicious filesystem race, native ACL or whole-disk-lifecycle claim.",
+  "predecessor": "8a20b15b878a3c7793dce164db51f6219ad09e91",
+  "reports": [
+    "focused-final-tests.txt",
+    "fixture-cleanup-tests.txt",
+    "source-run-scope.json"
+  ],
+  "resolved": [
+    {
+      "issue": "Read failure removed a valid persistent session",
+      "correction": "Preserve the file and propagate exact non-parse failure."
+    },
+    {
+      "issue": "Failed write could leave cache and persistent session divergent",
+      "correction": "Exclusive staged file is written/flushed/closed/published before Map publication; compound recovery failure quarantines the repository."
+    },
+    {
+      "issue": "Storage capability could access non-child paths or linked leaves",
+      "correction": "Capture own filesystem ports and enforce direct-child regular leaf scope before effects."
+    },
+    {
+      "issue": "Foreign or quarantined replacement repository could be reused",
+      "correction": "Private current-repository brand and healthy-state admission before handoff; no foreign callback invocation."
+    },
+    {
+      "issue": "Two source tests retained temporary directory trees",
+      "correction": "Owned fixture normal-completion hooks and non-traversing junction cleanup; old unowned directories remain untouched."
+    }
+  ],
+  "wholePackageComplete": false,
+  "scientificAcceptance": false
+}

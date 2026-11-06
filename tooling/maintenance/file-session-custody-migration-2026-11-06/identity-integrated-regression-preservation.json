@@ -1,0 +1,276 @@
+{
+  "baseSource": "c516467241c936f4749eb233ae2e39d18711c750",
+  "selected": false,
+  "assertionBodiesPreserved": true,
+  "tests": 62,
+  "report": "identity-integrated-regression-tests.txt",
+  "rows": [
+    {
+      "source": "test/identity-workflow.test.mjs",
+      "sourceSha256": "9512eac9ef1d64a8db14892e931c67f9467b1c7ed2199ce230477ecc22ebdd3f",
+      "adapted": "identity-workflow-integrated-regression.test.mjs",
+      "adaptedSha256": "3a881ad1058425c0549b7a08f15d15d957ed78eb53bdd3506e9bb227c1900348",
+      "assertionBodies": [
+        {
+          "name": "identity workflows preserve exact predecessor fixtures without ambient Git metadata",
+          "argumentsSha256": "5d16a31e390ef05fb2e9fc3013c7316031df781881ed67858a40d4f9bce9e59e"
+        },
+        {
+          "name": "new, unchanged and revised provisioning preserves SQLite traces, values and getter order",
+          "argumentsSha256": "241fc156387e07b1ea52058258fd9a76629f8669527084435ab617f0bef61c5d"
+        },
+        {
+          "name": "provisioning collision, revoked identity and inactive principal retain refusal and rollback order",
+          "argumentsSha256": "1c4961629c6daa2b5b04af0c827385c86da746a6301f7978fb2ebf2476cd0522"
+        },
+        {
+          "name": "asynchronous login preserves receiver, provider rotation observation and SQLite effect order",
+          "argumentsSha256": "974fa8a58af1b20dc63dc1bef53da542ce99d3480362e3f75ccbe7309b556d9e"
+        },
+        {
+          "name": "invalid credentials and login lockout preserve failure persistence and diagnostic order",
+          "argumentsSha256": "23f8be8e90e145bde4474ab6116a5dd25f01adab853b2bb60bf424473b6f18e4"
+        },
+        {
+          "name": "provider synchronous and awaited falsy failures preserve exact rejection identities without session effects",
+          "argumentsSha256": "e2890fac91f5b0c3149682b456219ac9aca10ab0816523bc945ce9580ce0fa56"
+        },
+        {
+          "name": "login argument-destructuring failures remain asynchronous rejections before effects",
+          "argumentsSha256": "46690d79f1966686cde344c660a3e25c5265c1dafc11ebd47d92cbfbe1ed021c"
+        },
+        {
+          "name": "link and unlink preserve successful transaction, session revocation and event traces",
+          "argumentsSha256": "41d20d2ef217f5833c2f50d4c0af21d2ba3c7d0ef9b8b8de4c4a0b0286c7cd37"
+        },
+        {
+          "name": "relinking an existing identity and unlinking an already revoked link retain idempotent observations",
+          "argumentsSha256": "102a389a124cb5df4c8caf7f0a8c6429b971889c4e4f8c9c769b7e75932f08f5"
+        },
+        {
+          "name": "link kind conflicts, collisions and revoked links preserve authored error fields and rollback",
+          "argumentsSha256": "7d88bfc2149e18005d738361353d21a5014cf3009c3c8cafb5888fc2c27716af"
+        },
+        {
+          "name": "unlink missing, unknown, stale and last-active-link refusals preserve order and diagnostics",
+          "argumentsSha256": "e63d969eba59f24e2dd9baaa8d78116249cc5fd4d72992fb4bc38cc8fe00725f"
+        },
+        {
+          "name": "identity status transitions preserve revisions, session revocation, public projections and traces",
+          "argumentsSha256": "505cb9ef7743e8e6d0d7dfd1abbf44d2c926733ace49d4294eca2d96cf2ed4b2"
+        },
+        {
+          "name": "invalid status, unknown identity and stale revision preserve exact refusal fields",
+          "argumentsSha256": "5c9f8fb4c0b261ce3eb873505596e9971fdfff66e9eb33804d80e88ec96036db"
+        },
+        {
+          "name": "closure during an awaited provider call refuses before observing the late provider or generating entropy",
+          "argumentsSha256": "6b09e33a267d808833a01be6a41def774dc8b21e9b4aada23d5a78d45b5a9284"
+        },
+        {
+          "name": "workflow entry and own-capability admission refuse before owner getters or host effects",
+          "argumentsSha256": "ca89a1a683bb30520dd691dd3a46f04053eb9d905707fb97d0a9878f54217dc1"
+        },
+        {
+          "name": "login completion retains predecessor ordering against competing microtasks",
+          "argumentsSha256": "48af16b9831e197d5347329d82a4902e795ddfd04165f8768952d83fc7d820c6"
+        },
+        {
+          "name": "link authorization is revoked when logout occurs during provider authentication",
+          "argumentsSha256": "2ed66e6b23135324cd881aecafd80c1cde94b708cc9d64acaf2a3b7da0b8ff26"
+        },
+        {
+          "name": "link continuation cannot switch to a different valid session or principal during the provider await",
+          "argumentsSha256": "a5b438806a44424c6c9001c3d5a41b3e1a166ec9f70d7e7da99e6080b2fb5c3e"
+        },
+        {
+          "name": "changed CSRF evidence refuses link continuation before persistence after provider authentication",
+          "argumentsSha256": "0cfcf8a857a4c97c45bb257e9cdff88327fbfbb22fe827792202d20c26a6e208"
+        },
+        {
+          "name": "reentrant revocation at the last workflow clock refuses inside the transaction before linking",
+          "argumentsSha256": "7f29cf9f2b1d8dabb1c4a84e268665a8058d0d6ab839687a0a89f612281dff13"
+        },
+        {
+          "name": "expiry between post-await admission and transaction admission refuses before linking",
+          "argumentsSha256": "aaf817f080410e0489c2958f533dc3f435538e4b2544ad2f1b8a5c64c035a605"
+        }
+      ]
+    },
+    {
+      "source": "test/identity-lifecycle.test.mjs",
+      "sourceSha256": "1edae751812b3052e5cea24a0c1747bd5904b7cd41251d31c585e9522d161070",
+      "adapted": "identity-lifecycle-integrated-regression.test.mjs",
+      "adaptedSha256": "8733bcc36a03197695178dd4156f6616b9afff5d66b7fe678f8c04e9a90ff615",
+      "assertionBodies": [
+        {
+          "name": "resource capabilities are admitted before acquisition",
+          "argumentsSha256": "153d80391efc39c4c79211d2771e679d0860a0d75615225c3e2faea51a42ad80"
+        },
+        {
+          "name": "acquisition faults never dispose an unacquired resource",
+          "argumentsSha256": "46acda1601fae3042f5f8d6e76d8bbdd03a9980a0b16024b162e92dae0651b74"
+        },
+        {
+          "name": "failed initialization disposes before preserving every exact primary fault",
+          "argumentsSha256": "b387e5b38288c308f62140ee9d34681fe91d1e3d8c2dc681d9e7e80e1fe6d4c3"
+        },
+        {
+          "name": "construction compound faults retain a retry capability without enumerable resource disclosure",
+          "argumentsSha256": "2b1f68a501b402df4ca84af8027ec27bd53ab341457f40586e6e92c0e2d54546"
+        },
+        {
+          "name": "normal ownership transfer prepares and disposes once; repeated close is inert",
+          "argumentsSha256": "fd08faeb8982fffcae89b57c64dddcdf942ef533a54cf3cc97882caee6867519"
+        },
+        {
+          "name": "shutdown preparation faults cannot prevent disposal, including falsy faults",
+          "argumentsSha256": "b6306fad311f6b85aad8cdbda55014046b42a858cde8a5b143715cd19b40af9f"
+        },
+        {
+          "name": "failed disposal remains retryable without repeating preparation",
+          "argumentsSha256": "dc15474ac9eaa9d2f8a490137a6a259b40709b0cca9db199d7d08ac49014eea7"
+        },
+        {
+          "name": "compound shutdown faults preserve ordering and release uncertainty",
+          "argumentsSha256": "5f370c20cbc042a6e866d4d30302a7149b22bf395255a66d18e49012d924b17c"
+        },
+        {
+          "name": "reentrant shutdown refuses while still completing the outer disposal",
+          "argumentsSha256": "db4e4b3f1b78038ef0b1b7040dbc3875b6891c9895147af5341e4006e7912e08"
+        },
+        {
+          "name": "initializers can close an owned resource without accidentally reopening its state",
+          "argumentsSha256": "971c7cf9ae27718fdeb8cf5587292293ad8e7aeed51844a01e19ec5b9225059d"
+        },
+        {
+          "name": "the same ownership mechanism releases a cache lease without altering other entries",
+          "argumentsSha256": "6b7dc06a80499cac4b76bca44f382a392dcb5dfd1fe63cdc5014e1673f563372"
+        },
+        {
+          "name": "the same mechanism removes event subscriptions when setup fails or shutdown preparation throws",
+          "argumentsSha256": "fcf1c7d05497ec6a2edac42490c07da1bf1aea27e48ce1cf07dcb81fba30aa11"
+        },
+        {
+          "name": "real SQLite initialization faults close the acquired handle and preserve all falsy faults",
+          "argumentsSha256": "1499cd7b69fa30eaf385195bc6f8c7fdd81ba88a9a96f482b593d248323870b7"
+        },
+        {
+          "name": "the retained predecessor confirms initialization left the SQLite handle open",
+          "argumentsSha256": "517884ab5ca5160dee5b9c06cf52f6aab4d834df8965748f4550655a2e16e97c"
+        },
+        {
+          "name": "later migration and CSRF setup failures also release the acquired database",
+          "argumentsSha256": "40ca8342647bee93ab5b07bd800407ea1550dc66ad9df1e56366f67a3d86e104"
+        },
+        {
+          "name": "clock failure after database acquisition closes the handle without replacing the fault",
+          "argumentsSha256": "7c62faf38d53c6e73ba90e222e9eadf32880b7deccd5a3815fd5910198b287e1"
+        },
+        {
+          "name": "CSRF statement preparation precedes entropy and wins simultaneous fault precedence",
+          "argumentsSha256": "6df434571a700846b72970aceab2af6f9c3e42cb0bde2ac41c1e1e21e005d484"
+        },
+        {
+          "name": "real SQLite construction compound failures expose a working cleanup retry",
+          "argumentsSha256": "d1e1d177f54f73bb4bb97e673475d4dd48a9fe7d64d019e71e4d4db52bf0d468"
+        },
+        {
+          "name": "checkpoint failure still closes SQLite and preserves the exact shutdown fault",
+          "argumentsSha256": "3e5c92fe35d63627192cee8a03aebe3c38aa1a4dc1a41ca153345704be075ef8"
+        },
+        {
+          "name": "the retained predecessor confirms checkpoint failure prevented SQLite close",
+          "argumentsSha256": "51504ab48809a4b89045c6861bacf3f576f641547a4885904ab03af70f38654f"
+        },
+        {
+          "name": "successful SQLite shutdown is idempotent",
+          "argumentsSha256": "f978915067dd566b82a7a26b3b6ff4df8614c5580e5ab2339a162b96e511a11e"
+        },
+        {
+          "name": "initialization admits own callable capabilities before any SQLite property access",
+          "argumentsSha256": "431ec6e89387ed7aa4bd8575c3da2c248fe776ff3e99a9eb5eb365eb3c7ed7fb"
+        },
+        {
+          "name": "unknown or operation-mismatched SQL names refuse before preparing or executing",
+          "argumentsSha256": "f99d533c703dbb3f16e05986a99b16b6771f576534e8c96978bd0035d5500b59"
+        },
+        {
+          "name": "invalid transaction callbacks refuse before BEGIN",
+          "argumentsSha256": "bef986b66223861f4fb3fc132f40be6f4d0c59660760e652c9d5f66ade1da040"
+        },
+        {
+          "name": "transactions commit values and preserve opaque Promise result identity synchronously",
+          "argumentsSha256": "89aa2ced1b95e0a2f69d3aac55ec0895166cd688d2c43f9868941da25d5bba62"
+        },
+        {
+          "name": "operation faults roll back real SQLite mutations and preserve every exact fault",
+          "argumentsSha256": "ee6eb44c8468ce6aad2c1befc1fae6094db8058abf23073a1c4b38cfa2975bb2"
+        },
+        {
+          "name": "commit faults roll back mutations before propagating the exact fault",
+          "argumentsSha256": "b73b469df8c4d61ceb15e8a9a83e9f7953ce8f9e3978de28a49a39b790dcb493"
+        },
+        {
+          "name": "rollback failure quarantines the connection, closes it and preserves the primary fault",
+          "argumentsSha256": "3c44b0ce4d16f83dc02799dbfedff06c25249e2d1ce8fb3082fe11f255a11dd8"
+        },
+        {
+          "name": "failed quarantine disposal remains denied and can be retried through the resource owner",
+          "argumentsSha256": "1f06d0b1ccdcb97740f486c328b346854c08d0bf87319d2d2b986325deb1d7f0"
+        },
+        {
+          "name": "all 44 authored SQL strings retain their predecessor identities",
+          "argumentsSha256": "342f115ea0a681c44b730fa103924c9e9930d7203e6b7f128840b7def5f21664"
+        },
+        {
+          "name": "initialization, login, session claims and logout preserve predecessor observable order",
+          "argumentsSha256": "eeeceafd176b0f55ba60185daa80962e68035379ba221dfb8be048300d8768d9"
+        },
+        {
+          "name": "audit limit coercion remains after statement and method lookup",
+          "argumentsSha256": "afe6af7f487d91c2cb1fe8c0d2b71b3b214f7c07a6a412653f8d49eca3761f4e"
+        },
+        {
+          "name": "authored entropy parameters change actual SQLite runtime effects without changing mechanisms",
+          "argumentsSha256": "8388e09cdf8b7b18502e7f7dadb51585534f605120a7dc39c9cfca3a613f16bf"
+        },
+        {
+          "name": "late disposal refuses a session claim that the retained predecessor returned after close",
+          "argumentsSha256": "a4d9f8ae4043307608902a6f6b6d2659f39b9c7b88669a3a74e887381655879a"
+        },
+        {
+          "name": "pure continuations execute a non-auth counter using only canonical expressions",
+          "argumentsSha256": "a619bf797c04ea9991bf4fa9a8835572987bd7558c72f260ce3aff805b51bbf5"
+        },
+        {
+          "name": "pure continuations cannot cross the entry continuation boundary",
+          "argumentsSha256": "13752dd06544b0d5b46822e197e54ed66c00bcbaa759a789688a7b25a773482f"
+        },
+        {
+          "name": "pure continuation loops consume the authored step budget",
+          "argumentsSha256": "67d949152d53b90f9053e3ee6b7b91a48eb672e1f428cc46c058afc5529010eb"
+        },
+        {
+          "name": "continuation accessor state refuses without invoking its getter",
+          "argumentsSha256": "18b546e15c8ab9b152484ac6e844fea8ecb60649a5e691f3af4cb7e2c1f871c4"
+        },
+        {
+          "name": "authored retention changes actual pruning boundaries without changing host code",
+          "argumentsSha256": "0c06eccaadfb1f9137a06410f4e061a5eb566596d9955b0e330142f9e65cde9c"
+        },
+        {
+          "name": "prepared capabilities bind the original event receiver and reject foreign-scope tokens",
+          "argumentsSha256": "b9c864748ad994acdfce321d3fdfce229897e5441b69f6b631dd88a5496575b8"
+        },
+        {
+          "name": "prepared capabilities recheck current epoch admission before every effect",
+          "argumentsSha256": "07e575e42683d61828e75a197329104074722037792249fe4dbd02c4a66cd66d"
+        }
+      ]
+    }
+  ],
+  "scope": "Exact test names and non-title argument source slices preserved. Test module imports, fixture root and the current identity-module bytes selected by VM loader are explicitly adapted. Predecessor fixture bodies remain unchanged. 41 lifecycle controls and 21 business workflow controls pass with seven current identity bodies replaced by the proposal adapters.",
+  "wholePackageComplete": false,
+  "passed": true
+}

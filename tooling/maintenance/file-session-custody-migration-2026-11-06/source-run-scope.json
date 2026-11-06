@@ -1,0 +1,41 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "combinedChecks": 2324,
+  "combinedAssertingChecks": 2323,
+  "observationHelpers": 1,
+  "reports": [
+    {
+      "path": "source-tests.txt",
+      "cwd": ".platform-reconstitution/sourcery-platform-reconciled",
+      "command": [
+        "node",
+        "--experimental-vm-modules",
+        "--test",
+        "--test-concurrency=2",
+        "test/*.test.mjs"
+      ],
+      "environment": {
+        "GIT_CONFIG_COUNT": "1",
+        "GIT_CONFIG_KEY_0": "safe.directory",
+        "GIT_CONFIG_VALUE_0": "*"
+      },
+      "checks": 2313
+    },
+    {
+      "path": "source-policy-tests.txt",
+      "cwd": ".",
+      "command": [
+        "node",
+        "--test",
+        "--test-concurrency=2",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/core/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/postgres-rel/semantic-mutation-policy.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/sdk/plugins/data-space/deferred/runtime/data-space-operation-contract.test.mjs",
+        ".platform-reconstitution/sourcery-platform-reconciled/test/assurance-observation-input.mjs"
+      ],
+      "checks": 11
+    }
+  ],
+  "scope": "Two actual test executions, combined by exact assertion title and multiplicity. Not represented as a single process report. Every previous source assertion is preserved.",
+  "receipt": "source-assertion-preservation.json"
+}

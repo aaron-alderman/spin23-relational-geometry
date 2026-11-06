@@ -1,0 +1,44 @@
+{
+  "baseSource": "c516467241c936f4749eb233ae2e39d18711c750",
+  "selected": false,
+  "appliedToSdk": false,
+  "entries": [
+    "audit",
+    "auditRow",
+    "group",
+    "sumGroup",
+    "freezeGroup",
+    "operatorEvent",
+    "operator"
+  ],
+  "expressionRoots": 74,
+  "tests": 6,
+  "report": "identity-observation-proposal-tests.txt",
+  "files": [
+    {
+      "path": "author-identity-observation.mjs",
+      "sha256": "b97e662a69f782608d0db9c72089c355abadd1415440f0837ced84ec749688c3"
+    },
+    {
+      "path": "identity-observation.proposal.json",
+      "sha256": "bf7b3bb68091c9c686ebf5508f25e3f0a227181956477f19bddd89f2ae8756d6"
+    },
+    {
+      "path": "identity-observation.proposal.mjs",
+      "sha256": "c281572bfcf5f28ce5463a6e554ca654a9b695e092a6ce5e61b4c8cda61d9e6c"
+    },
+    {
+      "path": "identity-observation.proposal.test.mjs",
+      "sha256": "77c76864e094f042850d6d83a044d61270a3cfdac74f0240933bdcbe550f46d2"
+    }
+  ],
+  "scope": "Finite current unmodified auditEvents/operatorSnapshot body comparisons via VM using explicitly substituted SQL/parameter capabilities. Exact query/receiver/getter traces, default limit clamp, JSON failures, omission of identifierHash and public freezing are covered. Caller default and timestamp wrappers are explicitly modeled, not silently changed.",
+  "remainingControls": [
+    "Real SQLite audit/operator queries and event persistence remain to be integrated",
+    "recordEvent emission and remaining identity/principal/authorization/diagnostic workflow must be authored",
+    "Projection source application, owner metadata and full verification are unselected",
+    "Native/global Math or prototype tampering and arbitrary custom collection semantics are not generic proof"
+  ],
+  "wholePackageComplete": false,
+  "genericAlgebraProved": false
+}

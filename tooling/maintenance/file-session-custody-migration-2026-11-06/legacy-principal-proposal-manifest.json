@@ -1,0 +1,40 @@
+{
+  "baseSource": "c516467241c936f4749eb233ae2e39d18711c750",
+  "selected": false,
+  "appliedToSdk": false,
+  "entries": [
+    "migrate",
+    "persist"
+  ],
+  "expressionRoots": 41,
+  "tests": 7,
+  "report": "legacy-principal-proposal-tests.txt",
+  "fixtureCorrection": "Initial success fixture used unsupported kind human. Actual SQLite success control refused it. Corrected fixture to authored kind user and reran all seven controls; initial report retained.",
+  "files": [
+    {
+      "path": "author-legacy-principal.mjs",
+      "sha256": "0c36ab6fd9e0d6c9c2225a83eeee7b25ceccc148ac978e56743f91c1c229f5a2"
+    },
+    {
+      "path": "legacy-principal.proposal.json",
+      "sha256": "cd2258810914178072b55fdd663a776eeb32240082b7f029b979daf096cb81a4"
+    },
+    {
+      "path": "legacy-principal.proposal.mjs",
+      "sha256": "29543bbfb9def09222c4a1a27bafd10c72a744ff942d33a593f6ce24e4316f9e"
+    },
+    {
+      "path": "legacy-principal.proposal.test.mjs",
+      "sha256": "6667ef321b4ed7bec80c30c384db1df2ad4f50999bf39dcf95b8541f86f33784"
+    }
+  ],
+  "scope": "Exact current unmodified method body loaded through a VM with SQL preparation capability substituted; explicitly current transitive dependencies. Normal SQLite array results and row getter observation order compared. Actual SQLite controls execute the unchanged authored SQL and prove all-or-nothing late-refusal rollback.",
+  "remainingControls": [
+    "Nonstandard/custom iterator closing and abrupt completion semantics are not proved",
+    "Explicit protocol resource limit is 262,144 steps and needs an intentional fail-closed limit disposition",
+    "Production policy metadata/source ownership and whole-runtime integration are unselected",
+    "Full remaining projections, authorization, provider/plugin/environment and replacement lifecycle stay open"
+  ],
+  "wholePackageComplete": false,
+  "genericAlgebraProved": false
+}

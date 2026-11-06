@@ -1,0 +1,357 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "scope": "Navigation receipt for the remaining full-auth vertical slice; not proof of semantic decomposition, effect admission or complete coverage.",
+  "rows": [
+    {
+      "path": "sdk/server/identity-runtime.mjs",
+      "sha256": "46f560b8e0ffa0d50ce71027da9272f8aff5559ce2db40c2ba7d60f55c6e790e",
+      "lines": 480,
+      "entryLocations": [
+        {
+          "line": 27,
+          "declaration": "function nowMs(now) {"
+        },
+        {
+          "line": 34,
+          "declaration": "function iso(timestamp) {"
+        },
+        {
+          "line": 38,
+          "declaration": "function digest(value) {"
+        },
+        {
+          "line": 42,
+          "declaration": "function identityIdFor(issuer, subject) {"
+        },
+        {
+          "line": 46,
+          "declaration": "function platformPrincipalIdFor(principal) {"
+        },
+        {
+          "line": 50,
+          "declaration": "function parseCookies(req) {"
+        },
+        {
+          "line": 62,
+          "declaration": "function safeEqual(left, right) {"
+        },
+        {
+          "line": 70,
+          "declaration": "function normalizeAuthProvider(provider) {"
+        },
+        {
+          "line": 75,
+          "declaration": "function publicIdentity(row) {"
+        },
+        {
+          "line": 93,
+          "declaration": "function publicPlatformPrincipal(row, links = []) {"
+        },
+        {
+          "line": 124,
+          "declaration": "constructor({"
+        },
+        {
+          "line": 168,
+          "declaration": "transaction(operation) {"
+        },
+        {
+          "line": 172,
+          "declaration": "migratePlatformPrincipals(timestamp = iso(nowMs(this.now))) {"
+        },
+        {
+          "line": 187,
+          "declaration": "recordEvent(kind, { identityId = \"\", principal = \"\", detail = {} } = {}) {"
+        },
+        {
+          "line": 201,
+          "declaration": "prune() {"
+        },
+        {
+          "line": 210,
+          "declaration": "failureState(identifier) {"
+        },
+        {
+          "line": 219,
+          "declaration": "recordFailure(identifier) {"
+        },
+        {
+          "line": 228,
+          "declaration": "clearFailures(identifier) {"
+        },
+        {
+          "line": 237,
+          "declaration": "identityRow(identityId) {"
+        },
+        {
+          "line": 242,
+          "declaration": "platformPrincipalRow(platformPrincipalId) {"
+        },
+        {
+          "line": 246,
+          "declaration": "platformPrincipalForPrincipal(principal) {"
+        },
+        {
+          "line": 250,
+          "declaration": "identityLinksForPrincipal(platformPrincipalId) {"
+        },
+        {
+          "line": 254,
+          "declaration": "principalSnapshot(platformPrincipalId) {"
+        },
+        {
+          "line": 259,
+          "declaration": "provisionIdentity(providerIdentity) {"
+        },
+        {
+          "line": 276,
+          "declaration": "csrfTokenFor(rawSessionToken) {"
+        },
+        {
+          "line": 280,
+          "declaration": "sessionCookie(rawToken, req = {}) {"
+        },
+        {
+          "line": 284,
+          "declaration": "clearCookie(req = {}) {"
+        },
+        {
+          "line": 288,
+          "declaration": "async login({ identifier = \"\", secret = \"\", req = null } = {}) {"
+        },
+        {
+          "line": 314,
+          "declaration": "currentPrincipal(req) {"
+        },
+        {
+          "line": 328,
+          "declaration": "async linkExternalIdentity({ identifier = \"\", secret = \"\", req = null } = {}) {"
+        },
+        {
+          "line": 354,
+          "declaration": "unlinkExternalIdentity(identityId, { req = null, expectedRevision = null } = {}) {"
+        },
+        {
+          "line": 371,
+          "declaration": "verifiedClaim(identity, session = {}) {"
+        },
+        {
+          "line": 393,
+          "declaration": "authenticateRequest(req) {"
+        },
+        {
+          "line": 402,
+          "declaration": "requireCsrf(req, auth = null) {"
+        },
+        {
+          "line": 419,
+          "declaration": "logout(req) {"
+        },
+        {
+          "line": 428,
+          "declaration": "setIdentityStatus(identityId, status, { actor, expectedRevision = null } = {}) {"
+        },
+        {
+          "line": 445,
+          "declaration": "auditEvents({ limit = identityLifecycleParameter(\"auditDefaultLimit\") } = {}) {"
+        },
+        {
+          "line": 449,
+          "declaration": "operatorSnapshot({ limit = identityLifecycleParameter(\"operatorDefaultLimit\") } = {}) {"
+        },
+        {
+          "line": 476,
+          "declaration": "close() {"
+        }
+      ]
+    },
+    {
+      "path": "sdk/server/auth-provider-runtime.mjs",
+      "sha256": "b8d5ed2a8ca0eabcf0a9d6c6bc7120f4f6f268e0dab371c9ec867d804e065f57",
+      "lines": 357,
+      "entryLocations": [
+        {
+          "line": 23,
+          "declaration": "function createAuthSessionRepository(dir = \"\", { now = () => Date.now() } = {}) {"
+        },
+        {
+          "line": 27,
+          "declaration": "function parseCookies(req) {"
+        },
+        {
+          "line": 38,
+          "declaration": "function actorHeaderFromRequest(req, headerName) {"
+        },
+        {
+          "line": 44,
+          "declaration": "function normalizeAuthProvider(plugin, binding, provider) {"
+        },
+        {
+          "line": 72,
+          "declaration": "async function pluginAuthProvider(project, binding, context = {}) {"
+        },
+        {
+          "line": 140,
+          "declaration": "function defaultAuthProvider(prog, binding) {"
+        },
+        {
+          "line": 154,
+          "declaration": "refresh();"
+        },
+        {
+          "line": 161,
+          "declaration": "export async function createServerAuthRuntime({"
+        },
+        {
+          "line": 182,
+          "declaration": "now(); // Refuse an invalid clock before provider or persistence effects."
+        },
+        {
+          "line": 336,
+          "declaration": "export function runtimeFromAuthSession(authSession, extra = {}) {"
+        }
+      ]
+    },
+    {
+      "path": "sdk/server/auth-runtime.mjs",
+      "sha256": "5e60dfc64cd08320b322a6ce4fb9bc826e0e8cc9778de973f4395a487da99a4c",
+      "lines": 11,
+      "entryLocations": []
+    },
+    {
+      "path": "sdk/core/auth-permission-runtime.mjs",
+      "sha256": "009772fd3ef21e32de5efcb1cd3f540516198b4145f5318b1abc4bf818644798",
+      "lines": 240,
+      "entryLocations": [
+        {
+          "line": 15,
+          "declaration": "function roleSubjects(prog, actor) {"
+        },
+        {
+          "line": 19,
+          "declaration": "export function actorExists(prog, actor) {"
+        },
+        {
+          "line": 23,
+          "declaration": "export function hasPermission(prog, actor, predicate, object) {"
+        },
+        {
+          "line": 31,
+          "declaration": "function matchingPrincipals(prog, actor) {"
+        },
+        {
+          "line": 35,
+          "declaration": "function resourcePolicyFor(prog, resource) {"
+        },
+        {
+          "line": 60,
+          "declaration": "function hasScopedGrant(prog, actor, permission, resource) {"
+        },
+        {
+          "line": 74,
+          "declaration": "export function hasResolvedPermission(prog, actor, permission, resource = null) {"
+        },
+        {
+          "line": 84,
+          "declaration": "function issue(base, message) {"
+        },
+        {
+          "line": 88,
+          "declaration": "function unknownActorIssue(actor, context = {}) {"
+        },
+        {
+          "line": 101,
+          "declaration": "function permissionDeniedIssue(actor, permission, context = {}) {"
+        },
+        {
+          "line": 119,
+          "declaration": "function authorityWitnessOverlayRequired(prog, log) {"
+        },
+        {
+          "line": 152,
+          "declaration": "function commandContextAuthorityIssues(prog, log, actor, command, context = {}) {"
+        },
+        {
+          "line": 185,
+          "declaration": "export function readPermissionIssues(prog, actor, context = {}) {"
+        },
+        {
+          "line": 193,
+          "declaration": "export function writePermissionIssues(prog, actor, context = {}) {"
+        },
+        {
+          "line": 201,
+          "declaration": "export function commandPermissionIssues(prog, actor, command, delta, log, context = {}) {"
+        }
+      ]
+    },
+    {
+      "path": "sdk/server/forwarded-identity-runtime.mjs",
+      "sha256": "031b423b2a2b25bc9702e5e3bc216c92f0b091af1af4405b41d6bd09625b4b8f",
+      "lines": 274,
+      "entryLocations": [
+        {
+          "line": 30,
+          "declaration": "function forwardedIdentityError(message, code = \"forwarded-identity-invalid\") {"
+        },
+        {
+          "line": 37,
+          "declaration": "function oneHeader(headers, name) {"
+        },
+        {
+          "line": 43,
+          "declaration": "function decodeBase64Url(value, label) {"
+        },
+        {
+          "line": 54,
+          "declaration": "function safeString(value, name, options) { return normalizeForwardedString(value, name, options, forwardedIdentityError); }"
+        },
+        {
+          "line": 56,
+          "declaration": "function safeKeyId(value) { return normalizeForwardedString(value, \"keyId\", { optional: false, maximum: authProviderPolicyValue(\"forwarded.m"
+        },
+        {
+          "line": 58,
+          "declaration": "function publicKeyId(publicKey) {"
+        },
+        {
+          "line": 64,
+          "declaration": "function validateKeyPair(privateKeyPem, publicKeyPem) {"
+        },
+        {
+          "line": 74,
+          "declaration": "function atomicWrite(file, content, mode) {"
+        },
+        {
+          "line": 85,
+          "declaration": "export function createForwardedIdentityKeyPair() {"
+        },
+        {
+          "line": 96,
+          "declaration": "export function loadOrCreateForwardedIdentityKeyPair({"
+        },
+        {
+          "line": 133,
+          "declaration": "export function createForwardedIdentitySigner({"
+        },
+        {
+          "line": 174,
+          "declaration": "export function createForwardedIdentityVerifier({"
+        },
+        {
+          "line": 211,
+          "declaration": "export function sanitizeForwardedRequestHeaders(headers = {}, {"
+        },
+        {
+          "line": 237,
+          "declaration": "export function forwardedIdentityTrustEnvironment(trust = null) {"
+        },
+        {
+          "line": 254,
+          "declaration": "export function forwardedIdentityTrustFromEnvironment(environment = process.env) {"
+        }
+      ]
+    }
+  ],
+  "wholePackageComplete": false
+}

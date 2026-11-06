@@ -1,0 +1,24 @@
+✔ authored policy retains the four runtime families' valid defaults (1.1994ms)
+✔ canonical policy decisions preserve the exact expiry boundary and epoch zero (0.1926ms)
+✔ authored defaults and expression changes alter decisions without changing the adapter (2.5974ms)
+✔ generic policy supports a separately authored field and refuses unknown roots (1.2431ms)
+✔ policy document and expression inputs refuse accessors without invoking them (0.91ms)
+✔ cookie sessions persist, reopen and expire exactly at the configured deadline (43.0354ms)
+✔ invalid cookie policy and clock refuse before provider and directory effects (1.9053ms)
+✔ reopened cookie repositories remove malformed and expired records (31.6841ms)
+✔ a clock failure during cookie reload preserves valid persisted sessions (27.7318ms)
+✔ legacy snapshot TTL rejects invalid limits before creating storage (3.3788ms)
+✔ host policy rejects invalid limits and clock before opening SQLite (1.9697ms)
+✔ host sessions use authored lifetimes, epoch zero and the configured failure threshold (53.4151ms)
+✔ forwarded limits refuse before key parsing and never accept infinite skew (0.5972ms)
+✔ signed forwarded claims retain request binding and exact expiration with zero skew (17.5801ms)
+✔ forwarded verifier rejects a nonfinite clock with a valid signature (5.4483ms)
+✔ forwarded environment round trips numeric limits and refuses malformed or partial configuration (0.533ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 709.4753

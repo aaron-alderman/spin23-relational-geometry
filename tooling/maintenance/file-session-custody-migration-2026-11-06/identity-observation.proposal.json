@@ -1,0 +1,4936 @@
+{
+  "protocol": "sourcery/authored-policy.v1",
+  "fields": {
+    "workflowSteps": {
+      "default": 256,
+      "check": "positiveInteger"
+    }
+  },
+  "protocols": {
+    "audit": {
+      "execution": "sync",
+      "initial": "audit.initial",
+      "resume": "audit.resume",
+      "states": [
+        "audit.s0",
+        "audit.s1",
+        "audit.s2",
+        "audit.s3",
+        "audit.s4",
+        "audit.s5",
+        "audit.s6",
+        "audit.s7",
+        "audit.s8",
+        "audit.s9",
+        "audit.s10",
+        "audit.s11"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "auditRow": {
+      "execution": "sync",
+      "initial": "auditRow.initial",
+      "resume": "auditRow.resume",
+      "states": [
+        "auditRow.s0",
+        "auditRow.s1",
+        "auditRow.s2",
+        "auditRow.s3",
+        "auditRow.s4"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "group": {
+      "execution": "sync",
+      "initial": "group.initial",
+      "resume": "group.resume",
+      "states": [
+        "group.s0",
+        "group.s1",
+        "group.s2",
+        "group.s3",
+        "group.s4"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "sumGroup": {
+      "execution": "sync",
+      "initial": "sumGroup.initial",
+      "resume": "sumGroup.resume",
+      "states": [
+        "sumGroup.s0",
+        "sumGroup.s1"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "freezeGroup": {
+      "execution": "sync",
+      "initial": "freezeGroup.initial",
+      "resume": "freezeGroup.resume",
+      "states": [
+        "freezeGroup.s0",
+        "freezeGroup.s1"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "operatorEvent": {
+      "execution": "sync",
+      "initial": "operatorEvent.initial",
+      "resume": "operatorEvent.resume",
+      "states": [
+        "operatorEvent.s0",
+        "operatorEvent.s1",
+        "operatorEvent.s2",
+        "operatorEvent.s3",
+        "operatorEvent.s4",
+        "operatorEvent.s5",
+        "operatorEvent.s6",
+        "operatorEvent.s7",
+        "operatorEvent.s8"
+      ],
+      "budgetField": "workflowSteps"
+    },
+    "operator": {
+      "execution": "sync",
+      "initial": "operator.initial",
+      "resume": "operator.resume",
+      "states": [
+        "operator.s0",
+        "operator.s1",
+        "operator.s2",
+        "operator.s3",
+        "operator.s4",
+        "operator.s5",
+        "operator.s6",
+        "operator.s7",
+        "operator.s8",
+        "operator.s9",
+        "operator.s10",
+        "operator.s11",
+        "operator.s12",
+        "operator.s13",
+        "operator.s14",
+        "operator.s15",
+        "operator.s16",
+        "operator.s17",
+        "operator.s18",
+        "operator.s19",
+        "operator.s20",
+        "operator.s21"
+      ],
+      "budgetField": "workflowSteps"
+    }
+  },
+  "expressions": {
+    "profile": "sourcery/expression-reduction-values/1",
+    "roots": {
+      "positiveInteger": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "isSafeInteger",
+              "value": {
+                "kind": "input",
+                "surface": "value"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "lessThan",
+              "left": {
+                "kind": "typedLiteral",
+                "valueType": "number",
+                "value": "0"
+              },
+              "right": {
+                "kind": "input",
+                "surface": "value"
+              }
+            }
+          }
+        ]
+      },
+      "truthy": {
+        "kind": "and",
+        "entries": [
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "typeOf",
+                  "value": {
+                    "kind": "input",
+                    "surface": "truthyInput"
+                  }
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "undefined"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "input",
+                  "surface": "truthyInput"
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "null",
+                  "value": "null"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "input",
+                  "surface": "truthyInput"
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "boolean",
+                  "value": "false"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "input",
+                  "surface": "truthyInput"
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "number",
+                  "value": "0"
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "input",
+                  "surface": "truthyInput"
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": ""
+                }
+              },
+              "then": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "false"
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "strictEq",
+              "left": {
+                "kind": "input",
+                "surface": "truthyInput"
+              },
+              "right": {
+                "kind": "input",
+                "surface": "truthyInput"
+              }
+            }
+          },
+          {
+            "value": {
+              "kind": "if",
+              "condition": {
+                "kind": "strictEq",
+                "left": {
+                  "kind": "typeOf",
+                  "value": {
+                    "kind": "input",
+                    "surface": "truthyInput"
+                  }
+                },
+                "right": {
+                  "kind": "typedLiteral",
+                  "valueType": "string",
+                  "value": "bigint"
+                }
+              },
+              "then": {
+                "kind": "if",
+                "condition": {
+                  "kind": "strictEq",
+                  "left": {
+                    "kind": "toString",
+                    "value": {
+                      "kind": "input",
+                      "surface": "truthyInput"
+                    }
+                  },
+                  "right": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "0"
+                  }
+                },
+                "then": {
+                  "kind": "typedLiteral",
+                  "valueType": "boolean",
+                  "value": "false"
+                },
+                "else": {
+                  "kind": "typedLiteral",
+                  "valueType": "boolean",
+                  "value": "true"
+                }
+              },
+              "else": {
+                "kind": "typedLiteral",
+                "valueType": "boolean",
+                "value": "true"
+              }
+            }
+          }
+        ]
+      },
+      "closedError": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "message",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "Host identity runtime is closed."
+            }
+          },
+          {
+            "name": "fields",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "code",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "identity-runtime-closed"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "audit.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "audit.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "audit.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "prepareSql"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sql.auditEvents.prepare.0"
+                  }
+                },
+                {
+                  "name": "method",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "all"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "query"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s1"
+            }
+          }
+        ]
+      },
+      "audit.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "parameter"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "auditMaximumLimit"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "maximum"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s2"
+            }
+          }
+        ]
+      },
+      "audit.s2": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "number"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "limit"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "numberLimit"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s3"
+            }
+          }
+        ]
+      },
+      "audit.s3": {
+        "kind": "if",
+        "condition": {
+          "kind": "withInputSurface",
+          "surface": "truthyInput",
+          "value": {
+            "kind": "field",
+            "object": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "state"
+              },
+              "field": "data"
+            },
+            "field": "numberLimit"
+          },
+          "in": {
+            "ref": "truthy"
+          }
+        },
+        "then": {
+          "kind": "record",
+          "entries": [
+            {
+              "name": "kind",
+              "value": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "continue"
+              }
+            },
+            {
+              "name": "state",
+              "value": {
+                "kind": "record",
+                "entries": [
+                  {
+                    "name": "root",
+                    "value": {
+                      "kind": "typedLiteral",
+                      "valueType": "string",
+                      "value": "audit.s6"
+                    }
+                  },
+                  {
+                    "name": "data",
+                    "value": {
+                      "kind": "mergeRecords",
+                      "left": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "right": {
+                        "kind": "record",
+                        "entries": []
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "else": {
+          "kind": "record",
+          "entries": [
+            {
+              "name": "kind",
+              "value": {
+                "kind": "typedLiteral",
+                "valueType": "string",
+                "value": "continue"
+              }
+            },
+            {
+              "name": "state",
+              "value": {
+                "kind": "record",
+                "entries": [
+                  {
+                    "name": "root",
+                    "value": {
+                      "kind": "typedLiteral",
+                      "valueType": "string",
+                      "value": "audit.s4"
+                    }
+                  },
+                  {
+                    "name": "data",
+                    "value": {
+                      "kind": "mergeRecords",
+                      "left": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "right": {
+                        "kind": "record",
+                        "entries": []
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "audit.s4": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "parameter"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "auditDefaultLimit"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "selectedLimit"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s5"
+            }
+          }
+        ]
+      },
+      "audit.s5": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "continue"
+            }
+          },
+          {
+            "name": "state",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "audit.s7"
+                  }
+                },
+                {
+                  "name": "data",
+                  "value": {
+                    "kind": "mergeRecords",
+                    "left": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "right": {
+                      "kind": "record",
+                      "entries": []
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "audit.s6": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "continue"
+            }
+          },
+          {
+            "name": "state",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "audit.s7"
+                  }
+                },
+                {
+                  "name": "data",
+                  "value": {
+                    "kind": "mergeRecords",
+                    "left": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "right": {
+                      "kind": "record",
+                      "entries": [
+                        {
+                          "name": "selectedLimit",
+                          "value": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "state"
+                              },
+                              "field": "data"
+                            },
+                            "field": "numberLimit"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "audit.s7": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "minimum"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "left",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "maximum"
+                  }
+                },
+                {
+                  "name": "right",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "selectedLimit"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "upper"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s8"
+            }
+          }
+        ]
+      },
+      "audit.s8": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "maximum"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "left",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "number",
+                    "value": "1"
+                  }
+                },
+                {
+                  "name": "right",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "upper"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "limit"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s9"
+            }
+          }
+        ]
+      },
+      "audit.s9": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "invoke"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "prepared",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "query"
+                  }
+                },
+                {
+                  "name": "args",
+                  "value": {
+                    "kind": "list",
+                    "entries": [
+                      {
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "limit"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "rows"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s10"
+            }
+          }
+        ]
+      },
+      "audit.s10": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "rows"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "auditRow"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "events"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "audit.s11"
+            }
+          }
+        ]
+      },
+      "audit.s11": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "field": "events"
+            }
+          }
+        ]
+      },
+      "auditRow.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditRow.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "auditRow.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "auditRow.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "spread"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "copy"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditRow.s1"
+            }
+          }
+        ]
+      },
+      "auditRow.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "detail"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "rawDetail"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditRow.s2"
+            }
+          }
+        ]
+      },
+      "auditRow.s2": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "parse"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "if",
+                    "condition": {
+                      "kind": "withInputSurface",
+                      "surface": "truthyInput",
+                      "value": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "input",
+                            "surface": "state"
+                          },
+                          "field": "data"
+                        },
+                        "field": "rawDetail"
+                      },
+                      "in": {
+                        "ref": "truthy"
+                      }
+                    },
+                    "then": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "rawDetail"
+                    },
+                    "else": {
+                      "kind": "typedLiteral",
+                      "valueType": "string",
+                      "value": "{}"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "detail"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditRow.s3"
+            }
+          }
+        ]
+      },
+      "auditRow.s3": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "overlay"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "base",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "copy"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "detail"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "detail"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "result"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditRow.s4"
+            }
+          }
+        ]
+      },
+      "auditRow.s4": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "field": "result"
+            }
+          }
+        ]
+      },
+      "group.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "group.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "group.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "group.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "kind"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "kind"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "group.s1"
+            }
+          }
+        ]
+      },
+      "group.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "status"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "status"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "group.s2"
+            }
+          }
+        ]
+      },
+      "group.s2": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "count"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "rawCount"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "group.s3"
+            }
+          }
+        ]
+      },
+      "group.s3": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "number"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "rawCount"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "count"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "group.s4"
+            }
+          }
+        ]
+      },
+      "group.s4": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "kind",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "kind"
+                  }
+                },
+                {
+                  "name": "status",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "status"
+                  }
+                },
+                {
+                  "name": "count",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "count"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "sumGroup.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "sumGroup.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "sumGroup.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "sumGroup.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "count"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "count"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "sumGroup.s1"
+            }
+          }
+        ]
+      },
+      "sumGroup.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "add",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "field",
+                  "object": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "input",
+                      "surface": "state"
+                    },
+                    "field": "data"
+                  },
+                  "field": "request"
+                },
+                "field": "total"
+              },
+              "right": {
+                "kind": "field",
+                "object": {
+                  "kind": "field",
+                  "object": {
+                    "kind": "input",
+                    "surface": "state"
+                  },
+                  "field": "data"
+                },
+                "field": "count"
+              }
+            }
+          }
+        ]
+      },
+      "freezeGroup.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freezeGroup.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "freezeGroup.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "freezeGroup.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "result"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freezeGroup.s1"
+            }
+          }
+        ]
+      },
+      "freezeGroup.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "field": "result"
+            }
+          }
+        ]
+      },
+      "operatorEvent.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "operatorEvent.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "operatorEvent.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "detail"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "rawDetail"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s1"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "omit"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "if",
+                    "condition": {
+                      "kind": "withInputSurface",
+                      "surface": "truthyInput",
+                      "value": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "input",
+                            "surface": "state"
+                          },
+                          "field": "data"
+                        },
+                        "field": "rawDetail"
+                      },
+                      "in": {
+                        "ref": "truthy"
+                      }
+                    },
+                    "then": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "rawDetail"
+                    },
+                    "else": {
+                      "kind": "record",
+                      "entries": []
+                    }
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "identifierHash"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "detail"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s2"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s2": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "eventId"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "eventId"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s3"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s3": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "kind"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "kind"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s4"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s4": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "identityId"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "identityId"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s5"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s5": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "principal"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "principal"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s6"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s6": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "read"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "request"
+                    },
+                    "field": "row"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "occurredAt"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "occurredAt"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s7"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s7": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "record",
+                    "entries": [
+                      {
+                        "name": "eventId",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "eventId"
+                        }
+                      },
+                      {
+                        "name": "kind",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "kind"
+                        }
+                      },
+                      {
+                        "name": "identityId",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "identityId"
+                        }
+                      },
+                      {
+                        "name": "principal",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "principal"
+                        }
+                      },
+                      {
+                        "name": "occurredAt",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "occurredAt"
+                        }
+                      },
+                      {
+                        "name": "detail",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "detail"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "result"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operatorEvent.s8"
+            }
+          }
+        ]
+      },
+      "operatorEvent.s8": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "field": "result"
+            }
+          }
+        ]
+      },
+      "operator.initial": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s0"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "request",
+                  "value": {
+                    "kind": "input",
+                    "surface": "request"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "operator.resume": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "root",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "input",
+                "surface": "action"
+              },
+              "field": "next"
+            }
+          },
+          {
+            "name": "data",
+            "value": {
+              "kind": "mergeRecords",
+              "left": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "right": {
+                "kind": "recordFromEntries",
+                "value": {
+                  "kind": "list",
+                  "entries": [
+                    {
+                      "value": {
+                        "kind": "list",
+                        "entries": [
+                          {
+                            "value": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "action"
+                              },
+                              "field": "save"
+                            }
+                          },
+                          {
+                            "value": {
+                              "kind": "input",
+                              "surface": "observation"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "operator.s0": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "prepareSql"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sql.operatorSnapshot.prepare.0"
+                  }
+                },
+                {
+                  "name": "method",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "all"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "query"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s1"
+            }
+          }
+        ]
+      },
+      "operator.s1": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "invoke"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "prepared",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "query"
+                  }
+                },
+                {
+                  "name": "args",
+                  "value": {
+                    "kind": "list",
+                    "entries": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "identityRows"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s2"
+            }
+          }
+        ]
+      },
+      "operator.s2": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "identityRows"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "group"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "identities"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s3"
+            }
+          }
+        ]
+      },
+      "operator.s3": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "prepareSql"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sql.operatorSnapshot.prepare.1"
+                  }
+                },
+                {
+                  "name": "method",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "get"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "query"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s4"
+            }
+          }
+        ]
+      },
+      "operator.s4": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "invoke"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "prepared",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "query"
+                  }
+                },
+                {
+                  "name": "args",
+                  "value": {
+                    "kind": "list",
+                    "entries": [
+                      {
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "field",
+                              "object": {
+                                "kind": "input",
+                                "surface": "state"
+                              },
+                              "field": "data"
+                            },
+                            "field": "request"
+                          },
+                          "field": "timestamp"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "sessionRow"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s5"
+            }
+          }
+        ]
+      },
+      "operator.s5": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "readNullable"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "sessionRow"
+                  }
+                },
+                {
+                  "name": "key",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "count"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "sessionCount"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s6"
+            }
+          }
+        ]
+      },
+      "operator.s6": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "number"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "if",
+                    "condition": {
+                      "kind": "withInputSurface",
+                      "surface": "truthyInput",
+                      "value": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "input",
+                            "surface": "state"
+                          },
+                          "field": "data"
+                        },
+                        "field": "sessionCount"
+                      },
+                      "in": {
+                        "ref": "truthy"
+                      }
+                    },
+                    "then": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "field",
+                        "object": {
+                          "kind": "input",
+                          "surface": "state"
+                        },
+                        "field": "data"
+                      },
+                      "field": "sessionCount"
+                    },
+                    "else": {
+                      "kind": "typedLiteral",
+                      "valueType": "number",
+                      "value": "0"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "activeSessions"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s7"
+            }
+          }
+        ]
+      },
+      "operator.s7": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "prepareSql"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "root",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sql.operatorSnapshot.prepare.2"
+                  }
+                },
+                {
+                  "name": "method",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "all"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "query"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s8"
+            }
+          }
+        ]
+      },
+      "operator.s8": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "invoke"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "prepared",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "query"
+                  }
+                },
+                {
+                  "name": "args",
+                  "value": {
+                    "kind": "list",
+                    "entries": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "principalRows"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s9"
+            }
+          }
+        ]
+      },
+      "operator.s9": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "principalRows"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "group"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "principals"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s10"
+            }
+          }
+        ]
+      },
+      "operator.s10": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "prepareHost"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "name",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "auditEvents"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "auditEventsMethod"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s11"
+            }
+          }
+        ]
+      },
+      "operator.s11": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "invoke"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "prepared",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "auditEventsMethod"
+                  }
+                },
+                {
+                  "name": "args",
+                  "value": {
+                    "kind": "list",
+                    "entries": [
+                      {
+                        "value": {
+                          "kind": "record",
+                          "entries": [
+                            {
+                              "name": "limit",
+                              "value": {
+                                "kind": "field",
+                                "object": {
+                                  "kind": "field",
+                                  "object": {
+                                    "kind": "field",
+                                    "object": {
+                                      "kind": "input",
+                                      "surface": "state"
+                                    },
+                                    "field": "data"
+                                  },
+                                  "field": "request"
+                                },
+                                "field": "limit"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "events"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s12"
+            }
+          }
+        ]
+      },
+      "operator.s12": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "events"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "operatorEvent"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "recentEvents"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s13"
+            }
+          }
+        ]
+      },
+      "operator.s13": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "reduce"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "identities"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sumGroup"
+                  }
+                },
+                {
+                  "name": "initial",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "number",
+                    "value": "0"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "identityCount"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s14"
+            }
+          }
+        ]
+      },
+      "operator.s14": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "reduce"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "principals"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "sumGroup"
+                  }
+                },
+                {
+                  "name": "initial",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "number",
+                    "value": "0"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "principalCount"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s15"
+            }
+          }
+        ]
+      },
+      "operator.s15": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "identities"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "freezeGroup"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "frozenIdentityValues"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s16"
+            }
+          }
+        ]
+      },
+      "operator.s16": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "frozenIdentityValues"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "frozenIdentities"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s17"
+            }
+          }
+        ]
+      },
+      "operator.s17": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "map"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "receiver",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "principals"
+                  }
+                },
+                {
+                  "name": "entry",
+                  "value": {
+                    "kind": "typedLiteral",
+                    "valueType": "string",
+                    "value": "freezeGroup"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "frozenPrincipalValues"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s18"
+            }
+          }
+        ]
+      },
+      "operator.s18": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "frozenPrincipalValues"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "frozenPrincipals"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s19"
+            }
+          }
+        ]
+      },
+      "operator.s19": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "field",
+                    "object": {
+                      "kind": "field",
+                      "object": {
+                        "kind": "input",
+                        "surface": "state"
+                      },
+                      "field": "data"
+                    },
+                    "field": "recentEvents"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "frozenEvents"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s20"
+            }
+          }
+        ]
+      },
+      "operator.s20": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "call"
+            }
+          },
+          {
+            "name": "port",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "freeze"
+            }
+          },
+          {
+            "name": "input",
+            "value": {
+              "kind": "record",
+              "entries": [
+                {
+                  "name": "value",
+                  "value": {
+                    "kind": "record",
+                    "entries": [
+                      {
+                        "name": "schemaVersion",
+                        "value": {
+                          "kind": "typedLiteral",
+                          "valueType": "string",
+                          "value": "host-identity-operator-snapshot/v1"
+                        }
+                      },
+                      {
+                        "name": "identityCount",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "identityCount"
+                        }
+                      },
+                      {
+                        "name": "platformPrincipalCount",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "principalCount"
+                        }
+                      },
+                      {
+                        "name": "activeSessions",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "activeSessions"
+                        }
+                      },
+                      {
+                        "name": "identities",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "frozenIdentities"
+                        }
+                      },
+                      {
+                        "name": "platformPrincipals",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "frozenPrincipals"
+                        }
+                      },
+                      {
+                        "name": "recentEvents",
+                        "value": {
+                          "kind": "field",
+                          "object": {
+                            "kind": "field",
+                            "object": {
+                              "kind": "input",
+                              "surface": "state"
+                            },
+                            "field": "data"
+                          },
+                          "field": "frozenEvents"
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "name": "save",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "result"
+            }
+          },
+          {
+            "name": "next",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "operator.s21"
+            }
+          }
+        ]
+      },
+      "operator.s21": {
+        "kind": "record",
+        "entries": [
+          {
+            "name": "kind",
+            "value": {
+              "kind": "typedLiteral",
+              "valueType": "string",
+              "value": "return"
+            }
+          },
+          {
+            "name": "value",
+            "value": {
+              "kind": "field",
+              "object": {
+                "kind": "field",
+                "object": {
+                  "kind": "input",
+                  "surface": "state"
+                },
+                "field": "data"
+              },
+              "field": "result"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

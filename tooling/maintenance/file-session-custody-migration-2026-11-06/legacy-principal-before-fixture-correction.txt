@@ -1,0 +1,36 @@
+(node:28196) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ legacy proposal preserves empty and ordinary multi-row migration transactions and SQL receivers (122.9282ms)
+✔ legacy proposal preserves exact invalid-principal diagnostics and rollback position (38.5904ms)
+✔ legacy proposal preserves getter observation order across successful migration and refusal (5.283ms)
+✔ legacy proposal preserves exact falsy preparation, query and transaction faults (69.8499ms)
+✔ legacy proposal refuses later invalid rows inside the same transaction after original prior effects (2.1246ms)
+✖ legacy proposal performs exact principal migration and link updates on actual SQLite (7.6951ms)
+✔ legacy proposal rolls back actual earlier inserts and link updates when a later principal refuses (6.2975ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 6
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 603.6005
+
+✖ failing tests:
+
+test at tooling\maintenance\file-session-custody-migration-2026-11-06\legacy-principal.proposal.test.mjs:20:1
+✖ legacy proposal performs exact principal migration and link updates on actual SQLite (7.6951ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert(!r.fault)
+  
+      at TestContext.<anonymous> (file:///C:/Users/aaron/grand-theory/tooling/maintenance/file-session-custody-migration-2026-11-06/legacy-principal.proposal.test.mjs:20:185)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

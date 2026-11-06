@@ -1,0 +1,114 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "report": "clock-view-regression-tests.txt",
+  "assertionBodiesPreserved": true,
+  "total": 22,
+  "rows": [
+    {
+      "source": "test/file-session-public-runtime.test.mjs",
+      "sourceSha256": "9104d20373ce2517dd38b46d8498588098593eaa8c0d439cd5888a947fd4e47e",
+      "adapted": "clock-view-public-regression.test.mjs",
+      "adaptedSha256": "03a788f5c158fa89176fdc812ff1128f7cdb9a940439833db0ed5aef70740fcc",
+      "assertionBodies": [
+        {
+          "name": "public auth runtime creates, reopens and deletes ordinary persisted sessions",
+          "argumentsSha256": "ee683ea8004d388d93356a1fd8a2faf570308ab1113a1ba39e9eb76fb7fea8d0"
+        },
+        {
+          "name": "public startup preserves valid files and exact falsy filesystem read failures",
+          "argumentsSha256": "1b0d77a1d25a170297bf0695cb12ad480192f34a0549e727e6a0b6d3618ccbe1"
+        },
+        {
+          "name": "public session creation denies cache publication after actual partial descriptor writes",
+          "argumentsSha256": "76e74c01d5a0a29da39299fb5b907044c919eb23a33b4406a59a4636bbb20eaf"
+        },
+        {
+          "name": "filesystem callback substitution after binding cannot replace captured publication operations",
+          "argumentsSha256": "f4838e71501cdc9bcbd14c501d76e239eb62228373ebafeb1808b7d5974ea15e"
+        },
+        {
+          "name": "runtime handoff refuses foreign repository capabilities before invoking their methods",
+          "argumentsSha256": "3542b0b383f6f07eb3c41f1b1b2d4f30983a03621250596aa430324a392af6b0"
+        },
+        {
+          "name": "runtime handoff retains the exact admitted repository and shared revocation state",
+          "argumentsSha256": "e28e10b5ef153039e0c951f27a7127049ce42b1938d80050f989fa86a4bc35dd"
+        },
+        {
+          "name": "runtime handoff refuses a quarantined repository until its owned staging recovery completes",
+          "argumentsSha256": "1e45ba9c9334ba29ce7484c2d90aa795a0fab1a23a5b5069274f7f53fba4b5f2"
+        },
+        {
+          "name": "exclusive staging collisions preserve an unowned file and the previous target",
+          "argumentsSha256": "c7ddf856967f6aa5fe167aa25c93d0883fc21ab22df3f4206726cd130403337c"
+        },
+        {
+          "name": "filesystem scope refuses escaped or nested paths before invoking filesystem operations",
+          "argumentsSha256": "df54fb9e74e1accb25726468e8a207f01f068537677944e9249391966ed4d41d"
+        },
+        {
+          "name": "session leaf links refuse before reading or removing their targets",
+          "argumentsSha256": "46cb9bbba843fdcc6b9788af38daddd0c70954591b6e704c0d796e2c2ce0dac9"
+        }
+      ]
+    },
+    {
+      "source": "test/auth-session-repository.test.mjs",
+      "sourceSha256": "3c36862a2a927241a790c0d7e41c64a89963ca0e6f4aeda9f8b660520ae0200f",
+      "adapted": "clock-view-repository-regression.test.mjs",
+      "adaptedSha256": "9354a15f7e0264fb2b6b11ef02f48bccd4ce5003bba9e3d44869860699c3c528",
+      "assertionBodies": [
+        {
+          "name": "session repository uses an exact portable predecessor fixture",
+          "argumentsSha256": "b53b107e2d0e6d99b50eff4e749279ecb239676afd3980e06fb3a5221d4f924f"
+        },
+        {
+          "name": "normal persistence, reopening, expiration and deletion preserve predecessor values and file bytes",
+          "argumentsSha256": "145db069113ea7d06081cee4c93022bfd09310af46396c5fab8a2947528618b1"
+        },
+        {
+          "name": "memory-only mode samples clocks through pruning and executes no storage capability",
+          "argumentsSha256": "e50a7673756f1f637a50c4f35a7aba600873d9f3bac32069b91b7ddc1bc626d9"
+        },
+        {
+          "name": "read failures preserve each exact fault and never delete a valid persisted session",
+          "argumentsSha256": "a23ff0d0277172e02d2d8feb1ade409f02656d87c8305f0cd106963caef39975"
+        },
+        {
+          "name": "non-syntax parser failures preserve records and exact identities",
+          "argumentsSha256": "30fa6fbabcd24c2ee602c1c2021d141f826c0993c81b6d5c328ec25c83e3c7a9"
+        },
+        {
+          "name": "malformed and expired content retains the predecessor cleanup rule",
+          "argumentsSha256": "276a8239ffdbab067f19777a0fef5bc7b86b018f1ac9a563352cddab06010bc7"
+        },
+        {
+          "name": "partial writes leave both the prior file and cached session unchanged",
+          "argumentsSha256": "ea61b76d459595dcc9a398cd61371f81e09d34b39c05c11822238d0978446031"
+        },
+        {
+          "name": "flush and rename refusals retain the old file and deny cache publication",
+          "argumentsSha256": "2673eccc58227c6f103a802476502449fe38a92be4d1f3feedc72ca60a19d029"
+        },
+        {
+          "name": "cleanup failure quarantines the repository until its exact real staging file is recovered",
+          "argumentsSha256": "b516d7ad8f31918d0ba1dde014912113ecf806e36f293dbf225cbc89a3bd2c98"
+        },
+        {
+          "name": "unowned staging-looking files are preserved during reload",
+          "argumentsSha256": "a2d3e34896221da9773e94218e354ff0ddf8535447b8ab3bd5ce40519a6f058f"
+        },
+        {
+          "name": "authored active-session and directory limits refuse before new persistence effects",
+          "argumentsSha256": "bf7fd81488437d36ff04442a0cf175ccd1425475ff4727fc3abaf80d1baf86a6"
+        },
+        {
+          "name": "invalid capability dictionaries and clock failures refuse before storage effects",
+          "argumentsSha256": "eaee94545719fc1dfbe0881bb408a8733481ef98500ec50cec0931e35423d953"
+        }
+      ]
+    }
+  ],
+  "scope": "Every test name and non-title argument AST source slice remains byte-identical. Imports, fixture roots, source selection and VM module linking were explicitly adapted to the proposal. This does not claim all helper bodies are unchanged.",
+  "passed": true
+}

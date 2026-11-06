@@ -1,0 +1,49 @@
+{
+  "baseSource": "c516467241c936f4749eb233ae2e39d18711c750",
+  "selected": false,
+  "appliedToSdk": false,
+  "tests": 8,
+  "report": "session-clock-view-proposal-tests.txt",
+  "files": [
+    {
+      "path": "session-clock-view.proposal.mjs",
+      "sha256": "bb531c5186b0dd8a463cf965618b8e2302b1e35828ee920492cc4a7701958cd1"
+    },
+    {
+      "path": "auth-runtime-clock-view.proposal.mjs.txt",
+      "sha256": "44f601f1dd15790d7c4f6f547bec9dcacb7300c6f12eb425406adecc74d944e2"
+    },
+    {
+      "path": "session-clock-view.proposal.test.mjs",
+      "sha256": "ed3e874576d3ca5872bf3c9c812c8c2aba8da02fd82c4a2df78d6afae89840f7"
+    },
+    {
+      "path": "clock-view-public-regression.test.mjs",
+      "sha256": "03a788f5c158fa89176fdc812ff1128f7cdb9a940439833db0ed5aef70740fcc"
+    },
+    {
+      "path": "clock-view-repository-regression.test.mjs",
+      "sha256": "9354a15f7e0264fb2b6b11ef02f48bccd4ce5003bba9e3d44869860699c3c528"
+    }
+  ],
+  "baseFiles": [
+    {
+      "path": "sdk/server/auth-session-repository.mjs",
+      "sha256": "3057b81a394487050b8b04969001bca3846cc702355bc1cd41bd367519b7806e"
+    },
+    {
+      "path": "sdk/server/auth-provider-runtime.mjs",
+      "sha256": "b8d5ed2a8ca0eabcf0a9d6c6bc7120f4f6f268e0dab371c9ec867d804e065f57"
+    }
+  ],
+  "mechanism": "A private branded binder creates per-operation clock views over shared repository state. Public replacementSeed retains exact shared repository identity; the runtime uses its own clock-bound view. Child authored protocol calls receive the same lexical clock, including under reentrancy.",
+  "remainingControls": [
+    "Full source/integration/bootstrap qualification after application",
+    "Remaining plugin/provider/environment/startup lifecycle and full-auth obligations"
+  ],
+  "wholePackageComplete": false,
+  "genericAlgebraProved": false,
+  "additionalRegressions": 22,
+  "regressionReport": "clock-view-regression-tests.txt",
+  "regressionScope": "All 22 current file-session repository/public-runtime tests run against proposal namespaces with original assertion titles/bodies preserved; fixture roots and module loading explicitly adapted. Eight additional controls cover replacement clocks, exact falsy faults, actual persisted expiry, reentrancy and cross-view quarantine/recovery."
+}

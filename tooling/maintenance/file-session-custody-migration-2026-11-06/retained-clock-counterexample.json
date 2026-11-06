@@ -1,0 +1,14 @@
+{
+  "source": "c516467241c936f4749eb233ae2e39d18711c750",
+  "module": ".platform-reconstitution/sourcery-platform-reconciled/sdk/server/auth-provider-runtime.mjs",
+  "sha256": "b8d5ed2a8ca0eabcf0a9d6c6bc7120f4f6f268e0dab371c9ec867d804e065f57",
+  "report": "retained-clock-characterization.txt",
+  "tests": 2,
+  "characterizationPassed": true,
+  "defectResolved": false,
+  "wholePackageComplete": false,
+  "scope": "Healthy branded repository handoff preserves the old now callback. A new generation passes new-clock startup admission but subsequent cookie lookup and publication invoke the retired callback and propagate its exact fault before consulting the new clock.",
+  "proposedCorrection": "Give each admitted runtime an explicit repository view whose current clock/lifetime capability belongs to that generation while sharing revocation state. Do not mutate the global clock behind an older live view or silently authorize foreign replacement methods. Compare both clocks, old/new interleaving, expiration, quarantine and callback faults against public-runtime requirements.",
+  "qualificationImpact": "This is a separately open full-auth replacement lifecycle obligation. The current finite file custody cohort does not claim to resolve clock-generation ownership.",
+  "computerUsePaused": true
+}

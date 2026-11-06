@@ -1,8 +1,8 @@
 {
   "protocol": "sourcery/managed-qualification-profile.v1",
   "engineDirectory": "tooling/maintenance/all-remaining-contract-migration-2026-11-05",
-  "inputDirectory": "tooling/maintenance/identity-workflow-migration-2026-11-06/profile",
-  "runtimeModules": 898,
+  "inputDirectory": "tooling/maintenance/file-session-custody-migration-2026-11-06/profile",
+  "runtimeModules": 901,
   "additionalTests": [
     {
       "path": "test/runtime-loading-boundaries.test.mjs",
@@ -40,6 +40,28 @@
       "nodeOptions": [
         "--experimental-vm-modules"
       ]
+    },
+    {
+      "path": "test/owned-file.test.mjs",
+      "tests": 13
+    },
+    {
+      "path": "test/auth-session-repository.test.mjs",
+      "tests": 12,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/file-session-public-runtime.test.mjs",
+      "tests": 10,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/temporary-fixture.test.mjs",
+      "tests": 3
     }
   ]
 }

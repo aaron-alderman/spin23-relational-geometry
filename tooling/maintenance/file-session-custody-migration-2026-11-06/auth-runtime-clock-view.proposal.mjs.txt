@@ -1,0 +1,357 @@
+import * as custodyFs from "node:fs";
+import {createSessionRepository,admitAuthSessionRepository,bindAuthSessionRepository} from "./auth-session-repository.mjs";
+import {createFileSessionStorage} from "./file-session-storage.mjs";
+import {authCredentialFacts,buildAuthCredentialIndex,authenticateAuthCredential,identifierForAuthActor} from "./auth-provider-policy.mjs";
+import { randomBytes } from "node:crypto";
+import { join } from "node:path";
+import { authSessionPolicy } from "./auth-session-policy.mjs";
+import { authDecisionPolicy } from "../core/auth-decision-policy.mjs";
+import { importContentRuntimeModule as importFreshAuthRuntimeModule } from "./runtime-module-source.mjs";
+import { actorExists, hasResolvedPermission } from "./auth-runtime.mjs";
+import { RuntimeDiagnosticError } from "./runtime-diagnostics.mjs";
+import { cookieSecurityAttributes } from "./security-runtime.mjs";
+import { authIssue, bindingIssue, invalidPluginAuthRuntime } from "./auth-provider-errors.mjs";
+import { deriveAuthSessionForActor, projectPublicAuthSession, authCookieHeadersForSession } from "./auth-provider-session-values.mjs";
+
+export const AUTH_COOKIE = "rel_auth";
+export const LEGACY_ACTOR_COOKIE = "rel_actor";
+
+
+
+
+
+function createAuthSessionRepository(dir = "", { now = () => Date.now() } = {}) {
+  return createSessionRepository(dir, {now,storage:createFileSessionStorage(custodyFs,join,randomBytes,dir)});
+}
+
+function parseCookies(req) {
+  const header = req.headers.cookie;
+  if (!header) return {};
+  return header.split(";").reduce((out, part) => {
+    const [rawName, ...rest] = part.trim().split("=");
+    if (!rawName) return out;
+    out[rawName] = decodeURIComponent(rest.join("=") || "");
+    return out;
+  }, {});
+}
+
+function actorHeaderFromRequest(req, headerName) {
+  const header = req.headers[String(headerName || "").toLowerCase()];
+  if (Array.isArray(header)) return header[0] || "";
+  return header || "";
+}
+
+function normalizeAuthProvider(plugin, binding, provider) {
+  if (!provider || typeof provider !== "object" || Array.isArray(provider)) {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin?.subject || "<unknown>"} auth runtime createAuthProvider() must return an object.`,
+      `Resolved runtime file: ${plugin?.authRuntimeFile || "<missing>"}`,
+    );
+  }
+  if (typeof provider.authenticate !== "function") {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin?.subject || "<unknown>"} auth provider must expose authenticate({ identifier, secret }).`,
+      `Resolved runtime file: ${plugin?.authRuntimeFile || "<missing>"}`,
+    );
+  }
+  if (typeof provider.identifierForActor !== "function") {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin?.subject || "<unknown>"} auth provider must expose identifierForActor(actor).`,
+      `Resolved runtime file: ${plugin?.authRuntimeFile || "<missing>"}`,
+    );
+  }
+  return provider;
+}
+
+async function pluginAuthProvider(project, binding, context = {}) {
+  if (typeof project?.pluginsList !== "function") return null;
+  const authPlugins = project.pluginsList().filter(plugin => plugin?.authRuntimeFile);
+  if (!authPlugins.length) return null;
+  if (authPlugins.length > 1) {
+    const pluginList = authPlugins.map(plugin => plugin.subject).join(", ");
+    throw new RuntimeDiagnosticError(authPlugins.map(plugin => authIssue(
+      plugin,
+      binding,
+      `Plugin ${plugin.subject} registers a duplicate auth runtime.`,
+      {
+        code: "duplicate-auth-runtime",
+        details: `Only one authRuntimeFile may apply to binding ${binding?.subject || "<unknown>"}. Found: ${pluginList}.`,
+      },
+    )), {
+      code: "duplicate-auth-runtime",
+      title: `Runtime startup failed for binding ${binding?.subject || "<unknown>"}`,
+    });
+  }
+  const plugin = authPlugins[0];
+  let module;
+  try {
+    module = await importFreshAuthRuntimeModule(plugin.authRuntimeFile);
+  } catch (error) {
+    throw new RuntimeDiagnosticError([authIssue(
+      plugin,
+      binding,
+      `Plugin ${plugin.subject} authRuntimeFile could not be loaded: ${error?.message || error}`,
+      {
+        code: "plugin-auth-runtime-load-failed",
+        details: `Resolved runtime file: ${plugin.authRuntimeFile}`,
+      },
+    )], {
+      code: "plugin-auth-runtime-load-failed",
+      title: `Runtime startup failed for binding ${binding?.subject || "<unknown>"}`,
+    });
+  }
+  if (module?.authRuntime == null) {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin.subject} authRuntimeFile must export "authRuntime".`,
+      `Resolved runtime file: ${plugin.authRuntimeFile}`,
+    );
+  }
+  const authRuntime = typeof module.authRuntime === "function"
+    ? module.authRuntime({ plugin, project, binding })
+    : module.authRuntime;
+  if (!authRuntime || typeof authRuntime !== "object" || Array.isArray(authRuntime)) {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin.subject} authRuntimeFile must export authRuntime as an object or factory.`,
+      `Resolved runtime file: ${plugin.authRuntimeFile}`,
+    );
+  }
+  if (typeof authRuntime.createAuthProvider !== "function") {
+    throw invalidPluginAuthRuntime(
+      plugin,
+      binding,
+      `Plugin ${plugin.subject} authRuntime must expose createAuthProvider().`,
+      `Resolved runtime file: ${plugin.authRuntimeFile}`,
+    );
+  }
+  const provider = await authRuntime.createAuthProvider(context);
+  return normalizeAuthProvider(plugin, binding, provider);
+}
+
+function defaultAuthProvider(prog, binding) {
+  const facts = authCredentialFacts(prog);
+  let version, index;
+  const refresh = () => {
+    if (index && version !== undefined && version === facts.version) return;
+    const next = buildAuthCredentialIndex(facts, credential => {
+      throw new RuntimeDiagnosticError([bindingIssue(
+        binding,
+        `Binding ${binding?.subject || "<unknown>"} authors duplicate AuthCredential.identifier "${credential.identifier}".`,
+        { code: "duplicate-auth-identifier", subject: credential.subject, predicate: "identifier" },
+      )], { code: "duplicate-auth-identifier", title: `Runtime startup failed for binding ${binding?.subject || "<unknown>"}` });
+    });
+    index = next; version = facts.version;
+  };
+  refresh();
+  return {
+    authenticate({ identifier, secret }) { refresh(); return authenticateAuthCredential(index.credentials, identifier, secret); },
+    identifierForActor(actor) { refresh(); return identifierForAuthActor(index.labels, actor); },
+  };
+}
+
+export async function createServerAuthRuntime({
+  project,
+  binding,
+  prog,
+  frontendProg,
+  runtimeFacts,
+  authUi,
+  authSessionDir = "",
+  previousAuthRuntime = null,
+  forwardedIdentityVerifier = null,
+  profile = null,
+  now: nowOption,
+  authSessionTtlMs,
+} = {}) {
+  const ttlMs = authSessionPolicy.resolve("cookieTtlMs", authSessionTtlMs);
+  const clock = typeof nowOption === "function" ? nowOption : () => Date.now();
+  const now = () => {
+    const value = clock();
+    if (!authSessionPolicy.evaluate("clock", { value })) throw new TypeError("Auth session clock must return finite epoch milliseconds.");
+    return value;
+  };
+  now(); // Refuse an invalid clock before provider or persistence effects.
+  const phase = (name, operation) => typeof profile === "function"
+    ? profile(name, operation)
+    : operation();
+  const pluginProvider = await phase("provider", () => pluginAuthProvider(project, binding, {
+    project,
+    binding,
+    prog,
+    frontendProg,
+    runtimeFacts,
+  }));
+  const provider = pluginProvider || await phase("defaultProvider", () => defaultAuthProvider(prog, binding));
+
+  const previousSeed = previousAuthRuntime?.replacementSeed?.() || null;
+  const authSessions = phase("sessions", () => previousSeed
+      && String(previousSeed.authSessionDir || "") === String(authSessionDir || "")
+      && previousSeed.authSessions
+      ? admitAuthSessionRepository(previousSeed.authSessions)
+      : createAuthSessionRepository(authSessionDir, { now }));
+  const sessionAccess = bindAuthSessionRepository(authSessions,now);
+  const sessionFromRequest = req => {
+    const cookies = parseCookies(req);
+    const id = String(cookies[AUTH_COOKIE] || "");
+    if (!id) return null;
+    const session = sessionAccess.get(id);
+    if (!session || session.expiresAt <= now()) {
+      sessionAccess.delete(id);
+      return null;
+    }
+    return session;
+  };
+  const forwardedIdentityByRequest = new WeakMap();
+  const forwardedIdentityFromRequest = req => {
+    if (!forwardedIdentityVerifier) return null;
+    if (!req || (typeof req !== "object" && typeof req !== "function")) return forwardedIdentityVerifier.verifyRequest(req);
+    if (forwardedIdentityByRequest.has(req)) {
+      const result = forwardedIdentityByRequest.get(req);
+      if (!result.ok) throw result.error;
+      return result.value;
+    }
+    try {
+      const result = forwardedIdentityVerifier.verifyRequest(req);
+      forwardedIdentityByRequest.set(req, { ok: true, value: result });
+      return result;
+    } catch (error) {
+      forwardedIdentityByRequest.set(req, { ok: false, error });
+      throw error;
+    }
+  };
+  const requestIdentityEvidence = req => {
+    const forwardedIdentity = forwardedIdentityFromRequest(req);
+    const lane = authDecisionPolicy.evaluate("requestIdentityLane", {
+      hasForwardedPrincipal: !!forwardedIdentity?.principal,
+      forwardingConfigured: !!forwardedIdentityVerifier,
+    });
+    if (lane === "forwarded") return { lane, forwardedIdentity };
+    if (lane === "anonymous") return { lane, actor: authUi?.unauthenticatedActor || "" };
+    const session = sessionFromRequest(req);
+    const localLane = authDecisionPolicy.evaluate("localIdentityLane", { hasCookieActor: !!session?.actor });
+    if (localLane === "cookie") return { lane: localLane, session, actor: session.actor };
+    return { lane: localLane, actor: actorHeaderFromRequest(req, authUi?.authActorHeaderName) || authUi?.unauthenticatedActor || "" };
+  };
+  const resolveActor = req => {
+    const evidence = requestIdentityEvidence(req);
+    return evidence.lane === "forwarded" ? evidence.forwardedIdentity.principal : evidence.actor;
+  };
+
+  const authSessionForActor = actor => deriveAuthSessionForActor({
+    actor,
+    unauthenticatedActor: authUi?.unauthenticatedActor,
+    actorExists: value => actorExists(prog, value),
+    identifierForActor: value => provider.identifierForActor(value),
+    canRead: value => hasResolvedPermission(prog, value, "read", "rt.state"),
+    canWrite: value => hasResolvedPermission(prog, value, "write", "rt.save"),
+    canExecute: value => hasResolvedPermission(prog, value, "execute", "add"),
+  });
+  const publicAuthSessionFromServerSession = session => projectPublicAuthSession(session, authSessionForActor);
+  const authCookieHeaderForSession = (session, req = {}) => authCookieHeadersForSession(session, req, cookieSecurityAttributes, AUTH_COOKIE, LEGACY_ACTOR_COOKIE);
+
+  return {
+    provider,
+    replacementSeed() {
+      return Object.freeze({ authSessions, authSessionDir: String(authSessionDir || "") });
+    },
+    resolveActor,
+    createAuthSession(actor, identifier = "") {
+      sessionAccess.pruneExpired();
+      const createdAt = now();
+      const id = randomBytes(32).toString("base64url");
+      const session = {
+        id,
+        actor,
+        identifier,
+        csrfToken: randomBytes(32).toString("base64url"),
+        createdAt,
+        expiresAt: authSessionPolicy.evaluate("expiry", { now: createdAt, ttlMs }),
+      };
+      return sessionAccess.set(session);
+    },
+    cookieAuthSession(req) {
+      return sessionFromRequest(req);
+    },
+    disposeAuthSession(req) {
+      const session = sessionFromRequest(req);
+      if (session?.id) sessionAccess.delete(session.id);
+    },
+    authSessionForActor,
+    assertRequestIdentity(req) {
+      return forwardedIdentityFromRequest(req);
+    },
+    currentAuthSession(req) {
+      const evidence = requestIdentityEvidence(req);
+      if (evidence.lane === "forwarded") {
+        const { forwardedIdentity } = evidence;
+        return {
+          ...authSessionForActor(forwardedIdentity.principal),
+          identifier: null,
+          authenticationSource: "forwarded-host",
+          principal: forwardedIdentity.principal,
+          identityId: forwardedIdentity.identityId,
+          platformPrincipalId: forwardedIdentity.platformPrincipalId,
+          issuer: forwardedIdentity.issuer,
+          kind: forwardedIdentity.kind,
+          assurance: forwardedIdentity.assurance,
+          identityRevision: forwardedIdentity.identityRevision,
+          principalRevision: forwardedIdentity.principalRevision,
+          sessionId: forwardedIdentity.sessionId,
+          issuedAt: forwardedIdentity.issuedAt,
+          expiresAt: forwardedIdentity.expiresAt,
+        };
+      }
+      if (evidence.lane === "cookie") return publicAuthSessionFromServerSession(evidence.session);
+      return authSessionForActor(evidence.actor);
+    },
+    authCookieHeader(actor, identifier = "", req = {}) {
+      const session = this.createAuthSession(actor, identifier);
+      return authCookieHeaderForSession(session, req);
+    },
+    authSessionCookie(actor, identifier = "", req = {}) {
+      const session = this.createAuthSession(actor, identifier);
+      return {
+        authSession: publicAuthSessionFromServerSession(session),
+        cookieHeaders: authCookieHeaderForSession(session, req),
+      };
+    },
+    clearAuthCookieHeader(req = {}) {
+      this.disposeAuthSession(req);
+      return [
+        `${AUTH_COOKIE}=; Path=/; Max-Age=0; ${cookieSecurityAttributes(req)}`,
+        `${LEGACY_ACTOR_COOKIE}=; Path=/; Max-Age=0; ${cookieSecurityAttributes(req)}`,
+      ];
+    },
+  };
+}
+
+export function runtimeFromAuthSession(authSession, extra = {}) {
+  const canRead = !!authSession.canRead;
+  const canWrite = !!authSession.canWrite;
+  const canExecute = !!authSession.canExecute;
+  return {
+    actor: authSession.actor || "",
+    identifier: authSession.identifier || "",
+    csrfToken: authSession.csrfToken || "",
+    canAccessOperator: !!authSession.canAccessOperator,
+    canRead,
+    canWrite,
+    canExecute,
+    capabilities: [
+      ...(canRead ? ["read"] : []),
+      ...(canWrite ? ["write"] : []),
+      ...(canExecute ? ["execute"] : []),
+    ],
+    renderTarget: "server",
+    ...extra,
+  };
+}
