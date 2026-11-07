@@ -29,11 +29,25 @@ Language and encoding observations may support obligations in more than one saga
 
 Each unsupported obligation produces a roadmap item with its product, saga, target level, state, action and owner. Items at the first unachieved level are marked next; later obligations remain visible. Owner assignments and delivery dates remain open rather than being invented by the report.
 
-Product maturity is presented as a profile across topics. A catalogue delivery label such as “Live example”, “Foundation” or “In progress” cannot supply an assurance level. The website's entry-route assessment does not assess the individual catalogue products: their rows remain Unassessed. No composite score averages away an unresolved accessibility, locale or identity obligation.
+Product maturity is presented as a profile across topics. A catalogue delivery label such as “Live example”, “Foundation” or “In progress” cannot supply an assurance level. Each of the 18 catalogue products now has a separately scoped assessment of its generated entry route and its homepage catalogue identity binding. Nested pages, authenticated flows, runtime states and remote services remain outside that assessment. No composite score averages away an unresolved accessibility, locale or identity obligation.
+
+## Catalogue front-door assessments
+
+The algebra derives the assessment set from `source/hierarchy.json`; it does not maintain a second list of product routes. Each entry is read from the current generated publication. Missing route output fails the build rather than receiving a successful receipt. The scope policy is declared in `assurance.catalogue.policy` and each product receives its own `catalogue-entry/<id>/1` evidence scope.
+
+Automatic identity evidence establishes that the generated entry exists and the matching homepage catalogue row is identity-mapped. It does not decide which internal product relationships should be invariant or identity-mapped. That decision remains a semantic-review obligation. Selected accessibility observations check a nonempty document-language marker, image alt-attribute presence and a recognisable skip link with one matching destination. Temple's `#gate` destination is supported alongside the other entries' `#main` targets. Empty alternative text is presence evidence only.
+
+Language and UTF-8 observations support the internationalisation metadata gate. Locale commitments, localisable content and locale-sensitive behaviour remain unevidenced. All entry profiles currently reach identity level 2, accessibility level 2 and internationalisation level 1. Human evaluation, audience use and maintenance remain open for every product. These are bounded front-door findings, not full-application assurance.
+
+The scanner uses the existing algebra attribute grammar, narrowed to the attributes needed by these checks. Comments and opaque script/style/textarea blocks cannot supply positive markup observations. Template markup blocks automatic promotion pending further inert-content evaluation. Broken or duplicate skip destinations, missing alt attributes and empty language markers fail their associated mechanical gate. Browser behaviour, CSS internals, external dependencies and the meaning of text or images require further evidence.
+
+`assurance/catalogue.json` records each route, observation, scope, receipt, topic profile and outstanding obligation. Unsupported gates generate product-specific roadmap items with unique product/obligation identities. The maturity page links its product matrix to expandable assessments showing automatic support, failures and outstanding evidence. Shared wording across those records is not independent corroboration.
+
+The assurance visual language uses an ivory and pale-green field, teal shield artwork generated as SVG nodes, distinct topic colours and evidence-level bars. All rendering and scoped style rules remain algebra-owned. The shield expresses care and protection; it supplies no evidence or certification.
 
 ## Algebra and evidence authority
 
-`AssuranceTopic`, `AssuranceSaga`, `AssuranceLevel` and `AssuranceObligation` facts in `applications/aaronalderman-hierarchy/source/hierarchy.rel` declare the offering. The `assurance.entry.observe`, `assurance.saga.classify`, `assurance.portfolio.build` and `assurance.portfolio.document` queries in `algebra/publication.process.json` own observation, classification, roadmap projection and rendering.
+`AssuranceTopic`, `AssuranceSaga`, `AssuranceLevel`, `AssuranceObligation` and `AssurancePolicy` facts in `applications/aaronalderman-hierarchy/source/hierarchy.rel` declare the offering. The `assurance.entry.observe`, `assurance.saga.classify`, `assurance.catalogue.*`, `assurance.portfolio.build` and `assurance.portfolio.document` queries in `algebra/publication.process.json` own observation, classification, roadmap projection and rendering.
 
 `assurance/topics.json` publishes topics, levels, saga gates, product profiles and roadmap items. `assurance/entry-markup.json` records the current generated-page observations used by the limited accessibility and internationalisation checks. Existing identity JSON endpoints under `/assurance/` remain available; the detailed identity HTML offering moves to `/assurance/identities/`. Legacy identity-status anchors at the index link to the detailed offering.
 
