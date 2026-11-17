@@ -1,0 +1,29 @@
+{
+  "protocol": "plasma-heart-migration-matrix/1",
+  "authority": "plasma-heart-algebra/1",
+  "purpose": "Map legacy Python roles to algebra-first and solver-evaluator replacements before retirement.",
+  "classes": {
+    "equation-or-reference": {
+      "replacement": ["plasma_heart_algebra_v1.json", "plasma_heart_solver_ir_v1.json", "evaluate_solver_packet.mjs"],
+      "requiredEvidence": ["operator coverage", "packet evaluation", "independent solver comparison"]
+    },
+    "check-or-admission": {
+      "replacement": ["lint_plasma_heart_solver_packet.mjs", "plasma_heart_solver_ir_v1.json"],
+      "requiredEvidence": ["invariant checks", "explicit refusal on missing fields", "physicalAdmission remains false"]
+    },
+    "optimization-or-estimation": {
+      "replacement": ["plasma_heart_algebra_v1.json controls", "external solver adapter", "future optimizer"],
+      "requiredEvidence": ["solver-backed objective", "control bounds", "mesh and timestep convergence"]
+    },
+    "io-or-bridge": {
+      "replacement": ["lower_solver_packet.mjs", "run_solver_adapter.mjs"],
+      "requiredEvidence": ["engine lowering", "availability/refusal record", "stable packet identity"]
+    },
+    "legacy-support": {
+      "replacement": ["case-by-case review"],
+      "requiredEvidence": ["named owner and disposition"]
+    }
+  },
+  "retirementRule": "No Python target may be deleted until its class replacement evidence is complete and the target is listed as retireable in a subsequent manifest revision.",
+  "physicalAdmission": false
+}

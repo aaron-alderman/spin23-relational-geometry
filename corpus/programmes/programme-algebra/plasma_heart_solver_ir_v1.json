@@ -1,0 +1,48 @@
+{
+  "protocol": "plasma-heart-solver-ir/1",
+  "authority": "plasma-heart-algebra/1",
+  "role": "solver-independent intermediate representation",
+  "packet": {
+    "identity": ["cycleId", "sampleIndex", "time", "period", "meshIdentity", "solverIdentity"],
+    "geometry": ["faceArea", "outwardNormal", "facePosition", "forceOrigin"],
+    "fluid": ["density", "velocity", "pressure", "temperature", "speciesDensities"],
+    "electromagnetic": ["electricField", "magneticField", "maxwellStress", "conductivity", "currentDensity"],
+    "thermal": ["heatFlux", "wallTemperature", "quenchRate"],
+    "chemistry": ["reactionSource", "reactionHeat", "transportCoefficients"],
+    "radiation": ["radiationPowerFlux", "radiationDirection", "emissivityOrClosure"],
+    "ledger": ["inputPower", "energyResidual", "entropyProduction", "force", "torque"],
+    "control": ["stateEstimate", "stateCovariance", "controlCandidate", "uncertaintyPenalty", "riskAdjustedScore"]
+  },
+  "derivedOperators": {
+    "massBalance": "integral[rho*(v dot n)] dA",
+    "materialMomentum": "integral[(rho*(v dot n))*v + p*n] dA",
+    "maxwellMomentum": "-integral[T_EM*n] dA",
+    "photonMomentum": "-integral[(radiationPowerFlux/c)*radiationDirection] dA",
+    "lorentzSource": "integral[(currentDensity cross magneticField)] dV",
+    "jouleSource": "integral[currentDensity dot electricField] dV",
+    "stateEstimation": "xhat_(k+1) = xhat_k + K_k*(z_k - H*xhat_k)",
+    "riskAdjustedControlSelection": "argmax_u[solverScore(u)/(1 + uncertaintyPenalty(u))]"
+  },
+  "invariants": [
+    "outward normals are consistently oriented",
+    "force and torque share the declared origin",
+    "mass, Maxwell, and photon momentum are not duplicated",
+    "periodic samples share mesh and solver identity",
+    "energy residual is independently computed",
+    "entropy production is nonnegative",
+    "vector field divergence residual is bounded",
+    "mesh refinement evidence is attached"
+  ],
+  "lowering": {
+    "openfoam": "map face and volume fields to OpenFOAM boundary/field dictionaries and function objects",
+    "elmer": "map geometry and material fields to Elmer sif equations and solver outputs",
+    "su2": "map compressible fluid/species fields and surface flux outputs to SU2 configuration and history data",
+    "precice": "map exchanged interface fields and convergence residuals to preCICE coupling data",
+    "custom": "implement the IR operators directly while preserving packet identity and invariants"
+  },
+  "admission": {
+    "screening": "packet may be numerically evaluated but physicalAdmission remains false",
+    "physical": "requires solver identity, mesh convergence, independent energy/entropy closure, and declared evidence authority",
+    "failure": "missing fields or invariant violations produce a refusal record, never an inferred value"
+  }
+}

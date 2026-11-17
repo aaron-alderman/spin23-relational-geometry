@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+const frequency = 0.1, laserBase = 0.12, coolingBase = 0.03, laserModulation = 0.8, coolingModulation = 0.5, torqueAmplitude = 0.06;
+const limits = { laserPowerSlew: 0.01, coolerSlew: 0.002, torqueSlew: 0.01, laserPowerMax: 0.4, coolerMax: 0.16, torqueMax: 0.06 };
+const metrics = { laserPowerPeak: laserBase * (1 + laserModulation), coolerPeak: coolingBase * (1 + coolingModulation), torquePeak: torqueAmplitude, laserPowerSlewPeak: laserBase * laserModulation * frequency, coolerSlewPeak: coolingBase * coolingModulation * frequency, torqueSlewPeak: torqueAmplitude * frequency };
+const checks = { laserEnvelope: metrics.laserPowerPeak <= limits.laserPowerMax, coolerEnvelope: metrics.coolerPeak <= limits.coolerMax, torqueEnvelope: metrics.torquePeak <= limits.torqueMax, laserSlew: metrics.laserPowerSlewPeak <= limits.laserPowerSlew, coolerSlew: metrics.coolerSlewPeak <= limits.coolerSlew, torqueSlew: metrics.torqueSlewPeak <= limits.torqueSlew };
+const result = { protocol: 'plasma-heart-actuator-screen/2', cycle: { frequency: frequency, laserModulation, coolingModulation, torqueAmplitude }, limits, metrics, checks, qualified: Object.values(checks).every(Boolean), physicalAdmission: false, scope: 'Analytic sinusoid envelope/slew gate; driver bandwidth, inductance, thermal lag, and saturation curves remain unresolved.' };
+console.log(JSON.stringify(result, null, 2));

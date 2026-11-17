@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+/** Reimplement the reduced-order quasi-3D face-field screen in solver-side JS. */
+const dot = (a, b) => a.reduce((s, x, i) => s + x * b[i], 0);
+const norm = (a) => Math.hypot(...a);
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const integrate = (faces) => { const force = [0, 0, 0]; const torque = [0, 0, 0]; for (const f of faces) { const flux = f.density * dot(f.velocity, f.normal); const dF = f.velocity.map((v, i) => f.area * (flux * v + f.pressure * f.normal[i])); dF.forEach((v, i) => { force[i] += v; }); cross(f.position, dF).forEach((v, i) => { torque[i] += v; }); } return { forceN: force, forceMagnitudeN: norm(force), torqueNm: torque }; };
+const packet = (nseg) => { const ri = 0.01, ro = 0.018, L = 0.04, rhoi = 1e-6, rhoo = 0.8e-6, mdot = 1e-9, ai = Math.PI * ri ** 2, ao = Math.PI * ro ** 2, vi = mdot / (rhoi * ai), vo = mdot / (rhoo * ao), faces = []; for (let k = 0; k < nseg; k += 1) { const th = 2 * Math.PI * (k + 0.5) / nseg, c = Math.cos(th), s = Math.sin(th), dai = ai / nseg, dao = ao / nseg; faces.push({ area: dai, normal: [0, 0, -1], position: [ri * c / 2, ri * s / 2, 0], velocity: [0, 0, vi], density: rhoi, pressure: 120 }); faces.push({ area: dao, normal: [0, 0, 1], position: [ro * c / 2, ro * s / 2, L], velocity: [0, 0, vo], density: rhoo, pressure: 90 }); const slope = (ro - ri) / L, sl = Math.sqrt(1 + slope ** 2), area = sl * L * ((ri + ro) / 2) * (2 * Math.PI / nseg), tv = [slope * c / sl, slope * s / sl, 1 / sl]; faces.push({ area, normal: [c / sl, s / sl, -slope / sl], position: [(ri + ro) * c / 2, (ri + ro) * s / 2, L / 2], velocity: tv.map((x) => vo * x), density: rhoo, pressure: 90 }); } return { faces, integrated: integrate(faces) }; };
+const levels = [8, 16, 32, 64];
+const packets = levels.map(packet); const reference = packets.at(-1).integrated.forceMagnitudeN; const errors = packets.map((p) => Math.abs(p.integrated.forceMagnitudeN - reference) / Math.max(reference, 1e-30));
+const result = { protocol: 'plasma-heart-resolved-surface-screen/1', levels, relativeErrorsToFinest: errors, explicitSurfaceFields: true, meshConverged: errors.at(-2) < 1e-3, physicalAdmission: false, scope: 'Synthetic spatial face-field accounting surrogate; replace with CFD/Maxwell packets before physical claims.' };
+console.log(JSON.stringify(result, null, 2));
+if (!result.meshConverged) process.exitCode = 1;
