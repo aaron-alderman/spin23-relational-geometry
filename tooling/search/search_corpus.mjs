@@ -672,6 +672,51 @@ function personalizedPageRank(index, teleport, mixing, iterations = 160, toleran
   return rank;
 }
 
+// Rank a supplied, finite semantic index without reading the live corpus.
+export function rankSemanticUnits({ units, edges, query, seeds, pageRank = false, mixing = 0.15 }) {
+  if (!units.length || units.length > 256 || !query.trim()) throw new Error("expected a bounded semantic index and query");
+  const ids = new Map(units.map((unit, index) => [unit.id, index]));
+  if (ids.size !== units.length) throw new Error("semantic unit IDs must be unique");
+  const documentIdsByToken = new Map();
+  const documents = units.map((unit, id) => {
+    const counts = new Map();
+    for (const token of tokenize(unit.title + " " + unit.text)) counts.set(token, (counts.get(token) ?? 0) + 1);
+    for (const token of counts.keys()) {
+      if (!documentIdsByToken.has(token)) documentIdsByToken.set(token, []);
+      documentIdsByToken.get(token).push(id);
+    }
+    return { id, title: unit.title, lowerText: unit.text.toLowerCase(), counts,
+      length: [...counts.values()].reduce((sum, count) => sum + count, 0), prior: 1 };
+  });
+  const index = { documents, documentIdsByToken,
+    documentFrequency: new Map([...documentIdsByToken].map(([token, entries]) => [token, entries.length])),
+    averageLength: Math.max(1, documents.reduce((sum, document) => sum + document.length, 0) / documents.length) };
+  let scores;
+  if (!pageRank) {
+    scores = lexicalScores(index, [...new Set(tokenize(query))], query);
+  } else {
+    if (!Number.isFinite(mixing) || mixing <= 0 || mixing >= 1 || !seeds.length || edges.length > 2048) {
+      throw new Error("expected bounded PageRank settings");
+    }
+    index.graphRows = documents.map(() => ({ entries: [], totalWeight: 0 }));
+    for (const { from, to, weight } of edges) {
+      if (!ids.has(from) || !ids.has(to) || !Number.isFinite(weight) || weight <= 0) throw new Error("invalid semantic edge");
+      const row = index.graphRows[ids.get(from)];
+      row.entries.push([ids.get(to), weight]);
+      row.totalWeight += weight;
+    }
+    const teleport = new Float64Array(documents.length);
+    for (const id of seeds) {
+      if (!ids.has(id)) throw new Error("unknown PageRank seed");
+      teleport[ids.get(id)] += 1 / seeds.length;
+    }
+    scores = personalizedPageRank(index, teleport, mixing);
+  }
+  return units.map((unit, id) => ({ id: unit.id, score: scores[id], optional: unit.optional }))
+    .filter(row => row.optional)
+    .sort((left, right) => right.score - left.score || (left.id < right.id ? -1 : Number(left.id !== right.id)));
+}
+
 function bestSnippet(document, tokens) {
   const lines = document.claimUnits.map(unit => unit.text).filter(line => line.trim() && !/^\s*(?:\||[-*]\s*\[)/u.test(line));
   let best = { score: -1, line: "" };
