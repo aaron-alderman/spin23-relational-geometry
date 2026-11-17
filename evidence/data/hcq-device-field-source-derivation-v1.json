@@ -1,0 +1,196 @@
+{
+  "schemaVersion": "hcq-device-field-source-derivation-v1",
+  "date": "2026-11-08",
+  "primaryPaper": "https://arxiv.org/abs/2601.06682v1",
+  "primaryData": "https://osf.io/q4dav/",
+  "receipts": {
+    "evidence\\data\\hcq-device-primary-v1\\Fig3a.xlsx": "90e75c766612cab071047eecba2eaf59270a0b5e8df36fcc3b0da8e94d821f23",
+    "evidence\\data\\hcq-device-primary-v1\\Fig3a_fit.xlsx": "c3c4be59ae0ea41c70de100b06c60b493c9b2ee95dd348787eab55bea753357f",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4a-fit.xlsx": "f5f2e1ea56a3f7a3e9b9b68c106c62107dfc29aca4e11f97689de03f1f69d66b",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4a.xlsx": "d67b1d4aa7d11c951670f8e9f4bcc9b2704fa224038578616813b1ffbbac009e",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4b-fit.xlsx": "04f00e30e0e96260f90d28e073a112715f7de7b80b056fb30515a568c65ef894",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4b.xlsx": "5c12af0e7b1753f48587ce3b7b0c16fa07c5addc4632239e71c4586ebedf0015",
+    ".tmp\\hcq-device-paper.pdf": "07ea72e5be88c798ba651e754563692dfcbd6e07368f9ae508693b019cdb6b73",
+    ".tmp\\hcq-device-osf-files.json": "c224ced7abdce204381b6b0c0e07efd1f5cce8edbed1ba43e0b0c6bef60cd729",
+    ".tmp\\hcq-device-osf-Fig2.json": "8f9dd0839bd32d2fdd4d0070954d590046965ccecd647f8a9bb148416e923f16",
+    ".tmp\\hcq-device-osf-Fig3.json": "c84c363c55d1dbace7400afd65daf0d2099386de67b84dcd306bd10f1bb48d9b",
+    ".tmp\\hcq-device-osf-Fig4.json": "a48cd97240c3eeb62455a464d7ef43ca3e7a17823017a1ad8cee1d4a61133375",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\derive-hcq-device-field-source.py": "4376eb42ad1922144c85ae13419ce2ff4850603d524eda83410429daf5fd8be4"
+  },
+  "workbookPolicy": "Original public workbooks read only. No cells changed; no fitting performed.",
+  "repositoryInventory": {
+    "rootFolders": [
+      "Fig2",
+      "Fig3",
+      "Fig4"
+    ],
+    "finding": "The inspected public OSF root and its three immediate folders contain figure workbooks. No CAD, mesh, full capacitance matrix, dielectric stack or Casimir geometry was found in this inspected release.",
+    "scope": "Bounded public-release inspection, not a claim about unreleased author files."
+  },
+  "gateCalibration": [
+    {
+      "file": "Fig4a-fit.xlsx",
+      "sheet": "Fig4a-fit",
+      "rowCount": 377,
+      "header": "1000*Vgate, mV",
+      "periodText": "period=3.35mV",
+      "periodVolt": 0.00335,
+      "gateCapacitanceFromPeriodF": 9.565233635820895e-17,
+      "gateCapacitanceAttofarad": 95.65233635820894,
+      "chargeInElectronUnitsPerVolt": 597.0149253731345,
+      "periodCell": "A379",
+      "interpretation": "Cg=2e/DeltaVg from the authors period annotation, not an independent electrostatic geometry calculation or an uncertainty-certified line calibration."
+    },
+    {
+      "file": "Fig4b-fit.xlsx",
+      "sheet": "Fig4b-fit",
+      "rowCount": 156,
+      "header": "1000*Vg, mV",
+      "periodText": "period=3.62mV",
+      "periodVolt": 0.0036200000000000004,
+      "gateCapacitanceFromPeriodF": 8.851804607734805e-17,
+      "gateCapacitanceAttofarad": 88.51804607734805,
+      "chargeInElectronUnitsPerVolt": 552.4861878453036,
+      "periodCell": "A158",
+      "interpretation": "Cg=2e/DeltaVg from the authors period annotation, not an independent electrostatic geometry calculation or an uncertainty-certified line calibration."
+    }
+  ],
+  "publishedParameterReplays": [
+    {
+      "file": "Fig4a-fit.xlsx",
+      "sourceCells": "E2:H378",
+      "publishedRatesGHz": [
+        1.48,
+        1.08
+      ],
+      "parametersRefitted": false,
+      "rmseGHz": 0.016710779358063338,
+      "maximumAbsoluteErrorGHz": 0.027476829598632846,
+      "scope": "Replay against authors fitted curves, not raw held-out spectroscopy, calibrated oscillator strengths or a new device validation. Printed parameter rounding and curve offsets remain."
+    },
+    {
+      "file": "Fig4b-fit.xlsx",
+      "sourceCells": "E2:H157",
+      "publishedRatesGHz": [
+        3.15,
+        1.45
+      ],
+      "parametersRefitted": false,
+      "rmseGHz": 0.06873529337039726,
+      "maximumAbsoluteErrorGHz": 0.1122509331296695,
+      "scope": "Replay against authors fitted curves, not raw held-out spectroscopy, calibrated oscillator strengths or a new device validation. Printed parameter rounding and curve offsets remain."
+    }
+  ],
+  "rawMapInventory": [
+    {
+      "file": "Fig3a.xlsx",
+      "numericRows": 401,
+      "columns": 151,
+      "axisNotes": [
+        "Column 0.1-16.1GHz 401 points",
+        "row from -0.232425  to 0.232611   151 points"
+      ],
+      "absoluteElectricFieldOrDipoleCalibrationPresent": false
+    },
+    {
+      "file": "Fig4a.xlsx",
+      "numericRows": 151,
+      "columns": 401,
+      "axisNotes": [
+        "row Q/e from -0.232000  to 11.708299  401 points",
+        "column MW frequency 0.1-3.1GHz 151 points",
+        "period=3.35mV"
+      ],
+      "absoluteElectricFieldOrDipoleCalibrationPresent": false
+    },
+    {
+      "file": "Fig4b.xlsx",
+      "numericRows": 126,
+      "columns": 401,
+      "axisNotes": [
+        "column f 0.1-5.1GHz 126 points",
+        "row from-3.25  to 7.799724  401 points",
+        "period=3.62mV"
+      ],
+      "absoluteElectricFieldOrDipoleCalibrationPresent": false
+    }
+  ],
+  "fluxCalibration": {
+    "file": "Fig3a_fit.xlsx",
+    "sheet": "Fig3a_fit",
+    "periodCell": "A154",
+    "periodText": "period=0.64511mA",
+    "fluxQuantumWeber": 2.0678338484619295e-15,
+    "controlCurrentPeriodAmpere": 0.00064511,
+    "coilToLoopMutualInductanceH": 3.20539729420088e-12,
+    "scope": "Calibration from the authors current-to-flux period; not an independently reconstructed loop area or local magnetic field map."
+  },
+  "geometryConsistency": {
+    "junctionAreaSquareMicrometre": 0.028000000000000004,
+    "printedSpecificCapacitanceFPerSquareMicrometre": 5e-16,
+    "literalJunctionCapacitanceF": 1.4000000000000003e-17,
+    "literalChargingFrequencyGHz": 1383.5878089042228,
+    "quotedChargingFrequencyGHz": 13.8,
+    "junctionCapacitanceImpliedByQuotedEnergyF": 1.4036398061347191e-15,
+    "ratioLiteralToQuotedChargingFrequency": 100.25998615247993,
+    "specificCapacitanceRequiredByQuotedEnergy": 5.012999307623996e-14,
+    "interpretation": "Approximately factor-100 inconsistency between printed area/specific-capacitance units and quoted EC. A typographical or unit error is plausible but not corrected by this audit. Junction barrier capacitance is not gate capacitance."
+  },
+  "geometryOnlyPhaseSlipTest": {
+    "quotedInputEJOverHGHz": 29.2,
+    "quotedInputECOverHGHz": 13.8,
+    "semiclassicalRateFromPrintedFormulaGHz": 3.002429954315567,
+    "paperReportedGeometryEstimateGHz": 2.7,
+    "paperFittedRatesGHz": [
+      1.48,
+      1.08
+    ],
+    "equalNominalJunctionPredictedMaximumGapGHz": 6.004859908631134,
+    "fittedMaximumGapGHz": 2.56,
+    "equalNominalJunctionPredictedMinimumGapGHz": 0.0,
+    "fittedMinimumGapGHz": 0.4,
+    "verdict": "Available nominal junction estimates do not reproduce the fitted interference envelope without changing parameters. This is a diagnostic of incomplete microscopic inputs/approximation, not a fundamental no-go. The semiclassical formula is not used with the inconsistent literal large-EC geometry."
+  },
+  "fieldLeverArmDerivation": {
+    "electrostaticProblem": "Solve div[epsilon(r) grad u_a]=0 for unit-potential conductor weighting fields, using the actual dielectric stack, conductor surfaces, ground/floating constraints and external-field boundary conditions.",
+    "capacitance": "C_ab=int d^3r epsilon grad u_a dot grad u_b. This gives the Maxwell capacitance matrix, not merely junction overlap capacitance.",
+    "fieldCoupling": "Let eta_i,alpha=partial Q_g,i/partial E_alpha be the induced offset-charge derivative from the same boundary-value solution. A measured gate Cg specifies partial Qg/partial Vg, not eta for a free-space field.",
+    "singleGateReduction": "If a separately determined Vg=ell_eff,alpha E_alpha applies, eta_alpha=Cg ell_eff,alpha. ell_eff includes shielding and electrode participation; it is not the junction width or SEM scale-bar length.",
+    "numericalEtaAvailable": false,
+    "frequencyBoundary": "The electrostatic solution fixes a low-frequency source map. Broadband Casimir response additionally requires the frequency-dependent Maxwell problem and material response beyond the reduced circuit band.",
+    "missingGeometry": [
+      "Full gate/island/loop/resonator dimensions and conductor thicknesses.",
+      "Substrate/cap/barrier permittivity and screening boundary conditions.",
+      "Reference-plane voltage-to-field calibration and opposing-body/separation geometry."
+    ]
+  },
+  "commonCanonicalAction": {
+    "coordinates": "Node fluxes varphi (units Wb); canonical charges p, with the relevant Cooper-pair charge convention fixed in the complete circuit.",
+    "Lagrangian": "L=(1/2) varphi_dot^T C varphi_dot + Qg(E,Vg)^T varphi_dot - U(varphi,Phi_ext) + L_direct(E,Vg).",
+    "Hamiltonian": "H=(1/2)(p-Qg)^T C^{-1}(p-Qg)+U-L_direct.",
+    "electricDipole": "For Qg=Qg0+eta E and field-independent U,C: d_alpha=eta_alpha^T C^{-1}(p-Qg)+partial_Ealpha L_direct.",
+    "HamiltonianContact": "partial_Ealpha partial_Ebeta H=eta_alpha^T C^{-1} eta_beta-partial_Ealpha partial_Ebeta L_direct.",
+    "scope": "These are fixed-state source derivatives. The full response also includes the spectral Kubo term. If geometry/material coefficients or U depend on the source, their derivatives must be included.",
+    "singleIsland": "H_C=(2e n-Cg Vg-eta E)^2/(2 C_Sigma); d=eta(2e n-Cg Vg-eta E)/C_Sigma; charging contact=eta^2/C_Sigma.",
+    "retainedBoundaryTerms": "The source-only electrostatic term L_direct is fixed by the same conductor problem. Dropping it arbitrarily changes the contact response.",
+    "inductiveSource": "For U_L=(varphi_loop-Phi_ext)^2/(2 Lk), -partial_PhiExt H=(varphi_loop-Phi_ext)/Lk and partial_PhiExt^2 H=1/Lk. If Phi_ext=M I_coil, the corresponding coil-current contact is M^2/Lk. These lumped source terms do not determine the complete electromagnetic scattering response.",
+    "twoStateProjection": "A bias-dependent basis requires covariant derivatives or the induced source connection. The fitted real gap E_S(Q)=|t(Q)| alone does not uniquely supply a physical electric transition operator."
+  },
+  "verification": {
+    "chargingDipoleFiniteDifferenceError": 1.9567680809018384e-15,
+    "chargingContactFiniteDifferenceError": 6.543532035663269e-11,
+    "sourceDerivativeChecksPassed": true
+  },
+  "jointPredictionVerdict": {
+    "electricalGatePeriodRecovered": true,
+    "numericalFreeSpaceFieldLeverArmDerived": false,
+    "completePhysicalContactsDetermined": false,
+    "geometryOnlySpectrumPredictionPass": false,
+    "heldOutAbsoluteDipoleStrengthTestPossible": false,
+    "physicalCasimirForcePredictionPossible": false,
+    "reason": "The public release gives useful voltage/flux spectroscopy, but not the electrostatic boundary solution, full source/contact dictionary, complete electromagnetic material response and force geometry needed by the same-action prediction.",
+    "forceScaling": "For the isolated electric-channel Casimir-Polder approximation, scaling eta by s scales dipole weights and the leading force by s^2 while leaving the zero-probe spectrum unchanged. Unknown direct and magnetic channels add further physical inputs.",
+    "earlierFixtureTransfer": "The earlier four-state 20.8-percent contrast is not transferred to this h-CQUID. No force percentage or force in newtons is assigned to the device."
+  },
+  "reproduction": "Run scripts/derive-hcq-device-field-source.py with the bundled Python containing openpyxl and numpy."
+}

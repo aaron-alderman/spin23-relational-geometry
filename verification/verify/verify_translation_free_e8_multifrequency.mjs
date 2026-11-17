@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import {dipoleMatrix} from '../../scripts/lib/e8-charge-dipole.mjs';
+const r=JSON.parse(fs.readFileSync('evidence/data/translation-free-e8-multifrequency-replay-v1.json'));
+for(const [path,hash] of Object.entries(r.sources))assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex'),hash);
+const target=JSON.parse(fs.readFileSync('evidence/data/translation-free-e8-local-charge-dictionary-r65-shell10-direct-v1.json'));
+const D=dipoleMatrix(target.projectedChargeMatrices,Array.from({length:8},(_,i)=>i-3.5));
+const gaps=target.levels.map(x=>x.energy-target.levels[0].energy);
+const strength=target.projectedDipoleSquaredMatrix[0][0];
+const retained=Array.from({length:63},(_,i)=>i+1);
+const W=strength-retained.reduce((s,j)=>s+D[j][0]**2,0),delta=gaps[64];
+const curve=JSON.parse(fs.readFileSync('evidence/data/translation-free-e8-frequency-response-shell10-v1.json'));
+for(const row of curve.records){
+ assert.ok(Math.max(...row.relativeResiduals)<1e-8);
+ const partial=retained.reduce((s,j)=>s+2*gaps[j]*D[j][0]**2/(gaps[j]**2-row.omega**2),0);
+ const upper=partial+2*delta*W/(delta**2-row.omega**2);
+ assert.ok(row.response>=partial-1e-8&&row.response<=upper+1e-8,'full-shell inverse response lies within independent spectral-tail envelope');
+}
+const audit=JSON.parse(fs.readFileSync('evidence/data/translation-free-e8-charge-shell-10-audit-v1.json'));
+assert.ok(Math.abs(curve.records[0].response/audit.static-1)<1e-9);
+assert.equal(r.calibration.freeParameters,2);
+assert.ok(Math.abs(r.calibration.alpha*r.calibration.firstModel.gap/r.calibration.firstReference.gap-1)<1e-12);
+assert.ok(Math.abs(r.calibration.beta*r.calibration.firstModel.weight/r.calibration.firstReference.weight-1)<1e-12);
+assert.ok(r.summary.maxHeldOutLineEnergyError<.01);
+assert.ok(r.summary.maxHeldOutChargeResponseError<.01);
+assert.ok(r.summary.maxHeldOutLineWeightError>.01);
+assert.equal(r.summary.chargeModelNumericalReplayPass,false,'weak-line failure must not be hidden by aggregate agreement');
+assert.equal(r.summary.selectorSpecificPhysicalPredictionEstablished,false);
+console.log(JSON.stringify({passed:true,checks:['input hash receipts','full-shell response inside independent retained-spectrum/tail bounds','zero-frequency independent solve','first-line-only two-parameter calibration','negative weak-line result retained'],scope:'Verification of the numerical rehearsal, not confirmation of a physical selector law'},null,2));

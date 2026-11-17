@@ -1,0 +1,103 @@
+{
+  "schemaVersion": "ads-boundary-charges-v1",
+  "evidenceFamily": "matched-ads-tidal-fixture",
+  "ensemble": "matched metric Dirichlet action, vacuum subtraction on each timelike wall",
+  "sourceRecord": "evidence/data/ads-tidal-response-v1.json",
+  "chargeConvention": "integral of future wall observer contracted into delta stress and coordinate generator",
+  "formulations": {
+    "GR": {
+      "1": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "5/14",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "4/49",
+          "partial_y": "-4/49",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      },
+      "2": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "2/7",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "8/245",
+          "partial_y": "-8/245",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      }
+    },
+    "TEGR": {
+      "1": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "5/14",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "4/49",
+          "partial_y": "-4/49",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      },
+      "2": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "2/7",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "8/245",
+          "partial_y": "-8/245",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      }
+    },
+    "STEGR": {
+      "1": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "5/14",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "4/49",
+          "partial_y": "-4/49",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      },
+      "2": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "2/7",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "8/245",
+          "partial_y": "-8/245",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      }
+    },
+    "minimal Spin(2,3)": {
+      "1": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "5/14",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "4/49",
+          "partial_y": "-4/49",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      },
+      "2": {
+        "deltaStressUUInUnitsOfEllEpsilonPulseOverKappa": "2/7",
+        "translationChargesPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": {
+          "partial_t": "8/245",
+          "partial_y": "-8/245",
+          "partial_x": "0",
+          "partial_v": "0"
+        }
+      }
+    }
+  },
+  "twoWallEnergyPerCoordinateXInUnitsOfSqrt2EllSquaredEpsilonOverKappa": "4/35",
+  "checks": {
+    "teleparallelFluxesCancelGHYInSlabGauge": true,
+    "wallStressTracelessAndConserved": true,
+    "restrictedUUVariationMissesNullStress": true,
+    "twoWallEnergyEqualsIntegratedDustCurrent": true
+  },
+  "verdict": {
+    "exactMatchedDirichletWallChargeResidualZero": true,
+    "eachWallHasNonzeroVacuumSubtractedEnergyForPositivePulse": true,
+    "independentConnectionOrFrameChargesCompared": false,
+    "independentPhysicalMeasurement": false,
+    "physicalAdmission": false
+  }
+}

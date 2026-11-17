@@ -1,0 +1,425 @@
+{
+  "schemaVersion": "peirce-potential-kinetic-metric-v1",
+  "date": "2026-11-08",
+  "authority": "New exact block-trace identities and leading heat-coefficient comparison; supplied backgrounds and declared matrix carrier, not a derived physical T1/T2 stabilizing theory.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/0100-0199/198_linking_algebra_pairing_uniqueness_and_real_structure_gap.md": "5082dea665ad87da1caf0d508007338b9559a425924cf9bc429117effd948fe9",
+    "corpus/claims/1000-1099/1084_the_minimal_spectral_graph_has_an_all_orders_rank_one_bridge_normal_form_that_forbids_holomorphic_cross_six_mixing.md": "262b8145220832506221f2c68a938d6e25617ee58d33a9c7f590c0e79ca9277c",
+    "corpus/claims/1100-1199/1195_a_charge_three_cross_peirce_vacuum_completes_the_rank_split_to_a_full_jordan_frame_but_needs_response_to_gap_cp1.md": "686835f55929dff59618cc23dc5cd85a406af5a10bf118fd9ca40089873a2110",
+    "corpus/claims/1100-1199/1197_the_minimum_variance_response_functional_is_a_canonical_relative_selector_but_standard_model_family_spaces_and_weights_remain_noncanonical.md": "1aadcd92ce1eb78b36d1901b5dfc8b2d9801fcfd508aa101a0a7370e06ac3a00",
+    "corpus/claims/1100-1199/1198_the_charge_three_link_has_a_scalar_flavon_versus_dynamical_cross_peirce_fork_separating_bf_closure_from_flavour_closure.md": "da63582fff8961be8889d314430bec83dae94bf1c2337e0161c85b42d3d0af5a",
+    "corpus/claims/1500-1599/1502_pure_curvature_is_blind_to_flat_leakage_but_covariant_projector_energy_selects_the_parallel_mask.md": "cdcabd43cdf1b5fb71df4bc2c4edbb61577e77114aa87bb984ae0ed55e892c17",
+    "corpus/claims/1500-1599/1530_the_common_coefficient_line_is_RG_invariant_only_under_universal_projective_flow_and_a_fixed_ratio_requires_a_Ward_eigenline.md": "ffb5a441739ad7c7698f21acd3949c1582f192bafc42d44df15e0551b18508a0",
+    "evidence/data/dynamical-finite-dirac-full-action-v1.json": "721c025ea8c6a1a746931df3527dd6ac261528172abc7aba69c35318188169d7",
+    "evidence/data/peirce-metric-source-checks-v1.json": "d18ae2caa64798dcb867b289a62e4f9316c0731e28944935f6bc183e6befd396",
+    "evidence/data/spectral-mass-ratio-closure-v1.json": "8e01e206c0c143214677369fa4ea5f9de1f27dc11d2a79226fbffc8888cab4c1",
+    "scripts/audit-peirce-potential-kinetic-metric.py": "680c78be4b830172940c01cb8ac7ff008b3b89a162fe797ffe70de9e4d4ac7f3",
+    "verification/verify/verify_linking_pairing_real_structure_gap.mjs": "00b38f850cfde303e4615257c454b06245fd7c1a24fac4c7b4563307caad21ca"
+  },
+  "sourceVerificationReceipt": "evidence/data/peirce-metric-source-checks-v1.json",
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/1507.08161",
+      "version": "v1",
+      "sections": "equations 12-21; free allowed finite entries",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "model": {
+    "block": "Phi=[[a,K^dagger],[K,B]]; P rank 1, Q rank 2; a and B fixed in link variation",
+    "tracePhi4": "a^4+Tr B^4+4 K^dagger(a^2 I+a B+B^2)K+2(K^dagger K)^2",
+    "potential": "K^dagger H K+2 c4 (K^dagger K)^2",
+    "H": "-2 c2 I+4 c4(a^2 I+a B+B^2)",
+    "metric": "G_K=2 cKin I in K_j=(x_j+i y_j)/sqrt(2)",
+    "heatCoefficients": {
+      "c2": "f2 Lambda^2/(2 pi^2)",
+      "c4": "f0/(8 pi^2)",
+      "cKin": "f0/(8 pi^2)"
+    },
+    "radialMassSquared": "-2 h1/Z_K",
+    "directionalMassSquared": "(h2-h1)/Z_K",
+    "assumptions": [
+      "flat Dirac/scalar heat action through a4",
+      "canonical fermion mass vertex Phi",
+      "one declared common block trace",
+      "fixed Hermitian diagonal backgrounds",
+      "physical gauge and Lorentz identification open"
+    ]
+  },
+  "backgroundFamily": [
+    {
+      "label": "background_08",
+      "a": 0.0,
+      "B": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.0,
+          0.8
+        ]
+      ],
+      "c2": 2.0,
+      "c4": 1.0,
+      "cKin": 1.0,
+      "H": [
+        [
+          -3.84,
+          0.0
+        ],
+        [
+          0.0,
+          -1.4399999999999995
+        ]
+      ],
+      "h": [
+        -3.84,
+        -1.4399999999999995
+      ],
+      "selectedKReal": [
+        0.9797958971132712,
+        0.0
+      ],
+      "selectedKImag": [
+        0.0,
+        0.0
+      ],
+      "linkNormSquared": 0.96,
+      "kineticMetric": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ]
+      ],
+      "realCoordinateHessian": [
+        [
+          7.68,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.4000000000000004,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.4000000000000004
+        ]
+      ],
+      "radialMassSquared": 3.84,
+      "directionalMassSquared": 1.2000000000000002,
+      "phasePotentialCurvature": 0.0,
+      "fermionEigenvalues": [
+        -0.8848857801796104,
+        0.8,
+        1.0848857801796106
+      ],
+      "minimumFermionSingularValue": 0.8,
+      "minimumGapToRadialMass": 0.4082482904638631,
+      "pairedLinkNormToRadialMass": 0.5,
+      "fullGaussianGradientAtTruncatedVacuum": [
+        -1.0393991175192827,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fullGaussianGradientNorm": 1.0393991175192827,
+      "sectorGradingAnticommutatorNorm": 1.6492422502470645
+    },
+    {
+      "label": "background_11",
+      "a": 0.0,
+      "B": [
+        [
+          0.2,
+          0.0
+        ],
+        [
+          0.0,
+          1.1
+        ]
+      ],
+      "c2": 2.0,
+      "c4": 1.0,
+      "cKin": 1.0,
+      "H": [
+        [
+          -3.84,
+          0.0
+        ],
+        [
+          0.0,
+          0.8400000000000007
+        ]
+      ],
+      "h": [
+        -3.84,
+        0.8400000000000007
+      ],
+      "selectedKReal": [
+        0.9797958971132712,
+        0.0
+      ],
+      "selectedKImag": [
+        0.0,
+        0.0
+      ],
+      "linkNormSquared": 0.96,
+      "kineticMetric": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ]
+      ],
+      "realCoordinateHessian": [
+        [
+          7.68,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          4.680000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          4.680000000000001
+        ]
+      ],
+      "radialMassSquared": 3.84,
+      "directionalMassSquared": 2.3400000000000003,
+      "phasePotentialCurvature": 0.0,
+      "fermionEigenvalues": [
+        -0.8848857801796104,
+        1.0848857801796106,
+        1.1
+      ],
+      "minimumFermionSingularValue": 0.8848857801796104,
+      "minimumGapToRadialMass": 0.4515663837676345,
+      "pairedLinkNormToRadialMass": 0.5,
+      "fullGaussianGradientAtTruncatedVacuum": [
+        -1.0393991175192827,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fullGaussianGradientNorm": 1.0393991175192827,
+      "sectorGradingAnticommutatorNorm": 2.23606797749979
+    },
+    {
+      "label": "pure_cross",
+      "a": 0.0,
+      "B": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "c2": 2.0,
+      "c4": 1.0,
+      "cKin": 1.0,
+      "H": [
+        [
+          -4.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.0
+        ]
+      ],
+      "h": [
+        -4.0,
+        -4.0
+      ],
+      "selectedKReal": [
+        1.0,
+        0.0
+      ],
+      "selectedKImag": [
+        0.0,
+        0.0
+      ],
+      "linkNormSquared": 1.0,
+      "kineticMetric": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ]
+      ],
+      "realCoordinateHessian": [
+        [
+          8.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "radialMassSquared": 4.0,
+      "directionalMassSquared": 0.0,
+      "phasePotentialCurvature": 0.0,
+      "fermionEigenvalues": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "minimumFermionSingularValue": 0.0,
+      "minimumGapToRadialMass": 0.0,
+      "pairedLinkNormToRadialMass": 0.5,
+      "fullGaussianGradientAtTruncatedVacuum": [
+        -1.0405201900457774,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fullGaussianGradientNorm": 1.0405201900457774,
+      "sectorGradingAnticommutatorNorm": 0.0
+    }
+  ],
+  "allowedEFTKineticCorrectionFamily": [
+    {
+      "deltaZ": 0.0,
+      "totalKineticZ": 2.0,
+      "radialMassSquared": 3.84,
+      "fixedFermionGap": 0.8,
+      "minimumGapToRadialMass": 0.4082482904638631
+    },
+    {
+      "deltaZ": 1.0,
+      "totalKineticZ": 3.0,
+      "radialMassSquared": 2.56,
+      "fixedFermionGap": 0.8,
+      "minimumGapToRadialMass": 0.5
+    },
+    {
+      "deltaZ": 3.0,
+      "totalKineticZ": 5.0,
+      "radialMassSquared": 1.536,
+      "fixedFermionGap": 0.8,
+      "minimumGapToRadialMass": 0.6454972243679028
+    }
+  ],
+  "kineticCorrectionBoundary": "Counterexample to symmetry/potential uniqueness in the local EFT. It leaves a strictly frozen bare spectral coefficient relation, so it is not a counterexample within that narrower axiom.",
+  "corpusAudit": {
+    "relativeAlignmentFunctionalExists": true,
+    "physicalResponseTensorsAndWeightsDerived": false,
+    "invariantMetricShapeExistsUpToScale": true,
+    "fullSelectingPotentialAndKineticMetricDerived": false
+  },
+  "verdict": {
+    "leadingLinkPotentialAndMetricDerivedInDeclaredBlock": true,
+    "physicalDiagonalBackgroundsSelected": false,
+    "fullGaussianStationarityAtSavedQuarticVacua": false,
+    "scalarReferenceFixedByPhysicalCorpusAction": false,
+    "fullMinimumGapEqualsLinkNorm": false,
+    "pureCrossRankOneToRankTwoHasUnmatchedZero": true,
+    "positivePhysicalT1T2MassRatioPredicted": false,
+    "nextDiscriminator": "Identify physical P,K,a,B and derive their common full stabilizing action and kinetic operator; solve the controlled vacuum, then obtain fermion singular values and scalar pole without target calibration."
+  }
+}

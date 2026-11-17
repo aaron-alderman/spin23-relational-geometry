@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "periodic-photon-medium-bridge-v1",
+  "date": "2026-11-08",
+  "authority": "Declared periodic dielectric calculation under a hypothetical photon-medium interpretation. No empirical aether identification, selector realization or UV/IR duality admitted.",
+  "evidenceFamily": "periodic-maxwell-fixture",
+  "sources": {
+    "scripts/derive-periodic-photon-medium-bridge.py": "718cf55a95005c21983528e0fb770b758d77baf7bd68df80ab1cad67a742d53c"
+  },
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/2310.08423",
+      "version": "v2",
+      "sections": "2.1, counterpropagating grating modes",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "assumptions": {
+    "aether": "user-specified working hypothesis, not established by this calculation",
+    "michelsonMorley": "set aside for this hypothetical calculation, not a claim that the measurements establish no constraints",
+    "medium": "lossless stationary nonmagnetic 1D dielectric; coefficients nondispersive only over the tested band",
+    "materialProfile": "epsilon_r=epsilon_bar*(1+2 eta cos(2 pi x/a))",
+    "units": "a=v=hbar=1 for numerical fixture"
+  },
+  "derivation": {
+    "braggCarrierWaveNumber": "pi/a",
+    "braggCarrierFrequency": "v pi/a",
+    "envelopeHamiltonian": "hbar v q sigma_z - hbar eta omega_B sigma_x/2",
+    "fixedMixingFrequency": "g_B=-eta omega_B/2",
+    "envelopeHalfGap": "hbar abs(g_B)",
+    "approximation": "First order in eta, q/k_B and detuning/carrier frequency",
+    "actualFrequency": "omega=omega_B+delta_omega; both branches near a positive carrier"
+  },
+  "records": [
+    {
+      "eta": 0.0,
+      "q": 0.0,
+      "planeWaveBands": [
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "lowerOrderBands": [
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "fixedCouplingPrediction": [
+        3.141592653589793,
+        3.141592653589793
+      ],
+      "couplingFrequency": -0.0,
+      "cutoffChange": 0.0,
+      "approximationAbsoluteErrors": [
+        0.0,
+        0.0
+      ],
+      "numericalHalfSplitting": 0.0
+    },
+    {
+      "eta": 0.0,
+      "q": 0.06283185307179587,
+      "planeWaveBands": [
+        3.078760800517997,
+        3.204424506661589
+      ],
+      "lowerOrderBands": [
+        3.078760800517997,
+        3.204424506661589
+      ],
+      "fixedCouplingPrediction": [
+        3.078760800517997,
+        3.204424506661589
+      ],
+      "couplingFrequency": -0.0,
+      "cutoffChange": 0.0,
+      "approximationAbsoluteErrors": [
+        0.0,
+        0.0
+      ],
+      "numericalHalfSplitting": 0.06283185307179595
+    },
+    {
+      "eta": 0.005,
+      "q": 0.0,
+      "planeWaveBands": [
+        3.133763157331214,
+        3.149471237178652
+      ],
+      "lowerOrderBands": [
+        3.1337631573312312,
+        3.1494712371785716
+      ],
+      "fixedCouplingPrediction": [
+        3.1337386719558187,
+        3.1494466352237676
+      ],
+      "couplingFrequency": -0.007853981633974483,
+      "cutoffChange": 8.038014698286133e-14,
+      "approximationAbsoluteErrors": [
+        2.4485375395233433e-05,
+        2.460195488440675e-05
+      ],
+      "numericalHalfSplitting": 0.007854039923719025
+    },
+    {
+      "eta": 0.005,
+      "q": 0.06283185307179587,
+      "planeWaveBands": [
+        3.078296025289223,
+        3.2049383702017633
+      ],
+      "lowerOrderBands": [
+        3.0782960252891747,
+        3.2049383702018357
+      ],
+      "fixedCouplingPrediction": [
+        3.0782718293062876,
+        3.2049134778732986
+      ],
+      "couplingFrequency": -0.007853981633974483,
+      "cutoffChange": 7.238654120556021e-14,
+      "approximationAbsoluteErrors": [
+        2.419598293545988e-05,
+        2.4892328464698465e-05
+      ],
+      "numericalHalfSplitting": 0.06332117245627011
+    },
+    {
+      "eta": 0.02,
+      "q": 0.0,
+      "planeWaveBands": [
+        3.110565690024836,
+        3.1734050011400528
+      ],
+      "lowerOrderBands": [
+        3.1105656900248193,
+        3.1734050011400847
+      ],
+      "fixedCouplingPrediction": [
+        3.1101767270538954,
+        3.173008580125691
+      ],
+      "couplingFrequency": -0.031415926535897934,
+      "cutoffChange": 3.197442310920451e-14,
+      "approximationAbsoluteErrors": [
+        0.00038896297094082044,
+        0.0003964210143618807
+      ],
+      "numericalHalfSplitting": 0.031419655557608284
+    },
+    {
+      "eta": 0.02,
+      "q": 0.06283185307179587,
+      "planeWaveBands": [
+        3.0717306234872117,
+        3.2122400831953097
+      ],
+      "lowerOrderBands": [
+        3.071730623487147,
+        3.2122400831953137
+      ],
+      "fixedCouplingPrediction": [
+        3.071344506279386,
+        3.2118408009002004
+      ],
+      "couplingFrequency": -0.031415926535897934,
+      "cutoffChange": 6.483702463810914e-14,
+      "approximationAbsoluteErrors": [
+        0.00038611720782588677,
+        0.00039928229510932667
+      ],
+      "numericalHalfSplitting": 0.07025472985404901
+    },
+    {
+      "eta": 0.05,
+      "q": 0.0,
+      "planeWaveBands": [
+        3.0654487861577255,
+        3.2226446838504352
+      ],
+      "lowerOrderBands": [
+        3.0654487861578072,
+        3.2226446838504823
+      ],
+      "fixedCouplingPrediction": [
+        3.0630528372500483,
+        3.220132469929538
+      ],
+      "couplingFrequency": -0.07853981633974483,
+      "cutoffChange": 8.171241461241152e-14,
+      "approximationAbsoluteErrors": [
+        0.0023959489076772478,
+        0.0025122139208972882
+      ],
+      "numericalHalfSplitting": 0.07859794884635485
+    },
+    {
+      "eta": 0.05,
+      "q": 0.06283185307179587,
+      "planeWaveBands": [
+        3.0433999473997724,
+        3.2446936132691
+      ],
+      "lowerOrderBands": [
+        3.0433999473996964,
+        3.2446936132690576
+      ],
+      "fixedCouplingPrediction": [
+        3.041012613268084,
+        3.242172693911502
+      ],
+      "couplingFrequency": -0.07853981633974483,
+      "cutoffChange": 7.593925488436071e-14,
+      "approximationAbsoluteErrors": [
+        0.0023873341316882346,
+        0.002520919357598128
+      ],
+      "numericalHalfSplitting": 0.10064683293466392
+    },
+    {
+      "eta": 0.1,
+      "q": 0.0,
+      "planeWaveBands": [
+        2.993864082180544,
+        3.3089457089519922
+      ],
+      "lowerOrderBands": [
+        2.9938640821805635,
+        3.308945708952042
+      ],
+      "fixedCouplingPrediction": [
+        2.9845130209103035,
+        3.2986722862692828
+      ],
+      "couplingFrequency": -0.15707963267948966,
+      "cutoffChange": 4.973799150320701e-14,
+      "approximationAbsoluteErrors": [
+        0.009351061270240546,
+        0.010273422682709477
+      ],
+      "numericalHalfSplitting": 0.15754081338572412
+    },
+    {
+      "eta": 0.1,
+      "q": 0.06283185307179587,
+      "planeWaveBands": [
+        2.9817464876244637,
+        3.321063574578271
+      ],
+      "lowerOrderBands": [
+        2.98174648762439,
+        3.321063574578267
+      ],
+      "fixedCouplingPrediction": [
+        2.9724127116251524,
+        3.310772595554434
+      ],
+      "couplingFrequency": -0.15707963267948966,
+      "cutoffChange": 7.37188088351104e-14,
+      "approximationAbsoluteErrors": [
+        0.009333775999311289,
+        0.010290979023837021
+      ],
+      "numericalHalfSplitting": 0.16965854347690357
+    }
+  ],
+  "verdict": {
+    "periodicWaveEquationDerivesEnvelopeMixing": true,
+    "geometryAndConstitutiveInputsDerived": false,
+    "smallEnvelopeWaveNumberImpliesSmallAbsoluteEnergy": false,
+    "fundamentalPhotonRestMassDerived": false,
+    "physicalAetherEstablished": false,
+    "physicalSelectorT1T2Identified": false,
+    "genuineUVIRDualityEstablished": false
+  }
+}

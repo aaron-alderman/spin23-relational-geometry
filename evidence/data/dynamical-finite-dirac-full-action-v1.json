@@ -1,0 +1,407 @@
+{
+  "schemaVersion": "dynamical-finite-dirac-full-action-v1",
+  "date": "2026-11-08",
+  "authority": "Bounded corpus audit and exact flat constant-mass full-cutoff result, with supplied hard/soft constraints and finite-matrix comparison models. No selected physical T1/T2 operator, vacuum or mass ratio.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/1100-1199/1105_the_generalized_quadratic_inner_fluctuation_is_a_first_order_defect_dressing_not_the_square_of_the_charge_three_family_edge.md": "59c613a1badcbed6714d84f56490b3605d4e4617d4ed77cf4da0120c2d7d7484",
+    "corpus/claims/1100-1199/1195_a_charge_three_cross_peirce_vacuum_completes_the_rank_split_to_a_full_jordan_frame_but_needs_response_to_gap_cp1.md": "686835f55929dff59618cc23dc5cd85a406af5a10bf118fd9ca40089873a2110",
+    "corpus/claims/1100-1199/1196_no_u3_covariant_effective_action_of_one_projector_can_select_its_orientation_so_closure_requires_a_second_family_tensor.md": "50ce78ec59d8d1f7c87ceb5e8773f20a339e7408f05d5014e99c63c2e27c40f0",
+    "corpus/claims/1100-1199/1198_the_charge_three_link_has_a_scalar_flavon_versus_dynamical_cross_peirce_fork_separating_bf_closure_from_flavour_closure.md": "da63582fff8961be8889d314430bec83dae94bf1c2337e0161c85b42d3d0af5a",
+    "evidence/data/spectral-mass-ratio-closure-v1.json": "8e01e206c0c143214677369fa4ea5f9de1f27dc11d2a79226fbffc8888cab4c1",
+    "scripts/audit-dynamical-finite-dirac-full-action.py": "fc6e1c9bdc0836b96ab4894b06fc8908b8db6f3fbd624dcb743e95cafc06d1c3"
+  },
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/1510.01377",
+      "version": "v2",
+      "sections": "1-2 and 4; measure over finite Dirac operators and polynomial actions",
+      "accessed": "2026-11-08"
+    },
+    {
+      "url": "https://arxiv.org/html/1912.13288",
+      "version": "v5",
+      "sections": "abstract and 2.5; growing polynomial spectral actions",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "primarySourceBoundary": "Remote primary pages reviewed; full remote bytes are not archived here.",
+  "corpusDynamicalFork": {
+    "fixedFamilyMapIsSpurion": true,
+    "dynamicalFamilyMapRouteExplicit": true,
+    "selectingResponsePotentialDerived": false,
+    "fullFiniteDiracVariationDomainDerived": false
+  },
+  "fullCutoffTheorem": {
+    "assumptions": [
+      "flat Euclidean R4 momentum density",
+      "constant Hermitian mass matrix",
+      "nonnegative cutoff F(t)=f(sqrt(t)) with finite required moments",
+      "independent squared-mass variations allowed",
+      "no added potential or determinant"
+    ],
+    "density": "Lambda^4/(4 pi^2) sum_i W(s_i), W(s)=integral_s^infinity (t-s) F(t) dt",
+    "derivative": "Wprime(s)=-integral_s^infinity F(t) dt",
+    "secondDerivative": "Wdoubleprime(s)=F(s)",
+    "conclusion": "No isolated selected finite positive mass radius on this unconstrained domain. Positive tails give descent; compact support gives an undetermined plateau.",
+    "nonmonotoneProfileDerivativeAtT2": 0.4060058497098381,
+    "samples": [
+      {
+        "profile": "gaussian",
+        "s": 0.1,
+        "W": 0.9048374180359593,
+        "derivative": -0.9048374180359594,
+        "secondDerivative": 0.9048374180359595,
+        "directRadialMomentumIntegral": 0.4524187090179798,
+        "quadratureErrorEstimate": 5.339859765885111e-10
+      },
+      {
+        "profile": "gaussian",
+        "s": 0.7,
+        "W": 0.4965853037914094,
+        "derivative": -0.4965853037914096,
+        "secondDerivative": 0.4965853037914095,
+        "directRadialMomentumIntegral": 0.2482926518957048,
+        "quadratureErrorEstimate": 2.9305769796270203e-10
+      },
+      {
+        "profile": "gaussian",
+        "s": 2.0,
+        "W": 0.13533528323661265,
+        "derivative": -0.13533528323661267,
+        "secondDerivative": 0.1353352832366127,
+        "directRadialMomentumIntegral": 0.06766764161830635,
+        "quadratureErrorEstimate": 7.986753730680566e-11
+      },
+      {
+        "profile": "gaussian",
+        "s": 6.0,
+        "W": 0.002478752176666358,
+        "derivative": -0.0024787521766663585,
+        "secondDerivative": 0.0024787521766663585,
+        "directRadialMomentumIntegral": 0.0012393760883331792,
+        "quadratureErrorEstimate": 1.4628252286047875e-12
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "s": 0.1,
+        "W": 12.522949865617683,
+        "derivative": -4.560380586901236,
+        "secondDerivative": 3.8365106524724686,
+        "directRadialMomentumIntegral": 6.26147493280884,
+        "quadratureErrorEstimate": 1.1301301363491229e-08
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "s": 0.7,
+        "W": 10.20979384595138,
+        "derivative": -3.45623371438821,
+        "secondDerivative": 0.675356013156317,
+        "directRadialMomentumIntegral": 5.10489692297569,
+        "quadratureErrorEstimate": 5.993585852364117e-09
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "s": 2.0,
+        "W": 6.090087745647571,
+        "derivative": -2.842040947968877,
+        "secondDerivative": 0.6766764161830635,
+        "directRadialMomentumIntegral": 3.045043872823786,
+        "quadratureErrorEstimate": 1.2970348996238788e-09
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "s": 6.0,
+        "W": 0.5081441962166034,
+        "derivative": -0.36933407432328763,
+        "secondDerivative": 0.2503539698433022,
+        "directRadialMomentumIntegral": 0.25407209810830167,
+        "quadratureErrorEstimate": 1.2954814375251252e-11
+      }
+    ],
+    "universalNoGoForAllSpectralActions": false
+  },
+  "hardRadius": {
+    "identity": "sum W(s_i)>=N W(R/N) for sum s_i=R",
+    "shapeSamples": [
+      {
+        "profile": "gaussian",
+        "squaredMasses": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 1.1036383235143266,
+        "equalShapeAction": 1.1036383235143266,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "profile": "gaussian",
+        "squaredMasses": [
+          0.5,
+          1.0,
+          1.5
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 1.1975402610325052,
+        "equalShapeAction": 1.1036383235143266,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "profile": "gaussian",
+        "squaredMasses": [
+          0.1,
+          0.9,
+          2.0
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 1.4467423610131709,
+        "equalShapeAction": 1.1036383235143266,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "squaredMasses": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 27.59095808785817,
+        "equalShapeAction": 27.59095808785817,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "squaredMasses": [
+          0.5,
+          1.0,
+          1.5
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 27.700963349160077,
+        "equalShapeAction": 27.59095808785817,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      {
+        "profile": "positive_nonmonotone",
+        "squaredMasses": [
+          0.1,
+          0.9,
+          2.0
+        ],
+        "sumSquaredMasses": 3.0,
+        "action": 28.143030435584897,
+        "equalShapeAction": 27.59095808785817,
+        "excludedCollectiveRadialDirection": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    ],
+    "equalShapeSelectedForStrictConvexity": true,
+    "radiusSupplied": true,
+    "collectiveRadialReferenceRetained": false,
+    "orientationSelectionEstablished": false
+  },
+  "softStabilizer": {
+    "potential": "sum exp(-s_i)+kappa/2 (sum s_i-R)^2",
+    "stationarity": "kappa (N q-R)=exp(-q)",
+    "scope": "Full untruncated comparison potential; independently supplied kinetic term; singular-value directions only.",
+    "samples": [
+      {
+        "numberChannels": 2,
+        "radiusTarget": 1.0,
+        "kappa": 0.25,
+        "suppliedKineticZ": 1.0,
+        "suppliedPotentialPrefactor": 1.0,
+        "cutoff": 1.0,
+        "q": 1.1397792556817692,
+        "singularGap": 1.0676044472002584,
+        "squaredMassCoordinateHessian": [
+          [
+            0.5698896278408847,
+            0.25
+          ],
+          [
+            0.25,
+            0.5698896278408847
+          ]
+        ],
+        "amplitudeHessian": [
+          [
+            2.598193503364976,
+            1.1397792556817692
+          ],
+          [
+            1.1397792556817692,
+            2.598193503364976
+          ]
+        ],
+        "hessianEigenvalues": [
+          1.458414247683207,
+          3.7379727590467455
+        ],
+        "radialMassSquared": 3.737972759046745,
+        "gapToRadialMass": 0.5521947943880828
+      },
+      {
+        "numberChannels": 2,
+        "radiusTarget": 1.0,
+        "kappa": 1.0,
+        "suppliedKineticZ": 1.0,
+        "suppliedPotentialPrefactor": 1.0,
+        "cutoff": 1.0,
+        "q": 0.7388350311316091,
+        "singularGap": 0.8595551355972513,
+        "squaredMassCoordinateHessian": [
+          [
+            1.4776700622632148,
+            1.0
+          ],
+          [
+            1.0,
+            1.4776700622632148
+          ]
+        ],
+        "amplitudeHessian": [
+          [
+            4.367017625817956,
+            2.9553401245264364
+          ],
+          [
+            2.9553401245264364,
+            4.367017625817956
+          ]
+        ],
+        "hessianEigenvalues": [
+          1.41167750129152,
+          7.322357750344393
+        ],
+        "radialMassSquared": 7.322357750344393,
+        "gapToRadialMass": 0.3176495670216819
+      },
+      {
+        "numberChannels": 2,
+        "radiusTarget": 1.0,
+        "kappa": 4.0,
+        "suppliedKineticZ": 1.0,
+        "suppliedPotentialPrefactor": 1.0,
+        "cutoff": 1.0,
+        "q": 0.5706450925146268,
+        "singularGap": 0.7554105456734284,
+        "squaredMassCoordinateHessian": [
+          [
+            4.565160740117011,
+            4.0
+          ],
+          [
+            4.0,
+            4.565160740117011
+          ]
+        ],
+        "amplitudeHessian": [
+          [
+            10.420346291552855,
+            9.130321480234029
+          ],
+          [
+            9.130321480234029,
+            10.420346291552855
+          ]
+        ],
+        "hessianEigenvalues": [
+          1.2900248113188262,
+          19.550667771786884
+        ],
+        "radialMassSquared": 19.550667771786888,
+        "gapToRadialMass": 0.17084498913121296
+      }
+    ],
+    "parametersDerivedFromSelector": false,
+    "allMatrixOrientationModesGapped": false
+  },
+  "finiteDiracMeasure": {
+    "boundedCutoffFlatMeasureNormalizable": false,
+    "lowerBound": "For bounded S<=B on an unbounded matrix space, exp(-S)>=exp(-B)>0.",
+    "oneParameterCutoffSamples": [
+      {
+        "L": 1.0,
+        "partitionIntegralOnInterval": 0.4879255641692987,
+        "rigorousLowerBound": 0.2706705664732254
+      },
+      {
+        "L": 2.0,
+        "partitionIntegralOnInterval": 2.043736001832363,
+        "rigorousLowerBound": 0.5413411329464508
+      },
+      {
+        "L": 4.0,
+        "partitionIntegralOnInterval": 6.027311388401089,
+        "rigorousLowerBound": 1.0826822658929016
+      },
+      {
+        "L": 8.0,
+        "partitionIntegralOnInterval": 14.027311333748337,
+        "rigorousLowerBound": 2.1653645317858032
+      }
+    ],
+    "confiningPolynomialSamples": [
+      {
+        "alpha": 0.5,
+        "minimumAbsoluteEigenvalue": 1.0,
+        "curvatureWithAssumedUnitKinetic": 4.0,
+        "conditionalGapToCurvatureMass": 0.5,
+        "partitionIntegral": 2.5266539244549135
+      },
+      {
+        "alpha": 1.0,
+        "minimumAbsoluteEigenvalue": 1.0,
+        "curvatureWithAssumedUnitKinetic": 8.0,
+        "conditionalGapToCurvatureMass": 0.35355339059327373,
+        "partitionIntegral": 1.9737321500898244
+      },
+      {
+        "alpha": 2.0,
+        "minimumAbsoluteEigenvalue": 1.0,
+        "curvatureWithAssumedUnitKinetic": 16.0,
+        "conditionalGapToCurvatureMass": 0.25,
+        "partitionIntegral": 1.410914703196209
+      }
+    ],
+    "polynomialIsFullFiniteModelAction": true,
+    "physicalScalarPoleDerivedFromZeroDimensionalEnsemble": false
+  },
+  "verdict": {
+    "dynamicalFiniteDiracPossibleAsNewModelClass": true,
+    "stablePhysicalFiniteSpectrumSelectedByInspectedCorpus": false,
+    "fullDecayingCutoffAloneSelectsFiniteRadiusInAuditedModel": false,
+    "fixedRadiusCanSelectShape": true,
+    "fixedRadiusPreservesEarlierRadialReference": false,
+    "suppliedSoftStabilizerCanSelectStableSingularValues": true,
+    "positivePhysicalT1T2MassRatioPredicted": false,
+    "nextDiscriminator": "Derive the physical finite-operator variation domain and kinetic/measure geometry, a confining full action with fixed coefficients, and a positive-residue reference mode; then calculate the ratio without target-mass matching."
+  }
+}

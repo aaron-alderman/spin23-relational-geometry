@@ -1,0 +1,780 @@
+{
+  "schemaVersion": "hcq-public-inductive-strength-test-v1",
+  "date": "2026-11-08",
+  "primaryPaper": "https://arxiv.org/abs/2601.06682v1",
+  "primaryData": "https://osf.io/q4dav/",
+  "sourceHashes": {
+    "evidence\\data\\hcq-device-primary-v1\\Fig2.xlsx": "0d43da797de00ac71e8783b1929179d393aa6ee042763a2063c2c7df7dfc3599",
+    "evidence\\data\\hcq-device-primary-v1\\Fig2_insert.xlsx": "93dc793e03e525aa3c51fa523632cc95267bab48a51d627ee1aa07abdba908fa",
+    "evidence\\data\\hcq-device-primary-v1\\Fig3a.xlsx": "90e75c766612cab071047eecba2eaf59270a0b5e8df36fcc3b0da8e94d821f23",
+    "evidence\\data\\hcq-device-primary-v1\\Fig3a_fit.xlsx": "c3c4be59ae0ea41c70de100b06c60b493c9b2ee95dd348787eab55bea753357f",
+    "evidence\\data\\hcq-device-primary-v1\\Fig3b.xlsx": "aed697f601b7064f772021767b6ddfacd416e40514efdbf08873c0fee7b558bd",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4a-fit.xlsx": "f5f2e1ea56a3f7a3e9b9b68c106c62107dfc29aca4e11f97689de03f1f69d66b",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4a.xlsx": "d67b1d4aa7d11c951670f8e9f4bcc9b2704fa224038578616813b1ffbbac009e",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4b-fit.xlsx": "04f00e30e0e96260f90d28e073a112715f7de7b80b056fb30515a568c65ef894",
+    "evidence\\data\\hcq-device-primary-v1\\Fig4b.xlsx": "5c12af0e7b1753f48587ce3b7b0c16fa07c5addc4632239e71c4586ebedf0015",
+    "evidence\\data\\hcq-lever-arm-ratio-test-v1.json": "8a4555900e251634c5504bb28c59af59829afeb01fb2beb1b07c4ba4e926dd82",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\test-hcq-public-inductive-strengths.py": "358652d8804ea5bb77d894afeb3c5033708baca172c3d312e8500b602a847d68"
+  },
+  "sourcePolicy": "Original public workbooks read only; numerical values and author axes preserved. No physical parameter, linewidth or per-bias gain refit.",
+  "fixedModel": {
+    "IpAmpere": 1.15e-08,
+    "referenceFrequencyGHz": 2.555,
+    "temperatureKelvin": 0.012,
+    "parametersRefitted": 0,
+    "referenceColumnIndexOneBased": 76,
+    "referenceFluxOverQuantum": 9.30073940877509e-05,
+    "predictedStrength": "W(Phi)/W(Phi_ref)=[f01(Phi_ref)/f01(Phi)]^2",
+    "sourceBoundary": "Previously published fitted spectral parameters; not an independent prediction of pole positions."
+  },
+  "measurementModel": {
+    "observable": "Two-tone dispersive readout contrast versus spectroscopy frequency and flux, in arbitrary units.",
+    "weakDriveArea": "A(Phi)=constant*G_readout(Phi)*T1(Phi)*Delta_p(Phi)*|Phi_ac(omega01,Phi)|^2*|I10(Phi)|^2, for a linear readout and weak unsaturated drive.",
+    "linewidth": "An ideally fully integrated weak-drive Lorentzian area removes the explicit T2 factor, but finite sampling/windows, saturation, overlap and readout distortion prevent automatic cancellation.",
+    "inversion": "Delta_p=tanh(h f01/(2 kB T)) only in thermal equilibrium. Under drive, steady state and saturation must be measured or predicted by a calibrated dynamical model.",
+    "readout": "G_readout includes dispersive population-to-resonator conversion and detection transfer. Through-transmission magnitude does not by itself determine local pump flux or this conversion.",
+    "conditionalCorrection": "W/W_ref=(A/A_ref)*(G_ref/G)*(T1_ref/T1)*(Delta_p_ref/Delta_p)*(|Phi_ac,ref|^2/|Phi_ac|^2). The unmeasured factors are not set to one."
+  },
+  "dataset": {
+    "mapShapeFrequencyByFlux": [
+      401,
+      151
+    ],
+    "frequencyGHz": [
+      0.1,
+      16.1
+    ],
+    "frequencyStepMHz": 40.00000000000001,
+    "fluxRange": [
+      -0.2324254778254871,
+      0.23261149261366326
+    ],
+    "notes": [
+      "Column 0.1-16.1GHz 401 points",
+      "row from -0.232425  to 0.232611   151 points"
+    ],
+    "sourceRange": "Fig3a!A1:EU401",
+    "inventory": [
+      {
+        "file": "Fig2.xlsx",
+        "sheets": [
+          {
+            "name": "Fig2",
+            "rows": 1402,
+            "columns": 2,
+            "headers": [
+              "f, GHz",
+              "|t|"
+            ],
+            "textNotes": [
+              "f, GHz"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig2_insert.xlsx",
+        "sheets": [
+          {
+            "name": "Fig2_insert",
+            "rows": 507,
+            "columns": 4,
+            "headers": [
+              "f, GHz",
+              "|t|",
+              "f, GHz",
+              "|t|"
+            ],
+            "textNotes": [
+              "f, GHz",
+              "Ampl=4.763701E-3",
+              "half_width(GHz)=-1.025879E-2",
+              "f(GHz)=10.676348",
+              "Q=-520.351309"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig3a.xlsx",
+        "sheets": [
+          {
+            "name": "Fig3a",
+            "rows": 403,
+            "columns": 151,
+            "headers": null,
+            "textNotes": [
+              "Column 0.1-16.1GHz 401 points",
+              "row from -0.232425  to 0.232611   151 points"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig3a_fit.xlsx",
+        "sheets": [
+          {
+            "name": "Fig3a_fit",
+            "rows": 154,
+            "columns": 4,
+            "headers": [
+              "I, mA ",
+              "f, GHz",
+              "F/F0",
+              "f, GHz"
+            ],
+            "textNotes": [
+              "I, mA ",
+              "degeneracy point at 3.02994mA",
+              "period=0.64511mA"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig3b.xlsx",
+        "sheets": [
+          {
+            "name": "Fig3b",
+            "rows": 402,
+            "columns": 4,
+            "headers": [
+              "t, ns",
+              "amplitude",
+              "t, ns",
+              "amplitude"
+            ],
+            "textNotes": [
+              "t, ns"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig4a-fit.xlsx",
+        "sheets": [
+          {
+            "name": "Fig4a-fit",
+            "rows": 379,
+            "columns": 8,
+            "headers": [
+              "1000*Vgate, mV",
+              "f, GHz",
+              "1000*Vgate, mV",
+              "f, GHz",
+              "Q/e",
+              "f, GHz",
+              "Q/e",
+              "f, GHz"
+            ],
+            "textNotes": [
+              "1000*Vgate, mV",
+              "period=3.35mV"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig4a.xlsx",
+        "sheets": [
+          {
+            "name": "Fig4a",
+            "rows": 154,
+            "columns": 401,
+            "headers": null,
+            "textNotes": [
+              "row Q/e from -0.232000  to 11.708299  401 points",
+              "column MW frequency 0.1-3.1GHz 151 points",
+              "period=3.35mV"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig4b-fit.xlsx",
+        "sheets": [
+          {
+            "name": "Fig4b-fit",
+            "rows": 158,
+            "columns": 8,
+            "headers": [
+              "1000*Vg, mV",
+              "f, GHz",
+              "1000*Vg, mV",
+              "f, GHz",
+              "Q/e",
+              "f, GHz",
+              "Q/e",
+              "f, GHz"
+            ],
+            "textNotes": [
+              "1000*Vg, mV",
+              "period=3.62mV"
+            ]
+          }
+        ]
+      },
+      {
+        "file": "Fig4b.xlsx",
+        "sheets": [
+          {
+            "name": "Fig4b",
+            "rows": 129,
+            "columns": 401,
+            "headers": null,
+            "textNotes": [
+              "column f 0.1-5.1GHz 126 points",
+              "row from-3.25  to 7.799724  401 points",
+              "period=3.62mV"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "populationAudit": {
+    "equilibriumReferenceInversion": 0.9999270190834318,
+    "maximumEquilibriumCorrectionOverEntireFluxMap": 7.298624317098046e-05,
+    "drivenPopulationsAvailable": false,
+    "interpretation": "The equilibrium correction is tiny on this fixed-charge flux sweep; the bath temperature does not certify driven populations or weak saturation."
+  },
+  "linewidthAudit": {
+    "reportedLifetimeSeconds": 2e-08,
+    "lifetimeLimitedMinimumFWHMMHz": 7.957747154594767,
+    "frequencyStepOverMinimumFWHM": 5.02654824574367,
+    "fluxResolvedQubitT1T2Provided": false,
+    "scope": "Lifetime-based estimate takes the paper reported 20 ns at face value. Its single Rabi trace is not a bias-resolved relaxation/dephasing or power-broadening calibration.",
+    "idealLorentzianInfiniteGridAreaFactorRange": [
+      0.30270972933210843,
+      3.3034947446399436
+    ],
+    "apparentHalfHeightWidthRangeMHz": [
+      193.75932865713574,
+      377.29857283932324
+    ],
+    "samplingScope": "Diagnostic for a hypothetical lifetime-limited narrow line, not a confidence interval or a claim that these visibly broadened features are undersampled. Apparent widths do not isolate homogeneous dephasing, saturation or overlapping response."
+  },
+  "probeTransferAudit": {
+    "resonatorSourceNotes": [
+      "f, GHz",
+      "Ampl=4.763701E-3",
+      "half_width(GHz)=-1.025879E-2",
+      "f(GHz)=10.676348",
+      "Q=-520.351309"
+    ],
+    "magnitudeOnlyTransmission": true,
+    "localPumpFluxCalibrationAvailable": false,
+    "fluxResolvedPopulationReadoutConversionAvailable": false,
+    "resonatorLinewidthIsNotQubitLinewidth": true,
+    "scope": "Published total attenuation and gain are not a calibrated frequency/bias-resolved local flux transfer. The source frequency headers say GHz but numeric magnitudes in Fig2 are Hz; this audit does not reinterpret them as calibrated qubit-drive amplitudes."
+  },
+  "rawAreaProtocol": {
+    "halfWindowGHz": [
+      0.12,
+      0.2,
+      0.28
+    ],
+    "flanksGHz": [
+      0.32,
+      0.52
+    ],
+    "standingModeExclusionHalfWidthGHz": 0.12,
+    "normalization": "Same extraction at the nearest degeneracy column.",
+    "scope": "Fixed-window, signed local-flank diagnostics. Model-assisted location; no linewidth fit. Window sensitivity retained. Neither positive nor negative contrast is promoted to a current matrix element."
+  },
+  "records": [
+    {
+      "requestedFluxOverQuantum": -0.1,
+      "actualFluxOverQuantum": -0.09911487963293031,
+      "excelColumnIndexOneBased": 44,
+      "predictedTransitionGHz": 7.55909526596947,
+      "predictedCurrentStrengthRatio": 0.11424708723723413,
+      "equilibriumPopulationDifference": 0.9999999999998516,
+      "relativeEquilibriumPopulationCorrection": 0.9999270190835803,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 7.54,
+        "halfHeightWidthMHz": 351.37376367117935,
+        "dipHeightArbitraryUnits": 0.2300347297,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 1.2767434498725994,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.041685779940000035,
+            "flankMean": -0.0204076703,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.5156811233793108,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.06559970069200007,
+            "flankMean": -0.0204076703,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.690152870989396,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.07794060984400003,
+            "flankMean": -0.0204076703,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": -0.05,
+      "actualFluxOverQuantum": -0.04951093611942093,
+      "excelColumnIndexOneBased": 60,
+      "predictedTransitionGHz": 4.376901142688701,
+      "predictedCurrentStrengthRatio": 0.34076210979577015,
+      "equilibriumPopulationDifference": 0.9999999500226826,
+      "relativeEquilibriumPopulationCorrection": 0.9999270690571044,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 4.5,
+        "halfHeightWidthMHz": 339.1477484684948,
+        "dipHeightArbitraryUnits": 0.1821101766,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 0.8808671356509123,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.028760385320000026,
+            "flankMean": -0.0632010234,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.0765375673862074,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.046593271576000045,
+            "flankMean": -0.0632010234,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.3130801567625496,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.06055207783200006,
+            "flankMean": -0.0632010234,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": -0.02,
+      "actualFluxOverQuantum": -0.018508471423478265,
+      "excelColumnIndexOneBased": 70,
+      "predictedTransitionGHz": 2.8797410162351027,
+      "predictedCurrentStrengthRatio": 0.7871869933048161,
+      "equilibriumPopulationDifference": 0.9999800844630904,
+      "relativeEquilibriumPopulationCorrection": 0.9999469335634948,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 2.8600000000000003,
+        "halfHeightWidthMHz": 319.25431765571767,
+        "dipHeightArbitraryUnits": 0.1346828188,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 0.7611754482245673,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.02485244175999996,
+            "flankMean": -0.061706581199999985,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 0.8794845364052097,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.038064683567999975,
+            "flankMean": -0.061706581199999985,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 0.8923108565389565,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.04114849817599998,
+            "flankMean": -0.061706581199999985,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": 0.0,
+      "actualFluxOverQuantum": 9.30073940877509e-05,
+      "excelColumnIndexOneBased": 76,
+      "predictedTransitionGHz": 2.5550087214401445,
+      "predictedCurrentStrengthRatio": 1.0,
+      "equilibriumPopulationDifference": 0.9999270190834318,
+      "relativeEquilibriumPopulationCorrection": 1.0,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 2.58,
+        "halfHeightWidthMHz": 193.75932865713574,
+        "dipHeightArbitraryUnits": 0.21614488629999998,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 1.0,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.0,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.0,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": 0.02,
+      "actualFluxOverQuantum": 0.018694486211653764,
+      "excelColumnIndexOneBased": 82,
+      "predictedTransitionGHz": 2.885924744124037,
+      "predictedCurrentStrengthRatio": 0.7838171652716724,
+      "equilibriumPopulationDifference": 0.9999805709492265,
+      "relativeEquilibriumPopulationCorrection": 0.9999464470937232,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 2.9000000000000004,
+        "halfHeightWidthMHz": 312.41928406749906,
+        "dipHeightArbitraryUnits": 0.1579353663,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 0.8838831751267007,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.02885885925999996,
+            "flankMean": -0.0527681337,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.0226151237492773,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.04425947186799997,
+            "flankMean": -0.0527681337,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.0812763255361983,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.04986255247599999,
+            "flankMean": -0.0527681337,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": 0.05,
+      "actualFluxOverQuantum": 0.04969695090759712,
+      "excelColumnIndexOneBased": 92,
+      "predictedTransitionGHz": 4.387748750931199,
+      "predictedCurrentStrengthRatio": 0.339079294847605,
+      "equilibriumPopulationDifference": 0.9999999521445189,
+      "relativeEquilibriumPopulationCorrection": 0.9999270669354228,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 4.38,
+        "halfHeightWidthMHz": 350.1602666152861,
+        "dipHeightArbitraryUnits": 0.19847012130000002,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 1.1227330101454696,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.03665732626000003,
+            "flankMean": -0.07440047870000001,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.3112407995040847,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.056751385668000046,
+            "flankMean": -0.07440047870000001,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.461176954963599,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.06738149247600005,
+            "flankMean": -0.07440047870000001,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    },
+    {
+      "requestedFluxOverQuantum": 0.1,
+      "actualFluxOverQuantum": 0.0993008944211065,
+      "excelColumnIndexOneBased": 108,
+      "predictedTransitionGHz": 7.571662447366451,
+      "predictedCurrentStrengthRatio": 0.11386815530149397,
+      "equilibriumPopulationDifference": 0.9999999999998588,
+      "relativeEquilibriumPopulationCorrection": 0.9999270190835731,
+      "apparentWidthDiagnostic": {
+        "status": "apparent-width-only",
+        "peakGHz": 7.5,
+        "halfHeightWidthMHz": 377.29857283932324,
+        "dipHeightArbitraryUnits": 0.16530444190000002,
+        "scope": "Unfitted half-height crossings; not a deconvolved qubit linewidth. Noise, overlapping lines, pump broadening and readout conversion remain."
+      },
+      "uncalibratedAreaDiagnostics": [
+        {
+          "halfWindowGHz": 0.12,
+          "rawSignedAreaRatio": 0.8426502487271147,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.027512600780000025,
+            "flankMean": 0.003750241900000001,
+            "windowBins": 6,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.032650083260000025,
+            "flankMean": 0.0023139863,
+            "windowBins": 6,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.2,
+          "rawSignedAreaRatio": 1.0401213348311482,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.04501715248400004,
+            "flankMean": 0.003750241900000001,
+            "windowBins": 10,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.043280674068000013,
+            "flankMean": 0.0023139863,
+            "windowBins": 10,
+            "flankBins": 10
+          }
+        },
+        {
+          "halfWindowGHz": 0.28,
+          "rawSignedAreaRatio": 1.193136384600672,
+          "measurement": {
+            "signedAreaArbitraryUnitsGHz": 0.05502092682800003,
+            "flankMean": 0.003750241900000001,
+            "windowBins": 14,
+            "flankBins": 10
+          },
+          "reference": {
+            "signedAreaArbitraryUnitsGHz": 0.04611453270400002,
+            "flankMean": 0.0023139863,
+            "windowBins": 14,
+            "flankBins": 10
+          }
+        }
+      ]
+    }
+  ],
+  "identifiabilityWitness": {
+    "maxEqualSignalDifference": 5.551115123125783e-17,
+    "alternativeStrength": "sqrt(W_predicted/W_reference)",
+    "alternativeTransfer": "G_alternative=G_original*(W_predicted/W_reference)/W_alternative",
+    "frequencyOnlyFreedom": "Both W_pred and sqrt(W_pred) depend only on f01 for this model, so the compensating factor can be one smooth frequency-dependent pump transfer rather than independently fitted bias gains.",
+    "scope": "Algebraic underidentification by an unmeasured positive transfer product. No such correction is fitted to claim agreement."
+  },
+  "strengthTest": {
+    "status": "NOT_IDENTIFIABLE_FROM_PUBLISHED_CALIBRATION",
+    "passed": null,
+    "rejected": null,
+    "reason": "Available maps contain spectral features but not the measured correction product required to extract inductive matrix-element ratios. A corrected no-refit comparison cannot be scored.",
+    "notInferred": [
+      "No confirmation from visibility fading.",
+      "No rejection from raw contrast/area ratios.",
+      "No population, transfer or linewidth values invented at unmeasured biases."
+    ]
+  },
+  "requiredAcquisition": [
+    "Weak-power sweep at each bias to establish the unsaturated limit.",
+    "Flux-resolved relaxation and linewidth/coherence or an independently calibrated full dynamical model.",
+    "Pump frequency-to-local-flux calibration and population-to-readout response at the same bias.",
+    "Integrated line weights with sufficient frequency resolution, overlap treatment and covariance.",
+    "Freeze those calibrations before scoring the square-gap law on withheld flux biases."
+  ],
+  "verification": {
+    "fixedModelOnly": true,
+    "equalSignalWitnessPassed": true,
+    "originalSourcesUnmodified": true
+  },
+  "reproduction": "Run scripts/test-hcq-public-inductive-strengths.py with the bundled Python containing openpyxl and numpy."
+}

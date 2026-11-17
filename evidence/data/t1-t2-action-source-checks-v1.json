@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "t1-t2-action-source-checks-v1",
+  "observedAtUTC": "2026-11-08T12:18:53.478Z",
+  "scope": "Local execution receipts for six existing corpus certificates; one corpus audit, no new experimental evidence.",
+  "checks": [
+    {
+      "command": "node verification/verify/verify_lorentz_clifford_extension_of_yukawa_grading.mjs",
+      "exitCode": 0,
+      "stdout": "Lorentz-Clifford extension of Yukawa grading certificate: PASS\nH(p)=alpha*p+beta*M; S=beta*W; anticommutator_zero=true\nunmatched_neutrino_dispersion_E2=0.39690000000000003; massless_cone=true\nMajorana_breaking=true; gapped_E2=0.5569000000000001\n"
+    },
+    {
+      "command": "node verification/verify/verify_phi4_sign_wall_stress_and_selector_loop_gate.mjs",
+      "exitCode": 0,
+      "stdout": "Phi4 sign-wall stress and selector-loop gate certificate: PASS\nkink_eom=true; T_xx=0; tension=2*sqrt(2lambda)*v^3/3\nDirac_zero_profile=cosh(kappa*x)^(-g*v/kappa)_normalizable=true\nRP2_half_turn_requires_transverse_mass; fixed_AIII_grading_breaks_interior=true\n"
+    },
+    {
+      "command": "node verification/verify/verify_full_selector_clifford_lift_needs_global_grading_double.mjs",
+      "exitCode": 0,
+      "stdout": "Full-selector globally graded Clifford-lift certificate: PASS\nlocal_Cl5_complex_dimension=4; antipodal_deck_flips_local_chirality=true\ngrade_preserving_full_selector_lift_dimension=8_constructed=true\ninternal_8plus7_cannot_compensate; neutral_Nambu_or_identical_pair_may_supply_double\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_explicit_macdowell_mansouri_spectrum.mjs",
+      "exitCode": 0,
+      "stdout": "Explicit Spin(2,3) MacDowell-Mansouri spectrum gate: PASS\n  MM coefficients at ell=kappa=1: Euler=0.125, EC=0.25, CC=0.125\n  minimal physical configuration degrees: 2\n  generic torsion Hessian rank: 24/24; momentum degree: 0\n  exceptional ranks lambda={-1/2,1/4,2}: 8, 20, 20\n  fixed-norm selector radial modes: 0; additional massive poles: 0\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_critical_pgt_pseudoscalar_class.mjs",
+      "exitCode": 0,
+      "stdout": "Spin(2,3) critical PGT pseudoscalar class: PASS\n  critical residuals: 2a1+a2=0, a1+2a3=0\n  reduced pole: m^2=A/B=1; graviton + 0- DOF=3\n  nonlinear determinant positive on 25 finite nondegenerate samples for m=1\n  classification: healthy critical surface / classical or tuned EFT; not radiatively closed\n"
+    },
+    {
+      "command": "node verification/verify/verify_frontier_parallel_qft_electron_action_gate.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"minimal_operator_enumeration\": {\n    \"allowed\": [\n      [\n        \"L\",\n        \"ec\",\n        \"Hdag\"\n      ]\n    ],\n    \"unique\": true\n  },\n  \"exact_character\": {\n    \"d_e\": [\n      0,\n      0,\n      0,\n      1,\n      1,\n      0,\n      -1\n    ],\n    \"face_action\": [\n      \"x_L-x_H\",\n      \"-x_ec\"\n    ],\n    \"contrast_equals_d_e\": true\n  },\n  \"action_family_counterexample\": {\n    \"common_representation_and_TRO_data\": true,\n    \"admitted_coefficients\": [\n      {\n        \"re\": 0,\n        \"im\": 0\n      },\n      {\n        \"re\": 1,\n        \"im\": 0\n      },\n      {\n        \"re\": 0,\n        \"im\": 1\n      },\n      {\n        \"re\": 3,\n        \"im\": -4\n      }\n    ],\n    \"includes_absent_and_present_interaction\": true,\n    \"cyclic_trace_rule_derived_from_TRO\": false\n  },\n  \"local_action\": {\n    \"generates_rho_e_with_background_sources\": true,\n    \"ward_divergence_coefficient\": \"y_e d_e(x)\",\n    \"anomaly_eom_and_contact_completion_required\": true\n  },\n  \"response_gate\": {\n    \"unbroken_face_dimensions\": {\n      \"HdagL\": 2.5,\n      \"ecDagger\": 1.5,\n      \"normalizedHdagL\": 1.5\n    },\n    \"broken_phase_v_normalization_required\": true,\n    \"opposite_Weyl_chiralities_require_Dirac_or_projection_intertwiner\": true,\n    \"character_fixes_spectral_residue\": false\n  },\n  \"irreducible_missing_data\": [\n    \"an action functional assigning nonzero y_e to the electron cycle\",\n    \"a Lorentz-compatible projection from the Dirac response to a normalized scalar H2(R) kernel\"\n  ]\n}\n"
+    }
+  ]
+}

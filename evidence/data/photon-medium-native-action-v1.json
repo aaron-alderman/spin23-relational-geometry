@@ -1,0 +1,195 @@
+{
+  "schemaVersion": "photon-medium-native-action-v1",
+  "date": "2026-11-08",
+  "authority": "Bounded source audit and declared Gaussian/port controls; no physical admission",
+  "evidenceFamily": "periodic-maxwell-fixture",
+  "sources": {
+    "evidence/data/photon-medium-native-action-source-checks-v1.json": "2f9f31c9bda763c45913d66313f1f5d0440dd54ef10e44f276fd3ce433146d5b",
+    "scripts/audit-photon-medium-native-action.py": "8af2150a014132dae0870ff88ec9d767f2971763efe64b1ec7e25f9ea0d68cdf",
+    "evidence/data/photon-medium-period-amplitude-v1.json": "1752592509b7029cce8e8ff95775219d2a73452f761cb1fd198f4a5483652976",
+    "corpus/claims/1500-1599/1502_pure_curvature_is_blind_to_flat_leakage_but_covariant_projector_energy_selects_the_parallel_mask.md": "cdcabd43cdf1b5fb71df4bc2c4edbb61577e77114aa87bb984ae0ed55e892c17",
+    "corpus/claims/1100-1199/1198_the_charge_three_link_has_a_scalar_flavon_versus_dynamical_cross_peirce_fork_separating_bf_closure_from_flavour_closure.md": "da63582fff8961be8889d314430bec83dae94bf1c2337e0161c85b42d3d0af5a",
+    "corpus/programmes/frontier/wave-7/frontier_wave7_100_chain_theory_photon_normalization_no_go.md": "e5820c09c69b77da88e21ede70bad0fa726658a321ee690856b70ad65790005a",
+    "corpus/programmes/frontier/wave-7/frontier_wave7_101_compact_charge_does_not_fix_alpha.md": "fd3ecc55ed9a8d7e601d27a22d4f9ec3b094eec95fd69786b82e5af56215d3ba",
+    "corpus/programmes/rdg-maxwell-bridge/04_sources_resonance_and_material_memory_gate.md": "b6deba123663f39226d260292e9fdb4fe4af32f1aaffead89ac3c4daf441569b",
+    "corpus/programmes/dynatology/mystery_atlas_21_aether_substrate_and_universal_cone.md": "6c1d0c75552c1f4193ed90e0df1e8ccf5068a7015cd6a93d1de284bc4e408869",
+    "verification/verify/verify_chain_theory_photon_normalization_no_go.mjs": "91cbcc4758bfaf3562f3d3c8dfe1697b819ed71febab41f77f6047792f15d22b",
+    "verification/verify/verify_compact_charge_does_not_fix_alpha.mjs": "d6dd5c1f986f07d14b8d18fe067bcad1d4813543eb2b5d0bbec483b2ffcb6307"
+  },
+  "sourceVerificationReceipt": "evidence/data/photon-medium-native-action-source-checks-v1.json",
+  "sourceAudit": [
+    {
+      "source": "corpus/claims/1500-1599/1502_pure_curvature_is_blind_to_flat_leakage_but_covariant_projector_energy_selects_the_parallel_mask.md",
+      "result": "positive covariant-projector penalty; parallel minimum; coefficient and spectral origin open"
+    },
+    {
+      "source": "corpus/claims/1100-1199/1198_the_charge_three_link_has_a_scalar_flavon_versus_dynamical_cross_peirce_fork_separating_bf_closure_from_flavour_closure.md",
+      "result": "charged scalar or dynamical link fork; potential parameters and physical carrier matching remain inputs"
+    },
+    {
+      "source": "corpus/programmes/frontier/wave-7/frontier_wave7_100_chain_theory_photon_normalization_no_go.md",
+      "result": "homogeneous Ward constraints do not fix Maxwell residue"
+    },
+    {
+      "source": "corpus/programmes/frontier/wave-7/frontier_wave7_101_compact_charge_does_not_fix_alpha.md",
+      "result": "compact charge lattice does not fix positive gauge kinetic coefficient"
+    },
+    {
+      "source": "corpus/programmes/rdg-maxwell-bridge/04_sources_resonance_and_material_memory_gate.md",
+      "result": "positive material-memory dynamics with supplied oscillator parameters"
+    },
+    {
+      "source": "corpus/programmes/dynatology/mystery_atlas_21_aether_substrate_and_universal_cone.md",
+      "result": "substrate action/state/species ports required rather than supplied"
+    }
+  ],
+  "gaussianElimination": {
+    "parameters": {
+      "r": 2.0,
+      "z": 0.5,
+      "M2": 4.0,
+      "Y": 1.5,
+      "lam": 1.0
+    },
+    "quadraticMatrix": "H0 + k^2 H1, H0 >= 0, H1 >= 0",
+    "exactKernel": "r + z t - lambda^2/(M2+Y t), t=k^2",
+    "exactSlope": "z + lambda^2 Y/(M2+Y t)^2 >= 0",
+    "expansionInTSmall": [
+      1.75,
+      0.59375,
+      -0.03515625
+    ],
+    "expansionRadiusInT": 2.6666666666666665,
+    "samples": [
+      {
+        "kSquared": 0.0,
+        "exactKernel": 1.75,
+        "exactSlope": 0.59375,
+        "fullHessianEigenvalues": [
+          1.585786437626905,
+          4.414213562373095
+        ],
+        "fourthDerivativeTruncation": 1.75
+      },
+      {
+        "kSquared": 0.01,
+        "exactKernel": 1.7559339975093398,
+        "exactSlope": 0.5930508103950162,
+        "fullHessianEigenvalues": [
+          1.5922464953314344,
+          4.427753504668566
+        ],
+        "fourthDerivativeTruncation": 1.755933984375
+      },
+      {
+        "kSquared": 0.1,
+        "exactKernel": 1.8090361445783132,
+        "exactSlope": 0.5870953694295253,
+        "fullHessianEigenvalues": [
+          1.65,
+          4.550000000000001
+        ],
+        "fourthDerivativeTruncation": 1.8090234375
+      },
+      {
+        "kSquared": 1.0,
+        "exactKernel": 2.3181818181818183,
+        "exactSlope": 0.5495867768595042,
+        "fullHessianEigenvalues": [
+          2.197224362268005,
+          5.802775637731995
+        ],
+        "fourthDerivativeTruncation": 2.30859375
+      },
+      {
+        "kSquared": 10.0,
+        "exactKernel": 6.947368421052632,
+        "exactSlope": 0.5041551246537396,
+        "fullHessianEigenvalues": [
+          6.917237469701781,
+          19.08276253029822
+        ],
+        "fourthDerivativeTruncation": 4.171875
+      },
+      {
+        "kSquared": 100.0,
+        "exactKernel": 51.993506493506494,
+        "exactSlope": 0.5000632484398718,
+        "fullHessianEigenvalues": [
+          51.9901970205726,
+          154.0098029794274
+        ],
+        "fourthDerivativeTruncation": -290.4375
+      }
+    ],
+    "generalArgument": "The minimized quadratic energy is pointwise nondecreasing in t when H1 is positive semidefinite; taking its infimum over auxiliary fields preserves that ordering.",
+    "scope": "Static Gaussian elimination with positive two-derivative matrix and invertible auxiliary block; excludes derivative mixing outside this positivity class, finite density, nonlocal interactions and nonequilibrium drives."
+  },
+  "opticalPort": {
+    "linearFamily": [
+      {
+        "b": 0.0,
+        "Z0": 2.0,
+        "firstAmplitude": 0.16,
+        "eta": 0.0,
+        "minimumElectricCoefficient": 2.0
+      },
+      {
+        "b": 0.2,
+        "Z0": 2.0,
+        "firstAmplitude": 0.16,
+        "eta": 0.008,
+        "minimumElectricCoefficient": 1.968
+      },
+      {
+        "b": 0.4,
+        "Z0": 2.0,
+        "firstAmplitude": 0.16,
+        "eta": 0.016,
+        "minimumElectricCoefficient": 1.936
+      },
+      {
+        "b": 0.8,
+        "Z0": 2.0,
+        "firstAmplitude": 0.16,
+        "eta": 0.032,
+        "minimumElectricCoefficient": 1.8719999999999999
+      }
+    ],
+    "evenFamily": [
+      {
+        "b": 0.0,
+        "meanElectricCoefficient": 2.0,
+        "etaAtTwiceSubstrateWaveNumber": 0.0,
+        "opticalReciprocalWaveNumberOverSubstrate": 2
+      },
+      {
+        "b": 0.4,
+        "meanElectricCoefficient": 2.00512,
+        "etaAtTwiceSubstrateWaveNumber": 0.001276731567187999,
+        "opticalReciprocalWaveNumberOverSubstrate": 2
+      },
+      {
+        "b": 0.8,
+        "meanElectricCoefficient": 2.01024,
+        "etaAtTwiceSubstrateWaveNumber": 0.0025469595670168737,
+        "opticalReciprocalWaveNumberOverSubstrate": 2
+      }
+    ],
+    "assumptions": "Fixed substrate normalization and solution, fixed mean Z0 for linear port, independent positive magnetic coefficient and declared medium rest frame; zero probe backreaction.",
+    "canonicalLinearCoefficient": "b/Z0 after E_c=sqrt(Z0) E",
+    "coordinateRedundancy": "phi_new=t phi, b_new=b/t leaves b phi invariant",
+    "gaugeInvariantCovariantForm": "Separate electric and magnetic scalars require a medium four-velocity; f(phi) F_mu_nu F^mu_nu alone does not justify changing only permittivity."
+  },
+  "verdict": {
+    "sourceNativeJoinedPatternPhotonActionFound": false,
+    "positiveTwoDerivativeGaussianEliminationSelectsFiniteWaveNumber": false,
+    "canonicalPhotonNormalizationAloneFixesModulation": false,
+    "exactInternalParityWouldForbidLinearPort": true,
+    "physicalLatticeSpacingPredicted": false,
+    "opticalModulationPredicted": false,
+    "envelopeGapPredictedWithoutMaterialInputs": false,
+    "physicalAetherEstablished": false,
+    "nextDiscriminator": "One source-native substrate/photon action and state must derive a controlled finite-k minimum, nonlinear saturation and normalized electric/magnetic response, then predict a held-out band spectrum."
+  }
+}

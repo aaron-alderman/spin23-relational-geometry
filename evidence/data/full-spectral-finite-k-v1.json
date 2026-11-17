@@ -1,0 +1,379 @@
+{
+  "schemaVersion": "full-spectral-finite-k-v1",
+  "date": "2026-11-08",
+  "authority": "Exact-in-momentum quadratic calculation in a declared flat Euclidean Dirac/scalar model; not the complete physical corpus action",
+  "evidenceFamily": "periodic-maxwell-fixture",
+  "sources": {
+    "scripts/audit-full-spectral-finite-k.py": "161cd8026b399d92a9496430fd572247bc5e8cb91548b1136cf99614b53dd5ac",
+    "evidence/data/photon-medium-native-action-v1.json": "c9ce7eb10050b1167e09d0053de2104ac18c8d28aeee33432f7c338441f56050",
+    "evidence/data/dynamical-finite-dirac-full-action-v1.json": "721c025ea8c6a1a746931df3527dd6ac261528172abc7aba69c35318188169d7",
+    "corpus/claims/1100-1199/1110_the_minimal_spectral_kinetic_metric_can_be_normalized_to_the_Jordan_face_but_quartic_exchange_forces_the_Q_Majorana_block_to_rank_one.md": "e07cff1c17c47735484cc827e4eb9a243fa1ad3b67a8b4cc32baa50a94393fd2",
+    "corpus/claims/1700-1799/1761_matching_the_weyl_square_leak_to_an_entire_kernel_fixes_one_scale_not_the_completion_or_axial_coupling.md": "499c9dfb55076acd7a6b61c4b4df19f0f2d9e39b1cd343180e09877a347a0a51",
+    "corpus/claims/1700-1799/1762_the_entire_function_escape_is_an_existence_proof_not_a_predictive_uv_completion.md": "0ebd2385a6d604cd4a319f6c0da51b44193e9f8eb014ffb7ad6a3f467357e72e",
+    "verification/verify/verify_spin23_entire_completion_matching_degeneracy.mjs": "a17a1fe54d129cb33d0a0a592eedd8041c1eb5a20be80ed1c7f5bf3a0de4046e"
+  },
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/1312.2235",
+      "version": "v1",
+      "reviewed": "Equations 1,4,6,8-10 and Appendix 1; Gaussian heat-trace scalar form factor",
+      "boundary": "Neighbouring primary construction, not a corpus-selected photon medium; remote bytes not archived"
+    }
+  ],
+  "sourceCertificateExecution": {
+    "command": "node verification/verify/verify_spin23_entire_completion_matching_degeneracy.mjs",
+    "exitCode": 0,
+    "observed": "Spin(2,3) entire-completion matching degeneracy: PASS; same p^4 coefficient and pole count with different higher coefficients; axial coupling remains independent"
+  },
+  "declaredModel": {
+    "operator": "D=-i gamma^mu partial_mu + gamma5 phi, flat Euclidean R4",
+    "action": "Tr F(D^2/Lambda^2), with field-independent vacuum subtraction",
+    "background": "phi=0, no gauge field; four spin components, one commuting real scalar",
+    "normalization": "x=k^2/Lambda^2; omit common positive Lambda^2/(4 pi^2) in quadratic coefficient; no factor 1/2 in phi K phi",
+    "requirements": "Smooth nonnegative rapidly decaying F and derivatives; no density, boundaries, curvature, matrix noncommutativity or loops"
+  },
+  "exactKernel": {
+    "formula": "K_F(x)=-integral_0^infinity F(u)du + x/2 integral_0^1 F(alpha(1-alpha)x)dalpha",
+    "scalarSquare": "D^2=-partial^2+phi^2-i gamma^mu gamma5 partial_mu phi",
+    "derivation": "Seagull integral: integral u Fprime(u)du=-integral F. Derivative bubble uses divided difference of Fprime; Feynman interpolation and momentum shift give integral u Fsecond(u+c)du=F(c).",
+    "ordering": "K_F(x)-K_F(0)>=0 for every x>=0 when F>=0",
+    "finiteWaveNumberPreferred": false,
+    "exactInMomentum": true,
+    "quadraticInScalarOnly": true,
+    "gaussianFormula": "K(x)=-1+x/2 h(x), h(x)=integral_0^1 exp(-alpha(1-alpha)x)dalpha",
+    "gaussianExpansion": "K(x)=-1+x/2-x^2/12+x^3/120-..."
+  },
+  "profiles": [
+    {
+      "b": 0.0,
+      "cutoff": "exp(-t)*(1+b*(t-1)^2)/(1+b)",
+      "nonnegative": true,
+      "cutoffAtZero": 1.0,
+      "integralOfCutoff": 1.0,
+      "leadingSubtractedPotentialCoefficientsInS": [
+        -1.0,
+        0.5
+      ],
+      "leadingGradientCoefficient": 0.5,
+      "derivativeOfCutoffAtZero": -1.0,
+      "momentumSamples": [
+        {
+          "kSquaredOverCutoffSquared": 0.0,
+          "fullKernel": -1.0,
+          "relativeToZeroMomentum": 0.0,
+          "fourthDerivativeRelativeTruncation": 0.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.01,
+          "fullKernel": -0.995008325005949,
+          "relativeToZeroMomentum": 0.004991674994050925,
+          "fourthDerivativeRelativeTruncation": 0.004991666666666667
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.1,
+          "fullKernel": -0.950825059194619,
+          "relativeToZeroMomentum": 0.04917494080538094,
+          "fourthDerivativeRelativeTruncation": 0.04916666666666667
+        },
+        {
+          "kSquaredOverCutoffSquared": 1.0,
+          "fullKernel": -0.5755636164979777,
+          "relativeToZeroMomentum": 0.4244363835020223,
+          "fourthDerivativeRelativeTruncation": 0.4166666666666667
+        },
+        {
+          "kSquaredOverCutoffSquared": 4.0,
+          "fullKernel": 0.0761590138255368,
+          "relativeToZeroMomentum": 1.0761590138255368,
+          "fourthDerivativeRelativeTruncation": 0.6666666666666667
+        },
+        {
+          "kSquaredOverCutoffSquared": 10.0,
+          "fullKernel": 0.281460702217623,
+          "relativeToZeroMomentum": 1.281460702217623,
+          "fourthDerivativeRelativeTruncation": -3.333333333333334
+        },
+        {
+          "kSquaredOverCutoffSquared": 30.0,
+          "fullKernel": 0.08920599186947697,
+          "relativeToZeroMomentum": 1.089205991869477,
+          "fourthDerivativeRelativeTruncation": -60.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 100.0,
+          "fullKernel": 0.021340744242767995,
+          "relativeToZeroMomentum": 1.021340744242768,
+          "fourthDerivativeRelativeTruncation": -783.3333333333334
+        },
+        {
+          "kSquaredOverCutoffSquared": 1000.0,
+          "fullKernel": 0.002012121710935899,
+          "relativeToZeroMomentum": 1.002012121710936,
+          "fourthDerivativeRelativeTruncation": -82833.33333333333
+        }
+      ],
+      "constantScalarSamples": [
+        {
+          "squaredScalarOverCutoffSquared": 0.0,
+          "fullPotential": 1.0,
+          "radialDerivativeInS": -1.0,
+          "normalizedLowMomentumGaugeCoefficient": 1.0
+        },
+        {
+          "squaredScalarOverCutoffSquared": 0.5,
+          "fullPotential": 0.6065306597126334,
+          "radialDerivativeInS": -0.6065306597126334,
+          "normalizedLowMomentumGaugeCoefficient": 0.6065306597126334
+        },
+        {
+          "squaredScalarOverCutoffSquared": 1.0,
+          "fullPotential": 0.36787944117144233,
+          "radialDerivativeInS": -0.36787944117144233,
+          "normalizedLowMomentumGaugeCoefficient": 0.36787944117144233
+        },
+        {
+          "squaredScalarOverCutoffSquared": 2.0,
+          "fullPotential": 0.1353352832366127,
+          "radialDerivativeInS": -0.1353352832366127,
+          "normalizedLowMomentumGaugeCoefficient": 0.1353352832366127
+        },
+        {
+          "squaredScalarOverCutoffSquared": 4.0,
+          "fullPotential": 0.01831563888873418,
+          "radialDerivativeInS": -0.01831563888873418,
+          "normalizedLowMomentumGaugeCoefficient": 0.01831563888873418
+        }
+      ]
+    },
+    {
+      "b": 1.0,
+      "cutoff": "exp(-t)*(1+b*(t-1)^2)/(1+b)",
+      "nonnegative": true,
+      "cutoffAtZero": 1.0,
+      "integralOfCutoff": 1.0,
+      "leadingSubtractedPotentialCoefficientsInS": [
+        -1.0,
+        0.5
+      ],
+      "leadingGradientCoefficient": 0.5,
+      "derivativeOfCutoffAtZero": -2.0,
+      "momentumSamples": [
+        {
+          "kSquaredOverCutoffSquared": 0.0,
+          "fullKernel": -1.0,
+          "relativeToZeroMomentum": 0.0,
+          "fourthDerivativeRelativeTruncation": 0.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.01,
+          "fullKernel": -0.9950166333749636,
+          "relativeToZeroMomentum": 0.004983366625036351,
+          "fourthDerivativeRelativeTruncation": 0.0049833333333333335
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.1,
+          "fullKernel": -0.9516337463863572,
+          "relativeToZeroMomentum": 0.048366253613642746,
+          "fourthDerivativeRelativeTruncation": 0.04833333333333334
+        },
+        {
+          "kSquaredOverCutoffSquared": 1.0,
+          "fullKernel": -0.637159075389045,
+          "relativeToZeroMomentum": 0.3628409246109549,
+          "fourthDerivativeRelativeTruncation": 0.33333333333333337
+        },
+        {
+          "kSquaredOverCutoffSquared": 4.0,
+          "fullKernel": -0.3083608629026552,
+          "relativeToZeroMomentum": 0.6916391370973448,
+          "fourthDerivativeRelativeTruncation": -0.6666666666666665
+        },
+        {
+          "kSquaredOverCutoffSquared": 10.0,
+          "fullKernel": 0.024016931098464145,
+          "relativeToZeroMomentum": 1.0240169310984641,
+          "fourthDerivativeRelativeTruncation": -11.666666666666668
+        },
+        {
+          "kSquaredOverCutoffSquared": 30.0,
+          "fullKernel": 0.25245129470428807,
+          "relativeToZeroMomentum": 1.252451294704288,
+          "fourthDerivativeRelativeTruncation": -135.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 100.0,
+          "fullKernel": 0.04589642404292893,
+          "relativeToZeroMomentum": 1.045896424042929,
+          "fourthDerivativeRelativeTruncation": -1616.6666666666667
+        },
+        {
+          "kSquaredOverCutoffSquared": 1000.0,
+          "fullKernel": 0.004048858979002423,
+          "relativeToZeroMomentum": 1.0040488589790024,
+          "fourthDerivativeRelativeTruncation": -166166.66666666666
+        }
+      ],
+      "constantScalarSamples": [
+        {
+          "squaredScalarOverCutoffSquared": 0.0,
+          "fullPotential": 2.0,
+          "radialDerivativeInS": -1.0,
+          "normalizedLowMomentumGaugeCoefficient": 1.0
+        },
+        {
+          "squaredScalarOverCutoffSquared": 0.5,
+          "fullPotential": 1.5921429817456627,
+          "radialDerivativeInS": -0.6823469921767126,
+          "normalizedLowMomentumGaugeCoefficient": 0.37908166232039586
+        },
+        {
+          "squaredScalarOverCutoffSquared": 1.0,
+          "fullPotential": 1.2875780441000482,
+          "radialDerivativeInS": -0.5518191617571635,
+          "normalizedLowMomentumGaugeCoefficient": 0.18393972058572117
+        },
+        {
+          "squaredScalarOverCutoffSquared": 2.0,
+          "fullPotential": 0.8120116994196762,
+          "radialDerivativeInS": -0.4060058497098381,
+          "normalizedLowMomentumGaugeCoefficient": 0.1353352832366127
+        },
+        {
+          "squaredScalarOverCutoffSquared": 4.0,
+          "fullPotential": 0.25641894444227853,
+          "radialDerivativeInS": -0.1648407499986076,
+          "normalizedLowMomentumGaugeCoefficient": 0.0915781944436709
+        }
+      ]
+    },
+    {
+      "b": 4.0,
+      "cutoff": "exp(-t)*(1+b*(t-1)^2)/(1+b)",
+      "nonnegative": true,
+      "cutoffAtZero": 1.0,
+      "integralOfCutoff": 1.0,
+      "leadingSubtractedPotentialCoefficientsInS": [
+        -1.0,
+        0.5
+      ],
+      "leadingGradientCoefficient": 0.5,
+      "derivativeOfCutoffAtZero": -2.6,
+      "momentumSamples": [
+        {
+          "kSquaredOverCutoffSquared": 0.0,
+          "fullKernel": -1.0,
+          "relativeToZeroMomentum": 0.0,
+          "fourthDerivativeRelativeTruncation": 0.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.01,
+          "fullKernel": -0.9950216183963724,
+          "relativeToZeroMomentum": 0.0049783816036276084,
+          "fourthDerivativeRelativeTruncation": 0.004978333333333334
+        },
+        {
+          "kSquaredOverCutoffSquared": 0.1,
+          "fullKernel": -0.9521189587014002,
+          "relativeToZeroMomentum": 0.04788104129859982,
+          "fourthDerivativeRelativeTruncation": 0.04783333333333334
+        },
+        {
+          "kSquaredOverCutoffSquared": 1.0,
+          "fullKernel": -0.6741163507236856,
+          "relativeToZeroMomentum": 0.32588364927631447,
+          "fourthDerivativeRelativeTruncation": 0.2833333333333333
+        },
+        {
+          "kSquaredOverCutoffSquared": 4.0,
+          "fullKernel": -0.5390727889395706,
+          "relativeToZeroMomentum": 0.4609272110604295,
+          "fourthDerivativeRelativeTruncation": -1.4666666666666668
+        },
+        {
+          "kSquaredOverCutoffSquared": 10.0,
+          "fullKernel": -0.13044933157303162,
+          "relativeToZeroMomentum": 0.8695506684269684,
+          "fourthDerivativeRelativeTruncation": -16.666666666666668
+        },
+        {
+          "kSquaredOverCutoffSquared": 30.0,
+          "fullKernel": 0.3503984764051751,
+          "relativeToZeroMomentum": 1.350398476405175,
+          "fourthDerivativeRelativeTruncation": -180.0
+        },
+        {
+          "kSquaredOverCutoffSquared": 100.0,
+          "fullKernel": 0.06062983192302562,
+          "relativeToZeroMomentum": 1.0606298319230256,
+          "fourthDerivativeRelativeTruncation": -2116.6666666666665
+        },
+        {
+          "kSquaredOverCutoffSquared": 1000.0,
+          "fullKernel": 0.005270901339848422,
+          "relativeToZeroMomentum": 1.0052709013398484,
+          "fourthDerivativeRelativeTruncation": -216166.66666666666
+        }
+      ],
+      "constantScalarSamples": [
+        {
+          "squaredScalarOverCutoffSquared": 0.0,
+          "fullPotential": 2.6,
+          "radialDerivativeInS": -1.0,
+          "normalizedLowMomentumGaugeCoefficient": 1.0
+        },
+        {
+          "squaredScalarOverCutoffSquared": 0.5,
+          "fullPotential": 2.18351037496548,
+          "radialDerivativeInS": -0.7278367916551601,
+          "normalizedLowMomentumGaugeCoefficient": 0.24261226388505336
+        },
+        {
+          "squaredScalarOverCutoffSquared": 1.0,
+          "fullPotential": 1.8393972058572117,
+          "radialDerivativeInS": -0.6621829941085962,
+          "normalizedLowMomentumGaugeCoefficient": 0.07357588823428847
+        },
+        {
+          "squaredScalarOverCutoffSquared": 2.0,
+          "fullPotential": 1.2180175491295144,
+          "radialDerivativeInS": -0.5684081895937734,
+          "normalizedLowMomentumGaugeCoefficient": 0.1353352832366127
+        },
+        {
+          "squaredScalarOverCutoffSquared": 4.0,
+          "fullPotential": 0.3992809277744051,
+          "radialDerivativeInS": -0.2527558166645317,
+          "normalizedLowMomentumGaugeCoefficient": 0.13553572777663292
+        }
+      ]
+    }
+  ],
+  "nonlinearBoundary": {
+    "constantPotential": "W(s)=integral_s^infinity (t-s)F(t)dt",
+    "derivative": "Wprime(s)=-integral_s^infinity F(t)dt<0 for these profiles",
+    "gaussian": "W(s)=exp(-s); quartic truncation has s=1 minimum but full derivative there is -exp(-1)",
+    "finiteAmplitudeUnconstrainedConstantVacuumSelected": false,
+    "arbitraryNonconstantPeriodicSolutionsExcluded": false
+  },
+  "photonJoin": {
+    "conditions": "Same specified Dirac action, neutral commuting constant scalar, fixed U(1) representation; gauge quadratic term at photon momentum tending to zero",
+    "gaussianFactorization": "D_A(phi_constant)^2=D_A(0)^2+phi_constant^2; heat trace factors by exp(-s)",
+    "relativeCoefficient": "Z_A(s)/Z_A(0)=F(s)/F(0)",
+    "relativeCouplingFixedOnceFullModelChosen": true,
+    "linearScalarPhotonVertexAtZeroBackground": 0.0,
+    "nonlinearPatternOpticalSourceMapCalculated": false,
+    "boundary": "This is a Lorentz-covariant F_mu_nu F^mu_nu coefficient, not a permittivity-only constitutive law; finite-frequency nonuniform pattern response is not obtained by local substitution without a derivative/error estimate."
+  },
+  "verdict": {
+    "fullMomentumScalarKernelCalculated": true,
+    "nonnegativeCutoffScalarKernelPrefersFiniteWaveNumber": false,
+    "commonLeadingCoefficientsFixFullMomentumResponse": false,
+    "relativeGaugeCouplingDerivedInDeclaredConstantScalarModel": true,
+    "sourceNativeStablePatternActionEstablished": false,
+    "nonlinearPeriodicSaturationEstablished": false,
+    "physicalPhotonCouplingAndContactTermsFixed": false,
+    "physicalLatticeSpacingModulationAndGapPredicted": false,
+    "allSpectralActionsRuledOut": false,
+    "nextDiscriminator": "Freeze a complete source-native spectral triple, cutoff and physical state; derive the coupled Hessian about an actual stationary vacuum, then a stable nonlinear periodic branch and its finite-frequency gauge response."
+  }
+}

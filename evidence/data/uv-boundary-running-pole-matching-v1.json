@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "uv-boundary-running-pole-matching-v1",
+  "date": "2026-11-08",
+  "authority": "Bounded source audit and declared scalar-channel dispersive matching surrogate. No UV completion, target beta functions, full threshold packet or physical T1/T2 pole ratio derived.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/1600-1699/1612_a_radiative_selector_portal_joins_spin23_planck_and_yang_mills_scales_but_retains_one_color_boundary.md": "9db4576d51a8993c8ae369a2024aacde60035ea0423b9f38f6e364b6b55ad6fc",
+    "corpus/claims/1600-1699/1616_asymptotic_safety_can_conditionally_fix_the_color_boundary_but_not_without_a_spin23_universality_class.md": "66f0bf563462d814252120a762f6e586c34d37754639c552d1da3406e8ba6b1c",
+    "corpus/claims/1700-1799/1745_the_known_rg_slice_cannot_identify_an_interacting_one_eighth_axial_fixed_point.md": "0cacada6fb1b602b83f3e7b84a916d76f6d1707ea67a987f5a407b8f1812adc2",
+    "corpus/claims/1700-1799/1746_the_fixed_point_escape_is_reduced_to_a_complete_beta_and_matching_packet.md": "6e32ccf76b9b2e9920974cc2bd2fdf783a3c94b8bea5bf2bb96c9967f93023e2",
+    "corpus/claims/1700-1799/1760_both_surviving_routes_now_end_at_new_construction_not_unexecuted_local_inference.md": "01bd42ed529c5b6f56a592955aa80943eb0aeea075145e36fa0dd01a3395bbec",
+    "evidence/data/joint-background-vacuum-kinetic-protection-v1.json": "a4ffef7c01d9fe4cf8a77d377870ae94b740e991f45474e88f107e0e949e3def",
+    "evidence/data/uv-pole-source-checks-v1.json": "032d1710d2927a79dd915cf9c6557361788a82687526f5d1f2400631ef32ed38",
+    "scripts/audit-uv-boundary-running-pole-matching.py": "4ac229fc8592963cfbdb85920163046a1456503cb6f2605fc49fa6db70fcde22",
+    "verification/verify/verify_spin23_axial_fixed_point_identifiability.mjs": "7ee51aac69ea5eb3ff5c04b46c304483bb02801590e5e81f2ea08d1fc383ee3e",
+    "verification/verify/verify_spin23_gauge_gravity_fixed_point_color_boundary.mjs": "9c72ce5f650af05c31fa4b30520136d9df68ad4b16550a90c3de2708c31a9eee",
+    "verification/verify/verify_spin23_new_model_path_selection_v6.mjs": "325f241f8962bad3264bc44c28d1d452840d791155e1eb6d6e275e63bc8dc40a"
+  },
+  "sourceVerificationReceipt": "evidence/data/uv-pole-source-checks-v1.json",
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/hep-ph/0109228",
+      "version": "v2",
+      "sections": "1-2; complex poles, physical thresholds and tadpole consistency",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "primarySourceBoundary": "Primary page reviewed; full remote source bytes are not archived here.",
+  "corpusInputAudit": {
+    "stablePhysicalFullUVActionAvailable": false,
+    "independentTargetBoundaryConditionsAvailable": false,
+    "targetCompleteBetaFunctionsAvailable": false,
+    "targetHeavySpectrumAndMatchingAvailable": false,
+    "targetScalarFermionSelfEnergyPacketAvailable": false,
+    "knownColorFixedPointIsDeclaredToySystem": true,
+    "knownAxialBetaSliceIdentifiesFullFixedPoint": false,
+    "existingLocalQuantumPacketClosesThisUVTheory": false
+  },
+  "formalPolePipeline": {
+    "runningTreeRatioDerivative": "beta_y/y + beta_kin/(2 cKin) - beta_4/(2 c4)",
+    "firstOrderStablePoleRatio": "R_pole=R_running*(1+delta_f-delta_r/2)",
+    "physicalRunningComputed": false,
+    "physicalThresholdCorrectionsComputed": false,
+    "possibleComplexPolePrescriptionRequired": true
+  },
+  "scalarChannelSurrogate": {
+    "inputs": {
+      "g": 0.3,
+      "referenceFermionMass": 1.0,
+      "multiplicity": 1,
+      "treeScalarMassSquared": 4.0
+    },
+    "inversePropagatorConvention": "Gamma_r(s)=s-mr0^2+Pi_R(s)",
+    "cut": "rho(t)=N g^2 t/(8 pi)*(1-4 mf^2/t)^(3/2) theta(t-4 mf^2)",
+    "twiceSubtractedSelfEnergy": "Pi_R(s)=A+B s+s^2/pi integral_4^infinity rho(t)/(t^2(t-s-i0)) dt",
+    "belowThresholdTransform": "Pi_nonlocal(s)=N g^2 s^2/(4 pi^2) integral_0^1 z^4/(4-s+s z^2) dz; mf=1",
+    "matchingFamily": [
+      {
+        "A": 0.0,
+        "B": 0.0,
+        "treeScalarMassSquared": 4.0,
+        "poleSquared": 3.9969692831514956,
+        "scalarChannelPoleMass": 1.99924217721403,
+        "referenceFermionMass": 1.0,
+        "conditionalPoleMassRatio": 0.5001895275106255,
+        "residue": 0.9971132135581184,
+        "inversePropagatorResidual": -1.46150452851046e-16
+      },
+      {
+        "A": 0.05,
+        "B": 0.0,
+        "treeScalarMassSquared": 4.0,
+        "poleSquared": 3.947100837822004,
+        "scalarChannelPoleMass": 1.986731194153352,
+        "referenceFermionMass": 1.0,
+        "conditionalPoleMassRatio": 0.5033393560955041,
+        "residue": 0.9975299926324739,
+        "inversePropagatorResidual": -1.510944147575799e-15
+      },
+      {
+        "A": 0.2,
+        "B": 0.0,
+        "treeScalarMassSquared": 4.0,
+        "poleSquared": 3.7974327670614714,
+        "scalarChannelPoleMass": 1.9487002763538244,
+        "referenceFermionMass": 1.0,
+        "conditionalPoleMassRatio": 0.5131625484608032,
+        "residue": 0.9979838417171825,
+        "inversePropagatorResidual": -1.484532982654052e-14
+      },
+      {
+        "A": 0.05,
+        "B": 0.01,
+        "treeScalarMassSquared": 4.0,
+        "poleSquared": 3.908112970443083,
+        "scalarChannelPoleMass": 1.9768947798107726,
+        "referenceFermionMass": 1.0,
+        "conditionalPoleMassRatio": 0.5058438163794026,
+        "residue": 0.9878331110002488,
+        "inversePropagatorResidual": -4.408366033326061e-15
+      }
+    ],
+    "thresholdSamples": [
+      {
+        "s": 3.9,
+        "absorptiveWeight": 0.0,
+        "partialWidth": 0.0
+      },
+      {
+        "s": 4.0,
+        "absorptiveWeight": 0.0,
+        "partialWidth": 0.0
+      },
+      {
+        "s": 4.0001,
+        "absorptiveWeight": 1.7904707290309462e-09,
+        "partialWidth": 8.95224174283233e-10
+      },
+      {
+        "s": 4.1,
+        "absorptiveWeight": 5.5925608918113385e-05,
+        "partialWidth": 2.7619689569535415e-05
+      },
+      {
+        "s": 5.0,
+        "absorptiveWeight": 0.0016014657226886477,
+        "partialWidth": 0.0007161972439135287
+      },
+      {
+        "s": 9.0,
+        "absorptiveWeight": 0.01334554768907207,
+        "partialWidth": 0.0044485158963573565
+      }
+    ],
+    "sameCutAcrossMatchingFamily": true,
+    "matchingTermsDerivedFromUV": false,
+    "scope": "Fixed reference fermion and one scalar self-energy channel; roots of a declared inverse propagator, not complete QFT predictions.",
+    "omitted": [
+      "fermion self-energy",
+      "other scalar and gauge loops",
+      "tadpole/VEV matching",
+      "heavy thresholds",
+      "target-model beta functions",
+      "vacuum stability and complex-pole continuation above threshold"
+    ]
+  },
+  "finiteSchemeControl": {
+    "transformation": "A->A+delta and mr0^2->mr0^2+delta leaves Gamma unchanged",
+    "before": {
+      "A": 0.05,
+      "B": 0.0,
+      "treeScalarMassSquared": 4.0,
+      "poleSquared": 3.947100837822004,
+      "scalarChannelPoleMass": 1.986731194153352,
+      "referenceFermionMass": 1.0,
+      "conditionalPoleMassRatio": 0.5033393560955041,
+      "residue": 0.9975299926324739,
+      "inversePropagatorResidual": -1.510944147575799e-15
+    },
+    "after": {
+      "A": 0.15,
+      "B": 0.0,
+      "treeScalarMassSquared": 4.1,
+      "poleSquared": 3.9471008378220036,
+      "scalarChannelPoleMass": 1.9867311941533519,
+      "referenceFermionMass": 1.0,
+      "conditionalPoleMassRatio": 0.5033393560955041,
+      "residue": 0.9975299926324739,
+      "inversePropagatorResidual": -1.609823385706477e-15
+    },
+    "changingMatchingAtFixedTreeParameterIsPureSchemeChange": false
+  },
+  "verdict": {
+    "treeRatioOneHalfIsPairThresholdIfScalarVertexAllowed": true,
+    "cutAloneFixesFiniteMatchingTerms": false,
+    "sameCutWithDifferentMatchingChangesScalarChannelPole": true,
+    "consistentFiniteSchemeReparameterizationPreservesPole": true,
+    "stablePhysicalUVActionDerived": false,
+    "targetMassFitted": false,
+    "physicalUVRunningThresholdPolePredictionEstablished": false,
+    "universalUVCompletionNoGo": false,
+    "nextDiscriminator": "A new or supplied complete physical UV model with independently fixed boundary data, complete beta functions, vacuum and heavy spectrum, then consistent finite matching and two-point pole calculations."
+  }
+}

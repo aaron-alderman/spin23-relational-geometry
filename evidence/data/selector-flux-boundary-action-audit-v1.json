@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "selector-flux-boundary-action-audit-v1",
+  "date": "2026-11-08",
+  "sources": {
+    "corpus/programmes/rdg-maxwell-bridge/06_topology_cut_holonomy_and_boundary_record_gate.md": "cea26ed15bd7e01f03efa2399a40d10720c247b93ae27457aaa64550320a3451",
+    "corpus/claims/1200-1299/1230_the_nearest_a11_experiment_is_an_aharonov_casher_two_port_while_protected_z3_requires_verified_sector_algebra_and_scaling.md": "309498fb02f35fa3bf4513711dc5faa80905fcb80894375ebae9a077cc28171a",
+    "corpus/claims/1400-1499/1459_the_a7_a9_a11_lane_is_underidentified_and_reopens_only_with_a_generator_state_port_packet.md": "d4df1170cef7d8cbec418851e9acd2f05ffa615c4da8de38478c8c16f8b30ded",
+    "corpus/claims/1400-1499/1464_no_existing_named_platform_contains_the_generator_state_port_and_sector_packet_needed_for_a11.md": "fcf84e7d4acfe63e742e162ebf6681ad077ec0ae1d4b7c1bce56ae5e5c4f9eec",
+    "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md": "621616a0b97b9c03e2502df2902d777dd3fcba6c76997ab1f4a772336b112fe1",
+    "scripts/audit-selector-flux-boundary-action.py": "daa6953e0e4ed0db2669078ff4a363e12858a86fa0b5bd1b5e59704aa01240a2"
+  },
+  "corpusVerdict": "The searched sources provide gauge-invariant loop/boundary holonomy, flux-dependent Peierls Hamiltonians and a two-path Aharonov-Casher mechanism. They do not join these to an identified physical selector, fixed microscopic coupling and calibrated optical dipole.",
+  "sourceFindings": [
+    {
+      "source": "corpus/programmes/rdg-maxwell-bridge/06_topology_cut_holonomy_and_boundary_record_gate.md",
+      "supplies": "Compact U(1) Wilson loop becomes an endpoint transition after cutting; gauge-invariant record is retained.",
+      "missing": "No material oscillator Hamiltonian or optical source normalization."
+    },
+    {
+      "source": "corpus/claims/1200-1299/1230_the_nearest_a11_experiment_is_an_aharonov_casher_two_port_while_protected_z3_requires_verified_sector_algebra_and_scaling.md",
+      "supplies": "t_slip=t1+t2 exp(i2pi ng), a charge-controlled Aharonov-Casher phase.",
+      "missing": "t1 and t2 are explicitly unspecified; ordinary magnetic flux is a controlled nuisance in that proposed charge sweep."
+    },
+    {
+      "source": "corpus/claims/1400-1499/1459_the_a7_a9_a11_lane_is_underidentified_and_reopens_only_with_a_generator_state_port_packet.md",
+      "supplies": "An explicit generator-state-port/contact packet required for response prediction.",
+      "missing": "Symmetry alone leaves pole shifts and residues underidentified."
+    },
+    {
+      "source": "corpus/claims/1400-1499/1464_no_existing_named_platform_contains_the_generator_state_port_and_sector_packet_needed_for_a11.md",
+      "supplies": "Audit of named platforms and finite realizations.",
+      "missing": "No common named device packet with generator, preparation, physical ports, sectors and calibration."
+    },
+    {
+      "source": "corpus/programmes/admissibility/admissibility_54_transverse_joint_detector_symmetry_ceiling.md",
+      "supplies": "A specified Peierls-flux Hamiltonian with fixed leads and reciprocity checks.",
+      "missing": "No selector-derived g or optical dipole; parameters and geometry are supplied."
+    }
+  ],
+  "conditionalConstruction": {
+    "authority": "New four-site single-charge finite boundary fixture, not a corpus-derived Spin(2,3) realization, E8 mapping, material prediction or independent physical evidence.",
+    "action": "S=int dt c^dagger[i hbar partial_t-q varphi-H_hop(A)+E D]c; H_ij=t_ij exp[i(q/hbar)int_j^i A.dl]; D=q diag(x_i).",
+    "gaugeLaw": "c_i -> exp(i q chi_i/hbar)c_i; A -> A+grad chi; varphi_i -> varphi_i-partial_t chi_i. H_hop -> U H_hop U^dagger.",
+    "boundaryKernel": "K_eff(z)=z I-H_PP-H_PQ(z I-H_QQ)^(-1)H_QP. The same elimination acts on electric-source and contact vertices; they cannot be independently refitted.",
+    "mixingFormula": "g_LR(z,Phi)=t_La t_aR/(z-eps_a)+t_Lb t_bR exp(i q Phi/hbar)/(z-eps_b), in the stated endpoint gauge.",
+    "phaseBoundary": "The loop relative phase is gauge invariant. The phase of an individual endpoint matrix element g is gauge dependent; its magnitude and closed-loop observables are physical.",
+    "constantCouplingLimit": "g(Phi)=g1+g2 exp(i q Phi/hbar) requires an off-resonant or narrow-band reduction. Generic boundary elimination gives an energy-dependent g(z,Phi).",
+    "spectrum": "Solve the full Hermitian H(Phi), equivalently det K_eff(z)=0 away from the eliminated-chart poles. Do not treat g(z,Phi) as a constant across all resonances.",
+    "source": "Electric probe H_probe=-E D; dipole strengths are |<j(Phi)|D|0(Phi)>|^2 from the same eigenvectors.",
+    "inducedDipoleVertex": "D_eff(z_m,z_n)=D_PP+H_PQ R(z_m) D_QQ R(z_n) H_QP, where R(z)=(z-H_QQ)^(-1). This formula uses the fixture diagonal site dipole, D_PQ=0; a general source has additional cross blocks.",
+    "boundaryNormalization": "For a full normalized eigenstate with boundary component u_n, u_n^dagger[I+H_PQ R(z_n)^2 H_QP]u_n=1. Its transition dipole equals u_m^dagger D_eff(z_m,z_n)u_n. Using D_PP alone loses the eliminated-site response.",
+    "contacts": "For the declared linear length-gauge E source, the full four-site H has no explicit E^2 term. The link-phase source has J_phi=-partial_phi H and contact partial_phi^2 H. Eliminating internal sites induces additional source/contact vertices automatically.",
+    "frozenModel": {
+      "onsites": [
+        0.0,
+        0.9,
+        1.7,
+        2.9
+      ],
+      "hoppings": [
+        0.4,
+        0.35,
+        0.3,
+        0.45
+      ],
+      "positions": [
+        -1.0,
+        0.0,
+        1.0,
+        0.2
+      ],
+      "units": "hbar=q=common energy unit=length unit=1 for this fixture; no absolute physical calibration.",
+      "refitsAcrossFlux": 0
+    },
+    "records": [
+      {
+        "fluxPhase": 0.0,
+        "fluxOverQuantum": 0.0,
+        "energies": [
+          -0.19272607013663443,
+          0.915820465337318,
+          1.690342510763207,
+          3.0865630940361113
+        ],
+        "gaps": [
+          1.1085465354739523,
+          1.8830685808998415,
+          3.2792891641727455
+        ],
+        "dipoleWeights": [
+          0.14705262386877982,
+          0.0027659009460742406,
+          0.0067025632348250656
+        ],
+        "static": 0.2723325506506423,
+        "frequencySquaredSlope": 0.21710278904753338,
+        "firstMoment": 0.19020270087966812,
+        "doubleCommutatorMoment": 0.19020270087966812,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.1082995951417004,
+            "gImag": 0.0,
+            "gMagnitude": 0.1082995951417004
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.22321428571428573,
+            "gImag": 0.0,
+            "gMagnitude": 0.22321428571428573
+          }
+        ]
+      },
+      {
+        "fluxPhase": 0.7853981633974483,
+        "fluxOverQuantum": 0.125,
+        "energies": [
+          -0.19110416185629528,
+          0.9099096929065706,
+          1.6957471516806841,
+          3.085447317269042
+        ],
+        "gaps": [
+          1.1010138547628658,
+          1.8868513135369793,
+          3.276551479125337
+        ],
+        "dipoleWeights": [
+          0.14074072448173008,
+          0.004236876648068532,
+          0.007505516180306833
+        ],
+        "static": 0.26472889132754607,
+        "frequencySquaredSlope": 0.2125856624365481,
+        "firstMoment": 0.18754405399463386,
+        "doubleCommutatorMoment": 0.18754405399463395,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.09816098372123475,
+            "gImag": -0.024476773194918956,
+            "gMagnitude": 0.10116665039011628
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.20909264837863714,
+            "gImag": -0.03409264837863712,
+            "gMagnitude": 0.2118538276252326
+          }
+        ]
+      },
+      {
+        "fluxPhase": 1.5707963267948966,
+        "fluxOverQuantum": 0.25,
+        "energies": [
+          -0.18715024815443038,
+          0.895869475739758,
+          1.7085425230909412,
+          3.082738249323732
+        ],
+        "gaps": [
+          1.0830197238941883,
+          1.8956927712453715,
+          3.269888497478162
+        ],
+        "dipoleWeights": [
+          0.12556887114393883,
+          0.007347610728425241,
+          0.009505666698715732
+        ],
+        "static": 0.245452544280155,
+        "frequencySquaredSlope": 0.20039915648896622,
+        "firstMoment": 0.181004846898806,
+        "doubleCommutatorMoment": 0.1810048468988059,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.07368421052631578,
+            "gImag": -0.03461538461538462,
+            "gMagnitude": 0.08140999774571568
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.17500000000000002,
+            "gImag": -0.048214285714285716,
+            "gMagnitude": 0.18152029458696564
+          }
+        ]
+      },
+      {
+        "fluxPhase": 2.356194490192345,
+        "fluxOverQuantum": 0.375,
+        "energies": [
+          -0.1831406318238718,
+          0.8821245027708847,
+          1.7210090082825176,
+          3.0800071207704702
+        ],
+        "gaps": [
+          1.0652651345947566,
+          1.9041496401063893,
+          3.263147752594342
+        ],
+        "dipoleWeights": [
+          0.11040878671648453,
+          0.00988840572353192,
+          0.011597393538666612
+        ],
+        "static": 0.2247831059585119,
+        "frequencySquaredSlope": 0.18619923948611622,
+        "firstMoment": 0.17428764390332105,
+        "doubleCommutatorMoment": 0.1742876439033208,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.04920743733139683,
+            "gImag": -0.024476773194918956,
+            "gMagnitude": 0.05495893298417328
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.14090735162136292,
+            "gImag": -0.03409264837863712,
+            "gMagnitude": 0.14497306789337044
+          }
+        ]
+      },
+      {
+        "fluxPhase": 3.141592653589793,
+        "fluxOverQuantum": 0.5,
+        "energies": [
+          -0.1814630017228594,
+          0.87650980060532,
+          1.7260839202377498,
+          3.0788692808797906
+        ],
+        "gaps": [
+          1.0579728023281794,
+          1.9075469219606092,
+          3.26033228260265
+        ],
+        "dipoleWeights": [
+          0.10411056133740423,
+          0.010786981358592209,
+          0.012491998396765958
+        ],
+        "static": 0.21578422912291098,
+        "frequencySquaredSlope": 0.17966242787395023,
+        "firstMoment": 0.17145088106511902,
+        "doubleCommutatorMoment": 0.17145088106511897,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.039068825910931165,
+            "gImag": -4.239161997048531e-18,
+            "gMagnitude": 0.039068825910931165
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.1267857142857143,
+            "gImag": -5.904547067317596e-18,
+            "gMagnitude": 0.1267857142857143
+          }
+        ]
+      },
+      {
+        "fluxPhase": 4.71238898038469,
+        "fluxOverQuantum": 0.75,
+        "energies": [
+          -0.18715024815443046,
+          0.8958694757397571,
+          1.7085425230909412,
+          3.0827382493237323
+        ],
+        "gaps": [
+          1.0830197238941874,
+          1.8956927712453717,
+          3.2698884974781626
+        ],
+        "dipoleWeights": [
+          0.125568871143939,
+          0.0073476107284252265,
+          0.009505666698715743
+        ],
+        "static": 0.2454525442801555,
+        "frequencySquaredSlope": 0.20039915648896697,
+        "firstMoment": 0.18100484689880605,
+        "doubleCommutatorMoment": 0.18100484689880594,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.07368421052631578,
+            "gImag": 0.03461538461538462,
+            "gMagnitude": 0.08140999774571568
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.17500000000000002,
+            "gImag": 0.048214285714285716,
+            "gMagnitude": 0.18152029458696564
+          }
+        ]
+      },
+      {
+        "fluxPhase": 6.283185307179586,
+        "fluxOverQuantum": 1.0,
+        "energies": [
+          -0.19272607013663443,
+          0.915820465337318,
+          1.690342510763207,
+          3.0865630940361113
+        ],
+        "gaps": [
+          1.1085465354739523,
+          1.8830685808998415,
+          3.2792891641727455
+        ],
+        "dipoleWeights": [
+          0.14705262386877982,
+          0.0027659009460742406,
+          0.0067025632348250656
+        ],
+        "static": 0.2723325506506423,
+        "frequencySquaredSlope": 0.21710278904753338,
+        "firstMoment": 0.19020270087966812,
+        "doubleCommutatorMoment": 0.19020270087966812,
+        "effectiveBoundaryCouplings": [
+          {
+            "z": -1.0,
+            "gReal": -0.1082995951417004,
+            "gImag": 8.478323994097061e-18,
+            "gMagnitude": 0.1082995951417004
+          },
+          {
+            "z": 0.1,
+            "gReal": -0.22321428571428573,
+            "gImag": 1.1809094134635192e-17,
+            "gMagnitude": 0.22321428571428573
+          }
+        ]
+      }
+    ],
+    "firstGapRange": [
+      1.0579728023281794,
+      1.1085465354739523
+    ],
+    "firstDipoleWeightRange": [
+      0.10411056133740423,
+      0.14705262386877982
+    ]
+  },
+  "verification": {
+    "passed": true,
+    "maxGaugeSpectrumError": 1.5543122344752192e-15,
+    "maxGaugeDipoleWeightError": 2.498001805406602e-16,
+    "maxSchurCouplingError": 5.551115123125783e-17,
+    "maxFluxPeriodicityError": 8.881784197001252e-16,
+    "maxBrokenPathFluxDependence": 1.3322676295501878e-15,
+    "maxInducedDipoleVertexError": 2.5535506677393078e-15,
+    "maxBoundaryNormalizationError": 2.3603420487985913e-13,
+    "maxNaiveUndressedDipoleError": 0.1781486785790964,
+    "vectorSourceDerivativeError": 2.9999898645722887e-09,
+    "vectorContactDerivativeError": 2.0030618764203705e-09,
+    "additionalChecks": [
+      "exact projected resolvent",
+      "complete finite dipole double-commutator sum rule",
+      "spinless flux-reversal gap equality"
+    ]
+  },
+  "missingPhysicalBridge": [
+    "Identify actual paths, charges and flux-to-loop calibration.",
+    "Derive the path amplitudes and material levels from one source-native boundary action.",
+    "Identify the selector representation on those physical modes; a continuously tunable U(1) loop does not by itself realize the order-18 selector or protected Z3 sectors.",
+    "Derive and normalize physical electric ports/dipoles, contacts, bath and preparation.",
+    "Freeze that packet and predict unseen flux-dependent poles and integrated dipole strengths without flux-dependent parameter fitting."
+  ],
+  "reproduction": "./.venv-alpaca/Scripts/python.exe scripts/audit-selector-flux-boundary-action.py"
+}

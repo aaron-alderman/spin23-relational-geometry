@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "yukawa-vacuum-scale-selection-v1",
+  "date": "2026-11-08",
+  "authority": "Conditional trace-linked action comparison and bounded corpus audit. No physical T1/T2 mass prediction or scientific admission.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/1100-1199/1110_the_minimal_spectral_kinetic_metric_can_be_normalized_to_the_Jordan_face_but_quartic_exchange_forces_the_Q_Majorana_block_to_rank_one.md": "e07cff1c17c47735484cc827e4eb9a243fa1ad3b67a8b4cc32baa50a94393fd2",
+    "corpus/claims/1500-1599/1530_the_common_coefficient_line_is_RG_invariant_only_under_universal_projective_flow_and_a_fixed_ratio_requires_a_Ward_eigenline.md": "ffb5a441739ad7c7698f21acd3949c1582f192bafc42d44df15e0551b18508a0",
+    "corpus/claims/1500-1599/1542_the_six_link_potential_has_no_forced_goldstone_and_an_open_full_rank_vacuum_but_scalar_identification_does_not_derive_the_common_ray.md": "429b19fc8eee2b37d3f44abacb739d8468ffbc769e17b30c1fd8f94b5fc5cf27",
+    "corpus/claims/1500-1599/1573_a_single_tilted_Yukawa_ray_rotates_the_two_copy_inert_projector_but_a_two_ray_tight_frame_can_close_it.md": "d70c45cf7c37c1c284e8c393467931dd068791800abe2d777037999b45cec291",
+    "corpus/claims/1600-1699/1612_a_radiative_selector_portal_joins_spin23_planck_and_yang_mills_scales_but_retains_one_color_boundary.md": "9db4576d51a8993c8ae369a2024aacde60035ea0423b9f38f6e364b6b55ad6fc",
+    "corpus/programmes/frontier/parallel/frontier_parallel_qft_08_action_gate_for_the_dressed_electron_functor.md": "5dbbfc27985028f4981183518dfec69d679c01d6963e3f0f8d2dfeac118d94ba",
+    "evidence/data/spin23-radiative-selector-portal-construction.json": "68f465fe94a8352339e99ac22a9d8e2da6dde043ff083c28e4f8a8fc34269b28",
+    "evidence/data/yukawa-vacuum-source-checks-v1.json": "a295e2de4a27e611cfd903f231e2e45ae539a15189a94699069d895c62850825",
+    "scripts/audit-yukawa-vacuum-scale-selection.mjs": "ac0e7641d3a2df8e04001c25bd02ffe7c9ee7e15dc96688f647ba5f30439375d",
+    "verification/prove/prove_Delta_copy_kinetic_normalization_and_quartic_rank_one_gate.mjs": "3d92a9f265a442c207b3a58b8e928428bf96e06403b3220cb656546a32e05081",
+    "verification/verify/verify_spin23_common_coefficient_line_rg_invariance.mjs": "95093dcd2d31e1faf422a138c92a618e01a61146f5e47014ef856725a9a71981",
+    "verification/verify/verify_spin23_e6_two_copy_yukawa_gram_obstruction.mjs": "ca9ed82a5b4171fbe8c4db282326a5675d6fcedac57c517fe081a1b13bfaf33b",
+    "verification/verify/verify_spin23_radiative_selector_portal_construction.mjs": "bb580805c113ca726cf366146b5bfde157ce5c15c3b8ad61f0b74200422d6c6b",
+    "verification/verify/verify_spin23_six_link_renormalizable_potential_vacuum_audit.mjs": "2bdb1fa3260ad7c847584a5731b2abca130363aa093abee4a1852f145fb27b36"
+  },
+  "sourceVerificationReceipt": "evidence/data/yukawa-vacuum-source-checks-v1.json",
+  "traceCompletion": {
+    "status": "New declared comparison using claim 1110 trace invariants; quadratic term and full physical matching are not derived there.",
+    "assumptions": [
+      "one real scalar coordinate u",
+      "canonical fermions with mass block u C",
+      "kinetic coefficient k Tr(C^dagger C)",
+      "potential -a Lambda^2 Z u^2/2+b W u^4/4",
+      "positive a,b,k,Lambda",
+      "no independent extra scalar invariants"
+    ],
+    "formulas": {
+      "gSquared": "r_i/k",
+      "vSquared": "(a/b) k Lambda^2/rho",
+      "gapSquared": "(a/b) Lambda^2 r_i/rho"
+    },
+    "commonAmplitudeFamily": [
+      {
+        "t": 0.25,
+        "singularValues": [
+          0.25,
+          0.5
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 0.3125,
+        "W": 0.06640625,
+        "r": [
+          0.2,
+          0.8
+        ],
+        "rho": 0.68,
+        "u0": 2.1693045781865616,
+        "canonicalV": 1.212678125181665,
+        "canonicalYukawas": [
+          0.4472135954999579,
+          0.8944271909999159
+        ],
+        "gaps": [
+          0.5423261445466404,
+          1.0846522890932808
+        ],
+        "minimumGap": 0.5423261445466404
+      },
+      {
+        "t": 1,
+        "singularValues": [
+          1,
+          2
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 5,
+        "W": 17,
+        "r": [
+          0.2,
+          0.8
+        ],
+        "rho": 0.68,
+        "u0": 0.5423261445466404,
+        "canonicalV": 1.212678125181665,
+        "canonicalYukawas": [
+          0.4472135954999579,
+          0.8944271909999159
+        ],
+        "gaps": [
+          0.5423261445466404,
+          1.0846522890932808
+        ],
+        "minimumGap": 0.5423261445466404
+      },
+      {
+        "t": 3,
+        "singularValues": [
+          3,
+          6
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 45,
+        "W": 1377,
+        "r": [
+          0.2,
+          0.8
+        ],
+        "rho": 0.68,
+        "u0": 0.1807753815155468,
+        "canonicalV": 1.212678125181665,
+        "canonicalYukawas": [
+          0.4472135954999579,
+          0.8944271909999159
+        ],
+        "gaps": [
+          0.5423261445466404,
+          1.0846522890932808
+        ],
+        "minimumGap": 0.5423261445466404
+      }
+    ],
+    "interpretation": "C->t C can be absorbed by u->u/t. Canonical invariance removes a coordinate redundancy, not by itself a dynamical coupling selection.",
+    "shapeFamily": [
+      {
+        "singularValues": [
+          0.7071067811865476,
+          0.7071067811865476
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 1.0000000000000002,
+        "W": 0.5000000000000001,
+        "r": [
+          0.5,
+          0.5
+        ],
+        "rho": 0.4999999999999999,
+        "u0": 1.4142135623730951,
+        "canonicalV": 1.4142135623730951,
+        "canonicalYukawas": [
+          0.7071067811865476,
+          0.7071067811865476
+        ],
+        "gaps": [
+          1.0000000000000002,
+          1.0000000000000002
+        ],
+        "minimumGap": 1.0000000000000002
+      },
+      {
+        "singularValues": [
+          0.8944271909999159,
+          0.4472135954999579
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 0.9999999999999999,
+        "W": 0.6799999999999999,
+        "r": [
+          0.8,
+          0.2
+        ],
+        "rho": 0.68,
+        "u0": 1.2126781251816647,
+        "canonicalV": 1.2126781251816645,
+        "canonicalYukawas": [
+          0.894427190999916,
+          0.447213595499958
+        ],
+        "gaps": [
+          1.0846522890932808,
+          0.5423261445466404
+        ],
+        "minimumGap": 0.5423261445466404
+      }
+    ],
+    "coefficientAndScaleFamily": [
+      {
+        "singularValues": [
+          1
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 1,
+        "W": 1,
+        "r": [
+          1
+        ],
+        "rho": 1,
+        "u0": 1,
+        "canonicalV": 1,
+        "canonicalYukawas": [
+          1
+        ],
+        "gaps": [
+          1
+        ],
+        "minimumGap": 1
+      },
+      {
+        "singularValues": [
+          1
+        ],
+        "coefficients": {
+          "a": 2,
+          "b": 1,
+          "k": 1,
+          "Lambda": 1
+        },
+        "Z": 1,
+        "W": 1,
+        "r": [
+          1
+        ],
+        "rho": 1,
+        "u0": 1.4142135623730951,
+        "canonicalV": 1.4142135623730951,
+        "canonicalYukawas": [
+          1
+        ],
+        "gaps": [
+          1.4142135623730951
+        ],
+        "minimumGap": 1.4142135623730951
+      },
+      {
+        "singularValues": [
+          1
+        ],
+        "coefficients": {
+          "a": 1,
+          "b": 1,
+          "k": 1,
+          "Lambda": 2
+        },
+        "Z": 1,
+        "W": 1,
+        "r": [
+          1
+        ],
+        "rho": 1,
+        "u0": 2,
+        "canonicalV": 2,
+        "canonicalYukawas": [
+          1
+        ],
+        "gaps": [
+          2
+        ],
+        "minimumGap": 2
+      }
+    ],
+    "rankOneTwoDimensionalExample": {
+      "singularValues": [
+        1,
+        0
+      ],
+      "coefficients": {
+        "a": 1,
+        "b": 1,
+        "k": 1,
+        "Lambda": 1
+      },
+      "Z": 1,
+      "W": 1,
+      "r": [
+        1,
+        0
+      ],
+      "rho": 1,
+      "u0": 1,
+      "canonicalV": 1,
+      "canonicalYukawas": [
+        1,
+        0
+      ],
+      "gaps": [
+        1,
+        0
+      ],
+      "minimumGap": 0
+    }
+  },
+  "radiativePortal": {
+    "A": -0.000524326805390947,
+    "B": 0.00013425056832609757,
+    "nChiSquared": 0.6666666666666666,
+    "vOverMuGW": 5.48925065363972,
+    "boundaryScaleFamily": [
+      {
+        "muGW": 1,
+        "v": 5.48925065363972,
+        "scalonMass": 0.1798937695390507
+      },
+      {
+        "muGW": 2,
+        "v": 10.97850130727944,
+        "scalonMass": 0.3597875390781014
+      }
+    ],
+    "cartanCoupling": 0.005017168679757867,
+    "cartanCouplingIdentifiedAsFermionYukawa": false,
+    "scope": "One-loop bosonic benchmark of claim 1612. Scaling muGW compares distinct dimensional boundary data, not a scale change on the same RG trajectory.",
+    "addingYukawaMatterRequiresNewLoopPotential": true
+  },
+  "verdict": {
+    "commonBareAmplitudeCancelsInDeclaredTraceCompletion": true,
+    "cancellationIsPhysicalT1T2Derivation": false,
+    "singularValueShapeSelectedByInspectedConstraints": false,
+    "normalizedPhysicalYukawaAndVacuumScaleFixed": false,
+    "physicalGapOrIndependentMassRatioPredicted": false,
+    "independentYukawaCounterfamilyAppliesToEveryCommonAction": false,
+    "nextDiscriminator": "Derive one physical trace/source action and its relative coefficients; select the finite-operator shape and RG boundary, then predict Delta/Mref with threshold and counterterm control."
+  }
+}

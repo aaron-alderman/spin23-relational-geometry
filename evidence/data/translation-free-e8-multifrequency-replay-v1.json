@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "e8-calibrated-multifrequency-replay-v1",
+  "contract": "evidence/data/translation-free-e8-multifrequency-test-contract-v1.json",
+  "sources": {
+    "evidence/data/translation-free-e8-multifrequency-test-contract-v1.json": "e1979dd85878b439ba3bb6a9895ca3324bc3fb232f427f211104dc9bfa3a32ff",
+    "evidence/data/translation-free-e8-local-charge-dictionary-r65-direct-v1.json": "9b5b33399255383f92c00be02ad9c554d13e3f104f25db6fcbc5af2d4cc02ce6",
+    "evidence/data/translation-free-e8-local-charge-dictionary-r65-shell10-direct-v1.json": "5705b6f40072f3712c6dd2b027d32bbbdfe35e5b7b5e39904e5abadaa33067f7",
+    "evidence/data/translation-free-e8-frequency-response-shell8-v1.json": "8ed4c928afd82e72d80d2c898fb012026a7752d8e9064667e2454e4ca6099d57",
+    "evidence/data/translation-free-e8-frequency-response-shell10-v1.json": "69bbd9d256aa3ab0a934bf15edb5c6b2e9dc178e126d84938d04c0373dc6b066",
+    "evidence/data/translation-free-e8-charge-shell-8-audit-v1.json": "840b07e4e6041bbe2222bf0a2833b6e5fc0d4d7e6b4ff2b419e43fe83f77d50a",
+    "evidence/data/translation-free-e8-charge-shell-10-audit-v1.json": "0ecd069a8c30b94e628a497a4d070ffd90fc72939ae8c3d8042c2329e6b876d2"
+  },
+  "calibration": {
+    "firstModel": {
+      "state": 1,
+      "parity": -1,
+      "gap": 0.21836949373591175,
+      "weight": 0.1493235864507551
+    },
+    "firstReference": {
+      "state": 1,
+      "parity": -1,
+      "gap": 0.21827682153108308,
+      "weight": 0.14953519763299805
+    },
+    "alpha": 0.9995756174397659,
+    "beta": 1.0014171316620013,
+    "freeParameters": 2
+  },
+  "heldOutLines": [
+    {
+      "state": 3,
+      "predictedGap": 0.3139912085039278,
+      "referenceGap": 0.314044906512843,
+      "predictedWeight": 0.06636510485711689,
+      "referenceWeight": 0.06630024520454851,
+      "gapRelativeError": -0.00017098831345951915,
+      "weightRelativeError": 0.000978271684641152,
+      "referenceWeightOverFirst": 0.4433755146214351
+    },
+    {
+      "state": 5,
+      "predictedGap": 0.40742956379425027,
+      "referenceGap": 0.4075328221811074,
+      "predictedWeight": 0.03987313273107246,
+      "referenceWeight": 0.03980983560942962,
+      "gapRelativeError": -0.00025337440627359875,
+      "weightRelativeError": 0.0015899870138584848,
+      "referenceWeightOverFirst": 0.26622384722514825
+    },
+    {
+      "state": 7,
+      "predictedGap": 0.4910746816010678,
+      "referenceGap": 0.4912149691711707,
+      "predictedWeight": 0.9282900241605466,
+      "referenceWeight": 0.9281923391784375,
+      "gapRelativeError": -0.0002855930273044649,
+      "weightRelativeError": 0.0001052421766329914,
+      "referenceWeightOverFirst": 6.207183016914089
+    },
+    {
+      "state": 8,
+      "predictedGap": 0.4974455553113694,
+      "referenceGap": 0.49759517221919536,
+      "predictedWeight": 0.012029532413639892,
+      "referenceWeight": 0.011819381809284298,
+      "gapRelativeError": -0.00030067998280347563,
+      "weightRelativeError": 0.017780168857098655,
+      "referenceWeightOverFirst": 0.07904080107141348
+    },
+    {
+      "state": 11,
+      "predictedGap": 0.5841130644766211,
+      "referenceGap": 0.5842966417263398,
+      "predictedWeight": 0.20207337626506108,
+      "referenceWeight": 0.20162238089094736,
+      "gapRelativeError": -0.00031418501598134974,
+      "weightRelativeError": 0.0022368319038830187,
+      "referenceWeightOverFirst": 1.3483272439027103
+    },
+    {
+      "state": 12,
+      "predictedGap": 0.5847430701198502,
+      "referenceGap": 0.5849354975017835,
+      "predictedWeight": 0.0014759152322695783,
+      "referenceWeight": 0.001733845715860167,
+      "gapRelativeError": -0.0003289719682857406,
+      "weightRelativeError": -0.14876207336742675,
+      "referenceWeightOverFirst": 0.011594900353263438
+    }
+  ],
+  "responseRows": [
+    {
+      "fractionOfFirstGap": 0,
+      "referenceResponse": 16.735633362271262,
+      "predictions": {
+        "chargeModel": 16.75163594788233,
+        "singlePole": 1.3701427076324175,
+        "singlePolePlusStatic": 16.735633362270363,
+        "singlePolePlusStaticAndSlope": 16.735633362270363
+      },
+      "relativeErrors": {
+        "chargeModel": 0.0009561983860824075,
+        "singlePole": -0.9181302148551329,
+        "singlePolePlusStatic": -5.3734794391857577e-14,
+        "singlePolePlusStaticAndSlope": -5.3734794391857577e-14
+      }
+    },
+    {
+      "fractionOfFirstGap": 0.2,
+      "referenceResponse": 16.867357909208412,
+      "predictions": {
+        "chargeModel": 16.883471007769863,
+        "singlePole": 1.427231987117092,
+        "singlePolePlusStatic": 16.792722641755038,
+        "singlePolePlusStaticAndSlope": 16.866812003639033
+      },
+      "relativeErrors": {
+        "chargeModel": 0.0009552828989687345,
+        "singlePole": -0.9153849704974883,
+        "singlePolePlusStatic": -0.004424834514991094,
+        "singlePolePlusStaticAndSlope": -0.00003236461645728106
+      }
+    },
+    {
+      "fractionOfFirstGap": 0.4,
+      "referenceResponse": 17.301998210307,
+      "predictions": {
+        "chargeModel": 17.318456237206146,
+        "singlePole": 1.6311222709909226,
+        "singlePolePlusStatic": 16.996612925628867,
+        "singlePolePlusStaticAndSlope": 17.292970373164852
+      },
+      "relativeErrors": {
+        "chargeModel": 0.0009512211652720204,
+        "singlePole": -0.905726364598787,
+        "singlePolePlusStatic": -0.01765028992409745,
+        "singlePolePlusStaticAndSlope": -0.0005217800298217279
+      }
+    },
+    {
+      "fractionOfFirstGap": 0.6,
+      "referenceResponse": 18.22165029069448,
+      "predictions": {
+        "chargeModel": 18.238733932862328,
+        "singlePole": 2.1408479806754563,
+        "singlePolePlusStatic": 17.5063386353134,
+        "singlePolePlusStaticAndSlope": 18.173142892269368
+      },
+      "relativeErrors": {
+        "chargeModel": 0.0009375463745220358,
+        "singlePole": -0.8825107525102293,
+        "singlePolePlusStatic": -0.03925614002955469,
+        "singlePolePlusStaticAndSlope": -0.002662074930166125
+      }
+    },
+    {
+      "fractionOfFirstGap": 0.8,
+      "referenceResponse": 20.52554963848975,
+      "predictions": {
+        "chargeModel": 20.54364516692843,
+        "singlePole": 3.8059519656445033,
+        "singlePolePlusStatic": 19.17144262028245,
+        "singlePolePlusStaticAndSlope": 20.356872410426387
+      },
+      "relativeErrors": {
+        "chargeModel": 0.0008816099328590177,
+        "singlePole": -0.814574906266698,
+        "singlePolePlusStatic": -0.06597177868835546,
+        "singlePolePlusStaticAndSlope": -0.00821791528286564
+      }
+    }
+  ],
+  "controls": {
+    "singlePole": {
+      "freeCalibrations": 2
+    },
+    "singlePolePlusStatic": {
+      "freeCalibrations": 3,
+      "c0": 15.365490654637945
+    },
+    "singlePolePlusStaticAndSlope": {
+      "freeCalibrations": 4,
+      "c0": 15.365490654637945,
+      "c2": 38.87591471867516
+    },
+    "higherPolePrediction": "All single-pole-plus-polynomial controls predict no additional discrete resonance poles."
+  },
+  "summary": {
+    "calibratedFrequencyScale": 0.9995756174397659,
+    "calibratedWeightScale": 1.0014171316620013,
+    "maxHeldOutLineEnergyError": 0.0003289719682857406,
+    "maxHeldOutLineWeightError": 0.14876207336742675,
+    "maxHeldOutChargeResponseError": 0.0009561983860824075,
+    "staticPrediction": 16.751635947882125,
+    "staticReference": 16.735633362270363,
+    "slopePrediction": 67.69080997496997,
+    "slopeReference": 67.63337716664347,
+    "singlePoleStaticRelativeError": -0.9181302148551286,
+    "singlePoleSlopeRelativeError": -0.5748036893513078,
+    "selectorSpecificPhysicalPredictionEstablished": false,
+    "chargeModelNumericalReplayPass": false
+  },
+  "boundaries": [
+    "Retrospective synthetic numerical replay, not independently measured or blinded data.",
+    "Both charge models use the same assumed Hamiltonian, source geometry and zero added contacts.",
+    "The physical selector-to-source intertwiner and measured spectrum remain absent.",
+    "Engineering replay tolerance is separate from the much wider conservative infinite-shell error estimates."
+  ]
+}

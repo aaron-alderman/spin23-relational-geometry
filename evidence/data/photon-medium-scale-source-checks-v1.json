@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "photon-medium-scale-source-checks-v1",
+  "observedAtUTC": "2026-11-08T13:39:07.499Z",
+  "scope": "Three existing source certificates in one periodic-medium source audit; no physical aether measurement.",
+  "checks": [
+    {
+      "command": "node verification/verify/verify_translation_free_e8_constitutive_metric_gate.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"coxeterNumber\": 30,\n  \"exponents\": [\n    1,\n    7,\n    11,\n    13,\n    17,\n    19,\n    23,\n    29\n  ],\n  \"cartanEigenvalues\": [\n    0.010956209263453219,\n    0.5137103490452113,\n    1.1865267138484,\n    1.5841766183644816,\n    2.4158233816355197,\n    2.8134732861516016,\n    3.48628965095479,\n    3.989043790736548\n  ],\n  \"conditionalFingerprints\": {\n    \"dual-form-is-charging-kernel\": {\n      \"softest\": 0.5006861729989632,\n      \"hardest\": 9.553661304648701,\n      \"span\": 19.08113668772811,\n      \"ratios\": [\n        1,\n        1.0696770266504374,\n        1.1907292003831942,\n        1.2849961066288913,\n        1.5868380382346299,\n        1.8335621770610344,\n        2.7866039248812355,\n        19.08113668772831\n      ]\n    },\n    \"dual-form-is-capacitance-or-gram\": {\n      \"softest\": 0.10467191248588716,\n      \"hardest\": 1.997259069509148,\n      \"span\": 19.081136687728307,\n      \"ratios\": [\n        1,\n        6.847452024794498,\n        10.406593747648596,\n        12.024627736398498,\n        14.849178600071019,\n        16.02474910465597,\n        17.83822239080758,\n        19.081136687728307\n      ]\n    },\n    \"isotropic-control\": {\n      \"softest\": 1,\n      \"hardest\": 1,\n      \"span\": 1,\n      \"ratios\": [\n        1,\n        1,\n        1,\n        1,\n        1,\n        1,\n        1,\n        1\n      ]\n    }\n  },\n  \"topologicalKDeterminesConstitutiveM\": false,\n  \"nextGate\": \"calibrate one concrete positive M, then compute cutoff-stable nonlinear spectra of that measured eight-dimensional compact Hamiltonian\"\n}\n"
+    },
+    {
+      "command": "node verification/verify/verify_rdg_maxwell_hodge_dynamics.mjs",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"PASS\",\"uniform\":\"selector, constitutive metric and Maxwell generator commute\",\"conserved\":\"Cayley step preserves energy and both Gauss records\",\"contrast\":\"positive material contrast preserves full physics but couples admitted and defect sectors\",\"implication\":\"Q-sector detection is not sufficient evidence of new physics\"}\n"
+    },
+    {
+      "command": "node verification/verify/verify_rdg_maxwell_sources_and_dispersion.mjs",
+      "exitCode": 0,
+      "stdout": "{\"status\":\"PASS\",\"sources\":\"translation selector preserves continuity; component selector does not\",\"memory\":\"Lorentz material oscillator carries lag and resonance explicitly\",\"homogeneous\":\"lossless enlarged dynamics closes under the selector\",\"contrast\":\"resonance contrast mixes sectors while preserving full energy\",\"damping\":\"selector-compatible loss exposes the missing bath carrier\"}\n"
+    }
+  ]
+}

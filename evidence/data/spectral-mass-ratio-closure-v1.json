@@ -1,0 +1,317 @@
+{
+  "schemaVersion": "spectral-mass-ratio-closure-v1",
+  "date": "2026-11-08",
+  "authority": "New conditional flat Euclidean Dirac/scalar heat-kernel calculation and bounded source audit; no physical T1/T2 action, spectrum or pole matching admitted.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/1100-1199/1110_the_minimal_spectral_kinetic_metric_can_be_normalized_to_the_Jordan_face_but_quartic_exchange_forces_the_Q_Majorana_block_to_rank_one.md": "e07cff1c17c47735484cc827e4eb9a243fa1ad3b67a8b4cc32baa50a94393fd2",
+    "corpus/claims/1100-1199/1111_a_rank_one_complementary_Majorana_block_can_give_three_heavy_masses_but_block_preserving_seesaw_forces_a_selected_flavour_texture_zero.md": "9ef03a56d8ee0f36d54a33499fa75811431e61706d3a3a13fe328c8da598185b",
+    "corpus/claims/1100-1199/1196_no_u3_covariant_effective_action_of_one_projector_can_select_its_orientation_so_closure_requires_a_second_family_tensor.md": "50ce78ec59d8d1f7c87ceb5e8773f20a339e7408f05d5014e99c63c2e27c40f0",
+    "corpus/programmes/lattice-subroutine-gravity/induced-action-preflight.md": "0036c574da4faeef21cacdba80a849381ed753932ce0c1f74a6ea8262dc96550",
+    "evidence/data/spectral-mass-ratio-source-checks-v1.json": "3a282ce8fee5bd20988edda87cb392565698d6e4f96fdb9c1c1252ce2007e024",
+    "evidence/data/yukawa-vacuum-scale-selection-v1.json": "1a597c49695b026b28f491c3c5c00d382ee896722d3731c089b97b174ac66eef",
+    "scripts/audit-spectral-mass-ratio-closure.py": "d8afa14ce4a4ad348d5280432433c696fa7d73a7442d413c65f2a347656e65cd",
+    "verification/prove/prove_rank_one_Q_Majorana_seesaw_texture_zero.mjs": "68b2dab70455f0541241bfb7fffbb9f93fff1e785442c07ea87d84709f7c4412",
+    "verification/verify/verify_lattice_subroutine_induced_gravity_preflight.mjs": "11abae39a4427174a14078a65d8af097ce7c2fd9f06582d75d55d6b427ccad02"
+  },
+  "sourceVerificationReceipt": "evidence/data/spectral-mass-ratio-source-checks-v1.json",
+  "primarySources": [
+    {
+      "url": "https://arxiv.org/html/1507.08161",
+      "version": "v1",
+      "sections": "equations 2-3 and 12-21; finite Yukawa matrices",
+      "accessed": "2026-11-08"
+    },
+    {
+      "url": "https://alainconnes.org/wp-content/uploads/bookwebfinal-2.pdf",
+      "sections": "17.1, equation 1.785, and 17.12",
+      "accessed": "2026-11-08"
+    }
+  ],
+  "primarySourceBoundary": "Read from primary endpoints; full remote source bytes are not archived by this calculation.",
+  "explicitModel": {
+    "operator": "D=i gamma^mu partial_mu + gamma5 u C; C Hermitian, fixed; one real scalar; flat Euclidean four-space",
+    "momentConvention": "f0=f(0); f2=integral x f(x) dx; f4=integral x^3 f(x) dx",
+    "assumptions": [
+      "canonical fermion vertex u C",
+      "unweighted common trace",
+      "integrated total derivatives discarded",
+      "heat expansion truncated through a4",
+      "positive canonical Lorentzian interpretation remains a physical matching gate"
+    ],
+    "spinDerivativeGram": [
+      [
+        4.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        4.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        4.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        4.0
+      ]
+    ],
+    "directTraceE2": 24.978566479999994,
+    "expectedTraceE2": 24.978566479999998,
+    "coefficients": {
+      "k": "f0/(4 pi^2)",
+      "a": "f2/pi^2",
+      "b": "f0/(2 pi^2)"
+    },
+    "scalarReference": "canonical radial curvature of this same one-scalar truncated action",
+    "squaredMassRatio": "Delta_i^2/m_scalar^2 = r_i/(4 rho)"
+  },
+  "cutoffMomentFamily": [
+    {
+      "epsilon": 0.0,
+      "f0": 1.0,
+      "f2": 0.5000000000000001,
+      "f4": 0.5,
+      "quadratureErrorEstimates": [
+        1.8470502280348874e-09,
+        3.829627818760482e-12
+      ],
+      "a": 0.0506605918211689,
+      "b": 0.05066059182116889,
+      "k": 0.025330295910584444,
+      "aOverB": 1.0000000000000002,
+      "scalarMassSquaredOverCutoffSquared": 4.000000000000001,
+      "singleChannelGapSquaredOverCutoffSquared": 1.0000000000000002,
+      "singleChannelSquaredMassRatio": 0.25,
+      "positivityPolynomialMinimum": 1.0,
+      "derivativePolynomialMaximum": -1.0
+    },
+    {
+      "epsilon": 0.5,
+      "f0": 1.0,
+      "f2": 0.4166666666666667,
+      "f4": 0.49999999999999994,
+      "quadratureErrorEstimates": [
+        1.2556669960717502e-10,
+        4.789826796808641e-11
+      ],
+      "a": 0.04221715985097407,
+      "b": 0.05066059182116889,
+      "k": 0.025330295910584444,
+      "aOverB": 0.8333333333333334,
+      "scalarMassSquaredOverCutoffSquared": 3.3333333333333335,
+      "singleChannelGapSquaredOverCutoffSquared": 0.8333333333333334,
+      "singleChannelSquaredMassRatio": 0.25,
+      "positivityPolynomialMinimum": 0.625,
+      "derivativePolynomialMaximum": -0.45833333333333337
+    },
+    {
+      "epsilon": 0.75,
+      "f0": 1.0,
+      "f2": 0.37499999999999994,
+      "f4": 0.5,
+      "quadratureErrorEstimates": [
+        2.445945202250206e-10,
+        8.256628933870123e-11
+      ],
+      "a": 0.03799544386587666,
+      "b": 0.05066059182116889,
+      "k": 0.025330295910584444,
+      "aOverB": 0.7499999999999999,
+      "scalarMassSquaredOverCutoffSquared": 2.9999999999999996,
+      "singleChannelGapSquaredOverCutoffSquared": 0.7499999999999999,
+      "singleChannelSquaredMassRatio": 0.25,
+      "positivityPolynomialMinimum": 0.4375,
+      "derivativePolynomialMaximum": -0.1875
+    }
+  ],
+  "shapeCases": [
+    {
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "rho": 0.5,
+      "gapToScalarMassRatios": [
+        0.5,
+        0.5
+      ],
+      "minimumRatio": 0.5
+    },
+    {
+      "weights": [
+        0.8,
+        0.2
+      ],
+      "rho": 0.6800000000000002,
+      "gapToScalarMassRatios": [
+        0.5423261445466404,
+        0.2711630722733202
+      ],
+      "minimumRatio": 0.2711630722733202
+    },
+    {
+      "weights": [
+        1.0
+      ],
+      "rho": 1.0,
+      "gapToScalarMassRatios": [
+        0.5
+      ],
+      "minimumRatio": 0.5
+    }
+  ],
+  "fixedTraceShapeOptimization": {
+    "identity": "Tr X^2 = Z^2/N + Tr(X-Z I/N)^2",
+    "equalShapeSelectedIfAllShapeVariationsAllowed": true,
+    "physicalFiniteDiracVariationDerived": false,
+    "boundary": "Varying a fixed input D_F or imposing fixed trace requires a new variational/constraint principle."
+  },
+  "rankOneComplementFullMatrixFamily": [
+    {
+      "y": 0.5,
+      "matrix": [
+        [
+          2.0,
+          0.4,
+          0.5
+        ],
+        [
+          0.4,
+          1.0,
+          0.0
+        ],
+        [
+          0.5,
+          0.0,
+          0.0
+        ]
+      ],
+      "determinant": -0.24999999999999994,
+      "complementaryRank": 1,
+      "signedEigenvalues": [
+        -0.12601321149752098,
+        0.8854590534324833,
+        2.2405541580650383
+      ],
+      "singularValues": [
+        0.12601321149752098,
+        0.8854590534324833,
+        2.2405541580650383
+      ],
+      "normalizedSquaredSingularValues": [
+        0.0027284071257592697,
+        0.13471438750954454,
+        0.8625572053646962
+      ],
+      "rho": 0.7621603429340703,
+      "conditionalMinimumGapToScalarMass": 0.029915854897741973
+    },
+    {
+      "y": 1.0,
+      "matrix": [
+        [
+          2.0,
+          0.4,
+          1.0
+        ],
+        [
+          0.4,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "determinant": -0.9999999999999999,
+      "complementaryRank": 1,
+      "signedEigenvalues": [
+        -0.4311541208655463,
+        0.925736309554993,
+        2.5054178113105525
+      ],
+      "singularValues": [
+        0.4311541208655463,
+        0.925736309554993,
+        2.5054178113105525
+      ],
+      "normalizedSquaredSingularValues": [
+        0.025395338243079525,
+        0.11707482443012267,
+        0.8575298373267979
+      ],
+      "rho": 0.7497088596255489,
+      "conditionalMinimumGapToScalarMass": 0.09202391032724644
+    },
+    {
+      "y": 2.0,
+      "matrix": [
+        [
+          2.0,
+          0.4,
+          2.0
+        ],
+        [
+          0.4,
+          1.0,
+          0.0
+        ],
+        [
+          2.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "determinant": -3.999999999999999,
+      "complementaryRank": 1,
+      "signedEigenvalues": [
+        -1.2558977815031314,
+        0.9689864670479581,
+        3.286911314455172
+      ],
+      "singularValues": [
+        0.9689864670479581,
+        1.2558977815031314,
+        3.286911314455172
+      ],
+      "normalizedSquaredSingularValues": [
+        0.07049059859775404,
+        0.11841435717601258,
+        0.8110950442262335
+      ],
+      "rho": 0.6768660552444337,
+      "conditionalMinimumGapToScalarMass": 0.16135567192854286
+    }
+  ],
+  "fullGaussianNegativeControl": {
+    "exactDensityOverZeroMass": "exp(-s)",
+    "s": "m^2/Lambda^2",
+    "quarticTruncation": "1-s+s^2/2",
+    "truncatedMinimumS": 1.0,
+    "exactDerivativeAtTruncatedMinimum": -0.36787944117144233,
+    "establishes": "This simple full Gaussian spectral density does not share the truncated finite-mass minimum.",
+    "universalSpectralActionVacuumNoGo": false
+  },
+  "verdict": {
+    "coefficientRatioDerivedForExplicitModel": true,
+    "commonMomentsCancelForSameScalarReference": true,
+    "physicalReferenceScalarIdentified": false,
+    "finiteSingularValueShapeDynamicallySelectedByCorpus": false,
+    "positivePhysicalT1T2MassRatioPredicted": false,
+    "everyMassRatioNecessarilyDependsOnCutoffMoments": false,
+    "rankOneComplementForcesFullMasslessMode": false,
+    "nextDiscriminator": "Select the physical finite operator and its variation domain, derive a controlled stable vacuum and reference mode from the same action, then transport the ratio through mixing and thresholds."
+  }
+}

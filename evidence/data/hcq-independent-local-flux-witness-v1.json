@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "hcq-independent-local-flux-witness-v1",
+  "date": "2026-11-08",
+  "authority": "New prospective noncircular field-witness design plus exact numerical examples. No pickup data, chip layout or implemented h-CQUID instrument is claimed.",
+  "sources": {
+    "evidence/data/hcq-isofrequency-rabi-protocol-v1.json": "ade460c45d6e4e4c62e3228d41b9e0ff49bde54204e96b0763104cf175ee9352",
+    "corpus/claims/1200-1299/1230_the_nearest_a11_experiment_is_an_aharonov_casher_two_port_while_protected_z3_requires_verified_sector_algebra_and_scaling.md": "309498fb02f35fa3bf4513711dc5faa80905fcb80894375ebae9a077cc28171a",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\design-hcq-local-flux-witness.py": "c1bee2269c27ca0bf77c2944b9a001d2abc3d4113277bd496a78c1af70e9637c"
+  },
+  "primaryPrecedent": {
+    "url": "https://doi.org/10.1088/1361-6668/aaf048",
+    "arxiv": "https://arxiv.org/abs/1808.09612",
+    "result": "Independent on-chip SQUID-resonator flux-to-microwave-phase transduction, without using a qubit transition matrix element.",
+    "bandwidthBoundary": "The paper demonstrates waveforms through hundreds of MHz and describes a 2.6 GHz bandwidth limit. Precision for the proposed 1.8-2.56 GHz h-CQUID carrier range must be independently demonstrated, not assumed from the nominal bandwidth."
+  },
+  "rejectedShortcuts": [
+    "Matching qubit Rabi amplitudes or Stark shifts using an assumed current matrix element is circular for this test.",
+    "An ordinary first-order longitudinal Ramsey flux meter is blind at the exact flux-degeneracy reference where the static frequency slope vanishes.",
+    "A second measurement of remote transmission or input power alone does not identify local flux under unknown reflected and screening currents."
+  ],
+  "proposedWitness": {
+    "hardware": "A weakly loading on-chip flux pickup/SQUID transducer coupled to the relevant drive-current modes, with a separate probe carrier. A pickup of only a remote feedline is insufficient without a transfer/coverage proof.",
+    "measurement": "While switching the h-CQUID between paired working points, keep the pump carrier and source waveform fixed and keep the sensor at the same operating point. Measure its complex probe carrier C and pump-induced sideband B.",
+    "smallSignalModel": "B_b/C_b=K(omega_p) Phi_sensor,b + O(Phi_sensor,b^3), b=target,reference. Sensor and detector gain K need not be absolutely known if it is unchanged within each interleaved pair.",
+    "selfReferencedObservable": "R_sensor=(B_target C_reference)/(B_reference C_target)=Phi_sensor,target/Phi_sensor,reference in the linear regime.",
+    "gainCancellation": "An unknown sensor response and different gains at the probe carrier and sideband cancel because each frequency bin appears in both blocks. A blockwise common probe-amplitude/gain factor also cancels.",
+    "notCancelled": "State-correlated change of sensor operating point, carrier/sideband gain ratio, crosstalk, or a spatial flux component not seen by the pickup.",
+    "operatingPointControl": "Hold the sensor DC response fixed; interleave blocks faster than drift. Use an independent small calibration dither and probe-power checks to test sensor-gain invariance, not the qubit matrix element.",
+    "backactionControl": "Bound sensor-induced shifts, heating, poisoning and changes in coherence by sensor-probe-power and sensor-on/off controls. Freeze the static spectrum of the instrumented device before acquiring the strength test.",
+    "nonlinearityControl": "Repeat at several small pump amplitudes. The leading cross-ratio is amplitude independent; retain nonlinear corrections or restrict the regime using the witness data, not by fitting a qubit strength correction."
+  },
+  "localityCriterion": {
+    "model": "Let relevant physical drive/screening mode currents be i, device flux Phi_D=m_D^T i, and sensor fluxes phi_S=M_S i.",
+    "identifiability": "Device flux is reconstructible from the sensors if and only if m_D^T is in the row span of M_S, on the allowed current subspace.",
+    "reconstruction": "Choose a such that a^T M_S=m_D^T; then Phi_D=a^T phi_S. An unknown overall common calibration scale cancels in target/reference ratios; relative sensor calibrations and the coupling geometry still need to be fixed independently.",
+    "singleModeEscape": "If one measured current generates the relevant external flux through a fixed mutual inductance M, Phi_D=M I_local, the same-current ratio suffices. The M need not be known absolutely.",
+    "multipleModeBoundary": "Shared resonator and induced screening/return currents can require more than one independent pickup. A single scalar sensor is conclusive only if its coupling is proportional to the device-flux functional on that subspace.",
+    "requiredEvidence": "Circuit topology and relative mutual couplings, or an experimentally validated independent-mode injection/Maxwell reconstruction. Low-frequency coupling calibration alone does not prove a GHz mode model."
+  },
+  "numericalCounterexample": {
+    "deviceFluxWeights": [
+      1.0,
+      0.4
+    ],
+    "singleSensorCoupling": [
+      [
+        1.0,
+        0.0
+      ]
+    ],
+    "referenceCurrents": [
+      1.0,
+      0.0
+    ],
+    "targetCurrents": [
+      1.0,
+      0.25
+    ],
+    "singleSensorReadings": [
+      1.0,
+      1.0
+    ],
+    "trueDeviceFluxRatio": 1.1,
+    "twoSensorCoupling": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.2,
+        1.0
+      ]
+    ],
+    "reconstructionCoefficients": [
+      0.9199999999999999,
+      0.4
+    ],
+    "reconstructedDeviceFluxRatio": 1.0999999999999999,
+    "interpretation": "A single pickup reports equality while the actual device flux changes by 10 percent. A second independent mode measurement detects it; no qubit matrix element is used."
+  },
+  "phaseSensorTests": [
+    {
+      "trueLocalFluxRatio": 0.9,
+      "sidebandCarrierCrossRatioReal": 0.8999657903303717,
+      "crossRatioImaginaryError": 1.1259361086178006e-16,
+      "linearApproximationRelativeError": 3.801074403142479e-05,
+      "uncorrectedStrengthBiasFactor": 0.81
+    },
+    {
+      "trueLocalFluxRatio": 1.0,
+      "sidebandCarrierCrossRatioReal": 1.0,
+      "crossRatioImaginaryError": 1.6890325477607236e-16,
+      "linearApproximationRelativeError": 0.0,
+      "uncorrectedStrengthBiasFactor": 1.0
+    },
+    {
+      "trueLocalFluxRatio": 1.1,
+      "sidebandCarrierCrossRatioReal": 1.1000462179935886,
+      "crossRatioImaginaryError": 1.126116309213943e-16,
+      "linearApproximationRelativeError": 4.201635780765045e-05,
+      "uncorrectedStrengthBiasFactor": 1.2100000000000002
+    }
+  ],
+  "linearComplexRatioTests": [
+    {
+      "trueComplexRatio": [
+        0.9,
+        0.0
+      ],
+      "recoveredComplexRatio": [
+        0.8999999999999999,
+        -5.874943694237091e-17
+      ]
+    },
+    {
+      "trueComplexRatio": [
+        1.0,
+        0.0
+      ],
+      "recoveredComplexRatio": [
+        0.9999999999999999,
+        -5.874943694237091e-17
+      ]
+    },
+    {
+      "trueComplexRatio": [
+        1.092089499439253,
+        0.1316834280178113
+      ],
+      "recoveredComplexRatio": [
+        1.092089499439253,
+        0.1316834280178113
+      ]
+    }
+  ],
+  "independentCorrectionTests": [
+    {
+      "localFluxRatio": 0.9,
+      "observedRabiRateSquaredRatio": 0.47204999999999997,
+      "independentlyCorrectedStrengthRatio": 0.5827777777777777
+    },
+    {
+      "localFluxRatio": 1.0,
+      "observedRabiRateSquaredRatio": 0.5827777777777777,
+      "independentlyCorrectedStrengthRatio": 0.5827777777777777
+    },
+    {
+      "localFluxRatio": 1.1,
+      "observedRabiRateSquaredRatio": 0.7051611111111111,
+      "independentlyCorrectedStrengthRatio": 0.5827777777777777
+    }
+  ],
+  "injectedLawViolationTest": {
+    "predictedStrengthRatio": 0.5827777777777777,
+    "injectedTrueStrengthRatio": 0.7,
+    "independentlyMeasuredFluxRatio": 1.1,
+    "observedRabiRateSquaredRatio": 0.8470000000000001,
+    "fieldCorrectedStrengthRatio": 0.7,
+    "violationPreserved": true
+  },
+  "correctedStrengthTest": {
+    "formula": "W_target/W_reference=|Omega_target/Omega_reference|^2 / |Phi_D,target/Phi_D,reference|^2, after the Rabi damping correction in the preceding protocol.",
+    "equalityAlternative": "Use the independent flux witness to servo the two local fields equal before acquiring Rabi traces. That is input calibration, not a fit of the strength law.",
+    "toleranceBudget": [
+      {
+        "fluxAmplitudeTolerance": 0.005,
+        "strengthBiasInterval": [
+          0.990025,
+          1.0100249999999997
+        ]
+      },
+      {
+        "fluxAmplitudeTolerance": 0.01,
+        "strengthBiasInterval": [
+          0.9801,
+          1.0201
+        ]
+      },
+      {
+        "fluxAmplitudeTolerance": 0.05,
+        "strengthBiasInterval": [
+          0.9025,
+          1.1025
+        ]
+      }
+    ],
+    "order": "Freeze the sensor/coupling calibration and loading correction before scoring the predicted current ratios. Preserve complex field ratios and covariance.",
+    "remainingConditions": "Linear stable readout for normalized preparation differences, identified charge/parity branch, validated pulse dynamics and independent bounds on sensor backaction and unobserved field modes."
+  },
+  "conclusion": "An independent local-flux witness can remove the circularity. The equal-field assertion is conditional on sensor stability and coverage of the device-flux modes. The public h-CQUID release contains no such witness; this requires a new measurement setup or an independently validated local-current monitor.",
+  "verification": {
+    "phaseGainCrossRatioPassed": true,
+    "complexLinearRatioPassed": true,
+    "blindModeCounterexamplePassed": true,
+    "twoSensorReconstructionPassed": true,
+    "independentLoadingCorrectionPassed": true
+  },
+  "reproduction": "./.venv-alpaca/Scripts/python.exe scripts/design-hcq-local-flux-witness.py"
+}

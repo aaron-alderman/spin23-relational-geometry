@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "translation-free-e8-charge-dipole-result-v1",
+  "date": "2026-11-08",
+  "authority": "Bounded same-run finite-model calculation; no physical or corpus-status admission",
+  "source": "evidence/data/translation-free-e8-charge-dipole-audit-v1.json",
+  "sourceSha256": "e0db6e9e53a1ddd209fcd7bd38c978a5f382726b9187a40b3209085a7920c447",
+  "chargeDerivation": "[H,n_i]=-u_i A_i in implemented finite charge-shell convention; N_i[a,b]=u_i A_i[a,b]/(E_b-E_a), diagonal fixed to zero by inversion",
+  "probe": "D_x=q_c*a*sum_cell,sum_i (i-3.5)*n_cell,i, with eight sites i=0..7 and local compensating reference at x=0",
+  "assumptions": [
+    "Canonical rotor numbers are assigned physical charge q_c; this is an implementation assumption.",
+    "Neglect screening and image-charge changes to the lever arms; Hamiltonian is the supplied effective rotor model.",
+    "The charge return is local to each cell and its x-directed dipole contribution vanishes.",
+    "No phase-drive transition operator is substituted for the physical charge dipole."
+  ],
+  "records": [
+    {
+      "width": 3,
+      "roots": 8,
+      "gap": 0.18261635038467539,
+      "creatorFirstPoleFraction": 0.999315717466461,
+      "dipoleFirstPoleFraction": 0.1753546009474711,
+      "groundDrivenFidelity": 0.16838116136091758,
+      "staticMomentPerSite": 8.664841431260777,
+      "slopePerSite": 119.79866611008431
+    },
+    {
+      "width": 4,
+      "roots": 8,
+      "gap": 0.18261561039257224,
+      "creatorFirstPoleFraction": 0.9993201863641532,
+      "dipoleFirstPoleFraction": 0.17536202234022408,
+      "groundDrivenFidelity": 0.16838210116962027,
+      "staticMomentPerSite": 8.664920225284517,
+      "slopePerSite": 119.80262428363675
+    }
+  ],
+  "rootSensitivity": [
+    {
+      "roots": 4,
+      "gap": 0.1823572545084371,
+      "firstPoleFraction": 0.9271992887530187,
+      "staticPerSite": 3.6275642058412463,
+      "slopePerSite": 105.9955327927676
+    },
+    {
+      "roots": 6,
+      "gap": 0.18239553124248964,
+      "firstPoleFraction": 0.7308382722667696,
+      "staticPerSite": 3.7873876452307305,
+      "slopePerSite": 100.93886081388888
+    },
+    {
+      "roots": 8,
+      "gap": 0.18261635038467539,
+      "firstPoleFraction": 0.1753546009474711,
+      "staticPerSite": 8.664841431260777,
+      "slopePerSite": 119.79866611008431
+    }
+  ],
+  "conclusion": "The chosen physical-charge dipole does not reproduce O in the eight-root projected model. Dipole response is not converged in retained local roots even though the first gap is stable.",
+  "nextTest": "Compute physical charge operators with more local roots or bound omitted charge spectral weight; perform electrostatic source/contact matching before physical susceptibility claims."
+}
