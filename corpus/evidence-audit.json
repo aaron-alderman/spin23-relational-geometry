@@ -1,0 +1,104 @@
+{
+  "protocol": "material-history-evidence-audit/1",
+  "scope": "Source-reported specimen identities and a visually checked numerical transcription. No new sampling, SEM analysis or independent validation of the original quantification.",
+  "specimens": [
+    {
+      "id": "S-LAUER-FAMILY",
+      "label": "Reported Lauer sample family",
+      "reportedIdentity": "Reported Khufu inner-casing material; exact chip and surface must be resolved separately for each study.",
+      "boundary": "A shared name is not proof of identical sampling, preparation or measurement location.",
+      "evidenceRefs": [
+        "external:audit-barsoum",
+        "external:audit-jana",
+        "external:audit-harrell"
+      ]
+    },
+    {
+      "id": "S-LAUER-B2006",
+      "label": "Barsoum 2006 Lauer specimen",
+      "reportedIdentity": "Table I identifies one inner-casing slab, supplied by Davidovits.",
+      "boundary": "No co-registered surface identity with the later analytical pieces is established in this audit.",
+      "evidenceRefs": [
+        "external:audit-barsoum"
+      ]
+    },
+    {
+      "id": "S-LAUER-H1993",
+      "label": "Harrell thin-section material reproduced in Figure 15",
+      "reportedIdentity": "Jana Figure 15 attributes its thin-section image to Harrell and the earlier study.",
+      "boundary": "The reproduced inset analyses are inherited evidence, not five new independent Jana experiments.",
+      "evidenceRefs": [
+        "external:audit-jana",
+        "external:audit-harrell"
+      ]
+    },
+    {
+      "id": "S-LAUER-J2007",
+      "label": "Jana 2007 analytical pieces",
+      "reportedIdentity": "Jana distinguishes Harrell and Campbell pieces; original coating was absent from those pieces.",
+      "boundary": "Preparation history and spatial correspondence must be retained when comparing the reported observations.",
+      "evidenceRefs": [
+        "external:audit-jana"
+      ]
+    }
+  ],
+  "measurements": [
+    {
+      "id": "M-LAUER-COAT1",
+      "specimen": "S-LAUER-H1993",
+      "region": "Coating, printed column 1",
+      "CaAtPercent": "55.60",
+      "PAtPercent": "40.37"
+    },
+    {
+      "id": "M-LAUER-COAT2",
+      "specimen": "S-LAUER-H1993",
+      "region": "Coating, printed column 2",
+      "CaAtPercent": "58.46",
+      "PAtPercent": "40.83"
+    },
+    {
+      "id": "M-LAUER-COAT3",
+      "specimen": "S-LAUER-H1993",
+      "region": "Coating, printed column 3",
+      "CaAtPercent": "58.10",
+      "PAtPercent": "40.41"
+    },
+    {
+      "id": "M-LAUER-NEAR",
+      "specimen": "S-LAUER-H1993",
+      "region": "Coating-adjacent limestone inset",
+      "CaAtPercent": "95.22",
+      "PAtPercent": "3.21"
+    },
+    {
+      "id": "M-LAUER-INTERIOR",
+      "specimen": "S-LAUER-H1993",
+      "region": "Interior limestone inset",
+      "CaAtPercent": "98.03",
+      "PAtPercent": "0.21"
+    }
+  ],
+  "measurementContext": {
+    "evidenceRefs": [
+      "external:audit-jana"
+    ],
+    "locator": "Figure 15; printed proceedings page 255; PDF page 49, one-based",
+    "attribution": "Figure reproduces earlier Harrell material; preserve the source's attribution.",
+    "method": "SEM–EDS inset values as labelled, atomic percent; Ca and P only are transcribed",
+    "visualCheck": "Downloaded primary PDF rendered locally; labels, units, decimal places and inset mapping visually inspected on 29 October 2026.",
+    "reportedAnalyticalUncertainty": null,
+    "detectionLimit": null,
+    "exactInsetDepthCoordinatesMm": null,
+    "allElementsTranscribed": false,
+    "independentReplicateDesignEstablished": false,
+    "boundary": "Do not renormalize Ca+P to 100%, convert atomic percent into bulk mass percent, fit a depth gradient, infer chronology, or compute significance from these five printed entries.",
+    "units": "atomic-percent"
+  },
+  "sourceIdentity": {
+    "url": "https://www.cmc-concrete.com/_files/ugd/df6185_e52af1375c3c4b878f0278b1817be426.pdf",
+    "retainedPublicPdf": false,
+    "note": "The primary PDF and a local rendering were used for inspection; neither PDF nor figure is included in this publication.",
+    "sha256": "236f1df502adaeb89dbcb0a85626da731adb4df2707d0ae106304dd9709d67c5"
+  }
+}

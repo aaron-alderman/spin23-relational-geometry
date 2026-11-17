@@ -1,0 +1,1105 @@
+{
+  "protocol": "material-history-construction-system/1",
+  "date": "2026-10-30",
+  "scope": "Desk synthesis and reproducible conditional models across nine work packages. No new excavation, specimen analysis, DFT run, certified building design, supplier quote or lifecycle product assessment.",
+  "components": [
+    {
+      "id": "K01",
+      "label": "Core masonry",
+      "summary": "Khufu core: distinguish quarried bodies, bedrock contribution, voids and interblock material.",
+      "category": "Stone bodies",
+      "material": "Predominantly local limestone; geological fabric must be assessed per specimen.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "No block-by-block census or measured mortar fraction.",
+        "Do not allocate the whole geometric envelope to manufactured stone."
+      ],
+      "evidenceRefs": [
+        "external:worked-lehner",
+        "external:worked-campbell"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K02",
+      "label": "Fine limestone casing",
+      "summary": "Surviving casing and reconstructed original envelope are different objects.",
+      "category": "Stone bodies",
+      "material": "Fine limestone associated with the Tura supply route.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "A documentary destination is not an individual block identification.",
+        "Casing thickness and surviving proportion need registered geometry."
+      ],
+      "evidenceRefs": [
+        "external:worked-lehner",
+        "external:system-merer",
+        "external:system-survey"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K03",
+      "label": "Granite chamber components",
+      "summary": "Separate chamber walls, roof members, other granite elements and quarry comparators.",
+      "category": "Stone bodies",
+      "material": "Granite, with mineral modes and fracture fabric still specimen-specific.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "No single granite composition represents all components.",
+        "Aswan quarry marks do not establish treatment of a named chamber face."
+      ],
+      "evidenceRefs": [
+        "external:worked-lehner",
+        "W01",
+        "W06"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H02",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K04",
+      "label": "Mortar and joints",
+      "summary": "Joint composition, preparation and volume require their own observations.",
+      "category": "Interfaces",
+      "material": "Interblock binder and fillers; not automatically the surrounding stone body.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "Avoid double-counting joints in a solid-volume estimate.",
+        "Separate original joint material from repairs and contamination."
+      ],
+      "evidenceRefs": [
+        "W01",
+        "W05"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05",
+        "W16",
+        "W17"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K05",
+      "label": "Foundation and bedrock",
+      "summary": "Record the boundary between natural bedrock, cut surfaces and placed masonry.",
+      "category": "Substrate",
+      "material": "In situ geological substrate and worked platform.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "Foundation relief must be deducted from any imported-volume account.",
+        "Surface geometry does not uniquely identify the cutting process."
+      ],
+      "evidenceRefs": [
+        "external:system-survey",
+        "external:system-field"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K06",
+      "label": "Repairs and exposed surfaces",
+      "summary": "Attach every analyzed surface to its exposure, collection and treatment history.",
+      "category": "Later intervention",
+      "material": "Later material, alteration products and conservation treatments.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "Unrecorded treatment can confound an original-manufacture inference.",
+        "Surface signals need depth, fabric and chronology."
+      ],
+      "evidenceRefs": [
+        "W05",
+        "W11"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "K07",
+      "label": "Internal voids and passages",
+      "summary": "Geometric reconstruction and historical function carry different evidence.",
+      "category": "Internal structure",
+      "material": "Air spaces and enclosing material, with detector-dependent resolution.",
+      "geometry": "Component quantity unmeasured in this increment; geometric envelope is a separate calculation.",
+      "constraints": [
+        "Void volume is not extra construction material.",
+        "Muon data do not directly identify a binder or construction date."
+      ],
+      "evidenceRefs": [
+        "external:pyramid-corridor",
+        "W12"
+      ],
+      "related": [
+        "W07",
+        "W08",
+        "H01",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "status": "Component-scoped source assessment"
+    },
+    {
+      "id": "BLD-PERTH-180",
+      "label": "Perth 180 m² dwelling anchor",
+      "summary": "A separate modern building comparison with fixed area, performance, site and service-life assumptions.",
+      "category": "Modern building anchor",
+      "material": "Complete foundations, walls, roof, envelope, finishes and services; candidate material choice must identify the exact assembly.",
+      "geometry": "180 m² single storey; 15 × 12 m chosen rectangle on a level serviced block. Detailed takeoff and exclusions are in W14.",
+      "constraints": [
+        "Maintain equivalent required performance and a declared 50-year comparison life.",
+        "Authored costs and emissions are scenarios, not quotes, certified performance or verified abatement."
+      ],
+      "evidenceRefs": [
+        "external:system-lca",
+        "external:system-wa-building",
+        "external:system-wa-plumbing",
+        "external:system-wa-electrical",
+        "external:system-perth-climate"
+      ],
+      "related": [
+        "W14",
+        "DCS05"
+      ],
+      "status": "Authored modern comparison anchor"
+    }
+  ],
+  "histories": [
+    {
+      "id": "H01",
+      "label": "Quarried bodies with mechanical working",
+      "summary": "Baseline chain; individual shaping and placement methods still need component-specific records.",
+      "category": "Baseline with multiple source constraints",
+      "sequence": [
+        "Identify and extract source rock",
+        "Rough-shape and finish using specified percussion or abrasive operations",
+        "Transport with a declared route and payload",
+        "Place, joint and finish",
+        "Track exposure and subsequent intervention"
+      ],
+      "predictions": [
+        "Source-compatible geological fabric inside bodies",
+        "Extraction waste and tool/abrasive traces appropriate to the operation",
+        "Transport and site infrastructure consistent with demand"
+      ],
+      "qualifications": [
+        "Feasible mechanical action does not identify the exact ancient tool or rate.",
+        "Documentary transport evidence does not resolve every shaping or placement detail."
+      ],
+      "evidenceRefs": [
+        "external:worked-campbell",
+        "external:system-merer",
+        "external:system-drilling",
+        "external:system-field"
+      ],
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "related": [
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W15"
+      ],
+      "status": "Component-bounded candidate history",
+      "claimVersion": "1",
+      "authority": "Comparison proposal; no automatic historical attribution",
+      "counterevidence": [],
+      "dependencyMeaning": "Component context records are required to scope the comparison; listing them does not assert one process treated every component.",
+      "challenges": [
+        "Explain the same located observation and meet the declared resource and chronology constraints."
+      ],
+      "strongestRival": "Chemical assistance or specified casting, where it explains additional component-scoped observations.",
+      "retirementRule": "Narrow or retire the specified component/process claim if a securely matched observation defeats a frozen required prediction; do not redefine the component assignment after the result.",
+      "provenance": {
+        "authored": "2026-10-30",
+        "sourceRecords": [
+          "external:worked-campbell",
+          "external:system-merer",
+          "external:system-drilling",
+          "external:system-field"
+        ],
+        "scope": "Source-scoped desk synthesis, not a newly observed construction event."
+      }
+    },
+    {
+      "id": "H02",
+      "label": "Quarried bodies with chemical assistance",
+      "summary": "Adds a specified treatment to a mechanically worked stone; requires a useful incremental effect.",
+      "category": "Modern feasibility; ancient attribution open",
+      "sequence": [
+        "Follow H01 material identification and extraction",
+        "Supply and apply a specified reagent and thermal regime",
+        "Recover or dispose of solution and reaction products",
+        "Remove weakened or altered material and verify final strength",
+        "Transport, place and preserve the treated body"
+      ],
+      "predictions": [
+        "Treatment-related phase or element changes spatially joined to working surfaces",
+        "Accepted removal improvement over matched heat/flow/mechanical controls",
+        "Reagent, energy and waste inventory compatible with the process"
+      ],
+      "qualifications": [
+        "Modern hydrothermal evidence has a different regime from proposed ancient use.",
+        "Weathering and later treatments can mimic some chemical signatures."
+      ],
+      "evidenceRefs": [
+        "W06",
+        "W03",
+        "W05"
+      ],
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "related": [
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W15"
+      ],
+      "status": "Component-bounded candidate history",
+      "claimVersion": "1",
+      "authority": "Comparison proposal; no automatic historical attribution",
+      "counterevidence": [],
+      "dependencyMeaning": "Component context records are required to scope the comparison; listing them does not assert one process treated every component.",
+      "challenges": [
+        "Explain the same located observation and meet the declared resource and chronology constraints."
+      ],
+      "strongestRival": "Mechanical/thermal baseline plus later alteration; matched controls must show the treatment adds useful output.",
+      "retirementRule": "Narrow or retire the specified component/process claim if a securely matched observation defeats a frozen required prediction; do not redefine the component assignment after the result.",
+      "provenance": {
+        "authored": "2026-10-30",
+        "sourceRecords": [
+          "W06",
+          "W03",
+          "W05"
+        ],
+        "scope": "Source-scoped desk synthesis, not a newly observed construction event."
+      }
+    },
+    {
+      "id": "H03",
+      "label": "Reconstituted material for specified bodies",
+      "summary": "Requires a demonstrated binder and aggregate history for the particular component.",
+      "category": "Contested component-specific inference",
+      "sequence": [
+        "Obtain and process aggregate and binder feedstocks",
+        "Mix under a declared recipe and water balance",
+        "Place in moulds or supported forms",
+        "Cure and achieve the required geometry and strength",
+        "Account for ageing, repairs and surviving fabric"
+      ],
+      "predictions": [
+        "Binder phase continuous in a formation-related relationship to aggregate",
+        "Feedstock preparation, curing and shrinkage consistent with observed geometry",
+        "Production resources and formwork consistent with quantities"
+      ],
+      "qualifications": [
+        "Natural grains do not alone exclude a binder.",
+        "An unusual particle or surface coating does not establish that a whole block was cast."
+      ],
+      "evidenceRefs": [
+        "external:audit-barsoum",
+        "external:audit-jana",
+        "W05"
+      ],
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "related": [
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W15"
+      ],
+      "status": "Component-bounded candidate history",
+      "claimVersion": "1",
+      "authority": "Comparison proposal; no automatic historical attribution",
+      "counterevidence": [
+        "external:worked-campbell",
+        "external:audit-jana"
+      ],
+      "dependencyMeaning": "Component context records are required to scope the comparison; listing them does not assert one process treated every component.",
+      "challenges": [
+        "Explain the same located observation and meet the declared resource and chronology constraints."
+      ],
+      "strongestRival": "Natural geological body with joint binder or later surface alteration, tested on the same region.",
+      "retirementRule": "Narrow or retire the specified component/process claim if a securely matched observation defeats a frozen required prediction; do not redefine the component assignment after the result.",
+      "provenance": {
+        "authored": "2026-10-30",
+        "sourceRecords": [
+          "external:audit-barsoum",
+          "external:audit-jana",
+          "W05"
+        ],
+        "scope": "Source-scoped desk synthesis, not a newly observed construction event."
+      }
+    },
+    {
+      "id": "H04",
+      "label": "Mixed methods across components",
+      "summary": "A joint history must state which operation applies to which component and when.",
+      "category": "Explicit joint model; no universal mixture claim",
+      "sequence": [
+        "Assign H01–H03 only to named component subsets",
+        "Record shared transport, preparation and placement resources",
+        "Model interfaces between differently produced materials",
+        "Freeze those assignments before comparison",
+        "Test shared predictions and component-specific failures"
+      ],
+      "predictions": [
+        "Different components may preserve different formation fabrics",
+        "Interface and sequence evidence consistent with the declared assignments"
+      ],
+      "qualifications": [
+        "Allowing arbitrary mixtures after seeing results makes the explanation unfalsifiable.",
+        "An assignment must inherit every dependency and failure condition of its subhistory."
+      ],
+      "evidenceRefs": [
+        "W01",
+        "W03",
+        "W05"
+      ],
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "related": [
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W15"
+      ],
+      "status": "Component-bounded candidate history",
+      "claimVersion": "1",
+      "authority": "Comparison proposal; no automatic historical attribution",
+      "counterevidence": [],
+      "dependencyMeaning": "Component context records are required to scope the comparison; listing them does not assert one process treated every component.",
+      "challenges": [
+        "Explain the same located observation and meet the declared resource and chronology constraints."
+      ],
+      "strongestRival": "A simpler fixed component assignment with equal predictive performance.",
+      "retirementRule": "Narrow or retire the specified component/process claim if a securely matched observation defeats a frozen required prediction; do not redefine the component assignment after the result.",
+      "provenance": {
+        "authored": "2026-10-30",
+        "sourceRecords": [
+          "W01",
+          "W03",
+          "W05"
+        ],
+        "scope": "Source-scoped desk synthesis, not a newly observed construction event."
+      }
+    },
+    {
+      "id": "H05",
+      "label": "Later alteration superposed on construction",
+      "summary": "Explains some present signatures without replacing the original construction history.",
+      "category": "Post-construction layer; compatible with other histories",
+      "sequence": [
+        "Choose a construction history for the stone body",
+        "Apply specified exposure, biological, repair or conservation events",
+        "Model transport and precipitation with depth and access",
+        "Predict present chemistry and surface fabric",
+        "Compare dated or stratigraphically ordered layers"
+      ],
+      "predictions": [
+        "Edge-, crack- or exposure-associated overprint",
+        "Layer relationships compatible with post-construction change"
+      ],
+      "qualifications": [
+        "An overprint explanation must account for the same located observation.",
+        "It cannot substitute for explaining original quarrying, transport or assembly."
+      ],
+      "evidenceRefs": [
+        "W05",
+        "external:system-dating"
+      ],
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07"
+      ],
+      "related": [
+        "W08",
+        "W09",
+        "W10",
+        "W11",
+        "W15"
+      ],
+      "status": "Component-bounded candidate history",
+      "claimVersion": "1",
+      "authority": "Comparison proposal; no automatic historical attribution",
+      "counterevidence": [],
+      "dependencyMeaning": "Component context records are required to scope the comparison; listing them does not assert one process treated every component.",
+      "challenges": [
+        "Explain the same located observation and meet the declared resource and chronology constraints."
+      ],
+      "strongestRival": "An original formation-related phase that explains the same spatial fabric and chronology.",
+      "retirementRule": "Narrow or retire the specified component/process claim if a securely matched observation defeats a frozen required prediction; do not redefine the component assignment after the result.",
+      "provenance": {
+        "authored": "2026-10-30",
+        "sourceRecords": [
+          "W05",
+          "external:system-dating"
+        ],
+        "scope": "Source-scoped desk synthesis, not a newly observed construction event."
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DCS01",
+      "label": "Which history fits this component?",
+      "summary": "Same-region phase, fabric, custody and chronological association",
+      "category": "Historical comparison",
+      "dependencies": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05"
+      ],
+      "related": [
+        "W05",
+        "W08",
+        "W11"
+      ],
+      "requiredEvidence": [
+        "Same-region phase, fabric, custody and chronological association"
+      ],
+      "decisionRule": "A binder or overprint must be tied to the formation event being claimed.",
+      "retirementRule": "Retire a universal claim when a securely identified component contradicts its universal prediction.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W05",
+        "W08",
+        "W11"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    },
+    {
+      "id": "DCS02",
+      "label": "Does chemistry improve accepted removal?",
+      "summary": "Matched mass partition, work, energy, profile and retained strength",
+      "category": "Process performance",
+      "dependencies": [
+        "H01",
+        "H02"
+      ],
+      "related": [
+        "W04",
+        "W06",
+        "W13"
+      ],
+      "requiredEvidence": [
+        "Matched mass partition, work, energy, profile and retained strength"
+      ],
+      "decisionRule": "Improvement must survive matched controls and uncertainty.",
+      "retirementRule": "Stop scaling if accepted output or resource demand fails the frozen comparator.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W04",
+        "W06",
+        "W13"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    },
+    {
+      "id": "DCS03",
+      "label": "Can the construction chain meet demand?",
+      "summary": "Component quantities and stage/resource capacities with seasonal availability",
+      "category": "Production feasibility",
+      "dependencies": [
+        "H01",
+        "H02",
+        "H03",
+        "H04"
+      ],
+      "related": [
+        "W07",
+        "W09",
+        "W10"
+      ],
+      "requiredEvidence": [
+        "Component quantities and stage/resource capacities with seasonal availability"
+      ],
+      "decisionRule": "Every required stage and shared resource must meet the demand.",
+      "retirementRule": "Reject the specific schedule when a required capacity bound is violated; do not reject every variant.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W07",
+        "W09",
+        "W10"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    },
+    {
+      "id": "DCS04",
+      "label": "What does the detector actually distinguish?",
+      "summary": "Independent lines of sight and calibration/geometry uncertainty",
+      "category": "Measurement inference",
+      "dependencies": [
+        "K07"
+      ],
+      "related": [
+        "W12"
+      ],
+      "requiredEvidence": [
+        "Independent lines of sight and calibration/geometry uncertainty"
+      ],
+      "decisionRule": "Separate a constrained geometry from unresolved density and historical function.",
+      "retirementRule": "Stop interpreting a feature beyond the detector response or identifiability boundary.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W12"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    },
+    {
+      "id": "DCS05",
+      "label": "Which Perth building system is worth testing?",
+      "summary": "Comparable compliant assembly quotes, product declarations and service-life evidence",
+      "category": "Modern engineering",
+      "dependencies": [
+        "BLD-PERTH-180"
+      ],
+      "related": [
+        "W14",
+        "W18"
+      ],
+      "requiredEvidence": [
+        "Comparable compliant assembly quotes, product declarations and service-life evidence"
+      ],
+      "decisionRule": "Compare the same area, performance, scope, service life and price basis.",
+      "retirementRule": "Do not advance a candidate with unresolved essential performance or unclosed lifecycle inventory.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W14"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    },
+    {
+      "id": "DCS06",
+      "label": "Which evidence should we collect next?",
+      "summary": "Decision-specific threshold and attainable observation",
+      "category": "Research selection",
+      "dependencies": [
+        "DCS01",
+        "DCS02",
+        "DCS03",
+        "DCS04",
+        "DCS05"
+      ],
+      "related": [
+        "W15"
+      ],
+      "requiredEvidence": [
+        "Decision-specific threshold and attainable observation"
+      ],
+      "decisionRule": "Rank by ability to distinguish the active alternatives, effort and access; no invented numerical probabilities.",
+      "retirementRule": "Stop when plausible outcomes no longer change the decision, or access/precision cannot distinguish the alternatives.",
+      "status": "Open empirical decision",
+      "evidenceRefs": [
+        "W15"
+      ],
+      "qualifications": [
+        "Readiness is not truth. Missing records remain unknown, not a failed scientific claim.",
+        "A cited source reused by several records remains one source family."
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "id": "OBS-SURVEY",
+      "label": "Casing-base side estimates",
+      "kind": "reported-survey-transcription",
+      "evidenceRefs": [
+        "external:system-survey"
+      ],
+      "locator": "AERAGRAM 16-2, printed p.11, Table 1; PDF page 11",
+      "unit": "m",
+      "rows": [
+        [
+          "North",
+          "230.256",
+          "230.329",
+          "230.402"
+        ],
+        [
+          "East",
+          "230.295",
+          "230.334",
+          "230.373"
+        ],
+        [
+          "South",
+          "230.329",
+          "230.384",
+          "230.439"
+        ],
+        [
+          "West",
+          "230.378",
+          "230.407",
+          "230.436"
+        ]
+      ],
+      "printedAverage": "230.363",
+      "boundary": "Printed minimum/mean/maximum estimates are not four independent measurement replicates or a reconstructed covariance matrix."
+    },
+    {
+      "id": "OBS-MERER",
+      "label": "Merer transport entries",
+      "kind": "located-document-assessment",
+      "evidenceRefs": [
+        "external:system-merer"
+      ],
+      "locator": "Papyrus B, Section B I, days 25–30; English annex printed p.150",
+      "summary": "Entries describe stone loading/hauling at Tura South and travel towards Akhet-Khufu through named stops. No payload mass or whole-project production rate is transcribed."
+    },
+    {
+      "id": "OBS-FRICTION",
+      "label": "Wet-sand laboratory comparison",
+      "kind": "located-experiment-assessment",
+      "evidenceRefs": [
+        "external:system-friction"
+      ],
+      "locator": "PRL 112,175502, p.175502-3, Figures 5–6 discussion",
+      "summary": "Reported dynamic-friction reductions differ across tested sands: 10%, 26% and 40%. Not a granite-removal rate or an ancient haulage measurement."
+    },
+    {
+      "id": "OBS-CORRIDOR",
+      "label": "Corridor detector inference",
+      "kind": "located-publication-assessment",
+      "evidenceRefs": [
+        "external:pyramid-corridor"
+      ],
+      "locator": "Procureur et al. 2023 abstract and indexed figure captions",
+      "summary": "Muon observations and simulation constrain a corridor-shaped structure. No raw detector counts are fitted by this corpus."
+    }
+  ],
+  "geometry": {
+    "baseM": 230.363,
+    "heightM": 146.6,
+    "heightStatus": "Chosen approximate original-height benchmark, not a new survey result",
+    "baseStatus": "Printed mean of source casing-side estimates; square-base reduction is an assumption",
+    "innerLinearScales": [
+      0.98,
+      0.99
+    ],
+    "densityKgPerM3": 2400
+  },
+  "resources": {
+    "batchVolumeM3": 100,
+    "stageCapacitiesM3PerDay": {
+      "Quarry/preparation": 8,
+      "Transport": 6,
+      "Placement/release": 5
+    },
+    "workDaysPerYear": 250,
+    "availability": 0.7,
+    "reagentKgPerM3": [
+      0,
+      10,
+      100
+    ],
+    "waterM3PerM3": [
+      0.1,
+      1,
+      10
+    ],
+    "heatKWhPerM3": [
+      0,
+      100,
+      1000
+    ],
+    "scope": "Assigned sensitivity inputs, not reconstructed Egyptian rates or resource use",
+    "targetYears": [
+      20,
+      30,
+      40
+    ]
+  },
+  "chronology": {
+    "constructionYear": -2550,
+    "inbuiltAgesYears": [
+      0,
+      50,
+      200
+    ],
+    "repairYear": -2000,
+    "scope": "Synthetic event-time illustration in astronomical year numbering, not a radiocarbon calibration or pyramid date estimate"
+  },
+  "inverse": {
+    "paths": [
+      {
+        "label": "Uniform baseline",
+        "segments": [
+          [
+            100,
+            2.4
+          ]
+        ]
+      },
+      {
+        "label": "Short void plus denser solid",
+        "segments": [
+          [
+            10,
+            0
+          ],
+          [
+            90,
+            2.6666666666666665
+          ]
+        ]
+      },
+      {
+        "label": "Longer void plus denser solid",
+        "segments": [
+          [
+            20,
+            0
+          ],
+          [
+            80,
+            3
+          ]
+        ]
+      }
+    ],
+    "unit": "segments: m and g/cm³; areal density: g/cm²",
+    "scope": "Synthetic line-integral nonuniqueness only; no muon spectrum or count prediction"
+  },
+  "surface": {
+    "referenceK": 373.15,
+    "targetK": 473.15,
+    "activationKJPerMol": 72,
+    "referenceReactionMPerS": 1e-07,
+    "transportMPerS": [
+      1e-06,
+      1e-08
+    ],
+    "drivingConcentrationMolPerM3": 1,
+    "quartzMolarVolumeM3PerMol": 2.267332075471698e-05,
+    "scope": "Reported apparent activation energy plus chosen transport and reference-rate coefficients; not an elementary bond barrier, DFT prediction or calibrated granite model"
+  },
+  "housing": {
+    "floorAreaM2": 180,
+    "lengthM": 15,
+    "widthM": 12,
+    "wallHeightM": 2.7,
+    "openingFraction": 0.2,
+    "internalPartitionM": 70,
+    "internalDoorAreaM2": 16,
+    "slabThicknessM": 0.1,
+    "eaveM": 0.6,
+    "roofPitchDegrees": 25,
+    "roofWasteFraction": 0.1,
+    "wallSolidThicknessM": 0.2,
+    "serviceLifeYears": 50,
+    "markup": 0.15,
+    "contingency": 0.1,
+    "gst": 0.1,
+    "costBasis": "Authored direct-package allowances in AUD excluding GST; no current market quotes. Markup, contingency and GST are applied once in the displayed order. Land, finance, demolition, abnormal ground, subdivision and major off-site services excluded.",
+    "packages": [
+      [
+        "Design, engineering and approvals",
+        18000
+      ],
+      [
+        "Site setup and ordinary earthworks",
+        20000
+      ],
+      [
+        "Slab and foundations allowance",
+        42000
+      ],
+      [
+        "External wall assembly",
+        45000
+      ],
+      [
+        "Internal partitions and linings",
+        20000
+      ],
+      [
+        "Roof structure, cover and drainage",
+        40000
+      ],
+      [
+        "Windows and external doors",
+        25000
+      ],
+      [
+        "Plumbing and drainage",
+        22000
+      ],
+      [
+        "Electrical and communications",
+        18000
+      ],
+      [
+        "Heating, cooling and hot water",
+        18000
+      ],
+      [
+        "Kitchen and joinery",
+        22000
+      ],
+      [
+        "Wet areas and waterproofing",
+        18000
+      ],
+      [
+        "Floor finishes",
+        14000
+      ],
+      [
+        "Painting and completion",
+        12000
+      ],
+      [
+        "Insulation and airtightness work",
+        8000
+      ],
+      [
+        "Ordinary site service connections",
+        10000
+      ],
+      [
+        "External paving and basic works",
+        12000
+      ],
+      [
+        "Site supervision and preliminaries",
+        12000
+      ]
+    ],
+    "costMultipliers": [
+      0.8,
+      1,
+      1.2
+    ],
+    "wallSavingsFractions": [
+      0,
+      0.2,
+      0.5
+    ],
+    "candidateAdditionalDirectAUD": 10000,
+    "carbon": {
+      "functionalUnit": "Same 180 m² dwelling performance over 50 years; illustrative whole-life comparison boundary",
+      "wallAreaBasis": "Net external wall area; both candidate and baseline refer to complete equivalent assemblies",
+      "baselineWallKgCO2ePerM2": 100,
+      "candidateWallKgCO2ePerM2": 60,
+      "extraTreatmentKgCO2e": 1000,
+      "annualOperationalPenaltyKgCO2e": [
+        0,
+        100,
+        300
+      ],
+      "replacementPenaltyKgCO2e": 1000,
+      "scope": "All emission factors and penalties are chosen scenarios, not EPD data, Australian grid factors, or verified abatement"
+    },
+    "shapeAspectRatios": [
+      1,
+      1.25,
+      2.2222222222222223
+    ]
+  },
+  "sourceDependence": [
+    {
+      "family": "Harrell-derived Lauer material",
+      "members": [
+        "external:audit-harrell",
+        "external:audit-jana"
+      ],
+      "rule": "Jana reproduces attributed earlier data; do not count the transcription as independent replication."
+    },
+    {
+      "family": "Hydrothermal research programme",
+      "members": [
+        "external:removal-hillson",
+        "external:removal-beentjes"
+      ],
+      "rule": "Shared authors, material and research context; independent outcomes require trial/specimen-level audit."
+    }
+  ],
+  "sourceCapture": {
+    "surveyPdfSha256": "6d36a54e3a6c134f308efe3b7c47664d866c9eb25b0bc81d107ffe156eac4389",
+    "surveyTableVisuallyChecked": true,
+    "primaryPdfsPublished": false
+  },
+  "decisionScenario": {
+    "states": [
+      "State A",
+      "State B"
+    ],
+    "actions": [
+      {
+        "label": "Action A",
+        "costs": [
+          100,
+          140
+        ]
+      },
+      {
+        "label": "Action B",
+        "costs": [
+          120,
+          110
+        ]
+      }
+    ],
+    "scope": "Assigned arbitrary cost units; no probabilities or monetary value of information"
+  },
+  "workPackages": [
+    {
+      "id": "WP01",
+      "study": "W07",
+      "label": "Component and geometry model",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP02",
+      "study": "W08",
+      "label": "Complete construction histories",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP03",
+      "study": "W09",
+      "label": "Conventional baseline",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP04",
+      "study": "W10",
+      "label": "Resource and production closure",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP05",
+      "study": "W11",
+      "label": "Chronology and alteration",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP06",
+      "study": "W12",
+      "label": "Observation and inverse inference",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP07",
+      "study": "W13",
+      "label": "Cross-scale physical explanation",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP08",
+      "study": "W14",
+      "label": "Modern engineering alternatives",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    },
+    {
+      "id": "WP09",
+      "study": "W15",
+      "label": "Evidence and decision machinery",
+      "delivery": "Desk assessment and declared model delivered; empirical returns remain open as stated in the study."
+    }
+  ]
+}
