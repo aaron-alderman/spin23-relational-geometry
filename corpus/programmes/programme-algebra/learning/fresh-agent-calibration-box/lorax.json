@@ -1,0 +1,127 @@
+{
+  "id": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+  "question": "How many independent, identical, successfully prepared trials give at least a 99% chance of a 122.06 keV photon emitted within 12 ns and eventually truly registered in the LORAX full-energy peak, at nominal calibration and throughout the declared endpoint box?",
+  "source": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+  "targetType": "minimum-trials-across-calibration-box",
+  "facts": {
+    "preparation": "One ordinary electronically occupied iron-57 nucleus successfully prepared at time zero in the 136.47 keV (5/2-) level, with no later driving or feeding. Calibration transfer uses an orientation-averaged emission ensemble with matched source placement, attenuation, and live acquisition.",
+    "event": "Emission of the 122.06 keV photon to the 14.4 keV level within 12 ns of preparation, followed by eventual full-energy-peak registration of that same photon in matched live acquisition.",
+    "eventType": "specific-absorbing-exit",
+    "regime": "unperturbed-intrinsic-decay",
+    "timeSeconds": 1.2e-8,
+    "survivalModel": "constant-total-hazard",
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 1.2594727706960653e-8,
+      "reportedUncertaintySeconds": 2.4525815695112383e-11,
+      "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+      "measuredPopulationHalfLife": {
+        "nanoseconds": 8.73,
+        "uncertaintyNanoseconds": 0.017,
+        "location": "Bergmann, Javora and Smolyanskiy (2025), section 4, equation (6), 136.5 keV level",
+        "nominalFitLowerBoundNanoseconds": 10,
+        "conversion": "The mean lifetime and its uncertainty equal the respective population half-life quantities divided by ln(2)."
+      }
+    },
+    "requestedBranch": "gamma-122.06-keV",
+    "branching": {
+      "type": "constant-competing-absorbing-exits",
+      "relativeRates": {
+        "gamma-122.06-keV": 100,
+        "internal-conversion-to-14.4-keV": 2.36,
+        "gamma-136.47-keV": 12.53,
+        "internal-conversion-to-ground": 1.863211
+      },
+      "source": "https://www.bipm.org/documents/d/guest/co-57_report",
+      "evaluatedPhotonWeights": {
+        "gamma122": 100,
+        "gamma136": 12.53,
+        "uncertaintyGamma136": 0.18,
+        "location": "DDEP comments, Table 5, Adopted column. The relative scale fixes gamma(2,1) at 100."
+      },
+      "evaluatedTotalInternalConversionCoefficients": {
+        "gamma122": 0.0236,
+        "uncertaintyGamma122": 0.0004,
+        "gamma136": 0.1487,
+        "uncertaintyGamma136": 0.0021,
+        "location": "DDEP evaluated table, section 2.2, gamma(2,1) and gamma(2,0), alpha_T column.",
+        "definition": "Total internal conversion rate divided by gamma emission rate for the same nuclear transition."
+      }
+    },
+    "lineEnergyKeV": 122.06,
+    "detector": {
+      "name": "LORAX",
+      "type": "absolute-peak-acceptance",
+      "branch": "gamma-122.06-keV",
+      "lineEnergyKeV": 122.06,
+      "geometry": "Collins et al. (2015) LORAX geometry, 1 g aqueous standard in a 2 mL ISO ampoule at 16.5 cm perpendicular distance from the detector window, with water-normalized attenuation.",
+      "probability": 0.00388,
+      "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+      "publishedCalibration": {
+        "radionuclide": "cobalt-57",
+        "location": "Collins et al. (2015), section 2.3.1, equation (1) and Table 3, 122.06 keV row",
+        "percent": 0.388,
+        "reportedUncertaintyPercentagePoints": 0.003,
+        "articleText": "https://www.academia.edu/93004558/Precise_measurements_of_the_absolute_%CE%B3_ray_emission_probabilities_of_223_Ra_and_decay_progeny_in_equilibrium",
+        "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf"
+      },
+      "eventSelection": "emission-window-eventual-peak"
+    },
+    "trials": {
+      "type": "independent-identical-bernoulli",
+      "targetProbability": 0.99
+    },
+    "calibrationBox": {
+      "type": "shared-calibration-endpoint-box",
+      "meanLifetimeSeconds": [
+        1.257020189126554e-8,
+        1.2619253522655764e-8
+      ],
+      "detectorProbability": [
+        0.00385,
+        0.00391
+      ],
+      "relativeRates": {
+        "gamma-122.06-keV": [
+          100,
+          100
+        ],
+        "internal-conversion-to-14.4-keV": [
+          2.32,
+          2.4
+        ],
+        "gamma-136.47-keV": [
+          12.35,
+          12.71
+        ],
+        "internal-conversion-to-ground": [
+          1.81051,
+          1.916668
+        ]
+      },
+      "reportedInputEndpoints": {
+        "populationHalfLifeNanoseconds": [
+          8.713,
+          8.747
+        ],
+        "relativeGamma136Weight": [
+          12.35,
+          12.71
+        ],
+        "totalInternalConversionCoefficient122": [
+          0.0232,
+          0.024
+        ],
+        "totalInternalConversionCoefficient136": [
+          0.1466,
+          0.1508
+        ],
+        "fullEnergyPeakEfficiencyPercent": [
+          0.385,
+          0.391
+        ]
+      },
+      "source": "Central values plus or minus each reported uncertainty in the Bergmann et al. equation (6), DDEP Comments Table 5 and evaluated section 2.2, and Collins et al. Table 3 inputs above. The bounds on conversion weights are the products of the corresponding photon-weight and conversion-coefficient endpoints. This is a declared sensitivity range for a calibration fixed across the run."
+    }
+  }
+}

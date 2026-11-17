@@ -1,0 +1,45 @@
+{
+  "id": "AZ-127-calcium/resolve-exit-branch",
+  "origin": {
+    "case": "AZ-127-calcium-40-D5/2-quench-250ms",
+    "refusal": "operation-inapplicable",
+    "missing": [
+      "survivalModel"
+    ],
+    "mismatches": [
+      {
+        "key": "survivalModel",
+        "expected": "constant-total-hazard",
+        "received": null
+      },
+      {
+        "key": "regime",
+        "expected": "unperturbed-intrinsic-decay",
+        "received": "854-nm-driven-quench"
+      }
+    ],
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/replay.json",
+        "sha256": "1851a3fd20349b79a5004f1113a340db358da545c56a9b19c00bf1e32ce51f67"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/README.md",
+        "sha256": "f644d07e43d4a02ea3e043ebbc9b384d49a4baaf9ff952ea97dd2bbc9de01570"
+      },
+      {
+        "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+        "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+      }
+    ]
+  },
+  "lesson": "Specify the event before using a survival curve. A return or an unobserved exit can make loss from the prepared state differ from the requested event.",
+  "operation": {
+    "inputType": "finite-window-event-probability",
+    "outputType": "finite-window-branch-probability",
+    "condition": "constant-competing-absorbing-exits",
+    "calculation": "Normalize the complete relative exit rates, then multiply the selected branch share by the probability of any exit in the window."
+  },
+  "limits": "Use a calibrated complete list of mutually exclusive absorbing exits with constant shares in this preparation and regime. For unresolved return, feeding, time-dependent shares, or detector counts, obtain an appropriate model or readout calibration.",
+  "authority": "The calcium refusal motivates the event guard. The branch calculation follows from conditional probability under the stated model; the calcium beam-on rate remains unmeasured in this case."
+}

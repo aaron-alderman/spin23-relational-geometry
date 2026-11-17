@@ -1,0 +1,290 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-qualification-plan.json",
+      "sha256": "746cc5320847304c0f647391611b32fba7c6430bc258ba493730c4277b98b7c1"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-plan.json",
+      "sha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-calibration.json",
+      "sha256": "006d0aea2157213bc48da20a512e556afadc7802b2a71d01dd74a087fbb45ee3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-routes-replay.json",
+      "sha256": "0b1869356bbdbed0ae78ce3c120355aa4c79c02163334979062610800afc40c7"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-thinning-plan.json",
+      "sha256": "138eef0024ca3525c13e133b3651105aff826bd231f3e22d9467c0a343d5a5d6"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-noise-plan.json",
+      "sha256": "43fdaaeb9d4908d5c033f961a36261eb2241122d48ba657061a2b861e6e44c39"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-interleaved-plan.json",
+      "sha256": "b75a6776764a3df6798308760de87f75b37c7991df5761a59050e4c888b875fe"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-injection-plan.json",
+      "sha256": "272aa528fa8fe449eeb060a7eac77f0fa8c2c1ccbcf545feb38ccc8ebf935380"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-shape-plan.json",
+      "sha256": "d4cc068a426b5ab9130eaf0374df791ee9482d4a2462685b074d9a576eaef6ab"
+    }
+  ],
+  "earlierReplicateIndices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "scope": {
+    "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+    "calibration": {
+      "replicateIndex": 0,
+      "file": "ID_466_IQ_1625697294251947.npy",
+      "sha256": "246df987d589d5055df00566cb19717fcca03e58f7318a794ab9316c1061fac1",
+      "rawSamples": 878906,
+      "binnedSamples": 175781
+    },
+    "sampledChain": {
+      "type": "calibrated-two-state-sampled-chain",
+      "context": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+      "source": "corpus/programmes/programme-algebra/learning/return-path-delft-calibration.json",
+      "decoder": "frozen-five-native-sample-IQ-decoder",
+      "periodSeconds": 1.1377777777777777e-05,
+      "lowToHigh": 0.06250368015073897,
+      "highToLow": 0.014963261737205072
+    },
+    "windowSteps": 50,
+    "windowSeconds": 0.0005688888888888889,
+    "strides": [
+      1,
+      2,
+      5,
+      10
+    ],
+    "maximumAbsoluteFrequencyError": 0.01
+  },
+  "held": [
+    {
+      "acquisition": {
+        "replicateIndex": 9,
+        "file": "ID_466_IQ_1625697386717486.npy",
+        "sha256": "79af9bb4d30711b69dd2f6ec3eda4bff86046fe594fa25aa228bf7ae144716d9",
+        "rawSamples": 878906,
+        "binnedSamples": 175781
+      },
+      "comparisons": [
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 0,
+          "stride": 1,
+          "windows": 665,
+          "forecast": 0.7925251407583898,
+          "observed": 0.7804511278195488,
+          "signedFrequencyError": 0.012074012938840917,
+          "withinTolerance": false
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 0,
+          "stride": 1,
+          "windows": 665,
+          "forecast": 0.9603285039174692,
+          "observed": 0.9233082706766917,
+          "signedFrequencyError": 0.03702023324077741,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 0,
+          "stride": 2,
+          "windows": 665,
+          "forecast": 0.7925251407583898,
+          "observed": 0.7804511278195488,
+          "signedFrequencyError": 0.012074012938840917,
+          "withinTolerance": false
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 0,
+          "stride": 2,
+          "windows": 665,
+          "forecast": 0.9592595306265015,
+          "observed": 0.9203007518796993,
+          "signedFrequencyError": 0.0389587787468022,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 0,
+          "stride": 5,
+          "windows": 665,
+          "forecast": 0.7925251407583898,
+          "observed": 0.7804511278195488,
+          "signedFrequencyError": 0.012074012938840917,
+          "withinTolerance": false
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 0,
+          "stride": 5,
+          "windows": 665,
+          "forecast": 0.9556543328280671,
+          "observed": 0.9172932330827067,
+          "signedFrequencyError": 0.038361099745360394,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 0,
+          "stride": 10,
+          "windows": 665,
+          "forecast": 0.7925251407583898,
+          "observed": 0.7804511278195488,
+          "signedFrequencyError": 0.012074012938840917,
+          "withinTolerance": false
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 0,
+          "stride": 10,
+          "windows": 665,
+          "forecast": 0.9480916690609875,
+          "observed": 0.912781954887218,
+          "signedFrequencyError": 0.03530971417376949,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 1,
+          "stride": 1,
+          "windows": 2781,
+          "forecast": 0.18972900613025542,
+          "observed": 0.18985976267529667,
+          "signedFrequencyError": -0.000130756545041244,
+          "withinTolerance": true
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 1,
+          "stride": 1,
+          "windows": 2781,
+          "forecast": 0.5294330519735216,
+          "observed": 0.5267889248471773,
+          "signedFrequencyError": 0.00264412712634432,
+          "withinTolerance": true
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 1,
+          "stride": 2,
+          "windows": 2781,
+          "forecast": 0.18972900613025542,
+          "observed": 0.18985976267529667,
+          "signedFrequencyError": -0.000130756545041244,
+          "withinTolerance": true
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 1,
+          "stride": 2,
+          "windows": 2781,
+          "forecast": 0.5179615618831042,
+          "observed": 0.48903272204243076,
+          "signedFrequencyError": 0.028928839840673404,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 1,
+          "stride": 5,
+          "windows": 2781,
+          "forecast": 0.18972900613025542,
+          "observed": 0.18985976267529667,
+          "signedFrequencyError": -0.000130756545041244,
+          "withinTolerance": true
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 1,
+          "stride": 5,
+          "windows": 2781,
+          "forecast": 0.4843582520659047,
+          "observed": 0.4469615246314275,
+          "signedFrequencyError": 0.037396727434477195,
+          "withinTolerance": false
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "startLevel": 1,
+          "stride": 10,
+          "windows": 2781,
+          "forecast": 0.18972900613025542,
+          "observed": 0.18985976267529667,
+          "signedFrequencyError": -0.000130756545041244,
+          "withinTolerance": true
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "startLevel": 1,
+          "stride": 10,
+          "windows": 2781,
+          "forecast": 0.4318413216408235,
+          "observed": 0.3951815893563466,
+          "signedFrequencyError": 0.03665973228447689,
+          "withinTolerance": false
+        }
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "target": "changed-endpoint-probability",
+      "startLevel": 0,
+      "pass": false,
+      "maxAbsoluteFrequencyError": 0.012074012938840917,
+      "withinToleranceGrids": []
+    },
+    {
+      "target": "first-observed-exit-probability",
+      "startLevel": 0,
+      "pass": false,
+      "maxAbsoluteFrequencyError": 0.0389587787468022,
+      "withinToleranceGrids": []
+    },
+    {
+      "target": "changed-endpoint-probability",
+      "startLevel": 1,
+      "pass": true,
+      "maxAbsoluteFrequencyError": 0.000130756545041244,
+      "withinToleranceGrids": [
+        1,
+        2,
+        5,
+        10
+      ]
+    },
+    {
+      "target": "first-observed-exit-probability",
+      "startLevel": 1,
+      "pass": false,
+      "maxAbsoluteFrequencyError": 0.037396727434477195,
+      "withinToleranceGrids": [
+        1
+      ]
+    }
+  ],
+  "authority": "Point-error qualification on the decoded held trace under the frozen criterion. It supplies neither a coverage guarantee for new acquisitions nor a physical first-exit measurement."
+}

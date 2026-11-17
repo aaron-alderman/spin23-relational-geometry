@@ -1,0 +1,16 @@
+{
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "signedResult": {
+    "file": "detector-timing-uppsala-signed-result.json",
+    "sha256": "335f0e10038b58c258ce4c2564e8b0bdb67110c5cdd7d91836eb9b38a68991e0"
+  },
+  "design": {
+    "splitCheck": "Compare the first and second cobalt halves at frozen centers and after the best scanned translation. Keep the original signed bins, grid, controls and energy support.",
+    "countCheck": "Pool the prompt and control pairs already formed within each cobalt half, then subtract the controls and normalize. No pair spans the cut. Evaluate shifts fitted to the same saved early target profiles and score the same late blocks under all three cobalt reference choices.",
+    "evidence": "Match the late cobalt signed counts and all target scores to the pinned signed replay before interpreting the pooled comparison."
+  },
+  "boundary": "Both reference halves come from one cobalt acquisition. The first half was used for the existing energy-band centers. Pooling increases observed count support without supplying an independent calibration. Half discrepancies can include counting variation and temporal changes. The comparison does not partition those effects."
+}

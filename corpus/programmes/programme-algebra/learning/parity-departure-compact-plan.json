@@ -1,0 +1,12 @@
+{
+  "persistencePlanSha256": "3df1e33b3442d8d9f9c5278ff20d791effa8d23fb2d717dabb8031b7696c7138",
+  "preparedSha256": "f608e0365dbd59aaa8d48ca5ee77bf2144d6a270fc28dc82f3cd429b01676160",
+  "persistenceReplaySha256": "e31d7206df9f669d2c02344ebb6f2bab3f73f4dc8c953134f7c00934f76ab196",
+  "encoding": "For each populated source chunk store two packed bitmaps, one for observed positions and one for their labels. Pin block offsets, byte lengths, known counts and SHA-256 digests in the compact preparation receipt. Read and authenticate only requested blocks.",
+  "policies": {
+    "cold": "Run the original endpoint-first decision, reading and validating source chunks on demand.",
+    "eager": "Read smaller saved blocks intersecting any post-start window position, seed the bounds, and scan remaining positions. Skip the seed pass if its announced payload cannot beat the cold full-scan footprint.",
+    "guarded": "Keep the cold scan order. On its first lookup in a chunk, use saved evidence if the receipt establishes the complete chunk is observed and the saved block is smaller than the source chunk. Otherwise read the source chunk."
+  },
+  "criterion": "Replay the same 154 shifted-window queries. Verify all decisions against the pinned counts. Compare actual source and saved payload bytes, receipt overhead, and changed-block refusal. The guarded schedule must never use more payload bytes than cold on any query once metadata is loaded."
+}

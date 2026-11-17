@@ -1,0 +1,15 @@
+{
+  "target": {
+    "source": "https://www.cefas.co.uk/publications/aquatic/aepam9.pdf",
+    "selector": "Use the first published caesium-137 sample acquisition after the efficiency calibration in section 4, only if it has a separate certified or independently measured source strength, a published peak count and sufficient live-time and detector-geometry information.",
+    "ifIneligible": "Record missing or shared evidence. Do not replace the target in this lock."
+  },
+  "inputContract": "Use parent decays during live acquisition, photon yield per parent decay, and conditional peak acceptance including matched geometry. The acceptance must come from a distinct acquisition and evidence family from the detector count being predicted.",
+  "background": "Use the publication's pre-existing primary peak-area subtraction exactly as specified. If the necessary subtraction or net count is absent, mark the target ineligible. Do not choose a subtraction based on which candidate fits.",
+  "criterion": {
+    "metric": "absolute-relative-error-to-positive-net-count",
+    "maximum": 0.15,
+    "interpretation": "An engineering discrimination tolerance declared for this retrospective check. It is not statistical coverage or a claim of laboratory precision."
+  },
+  "limits": "Frozen candidates come from software replays. This lock is local and hash-verifiable, and records order of work in this checkout. It is not a third-party timestamp or blinded preregistration."
+}

@@ -1,0 +1,31 @@
+{
+  "archive": "https://doi.org/10.57804/0tjh-3b49",
+  "dataPaper": "https://doi.org/10.1016/j.dib.2025.111832",
+  "wideReferencePlanSha256": "fd9893ae66d3aeb144ecfeb1bad622ec39e45f11ed51341401b4f6f143f2dbfd",
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/calibration",
+  "runs": [
+    {
+      "id": "CalibrationSample76_29jan2024_b",
+      "fileBytes": 1054139987,
+      "treeEntries": 150146490,
+      "pulseSha256": "d2ef3a04874b743de50917ba226a760c6a67474a472ab269fa0c9f211b8e8ea7",
+      "infoSha256": "efc4a27a89d2318f4cd013666563f9bd7cacd108e9691319358b4045350d3580",
+      "settingsSha256": "c194d6f4751af09b78d3243ee3782a4825e611e7a2d3a7580605b420ac17a41d"
+    },
+    {
+      "id": "CalibrationSample76_29jan2024_b_1",
+      "fileBytes": 1050324552,
+      "treeEntries": 152651247,
+      "pulseSha256": "c2eeb2b0bd75adc1a0e3e18b94298de7ea14c12175b9dd7c9aa1a7736eb21c34",
+      "infoSha256": "8addf621b557a8dd028fb219fcd219bcf2654464a7fca8fa8205d68546544558",
+      "settingsSha256": "75ffc871b235c5f021a3176c56230e1b47ed23dfade78de5c02548f040e30c69"
+    }
+  ],
+  "entriesPerRun": 1000000,
+  "channels": [3, 4],
+  "lowerPulseEnergyBandStartsKeV": [0, 50, 150, 350],
+  "energyAdcExclusiveBounds": [0, 32767],
+  "minimumNetWidePairsPerRun": 50,
+  "screen": "Use the same common wide search radius and shifted controls as the original Uppsala timing plan, around a zero lag before alignment. Apply the archived linear energy calibrations to channels 3 and 4. Exclude ADC rails. Assess each band for 50 net wide pairs in both run samples before fitting any signed profile.",
+  "boundary": "Two consecutive separately started acquisitions on the same spiked filter and five-detector apparatus. The first million pulses in the first ROOT file of each run are a bounded sample by file order. This tests the support check on a different archive, while the Uppsala cobalt template remains specific to its original geometry and source."
+}

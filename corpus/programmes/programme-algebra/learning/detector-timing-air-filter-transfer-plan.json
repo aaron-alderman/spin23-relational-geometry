@@ -1,0 +1,21 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "priorResult": {
+    "file": "detector-timing-air-filter-signed-result.json",
+    "sha256": "e3b4520da5640f795e18e02eb88034ca2b8e6270e9f5be9f3ce8164b7945301f"
+  },
+  "target": {
+    "id": "CalibrationSample76_29jan2024_b_2",
+    "fileBytes": 1054070437,
+    "treeEntries": 145457980,
+    "infoSha256": "946d82b42d84bae3cf634d3aac03c354ff7e5b3afcbec438d3cd51145d11192d",
+    "settingsSha256": "8160cda20d4483c7e7bbf40a1e7c05aff2ed15255d65b502c9bdb61f8dbc1462"
+  },
+  "cutFractions": [0.2, 0.4, 0.6, 0.8],
+  "favoredPolicy": "unchangedReference",
+  "design": "Freeze the unchanged first-run reference, the first-run reference with the shift fitted on the second run, and the early second-run profile. Score all three on the same supported five time blocks of the separately started third run, without reading third-run counts during freezing. Use the inherited pulse slice, detector pair, signed bins and late-block support floor. Compare median discrepancy across supported blocks and retain per-block losses.",
+  "boundary": "The third run shares the filter, electronics configuration and detector geometry. This tests reuse across separately started runs on one instrument. The selected band and prior policy preferences derive from the first two runs."
+}

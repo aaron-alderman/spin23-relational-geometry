@@ -1,0 +1,4815 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-stream-plan.json",
+      "sha256": "5b5b110a6f3310fdd1605e992be00b513a98db94e0b37320ea44aab15db36847"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-threshold-plan.json",
+      "sha256": "69ff138a320681679960acc04cbc5b21379cb1c17c927fc6167e47d82fed62a7"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-threshold-replay.json",
+      "sha256": "3a100ec1575a788cc8818295d5cf2862904d9db8002102764f88aef7120ce77c"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-parity-plan.json",
+      "sha256": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa"
+    }
+  ],
+  "traceSha256": "0f8792b6dd27be7068cec66bbb29e2c6fba1932d80eff6776931ed782ae55148",
+  "scope": {
+    "contexts": 6,
+    "schedule": [
+      "endpoint",
+      1
+    ],
+    "identity": "Trace hash, horizon, initial label, ordered window starts, and scan schedule."
+  },
+  "work": {
+    "requests": 89,
+    "coldLabelInspections": 56631,
+    "retainedLabelInspections": 7956,
+    "requestsUsingOnlyRetainedBounds": 69
+  },
+  "rows": [
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        19
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          19
+        ],
+        "resolvedAtStride": 100,
+        "inspectedLabels": 2,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        30
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          30
+        ],
+        "resolvedAtStride": 100,
+        "inspectedLabels": 1,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        7
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          7
+        ],
+        "resolvedAtStride": 250,
+        "inspectedLabels": 1,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        12
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          12
+        ],
+        "resolvedAtStride": 250,
+        "inspectedLabels": 1,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 500,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        3
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          3
+        ],
+        "resolvedAtStride": 500,
+        "inspectedLabels": 2,
+        "witnesses": [
+          {
+            "windowStart": 1503,
+            "sample": 2003
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        0,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          1,
+          6
+        ],
+        "resolvedAtStride": 500,
+        "inspectedLabels": 2,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 10,
+      "boundsBefore": [
+        1,
+        19
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 1007,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 1009
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 15,
+      "boundsBefore": [
+        1,
+        30
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 1613,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 1614
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 4,
+      "boundsBefore": [
+        1,
+        7
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          7
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 54,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 55
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 6,
+      "boundsBefore": [
+        1,
+        12
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 1825,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1826
+    },
+    {
+      "steps": 500,
+      "initialLabel": -0.303309088913506,
+      "threshold": 2,
+      "boundsBefore": [
+        1,
+        3
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          2,
+          3
+        ],
+        "resolvedAtStride": 500,
+        "inspectedLabels": 1,
+        "witnesses": [
+          {
+            "windowStart": 1503,
+            "sample": 2003
+          },
+          {
+            "windowStart": 3006,
+            "sample": 3506
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 3
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 3,
+      "boundsBefore": [
+        1,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          3,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 47,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          }
+        ],
+        "fullyScannedNegativeStarts": []
+      },
+      "coldInspections": 49
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 19,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 118
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 30,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 129
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 7,
+      "boundsBefore": [
+        4,
+        7
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          4,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 249,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004
+        ]
+      },
+      "coldInspections": 304
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 12,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 261
+    },
+    {
+      "steps": 500,
+      "initialLabel": -0.303309088913506,
+      "threshold": 3,
+      "boundsBefore": [
+        2,
+        3
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          2,
+          2
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 499,
+        "witnesses": [
+          {
+            "windowStart": 1503,
+            "sample": 2003
+          },
+          {
+            "windowStart": 3006,
+            "sample": 3506
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1002
+        ]
+      },
+      "coldInspections": 502
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 6,
+      "boundsBefore": [
+        3,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 566,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507
+        ]
+      },
+      "coldInspections": 615
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        4,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004
+        ]
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1
+    },
+    {
+      "steps": 500,
+      "initialLabel": -0.303309088913506,
+      "threshold": 1,
+      "boundsBefore": [
+        2,
+        2
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          2,
+          2
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 1503,
+            "sample": 2003
+          },
+          {
+            "windowStart": 3006,
+            "sample": 3506
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1002
+        ]
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 1,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507
+        ]
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 10,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 1009
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 15,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 1614
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 4,
+      "boundsBefore": [
+        4,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004
+        ]
+      },
+      "coldInspections": 55
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 6,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1826
+    },
+    {
+      "steps": 500,
+      "initialLabel": -0.303309088913506,
+      "threshold": 2,
+      "boundsBefore": [
+        2,
+        2
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          2,
+          2
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 1503,
+            "sample": 2003
+          },
+          {
+            "windowStart": 3006,
+            "sample": 3506
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1002
+        ]
+      },
+      "coldInspections": 3
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 3,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507
+        ]
+      },
+      "coldInspections": 49
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 2,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 3
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 2,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 5
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 2,
+      "boundsBefore": [
+        4,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004
+        ]
+      },
+      "coldInspections": 5
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 2,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 2
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 2,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507
+        ]
+      },
+      "coldInspections": 4
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 18,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 217
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 29,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 228
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 6,
+      "boundsBefore": [
+        4,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 249,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004,
+          1255
+        ]
+      },
+      "coldInspections": 553
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 11,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 581
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 5,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          4,
+          4
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 499,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507,
+          4008
+        ]
+      },
+      "coldInspections": 1114
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 3,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 10
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 3,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 6
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 3,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004,
+          1255
+        ]
+      },
+      "coldInspections": 7
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 3,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 7
+    },
+    {
+      "steps": 500,
+      "initialLabel": 0.947692175241793,
+      "threshold": 4,
+      "boundsBefore": [
+        4,
+        4
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          4,
+          4
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 501,
+            "sample": 1001
+          },
+          {
+            "windowStart": 2505,
+            "sample": 3005
+          },
+          {
+            "windowStart": 0,
+            "sample": 43
+          },
+          {
+            "windowStart": 2004,
+            "sample": 2071
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          3507,
+          4008
+        ]
+      },
+      "coldInspections": 116
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 17,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 316
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 28,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 327
+    },
+    {
+      "steps": 250,
+      "initialLabel": -0.303309088913506,
+      "threshold": 5,
+      "boundsBefore": [
+        4,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          4,
+          4
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 249,
+        "witnesses": [
+          {
+            "windowStart": 251,
+            "sample": 501
+          },
+          {
+            "windowStart": 1506,
+            "sample": 1756
+          },
+          {
+            "windowStart": 3263,
+            "sample": 3513
+          },
+          {
+            "windowStart": 753,
+            "sample": 801
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1004,
+          1255,
+          3012
+        ]
+      },
+      "coldInspections": 802
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 10,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 830
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 4,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 11
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 4,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 11
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 4,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 324
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 16,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 415
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 27,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 426
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 9,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1079
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 5,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 13
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 5,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 12
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 5,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 332
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 15,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 514
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 26,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 525
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 8,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1328
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 6,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 19
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 6,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": true,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 15
+    },
+    {
+      "steps": 250,
+      "initialLabel": 0.947692175241793,
+      "threshold": 7,
+      "boundsBefore": [
+        5,
+        5
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          5,
+          5
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 250
+          },
+          {
+            "windowStart": 502,
+            "sample": 752
+          },
+          {
+            "windowStart": 2761,
+            "sample": 3011
+          },
+          {
+            "windowStart": 2008,
+            "sample": 2071
+          },
+          {
+            "windowStart": 2259,
+            "sample": 2267
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          1757,
+          2510,
+          3514,
+          3765,
+          4016,
+          4267,
+          4518
+        ]
+      },
+      "coldInspections": 1577
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 14,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          9
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929
+        ]
+      },
+      "coldInspections": 613
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 25,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          14
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040
+        ]
+      },
+      "coldInspections": 624
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 7,
+      "boundsBefore": [
+        6,
+        9
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 297,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 1306
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 7,
+      "boundsBefore": [
+        6,
+        14
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 792,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 2406
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 13,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 712
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 24,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 723
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 8,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 1207
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 8,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 2307
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 12,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 811
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 23,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 822
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 9,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 1108
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 9,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 2208
+    },
+    {
+      "steps": 100,
+      "initialLabel": -0.303309088913506,
+      "threshold": 11,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 202,
+            "sample": 302
+          },
+          {
+            "windowStart": 707,
+            "sample": 807
+          },
+          {
+            "windowStart": 1515,
+            "sample": 1615
+          },
+          {
+            "windowStart": 2121,
+            "sample": 2221
+          },
+          {
+            "windowStart": 2424,
+            "sample": 2524
+          },
+          {
+            "windowStart": 3333,
+            "sample": 3433
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          101,
+          909,
+          1010,
+          1111,
+          1212,
+          1313,
+          1414,
+          2323,
+          2828,
+          2929,
+          3030,
+          3131,
+          3232
+        ]
+      },
+      "coldInspections": 910
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 22,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 921
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 10,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 2109
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 21,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1020
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 11,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 2010
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 20,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1119
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 12,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1911
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 19,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1218
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 13,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1812
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 18,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1317
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 14,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1713
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 17,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1416
+    },
+    {
+      "steps": 100,
+      "initialLabel": 0.947692175241793,
+      "threshold": 16,
+      "boundsBefore": [
+        6,
+        6
+      ],
+      "retained": {
+        "meetsThreshold": false,
+        "countBounds": [
+          6,
+          6
+        ],
+        "resolvedAtStride": 1,
+        "inspectedLabels": 0,
+        "witnesses": [
+          {
+            "windowStart": 0,
+            "sample": 100
+          },
+          {
+            "windowStart": 606,
+            "sample": 706
+          },
+          {
+            "windowStart": 808,
+            "sample": 908
+          },
+          {
+            "windowStart": 2020,
+            "sample": 2120
+          },
+          {
+            "windowStart": 2222,
+            "sample": 2322
+          },
+          {
+            "windowStart": 2727,
+            "sample": 2827
+          }
+        ],
+        "fullyScannedNegativeStarts": [
+          303,
+          404,
+          505,
+          1616,
+          1717,
+          1818,
+          1919,
+          2525,
+          2626,
+          3434,
+          3535,
+          3636,
+          3737,
+          3838,
+          3939,
+          4040,
+          4141,
+          4242,
+          4343,
+          4444,
+          4545,
+          4646,
+          4747,
+          4848
+        ]
+      },
+      "coldInspections": 1515
+    }
+  ],
+  "authority": "Live immutable trace and one stream invocation. Receipts expose witnesses and absences for audit. The scan cursor is in memory. The replay compares counts on this decoded archive and does not estimate future acquisition probabilities."
+}

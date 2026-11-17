@@ -1,0 +1,16 @@
+{
+  "referencePlanSha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf",
+  "comparisonPlanSha256": "192aa0254fa9c7be7a9a3b7c70939ee7160e4bfc91594ffab581b373cce6f1bf",
+  "comparisonFrozenSha256": "7d4b6e6664db15974f71921e40e12daec778f3b50301d7ef66d76cdc192e35fb",
+  "developmentResultSha256": "3b3c4b78a0e9f5217b5e8e79ea3ee5f325d4fd5cb1ecae1f520c435cc83ecb32",
+  "developmentReplicateIndices": [3, 4, 5],
+  "scoreReplicateIndices": [6, 7, 8, 9],
+  "maximumAbsoluteFrequencyError": 0.01,
+  "scope": "Use the comparison study's frozen decoder, 50-step windows in quarters 2–4, both starting labels and all four grids. Only the first quarter of a new repeat may tune its prefix forecast.",
+  "policies": {
+    "always": "Issue the original repeat-0 forecast on every grid.",
+    "static": "Issue the original forecast for an observable and starting label if its largest absolute development error on every grid was at most one point.",
+    "prefix": "On each grid form an interval centered on the prefix forecast with radius equal to the largest absolute local-prefix error on that grid in repeats 3–5. Clip to [0,1]. Issue the original forecast only if every interval is contained in the one-point tolerance around the original forecast."
+  },
+  "criterion": "For each repeat, observable, and starting label, a released forecast misses if any grid error exceeds one point. Report releases, released misses, withheld misses, and withheld accurate forecasts. Also report empirical coverage of the frozen prefix intervals. A maximum observed error from three development repeats carries no field guarantee."
+}

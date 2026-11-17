@@ -1,0 +1,12 @@
+{
+  "compactPlanSha256": "bcf323b05cb3a4ff97ecf5deab814f1a911bd0fe2e12523eaaeb433f4349a749",
+  "compactPreparedSha256": "f83be5c5ffcc19c82cb4daabfdffc00e52b1c5f7180e1762203e6143528bb95d",
+  "compactReplaySha256": "e02e177c032d3c7a3f33bfbea90349ceed22dac61dc5baf3cef9c7a5ee430c59",
+  "source": "Re-encode the authoritative binary labels at one bit per sample, using the same sample chunk boundaries. Commit the compressed chunk hashes in a trusted preparation receipt. Preserve the same window starts, questions, comparison oracle, and application cache policy.",
+  "policies": {
+    "cold": "Read a packed source chunk on its first scan visit and verify its hash.",
+    "eager": "Allow saved two-plane blocks to seed bounds even if an individual block costs more than a packed source chunk. Skip the seed pass whenever its total saved payload cannot beat the packed cold full-scan footprint.",
+    "guarded": "Choose saved observations only if a complete block costs less than the corresponding full source chunk. Apply the known encoding size rule before reading the compact index or opening evidence blocks."
+  },
+  "criterion": "Check all answers against the independent shifted-window counts. Compare payload bytes and additional compact index metadata. Report whether any within-question payload wins survive alongside the batch cost, and test refusal of a damaged packed source chunk."
+}

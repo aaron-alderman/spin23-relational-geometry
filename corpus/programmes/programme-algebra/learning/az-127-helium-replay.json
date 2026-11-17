@@ -1,0 +1,67 @@
+{
+  "withoutLesson": {
+    "case": "AZ-127-helium-2tripletS1",
+    "question": "What is the chance that an initially prepared, isolated metastable helium atom decays within 600 seconds?",
+    "source": {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    "status": "unresolved-by-lesson-replay",
+    "unscreenedPlans": [
+      "square-the-transition-matrix-element",
+      "evolve-explicit-atom-and-photon-modes",
+      "use-measured-lifetime"
+    ]
+  },
+  "withLesson": {
+    "case": "AZ-127-helium-2tripletS1",
+    "question": "What is the chance that an initially prepared, isolated metastable helium atom decays within 600 seconds?",
+    "source": {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    "lesson": "AZ-121-to-AZ-122",
+    "lessonJourneySha256": "21f225ec9ceaa205f30633bbcc08e8121029585e4f06ca1cf390d631b04854e6",
+    "screening": [
+      {
+        "id": "square-the-transition-matrix-element",
+        "decision": "refused: no typed conversion from input to requested probability"
+      },
+      {
+        "id": "evolve-explicit-atom-and-photon-modes",
+        "decision": "blocked: missing calibratedAtomFieldHamiltonian, normalizedPreparationAndPhotonModes, decayProjector"
+      },
+      {
+        "id": "use-measured-lifetime",
+        "decision": "eligible"
+      }
+    ],
+    "status": "executed",
+    "selected": "use-measured-lifetime",
+    "timeSeconds": 600,
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 7870,
+      "reportedUncertaintySeconds": 510,
+      "source": "https://doi.org/10.1103/PhysRevLett.103.053002"
+    },
+    "model": "constant-total-hazard",
+    "probability": 0.07340516654980762,
+    "probabilityAtReportedLifetimeEndpoints": [
+      0.06909592868725814,
+      0.07828732759591914
+    ],
+    "work": {
+      "candidatePlans": 3,
+      "plansStoppedBeforeDynamics": 2,
+      "microscopicDynamicsRuns": 0
+    }
+  },
+  "numericalReference": {
+    "quantity": "nominal finite-window probability",
+    "referenceIntegrandEvaluations": 430,
+    "closedFormExponentialEvaluations": 1,
+    "referenceAbsoluteTolerance": 1e-10,
+    "observedAbsoluteDifference": 9.614607721086799e-11
+  }
+}

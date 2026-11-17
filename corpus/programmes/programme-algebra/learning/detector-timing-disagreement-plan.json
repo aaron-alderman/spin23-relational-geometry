@@ -1,0 +1,38 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "repeatRoutePlan": {
+    "file": "detector-timing-repeat-route-plan.json",
+    "sha256": "8d2d0ce09dadf5dcb5726824478917c5df0cacff24bc3b6635603f36ab74af8a"
+  },
+  "repeatRouteResult": {
+    "file": "detector-timing-repeat-route-result.json",
+    "sha256": "ce876ac678976745d7eadeeffc26bf409fb19cfebdac213a71d78d910d69b204"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/sample",
+  "airTargets": [
+    {
+      "id": "Filter_UV2404_5feb2024_2",
+      "fileBytes": 1051036847,
+      "treeEntries": 145127700,
+      "infoSha256": "40a3a2b5a8658ed48ca91d876f4f5e2e6c0a7be02e282e793b7aa9c1848dad51",
+      "settingsSha256": "f761f1ba94ebcd94834c2747f9545eff7e01a8dae0b3ef40358b1dc71dd5b0b4"
+    },
+    {
+      "id": "Filter_UV2404_5feb2024_3",
+      "fileBytes": 1054987121,
+      "treeEntries": 145896426,
+      "infoSha256": "17cb47a125f3db2abb546fd649f5cbdbd1b8a256292b9914d2051557411b89fa",
+      "settingsSha256": "ab97dcfa1e9ffe4123fc9f7d6291a797cc206b3d9d9d28058d9aab7e4bf2db5d"
+    }
+  ],
+  "uppsalaSources": ["na22", "bi207", "cs137", "eu152", "ho166m"],
+  "design": "Keep the previously used ten-million-entry air-filter slices and the previous full Uppsala acquisitions. Screen all listed sources using only the first four 10-percent time blocks. Within each archive, select the first source in the listed order and the lowest-energy band with full early support where the single and repeated rules disagree. Freeze the full screen and score only selected bands on their last three blocks.",
+  "boundary": "Air-filter runs are new acquisitions of the same field sample. Uppsala cases have prior signed results and are retrospective. The screen is conditional on an early disagreement, so its selected score cannot estimate an unconditional success rate."
+}

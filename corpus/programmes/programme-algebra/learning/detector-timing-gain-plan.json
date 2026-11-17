@@ -1,0 +1,37 @@
+{
+  "validationSource": {
+    "file": "detector-timing-loss-frozen.json",
+    "sha256": "0449e6c184e62227044be549c6c7840b6ef31f84e4f9dd9a9be122302ad985c5"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "wideReferencePlanSha256": "fd9893ae66d3aeb144ecfeb1bad622ec39e45f11ed51341401b4f6f143f2dbfd",
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/blank",
+  "runs": [
+    {
+      "id": "Blankprov_HB573",
+      "fileBytes": 1052809350,
+      "treeEntries": 148182150,
+      "infoSha256": "f91d63bdf70e51bd2221119b2a352f95ba996766d847d923fc62fad2ea2e3da4",
+      "settingsSha256": "133956910b0c4e18b85989bc860085291c7f5407e407937348789dedd434ee66"
+    },
+    {
+      "id": "Blankprov_HB5773_run2",
+      "fileBytes": 1052027761,
+      "treeEntries": 146036350,
+      "infoSha256": "aa76e3919705a5d966218afa6c80b6a654465c3cdb0980e8f6df9e6fcf5f0353",
+      "settingsSha256": "d3f9f84d74d8e97ea4dbd92dccdc24d63cb6152b938ff766c7017c1e3a986d64"
+    }
+  ],
+  "entryStart": 1000000,
+  "entriesPerRun": 10000000,
+  "channels": [1, 2],
+  "lowerPulseEnergyBandStartsKeV": [0, 50, 150, 350],
+  "energyAdcExclusiveBounds": [0, 32767],
+  "referenceNetWideFloor": 100,
+  "cutFractions": [0.2, 0.3, 0.4, 0.5, 0.6666666666666666, 0.8333333333333334],
+  "design": "Freeze a minimum gain equal to the median of the twelve previous mean reference validation errors, without using held errors. Use a new blank-run reference matched to the target settings. Require the inherited count floor in the fit and each validation block. Skip provisional fitting if the reference validation loss is at or below the required gain, because achievable local error cannot be negative. Otherwise fit a provisional local profile. Build a final pooled local refit only when the observed mean gain strictly exceeds the budget. Freeze before late pairing and score every supported block alongside the unguarded mean, median and fixed-reference rules.",
+  "boundary": "The gain budget is a design scale from another campaign, not a bound on held error. Fitting counts measure policy operations. They do not include runtime, target pulse reads or the baseline fits deliberately performed for evaluation."
+}

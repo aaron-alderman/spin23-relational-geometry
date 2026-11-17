@@ -1,0 +1,497 @@
+{
+  "evidence": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/corner-dependencies-replay.json",
+      "sha256": "457c15688c17a11bca490d6449505f6eed6ebe9fcaccf64ff412a40ca1f6ccfd"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+      "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+      "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/calcium-learned-operation.json",
+      "sha256": "e50ff0c7c6f903ea8ba75ff6c9d908011e07b083c9f1bfecf4236068a661f036"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/iron57-learned-operation.json",
+      "sha256": "7b0f53ec61385a539ec1ddac4cd5a57818819fc6cf97cac19d2db1c7eb1cec09"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/detector-run-learned-operation.json",
+      "sha256": "334422c7b8af497256c28bd5e8bf29a94f88b4cf9ea5386c46f2573c84c44f72"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/run-budget-learned-operation.json",
+      "sha256": "c65659ab6ded37132a2369c1723ce7e4463edea83dc1784c5e10324bc3613470"
+    }
+  ],
+  "work": {
+    "fresh": {
+      "exits": 12,
+      "branches": 12,
+      "registrations": 12
+    },
+    "reused": {
+      "exits": 4,
+      "branches": 3,
+      "registrations": 9
+    }
+  },
+  "rows": [
+    {
+      "label": "BART",
+      "factsSha256": "98806e38a99cd7c9e9bc415af888f4680bba817b72cb5248f89bbc28c47f9267",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 2,
+          "branches": 2,
+          "registrations": 2
+        },
+        "status": "executed",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 5465,
+          "probability": 0.0008424147765740081,
+          "chanceAtMinimum": 0.9900056665032492,
+          "chanceOneFewer": 0.9899972400304443
+        },
+        "bound": {
+          "status": "executed",
+          "minimumTrials": 5522,
+          "probability": 0.000833700638583318,
+          "chanceAtMinimum": 0.9900044476031085,
+          "chanceOneFewer": 0.989996107351419
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0.00159,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.71,
+            "internal-conversion-to-ground": 1.916668
+          }
+        },
+        "minimumTrialsAcrossBox": 5522
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    },
+    {
+      "label": "shifted-nominal",
+      "factsSha256": "7bb9618a8d1df8e639624eb7dd587acc80587fb6492a59cc04494412f343f7b3",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-shifted-nominal",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 1
+        },
+        "status": "executed",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 5448,
+          "probability": 0.0008450456784371374,
+          "chanceAtMinimum": 0.9900058481001682,
+          "chanceOneFewer": 0.9899973954424137
+        },
+        "bound": {
+          "status": "executed",
+          "minimumTrials": 5522,
+          "probability": 0.000833700638583318,
+          "chanceAtMinimum": 0.9900044476031085,
+          "chanceOneFewer": 0.989996107351419
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0.00159,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.71,
+            "internal-conversion-to-ground": 1.916668
+          }
+        },
+        "minimumTrialsAcrossBox": 5522
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    },
+    {
+      "label": "LORAX",
+      "factsSha256": "275cbf9e62fcf0827a1b9d26350dddfab3aa20cb3fea64beb73a909a6fcc4a89",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 2
+        },
+        "status": "executed",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 2254,
+          "probability": 0.002041579845788352,
+          "chanceAtMinimum": 0.9900125379336282,
+          "chanceOneFewer": 0.9899921060189778
+        },
+        "bound": {
+          "status": "executed",
+          "minimumTrials": 2279,
+          "probability": 0.002018709093425015,
+          "chanceAtMinimum": 0.9900011776486298,
+          "chanceOneFewer": 0.9899809521055378
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0.00385,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.71,
+            "internal-conversion-to-ground": 1.916668
+          }
+        },
+        "minimumTrialsAcrossBox": 2279
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    },
+    {
+      "label": "shorter-window",
+      "factsSha256": "310773bc4a8df5d289c7f54c6354e24a397b67f2768d2f9ebfb3af8fe820415b",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-shorter-window",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 2,
+          "branches": 0,
+          "registrations": 2
+        },
+        "status": "executed",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 5532,
+          "probability": 0.0008322405252368833,
+          "chanceAtMinimum": 0.9900070101618769,
+          "chanceOneFewer": 0.9899986866636128
+        },
+        "bound": {
+          "status": "executed",
+          "minimumTrials": 5590,
+          "probability": 0.0008236210338403082,
+          "chanceAtMinimum": 0.9900076813245348,
+          "chanceOneFewer": 0.989999444656804
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0.00159,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.71,
+            "internal-conversion-to-ground": 1.916668
+          }
+        },
+        "minimumTrialsAcrossBox": 5590
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    },
+    {
+      "label": "higher-competing-rate",
+      "factsSha256": "c076f034ee5a146705420910cc8035eba1115e81616f126f41fa1e4ebcec994d",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-higher-competing-rate",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 1,
+          "registrations": 1
+        },
+        "status": "executed",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 5465,
+          "probability": 0.0008424147765740081,
+          "chanceAtMinimum": 0.9900056665032492,
+          "chanceOneFewer": 0.9899972400304443
+        },
+        "bound": {
+          "status": "executed",
+          "minimumTrials": 5534,
+          "probability": 0.0008318936371009631,
+          "chanceAtMinimum": 0.9900044505942938,
+          "chanceOneFewer": 0.9899961284371942
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0.00159,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.964200000000002,
+            "internal-conversion-to-ground": 1.916668
+          }
+        },
+        "minimumTrialsAcrossBox": 5534
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    },
+    {
+      "label": "incompatible-acquisition",
+      "factsSha256": "d8f03aa515ba7043ad695bf3fe5ad68178abe5348666dd15bda217f77d1cba4d",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-incompatible-acquisition",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 0
+        },
+        "status": "no-complete-chain",
+        "reason": "detector"
+      },
+      "freshWork": {
+        "exits": 0,
+        "branches": 0,
+        "registrations": 0
+      }
+    },
+    {
+      "label": "dependent-preparations",
+      "factsSha256": "c19f280405a96553512810203849955d65b7fca7c1bb09caf13e52f1e2472a95",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-dependent-preparations",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 0
+        },
+        "status": "no-complete-chain",
+        "reason": "trial-model"
+      },
+      "freshWork": {
+        "exits": 0,
+        "branches": 0,
+        "registrations": 0
+      }
+    },
+    {
+      "label": "beam-on",
+      "factsSha256": "c705aee57d76ccdd495c2f0a674ca21d8ee0f4070b8191c820ae3b43bcd4f85e",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-beam-on",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 0
+        },
+        "status": "no-complete-chain",
+        "reason": "survival"
+      },
+      "freshWork": {
+        "exits": 0,
+        "branches": 0,
+        "registrations": 0
+      }
+    },
+    {
+      "label": "unknown-branch",
+      "factsSha256": "a69958b95a4952c72a79074e781290b3c27c23671718b0c5927f204c7e93f5de",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-unknown-branch",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 0
+        },
+        "status": "no-complete-chain",
+        "reason": "branch"
+      },
+      "freshWork": {
+        "exits": 0,
+        "branches": 0,
+        "registrations": 0
+      }
+    },
+    {
+      "label": "reversed-box",
+      "factsSha256": "3e4efb1f3251fbcda98b12024d0c0b48c675c9edec87d690ae3a375cbc583503",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-reversed-box",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 0
+        },
+        "status": "calibration-box-inapplicable",
+        "reason": "calibration-box"
+      },
+      "freshWork": {
+        "exits": 0,
+        "branches": 0,
+        "registrations": 0
+      }
+    },
+    {
+      "label": "zero-corner-acceptance",
+      "factsSha256": "243ac85eb5cf7095251e9e7a9d790bdde8adedd6d6a82571939c8b1543242f9c",
+      "reused": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-zero-corner-acceptance",
+        "suppliedRoutes": 0,
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "work": {
+          "exits": 0,
+          "branches": 0,
+          "registrations": 1
+        },
+        "status": "unattainable-with-positive-target",
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch",
+          "iron57/resolve-detector-acceptance",
+          "detector-run/minimum-independent-trials",
+          "run-budget/minimum-over-shared-calibration-box"
+        ],
+        "targetProbability": 0.99,
+        "nominal": {
+          "status": "executed",
+          "minimumTrials": 5465,
+          "probability": 0.0008424147765740081,
+          "chanceAtMinimum": 0.9900056665032492,
+          "chanceOneFewer": 0.9899972400304443
+        },
+        "bound": {
+          "status": "unattainable-with-positive-target"
+        },
+        "corner": {
+          "lifetimeSeconds": 1.2619253522655764e-8,
+          "detectorProbability": 0,
+          "relativeRates": {
+            "gamma-122.06-keV": 100,
+            "internal-conversion-to-14.4-keV": 2.4,
+            "gamma-136.47-keV": 12.71,
+            "internal-conversion-to-ground": 1.916668
+          }
+        }
+      },
+      "freshWork": {
+        "exits": 2,
+        "branches": 2,
+        "registrations": 2
+      }
+    }
+  ]
+}

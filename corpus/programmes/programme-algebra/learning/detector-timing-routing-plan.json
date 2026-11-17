@@ -1,0 +1,19 @@
+{
+  "priorCandidate": {
+    "file": "detector-timing-reuse-candidate.json",
+    "sha256": "54f6253ee8eeff03f5f5ce8af833d7516bcffa3167a697b880df6486f80bf2dc"
+  },
+  "priorChallenge": {
+    "file": "detector-timing-reuse-challenge.json",
+    "sha256": "fddde2302707163708584993ae533ea65d25ca3fadc4febba5310b5a096dbc50"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "earlyFitFraction": 0.2,
+  "sources": ["na22", "bi207", "cs137"],
+  "newSignedProfileSources": ["cs137"],
+  "design": "Within each supported band, compare the first 20 percent profile with the unchanged cobalt reference on the next 20 percent. Both early blocks must independently clear the inherited 50 net wide pair floor. Prefer local only on strictly lower validation loss; otherwise use the unchanged reference. Construct the local forecast from the two early count records added together. Save the choice and both forecasts before making any held-block pair counts. Apply the inherited 50 pair score floor to each late block and retain both losses where supported.",
+  "boundary": "Sodium and bismuth illustrate behavior on previously examined signed outcomes. Caesium was used to calibrate pulse energy; its signed profile was previously unscored. All targets share one apparatus. The net-count floor is a support policy and provides no uncertainty guarantee."
+}

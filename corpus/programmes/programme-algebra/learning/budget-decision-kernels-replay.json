@@ -1,0 +1,135 @@
+{
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/calibration-box-budget-screen-replay.json",
+        "sha256": "53bbbbe82153464c1e65c1625dbffc1ab37b4ac400d6f90b276f8bad9aa49759"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+        "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+      }
+    ]
+  },
+  "learnedOperation": {
+    "id": "calibration-box/reuse-corner-log-miss",
+    "inputType": "admitted-fixed-calibration-box-and-registration-model",
+    "outputType": "fixed-budget-robust-target-decision",
+    "storedQuantity": "Negative log miss probability for one trial at the admitted least favorable corner.",
+    "calculation": "Multiply the stored quantity by the budget and compare to the negative log of the allowed miss probability.",
+    "limits": "Cache identity must cover the admitted source, preparation, event, time window, channel rates, detector, calibration box and model. Budget and target may vary while those facts stay fixed. For comparisons within numerical tolerance of equality, apply the original exact planner's threshold handling."
+  },
+  "verifiedAgainst": "Independent recorded minimum from successive zero-count multiplication at the least favorable corner.",
+  "probes": 524,
+  "fallbacks": {
+    "degree7": 4,
+    "degree9": 0
+  },
+  "boundary": [
+    {
+      "case": "BART",
+      "facts": {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/bart.json",
+        "sha256": "32d61d52dfd61797bb7e7ed341a298dba72a37dac75c46af299874d9ea2def69"
+      },
+      "requiredNegativeLogMiss": 4.60517018598809,
+      "cornerNegativeLogMissPerTrial": 0.0008340483602379818,
+      "minimum": 5522,
+      "adjacent": [
+        {
+          "trials": 5521,
+          "degree7": "fails",
+          "degree9": "fails"
+        },
+        {
+          "trials": 5522,
+          "degree7": "exact",
+          "degree9": "passes"
+        }
+      ]
+    },
+    {
+      "case": "LORAX",
+      "facts": {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/lorax.json",
+        "sha256": "b28f8961d7a0d2a688cf61fe190ee75323299f23b4c2964a4300ef2fc64d7291"
+      },
+      "requiredNegativeLogMiss": 4.60517018598809,
+      "cornerNegativeLogMissPerTrial": 0.0020207494329907397,
+      "minimum": 2279,
+      "adjacent": [
+        {
+          "trials": 2278,
+          "degree7": "fails",
+          "degree9": "fails"
+        },
+        {
+          "trials": 2279,
+          "degree7": "exact",
+          "degree9": "passes"
+        }
+      ]
+    }
+  ],
+  "benchmark": {
+    "node": "v24.22.1",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "scope": "Hot in-process decision only. Input and admission checks, calibration geometry, target log, and cached quantities are prepared before timing.",
+    "rounds": 8,
+    "decisionsPerRound": 838400,
+    "nanosecondsPerDecision": {
+      "direct": {
+        "samples": [
+          28.48485209923665,
+          26.596374045801543,
+          26.855319656488586,
+          26.729126908397,
+          26.331106870228968,
+          29.351860687022928,
+          26.32025286259532,
+          26.366412213740436
+        ],
+        "median": 26.662750477099273
+      },
+      "bounded": {
+        "samples": [
+          90.83826335877865,
+          72.31238072519083,
+          68.57895992366412,
+          68.60579675572517,
+          67.78351622137404,
+          68.66137881679388,
+          68.30617843511443,
+          67.80808683206101
+        ],
+        "median": 68.59237833969465
+      },
+      "cachedDirect": {
+        "samples": [
+          11.630605916030543,
+          6.436307251908355,
+          6.580510496183171,
+          6.349713740458014,
+          6.592318702290129,
+          6.393249045801514,
+          7.642771946564857,
+          6.707180343511417
+        ],
+        "median": 6.58641459923665
+      },
+      "cachedBounded": {
+        "samples": [
+          10.10281488549619,
+          7.470300572519094,
+          7.328005725190838,
+          7.349713740457989,
+          7.390505725190811,
+          7.554270038167889,
+          7.490935114503801,
+          7.393129770992357
+        ],
+        "median": 7.431715171755726
+      }
+    }
+  }
+}

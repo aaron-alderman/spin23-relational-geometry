@@ -1,0 +1,65 @@
+{
+  "proposalPlanSha256": "8fc10033c909fe8553231fef9e77a3e844bec58d01c08744e594c9ab5388e34d",
+  "candidates": [
+    "unchangedReference"
+  ],
+  "trainingCases": [
+    {
+      "targetRun": "CalibrationSample76_29jan2024_b_2",
+      "source": {
+        "file": "detector-timing-air-filter-transfer-result.json",
+        "sha256": "a6628b7dfd6e6eae4d1dd54c1b3b7be2c05e0636be34cc368a560aa8e1cd7a05"
+      },
+      "medianErrorsByBand": [
+        {
+          "bandIndex": 1,
+          "errors": {
+            "unchangedReference": 0.1162271407607301,
+            "translatedReference": 0.12905687800884127,
+            "earlySecondRunProfile": 0.11754411040703862
+          },
+          "bestPolicies": [
+            "unchangedReference"
+          ]
+        }
+      ]
+    },
+    {
+      "targetRun": "Filter_UV2404_5feb2024",
+      "source": {
+        "file": "detector-timing-field-filter-result.json",
+        "sha256": "fd2399e6ea21ad04674be029e7323d07a00ac0598ec582c0be09bd367484b6cf"
+      },
+      "medianErrorsByBand": [
+        {
+          "bandIndex": 1,
+          "errors": {
+            "unchangedReference": 0.10593136871827694,
+            "translatedReference": 0.15463541223297916,
+            "earlySecondRunProfile": 0.14774429358416633
+          },
+          "bestPolicies": [
+            "unchangedReference"
+          ]
+        }
+      ]
+    }
+  ],
+  "origin": {
+    "archive": "https://doi.org/10.57804/0tjh-3b49",
+    "channels": [
+      1,
+      2
+    ],
+    "referencePlan": {
+      "file": "detector-timing-air-filter-transfer-plan.json",
+      "sha256": "ff904f7b048622bd8aa7269a3e1213d26488ab0223c6d81ed898f0b709a6dbe2"
+    },
+    "favoredPolicy": "unchangedReference"
+  },
+  "applicability": {
+    "minimumNetWidePairsPerBlock": 50,
+    "numericProfileRequiresOriginalReadout": true
+  },
+  "authority": "The dense training results share one detector array. A winning operation is a candidate, and its numeric profile remains scoped to its readout. The second archive gives new signed comparisons on previously measured sources. Net-count floors are inherited screen parameters, not confidence bounds or inferred constants."
+}

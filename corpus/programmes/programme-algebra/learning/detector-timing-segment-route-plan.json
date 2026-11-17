@@ -1,0 +1,36 @@
+{
+  "calibrationPlan": {
+    "file": "detector-timing-background-plan.json",
+    "sha256": "1ba36f5906312d15e89969a765873f8456ef1ed62415317a3d37e300d428c8ad"
+  },
+  "frozenCalibration": {
+    "file": "detector-timing-background-calibration.json",
+    "sha256": "ddc23ef583327879044341f4a0b013c68d42c8aa76bfe0e493e8e7589e421a68"
+  },
+  "segmentLesson": {
+    "file": "detector-timing-segment-fit-result.json",
+    "sha256": "2dacd019fe84be7f36826051d6f8dff2a69c9766439c1a6072e4e75dfb060732"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2025-324/1/data/measurements/unshielded_background",
+  "targetSettings": {
+    "file": "unshielded5-settings.xml",
+    "sha256": "0ae558a54309f67a00804f565f502d3b9fce7a97d462c6265e3c5190c5a6e286"
+  },
+  "targetInfo": {
+    "file": "unshielded5-info.txt",
+    "sha256": "abadb77521e76d9aa84a68bf27a32d5b40c01c6c9dcacdb3e5b810acdaf89717"
+  },
+  "target": {
+    "id": "background_5",
+    "fileBytes": 1873184852,
+    "treeEntries": 258846380,
+    "tree": "Data",
+    "relativePath": "background_5/UNFILTERED/SData_background_5.root"
+  },
+  "entryStarts": [1000000, 4000000, 7000000, 10000000, 13000000, 16000000, 19000000, 22000000],
+  "entriesPerWindow": 2800000,
+  "comparison": "segment-routing",
+  "segmentRouting": {"segmentsPerFitBlock": 16, "segmentSeconds": 10, "draws": 2048, "seed": 20250715},
+  "design": "Take the first 1600 seconds of each declared slice. The first two 160-second blocks are the shared fit, followed by two validation blocks of the same duration. Use fixed ten-second segments and exact net support matching the short fit from the third block. Use the medians from 2048 uniform subset draws and the frozen 4.43-point tolerance to make a diagnostic choice. Select the first window and lowest-energy band where the supported choices differ. Freeze both choices before forming late pairs. Keep all eligible agreements and count refusals in the screen.",
+  "boundary": "The fifth background run is a new acquisition on the same readout. The selected comparison is conditional on an early disagreement and supplies no unconditional effect estimate. Matched whole-segment resampling retains shared-pulse structure inside segments and remains conditional on the observed early blocks."
+}

@@ -1,0 +1,28 @@
+{
+  "trainingTransferPlan": {
+    "file": "detector-timing-air-filter-transfer-plan.json",
+    "sha256": "ff904f7b048622bd8aa7269a3e1213d26488ab0223c6d81ed898f0b709a6dbe2"
+  },
+  "trainingArrayPlan": {
+    "file": "detector-timing-air-filter-alternate-plan.json",
+    "sha256": "c2bea28f52bcb72c6b9a86211cf4ac556f95d6ac01b80a57a7f1643af5792318"
+  },
+  "trainingResults": [
+    {
+      "file": "detector-timing-air-filter-transfer-result.json",
+      "sha256": "a6628b7dfd6e6eae4d1dd54c1b3b7be2c05e0636be34cc368a560aa8e1cd7a05"
+    },
+    {
+      "file": "detector-timing-field-filter-result.json",
+      "sha256": "fd2399e6ea21ad04674be029e7323d07a00ac0598ec582c0be09bd367484b6cf"
+    }
+  ],
+  "trainingArchive": "https://doi.org/10.57804/0tjh-3b49",
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "holdoutSources": ["na22", "bi207"],
+  "design": "For each measured training run, verify per-band score coverage and compute median errors from held blocks. Keep the intersection of lowest-median policies across scored bands and runs. For the holdout, retain the operation and use the local cobalt profiles, with the inherited control shifts, band definitions and support floors. Sodium and bismuth have prior unsigned results, but neither was scored by the signed profile fit. Compare unchanged reference and early-data adaptations on supported matched blocks; record count refusals first.",
+  "boundary": "The dense training results share one detector array. A winning operation is a candidate, and its numeric profile remains scoped to its readout. The second archive gives new signed comparisons on previously measured sources. Net-count floors are inherited screen parameters, not confidence bounds or inferred constants."
+}

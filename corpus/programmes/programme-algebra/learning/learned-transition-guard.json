@@ -1,0 +1,35 @@
+{
+  "id": "AZ-121-to-AZ-122",
+  "authority": "Finite numerical model. Material calibration and physical realization remain open.",
+  "journeySha256": "21f225ec9ceaa205f30633bbcc08e8121029585e4f06ca1cf390d631b04854e6",
+  "guard": {
+    "outputType": "finite-window-event-probability",
+    "requireBridgeForTypeChange": true,
+    "requireBridgeInputs": true
+  },
+  "origin": {
+    "failure": "AZ-121",
+    "repair": "AZ-122",
+    "demonstratedBridge": "normalized-state-projection"
+  },
+  "evidence": [
+    {
+      "path": "corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md",
+      "sha256": "42f0988bc240e308d54b80e095cc0a75225578383db4342968dc957dbc718daf"
+    },
+    {
+      "path": "corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md",
+      "sha256": "42948ba4d7c9d64689335a38055aa109fe124bbf46f9553e98ab2c5b3439cbb9"
+    },
+    {
+      "path": "evidence/data/ssh-wavepacket-phonon-capture-gate-v1.json",
+      "sha256": "f68114fe737c764183b8d0e97102238d8d6579b0684e1780798abd5a43246256"
+    }
+  ],
+  "observed": {
+    "time": 60,
+    "probability": 0.0010892760898951886,
+    "relativeRefinementChange": 0.002580579590521182,
+    "reverseProbability": 5.126502313839884e-21
+  }
+}

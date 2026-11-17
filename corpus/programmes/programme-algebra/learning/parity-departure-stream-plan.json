@@ -1,0 +1,8 @@
+{
+  "thresholdPlanSha256": "69ff138a320681679960acc04cbc5b21379cb1c17c927fc6167e47d82fed62a7",
+  "thresholdReplaySha256": "3a100ec1575a788cc8818295d5cf2862904d9db8002102764f88aef7120ce77c",
+  "schedule": "endpoint-first",
+  "stream": "For each horizon and starting label, query 1, ceil(denominator/2), the denominator, 1 again, the middle threshold again, then every unasked threshold alternating the smallest and largest remaining value. Interleave the six contexts in round-robin order.",
+  "store": "Keep the live scan cursor, confirmed departures, and confirmed absences for each exact trace, horizon, starting label, window tuple and scan order. Changing just the threshold reuses that state's bounds. A second query may return without advancing the cursor.",
+  "control": "Run each request starting cold with the same endpoint-first early-stopping scan. Require both answers to agree with the archived full count. Independently check every returned certificate's witnesses and complete absences. Count post-start label inspections only."
+}

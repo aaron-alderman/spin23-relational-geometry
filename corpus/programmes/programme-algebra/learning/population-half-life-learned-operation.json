@@ -1,0 +1,33 @@
+{
+  "id": "population-half-life/constant-hazard-survival",
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json",
+        "sha256": "b715cd1307c990c47186ea07067df7136a8638d562b293887d34c4995ea464eb"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json",
+        "sha256": "e8c1a7dc0f484ff189ccbfde9257913eb890f246512c3434e96e0130978040e7"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+        "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+      }
+    ],
+    "observation": "The two iron-57 level records retain the measured or evaluated population half-life alongside its derived mean lifetime."
+  },
+  "operation": {
+    "bridge": "constant-hazard-survival",
+    "inputType": "measured-population-half-life",
+    "outputType": "finite-window-event-probability",
+    "requires": ["populationHalfLife", "timeSeconds", "survivalModel"],
+    "conditions": {
+      "survivalModel": "constant-total-hazard",
+      "regime": "unperturbed-intrinsic-decay",
+      "eventType": "any-exit-from-prepared-state"
+    },
+    "calculation": "Divide the population half-life and its reported uncertainty by ln(2) in consistent units, then evaluate the existing constant-hazard survival kernel."
+  },
+  "limits": "The half-life must describe the total population of the prepared state. A branch-specific rate or driven loss does not establish that input. Mean lifetime and half-life representations of one measurement supply one evidence family."
+}

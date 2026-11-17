@@ -1,0 +1,335 @@
+{
+  "manifestSha256": "767d5ae930a213c22571b76164960b23fc7a566672a220b2413c2142372f77ad",
+  "contexts": 8,
+  "grammar": [
+    "first",
+    "last",
+    "any",
+    "all",
+    "odd",
+    "majority"
+  ],
+  "results": {
+    "withDelft": {
+      "exactEndpoints": {
+        "survivors": [
+          "last"
+        ],
+        "marginals": {
+          "possible": [
+            0.5
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "last"
+            }
+          ]
+        },
+        "suppliedJoint": {
+          "possible": [
+            0.5
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "last"
+            }
+          ]
+        }
+      },
+      "exactDepartures": {
+        "survivors": [
+          "any"
+        ],
+        "marginals": {
+          "possible": [
+            0.5,
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "any"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            }
+          ]
+        },
+        "suppliedJoint": {
+          "possible": [
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            }
+          ]
+        }
+      }
+    },
+    "omitDelft": {
+      "exactEndpoints": {
+        "survivors": [
+          "first",
+          "last",
+          "any",
+          "all",
+          "odd",
+          "majority"
+        ],
+        "marginals": {
+          "possible": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "first"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "odd"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            }
+          ]
+        },
+        "suppliedJoint": {
+          "possible": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "first"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "all"
+            }
+          ]
+        }
+      },
+      "exactDepartures": {
+        "survivors": [
+          "first",
+          "last",
+          "any",
+          "all",
+          "odd",
+          "majority"
+        ],
+        "marginals": {
+          "possible": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "first"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1
+                ]
+              ],
+              "rule": "odd"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            }
+          ]
+        },
+        "suppliedJoint": {
+          "possible": [
+            0.0,
+            0.5,
+            1.0
+          ],
+          "witnesses": [
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "first"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "any"
+            },
+            {
+              "population": [
+                [
+                  0,
+                  1
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "rule": "all"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "scope": "Exact for two equally weighted members. Intermediate mixtures fill the interval for arbitrary population weights."
+}

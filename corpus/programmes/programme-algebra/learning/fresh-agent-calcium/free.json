@@ -1,0 +1,19 @@
+{
+  "id": "AZ-127-calcium-40-D5/2-free-250ms",
+  "question": "A single trapped calcium-40 ion starts in 3d 2D5/2. What is the probability it leaves this level within 250 ms during unperturbed free evolution?",
+  "source": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+  "targetType": "finite-window-event-probability",
+  "facts": {
+    "event": "any intrinsic decay out of the prepared 3d 2D5/2 level",
+    "eventType": "any-exit-from-prepared-state",
+    "regime": "unperturbed-intrinsic-decay",
+    "timeSeconds": 0.25,
+    "survivalModel": "constant-total-hazard",
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 1.168,
+      "reportedUncertaintySeconds": 0.007,
+      "source": "https://arxiv.org/abs/physics/0002026"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "streamReplaySha256": "88478d8a020de4d288fd15e17c198ce75f936b4848835f4ec45ad74b3ee5d0b2",
+  "thresholdPlanSha256": "69ff138a320681679960acc04cbc5b21379cb1c17c927fc6167e47d82fed62a7",
+  "parityPlanSha256": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa",
+  "schedule": "endpoint-first",
+  "sourceQuestion": "For each existing horizon and starting label, ask for at least half the original windows rounded up. Retain only the individual post-start labels inspected by that answer.",
+  "targetQuestions": "Shift the origin of the nonoverlapping windows by one base sample or by half a horizon. Recompute the starting-label denominator. Ask every integer threshold from one through that denominator, each starting with only the source question's inspected labels.",
+  "policies": {
+    "fresh": "Run the endpoint-first early-stopping scan with no prior sample observations.",
+    "memoized": "Keep the same scan order and consult the source observations at each label lookup.",
+    "indexed": "Use the source observations to certify an away sample within a new window or verify that its entire post-start interval is covered. Scan only the remaining uncertainty with the same memoized reader."
+  },
+  "controls": "Compare all decisions to independently counted events in the shifted windows. Check every witness and complete absence. Refuse a sample cache from another immutable trace. Count new post-start label reads, logical probes, and seed-window checks separately."
+}

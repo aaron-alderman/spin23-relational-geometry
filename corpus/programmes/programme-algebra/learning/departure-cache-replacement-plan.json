@@ -1,0 +1,19 @@
+{
+  "capacityPlanSha256": "0bc6724a4a3bf1fae2c8a763eea460acd87d37d5b9e8ca83f1f84df592cdc4af",
+  "capacityReplaySha256": "0aff5dbcb0e774b7f8cfbcd89f9bc5e09b71fe833b4ac2a1c31fe27c42f14799",
+  "capacities": [512, 2048, 8192],
+  "routes": ["partition", "alternating"],
+  "oldestCandidates": 4,
+  "replacement": {
+    "recency": "Evict the least recently used verified entry.",
+    "encoded-cost": "Among the four least recent entries, evict the one with the smallest encoded read cost. Break ties by recency.",
+    "dependency-cost": "Use the same four-entry shortlist. For a change block, add the cost of reloading its directory page if that page is absent. Use encoded cost alone for other entries."
+  },
+  "orders": {
+    "reference": "Reuse the archived round-robin order to verify the baseline.",
+    "reverse-thresholds": "Keep the same context rotation, with descending thresholds within each context.",
+    "fixed-permutation": "Order by SHA-256 of each question key, prefixed with the declared salt, then by question key."
+  },
+  "permutationSalt": "departure-cache-replacement/held-v1",
+  "criterion": "Freeze the shortlist size and costs before replaying the new orders. Use the same questions, verification routines, routing rules and capacity. Compare encoded bytes, rereads and correctness. The held orders are new orderings of the two archived traces."
+}

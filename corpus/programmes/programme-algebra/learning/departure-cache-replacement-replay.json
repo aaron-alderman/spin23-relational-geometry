@@ -1,0 +1,2418 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-replacement-plan.json",
+      "sha256": "467d5de6ac7a5a7b0b8f03dc3f409628fa31b13ac6f921bf5219eabaa98d797f"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-capacity-plan.json",
+      "sha256": "0bc6724a4a3bf1fae2c8a763eea460acd87d37d5b9e8ca83f1f84df592cdc4af"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-capacity-replay.json",
+      "sha256": "0aff5dbcb0e774b7f8cfbcd89f9bc5e09b71fe833b4ac2a1c31fe27c42f14799"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-partition-prepared.json",
+      "sha256": "517e51101e27752381753a3b7b1f708fc9e0115711cf25d633b060c7b5d691cb"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-prepared.json",
+      "sha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-replay.json",
+      "sha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-partition-plan.json",
+      "sha256": "f9e2d37d0dddfdad92f292482b72ae108ef887e8457c5920ecfbd5745f32c781"
+    }
+  ],
+  "heldComparison": {
+    "encoded-cost": {
+      "better": 8,
+      "equal": 12,
+      "worse": 4,
+      "totalAdditionalBytes": -18728,
+      "largestSavings": 4176,
+      "largestPenalty": 2474
+    },
+    "dependency-cost": {
+      "better": 8,
+      "equal": 12,
+      "worse": 4,
+      "totalAdditionalBytes": -17946,
+      "largestSavings": 4176,
+      "largestPenalty": 2474
+    }
+  },
+  "traces": [
+    {
+      "trace": "parity",
+      "streams": [
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 11610,
+              "readBytes": {
+                "packed": 10550,
+                "root": 276,
+                "directory": 760,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 9924,
+                "directory": 684,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced directory": 10,
+                "packed displaced packed": 585,
+                "directory displaced packed": 46,
+                "packed displaced changes": 9
+              },
+              "peakCacheWeight": 506
+            },
+            "encoded-cost": {
+              "totalBytes": 12576,
+              "readBytes": {
+                "packed": 12200,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11574,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 740,
+                "packed displaced changes": 10
+              },
+              "peakCacheWeight": 502
+            },
+            "dependency-cost": {
+              "totalBytes": 12576,
+              "readBytes": {
+                "packed": 12200,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11574,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 740,
+                "packed displaced changes": 10
+              },
+              "peakCacheWeight": 502
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 966,
+            "dependency-cost": 966
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 11038,
+              "readBytes": {
+                "packed": 10054,
+                "root": 276,
+                "directory": 684,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 9428,
+                "directory": 608,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 560,
+                "packed displaced directory": 9,
+                "directory displaced packed": 40,
+                "packed displaced changes": 7
+              },
+              "peakCacheWeight": 507
+            },
+            "encoded-cost": {
+              "totalBytes": 13512,
+              "readBytes": {
+                "packed": 13136,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 12510,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 802,
+                "packed displaced changes": 13
+              },
+              "peakCacheWeight": 503
+            },
+            "dependency-cost": {
+              "totalBytes": 13512,
+              "readBytes": {
+                "packed": 13136,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 12510,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 802,
+                "packed displaced changes": 13
+              },
+              "peakCacheWeight": 503
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 2474,
+            "dependency-cost": 2474
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 10380,
+              "readBytes": {
+                "packed": 9300,
+                "root": 276,
+                "directory": 684,
+                "changes": 120
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 8674,
+                "directory": 608,
+                "changes": 96
+              },
+              "evictions": {
+                "changes displaced packed": 6,
+                "packed displaced packed": 518,
+                "packed displaced directory": 8,
+                "packed displaced changes": 11,
+                "directory displaced packed": 40,
+                "changes displaced changes": 4
+              },
+              "peakCacheWeight": 509
+            },
+            "encoded-cost": {
+              "totalBytes": 12092,
+              "readBytes": {
+                "packed": 11716,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11090,
+                "changes": 0
+              },
+              "evictions": {
+                "changes displaced packed": 1,
+                "packed displaced packed": 714,
+                "packed displaced changes": 12
+              },
+              "peakCacheWeight": 503
+            },
+            "dependency-cost": {
+              "totalBytes": 12092,
+              "readBytes": {
+                "packed": 11716,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11090,
+                "changes": 0
+              },
+              "evictions": {
+                "changes displaced packed": 1,
+                "packed displaced packed": 714,
+                "packed displaced changes": 12
+              },
+              "peakCacheWeight": 503
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 1712,
+            "dependency-cost": 1712
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "dependency-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "replacement": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "dependency-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        }
+      ]
+    },
+    {
+      "trace": "delft",
+      "streams": [
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 86,
+                "directory displaced changes": 87,
+                "changes displaced changes": 268,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 121323,
+              "readBytes": {
+                "packed": 59504,
+                "root": 639,
+                "directory": 22420,
+                "changes": 38760
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 46000,
+                "directory": 20786,
+                "changes": 30672
+              },
+              "evictions": {
+                "changes displaced packed": 209,
+                "changes displaced directory": 49,
+                "packed displaced changes": 16,
+                "packed displaced packed": 3231,
+                "directory displaced packed": 279,
+                "directory displaced changes": 46,
+                "changes displaced changes": 135,
+                "directory displaced directory": 14,
+                "packed displaced directory": 12
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 117307,
+              "readBytes": {
+                "packed": 59440,
+                "root": 639,
+                "directory": 19380,
+                "changes": 37848
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45936,
+                "directory": 17746,
+                "changes": 29760
+              },
+              "evictions": {
+                "changes displaced packed": 31,
+                "changes displaced directory": 47,
+                "packed displaced packed": 3616,
+                "directory displaced packed": 51,
+                "directory displaced changes": 62,
+                "changes displaced changes": 127,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 117307,
+              "readBytes": {
+                "packed": 59440,
+                "root": 639,
+                "directory": 19380,
+                "changes": 37848
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45936,
+                "directory": 17746,
+                "changes": 29760
+              },
+              "evictions": {
+                "changes displaced packed": 31,
+                "changes displaced directory": 47,
+                "packed displaced packed": 3616,
+                "directory displaced packed": 51,
+                "directory displaced changes": 62,
+                "changes displaced changes": 127,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -4016,
+            "dependency-cost": -4016
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 75639,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 62004
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 53916,
+                "directory": 11362
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 238,
+                "changes displaced directory": 41,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 72347,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 7220,
+                "changes": 64488
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56400,
+                "directory": 5586
+              },
+              "evictions": {
+                "directory displaced changes": 41,
+                "changes displaced changes": 286,
+                "changes displaced directory": 21
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 72347,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 7220,
+                "changes": 64488
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56400,
+                "directory": 5586
+              },
+              "evictions": {
+                "directory displaced changes": 41,
+                "changes displaced changes": 286,
+                "changes displaced directory": 21
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3292,
+            "dependency-cost": -3292
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 103851,
+              "readBytes": {
+                "packed": 57376,
+                "root": 639,
+                "directory": 8740,
+                "changes": 37096
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 7106,
+                "changes": 29008,
+                "packed": 43872
+              },
+              "evictions": {
+                "packed displaced directory": 13,
+                "packed displaced changes": 48,
+                "packed displaced packed": 2642,
+                "directory displaced packed": 236,
+                "changes displaced packed": 608,
+                "directory displaced changes": 30,
+                "changes displaced changes": 111,
+                "changes displaced directory": 16,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 101915,
+              "readBytes": {
+                "packed": 59168,
+                "root": 639,
+                "directory": 4180,
+                "changes": 37928
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45664,
+                "changes": 29840,
+                "directory": 2546
+              },
+              "evictions": {
+                "packed displaced packed": 3003,
+                "changes displaced packed": 606,
+                "directory displaced packed": 33,
+                "directory displaced changes": 22,
+                "changes displaced changes": 131,
+                "packed displaced changes": 40,
+                "changes displaced directory": 6,
+                "packed displaced directory": 5,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 101915,
+              "readBytes": {
+                "packed": 59168,
+                "root": 639,
+                "directory": 4180,
+                "changes": 37928
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45664,
+                "changes": 29840,
+                "directory": 2546
+              },
+              "evictions": {
+                "packed displaced packed": 3003,
+                "changes displaced packed": 606,
+                "directory displaced packed": 33,
+                "directory displaced changes": 22,
+                "changes displaced changes": 131,
+                "packed displaced changes": 40,
+                "changes displaced directory": 6,
+                "packed displaced directory": 5,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -1936,
+            "dependency-cost": -1936
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 35327,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4788,
+                "changes": 29900
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 3154,
+                "changes": 21812
+              },
+              "evictions": {
+                "changes displaced directory": 13,
+                "changes displaced changes": 104,
+                "directory displaced changes": 13
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 31347,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 28960
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 20872,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 114,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8186
+            },
+            "dependency-cost": {
+              "totalBytes": 33795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1634,
+                "changes": 31522
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 23434
+              },
+              "evictions": {
+                "changes displaced changes": 127,
+                "directory displaced changes": 1,
+                "changes displaced directory": 1
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3980,
+            "dependency-cost": -1532
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 90825,
+              "readBytes": {
+                "packed": 53408,
+                "root": 639,
+                "directory": 6916,
+                "changes": 29862
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 39904,
+                "directory": 5282,
+                "changes": 21774
+              },
+              "evictions": {
+                "packed displaced packed": 1403,
+                "packed displaced directory": 18,
+                "packed displaced changes": 115,
+                "directory displaced changes": 7,
+                "changes displaced changes": 30,
+                "changes displaced packed": 1191,
+                "directory displaced packed": 266,
+                "directory displaced directory": 3,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 86441,
+              "readBytes": {
+                "packed": 53408,
+                "root": 639,
+                "directory": 2964,
+                "changes": 29430
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 39904,
+                "changes": 21342,
+                "directory": 1330
+              },
+              "evictions": {
+                "packed displaced packed": 1555,
+                "packed displaced changes": 119,
+                "changes displaced changes": 29,
+                "changes displaced packed": 1248,
+                "directory displaced packed": 95,
+                "packed displaced directory": 6,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8192
+            },
+            "dependency-cost": {
+              "totalBytes": 86441,
+              "readBytes": {
+                "packed": 53408,
+                "root": 639,
+                "directory": 2964,
+                "changes": 29430
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 39904,
+                "changes": 21342,
+                "directory": 1330
+              },
+              "evictions": {
+                "packed displaced packed": 1555,
+                "packed displaced changes": 119,
+                "changes displaced changes": 29,
+                "changes displaced packed": 1248,
+                "directory displaced packed": 95,
+                "packed displaced directory": 6,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -4384,
+            "dependency-cost": -4384
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 86,
+                "directory displaced changes": 87,
+                "changes displaced changes": 268,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 121035,
+              "readBytes": {
+                "packed": 59520,
+                "root": 639,
+                "directory": 22116,
+                "changes": 38760
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 46016,
+                "directory": 20482,
+                "changes": 30672
+              },
+              "evictions": {
+                "packed displaced packed": 3231,
+                "directory displaced packed": 279,
+                "changes displaced packed": 209,
+                "changes displaced directory": 49,
+                "packed displaced changes": 15,
+                "directory displaced changes": 46,
+                "changes displaced changes": 136,
+                "directory displaced directory": 14,
+                "packed displaced directory": 11
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 117275,
+              "readBytes": {
+                "packed": 59408,
+                "root": 639,
+                "directory": 19380,
+                "changes": 37848
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45904,
+                "directory": 17746,
+                "changes": 29760
+              },
+              "evictions": {
+                "packed displaced packed": 3599,
+                "directory displaced packed": 70,
+                "changes displaced packed": 43,
+                "changes displaced directory": 47,
+                "directory displaced changes": 62,
+                "changes displaced changes": 127,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 117275,
+              "readBytes": {
+                "packed": 59408,
+                "root": 639,
+                "directory": 19380,
+                "changes": 37848
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 45904,
+                "directory": 17746,
+                "changes": 29760
+              },
+              "evictions": {
+                "packed displaced packed": 3599,
+                "directory displaced packed": 70,
+                "changes displaced packed": 43,
+                "changes displaced directory": 47,
+                "directory displaced changes": 62,
+                "changes displaced changes": 127,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3760,
+            "dependency-cost": -3760
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 75271,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 61636
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 11362,
+                "changes": 53548
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 236,
+                "changes displaced directory": 41,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 72819,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 7220,
+                "changes": 64960
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 5586,
+                "changes": 56872
+              },
+              "evictions": {
+                "directory displaced changes": 41,
+                "changes displaced changes": 288,
+                "changes displaced directory": 21
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 72819,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 7220,
+                "changes": 64960
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 5586,
+                "changes": 56872
+              },
+              "evictions": {
+                "directory displaced changes": 41,
+                "changes displaced changes": 288,
+                "changes displaced directory": 21
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -2452,
+            "dependency-cost": -2452
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 102679,
+              "readBytes": {
+                "packed": 56736,
+                "root": 639,
+                "directory": 8436,
+                "changes": 36868
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 43232,
+                "directory": 6802,
+                "changes": 28780
+              },
+              "evictions": {
+                "packed displaced packed": 2672,
+                "directory displaced packed": 236,
+                "changes displaced packed": 608,
+                "packed displaced directory": 10,
+                "packed displaced changes": 43,
+                "directory displaced changes": 30,
+                "changes displaced changes": 111,
+                "changes displaced directory": 16,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 100203,
+              "readBytes": {
+                "packed": 58368,
+                "root": 639,
+                "directory": 4180,
+                "changes": 37016
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 44864,
+                "changes": 28928,
+                "directory": 2546
+              },
+              "evictions": {
+                "packed displaced packed": 3003,
+                "directory displaced packed": 52,
+                "changes displaced packed": 573,
+                "directory displaced changes": 22,
+                "changes displaced changes": 131,
+                "packed displaced changes": 34,
+                "changes displaced directory": 6,
+                "packed displaced directory": 5,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 100203,
+              "readBytes": {
+                "packed": 58368,
+                "root": 639,
+                "directory": 4180,
+                "changes": 37016
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 44864,
+                "changes": 28928,
+                "directory": 2546
+              },
+              "evictions": {
+                "packed displaced packed": 3003,
+                "directory displaced packed": 52,
+                "changes displaced packed": 573,
+                "directory displaced changes": 22,
+                "changes displaced changes": 131,
+                "packed displaced changes": 34,
+                "changes displaced directory": 6,
+                "packed displaced directory": 5,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -2476,
+            "dependency-cost": -2476
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 31989,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4180,
+                "changes": 27170
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 19082,
+                "directory": 2546
+              },
+              "evictions": {
+                "changes displaced changes": 94,
+                "changes displaced directory": 9,
+                "directory displaced changes": 11
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 28281,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 25894
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 17806,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 99,
+                "directory displaced changes": 2,
+                "changes displaced directory": 1
+              },
+              "peakCacheWeight": 8188
+            },
+            "dependency-cost": {
+              "totalBytes": 28247,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1634,
+                "changes": 25974
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 17886
+              },
+              "evictions": {
+                "changes displaced changes": 100,
+                "directory displaced changes": 1,
+                "changes displaced directory": 1
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3708,
+            "dependency-cost": -3742
+          }
+        },
+        {
+          "order": "reverse-thresholds",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 89505,
+              "readBytes": {
+                "packed": 53568,
+                "root": 639,
+                "directory": 6612,
+                "changes": 28686
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 40064,
+                "directory": 4978,
+                "changes": 20598
+              },
+              "evictions": {
+                "packed displaced packed": 1665,
+                "directory displaced packed": 280,
+                "changes displaced packed": 1200,
+                "packed displaced directory": 11,
+                "packed displaced changes": 79,
+                "directory displaced changes": 10,
+                "changes displaced changes": 37,
+                "changes displaced directory": 6,
+                "directory displaced directory": 3
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 89519,
+              "readBytes": {
+                "packed": 55568,
+                "root": 639,
+                "directory": 2356,
+                "changes": 30956
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 42064,
+                "changes": 22868,
+                "directory": 722
+              },
+              "evictions": {
+                "packed displaced packed": 1887,
+                "directory displaced packed": 114,
+                "changes displaced packed": 1307,
+                "packed displaced changes": 87,
+                "changes displaced changes": 50,
+                "packed displaced directory": 1,
+                "directory displaced changes": 2,
+                "changes displaced directory": 3
+              },
+              "peakCacheWeight": 8192
+            },
+            "dependency-cost": {
+              "totalBytes": 90383,
+              "readBytes": {
+                "packed": 55568,
+                "root": 639,
+                "directory": 2356,
+                "changes": 31820
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 42064,
+                "changes": 23732,
+                "directory": 722
+              },
+              "evictions": {
+                "packed displaced packed": 1887,
+                "directory displaced packed": 114,
+                "changes displaced packed": 1316,
+                "packed displaced changes": 87,
+                "changes displaced changes": 53,
+                "packed displaced directory": 1,
+                "directory displaced changes": 2,
+                "changes displaced directory": 3
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 14,
+            "dependency-cost": 878
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 105567,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69436
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61348
+              },
+              "evictions": {
+                "changes displaced directory": 85,
+                "directory displaced changes": 87,
+                "changes displaced changes": 267,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105567,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69436
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61348
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 117,
+                "changes displaced changes": 237,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 105567,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69436
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61348
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 117,
+                "changes displaced changes": 237,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 0,
+            "dependency-cost": 0
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 189748,
+              "readBytes": {
+                "packed": 114655,
+                "root": 639,
+                "directory": 27284,
+                "changes": 47170
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92730,
+                "directory": 25650,
+                "changes": 39082
+              },
+              "evictions": {
+                "packed displaced packed": 6724,
+                "directory displaced packed": 257,
+                "changes displaced packed": 187,
+                "changes displaced directory": 63,
+                "directory displaced changes": 61,
+                "packed displaced directory": 9,
+                "changes displaced changes": 165,
+                "directory displaced directory": 18,
+                "packed displaced changes": 13
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 185780,
+              "readBytes": {
+                "packed": 114639,
+                "root": 639,
+                "directory": 24244,
+                "changes": 46258
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92714,
+                "directory": 22610,
+                "changes": 38170
+              },
+              "evictions": {
+                "packed displaced packed": 7004,
+                "directory displaced packed": 108,
+                "changes displaced packed": 55,
+                "changes displaced directory": 61,
+                "directory displaced changes": 78,
+                "changes displaced changes": 152,
+                "directory displaced directory": 19,
+                "packed displaced changes": 5
+              },
+              "peakCacheWeight": 512
+            },
+            "dependency-cost": {
+              "totalBytes": 185780,
+              "readBytes": {
+                "packed": 114639,
+                "root": 639,
+                "directory": 24244,
+                "changes": 46258
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92714,
+                "directory": 22610,
+                "changes": 38170
+              },
+              "evictions": {
+                "packed displaced packed": 7004,
+                "directory displaced packed": 108,
+                "changes displaced packed": 55,
+                "changes displaced directory": 61,
+                "directory displaced changes": 78,
+                "changes displaced changes": 152,
+                "directory displaced directory": 19,
+                "packed displaced changes": 5
+              },
+              "peakCacheWeight": 512
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3968,
+            "dependency-cost": -3968
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 75271,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 61636
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 11362,
+                "changes": 53548
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 237,
+                "changes displaced directory": 41,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 72211,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 6612,
+                "changes": 64960
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56872,
+                "directory": 4978
+              },
+              "evictions": {
+                "directory displaced changes": 37,
+                "changes displaced changes": 293,
+                "changes displaced directory": 19
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 72211,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 6612,
+                "changes": 64960
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56872,
+                "directory": 4978
+              },
+              "evictions": {
+                "directory displaced changes": 37,
+                "changes displaced changes": 293,
+                "changes displaced directory": 19
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -3060,
+            "dependency-cost": -3060
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 170248,
+              "readBytes": {
+                "packed": 112143,
+                "root": 639,
+                "directory": 11172,
+                "changes": 46294
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 90218,
+                "directory": 9538,
+                "changes": 38206
+              },
+              "evictions": {
+                "packed displaced packed": 6039,
+                "directory displaced packed": 262,
+                "changes displaced packed": 639,
+                "directory displaced changes": 45,
+                "changes displaced changes": 140,
+                "changes displaced directory": 25,
+                "packed displaced changes": 48,
+                "packed displaced directory": 12
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 166072,
+              "readBytes": {
+                "packed": 113439,
+                "root": 639,
+                "directory": 5700,
+                "changes": 46294
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 91514,
+                "directory": 4066,
+                "changes": 38206
+              },
+              "evictions": {
+                "packed displaced packed": 6411,
+                "directory displaced packed": 52,
+                "changes displaced packed": 596,
+                "directory displaced changes": 31,
+                "changes displaced changes": 169,
+                "changes displaced directory": 12,
+                "packed displaced directory": 5,
+                "packed displaced changes": 33
+              },
+              "peakCacheWeight": 2048
+            },
+            "dependency-cost": {
+              "totalBytes": 166072,
+              "readBytes": {
+                "packed": 113439,
+                "root": 639,
+                "directory": 5700,
+                "changes": 46294
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 91514,
+                "directory": 4066,
+                "changes": 38206
+              },
+              "evictions": {
+                "packed displaced packed": 6411,
+                "directory displaced packed": 52,
+                "changes displaced packed": 596,
+                "directory displaced changes": 31,
+                "changes displaced changes": 169,
+                "changes displaced directory": 12,
+                "packed displaced directory": 5,
+                "packed displaced changes": 33
+              },
+              "peakCacheWeight": 2048
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -4176,
+            "dependency-cost": -4176
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 28351,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4788,
+                "changes": 22924
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 3154,
+                "changes": 14836
+              },
+              "evictions": {
+                "changes displaced directory": 13,
+                "changes displaced changes": 69,
+                "directory displaced changes": 13
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 29163,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 26776
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 18688,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 102,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8186
+            },
+            "dependency-cost": {
+              "totalBytes": 29163,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 26776
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 18688,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 102,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": 812,
+            "dependency-cost": 812
+          }
+        },
+        {
+          "order": "fixed-permutation",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "replacement": {
+            "recency": {
+              "totalBytes": 141936,
+              "readBytes": {
+                "packed": 100175,
+                "root": 639,
+                "directory": 7524,
+                "changes": 33598
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 78250,
+                "directory": 5890,
+                "changes": 25510
+              },
+              "evictions": {
+                "packed displaced packed": 4511,
+                "directory displaced packed": 266,
+                "changes displaced packed": 1031,
+                "changes displaced changes": 70,
+                "directory displaced directory": 4,
+                "directory displaced changes": 15,
+                "changes displaced directory": 10,
+                "packed displaced changes": 83,
+                "packed displaced directory": 11
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 141796,
+              "readBytes": {
+                "packed": 102351,
+                "root": 639,
+                "directory": 2356,
+                "changes": 36450
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 80426,
+                "changes": 28362,
+                "directory": 722
+              },
+              "evictions": {
+                "packed displaced packed": 4698,
+                "directory displaced packed": 133,
+                "changes displaced packed": 1151,
+                "changes displaced changes": 93,
+                "packed displaced changes": 91,
+                "changes displaced directory": 1,
+                "packed displaced directory": 5
+              },
+              "peakCacheWeight": 8192
+            },
+            "dependency-cost": {
+              "totalBytes": 141748,
+              "readBytes": {
+                "packed": 102303,
+                "root": 639,
+                "directory": 2356,
+                "changes": 36450
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 80378,
+                "changes": 28362,
+                "directory": 722
+              },
+              "evictions": {
+                "packed displaced packed": 4700,
+                "directory displaced packed": 133,
+                "changes displaced packed": 1146,
+                "changes displaced changes": 94,
+                "packed displaced changes": 90,
+                "changes displaced directory": 1,
+                "packed displaced directory": 5
+              },
+              "peakCacheWeight": 8192
+            }
+          },
+          "additionalBytesVersusRecency": {
+            "encoded-cost": -140,
+            "dependency-cost": -188
+          }
+        }
+      ]
+    }
+  ],
+  "authority": "Held orders permute the same archived questions. Costs are encoded read bytes under fixed route and capacity controls. The dependency estimate uses the directory page's current residence."
+}

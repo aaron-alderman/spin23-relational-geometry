@@ -1,0 +1,144 @@
+{
+  "evidenceFamily": "Iaia-et-al-non-Cu-chip-Figure4a",
+  "planSha256": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa",
+  "traceSha256": "0f8792b6dd27be7068cec66bbb29e2c6fba1932d80eff6776931ed782ae55148",
+  "samples": 5001,
+  "traceSeconds": 50.01,
+  "fullTraceTransitions": {
+    "lowToHigh": 6,
+    "highToLow": 6
+  },
+  "windows": [
+    {
+      "steps": 100,
+      "durationSeconds": 1.0002,
+      "byStartingLevel": [
+        {
+          "level": -0.303309088913506,
+          "startWindows": 19,
+          "firstObservedExits": 6,
+          "changedEndpoints": 6,
+          "observedDepartureThenInitialEndpoint": 0,
+          "firstObservedExitFraction": 0.3157894736842105,
+          "changedEndpointFraction": 0.3157894736842105,
+          "returnWitnesses": []
+        },
+        {
+          "level": 0.947692175241793,
+          "startWindows": 30,
+          "firstObservedExits": 6,
+          "changedEndpoints": 6,
+          "observedDepartureThenInitialEndpoint": 0,
+          "firstObservedExitFraction": 0.2,
+          "changedEndpointFraction": 0.2,
+          "returnWitnesses": []
+        }
+      ]
+    },
+    {
+      "steps": 250,
+      "durationSeconds": 2.5005,
+      "byStartingLevel": [
+        {
+          "level": -0.303309088913506,
+          "startWindows": 7,
+          "firstObservedExits": 4,
+          "changedEndpoints": 3,
+          "observedDepartureThenInitialEndpoint": 1,
+          "firstObservedExitFraction": 0.5714285714285714,
+          "changedEndpointFraction": 0.42857142857142855,
+          "returnWitnesses": [
+            {
+              "start": 753,
+              "firstDeparture": 801,
+              "firstReturn": 895,
+              "endpoint": 1003
+            }
+          ]
+        },
+        {
+          "level": 0.947692175241793,
+          "startWindows": 12,
+          "firstObservedExits": 5,
+          "changedEndpoints": 3,
+          "observedDepartureThenInitialEndpoint": 2,
+          "firstObservedExitFraction": 0.4166666666666667,
+          "changedEndpointFraction": 0.25,
+          "returnWitnesses": [
+            {
+              "start": 2008,
+              "firstDeparture": 2071,
+              "firstReturn": 2214,
+              "endpoint": 2258
+            },
+            {
+              "start": 2259,
+              "firstDeparture": 2267,
+              "firstReturn": 2430,
+              "endpoint": 2509
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "steps": 500,
+      "durationSeconds": 5.001,
+      "byStartingLevel": [
+        {
+          "level": -0.303309088913506,
+          "startWindows": 3,
+          "firstObservedExits": 2,
+          "changedEndpoints": 2,
+          "observedDepartureThenInitialEndpoint": 0,
+          "firstObservedExitFraction": 0.6666666666666666,
+          "changedEndpointFraction": 0.6666666666666666,
+          "returnWitnesses": []
+        },
+        {
+          "level": 0.947692175241793,
+          "startWindows": 6,
+          "firstObservedExits": 4,
+          "changedEndpoints": 2,
+          "observedDepartureThenInitialEndpoint": 2,
+          "firstObservedExitFraction": 0.6666666666666666,
+          "changedEndpointFraction": 0.3333333333333333,
+          "returnWitnesses": [
+            {
+              "start": 0,
+              "firstDeparture": 43,
+              "firstReturn": 300,
+              "endpoint": 500
+            },
+            {
+              "start": 2004,
+              "firstDeparture": 2071,
+              "firstReturn": 2214,
+              "endpoint": 2504
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "eventIdentityChallenge": {
+    "substitution": "Use first observed exit as a measurement of changed endpoint.",
+    "primaryWindowSteps": 500,
+    "counterexamples": 2,
+    "status": "rejected-on-decoded-trace",
+    "reuseBoundary": "Require an absorbing exit before treating the two event types as identical.",
+    "candidateOperation": {
+      "inputType": "ordered-resolved-state-observations",
+      "outputTypes": [
+        "first-observed-exit-frequency",
+        "changed-endpoint-frequency"
+      ],
+      "conditions": [
+        "known initial state per window",
+        "time-aligned, contiguous state samples"
+      ],
+      "calculation": "Count any sampled departure and a changed last sample separately, with the same denominator."
+    }
+  },
+  "authority": "Author-decoded figure excerpt selected by the study to illustrate coincident switching. It supports a path witness and descriptive counts. It cannot independently calibrate or validate stationary rates."
+}

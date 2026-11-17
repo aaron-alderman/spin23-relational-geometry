@@ -1,0 +1,127 @@
+{
+  "signature": {
+    "inputTypes": [
+      "finite-window-branch-probability",
+      "absolute-peak-acceptance"
+    ],
+    "outputType": "finite-window-registered-peak-probability"
+  },
+  "origin": {
+    "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+    "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+  },
+  "holdouts": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json",
+      "sha256": "ea970316b1e734a1d59643441fa3ca2c406463a570a8b3675b978553820fa462"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+      "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+    }
+  ],
+  "changedSourceProbability": true,
+  "status": "one-replay-survivor",
+  "results": [
+    {
+      "candidate": {
+        "expression": "product",
+        "scale": 1
+      },
+      "passed": true,
+      "maxAbsoluteError": 0,
+      "observations": [
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#BART.perTrial",
+          "expected": 0.00013124512749228232,
+          "prediction": 0.00013124512749228232,
+          "absoluteError": 0
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#LORAX.perTrial",
+          "expected": 0.0003022822064558747,
+          "prediction": 0.0003022822064558747,
+          "absoluteError": 0
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.nominal.perTrial",
+          "expected": 0.0008424147765740081,
+          "prediction": 0.0008424147765740081,
+          "absoluteError": 0
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.bound.perTrial",
+          "expected": 0.000833700638583318,
+          "prediction": 0.000833700638583318,
+          "absoluteError": 0
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.nominal.perTrial",
+          "expected": 0.002041579845788352,
+          "prediction": 0.002041579845788352,
+          "absoluteError": 0
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.bound.perTrial",
+          "expected": 0.002018709093425015,
+          "prediction": 0.002018709093425015,
+          "absoluteError": 0
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "expression": "acceptance-only",
+        "scale": 0.4693312327943803,
+        "fittedAt": "BART"
+      },
+      "passed": false,
+      "maxAbsoluteError": 0.0013591503576362313,
+      "observations": [
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#BART.perTrial",
+          "expected": 0.00013124512749228232,
+          "prediction": 0.0007213621048049626,
+          "absoluteError": 0.0005901169773126802
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#LORAX.perTrial",
+          "expected": 0.0003022822064558747,
+          "prediction": 0.0016614325640921062,
+          "absoluteError": 0.0013591503576362313
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.nominal.perTrial",
+          "expected": 0.0008424147765740081,
+          "prediction": 0.0007513993037038029,
+          "absoluteError": 0.00009101547287020519
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.bound.perTrial",
+          "expected": 0.000833700638583318,
+          "prediction": 0.0007462366601430647,
+          "absoluteError": 0.00008746397844025327
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.nominal.perTrial",
+          "expected": 0.002041579845788352,
+          "prediction": 0.0018210051832421958,
+          "absoluteError": 0.00022057466254615625
+        },
+        {
+          "at": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.bound.perTrial",
+          "expected": 0.002018709093425015,
+          "prediction": 0.0018069252462583644,
+          "absoluteError": 0.00021178384716665074
+        }
+      ]
+    }
+  ],
+  "survivors": [
+    {
+      "expression": "product",
+      "scale": 1
+    }
+  ],
+  "authority": "A held-out software replay check under the existing detector implementation. It supplies neither independent physical evidence nor a new admission."
+}

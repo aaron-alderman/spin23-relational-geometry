@@ -1,0 +1,32 @@
+{
+  "originalPlan": {
+    "file": "detector-timing-air-filter-plan.json",
+    "sha256": "154c800ef21bceac24e525aa0151b548c6a2dc1d2697d6d1592f31c7e6613a2c"
+  },
+  "alternatePlan": {
+    "file": "detector-timing-air-filter-alternate-plan.json",
+    "sha256": "c2bea28f52bcb72c6b9a86211cf4ac556f95d6ac01b80a57a7f1643af5792318"
+  },
+  "alternateScreen": {
+    "file": "detector-timing-air-filter-alternate-screen.json",
+    "sha256": "81da487e8110353a0cc612262ce25553537048a5156cb357a4d9f999f1e15335"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "entryStart": 1000000,
+  "entriesPerRun": 10000000,
+  "extendedPulseSha256": {
+    "CalibrationSample76_29jan2024_b": "f5368516963c3cb41433d486972b53ab9afbea0ebf5ac84e90c732eddb31327e",
+    "CalibrationSample76_29jan2024_b_1": "69fa0be808efc1f005b2ac319cc0f1de9ccf71c4b35fa1e60276a3b18f2e1792"
+  },
+  "minimumReferenceNetWidePairs": 100,
+  "design": {
+    "reference": "Use the first acquisition as reference. Set its signed coordinate origin to the maximum net 20 ns alignment histogram bin in each qualifying band. Ties prefer the bin closest to zero then the lower signed delay. Preserve the zero-centered wide reservoir.",
+    "selection": "Use channels and eligible bands from the pinned alternate screen. Read the selected interval immediately after the one-million-entry screen prefix. Exclude timestamps at or before the last observed screen timestamp. Use nonoverlapping target blocks across the remaining time span.",
+    "energyDomain": "Retain only pulses in the nonnegative calibrated energy domain of the inherited bands. The initial extended pairing stopped on pulses below the domain. Count the excluded pulses without changing the scored 50 to 150 keV band.",
+    "fit": "Score unchanged reference, early-target fitted translation and the complete early target profile by the inherited signed score. Keep the best shift selected after observing each late block as a diagnostic."
+  },
+  "boundary": "Two separately started runs on one spiked filter. The tested operation transfers to a second instrument and sample type. The fitted centers, templates and lags are specific to these acquisitions. Shifted-control subtraction yields signed net estimates."
+}

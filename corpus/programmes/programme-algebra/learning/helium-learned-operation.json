@@ -1,0 +1,66 @@
+{
+  "id": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+  "origin": {
+    "case": "AZ-127-helium-2tripletS1",
+    "parentLesson": "AZ-121-to-AZ-122",
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/az-127-helium.json",
+        "sha256": "c394657453cfc1a171e3f5e75e4297769c8f9c3c2d32748fbf25f874de82003f"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/learned-transition-guard.json",
+        "sha256": "f1dfaa12e9a40eaadc2f9b894460d309f81bf5333ee51ef3269edfb0b860d39a"
+      },
+      {
+        "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+        "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+      },
+      {
+        "path": "corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md",
+        "sha256": "42f0988bc240e308d54b80e095cc0a75225578383db4342968dc957dbc718daf"
+      },
+      {
+        "path": "corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md",
+        "sha256": "42948ba4d7c9d64689335a38055aa109fe124bbf46f9553e98ab2c5b3439cbb9"
+      },
+      {
+        "path": "evidence/data/ssh-wavepacket-phonon-capture-gate-v1.json",
+        "sha256": "f68114fe737c764183b8d0e97102238d8d6579b0684e1780798abd5a43246256"
+      }
+    ],
+    "measuredLifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 7870,
+      "reportedUncertaintySeconds": 510,
+      "source": "https://doi.org/10.1103/PhysRevLett.103.053002"
+    },
+    "observed": {
+      "timeSeconds": 600,
+      "probability": 0.07340516654980762,
+      "reference": {
+        "quantity": "nominal finite-window probability",
+        "referenceIntegrandEvaluations": 430,
+        "closedFormExponentialEvaluations": 1,
+        "referenceAbsoluteTolerance": 1e-10,
+        "observedAbsoluteDifference": 9.614607721086799e-11
+      }
+    }
+  },
+  "operation": {
+    "bridge": "constant-hazard-survival",
+    "inputType": "measured-intrinsic-lifetime",
+    "outputType": "finite-window-event-probability",
+    "requires": [
+      "lifetime",
+      "timeSeconds",
+      "survivalModel"
+    ],
+    "conditions": {
+      "survivalModel": "constant-total-hazard",
+      "regime": "unperturbed-intrinsic-decay",
+      "eventType": "any-exit-from-prepared-state"
+    }
+  },
+  "limits": "Supply a lifetime for the new system and condition. A driven exit, a specific decay branch, or detector counts require additional evidence."
+}

@@ -1,0 +1,29 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "carriedTransferPlan": {
+    "file": "detector-timing-field-filter-plan.json",
+    "sha256": "15cd0682658b6866e661b808ff7f0910006931da340fcea8aada2120a39e752c"
+  },
+  "carriedForecast": {
+    "file": "detector-timing-field-filter-frozen.json",
+    "sha256": "7d158684ba1e30f8f794a7524e032e23ae764e4dab25b87f03b5e31c8e51f167"
+  },
+  "routingLesson": {
+    "file": "detector-timing-routing-result.json",
+    "sha256": "4f75fa5d86c2a168aeabcc26c20bdc103089ccf1948bcb0bfe279bb7a862890c"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/sample",
+  "target": {
+    "id": "Filter_UV2404_5feb2024_1",
+    "fileBytes": 1048836753,
+    "treeEntries": 145147500,
+    "infoSha256": "e4eb43a3aa0b8240defb2e3435d61e471c6958f8ff9ed52affd5a44534e158f6",
+    "settingsSha256": "f416dc1ca08f3b96d124f1ac395d33d665eac96c953f08842ea916cfd7108948"
+  },
+  "firstFourCutFractions": [0.1, 0.2, 0.3, 0.4],
+  "design": "Use the same field-filter reference and fixed pulse slice on the next separately started acquisition. Compare early local versus reference error using two nonoverlapping fit-validation pairs of 10 percent blocks. Require both comparisons to favor local and all four blocks to clear the inherited count floor. The single-trial benchmark pools adjacent early blocks into two 20 percent groups. Both choices use the same pooled local candidate when it is supported. Freeze early choices before pairing held blocks.",
+  "boundary": "The tested operation transfers from the Uppsala timing procedure to the air-filter apparatus. The reference and detector settings are specific to the air-filter readout. The early validation pairs are disjoint time blocks within one acquisition and can share temporal drift."
+}

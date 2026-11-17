@@ -1,0 +1,11 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "referencePlanSha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+  "scoreReplicateIndices": [1, 2, 3, 4],
+  "newScoreReplicateIndices": [3, 4],
+  "windowSteps": 50,
+  "stridesInDecodedSamples": [1, 2, 5, 10],
+  "rateFitLagsInDecodedSamples": [1, 5],
+  "design": "Keep the original five-native-sample decoder and disjoint 50-step windows. Reset thinning phase to each window start, keep both boundary labels exactly, and drop only interior labels. Fit both rate candidates on calibration trace 0 and predict all scored observations. Repeats 1 and 2 were previously scored; repeats 3 and 4 are additional acquisitions at the recorded setting.",
+  "criterion": "The denominators and endpoint counts must agree exactly across nested grids. Attribute disagreement in sampled departure counts to windows with fine-grid changes and no retained departure. Compare observed and predicted loss and contrast the two fixed calibration lag fits without using the scored traces to choose a winner."
+}

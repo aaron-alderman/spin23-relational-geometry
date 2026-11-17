@@ -1,0 +1,18 @@
+{
+  "training": {
+    "fitPlan": "d8d2adb92119dc9b46a576815db12feaab4570457fa70e60f68283080c5ec23d",
+    "fitBudget": "96882b6e66f39681801458fc056f95ac0c7fd8cd58ba1c2b3e7ef8601b1e1b2a",
+    "fitReplay": "cd9be9b5adfda37b6bf8c2bffb983dfd1ab9d7f0288774bd456d2000060aa59d",
+    "nominalBudget": "357c030b56c243f5487020f4ab6f2efd9156428cea32332ce8582dc7c7ffef0e"
+  },
+  "held": {
+    "robustBudget": "53bbbbe82153464c1e65c1625dbffc1ab37b4ac400d6f90b276f8bad9aa49759",
+    "partition": "ae29b7385392a49fcec850d6509801bc6e74db27425bdf85ad1096633ef693e6"
+  },
+  "grammar": ["reject-if-less", "reject-if-at-most", "respect-requested-comparison"],
+  "transfer": [
+    "Preserve the robust budget decisions using the saved log-miss ceiling and its inclusive target.",
+    "Screen a partition index reopened for one departure question. Use the root bytes as its unavoidable lower cost and the entire relevant packed footprint as the fallback upper cost. Require strictly fewer bytes for the same verified answer. Use the archived independent scan costs to check any rejection. Reevaluate if the root is already held."
+  ],
+  "criterion": "Report all compatible candidates on archived training rows. Use exact equality controls justified by the two requested comparisons before selecting a rule. In held records, reject only options that cannot meet their request. Match the original robust planner decisions and report what extra computation is avoided conditionally."
+}

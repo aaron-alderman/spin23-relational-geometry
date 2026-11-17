@@ -1,0 +1,14 @@
+{
+  "flatPreparedSha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4",
+  "flatReplaySha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2",
+  "partitionPreparedSha256": "517e51101e27752381753a3b7b1f708fc9e0115711cf25d633b060c7b5d691cb",
+  "partitionReplaySha256": "ae29b7385392a49fcec850d6509801bc6e74db27425bdf85ad1096633ef693e6",
+  "streams": {
+    "mixed": "Interleave the next threshold from each archived window context in round-robin order until all questions are asked.",
+    "easy-prefix": "Use only the first threshold from each context.",
+    "narrow-only": "Use only the archived first-eighth Delft contexts, in round-robin order."
+  },
+  "policy": "Start with the packed source and share its verified chunk cache within the stream. Choose the index with the lowest announced full byte cost among flat and both partitions. Before a new source read would take cumulative source bytes above that cost, switch once. Carry the current query's witnessed departures and fully scanned absences into the new scan. Subsequent questions use the selected index and its live cache.",
+  "cost": "Flat purchase price is proof plus entire index. Partition purchase price is root plus all directory bytes and all change bytes, which caps actual indexed reads. Work begins after loading the common preparation and window manifests. Charge representation proof bytes and payload reads, and compare against every fixed representation using the same stream.",
+  "criterion": "All decisions match the archived independent counts. If switching occurs, the bytes spent before the switch cannot exceed the declared purchase price and the full stream cannot exceed twice the smaller of that price and the measured packed-source cost. Report actual cost relative to the cheapest fixed policy as a separate comparison."
+}

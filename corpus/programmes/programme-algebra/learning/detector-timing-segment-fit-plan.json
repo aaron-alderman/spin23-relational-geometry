@@ -1,0 +1,37 @@
+{
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "histogramComparison": {
+    "file": "detector-timing-thinned-fit-screen.json",
+    "sha256": "afab9bd4e8131deec8316bee7dc5e4a609447fa02d040a8cf03455e127956254"
+  },
+  "cases": [
+    {
+      "priorScreen": {
+        "file": "detector-timing-matched-fit-screen.json",
+        "sha256": "489b593449b798cfeeb06d67a2da3e3e5cc7ce63286a6a80fb24bd84d2571a8c"
+      },
+      "pulses": {
+        "file": "detector-timing-matched-fit-pulses.json",
+        "sha256": "ad457d974677109324a94b7d3779da5dc7a5f692b00ff3912606c57e941e234a"
+      }
+    },
+    {
+      "priorScreen": {
+        "file": "detector-timing-thinned-fit-screen.json",
+        "sha256": "afab9bd4e8131deec8316bee7dc5e4a609447fa02d040a8cf03455e127956254"
+      },
+      "pulses": {
+        "file": "detector-timing-thinned-fit-pulses.json",
+        "sha256": "c722756bbb6d6415db6a817478d299db1ae6859bffe812b35dc3835ca7dcfade"
+      }
+    }
+  ],
+  "segmentsPerEarlyFitBlock": [8, 16],
+  "draws": 2048,
+  "seed": 20250715,
+  "design": "Split each of the first two early fit blocks into equal-duration contiguous pulse segments. Rebuild the same prompt and four shifted pairs within each segment, and count pairs excluded at boundaries. Choose the same integer number of whole segments from each fit block, rounding the observed short-fit to shared-fit count ratio times the number of segments. Draw uniformly over all distinct combinations that match the exact short-fit net count, and retain a refusal if none matches. Compare all sampled profiles on the unchanged fourth early validation block. Keep both segment lengths and the previous independent histogram-thinning comparison.",
+  "boundary": "These are retrospective diagnostics on two previously selected veto cases. Whole-segment sampling preserves pairs sharing pulses within a segment and the joint prompt/control counts from that segment. It excludes cross-boundary pairs, and exact-count conditioning can favor particular time segments. Error frequencies are descriptive under the declared resampling scheme."
+}

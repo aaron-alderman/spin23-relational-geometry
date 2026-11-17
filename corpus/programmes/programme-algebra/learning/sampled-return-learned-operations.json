@@ -1,0 +1,42 @@
+{
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/return-path-parity-result.json",
+        "sha256": "0fef42fe6d5025a6cfe20138ef1a60cd2c69b926b42dc0263445788d04e3c8d2"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/return-path-delft-calibration.json",
+        "sha256": "006d0aea2157213bc48da20a512e556afadc7802b2a71d01dd74a087fbb45ee3"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/return-path-delft-thinning-result.json",
+        "sha256": "0f9f5c1ae8f8fea44b4884e6ae91ab04f912f442967092d8b2dd51b2a7f99e4e"
+      }
+    ],
+    "lesson": "A return can erase a sampled departure from the final label. Changing the interior grid affects which departures are observed while leaving the endpoint observable unchanged."
+  },
+  "operations": [
+    {
+      "id": "sampled-return/changed-endpoint",
+      "operation": {
+        "bridge": "sampled-two-state-endpoint",
+        "inputType": "calibrated-two-state-sampled-chain",
+        "outputType": "changed-endpoint-probability",
+        "conditions": { "eventType": "changed-state-at-readout" },
+        "calculation": "Take the start-to-away element of the sampled transition matrix raised to the number of base steps."
+      }
+    },
+    {
+      "id": "sampled-return/first-observed-exit",
+      "operation": {
+        "bridge": "sampled-two-state-first-observed-exit",
+        "inputType": "calibrated-two-state-sampled-chain",
+        "outputType": "first-observed-exit-probability",
+        "conditions": { "eventType": "first-observed-exit" },
+        "calculation": "Coarsen the transition matrix to the observation stride. Raise its start-to-start element to the number of observed steps to find the probability of seeing no change."
+      }
+    }
+  ],
+  "limits": "Conditional model forecasts for matching settings, a fixed decoder, known starting label, a homogeneous two-state transition matrix, and the declared sample grid. These forecasts do not identify the physical event rate between samples."
+}

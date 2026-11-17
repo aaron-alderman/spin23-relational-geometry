@@ -1,0 +1,29 @@
+{
+  "id": "run-budget/minimum-over-shared-calibration-box",
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json",
+        "sha256": "ea970316b1e734a1d59643441fa3ca2c406463a570a8b3675b978553820fa462"
+      }
+    ],
+    "observed": {
+      "BART": {
+        "perTrial": 0.00013124512749228232,
+        "minimumTrials": 22824
+      },
+      "LORAX": {
+        "perTrial": 0.0003022822064558747,
+        "minimumTrials": 9909
+      }
+    },
+    "missingFromNominalBudget": "Uncertainty in one calibration is shared by the run. A nominal per-trial value alone cannot bound the chance across plausible calibrations."
+  },
+  "operation": {
+    "inputType": "minimum-trials-for-one-true-registration",
+    "outputType": "minimum-trials-across-calibration-box",
+    "condition": "shared-calibration-endpoint-box",
+    "calculation": "Choose the longest mean lifetime, smallest absolute detector acceptance, smallest selected exit weight and largest competing weights. Use the existing run planner at that corner."
+  },
+  "limits": "A conditional minimum over the declared box for the same independent-trial model at each fixed calibration. Reported error bars used as endpoints do not give coverage for the box. Shared calibration drift or correlated trial outcomes require other models."
+}

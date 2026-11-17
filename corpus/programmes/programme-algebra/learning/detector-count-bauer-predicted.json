@@ -1,0 +1,86 @@
+{
+  "lock": {
+    "path": "corpus/programmes/programme-algebra/learning/detector-count-bauer-lock.json",
+    "sha256": "cec9b84ebd6c54eeaed01cebfca7e47321bbc129a984bd68437fe4517f4e3ac5"
+  },
+  "evidenceFamily": "Bauer-2026-Cs137-662-keV",
+  "mode": "retrospective",
+  "criterion": {
+    "metric": "absolute-relative-error-to-positive-net-count",
+    "maximum": 0.15,
+    "interpretation": "Engineering tolerance carried over from the previous frozen plan. Since Appendix A was already inspected during source triage, this case is retrospective."
+  },
+  "decaysPerSecond": 647776.9279045516,
+  "sourceFactor": 0.8647481,
+  "predictions": [
+    {
+      "id": "Cs137-20cm",
+      "distanceCm": 20,
+      "exposure": 20171773.534947738,
+      "acceptance": 0.00119689,
+      "candidates": [
+        {
+          "candidate": {
+            "expression": "product",
+            "scale": 1
+          },
+          "predictedNetPeakArea": 20877.9541117455
+        },
+        {
+          "candidate": {
+            "expression": "acceptance-only",
+            "scale": 0.4693312327943803,
+            "fittedAt": "BART"
+          },
+          "predictedNetPeakArea": 11331.248882177386
+        }
+      ]
+    },
+    {
+      "id": "Cs137-30cm",
+      "distanceCm": 30,
+      "exposure": 75142123.63692799,
+      "acceptance": 0.000590188,
+      "candidates": [
+        {
+          "candidate": {
+            "expression": "product",
+            "scale": 1
+          },
+          "predictedNetPeakArea": 38349.83115417442
+        },
+        {
+          "candidate": {
+            "expression": "acceptance-only",
+            "scale": 0.4693312327943803,
+            "fittedAt": "BART"
+          },
+          "predictedNetPeakArea": 20813.89196812923
+        }
+      ]
+    },
+    {
+      "id": "Cs137-50cm",
+      "distanceCm": 50,
+      "exposure": 91660435.29849406,
+      "acceptance": 0.0002318444,
+      "candidates": [
+        {
+          "candidate": {
+            "expression": "product",
+            "scale": 1
+          },
+          "predictedNetPeakArea": 18376.726094595455
+        },
+        {
+          "candidate": {
+            "expression": "acceptance-only",
+            "scale": 0.4693312327943803,
+            "fittedAt": "BART"
+          },
+          "predictedNetPeakArea": 9973.738609776816
+        }
+      ]
+    }
+  ]
+}

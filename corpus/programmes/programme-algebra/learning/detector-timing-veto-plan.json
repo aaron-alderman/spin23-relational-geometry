@@ -1,0 +1,31 @@
+{
+  "calibrationPlan": {
+    "file": "detector-timing-background-plan.json",
+    "sha256": "1ba36f5906312d15e89969a765873f8456ef1ed62415317a3d37e300d428c8ad"
+  },
+  "frozenCalibration": {
+    "file": "detector-timing-background-calibration.json",
+    "sha256": "ddc23ef583327879044341f4a0b013c68d42c8aa76bfe0e493e8e7589e421a68"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2025-324/1/data/measurements/unshielded_background",
+  "targetSettings": {
+    "file": "unshielded2-settings.xml",
+    "sha256": "22842606ceb1272f17b0a587eff30592b18ef023993fa2278d045ceceb274aa8"
+  },
+  "targetInfo": {
+    "file": "unshielded2-info.txt",
+    "sha256": "7af5267b81586ac27227f5c31980595263f869f19dce05a4f2381347b7570231"
+  },
+  "target": {
+    "id": "background_2",
+    "fileBytes": 2373433410,
+    "treeEntries": 327621950,
+    "tree": "Data",
+    "relativePath": "background_2/UNFILTERED/SData_background_2.root"
+  },
+  "entryStarts": [1000000, 3700000, 6400000, 9100000, 11800000, 14500000],
+  "entriesPerWindow": 2500000,
+  "comparison": "pooled-versus-veto",
+  "design": "Carry exactly the frozen Uppsala tolerance and cobalt reference. Use six fixed windows sized using earlier background count support. Screen early blocks only and require all four blocks to meet the inherited 50-pair floor. Select the first window and lowest energy band where the pooled rule chooses local and the tolerant rule keeps cobalt because at least one disjoint loss exceeds the tolerance. Pair the selected window's late blocks only after freezing this screen.",
+  "boundary": "One separately acquired unshielded background run on the same readout. Windows share an acquisition. The selected outcome is conditional on an early reversal between pooled and tolerant choices."
+}

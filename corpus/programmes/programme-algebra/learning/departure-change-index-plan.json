@@ -1,0 +1,27 @@
+{
+  "pins": {
+    "parity": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa",
+    "parityOverlap": "81074d04efdaf2fc839e33118d57e4448bcd08e5117acd678ff72db2f302e96e",
+    "parityBitSource": "af218777b707af99923496759ddabd0b2ce22b7795113291a6ad462dd5f85707",
+    "delft": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+    "delftCalibration": "006d0aea2157213bc48da20a512e556afadc7802b2a71d01dd74a087fbb45ee3",
+    "delftScore": "4fd22f465f56e0f5014ad40cd64f196bdffd0c134c042da5155934201b5c2322"
+  },
+  "chunkLabels": 128,
+  "parityQueries": "Reuse all 154 previously scored shifted-window threshold questions.",
+  "delftQueries": {
+    "replicate": 9,
+    "windowSteps": 50,
+    "phases": [0, 25],
+    "regionDivisors": [1, 8],
+    "thresholdQuarters": [1, 2, 3, 4],
+    "includeOne": true
+  },
+  "policies": {
+    "cold": "Use the earlier endpoint-first scan with per-query verified packed chunks.",
+    "flatIndex": "Verify and load the entire sorted change-point file, use the next change to classify each window, and stop when the threshold is settled.",
+    "sizeGuard": "Use cold if the index payload alone is at least the full packed footprint of the relevant post-start windows. Otherwise use the index.",
+    "sharedBatch": "For each region, also compare one reusable source chunk cache with one verified index shared over all its queries."
+  },
+  "criterion": "Match independent direct counts with the frozen decoder and windows. Verify restored index and packed bytes, charge one index verification record per invocation, and distinguish per-query payload from region-batch reuse. A change point must lie strictly after the window start and at or before the endpoint."
+}

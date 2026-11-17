@@ -1,0 +1,21 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "referencePlanSha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+  "noiseCalibrationSha256": "15dcc8b6b18662870ac8c486cbce45cd9acff16178d8fd051bd2e3329cf8762f",
+  "scoreReplicateIndices": [6, 7],
+  "newScoreReplicateIndices": [7],
+  "nativeBinOffsets": [[0, 2, 4], [1, 3]],
+  "stableNeighborBinsPerSide": 3,
+  "windowBins": 21,
+  "outerGuardBinsPerSide": 5,
+  "injectionStartBin": 8,
+  "durationsNativeSamples": [1, 2, 3, 5, 8, 10, 15],
+  "onsetOffsetsNativeSamples": [0, 1, 2, 3, 4],
+  "illustrativeOperatingPoint": {"minimumRecovery": 0.9, "maximumShamCallFraction": 0.05},
+  "design": {
+    "background": "Use disjoint windows with agreeing threshold labels in their outer five bins on both sides. Never select using the central scores. Keep the same recorded I/Q samples for each sham and its paired injection.",
+    "injection": "Add a rectangular pulse along the frozen I/Q axis, with amplitude equal to the fitted Gaussian readout means' difference and sign determined by the flank state. Insert the pulse before bin averaging. Score bins that actually overlap the injected interval.",
+    "readouts": "Compare the full-bin threshold, the frozen Gaussian HMM path, and interleaved calls. A split call requires a midpoint departure in the nomination stream and conditional evidence favoring departure in the other stream.",
+    "boundary": "The injection is a known additive I/Q waveform, with recorded backgrounds containing unresolved physical states. Sham call fractions are background-call proxies, and recovery measures this waveform with these decoders and settings."
+  }
+}

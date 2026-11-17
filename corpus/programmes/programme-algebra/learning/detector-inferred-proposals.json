@@ -1,0 +1,155 @@
+{
+  "signature": {
+    "inputTypes": [
+      "finite-window-branch-probability",
+      "absolute-peak-acceptance"
+    ],
+    "outputType": "finite-window-registered-peak-probability"
+  },
+  "origin": {
+    "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+    "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+  },
+  "fitRows": [
+    {
+      "at": "BART",
+      "case": "AZ-127-iron-57-122keV-10ns-BART",
+      "sourceEvent": 0.4693312327943803,
+      "acceptance": 0.001601,
+      "registered": 0.0007513993037038029
+    },
+    {
+      "at": "LORAX",
+      "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+      "sourceEvent": 0.4693312327943803,
+      "acceptance": 0.00388,
+      "registered": 0.0018210051832421958
+    }
+  ],
+  "fitted": [
+    {
+      "candidate": {
+        "expression": "source-only",
+        "scale": 1
+      },
+      "passed": false,
+      "maxAbsoluteError": 0.4685798334906765,
+      "observations": [
+        {
+          "at": "BART",
+          "expected": 0.0007513993037038029,
+          "prediction": 0.4693312327943803,
+          "absoluteError": 0.4685798334906765
+        },
+        {
+          "at": "LORAX",
+          "expected": 0.0018210051832421958,
+          "prediction": 0.4693312327943803,
+          "absoluteError": 0.46751022761113814
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "expression": "acceptance-only",
+        "scale": 1
+      },
+      "passed": false,
+      "maxAbsoluteError": 0.0020589948167578044,
+      "observations": [
+        {
+          "at": "BART",
+          "expected": 0.0007513993037038029,
+          "prediction": 0.001601,
+          "absoluteError": 0.0008496006962961971
+        },
+        {
+          "at": "LORAX",
+          "expected": 0.0018210051832421958,
+          "prediction": 0.00388,
+          "absoluteError": 0.0020589948167578044
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "expression": "product",
+        "scale": 1
+      },
+      "passed": true,
+      "maxAbsoluteError": 0,
+      "observations": [
+        {
+          "at": "BART",
+          "expected": 0.0007513993037038029,
+          "prediction": 0.0007513993037038029,
+          "absoluteError": 0
+        },
+        {
+          "at": "LORAX",
+          "expected": 0.0018210051832421958,
+          "prediction": 0.0018210051832421958,
+          "absoluteError": 0
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "expression": "source-only",
+        "scale": 0.001601,
+        "fittedAt": "BART"
+      },
+      "passed": false,
+      "maxAbsoluteError": 0.001069605879538393,
+      "observations": [
+        {
+          "at": "BART",
+          "expected": 0.0007513993037038029,
+          "prediction": 0.0007513993037038029,
+          "absoluteError": 0
+        },
+        {
+          "at": "LORAX",
+          "expected": 0.0018210051832421958,
+          "prediction": 0.0007513993037038029,
+          "absoluteError": 0.001069605879538393
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "expression": "acceptance-only",
+        "scale": 0.4693312327943803,
+        "fittedAt": "BART"
+      },
+      "passed": true,
+      "maxAbsoluteError": 0,
+      "observations": [
+        {
+          "at": "BART",
+          "expected": 0.0007513993037038029,
+          "prediction": 0.0007513993037038029,
+          "absoluteError": 0
+        },
+        {
+          "at": "LORAX",
+          "expected": 0.0018210051832421958,
+          "prediction": 0.0018210051832421958,
+          "absoluteError": 0
+        }
+      ]
+    }
+  ],
+  "remaining": [
+    {
+      "expression": "product",
+      "scale": 1
+    },
+    {
+      "expression": "acceptance-only",
+      "scale": 0.4693312327943803,
+      "fittedAt": "BART"
+    }
+  ],
+  "authority": "Candidates from replay observations and a fixed expression grammar. Fitting never grants scientific or execution authority."
+}

@@ -1,0 +1,17 @@
+{
+  "source": "https://www.cefas.co.uk/publications/aquatic/aepam9.pdf",
+  "locator": "Sections 4.1 and 4.3 and Appendix, printed p. 19",
+  "lineage": {
+    "nodes": [
+      { "id": "standard-efficiency", "dependsOn": ["Amersham-standard-collection"] },
+      { "id": "Amersham-standard-collection", "dependsOn": [], "acquisitionKey": "cefas-reference-standard" },
+      { "id": "seawater-activity", "dependsOn": ["recovery-and-decay-corrected-count"] },
+      { "id": "recovery-and-decay-corrected-count", "dependsOn": ["sample-integral-in-activity-worksheet"] },
+      { "id": "sample-integral-in-activity-worksheet", "dependsOn": [], "acquisitionKey": "cefas-appendix-seawater-count" },
+      { "id": "seawater-net-area", "dependsOn": ["sample-integral-in-appendix"] },
+      { "id": "sample-integral-in-appendix", "dependsOn": [], "acquisitionKey": "cefas-appendix-seawater-count" }
+    ],
+    "predictionRoots": ["standard-efficiency", "seawater-activity"],
+    "outcomes": ["seawater-net-area"]
+  }
+}

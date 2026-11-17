@@ -1,0 +1,426 @@
+{
+  "operation": "calibration-box/reuse-corner-log-miss",
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/budget-decision-kernels-replay.json",
+      "sha256": "8b3a017e26721fa126725a75fcba8930551f8ed059951d685ab77508446a4b76"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+      "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/bart.json",
+      "sha256": "32d61d52dfd61797bb7e7ed341a298dba72a37dac75c46af299874d9ea2def69"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/lorax.json",
+      "sha256": "b28f8961d7a0d2a688cf61fe190ee75323299f23b4c2964a4300ef2fc64d7291"
+    }
+  ],
+  "work": {
+    "requests": 16,
+    "cachedPlannerCalls": 9,
+    "unconditionalPlannerCalls": 16,
+    "caseIdOnlyErrors": 6
+  },
+  "rows": [
+    {
+      "probe": "original BART",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "original LORAX",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2279,
+        "targetProbability": 0.99,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.002018709093425015,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2279,
+        "targetProbability": 0.99,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.002018709093425015,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "different trial count",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5521,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": false
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5521,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "lower requested target",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2278,
+        "targetProbability": 0.95,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": true
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2278,
+        "targetProbability": 0.95,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.002018709093425015,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "higher requested target",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.995,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": false
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.995,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "metadata and order only",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-renamed",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": true
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART-renamed",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "shorter window",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "651a90a0712856ddda68e3735d31910e389331da3be4f6b873f96a320f64d380",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.0008236210338403082,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "651a90a0712856ddda68e3735d31910e389331da3be4f6b873f96a320f64d380",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.0008236210338403082,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "same shorter window",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5521,
+        "targetProbability": 0.99,
+        "factsSha256": "651a90a0712856ddda68e3735d31910e389331da3be4f6b873f96a320f64d380",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": false
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5521,
+        "targetProbability": 0.99,
+        "factsSha256": "651a90a0712856ddda68e3735d31910e389331da3be4f6b873f96a320f64d380",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.0008236210338403082,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "weaker detector corner",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "81ec25bc2545db2c118897a3540f4609890fecad3f3d6fdec39dbd4a1b6bda9a",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.0008170266258116516,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "81ec25bc2545db2c118897a3540f4609890fecad3f3d6fdec39dbd4a1b6bda9a",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.0008170266258116516,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "heavier competing branch",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2279,
+        "targetProbability": 0.99,
+        "factsSha256": "c48334857d926214d05e13a93241b5b5b6e5836896ed459e00c76d16be48740c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.002014333649584093,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2279,
+        "targetProbability": 0.99,
+        "factsSha256": "c48334857d926214d05e13a93241b5b5b6e5836896ed459e00c76d16be48740c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.002014333649584093,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "unchanged source revisited",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": true
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": true,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "invalid trial model",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "8d7cd380db98550074af314cd60ea79be5f0a13719550f783f7f590f177b3a16",
+        "status": "no-complete-chain",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "8d7cd380db98550074af314cd60ea79be5f0a13719550f783f7f590f177b3a16",
+        "status": "no-complete-chain",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "same invalid trial model",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "8d7cd380db98550074af314cd60ea79be5f0a13719550f783f7f590f177b3a16",
+        "status": "no-complete-chain",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "8d7cd380db98550074af314cd60ea79be5f0a13719550f783f7f590f177b3a16",
+        "status": "no-complete-chain",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "invalid calibration box",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "1a9022c7ff87f845e70d9d71747cb3bf9652c1f5183c1ea95b8c6249a2191979",
+        "status": "calibration-box-inapplicable",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.99,
+        "factsSha256": "1a9022c7ff87f845e70d9d71747cb3bf9652c1f5183c1ea95b8c6249a2191979",
+        "status": "calibration-box-inapplicable",
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": true
+    },
+    {
+      "probe": "target at numerical boundary",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.9900044476031085,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "numeric-fallback",
+        "plannerCalls": 1
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-BART",
+        "trials": 5522,
+        "targetProbability": 0.9900044476031085,
+        "factsSha256": "4904fd5e784a823e3bffd6a2ac4a6e7faca4d54a0c25044656aaf7359249969c",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.000833700638583318,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    },
+    {
+      "probe": "LORAX revisited",
+      "cached": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2278,
+        "targetProbability": 0.99,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "work": "reused",
+        "plannerCalls": 0,
+        "meetsTarget": false
+      },
+      "control": {
+        "case": "AZ-127-iron-57-122.06keV-12ns-99pct-calibration-box-LORAX",
+        "trials": 2278,
+        "targetProbability": 0.99,
+        "factsSha256": "5e8624e81d453bb01f361995202c7c0be27f24d2ff6ba2aaf6f71e53c63677dd",
+        "status": "executed",
+        "meetsTarget": false,
+        "cornerProbabilityPerTrial": 0.002018709093425015,
+        "work": "planner",
+        "plannerCalls": 1
+      },
+      "idOnlyBroken": false
+    }
+  ]
+}

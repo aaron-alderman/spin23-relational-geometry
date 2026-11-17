@@ -1,0 +1,26 @@
+{
+  "centerPlan": {
+    "file": "detector-timing-uppsala-center-plan.json",
+    "sha256": "a73bc4f079cc05dd7cd578b1c927147ffe56c463ca9472107dd47bb713b1b43b"
+  },
+  "centerCalibration": {
+    "file": "detector-timing-uppsala-center-calibration.json",
+    "sha256": "18f9db52abbbfb4985fb51a8242fc7668c039bb1d9abd017c3474eb8337dd1e4"
+  },
+  "additionalFiles": {
+    "ho166m": {
+      "path": "ho166m_600s/UNFILTERED/SData_ho166m_600s.root",
+      "sha256": "d008441c6a373cda1b9829df95257009d9ad707ea6838bfd68f03edea1c67911"
+    }
+  },
+  "scoreSources": ["eu152", "ho166m"],
+  "previouslyUnscoredSources": ["ho166m"],
+  "minimumEarlyTargetNetWidePairs": 12,
+  "design": {
+    "baseline": "Transfer the late-cobalt centered cumulative retention curve per band using wide mixture weights from the first 40 percent of the target run.",
+    "candidate": "Estimate the centered cumulative retention curve on those same early target pairs. Freeze the weight and profile information from the early segment for the forecast on the late segment.",
+    "diagnostic": "Use the late target wide mixture with the unchanged cobalt profile after scoring. Compare the residuals by supported energy band across the inherited gate widths. The primary gate remains 50 ns. Late-weight results are never used as forecasts.",
+    "support": "Use prior cobalt support intersected with bands having at least 12 net wide pairs in the early target. Score both forecasts on that support and record the total late net count including excluded bands."
+  },
+  "boundary": "One instrument. Local profiling costs early narrow-gate counts on the target. Cumulative symmetric gates reveal residual shape disagreement after a fixed shift, without identifying residual miscentering separately from spread, tails, drift or count noise. Time-shift subtraction yields signed net estimates."
+}

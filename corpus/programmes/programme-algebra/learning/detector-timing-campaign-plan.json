@@ -1,0 +1,35 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "priorResult": {
+    "file": "detector-timing-air-filter-signed-result.json",
+    "sha256": "e3b4520da5640f795e18e02eb88034ca2b8e6270e9f5be9f3ce8164b7945301f"
+  },
+  "routingLesson": {
+    "file": "detector-timing-segment-route-result.json",
+    "sha256": "83cff8e128117a51cf8ec7ef377d261ba6e947d7404feb78b125ef763afd26fc"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data",
+  "targets": [
+    {
+      "id": "CalibrationSample76_29jan2024",
+      "fileBytes": 1053993473,
+      "treeEntries": 149597060,
+      "relativePath": "calibration/CalibrationSample76_29jan2024/RAW/SDataR_CalibrationSample76_29jan2024.root",
+      "infoSha256": "2ac62588efda48029baf6fbe558661ad59c5a45c3ab20d738d9c8bddae959d98",
+      "settingsSha256": "091c5190c5a772fdade7794e893ab12c78d7b224b26bb312ed7646f12c766521"
+    },
+    {
+      "id": "Blankprov_HB573",
+      "fileBytes": 1052809350,
+      "treeEntries": 148182150,
+      "relativePath": "blank/Blankprov_HB573/RAW/SDataR_Blankprov_HB573.root",
+      "infoSha256": "f91d63bdf70e51bd2221119b2a352f95ba996766d847d923fc62fad2ea2e3da4",
+      "settingsSha256": "133956910b0c4e18b85989bc860085291c7f5407e407937348789dedd434ee66"
+    }
+  ],
+  "design": "Use the pooled routing rule learned in the separate Uppsala campaign on channels 1 and 2 of the air-filter archive. Freeze centers and profiles from the prior local calibration run alone, qualifying every reference band with the existing 100-pair floor. Before reading target pulses, require disjoint acquisition intervals and matching archived settings other than run ID. Require 50 net wide pairs in each pooled early fit or validation group to compare local and reference; otherwise keep the reference. Score all supported bands in all late blocks. Compare the chosen profile with always using the local reference and always fitting from early data when supported.",
+  "boundary": "This is transfer of a procedure to a different detector archive. The numeric reference is recalibrated on the local campaign. The historical target was unused in these routing experiments. Late blocks share an acquisition, and settings refusals limit the set of examined targets."
+}

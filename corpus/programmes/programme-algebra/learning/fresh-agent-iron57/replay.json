@@ -1,0 +1,159 @@
+{
+  "nodeVersion": "24.22.1",
+  "relativeTo": "checkout root",
+  "localPins": [
+    {
+      "path": "tooling/programme-algebra/compose-transition-lessons.mjs",
+      "sha256": "3b95a20d7f632a343203d57f4ee635ec33ca27ccf666b6debce9de64fef81319"
+    },
+    {
+      "path": "tooling/programme-algebra/replay-transition-lesson.mjs",
+      "sha256": "a88e00aab58feb6524d13e423485de9540cd59b97724cba0c4379cda65748aab"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+      "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/calcium-learned-operation.json",
+      "sha256": "e50ff0c7c6f903ea8ba75ff6c9d908011e07b083c9f1bfecf4236068a661f036"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json",
+      "sha256": "b715cd1307c990c47186ea07067df7136a8638d562b293887d34c4995ea464eb"
+    }
+  ],
+  "runs": {
+    "composed": {
+      "command": "node tooling/programme-algebra/compose-transition-lessons.mjs compose corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json",
+      "exitCode": 0,
+      "stdout": {
+        "case": "AZ-127-iron-57-14.4keV-gamma-100ns",
+        "question": "What is the probability of emitting a 14.4 keV gamma photon at the source within 100 ns after one ordinary electronically occupied iron-57 nucleus is prepared in its 14.4 keV level?",
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "suppliedRoutes": 0,
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "AZ-127-calcium/resolve-exit-branch"
+        ],
+        "status": "executed",
+        "anyExit": {
+          "case": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+          "question": "What is the probability of any intrinsic exit in the same window?",
+          "source": {
+            "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+            "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+          },
+          "suppliedRoutes": 0,
+          "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+          "missing": [],
+          "mismatches": [],
+          "status": "executed",
+          "timeSeconds": 1e-7,
+          "lifetime": {
+            "type": "measured-intrinsic-lifetime",
+            "seconds": 1.4138411400711842e-7,
+            "reportedUncertaintySeconds": 5.770780163555854e-10,
+            "source": "https://www.bipm.org/documents/d/guest/co-57_report",
+            "evaluatedPopulationHalfLife": {
+              "nanoseconds": 98,
+              "uncertaintyNanoseconds": 0.4,
+              "location": "DDEP Co-57 evaluation comments, Tables 2 and 3, 14.413 keV level",
+              "conversion": "Divide the population half-life and its uncertainty by ln(2), then convert nanoseconds to seconds."
+            }
+          },
+          "model": "constant-total-hazard",
+          "probability": 0.5070231391259499,
+          "probabilityAtReportedLifetimeEndpoints": [
+            0.5056037048140745,
+            0.5084500826744737
+          ],
+          "work": {
+            "nominalExponentialEvaluations": 1,
+            "uncertaintyEndpointEvaluations": 2,
+            "microscopicDynamicsRuns": 0
+          }
+        },
+        "branch": {
+          "requested": "gamma-14.4-keV",
+          "relativeRates": {
+            "gamma-14.4-keV": 1,
+            "internal-conversion-all-shells": 8.55
+          },
+          "conditionalBranchShare": 0.10471204188481674,
+          "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+        },
+        "probability": 0.05309142818072773,
+        "probabilityAtReportedLifetimeEndpoints": [
+          0.052942796315609886,
+          0.05324084635334802
+        ],
+        "work": {
+          "learnedOperationsExecuted": 2,
+          "nominalExponentialEvaluations": 1,
+          "microscopicDynamicsRuns": 0
+        }
+      }
+    },
+    "withoutHelium": {
+      "command": "node tooling/programme-algebra/compose-transition-lessons.mjs compose corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json --omit-helium",
+      "exitCode": 0,
+      "stdout": {
+        "case": "AZ-127-iron-57-14.4keV-gamma-100ns",
+        "question": "What is the probability of emitting a 14.4 keV gamma photon at the source within 100 ns after one ordinary electronically occupied iron-57 nucleus is prepared in its 14.4 keV level?",
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "suppliedRoutes": 0,
+        "discovered": [
+          "AZ-127-calcium/resolve-exit-branch"
+        ],
+        "status": "no-complete-chain"
+      }
+    },
+    "withoutCalcium": {
+      "command": "node tooling/programme-algebra/compose-transition-lessons.mjs compose corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json --omit-calcium",
+      "exitCode": 0,
+      "stdout": {
+        "case": "AZ-127-iron-57-14.4keV-gamma-100ns",
+        "question": "What is the probability of emitting a 14.4 keV gamma photon at the source within 100 ns after one ordinary electronically occupied iron-57 nucleus is prepared in its 14.4 keV level?",
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "suppliedRoutes": 0,
+        "discovered": [
+          "AZ-127-helium-2tripletS1/constant-hazard-survival"
+        ],
+        "status": "no-complete-chain"
+      }
+    },
+    "heliumDirect": {
+      "command": "node tooling/programme-algebra/replay-transition-lesson.mjs reuse corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+      "exitCode": 0,
+      "stdout": {
+        "case": "AZ-127-iron-57-14.4keV-gamma-100ns",
+        "question": "What is the probability of emitting a 14.4 keV gamma photon at the source within 100 ns after one ordinary electronically occupied iron-57 nucleus is prepared in its 14.4 keV level?",
+        "source": {
+          "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+          "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+        },
+        "suppliedRoutes": 0,
+        "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+        "missing": [],
+        "mismatches": [
+          {
+            "key": "eventType",
+            "expected": "any-exit-from-prepared-state",
+            "received": "specific-absorbing-exit"
+          }
+        ],
+        "status": "operation-inapplicable"
+      }
+    }
+  }
+}

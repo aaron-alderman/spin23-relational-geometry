@@ -1,0 +1,32 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "paper": "https://arxiv.org/html/2202.12754",
+  "archives": {
+    "traces": "https://doi.org/10.4121/19103525",
+    "processing": "https://doi.org/10.4121/19102769"
+  },
+  "settingsEvidence": {
+    "member": "Raw_data/dev_B_ID_466.nc",
+    "sha256": "ddac160818b755ac70fc3ea2713ea830770e27fd9ef6249b2602fc3b668c9668",
+    "processingNotebook": "2-processing_raw_data_device_B.ipynb",
+    "notebookSha256": "99e152ce738e8033936df04f9d6ba22e060615fd436ee85054b45974f4a19592",
+    "experiment": "2tone_and_QPP_trace_vs_plunger_at_zero_flux",
+    "runId": 466,
+    "zeroBasedPlungerRow": 74,
+    "plungerMillivolts": 551.5,
+    "archiveMemberPattern": "Raw timetraces/ID_466_IQ_<timestamp>.npy",
+    "timestampCoordinate": "timestamp_qpp",
+    "rowTimestamps": [1625697294251947, 1625697303995927, 1625697313796347, 1625697323546234, 1625697333301381, 1625697343053651, 1625697352832168, 1625697362575088, 1625697376979477, 1625697386717486]
+  },
+  "design": {
+    "calibrationReplicateIndex": 0,
+    "scoreReplicateIndices": [1, 2],
+    "rawSamplesPerBin": 5,
+    "windowSteps": [20, 50, 100],
+    "primaryWindowSteps": 50,
+    "decoder": "Fit the principal I/Q axis and a two-centroid threshold on calibration only. Reuse them unchanged.",
+    "calibrationMinimumSeparationInPooledStandardDeviations": 5,
+    "windowSelection": "Use disjoint contiguous windows from sample zero at each horizon and condition on the first decoded level.",
+    "comparison": "Report absolute errors of first-observed-exit and changed-endpoint frequencies in both directions. Compare an absorbing endpoint shortcut to the reversible endpoint prediction."
+  }
+}

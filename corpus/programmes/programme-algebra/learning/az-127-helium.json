@@ -1,0 +1,42 @@
+{
+  "id": "AZ-127-helium-2tripletS1",
+  "question": "What is the chance that an initially prepared, isolated metastable helium atom decays within 600 seconds?",
+  "source": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+  "targetType": "finite-window-event-probability",
+  "facts": {
+    "event": "any intrinsic decay out of the prepared metastable state",
+    "eventType": "any-exit-from-prepared-state",
+    "regime": "unperturbed-intrinsic-decay",
+    "timeSeconds": 600,
+    "survivalModel": "constant-total-hazard",
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 7870,
+      "reportedUncertaintySeconds": 510,
+      "source": "https://doi.org/10.1103/PhysRevLett.103.053002"
+    }
+  },
+  "plans": [
+    {
+      "id": "square-the-transition-matrix-element",
+      "inputType": "radiative-transition-matrix-element",
+      "outputType": "finite-window-event-probability",
+      "bridge": null,
+      "requires": ["radiativeMatrixElement"]
+    },
+    {
+      "id": "evolve-explicit-atom-and-photon-modes",
+      "inputType": "microscopic-atom-field-model",
+      "outputType": "finite-window-event-probability",
+      "bridge": "normalized-state-projection",
+      "requires": ["calibratedAtomFieldHamiltonian", "normalizedPreparationAndPhotonModes", "decayProjector"]
+    },
+    {
+      "id": "use-measured-lifetime",
+      "inputType": "measured-intrinsic-lifetime",
+      "outputType": "finite-window-event-probability",
+      "bridge": "constant-hazard-survival",
+      "requires": ["lifetime", "timeSeconds", "survivalModel"]
+    }
+  ]
+}

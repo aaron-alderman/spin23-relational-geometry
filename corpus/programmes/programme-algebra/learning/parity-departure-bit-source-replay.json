@@ -1,0 +1,7297 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-bit-source-plan.json",
+      "sha256": "225e171d622192cd25533f352b664491b9211a224ddaa17176a8cfffb6c45c78"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-compact-prepared.json",
+      "sha256": "f83be5c5ffcc19c82cb4daabfdffc00e52b1c5f7180e1762203e6143528bb95d"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/parity-departure-compact-replay.json",
+      "sha256": "e02e177c032d3c7a3f33bfbea90349ceed22dac61dc5baf3cef9c7a5ee430c59"
+    }
+  ],
+  "packedPreparationSha256": "9377093e17e4ce5dc74d8610cc11f751ce109970cfdc8ab13588788201e9c0a5",
+  "queries": 154,
+  "packedTraceBytes": 626,
+  "byteTraceBytes": 5001,
+  "priorByteColdPayload": 333281,
+  "commonMetadataBytes": 11935,
+  "eagerAdditionalMetadataBytes": 19378,
+  "guardSizeDecision": "Use the packed source for every chunk. Skip the compact index in a guard-only invocation.",
+  "controls": {
+    "changedPackedChunk": "refused"
+  },
+  "totals": {
+    "cold": {
+      "sourceChunkReads": 2627,
+      "sourceBytes": 41682,
+      "compactBlockReads": 0,
+      "compactBytes": 0,
+      "payloadBytes": 41682,
+      "fewerBytesThanPackedCold": 0,
+      "moreBytesThanPackedCold": 0
+    },
+    "eager": {
+      "sourceChunkReads": 2582,
+      "sourceBytes": 40962,
+      "compactBlockReads": 100,
+      "compactBytes": 3200,
+      "payloadBytes": 44162,
+      "fewerBytesThanPackedCold": 0,
+      "moreBytesThanPackedCold": 25
+    },
+    "guarded": {
+      "sourceChunkReads": 2627,
+      "sourceBytes": 41682,
+      "compactBlockReads": 0,
+      "compactBytes": 0,
+      "payloadBytes": 41682,
+      "fewerBytesThanPackedCold": 0,
+      "moreBytesThanPackedCold": 0
+    }
+  },
+  "authority": "Application reads on a prepared store. Bounds and decisions concern the fixed decoded trace. Shared receipt bytes are charged once per batch.",
+  "rows": [
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            19
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            19
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            19
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            19
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            19
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            19
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            19
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            19
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            19
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 4,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 5,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 12,
+          "sourceBytes": 192,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 192
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 12,
+          "sourceBytes": 192,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 192
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 12,
+          "sourceBytes": 192,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 192
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 6,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 7,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 8,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 9,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 10,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 11,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 12,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 13,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 14,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 15,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 16,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 17,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 18,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 1,
+      "threshold": 19,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 1,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            20
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            20
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            20
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 2,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            20
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            20
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            20
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 3,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            20
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            20
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            20
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 4,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 5,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            20
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            20
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            20
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 6,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 7,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 8,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 9,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 10,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 11,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 12,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 13,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            12
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            12
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            12
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 14,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            13
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            13
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            13
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 15,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            14
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            14
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            14
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 16,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            15
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            15
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            15
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 17,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            16
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            16
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            16
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 18,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            17
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 19,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            18
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 0,
+      "phase": 50,
+      "threshold": 20,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            19
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            30
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            30
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            30
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            30
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            30
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            30
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            30
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            30
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            30
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 4,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            30
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            30
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            30
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 5,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            30
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            30
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            30
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 6,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            30
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            30
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            6,
+            30
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 7,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            6
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 8,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            7
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 9,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            8
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 10,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            9
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 11,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            10
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 12,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            11
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 13,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            12
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 14,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            13
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 15,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            14
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 16,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            15
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 17,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            16
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 18,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            17
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 19,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            18
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 20,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            19
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 21,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            20
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            20
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            20
+          ],
+          "sourceChunkReads": 29,
+          "sourceBytes": 464,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 464
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 22,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            21
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            21
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            21
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 23,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            22
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            22
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            22
+          ],
+          "sourceChunkReads": 28,
+          "sourceBytes": 448,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 448
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 24,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            23
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            23
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            23
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 25,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            24
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            24
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            24
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 26,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            25
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            25
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            25
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 27,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            26
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            26
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            26
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 432,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 432
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 28,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            27
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            27
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            27
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 29,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            28
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            28
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            28
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 1,
+      "threshold": 30,
+      "exact": 6,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            29
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            29
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            6,
+            29
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 416,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 1,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            29
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            29
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            29
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 2,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            29
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            29
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            29
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 3,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            29
+          ],
+          "sourceChunkReads": 8,
+          "sourceBytes": 128,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 128
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            29
+          ],
+          "sourceChunkReads": 8,
+          "sourceBytes": 128,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 128
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            29
+          ],
+          "sourceChunkReads": 8,
+          "sourceBytes": 128,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 128
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 4,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            29
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            29
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            29
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 5,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 6,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 7,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 8,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 9,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 10,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 11,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 12,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 13,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            12
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            12
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            12
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 14,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            13
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            13
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            13
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 15,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            14
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            14
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            14
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 16,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            15
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            15
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            15
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 17,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            16
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            16
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            16
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 18,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            17
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            17
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            17
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 19,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            18
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            18
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            18
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 20,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            19
+          ],
+          "sourceChunkReads": 27,
+          "sourceBytes": 418,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 418
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 21,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            20
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 22,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            21
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            21
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            21
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 23,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            22
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            22
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            22
+          ],
+          "sourceChunkReads": 26,
+          "sourceBytes": 402,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 402
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 24,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            23
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            23
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            23
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 25,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            24
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            24
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            24
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 26,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            25
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            25
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            25
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 27,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            26
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            26
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            26
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 28,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            27
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            27
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            27
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 1,
+      "phase": 50,
+      "threshold": 29,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            28
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            28
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            28
+          ],
+          "sourceChunkReads": 25,
+          "sourceBytes": 386,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 386
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 4,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 5,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 6,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 1,
+      "threshold": 7,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 10,
+          "sourceBytes": 160,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 1,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            7
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 2,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            7
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 3,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            7
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 4,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 5,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 11,
+          "sourceBytes": 176,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 6,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    },
+    {
+      "contextIndex": 2,
+      "phase": 125,
+      "threshold": 7,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 1,
+          "sourceBytes": 16,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 16
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 4,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 5,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            5,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 6,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            5
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 7,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            6
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 8,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            7
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            7
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            7
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 9,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            8
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            8
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            8
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 10,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            9
+          ],
+          "sourceChunkReads": 18,
+          "sourceBytes": 288,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 288
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 11,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            10
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            10
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            5,
+            10
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 1,
+      "threshold": 12,
+      "exact": 5,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 1,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            12
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 2,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            12
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 80
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 3,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            12
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 4,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            11
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 240
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 5,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 24,
+          "sourceBytes": 384,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 384
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 24,
+          "sourceBytes": 384,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 384
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 24,
+          "sourceBytes": 384,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 384
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 6,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 23,
+          "sourceBytes": 368,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 368
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 23,
+          "sourceBytes": 368,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 368
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 23,
+          "sourceBytes": 368,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 368
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 7,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 22,
+          "sourceBytes": 352,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 352
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 8,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            7
+          ],
+          "sourceChunkReads": 21,
+          "sourceBytes": 336,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 336
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 9,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            8
+          ],
+          "sourceChunkReads": 20,
+          "sourceBytes": 320,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 10,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            9
+          ],
+          "sourceChunkReads": 19,
+          "sourceBytes": 304,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 11,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            10
+          ],
+          "sourceChunkReads": 17,
+          "sourceBytes": 272,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 272
+        }
+      }
+    },
+    {
+      "contextIndex": 3,
+      "phase": 125,
+      "threshold": 12,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            11
+          ],
+          "sourceChunkReads": 14,
+          "sourceBytes": 224,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 2,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            3
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            3
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            3
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 2,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            3
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            3
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            3
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 2,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            2,
+            2
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            2,
+            2
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 3,
+          "compactBytes": 96,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 176
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            2,
+            2
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 250,
+      "threshold": 1,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            4
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            4
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 2,
+          "compactBytes": 64,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            4
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 250,
+      "threshold": 2,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            4
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            4
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 2,
+          "compactBytes": 64,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            4
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 250,
+      "threshold": 3,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 2,
+          "compactBytes": 64,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 96
+        }
+      }
+    },
+    {
+      "contextIndex": 4,
+      "phase": 250,
+      "threshold": 4,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 6,
+          "sourceBytes": 96,
+          "compactBlockReads": 2,
+          "compactBytes": 64,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 160
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 1,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            6
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            6
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            6
+          ],
+          "sourceChunkReads": 2,
+          "sourceBytes": 32,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 32
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 2,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            6
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            6
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            6
+          ],
+          "sourceChunkReads": 4,
+          "sourceBytes": 64,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 64
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 3,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            6
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            6
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 224
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            6
+          ],
+          "sourceChunkReads": 7,
+          "sourceBytes": 112,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 112
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 4,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 5,
+          "sourceBytes": 80,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 304
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            4,
+            6
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 5,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 12,
+          "sourceBytes": 192,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 416
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            4
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 1,
+      "threshold": 6,
+      "exact": 4,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 7,
+          "compactBytes": 224,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 368
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            4,
+            5
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 250,
+      "threshold": 1,
+      "exact": 3,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            5
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            5
+          ],
+          "sourceChunkReads": 0,
+          "sourceBytes": 0,
+          "compactBlockReads": 4,
+          "compactBytes": 128,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 128
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            1,
+            5
+          ],
+          "sourceChunkReads": 3,
+          "sourceBytes": 48,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 48
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 250,
+      "threshold": 2,
+      "exact": 3,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            5
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            5
+          ],
+          "sourceChunkReads": 8,
+          "sourceBytes": 128,
+          "compactBlockReads": 4,
+          "compactBytes": 128,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            2,
+            5
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 250,
+      "threshold": 3,
+      "exact": 3,
+      "policies": {
+        "cold": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            5
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        },
+        "eager": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            5
+          ],
+          "sourceChunkReads": 8,
+          "sourceBytes": 128,
+          "compactBlockReads": 4,
+          "compactBytes": 128,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "guarded": {
+          "meetsThreshold": true,
+          "bounds": [
+            3,
+            5
+          ],
+          "sourceChunkReads": 9,
+          "sourceBytes": 144,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 144
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 250,
+      "threshold": 4,
+      "exact": 3,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            3
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            3
+          ],
+          "sourceChunkReads": 15,
+          "sourceBytes": 240,
+          "compactBlockReads": 4,
+          "compactBytes": 128,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 368
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            3
+          ],
+          "sourceChunkReads": 16,
+          "sourceBytes": 256,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 256
+        }
+      }
+    },
+    {
+      "contextIndex": 5,
+      "phase": 250,
+      "threshold": 5,
+      "exact": 3,
+      "policies": {
+        "cold": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        },
+        "eager": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 12,
+          "sourceBytes": 192,
+          "compactBlockReads": 4,
+          "compactBytes": 128,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 320
+        },
+        "guarded": {
+          "meetsThreshold": false,
+          "bounds": [
+            3,
+            4
+          ],
+          "sourceChunkReads": 13,
+          "sourceBytes": 208,
+          "compactBlockReads": 0,
+          "compactBytes": 0,
+          "sourceChosenOverCompact": 0,
+          "payloadBytes": 208
+        }
+      }
+    }
+  ]
+}

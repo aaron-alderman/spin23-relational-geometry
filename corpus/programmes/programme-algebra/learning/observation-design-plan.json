@@ -1,0 +1,18 @@
+{
+  "edge": {
+    "plan": {"file": "return-path-delft-shape-plan.json", "sha256": "d4cc068a426b5ab9130eaf0374df791ee9482d4a2462685b074d9a576eaef6ab"},
+    "receipt": {"file": "return-path-delft-shape-result.json", "sha256": "4dd9fcf4e1b8450685324eed14cd75adaffebbddcddbdd1f2a8cb3859ca00c5c"},
+    "downstream": {"replicate": 8, "initialState": 1, "durationNativeSamples": 5, "onsetOffset": 0, "decoder": "gaussianHMM"},
+    "probeOffsetsNativeSamples": [-3, -2, -1, 0, 1, 2, 3],
+    "timingRadiiNativeSamples": [0, 0.125, 0.25, 0.5],
+    "boundary": "Odd offsets reuse the alignment stream if taken from the original data. An independently timed measurement at the listed offset is required. The error budget is a design bound in the declared step family."
+  },
+  "detector": {
+    "fit": {"file": "detector-inferred-proposals.json", "sha256": "1ded4d830b1340b19b6d405f2b1c65c768f2be9427fba232e2e0ad7da4aa7db8"},
+    "forecasts": [
+      {"file": "detector-count-bauer-predicted.json", "sha256": "66740cefc79abbb7d70de41d4f79a0e0ce3c034d12a1504e03968ca9908da184"},
+      {"file": "detector-count-surface-predicted.json", "sha256": "10f5ba07e461f4a9aac987a6dd714573e5f597ae9b52106342965f4a2c077a02"}
+    ],
+    "boundary": "The forecasts were frozen as separate files. The archived measurements were visible in the earlier research, so staged scoring is retrospective. Each detector study is one evidence family."
+  }
+}

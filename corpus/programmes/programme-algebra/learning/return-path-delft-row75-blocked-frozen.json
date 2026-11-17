@@ -1,0 +1,2477 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-blocked-plan.json",
+      "sha256": "192aa0254fa9c7be7a9a3b7c70939ee7160e4bfc91594ffab581b373cce6f1bf"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+      "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-frozen.json",
+      "sha256": "8846e9082b88eec20773155b25c6019b6d2ba02fb3877aa03021afcaef78ca60"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-qualification-result.json",
+      "sha256": "261a06f292243d47dfaa1e9418cfbac2d2d0273800b8570b2e36b8e8e1b07f54"
+    }
+  ],
+  "training": [
+    {
+      "acquisition": {
+        "replicateIndex": 0,
+        "file": "ID_466_IQ_1625697418115548.npy",
+        "sha256": "efb91a30076e27b69dd9ff8f282e225f593fa411e1a52b1be73aed33ed81a814",
+        "rawSamples": 878906,
+        "binnedSamples": 175781
+      },
+      "matrix": {
+        "lowToHigh": 0.09798551518471182,
+        "highToLow": 0.010109884592937515
+      },
+      "blockMatrices": [
+        {
+          "lowToHigh": 0.10216110019646366,
+          "highToLow": 0.01043312517242244
+        },
+        {
+          "lowToHigh": 0.09052678176184152,
+          "highToLow": 0.01037386496220768
+        },
+        {
+          "lowToHigh": 0.09075789973865526,
+          "highToLow": 0.00963885743047691
+        },
+        {
+          "lowToHigh": 0.11098870834480859,
+          "highToLow": 0.00999677523379555
+        }
+      ]
+    },
+    {
+      "acquisition": {
+        "replicateIndex": 1,
+        "file": "ID_466_IQ_1625697427868390.npy",
+        "sha256": "afdf1c9d69fcdfac3056d9d56bcb621023f9882ed5009111ce6e1a0013272b0c",
+        "rawSamples": 878906,
+        "binnedSamples": 175781
+      },
+      "matrix": {
+        "lowToHigh": 0.09534275870262564,
+        "highToLow": 0.010097769053640859
+      },
+      "blockMatrices": [
+        {
+          "lowToHigh": 0.09481699828052076,
+          "highToLow": 0.009680493554697297
+        },
+        {
+          "lowToHigh": 0.09008007117437722,
+          "highToLow": 0.010266680186574732
+        },
+        {
+          "lowToHigh": 0.09857797059532418,
+          "highToLow": 0.010277673074506848
+        },
+        {
+          "lowToHigh": 0.09834871296745994,
+          "highToLow": 0.010169236177371567
+        }
+      ]
+    },
+    {
+      "acquisition": {
+        "replicateIndex": 2,
+        "file": "ID_466_IQ_1625697437620462.npy",
+        "sha256": "6bf3d263c38aae79b5453ed1a96c07e213d14d07f10e618ed1a265ab2359f69a",
+        "rawSamples": 878906,
+        "binnedSamples": 175781
+      },
+      "matrix": {
+        "lowToHigh": 0.09578087784960872,
+        "highToLow": 0.01068000455275505
+      },
+      "blockMatrices": [
+        {
+          "lowToHigh": 0.09751221679253665,
+          "highToLow": 0.011129985041705752
+        },
+        {
+          "lowToHigh": 0.09504950495049505,
+          "highToLow": 0.010964745298104013
+        },
+        {
+          "lowToHigh": 0.08925768109441579,
+          "highToLow": 0.010079777130555908
+        },
+        {
+          "lowToHigh": 0.10174418604651163,
+          "highToLow": 0.010548523206751054
+        }
+      ]
+    }
+  ],
+  "models": {
+    "single-repeat": {
+      "matrix": {
+        "lowToHigh": 0.09798551518471182,
+        "highToLow": 0.010109884592937515
+      },
+      "forecasts": [
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9034990257861447,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9942366422115855,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9034990257861447,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9940586279805331,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9034990257861447,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.993414254700516,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9034990257861447,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9918349961000237,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09322062412296805,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.39834243691753085,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09322062412296805,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.38295022573153115,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09322062412296805,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.34027394664012833,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09322062412296805,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.2805565369791701,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        }
+      ]
+    },
+    "pooled-repeats": {
+      "matrix": {
+        "lowToHigh": 0.09634766891294524,
+        "highToLow": 0.010295083756435739
+      },
+      "forecasts": [
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9002470417894931,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9936894289255835,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9002470417894931,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9934949734130587,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9002470417894931,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9927932684628034,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9002470417894931,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9910855528378865,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.0961945296785595,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.40394494033661443,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.0961945296785595,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3886702509258385,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.0961945296785595,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3462073735762533,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.0961945296785595,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.2864807192459897,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        }
+      ]
+    },
+    "matched-time-block/1": {
+      "matrix": {
+        "lowToHigh": 0.09189468249870934,
+        "highToLow": 0.010534948804883617
+      },
+      "forecasts": [
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8931102510211214,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9919311630999221,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8931102510211214,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9916909861279402,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8931102510211214,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.990832586795116,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8931102510211214,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.988787517029795,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.10238754317211353,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.41112521745263797,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.10238754317211353,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3963937277673912,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.10238754317211353,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3552070739030645,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.10238754317211353,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.296592320605405,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        }
+      ]
+    },
+    "matched-time-block/2": {
+      "matrix": {
+        "lowToHigh": 0.09276741827260669,
+        "highToLow": 0.009998739654665379
+      },
+      "forecasts": [
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8987152996010573,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9923099008528697,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8987152996010573,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.992090287096573,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8987152996010573,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9913054492850534,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.8987152996010573,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9894349015115642,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09686612467719231,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.39495542072318107,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09686612467719231,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.38047648889386376,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09686612467719231,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3401449984905071,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.09686612467719231,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.2831100680919263,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        }
+      ]
+    },
+    "matched-time-block/3": {
+      "matrix": {
+        "lowToHigh": 0.10339311273890713,
+        "highToLow": 0.010237172272935684
+      },
+      "forecasts": [
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9077215976485195,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9957331878000488,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9077215976485195,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9955904996938378,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9077215976485195,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9950668947231368,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-0-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.9077215976485195,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-0-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.9937444654149138,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 0,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-1/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.08987544842041988,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-1/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.40219856301564894,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 1,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-2/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.08987544842041988,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-2/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3858399191705697,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 2,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-5/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.08987544842041988,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-5/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.3406989266419037,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 5,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "changed-endpoint-probability",
+          "result": {
+            "case": "level-1-stride-10/changed-endpoint-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 0,
+              "pathEvaluations": 0
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/changed-endpoint"
+            ],
+            "probability": 0.08987544842041988,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "changed-state-at-readout",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        },
+        {
+          "target": "first-observed-exit-probability",
+          "result": {
+            "case": "level-1-stride-10/first-observed-exit-probability",
+            "suppliedRoutes": 0,
+            "work": {
+              "transitionEvaluations": 1,
+              "pathEvaluations": 1
+            },
+            "status": "executed",
+            "discovered": [
+              "sampled-return/first-observed-exit"
+            ],
+            "probability": 0.2782135211618262,
+            "evidence": {
+              "calibration": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "acquisition": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+              "decoder": "frozen-five-native-sample-IQ-decoder"
+            },
+            "observable": "first-observed-exit",
+            "startLevel": 1,
+            "windowSeconds": 0.0005688888888888889,
+            "observationStride": 10,
+            "source": {
+              "path": "corpus/programmes/programme-algebra/learning/return-path-delft-row75-plan.json",
+              "sha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
