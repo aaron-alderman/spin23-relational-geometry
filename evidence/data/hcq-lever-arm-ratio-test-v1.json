@@ -1,0 +1,554 @@
+{
+  "schemaVersion": "hcq-lever-arm-ratio-test-v1",
+  "date": "2026-11-08",
+  "sources": {
+    "evidence/data/hcq-device-field-source-derivation-v1.json": "e884e69613f279196f7be5d3f689ccd7e46db59b55bf1eb37319a7035232ea99",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\test-hcq-lever-arm-ratios.py": "9e0aa689f6fbb2b1ebf4b2475899f644c60d327fcc338a41d70c27f01a9ada5e"
+  },
+  "primaryPaper": "https://arxiv.org/abs/2601.06682v1",
+  "parameters": {
+    "nu1GHz": 1.48,
+    "nu2GHz": 1.08,
+    "testChargeOverElectron": 0.5,
+    "IpAmpere": 1.15e-08,
+    "fluxSweepGapAtDegeneracyGHz": 2.555,
+    "refittedParameters": 0,
+    "trainingBoundary": "Parameters are previously fitted values reported by the paper. This is an identifiability/conditional-prediction test, not new held-out validation."
+  },
+  "cancellationTheorem": {
+    "strength": "If d(Phi)=eta Dbar(Phi) with the same scalar eta at every bias, |d_j0(Phi)|^2/|d_k0(Phi_ref)|^2 is eta-independent, provided the denominator is nonzero.",
+    "isolatedForce": "In leading CP order, for one fixed electric channel with alpha(Phi,i xi)=eta^2 alphabar(Phi,i xi), F(Phi)=eta^2 Fbar(Phi). The pure-channel force ratio cancels eta.",
+    "totalForce": "For F_total(Phi)=B+eta^2 Fbar(Phi), an unknown flux-independent B does not cancel in a simple ratio. It cancels in [F(Phi)-F(Phi0)]/[F(Phi1)-F(Phi0)].",
+    "conditions": [
+      "Fixed geometry and source direction.",
+      "Scalar lever arm constant over flux and the contributing frequencies, or an independently known frequency shape times one unknown amplitude.",
+      "Known physical source operator, common state/preparation and modeled contacts.",
+      "Single isolated force channel or controlled subtraction of other contributions."
+    ],
+    "boundaries": [
+      "An unknown frequency-dependent weighting remains inside the integral.",
+      "Electric and magnetic channels with different unknown gains do not share one scalar cancellation.",
+      "General multiple-scattering log determinants are nonlinear in response strength; simple cancellation is a leading weak-coupling/CP statement.",
+      "Flux-dependent contacts, temperatures/populations, screening, backgrounds or transfer functions require their own matching."
+    ]
+  },
+  "sourceCounterexample": {
+    "modelA": "H_A/hGHz=-(epsilon sigma_z+A(x) sigma_x)/2, A=|nu1+nu2 exp(i pi x)|; canonical kinetic term i psi^dagger psi_dot.",
+    "modelB": "H_B/hGHz=-(epsilon sigma_z+Re[t(x)]sigma_x-Im[t(x)]sigma_y)/2 with t=nu1+nu2 exp(i pi x); the same canonical kinetic convention.",
+    "dipoleConstruction": "In each action use d_reduced=-partial_x H and the same unknown overall electric lever arm. The static spectra agree for all charge and flux values, but transition strengths differ.",
+    "gaugeWarning": "A source-dependent basis transformation relates the instantaneous matrices, but also generates a time-derivative source connection. Keeping that connection makes a coordinate change equivalent; omitting it defines different source actions. The static spectrum alone does not determine which source connection describes the device.",
+    "forceDiagnosticBoundary": "All forceRatios in these records integrate only the transition Kubo term to test scalar cancellation. The nonlinear charge-source actions also have contacts, examined separately below. These transition-only integrals are not their complete physical Casimir forces.",
+    "scope": "An underidentification witness, not an assertion that both lifts are the microscopic action of the actual h-CQUID.",
+    "records": [
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 0.0,
+        "gapGHz": 1.8321571984958058,
+        "weightReduced": 0.0,
+        "diagonalSourceMagnitude": 1.3703850580126464,
+        "HamiltonianContactExpectation": 2.0499935363255064,
+        "staticKuboMinusContact": -2.0499935363255064,
+        "strengthRatioToR1": 0.0,
+        "retardedElectricForceRatioToR1": 0.0,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.0
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.0
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.0
+          }
+        ]
+      },
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 0.25,
+        "gapGHz": 1.8885444130334874,
+        "weightReduced": 0.11046795336613655,
+        "diagonalSourceMagnitude": 1.3294687863421948,
+        "HamiltonianContactExpectation": 1.9887858546125976,
+        "staticKuboMinusContact": -1.871798451400092,
+        "strengthRatioToR1": 0.11764705882352922,
+        "retardedElectricForceRatioToR1": 0.16141043307530217,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.11919828369364156
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.14157746906746582
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.1607946312529725
+          }
+        ]
+      },
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 0.5,
+        "gapGHz": 2.048414020651099,
+        "weightReduced": 0.37559104144486516,
+        "diagonalSourceMagnitude": 1.2257096580265079,
+        "HamiltonianContactExpectation": 1.8335699602636066,
+        "staticKuboMinusContact": -1.466855968210885,
+        "strengthRatioToR1": 0.4000000000000003,
+        "retardedElectricForceRatioToR1": 0.505964425626941,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.4041583140721977
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.46060608681645676
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.5046471646517084
+          }
+        ]
+      },
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 1.0,
+        "gapGHz": 2.5910615585122634,
+        "weightReduced": 0.9389776036121622,
+        "diagonalSourceMagnitude": 0.9690085673574628,
+        "HamiltonianContactExpectation": 1.4495643309243569,
+        "staticKuboMinusContact": -0.7247821654621788,
+        "strengthRatioToR1": 1.0,
+        "retardedElectricForceRatioToR1": 1.0,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.0
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 1.0
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 1.0
+          }
+        ]
+      },
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 2.0,
+        "gapGHz": 4.096828041302198,
+        "weightReduced": 1.5023641657794595,
+        "diagonalSourceMagnitude": 0.6128548290132539,
+        "HamiltonianContactExpectation": 0.9167849801318033,
+        "staticKuboMinusContact": -0.1833569960263609,
+        "strengthRatioToR1": 1.6,
+        "retardedElectricForceRatioToR1": 1.0119288512538815,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.5453604508324263
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 1.1512822491268715
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 1.0146041923180562
+          }
+        ]
+      },
+      {
+        "model": "modulus-lift",
+        "epsilonOverA": 4.0,
+        "gapGHz": 7.55417765213395,
+        "weightReduced": 1.767487253858189,
+        "diagonalSourceMagnitude": 0.3323671965855488,
+        "HamiltonianContactExpectation": 0.4971964636531495,
+        "staticKuboMinusContact": -0.029246850803126445,
+        "strengthRatioToR1": 1.882352941176472,
+        "retardedElectricForceRatioToR1": 0.6456417323012101,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.6493154356685122
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.8010575531963354
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.6481612818090264
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 0.0,
+        "gapGHz": 1.832157198495806,
+        "weightReduced": 1.0000214361333328,
+        "diagonalSourceMagnitude": 1.370385058012646,
+        "HamiltonianContactExpectation": 3.141626325208846,
+        "staticKuboMinusContact": -2.049993536325505,
+        "strengthRatioToR1": 0.5157410682702513,
+        "retardedElectricForceRatioToR1": 0.7293680134205777,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.5230315513067371
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.6305425892768756
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.7262189691474005
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 0.25,
+        "gapGHz": 1.8885444130334876,
+        "weightReduced": 1.1104893894994703,
+        "diagonalSourceMagnitude": 1.3294687863421948,
+        "HamiltonianContactExpectation": 3.0478252176605025,
+        "staticKuboMinusContact": -1.8717984514000905,
+        "strengthRatioToR1": 0.5727127072972811,
+        "retardedElectricForceRatioToR1": 0.7857553519569558,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.5802641599546867
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.6892073326163668
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.7827575929619429
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 0.5,
+        "gapGHz": 2.048414020651099,
+        "weightReduced": 1.3756124775781973,
+        "diagonalSourceMagnitude": 1.225709658026508,
+        "HamiltonianContactExpectation": 2.8099560092279376,
+        "staticKuboMinusContact": -1.466855968210886,
+        "strengthRatioToR1": 0.7094446409621508,
+        "retardedElectricForceRatioToR1": 0.8973843756963142,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 0.7168198750470454
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.8169362997162054
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.8950480663472459
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 1.0,
+        "gapGHz": 2.591061558512263,
+        "weightReduced": 1.9389990397454944,
+        "diagonalSourceMagnitude": 0.9690085673574627,
+        "HamiltonianContactExpectation": 2.221465278509349,
+        "staticKuboMinusContact": -0.724782165462178,
+        "strengthRatioToR1": 1.0,
+        "retardedElectricForceRatioToR1": 1.0,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.0
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 1.0
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 1.0
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 2.0,
+        "gapGHz": 4.096828041302197,
+        "weightReduced": 2.502385601912791,
+        "diagonalSourceMagnitude": 0.612854829013254,
+        "HamiltonianContactExpectation": 1.4049780046139686,
+        "staticKuboMinusContact": -0.18335699602636102,
+        "strengthRatioToR1": 1.2905553590378491,
+        "retardedElectricForceRatioToR1": 0.8162188762191944,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.2464832571668336
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.9286209227348947
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.8183767985614598
+          }
+        ]
+      },
+      {
+        "model": "complex-path-lift",
+        "epsilonOverA": 4.0,
+        "gapGHz": 7.554177652133948,
+        "weightReduced": 2.767508689991521,
+        "diagonalSourceMagnitude": 0.33236719658554886,
+        "HamiltonianContactExpectation": 0.7619563044151261,
+        "staticKuboMinusContact": -0.02924685080312661,
+        "strengthRatioToR1": 1.4272872927027203,
+        "retardedElectricForceRatioToR1": 0.48955550258079683,
+        "forceRatios": [
+          {
+            "ell": 0.1,
+            "isolatedElectricForceRatio": 1.2505874490874374
+          },
+          {
+            "ell": 1.0,
+            "isolatedElectricForceRatio": 0.607398985275352
+          },
+          {
+            "ell": 10.0,
+            "isolatedElectricForceRatio": 0.49146594185983733
+          }
+        ]
+      }
+    ]
+  },
+  "contactCompletion": {
+    "response": "chi_xx(i xi)=2 Delta w/(Delta^2+xi^2)-<H_xx>, before additional direct geometric terms and high-frequency completion.",
+    "identity": "At zero temperature chi_xx(0)=-partial_x^2 E_ground. The two instantaneous spectra are identical, so their static source responses agree once both source contacts are retained.",
+    "finiteFrequencyDifference": "For these two actions, chi_B(i xi)-chi_A(i xi)=-2(w_B-w_A) xi^2/[Delta(Delta^2+xi^2)]. Static agreement therefore does not fix broadband response.",
+    "staticCandidate": "At Q/e=1/2 the traceless two-state ground-energy curvature scales as Delta(Phi)^(-3); its ratio is known conditional on the model and subtraction of other contributions.",
+    "staticBoundary": "This signed quantum-capacitance correction is not by itself a complete passive free-space polarizability. Source-only geometric terms, a source-dependent common energy offset and high-frequency modes remain to be matched.",
+    "records": [
+      {
+        "epsilonOverA": 0.0,
+        "staticQuantumCorrection": -2.0499935363255064,
+        "staticDifference": 1.3322676295501878e-15,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.07566490995365172
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.2505583889284191
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.7950840913464692
+          }
+        ]
+      },
+      {
+        "epsilonOverA": 0.25,
+        "staticQuantumCorrection": -1.8717984514000914,
+        "staticDifference": 1.5543122344752192e-15,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.06937060230623326
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.23190981540925382
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.7584672280036875
+          }
+        ]
+      },
+      {
+        "epsilonOverA": 0.5,
+        "staticQuantumCorrection": -1.4668559682108848,
+        "staticDifference": -8.881784197001252e-16,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.05490249937946157
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.1879110948738134
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.6659195544618812
+          }
+        ]
+      },
+      {
+        "epsilonOverA": 1.0,
+        "staticQuantumCorrection": -0.7247821654621784,
+        "staticDifference": 7.771561172376096e-16,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.027711993350600816
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.1000701290687861
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.44210801651212495
+          }
+        ]
+      },
+      {
+        "epsilonOverA": 2.0,
+        "staticQuantumCorrection": -0.18335699602636069,
+        "staticDifference": -1.1102230246251565e-16,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.007164979225111612
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.027451249689730783
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.17040557013417224
+          }
+        ]
+      },
+      {
+        "epsilonOverA": 4.0,
+        "staticQuantumCorrection": -0.029246850803126487,
+        "staticDifference": -1.6653345369377348e-16,
+        "frequencyDifferences": [
+          {
+            "imaginaryFrequencyGHz": 0.5,
+            "chiBMinusChiA": -0.0011548332424420882
+          },
+          {
+            "imaginaryFrequencyGHz": 1.0,
+            "chiBMinusChiA": -0.004559667699326142
+          },
+          {
+            "imaginaryFrequencyGHz": 3.0,
+            "chiBMinusChiA": -0.03606776547640228
+          }
+        ]
+      }
+    ]
+  },
+  "magneticSourcePrediction": {
+    "source": "I=-partial_Phi H=Ip sigma_z in the stated fixed flux-state basis and flux-independent tunneling approximation.",
+    "strengthRelation": "|I_10(Phi)|^2/|I_10(Phi0)|^2=[f01(Phi0)/f01(Phi)]^2, with Phi0 here denoting the degeneracy bias.",
+    "staticRelation": "Ground-state transition polarizability ratio equals [f01(Phi0)/f01(Phi)]^3.",
+    "records": [
+      {
+        "deltaFluxOverFluxQuantum": 0.0,
+        "gapGHz": 2.555,
+        "currentTransitionStrengthRatio": 1.0,
+        "currentStaticPolarizabilityRatioGroundState": 1.0
+      },
+      {
+        "deltaFluxOverFluxQuantum": 0.01,
+        "gapGHz": 2.6539072816959846,
+        "currentTransitionStrengthRatio": 0.9268518408485247,
+        "currentStaticPolarizabilityRatioGroundState": 0.8923094147639693
+      },
+      {
+        "deltaFluxOverFluxQuantum": 0.02,
+        "gapGHz": 2.9306689405928936,
+        "currentTransitionStrengthRatio": 0.7600607145175777,
+        "currentStaticPolarizabilityRatioGroundState": 0.6626320355377776
+      },
+      {
+        "deltaFluxOverFluxQuantum": 0.05,
+        "gapGHz": 4.405450771030612,
+        "currentTransitionStrengthRatio": 0.33635749065361303,
+        "currentStaticPolarizabilityRatioGroundState": 0.1950750180370157
+      },
+      {
+        "deltaFluxOverFluxQuantum": 0.1,
+        "gapGHz": 7.618917966738902,
+        "currentTransitionStrengthRatio": 0.11245925803963813,
+        "currentStaticPolarizabilityRatioGroundState": 0.03771315107285001
+      }
+    ],
+    "scope": "Conditional candidate for calibrated inductive transition strength; not automatically an electric dipole or a prediction of total Casimir force. Readout peak heights require occupation, linewidth and transfer-function correction."
+  },
+  "backgroundTest": [
+    {
+      "etaTestValue": 1.0,
+      "backgroundTestValue": 0.0,
+      "totalForceRatioR2ToR1": 0.9286209227348947
+    },
+    {
+      "etaTestValue": 0.2,
+      "backgroundTestValue": 1.0,
+      "totalForceRatioR2ToR1": 0.9807886307332828
+    },
+    {
+      "etaTestValue": 3.0,
+      "backgroundTestValue": 4.0,
+      "totalForceRatioR2ToR1": 0.9319080511745866
+    }
+  ],
+  "backgroundSubtractedDifferenceRatios": [
+    0.8068002557442335,
+    0.8068002557442346,
+    0.8068002557442335
+  ],
+  "unknownFrequencyWeightingTest": [
+    {
+      "unmeasuredWeightingScale": null,
+      "forceRatioR2ToR1": 0.9286209227348949
+    },
+    {
+      "unmeasuredWeightingScale": 0.5,
+      "forceRatioR2ToR1": 0.8493025380917352
+    },
+    {
+      "unmeasuredWeightingScale": 2.0,
+      "forceRatioR2ToR1": 0.8810874789101901
+    }
+  ],
+  "frequencyWeightingBoundary": "An integral-weighting diagnostic using the squared imaginary-axis shape of a first-order low-pass transfer. It is not a complete material-response realization; direct and bath terms of a physical embedding must also be matched.",
+  "forceGeometry": "Conditional pointlike parallel electric dipole and ideal conducting plane at T=0; ell=2pi*(1GHz)*L/c. It is not the actual chip/environment geometry or the experimental 12mK state.",
+  "verification": {
+    "passed": true,
+    "maxScalarLeverArmRatioChange": 6.661338147750939e-16,
+    "maxSameSpectrumDifferenceGHz": 1.7763568394002505e-15,
+    "maxAnalyticWeightFormulaError": 1.3322676295501878e-15,
+    "maxContactCompletedStaticResponseDifference": 1.5543122344752192e-15
+  },
+  "physicalVerdict": "Scalar normalization can be removed, which enables conditional falsifiable response-ratio tests. Available spectroscopy does not fix the electric source action or complete force channels, so no unique h-CQUID electric-strength/Casimir ratio is established.",
+  "nextTest": "Measure weak-drive, population- and linewidth-corrected integrated transition weights under a fixed electric or inductive probe. Compare the frozen model ratios across flux; then use a fixed electromagnetic geometry and controlled force differences. Do not fit a different gain or source operator at each bias.",
+  "reproduction": "./.venv-alpaca/Scripts/python.exe scripts/test-hcq-lever-arm-ratios.py"
+}

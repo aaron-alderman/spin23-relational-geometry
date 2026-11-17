@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "e8-refined-computational-holdout-predictions-v1",
+  "modelSource": "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell12-direct-v1.json",
+  "trainingSource": "evidence/data/translation-free-e8-charge-shell-14-audit-v1.json",
+  "targetPath": "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell14-direct-v1.json",
+  "modelSha256": "87c04598886381b7d01a5bb866f1294a1cb4d2324e26182dd7fcaf15eccf810e",
+  "trainingSha256": "dcf79a0ab1414dee1ec9550d77ec94e6a86e2dfd6ddf93edccb335ebdaf20e9d",
+  "alpha": 0.9999952674179108,
+  "beta": 1.0000173201828109,
+  "calibrationCount": 2,
+  "lines": [
+    {
+      "state": 3,
+      "predictedGap": 0.31403215412824864,
+      "predictedWeight": 0.06630509791583465
+    },
+    {
+      "state": 5,
+      "predictedGap": 0.40752098904023876,
+      "predictedWeight": 0.03981028819044827
+    },
+    {
+      "state": 7,
+      "predictedGap": 0.491203174864704,
+      "predictedWeight": 0.9283364317567988
+    },
+    {
+      "state": 8,
+      "predictedGap": 0.49758401113641987,
+      "predictedWeight": 0.01180319688177738
+    },
+    {
+      "state": 11,
+      "predictedGap": 0.5842852155799299,
+      "predictedWeight": 0.20160797454909835
+    },
+    {
+      "state": 12,
+      "predictedGap": 0.5849249829548807,
+      "predictedWeight": 0.0017602447097782626
+    }
+  ],
+  "tolerance": 0.01,
+  "targetAbsentAtFreeze": true,
+  "authority": "Refined computational prediction packet created before the new cutoff-14 higher-line reference. Its first line was known from the earlier audit and used for calibration. Same assumed Hamiltonian and geometry; no independent physical validation.",
+  "originalFailureRetained": "The cutoff-8 to cutoff-10 all-line rehearsal remains failed. Refinement changes numerical precision, not physical model parameters or the tolerance."
+}

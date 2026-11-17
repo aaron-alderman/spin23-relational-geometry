@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "yukawa-vacuum-source-checks-v1",
+  "observedAtUTC": "2026-11-08T12:26:37.973Z",
+  "scope": "Five existing corpus certificates executed in one source audit; no new physical measurements.",
+  "checks": [
+    {
+      "command": "node verification/prove/prove_Delta_copy_kinetic_normalization_and_quartic_rank_one_gate.mjs",
+      "exitCode": 0,
+      "stdout": "{\n  \"protocol\": \"Delta-copy-kinetic-normalization-quartic-rank-one-gate/1\",\n  \"coefficientBlocks\": {\n    \"CP\": [\n      [\n        1,\n        0,\n        0\n      ],\n      [\n        0,\n        0,\n        0\n      ],\n      [\n        0,\n        0,\n        0\n      ]\n    ],\n    \"CQ\": [\n      [\n        0,\n        0,\n        0\n      ],\n      [\n        0,\n        4,\n        5\n      ],\n      [\n        0,\n        5,\n        6\n      ]\n    ]\n  },\n  \"kineticGram\": [\n    [\n      1,\n      0\n    ],\n    [\n      0,\n      102\n    ]\n  ],\n  \"canonicalNormalizationExists\": true,\n  \"normalizedQuarticShape\": {\n    \"rhoP\": 1,\n    \"rhoQ\": 0.9998077662437524,\n    \"formula\": \"rho(C)=Tr[(C^* C)^2]/Tr(C^* C)^2=sum s_i^4/(sum s_i^2)^2\"\n  },\n  \"genericQBlock\": {\n    \"B\": [\n      [\n        4,\n        5\n      ],\n      [\n        5,\n        6\n      ]\n    ],\n    \"determinant\": -1,\n    \"rank\": 2,\n    \"exactExchangeWithRankOneP\": false\n  },\n  \"rankOneWitness\": {\n    \"QBlockEmbedded\": [\n      [\n        0,\n        0,\n        0\n      ],\n      [\n        0,\n        1,\n        2\n      ],\n      [\n        0,\n        2,\n        4\n      ]\n    ],\n    \"rho\": 1,\n    \"exactExchangeShapeWithP\": true\n  },\n  \"approximateExchange\": {\n    \"squaredSingularValueRatio\": \"r=s_2^2/s_1^2\",\n    \"defect\": \"1-rho_Q=2r/(1+r)^2\",\n    \"atRankOne\": 0,\n    \"atEqualSingularValues\": 0.5\n  },\n  \"boundary\": \"The theorem covers the minimal block-factorized single-trace potential; additional scalar paths or trace terms can modify quartic matching.\",\n  \"passed\": true\n}\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_radiative_selector_portal_construction.mjs",
+      "exitCode": 0,
+      "stdout": "Spin(2,3) radiative selector-portal construction: PASS\n  GW minimum v/mu=5.489251, positive scalon mass/v=0.032772\n  minimal backreaction derives g_A=0.00501717 and M_Pl ell=281.875\n  colored scalar threshold M_T/v=0.182574 gives Lambda_YM/M_Pl=3.224866e-7\n  d log(Lambda_YM/M_Pl)/d log g3=29.2975: the exponential boundary remains\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_six_link_renormalizable_potential_vacuum_audit.mjs",
+      "exitCode": 0,
+      "stdout": "PASS 1542: the distinct six-link theory has exactly 7 quadratic and 76 quartic phase-sensitive renormalizable classes; generic quadratic terms remove all accidental continuous rephasings beyond gauge, and an explicit open stable all-nonzero vacuum fully Higgses U(1)^2 while keeping det(D16)=1. Identifying repeated-charge fields remains viable with independent edge Yukawas but does not derive a common ray.\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_e6_two_copy_yukawa_gram_obstruction.mjs",
+      "exitCode": 0,
+      "stdout": "spin23 E6 two-copy Yukawa Gram obstruction verification: PASS\n  one tilted source Gram off-diagonal: 6\n  one tilted source rank: 1\n  two-ray tight-frame witness Gram sum: identity_2\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_common_coefficient_line_rg_invariance.mjs",
+      "exitCode": 0,
+      "stdout": "PASS 1530: the exact projective-minor beta identity holds for all 6561 bounded anomalous-matrix pairs; 5454 are transverse on the test ray. Universal projective flow preserves a running common ray, while a fixed ratio requires a common Ward eigenline and no transverse additive pole.\n"
+    }
+  ]
+}

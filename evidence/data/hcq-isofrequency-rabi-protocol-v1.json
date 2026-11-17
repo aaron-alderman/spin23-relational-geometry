@@ -1,0 +1,488 @@
+{
+  "schemaVersion": "hcq-isofrequency-rabi-protocol-v1",
+  "date": "2026-11-08",
+  "authority": "New prospective protocol derived from the published minimal h-CQUID model; simulation validation only. No experiment or existing multi-bias Rabi dataset is claimed.",
+  "sources": {
+    "evidence/data/hcq-public-inductive-strength-test-v1.json": "4880558ffa30410820de6d589171b662d746cf60696b692771ec0bb6cd2f2708",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\design-hcq-isofrequency-rabi-test.py": "3d8575063da116c3c026ec644cab9b5b979730058b11294918e97c1947f767e5"
+  },
+  "primaryDeviceReference": "https://arxiv.org/abs/2601.06682v1",
+  "fixedInputs": {
+    "nu1GHz": 1.48,
+    "nu2GHz": 1.08,
+    "IpAmpere": 1.15e-08,
+    "targetChargeOverElectron": 0.5,
+    "parametersRefitted": 0,
+    "scope": "Published fitted spectral parameters are frozen. Experimental reference charges should be set from a preregistered static spectrum, not optimized against Rabi ratios."
+  },
+  "keyIdea": "A charge-tunable degeneracy reference can match each target transition frequency. Same carrier and source amplitude cancel arbitrary frequency-only pump transfer in a paired Rabi-rate ratio.",
+  "derivation": {
+    "model": "H=-(epsilon(Phi) sigma_z+Re[t(Q)] sigma_x-Im[t(Q)] sigma_y)/2, with flux-independent t and fixed Ip.",
+    "current": "I=-partial_Phi H=Ip sigma_z.",
+    "target": "At fixed Q_target, A0=|t(Q_target)|/h, f=sqrt(A0^2+(2 Ip DeltaPhi/h)^2); |I10,target|=Ip A0/f.",
+    "reference": "At flux degeneracy, choose Q_ref so |t(Q_ref)|/h=f; then |I10,ref|=Ip in this model.",
+    "rateRatio": "[Omega_target(f,u)/Omega_ref(f,u)]^2=[A0/f]^2 when both runs see the same local pump flux.",
+    "noAbsoluteCalibration": "Unknown common pump amplitude, its frequency dependence, readout gain and nonzero preparation contrast are not needed.",
+    "scopeOfReference": "Reference strength Ip is a consequence of the fixed flux-state current vertex at degeneracy. This tests the full minimal two-state model, not a model-independent reconstruction of arbitrary source operators.",
+    "accessibleRange": "Requires min|t|/h <= f <= max|t|/h. For these parameters .4 to 2.56 GHz. The original 2.555 GHz fixed-charge sweep above 2.56 GHz cannot be covered by this same-device degeneracy reference; use a lower-gap target to obtain a nontrivial interval."
+  },
+  "workingPoints": [
+    {
+      "frequencyGHz": 1.8321571984958058,
+      "targetChargeOverElectron": 0.5,
+      "targetDeltaFluxOverQuantum": 0.0,
+      "referenceChargeOverElectron": 0.5000000000000001,
+      "referenceDeltaFluxOverQuantum": 0.0,
+      "predictedStrengthRatio": 1.0,
+      "predictedHamiltonianRabiRateRatio": 1.0
+    },
+    {
+      "frequencyGHz": 2.0,
+      "targetChargeOverElectron": 0.5,
+      "targetDeltaFluxOverQuantum": 0.011173405782685527,
+      "referenceChargeOverElectron": 0.43551549557307706,
+      "referenceDeltaFluxOverQuantum": 0.0,
+      "predictedStrengthRatio": 0.8392,
+      "predictedHamiltonianRabiRateRatio": 0.9160785992479029
+    },
+    {
+      "frequencyGHz": 2.2,
+      "targetChargeOverElectron": 0.5,
+      "targetDeltaFluxOverQuantum": 0.016967287227746552,
+      "referenceChargeOverElectron": 0.3464267102026003,
+      "referenceDeltaFluxOverQuantum": 0.0,
+      "predictedStrengthRatio": 0.6935537190082643,
+      "predictedHamiltonianRabiRateRatio": 0.8327987265890026
+    },
+    {
+      "frequencyGHz": 2.4,
+      "targetChargeOverElectron": 0.5,
+      "targetDeltaFluxOverQuantum": 0.021597700331929953,
+      "referenceChargeOverElectron": 0.22920917376094427,
+      "referenceDeltaFluxOverQuantum": 0.0,
+      "predictedStrengthRatio": 0.5827777777777777,
+      "predictedHamiltonianRabiRateRatio": 0.7633988327065858
+    },
+    {
+      "frequencyGHz": 2.56,
+      "targetChargeOverElectron": 0.5,
+      "targetDeltaFluxOverQuantum": 0.02490980264074416,
+      "referenceChargeOverElectron": 0.0,
+      "referenceDeltaFluxOverQuantum": 0.0,
+      "predictedStrengthRatio": 0.5122070312499999,
+      "predictedHamiltonianRabiRateRatio": 0.7156864056624241
+    }
+  ],
+  "measurementProtocol": [
+    "Freeze the static two-control spectrum, charge/parity branch, Ip and candidate working points before acquiring Rabi ratios.",
+    "For each carrier frequency alternate the flux-detuned target with the gate-tuned degeneracy reference; use the identical source carrier, pulse amplitude, drive line and pulse envelope.",
+    "Prepare two different diagonal initial populations, apply the variable-duration resonant pulse, then read out with the same timed protocol, preferably at a common readout bias. Interleave the preparations.",
+    "Subtract the preparation traces and normalize by the zero-duration difference. No absolute population or readout-gain calibration is required if readout is linear, stable and nonzero in contrast.",
+    "Infer the Hamiltonian Rabi rate from the normalized damped trace, separating oscillation frequency from damping. This estimates observables; do not retune the predicted current ratios.",
+    "Repeat at three or more identical source-amplitude levels for both working points. Require the recovered squared-rate ratio to be amplitude independent in the declared regime.",
+    "Randomize target/reference order, track parity switching and drift, verify carrier resonance and control pulse transients and state mapping.",
+    "Score the frozen ratio (A0/f)^2 with measurement uncertainty; do not fit per-bias gains or modify nu1, nu2 or Ip to improve agreement."
+  ],
+  "dampingAndContrastCancellation": {
+    "normalizedSignal": "n(t)=[s_A(t)-s_B(t)]/[s_A(0)-s_B(0)], for identical readout mapping and two diagonal preparations with nonzero difference.",
+    "resonantMarkovSolution": "n(t)=exp(-gamma t)[cos(omega_d t)+c sin(omega_d t)], gamma=(Gamma1+Gamma2)/2, c=(Gamma2-Gamma1)/(2 omega_d).",
+    "HamiltonianRate": "Omega^2=omega_d^2*(1+c^2). Using omega_d alone would retain a damping bias.",
+    "initialDerivativeIdentity": "Omega^2=n_prime(0)^2-n_second(0), an equivalent ideal flat-pulse identity; short-time differentiation can be noise sensitive.",
+    "powerDifferenceAlternative": "If Gamma1 and Gamma2 are power independent, differences of omega_d^2 between two common source powers remove the damping offset directly. Three powers test this restricted alternative.",
+    "conditions": "Near-resonant two-level Markov dynamics, stable rates during each flat pulse, no initial transverse-coherence difference and validated pulse onset. Finite ramp shape, detuning, leakage, nonlinear readout or changing preparation/readout must be modeled or bounded independently."
+  },
+  "simulation": {
+    "records": [
+      {
+        "frequencyGHz": 1.8321571984958058,
+        "sourceAmplitudeRelative": 0.55,
+        "unknownCommonPumpTransferTestValue": 1.1945003709469175,
+        "predictedRatio": 1.0,
+        "recoveredRatio": 0.999999999999629,
+        "rawDampedFrequencySquaredRatio": 0.9990525956209944,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 742800838.2981826,
+          "normalizedSineCoefficient": 0.02437396280088118,
+          "correctedHamiltonianRabiRadiansPerSecond": 743021450.8353876,
+          "correctionRelativeError": 1.5876189252139739e-13,
+          "initialDifferenceSignal": -0.105,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 742448888.5352764,
+          "normalizedSineCoefficient": 0.039280481727649225,
+          "correctedHamiltonianRabiRadiansPerSecond": 743021450.8352498,
+          "correctionRelativeError": 2.6645352591003757e-14,
+          "initialDifferenceSignal": 1.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 1.8321571984958058,
+        "sourceAmplitudeRelative": 1.0,
+        "unknownCommonPumpTransferTestValue": 1.1945003709469175,
+        "predictedRatio": 1.0,
+        "recoveredRatio": 1.0000000000000342,
+        "rawDampedFrequencySquaredRatio": 0.9996115758344714,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1350807350.5997138,
+          "normalizedSineCoefficient": 0.014435811288255529,
+          "correctedHamiltonianRabiRadiansPerSecond": 1350948092.427766,
+          "correctionRelativeError": 2.4424906541753444e-15,
+          "initialDifferenceSignal": -0.105,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1350544982.010691,
+          "normalizedSineCoefficient": 0.024434580439703504,
+          "correctedHamiltonianRabiRadiansPerSecond": 1350948092.4277892,
+          "correctionRelativeError": 1.9539925233402755e-14,
+          "initialDifferenceSignal": 1.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 1.8321571984958058,
+        "sourceAmplitudeRelative": 1.4,
+        "unknownCommonPumpTransferTestValue": 1.1945003709469175,
+        "predictedRatio": 1.0,
+        "recoveredRatio": 1.0000000000000253,
+        "rawDampedFrequencySquaredRatio": 0.9997185804830672,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1891206030.6933846,
+          "normalizedSineCoefficient": 0.011326106014915084,
+          "correctedHamiltonianRabiRadiansPerSecond": 1891327329.398857,
+          "correctionRelativeError": 5.551115123125783e-15,
+          "initialDifferenceSignal": -0.105,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1890939900.8247433,
+          "normalizedSineCoefficient": 0.02024390092117607,
+          "correctedHamiltonianRabiRadiansPerSecond": 1891327329.3988812,
+          "correctionRelativeError": 7.105427357601002e-15,
+          "initialDifferenceSignal": 1.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.0,
+        "sourceAmplitudeRelative": 0.55,
+        "unknownCommonPumpTransferTestValue": 1.1995736939486883,
+        "predictedRatio": 0.8392,
+        "recoveredRatio": 0.8391999999996487,
+        "rawDampedFrequencySquaredRatio": 0.8380383384584676,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 745892688.7181232,
+          "normalizedSineCoefficient": 0.027624617203423272,
+          "correctedHamiltonianRabiRadiansPerSecond": 746177237.0611278,
+          "correctionRelativeError": 9.547918011776346e-14,
+          "initialDifferenceSignal": -0.275,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 682823239.6538391,
+          "normalizedSineCoefficient": 0.04637181068330325,
+          "correctedHamiltonianRabiRadiansPerSecond": 683556998.1174853,
+          "correctionRelativeError": 1.1368683772161603e-13,
+          "initialDifferenceSignal": 2.4000000000000004,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.0,
+        "sourceAmplitudeRelative": 1.0,
+        "unknownCommonPumpTransferTestValue": 1.1995736939486883,
+        "predictedRatio": 0.8392,
+        "recoveredRatio": 0.8392000000000345,
+        "rawDampedFrequencySquaredRatio": 0.8387358560103171,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1356507497.9862053,
+          "normalizedSineCoefficient": 0.01621811898024347,
+          "correctedHamiltonianRabiRadiansPerSecond": 1356685885.5655541,
+          "correctionRelativeError": 2.3314683517128287e-15,
+          "initialDifferenceSignal": -0.275,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1242323794.3806412,
+          "normalizedSineCoefficient": 0.028575481014582998,
+          "correctedHamiltonianRabiRadiansPerSecond": 1242830905.6683192,
+          "correctionRelativeError": 1.84297022087776e-14,
+          "initialDifferenceSignal": 2.4000000000000004,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.0,
+        "sourceAmplitudeRelative": 1.4,
+        "unknownCommonPumpTransferTestValue": 1.1995736939486883,
+        "predictedRatio": 0.8392,
+        "recoveredRatio": 0.8392000000000316,
+        "rawDampedFrequencySquaredRatio": 0.8388720689519459,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1899209612.997479,
+          "normalizedSineCoefficient": 0.012594712999270329,
+          "correctedHamiltonianRabiRadiansPerSecond": 1899360239.7918332,
+          "correctionRelativeError": 2.7977620220553945e-14,
+          "initialDifferenceSignal": -0.275,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1739485316.2258525,
+          "normalizedSineCoefficient": 0.023443716150409282,
+          "correctedHamiltonianRabiRadiansPerSecond": 1739963267.9356964,
+          "correctionRelativeError": 4.6851411639181606e-14,
+          "initialDifferenceSignal": 2.4000000000000004,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.2,
+        "sourceAmplitudeRelative": 0.55,
+        "unknownCommonPumpTransferTestValue": 1.1823135513360308,
+        "predictedRatio": 0.6935537190082643,
+        "recoveredRatio": 0.6935537190085806,
+        "rawDampedFrequencySquaredRatio": 0.692078878472259,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 735077789.2037462,
+          "normalizedSineCoefficient": 0.03143204751664403,
+          "correctedHamiltonianRabiRadiansPerSecond": 735440818.2890084,
+          "correctionRelativeError": 1.9628743075372768e-13,
+          "initialDifferenceSignal": -0.5249999999999999,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 611520609.3174118,
+          "normalizedSineCoefficient": 0.05586688245594715,
+          "correctedHamiltonianRabiRadiansPerSecond": 612474176.9527999,
+          "correctionRelativeError": 3.175237850427948e-14,
+          "initialDifferenceSignal": 2.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.2,
+        "sourceAmplitudeRelative": 1.0,
+        "unknownCommonPumpTransferTestValue": 1.1823135513360308,
+        "predictedRatio": 0.6935537190082643,
+        "recoveredRatio": 0.6935537190082186,
+        "rawDampedFrequencySquaredRatio": 0.6929787562427863,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1336940656.6020222,
+          "normalizedSineCoefficient": 0.018325420712661508,
+          "correctedHamiltonianRabiRadiansPerSecond": 1337165124.1621025,
+          "correctionRelativeError": 4.884981308350689e-15,
+          "initialDifferenceSignal": -0.5249999999999999,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1112940869.9239237,
+          "normalizedSineCoefficient": 0.03414377261768601,
+          "correctedHamiltonianRabiRadiansPerSecond": 1113589412.6413877,
+          "correctionRelativeError": 2.808864252301646e-14,
+          "initialDifferenceSignal": 2.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.2,
+        "sourceAmplitudeRelative": 1.4,
+        "unknownCommonPumpTransferTestValue": 1.1823135513360308,
+        "predictedRatio": 0.6935537190082643,
+        "recoveredRatio": 0.6935537190082744,
+        "rawDampedFrequencySquaredRatio": 0.6931572792971799,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1871844731.6430712,
+          "normalizedSineCoefficient": 0.014114418548667471,
+          "correctedHamiltonianRabiRadiansPerSecond": 1872031173.826961,
+          "correctionRelativeError": 1.4432899320127035e-14,
+          "initialDifferenceSignal": -0.5249999999999999,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1558424315.228783,
+          "normalizedSineCoefficient": 0.027771640610049168,
+          "correctedHamiltonianRabiRadiansPerSecond": 1559025177.6980202,
+          "correctionRelativeError": 2.1538326677728037e-14,
+          "initialDifferenceSignal": 2.8,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.4,
+        "sourceAmplitudeRelative": 0.55,
+        "unknownCommonPumpTransferTestValue": 1.1414668081086594,
+        "predictedRatio": 0.5827777777777777,
+        "recoveredRatio": 0.5827777777781495,
+        "rawDampedFrequencySquaredRatio": 0.5808668152006488,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 709570869.8987727,
+          "normalizedSineCoefficient": 0.03608519047994833,
+          "correctedHamiltonianRabiRadiansPerSecond": 710032700.256732,
+          "correctionRelativeError": 1.0913492332065289e-13,
+          "initialDifferenceSignal": -0.8550000000000002,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 540796735.1536188,
+          "normalizedSineCoefficient": 0.06779580499915526,
+          "correctedHamiltonianRabiRadiansPerSecond": 542038134.5596672,
+          "correctionRelativeError": 2.0983215165415459e-13,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.4,
+        "sourceAmplitudeRelative": 1.0,
+        "unknownCommonPumpTransferTestValue": 1.1414668081086594,
+        "predictedRatio": 0.5827777777777777,
+        "recoveredRatio": 0.5827777777779787,
+        "rawDampedFrequencySquaredRatio": 0.5820481863775334,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1290686168.8878727,
+          "normalizedSineCoefficient": 0.02091910539491048,
+          "correctedHamiltonianRabiRadiansPerSecond": 1290968545.9213886,
+          "correctionRelativeError": 6.428191312579656e-14,
+          "initialDifferenceSignal": -0.8550000000000002,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 984691357.764281,
+          "normalizedSineCoefficient": 0.04112963892869889,
+          "correctedHamiltonianRabiRadiansPerSecond": 985523881.0174763,
+          "correctionRelativeError": 1.0791367799356522e-13,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.4,
+        "sourceAmplitudeRelative": 1.4,
+        "unknownCommonPumpTransferTestValue": 1.1414668081086594,
+        "predictedRatio": 0.5827777777777777,
+        "recoveredRatio": 0.5827777777778695,
+        "rawDampedFrequencySquaredRatio": 0.582285266820151,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1807124571.0395231,
+          "normalizedSineCoefficient": 0.016003323989252746,
+          "correctedHamiltonianRabiRadiansPerSecond": 1807355964.2900286,
+          "correctionRelativeError": 1.7430501486614958e-14,
+          "initialDifferenceSignal": -0.8550000000000002,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1378973726.692785,
+          "normalizedSineCoefficient": 0.033198602058144656,
+          "correctedHamiltonianRabiRadiansPerSecond": 1379733433.4244022,
+          "correctionRelativeError": 6.128431095930864e-14,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.56,
+        "sourceAmplitudeRelative": 0.55,
+        "unknownCommonPumpTransferTestValue": 1.0945231119159509,
+        "predictedRatio": 0.5122070312499999,
+        "recoveredRatio": 0.5122070312503059,
+        "rawDampedFrequencySquaredRatio": 0.5097667716943793,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 680251722.2292163,
+          "normalizedSineCoefficient": 0.041315588157532515,
+          "correctedHamiltonianRabiRadiansPerSecond": 680832061.9806054,
+          "correctionRelativeError": 1.6719958750854857e-13,
+          "initialDifferenceSignal": -1.265,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 485685806.0790635,
+          "normalizedSineCoefficient": 0.08063597805438814,
+          "correctedHamiltonianRabiRadiansPerSecond": 487262251.29878175,
+          "correctionRelativeError": 1.3145040611561853e-13,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.56,
+        "sourceAmplitudeRelative": 1.0,
+        "unknownCommonPumpTransferTestValue": 1.0945231119159509,
+        "predictedRatio": 0.5122070312499999,
+        "recoveredRatio": 0.5122070312500714,
+        "rawDampedFrequencySquaredRatio": 0.5112907522917007,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1237524917.1825924,
+          "normalizedSineCoefficient": 0.023837903860711433,
+          "correctedHamiltonianRabiRadiansPerSecond": 1237876476.3286533,
+          "correctionRelativeError": 5.88418203051333e-14,
+          "initialDifferenceSignal": -1.265,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 884887216.1233946,
+          "normalizedSineCoefficient": 0.048593763383061706,
+          "correctedHamiltonianRabiRadiansPerSecond": 885931365.9977826,
+          "correctionRelativeError": 1.2878587085651816e-13,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      },
+      {
+        "frequencyGHz": 2.56,
+        "sourceAmplitudeRelative": 1.4,
+        "unknownCommonPumpTransferTestValue": 1.0945231119159509,
+        "predictedRatio": 0.5122070312499999,
+        "recoveredRatio": 0.512207031249999,
+        "rawDampedFrequencySquaredRatio": 0.5115990836431844,
+        "referenceTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1732742219.1628706,
+          "normalizedSineCoefficient": 0.018133106963576152,
+          "correctedHamiltonianRabiRadiansPerSecond": 1733027066.860034,
+          "correctionRelativeError": 1.2434497875801753e-14,
+          "initialDifferenceSignal": -1.265,
+          "unusedReadoutOffsetTestValue": 0.8
+        },
+        "targetTraceExtraction": {
+          "observedOscillationRadiansPerSecond": 1239363883.8963604,
+          "normalizedSineCoefficient": 0.03895546790371583,
+          "correctedHamiltonianRabiRadiansPerSecond": 1240303912.3967502,
+          "correctionRelativeError": 1.1546319456101628e-14,
+          "initialDifferenceSignal": 3.0,
+          "unusedReadoutOffsetTestValue": -1.0
+        }
+      }
+    ],
+    "maximumRecoveredRatioAbsoluteError": 3.7181369094696493e-13,
+    "maximumHamiltonianRateRelativeError": 2.0983215165415459e-13,
+    "scope": "Noiseless Bloch traces with different readout signs/gains, populations and power-dependent damping; unknown frequency-dependent transfer held common within each pair. Trace recurrence and quadrature extraction validate the algebra, not experimental feasibility or precision."
+  },
+  "remainingNoncancellation": {
+    "biasLoadingCounterexample": [
+      {
+        "targetToReferencePumpFieldRatio": 0.9,
+        "inferredStrengthRatioOverTrueStrengthRatio": 0.81
+      },
+      {
+        "targetToReferencePumpFieldRatio": 1.0,
+        "inferredStrengthRatioOverTrueStrengthRatio": 1.0
+      },
+      {
+        "targetToReferencePumpFieldRatio": 1.1,
+        "inferredStrengthRatioOverTrueStrengthRatio": 1.2100000000000002
+      }
+    ],
+    "statement": "Matching frequency does not guarantee equal local flux if gate/flux bias changes source loading or field participation. A 10-percent local-field mismatch gives a 21-percent squared-rate error.",
+    "control": "Use a sufficiently stiff, weakly loading flux drive or an independently monitored local reference; characterize bias-dependent loading rather than replacing it with a fitted strength correction.",
+    "otherConditions": [
+      "Parity must remain identifiable over the pulse and paired acquisition.",
+      "Gate-dependent Ip or extra charge-drive coupling must be independently characterized.",
+      "The reported short coherence may limit the observable cycles and uncertainty.",
+      "No ratio can eliminate completely arbitrary bias-dependent pump transfer with no reference or physical constraint."
+    ]
+  },
+  "publicDataStatus": "The release contains one Rabi trace, not these paired same-frequency, multi-power, two-preparation traces. The protocol requires new acquisition.",
+  "scientificStatus": "A concrete self-referenced test of the declared current vertex; not evidence for a fundamental Spin(2,3) selector or a validated Casimir force prediction.",
+  "reproduction": "./.venv-alpaca/Scripts/python.exe scripts/design-hcq-isofrequency-rabi-test.py"
+}

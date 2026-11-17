@@ -1,0 +1,338 @@
+{
+  "schemaVersion": "e8-selector-identifiability-audit-v1",
+  "date": "2026-11-08",
+  "sources": {
+    "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell14-direct-v1.json": "984a1d575289f4be0a35d1678be83f3afa5e93891f8c49dd34ba34f7474afeec",
+    "corpus/claims/0200-0299/253_positive_exchange_diagonal_locking_leaves_exactly_h2r.md": "039cb28d42beb2b32269b764d2b4ee69404d0a8eda856b862efd454d67bff679",
+    "corpus/programmes/translation-free-exceptional-topology/E8_CONSTITUTIVE_METRIC_GATE.md": "701d6d2fb19588dcbb8c98a0ed629f8599c54ba180f00a5bc7734a8df980cf62",
+    "corpus/programmes/translation-free-exceptional-topology/E8_KINETIC_METRIC_PERTURBATION.md": "cd2a1b0edb30da1bb1768f97a6cce65364bc234e3c3915c3f7a0fa579f048e5a",
+    "corpus/programmes/translation-free-exceptional-topology/E8_CHANNEL_AMPLITUDE_PERTURBATION.md": "94bf3259a23685e812521b5cf991eb39b9065b06bab639b54912b8f20611e030",
+    "corpus/claims/0800-0899/858_positive_quadratic_hamiltonian_pulses_generate_the_exact_bilocal_selector_without_finite_dimensional_instability.md": "8f70b3103b8d703dce5846363e19cb8ccf649461a14f6469f833e9010eac6480",
+    "corpus/claims/0900-0999/936_two_positive_rank_one_edge_pulses_are_the_minimal_local_action_for_the_two_face_selector_cycle.md": "0b7aea6418c3f11a8939979174a93e9e959b9d144c24ac916ac2508ad613e5fd",
+    "corpus/claims/0800-0899/837_oriented_color_intertwines_exactly_at_transfer_level_but_not_as_an_ordinary_scattering_or_four_atom_action.md": "143f45cb5ac30c1013efed4f81293e06e225f12debbd3a9d0cad71f8ba62502a",
+    "corpus/claims/0800-0899/850_rescaling_naturality_classifies_linear_stress_to_symplectic_maps_but_leaves_one_relative_normalization_free.md": "7235fb0796798bf98c8ea4e7518670cf99d199780ad0598b5a02c245275aeb0b",
+    "corpus/claims/0800-0899/875_the_color_laplacian_factor_three_is_canonical_hodge_data_but_the_selector_equation_and_index_two_saturation_are_additional_physics.md": "d83af376f1b63e944391d94cdd76ca3627906770f5610f5859d1f308155e7038",
+    "corpus/programmes/rdg-maxwell-bridge/04_sources_resonance_and_material_memory_gate.md": "b6deba123663f39226d260292e9fdb4fe4af32f1aaffead89ac3c4daf441569b",
+    "scripts/audit-translation-free-e8-selector-identifiability.mjs": "65c90ab630f622faf4da0dec96cc21227f9f7dd30f4ce8bfded04b08ff71f45b"
+  },
+  "conclusion": "The searched selector, positivity, projector, and source-covariance results do not uniquely determine the constitutive Hamiltonian or physical dipole blocks. The corpus supplies constructive actions and restricted invariant forms, but not a typed selector-to-E8 electromagnetic action fixing their coefficients.",
+  "lockingCounterfamily": {
+    "source": "corpus/claims/0200-0299/253_positive_exchange_diagonal_locking_leaves_exactly_h2r.md",
+    "commonSurvivorProjector": [
+      [
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0.5,
+        0,
+        0,
+        0,
+        0.5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "cases": [
+      {
+        "mu": 1,
+        "lambda": 2,
+        "hessianEigenvalues": [
+          0,
+          0,
+          0,
+          2,
+          4,
+          6,
+          6,
+          6
+        ],
+        "survivorProjectorResidual": 0,
+        "massiveFrequencyRatios": [
+          1,
+          1.414213562373095,
+          1.732050807568877,
+          1.732050807568877,
+          1.732050807568877
+        ]
+      },
+      {
+        "mu": 1,
+        "lambda": 4,
+        "hessianEigenvalues": [
+          0,
+          0,
+          0,
+          2,
+          8,
+          10,
+          10,
+          10
+        ],
+        "survivorProjectorResidual": 0,
+        "massiveFrequencyRatios": [
+          1,
+          2,
+          2.23606797749979,
+          2.23606797749979,
+          2.23606797749979
+        ]
+      }
+    ],
+    "scope": "Exact continuum of positive locking actions with the same H2(R) survivor. Unit kinetic metric assumed for the illustrative frequencies; the quadratic Hessian nonuniqueness is independent of that illustration."
+  },
+  "logarithmCounterexample": {
+    "baseEnergies": [
+      0,
+      2.0943951023931953,
+      3.141592653589793
+    ],
+    "otherPositiveEnergies": [
+      0,
+      2.0943951023931953,
+      9.42477796076938
+    ],
+    "firstGapUnchanged": true,
+    "higherGapOverFirst": [
+      1.5,
+      4.5
+    ],
+    "endpointError": 2.449293598294706e-16,
+    "scope": "Illustration of positive Hermitian logarithm ambiguity for a fixed finite-order unitary endpoint; not a microscopic E8 Hamiltonian or a proof of a full selector-to-E8 intertwiner."
+  },
+  "e8ParityCounterfamily": {
+    "dictionary": "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell14-direct-v1.json",
+    "eta": 0.2,
+    "zeta": 0.2,
+    "alpha": 0.8333333333333334,
+    "beta": 0.8264462809917354,
+    "hamiltonian": "H_eta=H+eta*(H-E0)^2/Delta1; eigenvectors and spectral projectors unchanged; nonnegative gaps remain ordered for eta>=0.",
+    "dipole": "d_zeta=d+(zeta/2){(H-E0)/Delta1,d}; Hermitian and parity-odd, with identical parity-block support.",
+    "originalParityErrors": {
+      "evenEven": 9.013628492313512e-12,
+      "oddOdd": 1.5952572845217805e-11,
+      "hermiticity": 2.6645352591003757e-15
+    },
+    "changedParityErrors": {
+      "evenEven": 1.2836685227214569e-11,
+      "oddOdd": 2.3893638948996313e-11,
+      "hermiticity": 3.9968028886505635e-15
+    },
+    "rows": [
+      {
+        "state": 3,
+        "originalFrequencyRatio": 1.4387837803740555,
+        "changedCalibratedFrequencyRatio": 1.5440029447562895,
+        "frequencyRelativeChange": 0.07313063006234266,
+        "originalStrengthRatio": 0.44331946185206367,
+        "changedCalibratedStrengthRatio": 0.4793923824889594,
+        "strengthRelativeChange": 0.08137003614998806
+      },
+      {
+        "state": 5,
+        "originalFrequencyRatio": 1.8671182808799822,
+        "changedCalibratedFrequencyRatio": 2.1369536798660222,
+        "frequencyRelativeChange": 0.14451971347999715,
+        "originalStrengthRatio": 0.26617272637596334,
+        "changedCalibratedStrengthRatio": 0.3097909488394567,
+        "strengthRelativeChange": 0.16387187018508986
+      },
+      {
+        "state": 7,
+        "originalFrequencyRatio": 2.2505209880932253,
+        "changedCalibratedFrequencyRatio": 2.7195749430523724,
+        "frequencyRelativeChange": 0.20842016468220437,
+        "originalStrengthRatio": 6.2069605190743395,
+        "changedCalibratedStrengthRatio": 7.698440012522444,
+        "strengthRelativeChange": 0.24029144198109575
+      },
+      {
+        "state": 8,
+        "originalFrequencyRatio": 2.279756614065868,
+        "changedCalibratedFrequencyRatio": 2.766012214951068,
+        "frequencyRelativeChange": 0.21329276901097804,
+        "originalStrengthRatio": 0.07890105666639631,
+        "changedCalibratedStrengthRatio": 0.0983279460544667,
+        "strengthRelativeChange": 0.2462183677743346
+      },
+      {
+        "state": 11,
+        "originalFrequencyRatio": 2.676991596878481,
+        "changedCalibratedFrequencyRatio": 3.4252069990250678,
+        "frequencyRelativeChange": 0.279498599479747,
+        "originalStrengthRatio": 1.3479375819180497,
+        "changedCalibratedStrengthRatio": 1.7902629200783686,
+        "strengthRelativeChange": 0.32814971857295605
+      },
+      {
+        "state": 12,
+        "originalFrequencyRatio": 2.679923364858441,
+        "changedCalibratedFrequencyRatio": 3.4302676776343985,
+        "frequencyRelativeChange": 0.2799872274764068,
+        "originalStrengthRatio": 0.011787618940196212,
+        "changedCalibratedStrengthRatio": 0.015662964914948542,
+        "strengthRelativeChange": 0.32876410362547936
+      }
+    ],
+    "maximumFrequencyRelativeChange": 0.2799872274764068,
+    "maximumStrengthRelativeChange": 0.32876410362547936,
+    "scope": "Counterexample to uniqueness from the known E8 parity/projector constraints, not a claim that the complete order-18 selector acts on these E8 states. H_eta need not retain the supplied quadratic charging ansatz; d_zeta is an admissible covariant operator, not a derived electric dipole. A microscopic action could exclude them, but that exclusion is the missing datum."
+  },
+  "chargeGeometryCounterfamily": {
+    "positions": [
+      -3.5,
+      -2.5,
+      -1.5,
+      -0.5,
+      0.5,
+      1.5,
+      2.5,
+      3.5
+    ],
+    "alternativePositions": [
+      -3.5,
+      -2.5,
+      -1.5,
+      -0.3,
+      0.5,
+      1.5,
+      2.5,
+      3.5
+    ],
+    "firstLineStrengthGain": 1.2233115121286326,
+    "rows": [
+      {
+        "state": 3,
+        "relativeStrengthChange": 0.0025721927048871773
+      },
+      {
+        "state": 5,
+        "relativeStrengthChange": 0.013103334256717503
+      },
+      {
+        "state": 7,
+        "relativeStrengthChange": 0.23532698078256642
+      },
+      {
+        "state": 8,
+        "relativeStrengthChange": 0.6098863888892394
+      },
+      {
+        "state": 11,
+        "relativeStrengthChange": 0.24425837287206842
+      },
+      {
+        "state": 12,
+        "relativeStrengthChange": -0.4126867302644881
+      }
+    ],
+    "maximumRelativeStrengthChange": 0.6098863888892394,
+    "scope": "Same projected charge operators and unchanged Hamiltonian, but different physical geometry. Both are charge-dipole candidates until a physical placement/field map is supplied. Not a freedom once that geometry is measured or independently derived."
+  },
+  "projectorBlockConstraint": "If Pi d Pi=-d, P_+ d P_+=P_- d P_-=0 and P_- d P_+=(P_+ d P_-)^dagger. This restricts support, not the entries of the allowed cross block.",
+  "strongerCovarianceStatement": "For any already-defined unitary internal symmetry commuting with H, f(H) also commutes with it; {f(H),d} transforms in the same operator representation as d. This statement does not turn the nonlinear Redheffer action into a unitary symmetry of E8.",
+  "partialRigidity": {
+    "source": "corpus/claims/0800-0899/875_the_color_laplacian_factor_three_is_canonical_hodge_data_but_the_selector_equation_and_index_two_saturation_are_additional_physics.md",
+    "result": "On the C3 augmentation plane the invariant positive metric is fixed up to scale. This constrains one representation metric; it does not identify the E8 charging matrix, the constitutive matching law, or a physical electric dipole."
+  },
+  "selectorTypes": {
+    "warning": "These are distinct corpus constructions. No identification between them is assumed.",
+    "locking": "Paired neutral response-corner locking selects an H2(R) survivor.",
+    "order18": "Symplectic transfer selectors induce a nonlinear Redheffer scattering action. This is not automatically a unitary internal symmetry of an E8 charge Hilbert space.",
+    "e8": "Only the supplied rotor inversion parity and computed spectral projectors are used in the E8 counterfamily.",
+    "rdg": "The separate Maxwell branch uses a translation/Haar cochain selector; it is a physical comparison, not an established Spin(2,3)-to-E8 dictionary."
+  },
+  "maxwellComparison": {
+    "source": "corpus/programmes/rdg-maxwell-bridge/04_sources_resonance_and_material_memory_gate.md",
+    "corpusModel": "P_ext=Pi_1 directsum Pi_2 directsum Pi_1 directsum Pi_1 commutes with the homogeneous field-plus-Lorentz-oscillator generator; the example chooses omega0^2=4 and omegap^2=2.25.",
+    "derivedFreedom": "Spatially homogeneous positive resonance/coupling constants multiply identity in the spatial indices and commute with the translation selector. With several homogeneous material oscillators this remains true independently for each oscillator.",
+    "susceptibilityFamily": "chi(omega)=sum_j f_j/(omega_j^2-(omega+i0+)^2), f_j>0, omega_j>0, with consistently extended material-memory selector.",
+    "conclusion": "Selector compatibility constrains spatial symmetry and closure, not the individual positive pole frequencies and strengths. These must come from a constitutive or microscopic action.",
+    "scope": "An extension derived from the corpus homogeneous Lorentz equations. No claim that this distinct cochain selector is the order-18 Spin(2,3) selector."
+  },
+  "conditionalPhysicalAction": {
+    "authority": "Derived conditional canonical rotor/circuit template, not an identified corpus electromagnetic realization.",
+    "assumptions": "Dimensionless compact phases theta_i, canonical charges q n_i, positive capacitance C, Josephson/locking energies EJ_i, and a fixed physical field geometry x_i. These are additional inputs. Compact charge quantization requires the appropriate winding/charge measure in a quantum path integral.",
+    "phaseSpaceLagrangian": "L=hbar n^T theta_dot -(q^2/2)n^T C^{-1}n -sum_i EJ_i(1-cos theta_i) + E q x^T n",
+    "derivedHamiltonian": "H_0=(q^2/2)n^T C^{-1}n+sum_i EJ_i(1-cos theta_i)",
+    "derivedDipole": "d=delta L/delta E=q x^T n; d_ab=q sum_i x_i (P_a n_i P_b)",
+    "legendrePhaseLagrangian": "L_theta=(1/(2q^2))(hbar theta_dot+q x E)^T C(hbar theta_dot+q x E)-sum_i EJ_i(1-cos theta_i)",
+    "explicitPhaseContact": "delta^2 L_theta/delta E^2=x^T C x at fixed theta; this is one term in the full response, not an added independently adjustable susceptibility.",
+    "unresolved": "The selector must determine or independently constrain C, EJ_i, the physical charge realization and x, rather than receive them as fitted data. This construction shows how one common action would link H, dipole and contacts once those data are fixed."
+  },
+  "missingBridge": [
+    "An explicit selector representation/intertwiner on the E8 charge Hilbert space, compatible with its physical inner product and charge lattice.",
+    "One microscopic or boundary action S[fields,A] whose zero-field dynamics determines the constitutive Hamiltonian, including kinetic and potential coefficients.",
+    "The same action must derive J=delta S/delta A and the relevant contact terms, then yield the geometry-normalized dipole blocks P_a d P_b.",
+    "Show that after two common calibrations the admissible higher-line frequency and strength ratios are unique, or provide an independently fixed finite-parameter prediction with uncertainty."
+  ],
+  "scientificBoundary": "Same supplied-model numerical evidence family; no new physical validation, corpus admission, or general impossibility theorem for future selector actions.",
+  "reproduction": "node scripts/audit-translation-free-e8-selector-identifiability.mjs"
+}

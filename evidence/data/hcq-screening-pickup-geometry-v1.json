@@ -1,0 +1,476 @@
+{
+  "schemaVersion": "hcq-screening-pickup-geometry-v1",
+  "date": "2026-11-08",
+  "authority": "Concrete parametric candidate geometry, thin-wire forward calculation and prospective calibration acceptance contract. Not the actual published chip CAD, a fabricated pickup or demonstrated 0.5-percent equality.",
+  "primaryReferences": [
+    "https://arxiv.org/abs/2601.06682v1",
+    "https://arxiv.org/abs/1808.09612",
+    "https://www.nature.com/articles/srep28095"
+  ],
+  "sources": {
+    "evidence/data/hcq-independent-local-flux-witness-v1.json": "d98a29623d70d18ad1536d27faddc463834938597d1c5db157d03b9d500c8694",
+    "C:\\Users\\aaron\\grand-theory\\scripts\\design-hcq-screening-pickups.py": "17764f8d35ae859dfda395e15af05bb5063b5261e8656988b81e0d585fb1040b"
+  },
+  "essentialCorrection": {
+    "sharedKineticInductance": "The h-CQUID shares an NbN branch with its resonator. The generalized loop drive can contain shared kinetic inductance as well as geometric magnetic mutual coupling. Measuring aperture B flux alone is not automatically measuring the circuit drive coordinate.",
+    "meshDerivation": "For branch currents I_branch=B i_mesh, U_ind=(1/2)i_mesh^T B^T(L_geo+L_kin)B i_mesh. Shared branches create off-diagonal inductive terms, including kinetic ones.",
+    "selfResponse": "A pickup sees DUT-induced current as well as pump/environment currents. The latter drive coordinate must be reconstructed separately from the DUT self term already present in its Hamiltonian, rather than corrected using an assumed transition strength.",
+    "definitionBoundary": "The separation must be fixed by a complete circuit/input-output action. If strong resonator dressing invalidates a classical pump plus bare two-state DUT model, the test needs that dressed model."
+  },
+  "geometry": {
+    "units": "micrometre",
+    "layoutStatus": "Illustrative redesign around a 4x4 um loop. All dimensions below are proposed, not measurements of the publication.",
+    "dutLoopCenterline": [
+      [
+        -2,
+        -2,
+        0.0
+      ],
+      [
+        2,
+        -2,
+        0.0
+      ],
+      [
+        2,
+        2,
+        0.0
+      ],
+      [
+        -2,
+        2,
+        0.0
+      ],
+      [
+        -2,
+        -2,
+        0.0
+      ]
+    ],
+    "driveCurrentModeCenterline": [
+      [
+        -12,
+        -4,
+        -0.4
+      ],
+      [
+        12,
+        -4,
+        -0.4
+      ],
+      [
+        12,
+        -9,
+        -0.4
+      ],
+      [
+        -12,
+        -9,
+        -0.4
+      ],
+      [
+        -12,
+        -4,
+        -0.4
+      ]
+    ],
+    "sharedResonatorModeCenterline": [
+      [
+        -2,
+        -2,
+        0
+      ],
+      [
+        10,
+        -2,
+        0
+      ],
+      [
+        10,
+        -6,
+        0
+      ],
+      [
+        -2,
+        -6,
+        0
+      ],
+      [
+        -2,
+        -2,
+        0
+      ]
+    ],
+    "layerAssignment": "DUT/resonator at z=0; separate insulated pump layer at z=-0.40 um; magnetic pickups at z=+0.30 um. Projected line crossings are not galvanic connections. This proposed multilayer stack requires fabrication and full capacitive/EM design.",
+    "pickupHeight": 0.3,
+    "pickupTraceWidthTarget": 0.15,
+    "sharedBranchWidthAssumption": 0.25,
+    "magneticPickups": {
+      "P_D_drive_gradiometer": [
+        {
+          "windingSign": 1,
+          "closedCenterline": [
+            [
+              -1,
+              -3.8,
+              0.3
+            ],
+            [
+              1,
+              -3.8,
+              0.3
+            ],
+            [
+              1,
+              -3.2,
+              0.3
+            ],
+            [
+              -1,
+              -3.2,
+              0.3
+            ],
+            [
+              -1,
+              -3.8,
+              0.3
+            ]
+          ]
+        },
+        {
+          "windingSign": -1,
+          "closedCenterline": [
+            [
+              -1,
+              -4.8,
+              0.3
+            ],
+            [
+              1,
+              -4.8,
+              0.3
+            ],
+            [
+              1,
+              -4.2,
+              0.3
+            ],
+            [
+              -1,
+              -4.2,
+              0.3
+            ],
+            [
+              -1,
+              -4.8,
+              0.3
+            ]
+          ]
+        }
+      ],
+      "P_R_shared_arm_gradiometer": [
+        {
+          "windingSign": 1,
+          "closedCenterline": [
+            [
+              -1,
+              -1.8,
+              0.3
+            ],
+            [
+              1,
+              -1.8,
+              0.3
+            ],
+            [
+              1,
+              -1.2,
+              0.3
+            ],
+            [
+              -1,
+              -1.2,
+              0.3
+            ],
+            [
+              -1,
+              -1.8,
+              0.3
+            ]
+          ]
+        },
+        {
+          "windingSign": -1,
+          "closedCenterline": [
+            [
+              -1,
+              -2.8,
+              0.3
+            ],
+            [
+              1,
+              -2.8,
+              0.3
+            ],
+            [
+              1,
+              -2.2,
+              0.3
+            ],
+            [
+              -1,
+              -2.2,
+              0.3
+            ],
+            [
+              -1,
+              -2.8,
+              0.3
+            ]
+          ]
+        }
+      ],
+      "P_A_aperture_guard": [
+        {
+          "windingSign": 1,
+          "closedCenterline": [
+            [
+              -1.5,
+              -1.5,
+              0.3
+            ],
+            [
+              1.5,
+              -1.5,
+              0.3
+            ],
+            [
+              1.5,
+              1.5,
+              0.3
+            ],
+            [
+              -1.5,
+              1.5,
+              0.3
+            ],
+            [
+              -1.5,
+              -1.5,
+              0.3
+            ]
+          ]
+        }
+      ]
+    },
+    "differentialVoltageTap": {
+      "nodePositions": [
+        [
+          -2,
+          -2,
+          0
+        ],
+        [
+          2,
+          -2,
+          0
+        ]
+      ],
+      "implementation": "Balanced capacitive voltage taps across the shared branch, with close differential routing to a separate receiver. Tap capacitance target <=5 aF per node is a design target requiring full EM calculation, not a parallel-plate prediction.",
+      "purpose": "Observe the branch flux V_shared/(i omega), including kinetic inductance. Calibrate electrical crosstalk and the tap return-path magnetic area."
+    },
+    "matchedUnsharedVoltageTap": {
+      "nodePositions": [
+        [
+          6,
+          -6,
+          0
+        ],
+        [
+          10,
+          -6,
+          0
+        ]
+      ],
+      "segmentLength": 4.0,
+      "segmentWidth": 0.25,
+      "implementation": "Match film, width and length to the shared branch but place this segment on an unshared resonator arm. Use balanced high-impedance differential voltage taps and independently calibrate the complex shared/monitor impedance ratio at the pump carrier.",
+      "purpose": "Measure the actual environment resonator current through its kinetic branch flux without subtracting a large direct DUT self-current. Lithographic matching alone does not certify equality of impedances."
+    },
+    "pickupRoles": {
+      "P_D": "Opposite-winding lobes straddling the pump trace measure drive-current mode.",
+      "P_R": "Opposite-winding lobes straddling the shared arm constrain resonator/DUT-current mixture.",
+      "P_A": "Aperture loop supplies an independent spatial field signature and an overdetermination/guard channel.",
+      "V_shared": "Differential branch voltage supplies the kinetic/shared-phase coordinate.",
+      "V_monitor": "Matched unshared segment isolates the resonator-current coordinate and makes the reconstruction better conditioned."
+    }
+  },
+  "surrogateForwardModel": {
+    "modeOrder": [
+      "pump trace",
+      "shared resonator current",
+      "DUT circulating current"
+    ],
+    "channelOrder": [
+      "P_D_drive_gradiometer",
+      "P_R_shared_arm_gradiometer",
+      "P_A_aperture_guard",
+      "V_shared/(i omega)",
+      "V_monitor/(i omega)"
+    ],
+    "method": "Regularized Neumann filament integrals for magnetic flux and a lumped shared kinetic branch for the voltage channel; no substrate/superconducting sheet-current/capacitive/full-wave solution.",
+    "magneticCouplingsHenry": [
+      [
+        3.0594834559318744e-13,
+        1.0097419586828951e-28,
+        -3.906744764812228e-14
+      ],
+      [
+        -3.6980399166272026e-14,
+        6.815361175875712e-13,
+        6.946553146890654e-13
+      ],
+      [
+        2.284037449432881e-13,
+        5.854359072178306e-13,
+        3.1188206964441358e-12
+      ]
+    ],
+    "fullChannelMatrixHenry": [
+      [
+        3.0594834559318744e-13,
+        1.0097419586828951e-28,
+        -3.906744764812228e-14
+      ],
+      [
+        -3.6980399166272026e-14,
+        6.815361175875712e-13,
+        6.946553146890654e-13
+      ],
+      [
+        2.284037449432881e-13,
+        5.854359072178306e-13,
+        3.1188206964441358e-12
+      ],
+      [
+        0.0,
+        2.56e-08,
+        2.56e-08
+      ],
+      [
+        0.0,
+        2.56e-08,
+        0.0
+      ]
+    ],
+    "sharedKineticInductanceAssumptionHenry": 2.56e-08,
+    "sharedSheetInductanceAssumptionHenryPerSquare": 1.6e-09,
+    "matchedUnsharedInductanceAssumptionHenry": 2.56e-08,
+    "externalGeneralizedDriveWeightsHenry": [
+      4.566310746214099e-13,
+      2.560182669031695e-08,
+      0.0
+    ],
+    "DUTSelfCoefficientInTarget": 0.0,
+    "reconstructionCoefficients": [
+      0.9495196041342036,
+      -0.11477007647016661,
+      0.7087575531189387,
+      -8.178385837565028e-05,
+      1.0001399861297888
+    ],
+    "relativeLinearCoverageResidual": 1.4096018943639575e-16,
+    "rejectedFourChannelCoefficientNorm": 12432.723742040538,
+    "selectedFiveChannelCoefficientNorm": 1.5547915991333314,
+    "magneticQuadratureRefinementChange": 0.0001448182771248033,
+    "warning": "Quadrature refinement is not a physical-model uncertainty bound. Finite films, kinetic sheet response, junction displacement currents, tap capacitance and distributed modes require a London/Maxwell circuit model at the actual carrier."
+  },
+  "loadingAndSelfCurrentInjectionTest": {
+    "referenceCurrentVectorAmpere": [
+      0.0,
+      2.2505425882810127e-10,
+      5e-09
+    ],
+    "targetCurrentVectorAmpere": [
+      0.0,
+      2.475596847109114e-10,
+      -3e-09
+    ],
+    "trueExternalPumpRatio": 1.1,
+    "reconstructedExternalPumpRatio": 1.1000000000000012,
+    "naiveBranchVoltageRatio": -0.5267773651610688,
+    "unsharedMonitorVoltageRatio": 1.1,
+    "scope": "Synthetic test separates a changed pump current from a simultaneously changed DUT current without using its strength law."
+  },
+  "sensitivityDiagnostic": {
+    "referenceHamiltonianRabiFrequencyHz": 100000000.0,
+    "IpAmpereAssumption": 1.15e-08,
+    "requiredReferenceExternalDriveWeber": 5.761800130434782e-18,
+    "environmentModeCurrentAmpere": 2.2505425882810127e-10,
+    "reconstructionCoefficientNorm": 1.5547915991333314,
+    "pairedRatioStatisticalAllocation": 0.0008,
+    "equalIndependentChannelSigmaRequiredWeber": 2.0963364846288102e-21,
+    "equalIndependentChannelSigmaRequiredMicroFluxQuantum": 1.0137838135245156,
+    "illustrativeSingleSensorScaleWeber": 4.1356676969238593e-19,
+    "independentAveragesSquaredSensitivityRatio": 38919.682228225414,
+    "scope": "Noise allocation illustration, not an averaging-time prediction. The published 0.2 mPhi sensitivity is not a matched GHz noise spectral density. Sensor bandwidth, correlations, drift and backaction can prevent reaching this requirement."
+  },
+  "calibrationProtocol": [
+    "Obtain the real GDS/stack and fit a source-native lumped/London-Maxwell model including shared kinetic inductance, junction capacitances, resonator return paths and the pickup/tap loading.",
+    "Calibrate each independent sensor channel versus known local test-current modes using superconducting periodicity and calibrated microwave current/voltage standards; establish complex transfer and relative channel gains at each actual pump frequency. Measure the shared/unshared segment impedance ratio with an independent classical current injection, rather than setting it equal from nominal dimensions.",
+    "Fix the DUT self-current pickup direction independently, for example using prepared winding-state changes and a validated current-distribution model. Absolute self-current amplitude is not needed for a null, but low-frequency direction calibration alone does not certify the GHz response.",
+    "Validate the full complex matrix with additional independent common/differential calibration injections and held-out combinations; do not use Rabi strengths to determine its coefficients.",
+    "Require the desired drive functional to lie in the calibrated sensor row span while nulling the DUT self-current mode. Use all five channels with measured covariance. Bound remaining sensor-blind modes with full EM and independent drive-port excitations; a small guard residual alone is insufficient.",
+    "Use carrier/sideband cross-ratios at fixed sensor biases to measure each paired change. Interleave target/reference states and independent sensor-gain reference injections. Preserve complex amplitude and phase.",
+    "Propagate sensor and reconstruction covariance jointly. For r=(a.y_target)/(a.y_reference), derivatives are a/(a.y_reference), -r a/(a.y_reference), and (y_target-r y_reference)/(a.y_reference) with respect to the two readings and common coefficients.",
+    "Test probe-power and sensor-on/off limits, device parity stability, pulse-envelope bandwidth and any extra electric drive. Freeze the calibration and uncertainty bounds before scoring strength data.",
+    "Servo the independently reconstructed pump amplitude ratio toward one. Accept equality only when abs(abs(r_hat)-1)+U95_plus_bounded_bias <=0.005. Record phase matching separately if coherent phase is part of the test."
+  ],
+  "errorBudgetContract": {
+    "type": "Proposed conservative amplitude-error allocations, not achieved uncertainties.",
+    "terms": [
+      {
+        "term": "statistical paired-ratio envelope",
+        "amplitudeBound": 0.0008
+      },
+      {
+        "term": "sensor drift and interleaving",
+        "amplitudeBound": 0.0004
+      },
+      {
+        "term": "sensor nonlinearity / relative-channel response",
+        "amplitudeBound": 0.0004
+      },
+      {
+        "term": "calibrated complex reconstruction coefficients",
+        "amplitudeBound": 0.0012
+      },
+      {
+        "term": "unobserved current-mode contribution",
+        "amplitudeBound": 0.0008
+      },
+      {
+        "term": "pickup backaction and source-definition residual",
+        "amplitudeBound": 0.0004
+      }
+    ],
+    "sum": 0.004,
+    "remainingServoResidualAllowance": 0.001,
+    "coverage": "Statistical envelope must have stated joint coverage; bounded systematic terms are added conservatively. Correlated calibration errors are propagated, not treated as independent by default.",
+    "achieved": false
+  },
+  "missingBeforeVerification": [
+    "Actual GDS, full stack and measured kinetic inductance distribution.",
+    "Cryogenic complex pickup/voltage-tap transfer matrix and noise covariance at 1.8-2.56 GHz.",
+    "Measured response to independent field/current modes, including self-current rejection and guard residual bounds.",
+    "Backaction/drift bounds and actual paired pump-flux records."
+  ],
+  "verdict": {
+    "candidateGeometryDerived": true,
+    "surrogateModeReconstructionPassed": true,
+    "actualScreeningModeCompletenessEstablished": false,
+    "actualPointFivePercentEqualityVerified": false,
+    "reason": "The paper supplies neither the complete geometry nor the calibration and uncertainty data. The surrogate reveals strong kinetic-drive/self-current rejection and noise requirements, so a 0.5-percent certificate cannot be inferred from a pickup sketch or nominal bandwidth."
+  },
+  "reproduction": "./.venv-alpaca/Scripts/python.exe scripts/design-hcq-screening-pickups.py"
+}

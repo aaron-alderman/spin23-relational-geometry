@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "joint-background-source-checks-v1",
+  "observedAtUTC": "2026-11-08T13:04:23.503Z",
+  "scope": "Three existing corpus certificates executed during one bounded source audit; no new physical data.",
+  "checks": [
+    {
+      "command": "node verification/verify/verify_spin23_e6_two_family_tight_frame_chiral_threshold.mjs",
+      "exitCode": 0,
+      "stdout": "spin23 E6 two-family tight-frame/chiral-threshold verification: PASS\n  two-family high-energy Yukawa Gram: identity_2\n  E6 singlet-mass kernel with two matter 27s: 32\n  one-family projected Gram: rank 1 with off-diagonal 1/2\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_e6_z3_three_family_two_copy_frame.mjs",
+      "exitCode": 0,
+      "stdout": "spin23 E6 Z3 three-family two-copy frame verification: PASS\n  covariance: P^T Y0 P=Y0, P^T Y1 P=omega Y1\n  scalar-copy Gram: identity_2\n  family wavefunction operator: (2/3) identity_3\n  E6 exotic rank/kernel: 33/48 = three chiral 16s\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_e6_nonsusy_vacuum_residual_selector_audit.mjs",
+      "exitCode": 0,
+      "stdout": "PASS 1567: a bounded nonsupersymmetric quartic potential has an open simultaneous-singlet vacuum with rank-11 exotic mass, but the retained Yukawas force equal selector charges, so the residual commuting abelian symmetry cannot distinguish or protect the two bidoublets after breaking.\n"
+    }
+  ]
+}

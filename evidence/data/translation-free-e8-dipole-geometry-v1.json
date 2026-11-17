@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "e8-effective-electric-dipole-geometry-v1",
+  "name": "Eight charge sites along x with local compensating reference at x=0",
+  "positionsInPitchUnits": [-3.5,-2.5,-1.5,-0.5,0.5,1.5,2.5,3.5],
+  "field": "Uniform quasistatic E_x; periodic cells placed along y",
+  "sourceDerivation": "Sites carry Q_i=q_c*n_i at x_i=pitch*position_i. Their compensating charge is at x=0. D_x=sum_i x_i Q_i and H_probe=-E_x D_x.",
+  "assumptions": [
+    "Canonical rotor numbers are assigned physical charge q_c; this is an implementation assumption.",
+    "Neglect screening and image-charge changes to the lever arms; Hamiltonian is the supplied effective rotor model.",
+    "The charge return is local to each cell and its x-directed dipole contribution vanishes.",
+    "No phase-drive transition operator is substituted for the physical charge dipole."
+  ],
+  "illustrativeSI": {
+    "chargeC": 3.204353268e-19,
+    "pitchM": 0.00001,
+    "energyScaleHz": 5000000000,
+    "cellVolumeM3": 8e-14,
+    "cellDimensionsM": [0.00008,0.0001,0.00001]
+  },
+  "authority": "Chosen effective probe geometry and illustrative units, not a derived material or admitted electromagnetic realization."
+}

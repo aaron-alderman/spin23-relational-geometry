@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "e8-multifrequency-result-v1",
+  "date": "2026-11-08",
+  "question": "Does the selector constrain physically calibrated resonance frequencies and dipole transition strengths beyond one fitted checkpoint?",
+  "answer": "The supplied effective Hamiltonian and chosen charge-dipole source give converging multifrequency predictions after two shared calibrations. A selector-specific physically calibrated spectrum has not been derived or tested against independent observations.",
+  "contract": "evidence/data/translation-free-e8-multifrequency-test-contract-v1.json",
+  "originalReplay": "evidence/data/translation-free-e8-multifrequency-replay-v1.json",
+  "originalAllLinePass": false,
+  "originalMaximumStrengthError": 0.148762073367,
+  "postHocDiagnostic": "evidence/data/translation-free-e8-doublet-overlap-diagnostic-v1.json",
+  "refinedPredictions": [
+    "evidence/data/translation-free-e8-refined-frozen-predictions-v1.json",
+    "evidence/data/translation-free-e8-refined-frozen-response-v1.json"
+  ],
+  "refinedScore": "evidence/data/translation-free-e8-refined-holdout-score-v1.json",
+  "refinement": {
+    "modelCutoff": 12,
+    "referenceCutoff": 14,
+    "calibrations": 2,
+    "additionalLines": 6,
+    "responsePoints": 5,
+    "tolerance": 0.01,
+    "maximumFrequencyRelativeError": 0.000003950107782313417,
+    "maximumStrengthRelativeError": 0.0015611712930060362,
+    "maximumResponseRelativeError": 0.00001183479296940071,
+    "numericalPass": true,
+    "authority": "Computational refinement of one supplied model. Predictions were saved before computing the new higher-line targets and response curve. The first reference line was already known and explicitly used for calibration. No experimental blinding or independent physical observations."
+  },
+  "mathematicalBridge": {
+    "physicalEnergyAndDipole": "H_phys=E_star H_dimensionless; D_phys=d_star d; Delta_j=epsilon_j-epsilon_0; w_j=|<j|d|0>|^2",
+    "linearProbe": "H_probe=-D_phys E, for a specified field geometry and effective dipole volume V_star",
+    "susceptibility": "chi(omega)=d_star^2/(epsilon_0 V_star E_star) sum_j 2 Delta_j w_j/[Delta_j^2-(hbar(omega+i0+)/E_star)^2]+chi_contact(omega)",
+    "scaleFreePredictions": ["omega_j/omega_1=Delta_j/Delta_1", "|D_j0|^2/|D_10|^2=w_j/w_1"],
+    "sourceConstraintNeeded": "A physical selector P_a must independently constrain the relevant Hamiltonian blocks and source blocks P_a d P_b. Algebraic projector identities alone do not determine their numerical matrix elements.",
+    "contacts": "The numerical replay sets additional contacts to zero for its declared effective linear-source model. This is an assumption until a physically normalized electromagnetic action and source matching fix the contact terms.",
+    "normalizationBoundary": "Uniform-field, single effective-cell dipole convention. Actual local fields, sample geometry, interacting-cell effects, damping and instrumental response require independent matching."
+  },
+  "controls": {
+    "singlePoleStaticUnderpredictionFraction": 0.91813,
+    "singlePoleSlopeUnderpredictionFraction": 0.57480,
+    "singlePolePlusFittedConstantAndQuadraticMaximumSubgapErrorApprox": 0.008218,
+    "lesson": "Smooth subgap agreement alone is insufficient: fitted analytic background terms can hide missing higher resonances. The higher-line positions and strengths must be resolved and scored."
+  },
+  "corpusConstitutiveBoundary": "corpus/programmes/frontier/wave-7/frontier_wave7_238_e8_topology_does_not_select_the_constitutive_metric.md",
+  "remainingPhysicalGates": [
+    "Derive the selector's action on the physically normalized electromagnetic current or dipole, including selection rules and strengths.",
+    "Determine the constitutive energy matrix and couplings independently; E8 topology permits different positive energy matrices.",
+    "Fix E_star, d_star, effective volume, ports, geometry and electromagnetic contacts before scoring new data.",
+    "Predict additional measured poles, integrated strengths and frequency response without per-line refits, using declared uncertainties and resolution.",
+    "Compare alternative admissible constitutive/source choices after the same two calibrations to establish selector-specific discrimination."
+  ],
+  "verificationCommands": [
+    "node verification/verify/verify_translation_free_e8_multifrequency.mjs",
+    "node verification/verify/verify_translation_free_e8_refined_holdout.mjs"
+  ],
+  "limitations": "Finite isolated-cell computations, not an interacting-chain or material measurement. Small cutoff drift and sparse residuals do not replace the much wider conservative infinite-shell bounds. The original coarse failure remains recorded; refinement changed numerical resolution rather than model parameters. All numerical runs share one model/evidence family."
+}

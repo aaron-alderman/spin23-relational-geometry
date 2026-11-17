@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-08",
+  "evidenceFamily": "periodic-maxwell-fixture",
+  "authority": "Archived observed source-certificate executions; no admission effect",
+  "checks": [
+    {
+      "command": "node verification/verify/verify_spin23_projector_energy_detects_flat_connection_leakage.mjs",
+      "exitCode": 0,
+      "output": "PASS 1502: pure curvature misses 184 flat leaking connection pairs, while the positive projector energy is exactly 2(b_x^2+b_y^2) and vanishes only on the 81 parallel pairs.\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_pseudoscalar_torsion_fermion_portal.mjs",
+      "exitCode": 0,
+      "output": "Spin(2,3) pseudoscalar-torsion fermion portal: PASS\n  natural benchmark: m_phi=2.4350e+18 GeV, f=2.5149e-19 GeV^-1\n  Yukawa equivalents: y_e=2.5702e-22, y_N=4.7225e-19\n  EC contact magnitude: 3.1623e-38 GeV^-2 = 3/(16 M_Pl^2)\n  exact correlation: f*m_phi=0.612372 = c/sqrt(b_X)\n  near-critical comparison floors: delta_e=1.057e-18, delta_N=2.230e-19\n  range cost: b_X(1 MeV)=2.471e+41, b_X(500 micro-eV)=9.882e+59\n  fermion loops generate transverse torsion kinetics: isolated one-pole surface not closed\n  classification: generic torsion/axion-like EFT until the descendant fixes couplings\n"
+    }
+  ]
+}

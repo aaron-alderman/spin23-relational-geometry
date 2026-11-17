@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "uv-pole-source-checks-v1",
+  "observedAtUTC": "2026-11-08T13:14:51.344Z",
+  "scope": "Three existing corpus checks executed in one UV/pole source audit; not three independent physical confirmations.",
+  "checks": [
+    {
+      "command": "node verification/verify/verify_spin23_gauge_gravity_fixed_point_color_boundary.mjs",
+      "exitCode": 0,
+      "stdout": "Spin(2,3) gauge-gravity fixed-point color-boundary audit: PASS\n  Gaussian color theta_g=0.01 is relevant: g3(v) remains free\n  interacting toy g*=0.476764, theta_g=-0.071667 is irrelevant\n  unique critical trajectory gives g3(v)=0.474834 and Lambda_YM/M_Pl=1.107496e-14\n  coefficient scan spans 14.131 orders: prediction awaits a stable Spin(2,3) universality class\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_axial_fixed_point_identifiability.mjs",
+      "exitCode": 0,
+      "stdout": "Spin(2,3) axial fixed-point identifiability: PASS\n  same known slice: fixed, nonfixed, and opposite-slope completions exist\n  consequence: eta=1/8 and its relevance class are not identified\n"
+    },
+    {
+      "command": "node verification/verify/verify_spin23_new_model_path_selection_v6.mjs",
+      "exitCode": 0,
+      "stdout": "Spin(2,3) new-model path selection v6: PASS\n  local completions: two-mode surrogate and frozen quantum packet exhausted\n  rejected: unchanged-spectrum local finite-derivative fundamental route\n  external boundary: new stabilized vacuum or enlarged nonperturbative definition\n"
+    }
+  ]
+}

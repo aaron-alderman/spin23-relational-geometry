@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "e8-calibrated-multifrequency-test-contract-v1",
+  "date": "2026-11-08",
+  "authority": "Retrospective numerical rehearsal and prospective physical-test specification; not a blind experiment or physical admission.",
+  "candidate": "Frozen Cartan-kernel rotor Hamiltonian with u=0.5 and D=sum_i(i-3.5)n_i; no per-line refitting.",
+  "modelData": "evidence/data/translation-free-e8-local-charge-dictionary-r65-direct-v1.json",
+  "referenceData": "evidence/data/translation-free-e8-local-charge-dictionary-r65-shell10-direct-v1.json",
+  "calibration": [
+    "One common frequency scale from the first odd transition energy.",
+    "One common dipole-squared/source-gain scale from that transition's spectral weight."
+  ],
+  "frozenInputs": [
+    "Cartan charging branch, potential strength, charge geometry and source operator.",
+    "A frequency-independent source map; no frequency-dependent basis or gain correction.",
+    "Zero added local contact terms for the declared effective linear-source action. Physical matching remains unperformed."
+  ],
+  "withheldNumericalTargets": {
+    "additionalLines": "Next six odd transitions in energy order; compare their energies and dipole-squared weights.",
+    "responseFractionsOfFirstGap": [0,0.2,0.4,0.6,0.8],
+    "moments": "Static response and derivative with respect to omega squared, neither used to calibrate the charge model."
+  },
+  "controls": [
+    "Single-pole O response with the same first-line calibration.",
+    "Single pole plus a constant fitted to the static response; one extra calibration datum.",
+    "Single pole plus constant and omega-squared term fitted to static response and slope; two extra calibration data."
+  ],
+  "engineeringReplayTolerance": 0.01,
+  "toleranceAuthority": "Chosen one-percent finite-model consistency threshold, not an experimental uncertainty or rigorous infinite-shell error bound.",
+  "physicalTestNeeds": [
+    "Independently derived selector action on the physical charge/dipole operators and their spectral states.",
+    "A measured material/device spectrum, fixed geometry and field/volume calibration.",
+    "Matched contact terms and instrument response; declared damping and continuum contributions.",
+    "Unseen higher resonance frequencies and integrated line strengths, with uncertainty assessed before scoring."
+  ],
+  "failureRules": [
+    "Reject the specified response law if held-out data require per-line gains, arbitrary pole shifts or a frequency-dependent source map.",
+    "A match to a refined solve of the same Hamiltonian establishes numerical predictive consistency only.",
+    "Do not call a source-map fit, an imposed constitutive kernel or an unobserved numerical replay a selector-specific physical prediction.",
+    "Do not use a narrow-band Taylor fit alone to establish the resonance spectrum."
+  ]
+}

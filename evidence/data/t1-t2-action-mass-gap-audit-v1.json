@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "t1-t2-action-mass-gap-audit-v1",
+  "date": "2026-11-08",
+  "authority": "Bounded corpus-source audit, analytic support identity and classical supplied-action counterfamily. No physical T1/T2 derivation or admission.",
+  "evidenceFamily": "corpus-selector-action-audit",
+  "sources": {
+    "corpus/claims/0300-0399/313_the_yukawa_zero_mode_extends_to_a_massless_dirac_type_cone.md": "d6d36768d937362b5577d5c1578120a6a299a0849b06b5e11c854fa0da2dd72c",
+    "corpus/claims/0300-0399/341_a_phi4_field_generates_the_fredholm_wall_but_the_rp2_selector_requires_a_loop_lift.md": "1e2d7733a41d654b0fa26907e6f3a810cd881c2b1692038e1a53aa72a78cefcf",
+    "corpus/claims/0300-0399/345_the_full_selector_has_a_four_component_local_clifford_lift_but_needs_eight_for_a_global_aiii_grading.md": "b1e91e3488626336d1c70d4e9ebcdc8d17cdfb73eca3ff61a6927e9d93a6a69f",
+    "corpus/claims/0300-0399/378_correction_ledger_for_selector_index_parity_and_primitive_deck_claims.md": "434c6a335f4efa2385968dfe2df22574c97ed0ead703ee9916c3771e2918d613",
+    "corpus/claims/1500-1599/1596_the_explicit_minimal_spin23_action_has_only_the_massless_graviton_and_torsion_square_does_not_create_a_gap.md": "dd7a98fe1556699b163bf8882f8e212d65252e73569bc2dfe703cfa83afb78f0",
+    "corpus/claims/1600-1699/1611_the_surviving_0minus_torsion_mode_gives_a_generic_axionlike_spin_portal_not_yet_a_spin23_fingerprint.md": "459a85bde1d69c47aede3080b997ea3acb71105b2c3d50fe75233325dbc9b466",
+    "corpus/claims/1600-1699/1622_the_full_local_pgt_route_contains_a_healthy_critical_pseudoscalar_sector_but_not_an_open_quantum_region.md": "ce2732cb871fba2a70693385aaa287fe5d7891d568ed9d7a959a6822f8a730bc",
+    "corpus/programmes/frontier/parallel/frontier_parallel_qft_08_action_gate_for_the_dressed_electron_functor.md": "5dbbfc27985028f4981183518dfec69d679c01d6963e3f0f8d2dfeac118d94ba",
+    "corpus/syntheses/grand-synthesis/aarons_spin23_research_thesis.md": "ae35d2159da30d288789228b27dbed42b043dc07275f961caa15a0ee4934bda1",
+    "evidence/data/t1-t2-action-source-checks-v1.json": "8f7382e53a6aba9e30fae79a27b9c353f32e163a74e7d839ef4351d28db78693",
+    "scripts/audit-t1-t2-action-mass-gap.mjs": "336042905d91b79cd13f8889973e2e92a2b33170a727c5be190da07624d4c79b",
+    "verification/verify/verify_frontier_parallel_qft_electron_action_gate.mjs": "a6b6ef47322b586f31bee9490463b64ee0dac276aec5bcd4a4c40e1409397338",
+    "verification/verify/verify_full_selector_clifford_lift_needs_global_grading_double.mjs": "8469c051e5d9ae1fb6622ac15745d5b0c3d5256cce55a8e2229a438226953fe8",
+    "verification/verify/verify_lorentz_clifford_extension_of_yukawa_grading.mjs": "8e2ad4a34e9ee8839b66ae429c7a148acafec6135b4bb9cfaf0bcffbab95ebff",
+    "verification/verify/verify_phi4_sign_wall_stress_and_selector_loop_gate.mjs": "025738454e541c2e73037d7dc8ce82bc32f5b3e2393293927e1e31b9ff2c9078",
+    "verification/verify/verify_spin23_critical_pgt_pseudoscalar_class.mjs": "ce32b01dda733d227b2167f48f791bbe3f64f1bf1af70b7c7f84f1aa9a157aeb",
+    "verification/verify/verify_spin23_explicit_macdowell_mansouri_spectrum.mjs": "3c89f8c7fb866720b5460c46d30518b7a8a00e1cb809c2c05f5d821db590c91b"
+  },
+  "sourceVerificationReceipt": "evidence/data/t1-t2-action-source-checks-v1.json",
+  "supportDerivation": {
+    "assumptions": [
+      "positive Hilbert space",
+      "orthogonal complementary projectors",
+      "B Hermitian and purely cross-sector",
+      "A=P1-P2"
+    ],
+    "identity": "{A,B}=0; B^2=diag(M M^dagger,M^dagger M)",
+    "propagationIdentificationDerived": false,
+    "crossSectorSupportDerivedFromPhysicalAction": false,
+    "commonSingleGapRequires": "Equal sector dimensions and all singular values of M equal to the same positive Delta",
+    "finiteUniformRestGap": "sigma_min(M)>0 for equal square sectors",
+    "rectangularKernelLowerBound": "abs(dim(P1)-dim(P2))"
+  },
+  "classicalUniformActionCounterfamily": {
+    "parameters": {
+      "units": "hbar=c=1",
+      "mu": 2,
+      "lambda": 4,
+      "Zphi": 3,
+      "Zpsi": 2
+    },
+    "rows": [
+      {
+        "y": 0,
+        "v": 1,
+        "restGap": 0,
+        "scalarFrequencySquared": 2.6666666666666665,
+        "commonProjectors": true,
+        "commonCliffordAlgebra": true,
+        "commonScalarVacuum": true,
+        "positiveKineticTerms": true
+      },
+      {
+        "y": 1,
+        "v": 1,
+        "restGap": 0.5,
+        "scalarFrequencySquared": 2.6666666666666665,
+        "commonProjectors": true,
+        "commonCliffordAlgebra": true,
+        "commonScalarVacuum": true,
+        "positiveKineticTerms": true
+      },
+      {
+        "y": 2,
+        "v": 1,
+        "restGap": 1,
+        "scalarFrequencySquared": 2.6666666666666665,
+        "commonProjectors": true,
+        "commonCliffordAlgebra": true,
+        "commonScalarVacuum": true,
+        "positiveKineticTerms": true
+      }
+    ],
+    "fixedNormalization": true,
+    "freeDatum": "real Yukawa coefficient y",
+    "derivation": "v=mu/sqrt(lambda); Delta=abs(y)*v/Zpsi; scalarFrequencySquared=2*mu^2/Zphi",
+    "conclusion": "Nonzero y and 2y preserve the displayed structural constraints while doubling the gap; y=0 removes mixing.",
+    "scope": "Uniform classical background. No self-consistent quantum vacuum or T1/T2 intertwiner asserted."
+  },
+  "corpusBranches": {
+    "cliffordSymbol313": "Exact conditional Clifford extension; physical Lorentz/gauge/locality realization remains open.",
+    "scalarWall341": {
+      "profileGeneratedFromScalarEOM": true,
+      "yukawaAndVacuumScaleSupplied": true,
+      "bulkRestGap": "abs(g*v)",
+      "fullWallSpectrumHasZeroMode": true,
+      "selectorRP2IdentificationEstablished": false
+    },
+    "selectorLift345": {
+      "localDimension": 4,
+      "ordinaryGlobalGradingDimension": 8,
+      "physicalExtraFactorIdentified": false,
+      "massCoefficientSupplied": true
+    },
+    "minimalSpin23Action1596": {
+      "physicalGravitonHelicities": 2,
+      "selectorRadialModes": 0,
+      "additionalMassiveVacuumPoles": 0,
+      "torsionSquareAddsMomentumDependence": false,
+      "scope": "Fixed-norm parity-even two-derivative SW/MM action and stated torsion-square deformation."
+    },
+    "criticalTorsion1622": {
+      "positivePoleFormula": "m^2=A/B with A,B>0",
+      "healthyClassicalCriticalSector": true,
+      "coefficientsSelectedByT1T2": false,
+      "identifiedAsT1T2MassMixing": false,
+      "radiativeClosureEstablished": false
+    }
+  },
+  "verdict": {
+    "anticommutingPhysicalT1T2OperatorsDerived": false,
+    "positivePhysicalT1T2RestGapDerived": false,
+    "gapMagnitudePredictedWithoutFreeCoupling": false,
+    "conditionalPositiveGapMechanismsExist": true,
+    "universalSpin23MassNoGo": false,
+    "nextDiscriminator": "One joined carrier/source action fixes the principal symbol, pure cross block, normalization, stable vacuum and nonzero singular-value bound; excludes the free Yukawa rescaling."
+  }
+}

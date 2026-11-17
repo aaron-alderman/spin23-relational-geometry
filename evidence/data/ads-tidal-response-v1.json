@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "ads-tidal-response-v1",
+  "evidenceFamily": "matched-ads-tidal-fixture",
+  "source": "kappa T_uu = epsilon * 64*u^3*(1-u)^3 on 0<u<1; zero outside",
+  "radialProfile": "-3*z**3/7 + z**2 - 4/7",
+  "sample": {
+    "u": "1/2",
+    "z": "3/2",
+    "axes": [
+      "x",
+      "z",
+      "longitudinal"
+    ]
+  },
+  "readout": "R(E_i,U,E_j,U); relative-acceleration matrix is its negative",
+  "vacuumTideInUnitsOfOneOverEllSquared": [
+    "1",
+    "1",
+    "1"
+  ],
+  "formulations": {
+    "GR": {
+      "einsteinSourceResidualZero": true,
+      "riemannTensorMatchesGR": true,
+      "sampleTideInUnitsOfEpsilonOverEllSquared": [
+        "9/112",
+        "243/112",
+        "0"
+      ]
+    },
+    "TEGR": {
+      "einsteinSourceResidualZero": true,
+      "riemannTensorMatchesGR": true,
+      "sampleTideInUnitsOfEpsilonOverEllSquared": [
+        "9/112",
+        "243/112",
+        "0"
+      ]
+    },
+    "STEGR": {
+      "einsteinSourceResidualZero": true,
+      "riemannTensorMatchesGR": true,
+      "sampleTideInUnitsOfEpsilonOverEllSquared": [
+        "9/112",
+        "243/112",
+        "0"
+      ]
+    },
+    "minimal Spin(2,3)": {
+      "einsteinSourceResidualZero": true,
+      "riemannTensorMatchesGR": true,
+      "sampleTideInUnitsOfEpsilonOverEllSquared": [
+        "9/112",
+        "243/112",
+        "0"
+      ]
+    }
+  },
+  "checks": {
+    "sourceConserved": true,
+    "bothRadialMetricBoundaryValuesMatched": true,
+    "traceMatchesRestFrameSource": true,
+    "bareFlatConnectionMissesNonzeroOnOffResponse": true
+  },
+  "verdict": {
+    "exactMatchedBulkTidalResidualZero": true,
+    "independentPhysicalMeasurement": false,
+    "physicalAdmission": false,
+    "boundaryChargeEquivalenceTested": false,
+    "connectionSensitiveMatterTested": false
+  }
+}

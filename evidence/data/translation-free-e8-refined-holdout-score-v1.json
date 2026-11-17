@@ -1,0 +1,126 @@
+{
+  "schemaVersion": "e8-refined-computational-holdout-score-v1",
+  "sources": {
+    "evidence/data/translation-free-e8-refined-frozen-predictions-v1.json": "fbdae665dca8473a9dc9d448ec5cbc0ad4dd5552c670e4fdfbabe37fccfb62e2",
+    "evidence/data/translation-free-e8-refined-frozen-response-v1.json": "5b451dfb1dffee74b0ff9dae46b3831d5ef57daf86fdecdb65258c675405f3e1",
+    "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell12-direct-v1.json": "87c04598886381b7d01a5bb866f1294a1cb4d2324e26182dd7fcaf15eccf810e",
+    "evidence/data/translation-free-e8-charge-shell-14-audit-v1.json": "dcf79a0ab1414dee1ec9550d77ec94e6a86e2dfd6ddf93edccb335ebdaf20e9d",
+    "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell14-direct-v1.json": "984a1d575289f4be0a35d1678be83f3afa5e93891f8c49dd34ba34f7474afeec",
+    "evidence/data/translation-free-e8-frequency-response-shell12-v1.json": "357f60b6a27620133a03b2ecfe45868bb7be2fe6d6b05d82c5b50205a8905a7d",
+    "evidence/data/translation-free-e8-frequency-response-shell14-v1.json": "a9c62c1a8cd150a1f5472cb17d6cab5fec8c98416c409c180efa7d8d7b49a689",
+    "evidence/data/translation-free-e8-full-shell-local-charge-tail-shell14-v1.json": "cd93ea028cff093921eeba281f87ef3d282d17bcb1116dc272ed18b68d41a21e"
+  },
+  "predictionPackets": [
+    "evidence/data/translation-free-e8-refined-frozen-predictions-v1.json",
+    "evidence/data/translation-free-e8-refined-frozen-response-v1.json"
+  ],
+  "referenceDictionary": "evidence/data/translation-free-e8-local-charge-dictionary-r13-shell14-direct-v1.json",
+  "referenceCurve": "evidence/data/translation-free-e8-frequency-response-shell14-v1.json",
+  "firstLineCalibrationCount": 2,
+  "tolerance": 0.01,
+  "lines": [
+    {
+      "state": 3,
+      "predictedGap": 0.31403215412824864,
+      "predictedWeight": 0.06630509791583465,
+      "referenceGap": 0.31403282407018773,
+      "referenceWeight": 0.06630439170880285,
+      "gapRelativeError": -0.000002133350044175586,
+      "weightRelativeError": 0.000010650984250126783
+    },
+    {
+      "state": 5,
+      "predictedGap": 0.40752098904023876,
+      "predictedWeight": 0.03981028819044827,
+      "referenceGap": 0.4075222661082396,
+      "referenceWeight": 0.03980971337938053,
+      "gapRelativeError": -0.00000313373797466987,
+      "weightRelativeError": 0.000014438965241003743
+    },
+    {
+      "state": 7,
+      "predictedGap": 0.491203174864704,
+      "predictedWeight": 0.9283364317567988,
+      "referenceGap": 0.4912047738934109,
+      "referenceWeight": 0.928334478839356,
+      "gapRelativeError": -0.0000032553199640350527,
+      "weightRelativeError": 0.000002103678671039333
+    },
+    {
+      "state": 8,
+      "predictedGap": 0.49758401113641987,
+      "predictedWeight": 0.01180319688177738,
+      "referenceGap": 0.49758582038064736,
+      "referenceWeight": 0.011800714874080909,
+      "gapRelativeError": -0.0000036360445844207945,
+      "weightRelativeError": 0.0002103268931548108
+    },
+    {
+      "state": 11,
+      "predictedGap": 0.5842852155799299,
+      "predictedWeight": 0.20160797454909835,
+      "referenceGap": 0.5842873979030783,
+      "referenceWeight": 0.20160220590616704,
+      "gapRelativeError": -0.000003735016630979082,
+      "weightRelativeError": 0.000028613987160364118
+    },
+    {
+      "state": 12,
+      "predictedGap": 0.5849249829548807,
+      "predictedWeight": 0.0017602447097782626,
+      "referenceGap": 0.5849272934807348,
+      "referenceWeight": 0.0017629970501626309,
+      "gapRelativeError": -0.000003950107782313417,
+      "weightRelativeError": -0.0015611712930060362
+    }
+  ],
+  "rows": [
+    {
+      "fractionOfFirstGap": 0,
+      "predictedResponse": 16.737684562300466,
+      "referenceResponse": 16.737486477613174,
+      "relativeError": 0.00001183479296940071
+    },
+    {
+      "fractionOfFirstGap": 0.2,
+      "predictedResponse": 16.869426893795453,
+      "referenceResponse": 16.869227465386732,
+      "relativeError": 0.00001182202380811681
+    },
+    {
+      "fractionOfFirstGap": 0.4,
+      "predictedResponse": 17.30412869500204,
+      "referenceResponse": 17.30392507639613,
+      "relativeError": 0.000011767191837153135
+    },
+    {
+      "fractionOfFirstGap": 0.6,
+      "predictedResponse": 18.2239257596745,
+      "referenceResponse": 18.22371455545136,
+      "relativeError": 0.000011589526520472404
+    },
+    {
+      "fractionOfFirstGap": 0.8,
+      "predictedResponse": 20.528267145607867,
+      "referenceResponse": 20.52804370980403,
+      "relativeError": 0.000010884417774637
+    }
+  ],
+  "summary": {
+    "maxHeldOutEnergyError": 0.000003950107782313417,
+    "maxHeldOutStrengthError": 0.0015611712930060362,
+    "maxHeldOutResponseError": 0.00001183479296940071,
+    "staticRelativeError": 0.000011834793059772863,
+    "slopeRelativeError": 0.000010326107069857926,
+    "energyWeightedStrengthRelativeError": 0.00000768872106893248,
+    "numericalHoldoutPass": true
+  },
+  "originalCoarseReplayPassed": false,
+  "selectorSpecificPhysicalPredictionEstablished": false,
+  "interpretation": "This scores a fixed supplied Hamiltonian and source, with predictions saved before the newly computed higher-line and frequency targets. It tests numerical predictivity after two shared calibrations, not physical selector uniqueness or agreement with independent observations.",
+  "nextPhysicalGate": [
+    "Derive an independently typed selector-to-electromagnetic-source action and constitutive kernel.",
+    "Fix device geometry, physical source calibration, contacts, damping and instrument resolution.",
+    "Score unseen measured additional resonance energies, integrated strengths and response curves without per-line refits."
+  ]
+}
