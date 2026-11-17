@@ -20,6 +20,8 @@
 
 **Constitutive join:** [E8 metric calibration gate](E8_CONSTITUTIVE_METRIC_GATE.md)
 
+**Optical source and calibration continuation:** [selector, charge-dipole response and independent device calibration](../optical-boundary-response/README.md) (conditional research packet; physical source identification remains open).
+
 **Nonlinear solver:** [E8 adaptive kinetic-shell compilation](E8_ADAPTIVE_SHELL_SOLVER.md)
 
 **Nonlinear reconnaissance:** [117,361-state joined-rotor cutoff audit](E8_JOINED_ROTOR_RECON.md)

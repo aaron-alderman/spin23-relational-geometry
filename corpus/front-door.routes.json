@@ -123,6 +123,34 @@
       ]
     },
     {
+      "id": "human-relational-applications",
+      "title": "Explore values relationships and correction",
+      "purpose": "Enter human relational applications through orientation, directed feedback and revisable commitments; preserve synthetic and empirical boundaries.",
+      "roots": [
+        {
+          "id": "orientation-architecture",
+          "path": "corpus/programmes/orientation/orientation_architecture.md",
+          "epistemicStatus": "conceptual and normative architecture; empirical hypotheses remain open",
+          "authority": "supplies descriptive coordinates and contestable correction commitments; does not validate applications",
+          "provenance": "maintained orientation manuscript"
+        },
+        {
+          "id": "the-field",
+          "path": "corpus/programmes/the-field/README.md",
+          "epistemicStatus": "uncalibrated relational research programme",
+          "authority": "routes to synthetic examples and their distinct assumptions, sources and checks",
+          "provenance": "maintained programme index"
+        },
+        {
+          "id": "household-orientations",
+          "path": "corpus/programmes/the-field/household-orientations-and-correction.md",
+          "epistemicStatus": "published reading route and executable synthetic application",
+          "authority": "separates values, outcomes and renegotiation; symmetry audit qualifies participant exchange; no universal prescription",
+          "provenance": "household case, v1/v2 execution and bounded exchange audit"
+        }
+      ]
+    },
+    {
       "id": "governance",
       "title": "Audit authority and provenance",
       "purpose": "Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.",
@@ -162,13 +190,23 @@
     {
       "id": "interpret",
       "title": "Interpret faithfully",
-      "rootIds": ["reading-contract", "current-synthesis", "explanatory-standard", "glossary"],
+      "rootIds": [
+        "reading-contract",
+        "current-synthesis",
+        "explanatory-standard",
+        "glossary"
+      ],
       "requiredPaths": []
     },
     {
       "id": "choose-work",
       "title": "Choose one bounded research task",
-      "rootIds": ["reading-contract", "role-map", "open-topics", "target-set"],
+      "rootIds": [
+        "reading-contract",
+        "role-map",
+        "open-topics",
+        "target-set"
+      ],
       "requiredPaths": [
         "corpus/programmes/frontier-physics-targets/open_topics_register_v1.json",
         "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json"
@@ -177,7 +215,15 @@
     {
       "id": "audit",
       "title": "Audit claims, provenance, and authority",
-      "rootIds": ["reading-contract", "evidence-spine", "result-ledger", "verification-guide", "document-map", "corpus-manifest", "publication-authority"],
+      "rootIds": [
+        "reading-contract",
+        "evidence-spine",
+        "result-ledger",
+        "verification-guide",
+        "document-map",
+        "corpus-manifest",
+        "publication-authority"
+      ],
       "requiredPaths": [
         "corpus/registers/corpus_evidence_spine.json",
         "tooling/indexing/generate_corpus_evidence_spine.mjs",
@@ -188,11 +234,44 @@
     {
       "id": "experiment",
       "title": "Design a discriminating experiment",
-      "rootIds": ["reading-contract", "current-synthesis", "experiment-atlas", "target-set", "verification-guide"],
+      "rootIds": [
+        "reading-contract",
+        "current-synthesis",
+        "experiment-atlas",
+        "target-set",
+        "verification-guide"
+      ],
       "requiredPaths": [
         "corpus/programmes/frontier-physics-targets/frontier_experiment_atlas_v1.json",
         "corpus/programmes/frontier-physics-targets/frontier_physics_target_register_v1.json",
         "corpus/programmes/frontier-physics-targets/experiment_starter_kit.md"
+      ]
+    },
+    {
+      "id": "household-correction",
+      "title": "Inspect household orientations and adaptive willingness",
+      "rootIds": [
+        "orientation-architecture",
+        "the-field",
+        "household-orientations"
+      ],
+      "requiredPaths": [
+        "corpus/programmes/the-field/household-orientations-v1.md",
+        "corpus/programmes/the-field/household-dynamics-v2.md",
+        "evidence/data/the-field/household-orientations-v1.json",
+        "evidence/data/the-field/household-orientations-v2.json",
+        "evidence/data/the-field/household-orientations-v2-receipt.json",
+        "evidence/data/the-field/household-symmetry-v1-receipt.json",
+        "verification/derive/the_field_household_model_v1.mjs",
+        "verification/derive/the_field_household_model_v2.mjs",
+        "verification/test/the_field_household_model_v2.test.mjs",
+        "verification/verify/verify_the_field_household_v2.mjs",
+        "verification/verify/verify_the_field_household_symmetry_v1.mjs",
+        "tooling/the-field/build_household_explorer_v2.mjs",
+        "tooling/the-field/household_explorer_v2.fragment.html",
+        "tooling/the-field/build_household_explorer.mjs",
+        "verification/verify/verify_the_field_household_explorer_v2.mjs",
+        "applications/aaronalderman-site/source/hierarchy-evidence/the-field-0.json"
       ]
     }
   ]

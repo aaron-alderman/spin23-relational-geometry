@@ -118,6 +118,11 @@ checkpoint.
 
 ## Next decisive test
 
+The [matched-source AdS tidal comparison](../../optical-boundary-response/ADS_TIDAL_RESPONSE.md)
+uses the existing fixed-norm action of Claim 1596 as a conventional gravity
+control. Its sourced local tide agrees with all three equivalent GR descriptions.
+The comparison takes the single compensator as given.
+
 Build the independent `SO(2,3)` connection plus one constrained compensator,
 derive the gauge-fixed quadratic action, and verify that its physical spectrum
 is exactly the massless graviton with no extra ghost or propagating

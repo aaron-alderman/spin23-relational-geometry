@@ -165,6 +165,7 @@ The theological reading is allowed positive content because its assumptions are 
 
 ## Related sources
 
+- [Structural kenosis and genuine remainder](structural_kenosis_and_genuine_remainder.md) — conditional structure/policy maximality with genuine openness in realization; no event-by-event optimality inference.
 - [The admissibility frontier](the_admissibility_frontier_current_synthesis.md)
 - [Kenotic governance: tri-omni theism and shared responsibility](kenotic_governance_tri_omni_theism_and_a_lawful_world.md)
 - [Orientation architecture](../programmes/orientation/orientation_architecture.md)

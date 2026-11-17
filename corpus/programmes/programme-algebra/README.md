@@ -30,6 +30,16 @@ declarations remain canonical for object identities, profiles and admitted
 transformations. Generated JSON and reports are disposable projections of those
 two source classes.
 
+The plasma-heart migration begins with the authored declaration
+[`plasma_heart_algebra_v1.json`](plasma_heart_algebra_v1.json). It defines the
+solver-independent state, conservation operators, symmetry-break ports,
+solver interface, admission gates, and controlled Python-retirement policy.
+
+The corresponding solver boundary is declared in
+[`plasma_heart_solver_ir_v1.json`](plasma_heart_solver_ir_v1.json). It is the
+typed packet contract that OpenFOAM, Elmer, SU2, preCICE, or a custom engine
+must lower to and from; no engine-specific field layout becomes authoritative.
+
 The first held-out retrieval tranche establishes a narrower result. Algebraic
 retrieval finds machine ledgers that Markdown-only search cannot see, but it is
 not uniformly better for prose. Naive score fusion and keyword-only routing both
@@ -86,6 +96,11 @@ compose internally under profile rules. A cross-profile passage is partial and
 must retain its assumptions, losses, evidence, falsifier and authority ceiling.
 
 ## Articles
+
+The [p(doom) dossier](../ai-alignment-risk/README.md) applies the
+epistemic-claim and experiment adapters to a 240-proposition argument, a
+conjunctive gate register and a proposed evaluation. Its finite countermodels
+test where local records fail to determine a joint history or a forecast.
 
 These are the reader-facing entrances to the lane. The first three are compiled
 from the current corpus and may be regenerated; the conversion register is the
@@ -166,3 +181,104 @@ This lane may replace any part of the existing corpus only after it demonstrates
 
 Until those gates close, the lane is an instrument for examining the corpus,
 not its successor.
+
+## Plasma-heart solver boundary
+
+The plasma-heart work is now algebra-first at the solver boundary. The
+authoritative declarations are:
+
+- `plasma_heart_algebra_v1.json` — geometry, conservation operators, ports,
+  symmetry-break declarations and admission rules;
+- `plasma_heart_solver_ir_v1.json` — solver-independent packet sections,
+  derived operators, invariants and lowering targets;
+- `plasma_heart_retirement_manifest_v1.json` — the explicit, non-destructive
+  inventory and replacement gates for the legacy Python screening layer.
+- `plasma_heart_migration_matrix_v1.json` — the authored mapping from each
+  legacy Python class to its algebra or solver replacement.
+
+The non-Python checks are run with:
+
+~~~powershell
+node tooling/plasma-heart/compile_plasma_heart_algebra.mjs
+node tooling/plasma-heart/lint_plasma_heart_solver_packet.mjs
+node tooling/plasma-heart/inventory_legacy_python.mjs
+node tooling/plasma-heart/run_solver_adapter.mjs --engine openfoam
+node tooling/plasma-heart/evaluate_solver_packet.mjs --input tooling/plasma-heart/fixtures/minimal_solver_packet.json
+node tooling/plasma-heart/admit_solver_packet.mjs --input output/plasma-heart-algebra/synthetic-ir-packet.json
+node tooling/plasma-heart/verify_closed_surface_null.mjs
+node tooling/plasma-heart/audit_solver_source.mjs
+node tooling/plasma-heart/verify_resolved_surface_fixture.mjs
+node tooling/plasma-heart/test_solver_rejection_paths.mjs
+node tooling/plasma-heart/emit_openfoam_case.mjs --input output/plasma-heart-algebra/synthetic-ir-packet.json --out output/plasma-heart-algebra/openfoam-synthetic-case
+node tooling/plasma-heart/emit_engine_case.mjs --engine elmer --input output/plasma-heart-algebra/synthetic-ir-packet.json --out output/plasma-heart-algebra/elmer-synthetic-case
+node tooling/plasma-heart/emit_engine_case.mjs --engine su2 --input output/plasma-heart-algebra/synthetic-ir-packet.json --out output/plasma-heart-algebra/su2-synthetic-case
+node tooling/plasma-heart/emit_engine_case.mjs --engine precice --input output/plasma-heart-algebra/synthetic-ir-packet.json --out output/plasma-heart-algebra/precice-synthetic-case
+node tooling/plasma-heart/evaluate_quasi1d_reference.mjs
+node tooling/plasma-heart/evaluate_3d_stokes_reference.mjs
+node tooling/plasma-heart/evaluate_compressible_face_adapter.mjs
+node tooling/plasma-heart/audit_solver_cycle_energy.mjs
+node tooling/plasma-heart/evaluate_coil_maxwell_reference.mjs
+node tooling/plasma-heart/evaluate_plasma_conductivity.mjs
+node tooling/plasma-heart/evaluate_radiation_port_reference.mjs
+node tooling/plasma-heart/evaluate_induced_current_fixed_point.mjs
+node tooling/plasma-heart/evaluate_field_backreaction_fixed_point.mjs
+node tooling/plasma-heart/evaluate_maxwell_diffusion_1d.mjs
+node tooling/plasma-heart/evaluate_maxwell_diffusion_3d.mjs
+node tooling/plasma-heart/evaluate_resistive_mhd_reference.mjs
+node tooling/plasma-heart/evaluate_adaptive_mhd_policy.mjs
+node tooling/plasma-heart/evaluate_geometry_pareto.mjs
+node tooling/plasma-heart/run_custom_solver.mjs --input tooling/plasma-heart/fixtures/minimal_solver_packet.json --output output/plasma-heart-algebra/custom-solver-result.json
+node tooling/plasma-heart/run_solver_adapter.mjs --engine custom --execute --input tooling/plasma-heart/fixtures/minimal_solver_packet.json --output output/plasma-heart-algebra/custom-solver-result.json
+node tooling/plasma-heart/make_solver_cycle_fixture.mjs
+node tooling/plasma-heart/run_custom_cycle.mjs --inputs output/plasma-heart-algebra/custom-cycle-inputs/packet-0.json,output/plasma-heart-algebra/custom-cycle-inputs/packet-1.json,output/plasma-heart-algebra/custom-cycle-inputs/packet-2.json,output/plasma-heart-algebra/custom-cycle-inputs/packet-3.json,output/plasma-heart-algebra/custom-cycle-inputs/packet-4.json
+node tooling/plasma-heart/audit_physical_admission.mjs
+node tooling/plasma-heart/generate_solver_handoff_report.mjs
+node tooling/plasma-heart/evaluate_solver_cycle.mjs
+node tooling/plasma-heart/evaluate_field_port_asymmetry.mjs
+node tooling/plasma-heart/evaluate_resolved_estimator.mjs
+node tooling/plasma-heart/evaluate_actuator_constraints.mjs
+node tooling/plasma-heart/evaluate_3d_actuator_gate.mjs
+node tooling/plasma-heart/evaluate_cycle_orientation_reversal.mjs
+node tooling/plasma-heart/evaluate_solver_power_ledger.mjs
+node tooling/plasma-heart/evaluate_solver_mesh_convergence.mjs
+node tooling/plasma-heart/evaluate_field_surface_coupling.mjs
+node tooling/plasma-heart/evaluate_chemistry_surface_coupling.mjs
+node tooling/plasma-heart/evaluate_vector_maxwell_diffusion_3d.mjs
+node tooling/plasma-heart/evaluate_thermal_surface_feedback.mjs
+node tooling/plasma-heart/evaluate_maxwell_uncertainty_robust.mjs
+node tooling/plasma-heart/evaluate_mhd_coupled_cycle_ledger.mjs
+node tooling/plasma-heart/evaluate_fully_coupled_power_ledger.mjs
+node tooling/plasma-heart/evaluate_combined_force_ledger.mjs
+node tooling/plasma-heart/evaluate_total_power_ledger.mjs
+node tooling/plasma-heart/evaluate_3d_cycle_pareto.mjs
+node tooling/plasma-heart/evaluate_radiation_cycle_pareto.mjs
+node tooling/plasma-heart/evaluate_radiation_uncertainty_robust.mjs
+node tooling/plasma-heart/audit_remaining_legacy.mjs
+node tooling/plasma-heart/verify_migration.mjs
+node tooling/plasma-heart/verify_reference_regression.mjs
+node tooling/plasma-heart/convert_legacy_packet.mjs
+node tooling/plasma-heart/make_synthetic_solver_packet.mjs
+node tooling/plasma-heart/verify_corpus_boundary.mjs
+node tooling/plasma-heart/verify_solver_cycle.mjs
+node tooling/plasma-heart/verify_solver_handoff.mjs
+node tooling/plasma-heart/verify_algebra_requirements.mjs
+node tooling/plasma-heart/verify_mesh_convergence.mjs
+node tooling/plasma-heart/evaluate_solver_packet.mjs --input tooling/plasma-heart/fixtures/minimal_solver_packet.json
+~~~
+
+The compiler produces `output/plasma-heart-algebra/solver-lowering-manifest.json`.
+These checks validate algebra and packet shape only; they do not claim thrust or
+physical admission. External engines remain evaluators and must be attached via
+an adapter that preserves packet identity, conservation ledgers and the stated
+invariants. `run_solver_adapter.mjs` reports availability or an explicit
+refusal; it never fabricates solver output. The inventory classifies the
+remaining legacy Python files and leaves them pending-retirement until a real
+adapter and replacement verification are complete.
+
+The first retirement batches are intentionally narrow: the standalone Python
+hash-manifest generator, its generated extension manifest, the superseded
+resolved-packet Python linter, and the standalone backend probe were removed
+after non-Python replacements were verified. The hash-based reference baseline
+was also replaced by a structural/status regression check. The remaining
+inventory is now 0 Python files; unresolved physics and
+optimization targets remain explicitly pending rather than silently discarded.

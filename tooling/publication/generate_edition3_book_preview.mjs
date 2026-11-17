@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto";
+import { execFileSync } from "node:child_process";
 import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import { basename, dirname, extname, join, normalize, relative, resolve, sep } from "node:path";
 
@@ -54,6 +55,15 @@ const signatureArticle = {
   completeSource: "docs/papers/typed_object_signatures_physics_epistemics_programming_draft.md",
 };
 const sourceArticles = [
+  {
+    slug: "household-orientations-and-correction",
+    title: "Household orientations and revisable commitments",
+    kicker: "Values, outcomes and the possibility of changing an arrangement",
+    source: "corpus/programmes/the-field/household-orientations-and-correction.md",
+    label: "Human relational application",
+    includeIntroduction: true,
+    note: "An uncalibrated executable case with directed experience and a participant-exchange audit.",
+  },
   {
     slug: "monster-distributed-search",
     title: "Do Not Search the Monster. Build the Ladder.",
@@ -1671,6 +1681,9 @@ const resolveMarkdownTarget = (source, target, fromFile = sourceOutputPath(sourc
   if (/^(?:[a-z]+:|#)/iu.test(target)) return target;
   const [pathPart, fragment = ""] = target.split("#", 2);
   const candidate = posix(normalize(join(dirname(source), pathPart))).replace(/^\.\//u, "");
+  if (candidate === "preview/the-field/household-explorer-v2.html") {
+    return encodePath(relative(dirname(fromFile), join(siteRoot, "explorers", "household.html")));
+  }
   if (librarySourceSet.has(candidate)) return `${sourcePageHref(fromFile, candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   if (candidate.endsWith(".md")) return `${githubBlobUrl(candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
   return githubBlobUrl(candidate);
@@ -2203,7 +2216,9 @@ const standaloneArticleHtml = article => {
   if (!existsSync(join(root, article.source))) throw new Error(`Missing standalone article source: ${article.source}`);
   const markdown = readFileSync(join(root, article.source), "utf8");
   const firstSection = markdown.search(/^## /mu);
-  const bodyMarkdown = article === signatureArticle
+  const bodyMarkdown = article.includeIntroduction
+    ? markdown.replace(/^# [^\n]+\n+/u, "")
+    : article === signatureArticle
     ? markdown.replace(/^# [^\n]+\n+_[^\n]+_\n+/u, "")
     : firstSection >= 0 ? markdown.slice(firstSection) : markdown.replace(/^# [^\n]+\n+/u, "");
   const sourceHref = githubBlobUrl(article.completeSource || article.source);
@@ -2420,6 +2435,13 @@ if (!siteOnly) {
 }
 rmSync(siteRoot, { recursive: true, force: true });
 mkdirSync(siteRoot, { recursive: true });
+// Compile this executable from its maintained sources during a clean publication
+// build. The preview file is disposable and need not be committed or served by GitHub.
+const householdExplorerOutput = join(siteRoot, "explorers", "household.html");
+execFileSync(process.execPath, [join(root, "tooling/the-field/build_household_explorer_v2.mjs"),
+  "--standalone-output", householdExplorerOutput], { cwd: root, encoding: "utf8" });
+writeFileSync(householdExplorerOutput, readFileSync(householdExplorerOutput, "utf8")
+  .replace("<head>", `<head><meta name="google-site-verification" content="${googleSiteVerificationToken}">`));
 mkdirSync(siteDetailsRoot, { recursive: true });
 mkdirSync(siteReadingKeyRoot, { recursive: true });
 mkdirSync(siteArticlesRoot, { recursive: true });

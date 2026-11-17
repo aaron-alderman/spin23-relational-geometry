@@ -446,6 +446,8 @@ The kenotic claim can therefore be expressed compactly:
 
 ## Relation to the existing corpus
 
+The later [structural kenosis and genuine remainder](structural_kenosis_and_genuine_remainder.md) formalisation distinguishes maximality of an enabling structure and governing policy from optimality or divine selection of every realized event. It treats God and kenotic purpose as fixed premises for backward reconstruction, while retaining the policy's accountability for foreseeable risks and protection. It proposes no proof that the actual universe is maximal.
+
 This synthesis develops the theological model and limitations established in the following claims:
 
 - [The participatory remainder is a testable relational hypothesis, not a residual proof of God](../claims/1600-1699/1680_the_participatory_remainder_is_a_testable_relational_hypothesis_not_a_residual_proof_of_god.md)

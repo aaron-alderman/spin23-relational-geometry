@@ -18,7 +18,7 @@ const ignoredDirectories=new Set([
 // Audit repository-owned Markdown only. `--exclude-standard` keeps imported
 // migration caches and other ignored workspaces from becoming false failures,
 // while still including newly created, not-yet-staged documentation.
-const files=execFileSync('git',['ls-files','--cached','--others','--exclude-standard'],{cwd:root,encoding:'utf8'})
+const files=execFileSync('git',['ls-files','--cached','--others','--exclude-standard'],{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024})
   .split(/\r?\n/)
   .filter(Boolean)
   .filter(p=>p.endsWith('.md'))

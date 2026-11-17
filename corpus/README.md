@@ -2,6 +2,8 @@
 
 This directory is the source-of-truth research record. It is intentionally distinct from the curated books and generated website.
 
+[Website manuscripts](websites/README.md) retain editorial writing separately from scientific claims, including the Father article series for aaronalderman.com. Their publication status is recorded with each manuscript.
+
 The [generated corpus front door](FRONT_DOOR.md) maps this interior through declared roots, exact authority and provenance labels, capability-specific minimum closures, link reachability and an explicit classification for every object in the canonical inventory. Use it when the question is not merely “where should I start?” but “what is here, how is it connected, and what would a bounded subset omit?”
 
 The [generated evidence spine](EVIDENCE_SPINE.md) is the claim-level drill-down beneath that map. It preserves canonical and observed file identity, exact declaration and link locations, certificate/evidence joins, scoped verdict text, marked title inferences and inbound consumer candidates. Missing joins remain visible; backlinks are not treated as endorsement, and structural indexing never promotes scientific status.
@@ -47,6 +49,10 @@ To enter through a concrete task, use [Start here by role](START_HERE_BY_ROLE.md
 - [`registers/`](registers/) — manifests, audits and machine-readable programme state.
 
 ## Foundational programmes
+
+- [p(doom)](programmes/ai-alignment-risk/README.md) — a source-linked review of the 240-proposition Yudkowsky–MIRI reconstruction. It separates evidence for task competence, goal generalization and control incentives from the open joins to extinction forecasts and policy.
+
+- [The Field](programmes/the-field/README.md) — proposed relational framework for immediate consequences, relationships and norms, and future possibilities. The [household orientations worked case](programmes/the-field/household-orientations-v1.md) separates values, outcomes and the ability to renegotiate; its [adaptive executable](programmes/the-field/household-dynamics-v2.md) varies goals and capacity while willingness evolves from directed request and agreement histories. These synthetic examples supply no empirical validation or universal household prescription.
 
 - [Mathematical Group Relationship Atlas](programmes/mathematical-group-atlas/README.md) — separates concrete groups, parameterized families and CFSG branches from Lie algebras, root systems, representations and homogeneous spaces; records role-typed group relationships, stable named maps, verified compositions, corpus-wide mention and candidate scans, and durable adjudications for hidden global forms and false group-to-group edges.
 

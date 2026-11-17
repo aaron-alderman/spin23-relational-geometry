@@ -1,8 +1,8 @@
 {
   "protocol": "sourcery/managed-qualification-profile.v1",
   "engineDirectory": "tooling/maintenance/all-remaining-contract-migration-2026-11-05",
-  "inputDirectory": "tooling/maintenance/ordinary-e2e-performance-2026-11-06/profile",
-  "runtimeModules": 901,
+  "inputDirectory": "tooling/maintenance/auth-native-boundaries-2026-11-06/profile",
+  "runtimeModules": 908,
   "additionalTests": [
     {
       "path": "test/runtime-loading-boundaries.test.mjs",
@@ -66,10 +66,63 @@
     {
       "path": "test/protocol-performance.test.mjs",
       "tests": 23
+    },
+    {
+      "path": "test/auth-migration-session-clock.test.mjs",
+      "tests": 8,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-startup.test.mjs",
+      "tests": 8,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-projection.test.mjs",
+      "tests": 7,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-observation.test.mjs",
+      "tests": 6,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-event.test.mjs",
+      "tests": 5,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-context.test.mjs",
+      "tests": 15,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/auth-migration-legacy-iteration.test.mjs",
+      "tests": 10,
+      "nodeOptions": [
+        "--experimental-vm-modules"
+      ]
+    },
+    {
+      "path": "test/native-boundary-mechanisms.test.mjs",
+      "tests": 6
     }
   ],
   "sourceChecks": {
-    "platform": 2336,
+    "platform": 2401,
     "algebra": 111,
     "policy": 11
   }

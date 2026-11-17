@@ -103,6 +103,7 @@ complex.
 26. [The adiabatic window is finite, and the first device should be an active metered emulator](../admissibility/admissibility_160_the_adiabatic_window_is_finite_and_the_first_device_should_be_an_active_metered_emulator.md)
 27. [A Node-only four-mode virtual instrument closes the software gate](../admissibility/admissibility_161_a_node_only_four_mode_virtual_instrument_closes_the_software_gate.md)
 28. [The hardware-ready acquisition packet exhausts the nonphysical branch](../admissibility/admissibility_162_the_hardware_ready_acquisition_packet_exhausts_the_nonphysical_branch.md)
+29. [Clock calibration and constitutive identifiability](16_clock_calibration_and_constitutive_identifiability.md)
 
 ## Executable spine
 

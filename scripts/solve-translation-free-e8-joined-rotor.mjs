@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import assert from "node:assert/strict";
+import fs from 'node:fs';
 
 const K = [
   [2,-1,0,0,0,0,0,0],[-1,2,-1,0,0,0,0,0],
@@ -247,7 +248,7 @@ const davidson = (operator,{roots=4,maxSubspace=16,cycles=40,tolerance=1e-10,see
   return {iterations:cycles,subspace:basis.length,ritz:last.map(({energy,residualNorm,vector})=>({energy,residual:residualNorm,vector}))};
 };
 
-const spectralDiagnostics = (operator,ritz,cutoff) => {
+const spectralDiagnostics = (operator,ritz,cutoff,chargeDiagnostics=false) => {
   const boundaryMask=Uint8Array.from(operator.kineticEnergies,value=>Number(Math.abs(value-cutoff)<1e-12));
   const inversion=new Int32Array(operator.states.length);
   const indices=new Map(operator.states.map((state,index)=>[key(state),index]));
@@ -308,9 +309,15 @@ const spectralDiagnostics = (operator,ritz,cutoff) => {
     transitionWeights.push(weights);
     sineTransitionWeights.push(sineWeights);
   }
+  const projectedChargeMatrices=chargeDiagnostics?Array.from({length:8},(_,channel)=>ritz.map(target=>ritz.map(source=>{
+    let value=0;
+    for(let i=0;i<operator.states.length;i++)value+=target.vector[i]*operator.states[i][channel]*source.vector[i];
+    return value;
+  }))):undefined;
   return {levels,cosineDriveTransitionWeightsFromGround:transitionWeights,
     sineDriveTransitionWeightsFromGround:sineTransitionWeights,
-    projectedCosineMatrices,projectedSineProxyMatrices};
+    projectedCosineMatrices,projectedSineProxyMatrices,
+    ...(chargeDiagnostics?{projectedChargeMatrices}:{} )};
 };
 
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{
@@ -331,10 +338,19 @@ const records=[];
 for(const cutoff of cutoffs)for(const branch of branches){
   const started=performance.now();
   const operator=compile(cutoff,branch,{kineticStrength,potentialStrength,channelPotentials,kineticScales});
+  if(args.exportOperator){
+    const prefix=args.exportOperator;
+    fs.mkdirSync(prefix.slice(0,Math.max(prefix.lastIndexOf('/'),prefix.lastIndexOf('\\'))),{recursive:true});
+    const states=Int16Array.from(operator.states.flatMap(s=>Array.from(s)));
+    for(const [name,data] of [['states',states],['neighbors',operator.neighbors],['diagonal',operator.diagonal]])fs.writeFileSync(`${prefix}.${name}.bin`,Buffer.from(data.buffer,data.byteOffset,data.byteLength));
+    const metadata={schemaVersion:'e8-charge-shell-export-v1',cutoff,branch,dimension:operator.states.length,channels:8,kineticStrength,potentialStrength,amplitudes:operator.amplitudes,endianness:'little',types:{states:'int16',neighbors:'int32',diagonal:'float64'}};
+    fs.writeFileSync(`${prefix}.json`,JSON.stringify(metadata,null,2)+'\n');
+    records.push({exported:prefix,...metadata});continue;
+  }
   const result=method==="davidson"
     ? davidson(operator,{roots,maxSubspace,cycles,tolerance:1e-10,seed:823240+cutoff+(branch==="inverse-kernel"?100:0)})
     : lanczos(operator,iterations,823239+cutoff+(branch==="inverse-kernel"?100:0));
-  const diagnostics=method==="davidson"?spectralDiagnostics(operator,result.ritz,cutoff):undefined;
+  const diagnostics=method==="davidson"?spectralDiagnostics(operator,result.ritz,cutoff,args.chargeDiagnostics==="true"):undefined;
   const levels=result.ritz.map(({energy,residual})=>({energy,residual}));
   records.push({
     cutoffKineticEnergy:cutoff,

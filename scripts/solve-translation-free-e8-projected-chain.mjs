@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from "node:fs";import {spawnSync} from "node:child_process";
+import {applyUniformLocal,dipoleMatrix,responseMeasure} from './lib/e8-charge-dipole.mjs';
 
 const args=Object.fromEntries(process.argv.slice(2).map(argument=>{const [name,value="true"]=argument.replace(/^--/u,"").split("=");return [name,value];}));
 const cutoff=Number(args.cutoff??8),roots=Number(args.roots??6),J=Number(args.coupling??0.05);
@@ -8,6 +9,15 @@ if(!["open","periodic"].includes(boundary))throw new Error(`unsupported boundary
 const widths=(args.widths??"1,2,3,4,5").split(",").map(Number),iterations=Number(args.iterations??80);
 let local,energies,parities,C,A;
 if(args.dictionary){const dictionary=JSON.parse(fs.readFileSync(args.dictionary,"utf8"));if(dictionary.schemaVersion!=="translation-free-e8-local-operator-dictionary-v1")throw new Error("unsupported dictionary");if(dictionary.settings.cutoff!==cutoff||dictionary.settings.roots!==roots)throw new Error("dictionary settings mismatch");local={levels:dictionary.levels,diagnostics:{levels:dictionary.parities.map((parity,index)=>({parityExpectation:parity,boundaryProbability:dictionary.boundaryProbabilities[index]}))}};energies=dictionary.levels.map(x=>x.energy);parities=dictionary.parities;C=dictionary.cosineMatrices;A=dictionary.sineProxyMatrices;}else{const child=spawnSync(process.execPath,["scripts/solve-translation-free-e8-joined-rotor.mjs",`--cutoffs=${cutoff}`,"--branches=cartan-kernel","--method=davidson",`--roots=${roots}`,`--maxSubspace=${args.maxSubspace??Math.max(48,8*roots)}`,`--cycles=${args.cycles??Math.max(160,20*roots)}`,"--potential=0.5"],{encoding:"utf8",maxBuffer:128*1024*1024});if(child.status!==0)throw new Error(child.stderr||`local solver exited ${child.status}`);local=JSON.parse(child.stdout).records[0];energies=local.levels.map(x=>x.energy);parities=local.diagnostics.levels.map(x=>Math.sign(x.parityExpectation));C=local.diagnostics.projectedCosineMatrices;A=local.diagnostics.projectedSineProxyMatrices;}
+const geometry=args.dipoleGeometry?JSON.parse(fs.readFileSync(args.dipoleGeometry,'utf8')):null;
+let chargeMatrices=null,physicalDipole=null;
+if(geometry){
+  if(!args.dictionary)throw new Error('dipole geometry requires an extended dictionary');
+  chargeMatrices=JSON.parse(fs.readFileSync(args.dictionary,'utf8')).projectedChargeMatrices;
+  if(!chargeMatrices)throw new Error('dictionary has no projected charge operators');
+  if(geometry.positionsInPitchUnits?.length!==8)throw new Error('eight island positions required');
+  physicalDipole=dipoleMatrix(chargeMatrices,geometry.positionsInPitchUnits);
+}
 const pairDimension=roots*roots;
 const bond=Array.from({length:pairDimension},()=>new Float64Array(pairDimension));
 for(let a=0;a<roots;a++)for(let b=0;b<roots;b++)for(let c=0;c<roots;c++)for(let d=0;d<roots;d++)for(let channel=0;channel<8;channel++)bond[a*roots+b][c*roots+d]+=C[channel][a][c]*C[channel][b][d]-A[channel][a][c]*A[channel][b][d];
@@ -17,5 +27,51 @@ const norm=a=>Math.sqrt(dot(a,a));
 const symmetricEigensystem=matrix=>{const A=matrix.map(row=>[...row]),n=A.length,V=Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>Number(i===j)));for(let step=0;step<200000;step++){let p=0,q=1,m=0;for(let i=0;i<n;i++)for(let j=i+1;j<n;j++)if(Math.abs(A[i][j])>m){m=Math.abs(A[i][j]);p=i;q=j;}if(m<1e-13)break;const angle=.5*Math.atan2(2*A[p][q],A[q][q]-A[p][p]),c=Math.cos(angle),s=Math.sin(angle),app=A[p][p],aqq=A[q][q],apq=A[p][q];for(let k=0;k<n;k++)if(k!==p&&k!==q){const kp=A[k][p],kq=A[k][q];A[k][p]=A[p][k]=c*kp-s*kq;A[k][q]=A[q][k]=s*kp+c*kq;}A[p][p]=c*c*app-2*s*c*apq+s*s*aqq;A[q][q]=s*s*app+2*s*c*apq+c*c*aqq;A[p][q]=A[q][p]=0;for(let k=0;k<n;k++){const vp=V[k][p],vq=V[k][q];V[k][p]=c*vp-s*vq;V[k][q]=s*vp+c*vq;}}return A.map((row,i)=>({value:row[i],vector:V.map(r=>r[i])})).sort((x,y)=>x.value-y.value);};
 const makeOperator=width=>{const dimension=roots**width,strides=Array.from({length:width},(_,i)=>roots**i),digits=Array.from({length:dimension},()=>new Uint8Array(width)),diagonal=new Float64Array(dimension),totalParity=new Int8Array(dimension),reflection=new Int32Array(dimension),excitationCount=new Uint8Array(dimension),bonds=Array.from({length:width-1},(_,site)=>[site,site+1]);if(boundary==="periodic"&&width>2)bonds.push([width-1,0]);for(let index=0;index<dimension;index++){let x=index,e=0,p=1,reversed=0,count=0;for(let site=0;site<width;site++){const digit=x%roots;x=Math.floor(x/roots);digits[index][site]=digit;e+=energies[digit];p*=parities[digit];reversed=reversed*roots+digit;if(digit!==0)count++;}diagonal[index]=e;totalParity[index]=p;reflection[index]=reversed;excitationCount[index]=count;}const matvec=(input,output=new Float64Array(dimension))=>{for(let index=0;index<dimension;index++)output[index]=diagonal[index]*input[index];for(let index=0;index<dimension;index++){const amplitude=input[index];if(amplitude===0)continue;for(const [left,right] of bonds){const a=digits[index][left],b=digits[index][right],source=a*roots+b;for(let target=0;target<pairDimension;target++){const value=bond[target][source];if(Math.abs(value)<1e-15)continue;const ta=Math.floor(target/roots),tb=target%roots,targetIndex=index+(ta-a)*strides[left]+(tb-b)*strides[right];output[targetIndex]-=J*value*amplitude;}}}return output;};const applyUniformLowestOddCreator=(input,output=new Float64Array(dimension))=>{for(let index=0;index<dimension;index++){const amplitude=input[index];if(amplitude===0)continue;for(let site=0;site<width;site++){const digit=digits[index][site];if(digit===0)output[index+strides[site]]+=amplitude;else if(digit===1)output[index-strides[site]]+=amplitude;}}return output;};return {dimension,totalParity,reflection,excitationCount,width,matvec,applyUniformLowestOddCreator};};
 const lanczos=(operator,steps)=>{const n=operator.dimension,vectors=[],alphas=[],betas=[];let v=new Float64Array(n);for(let i=0;i<n;i++)v[i]=Math.sin((i+1)*12.9898+78.233);let nv=norm(v);for(let i=0;i<n;i++)v[i]/=nv;let previous=null,betaPrevious=0;for(let step=0;step<Math.min(steps,n);step++){vectors.push(v);const w=operator.matvec(v);if(previous)for(let i=0;i<n;i++)w[i]-=betaPrevious*previous[i];const alpha=dot(v,w);alphas.push(alpha);for(let i=0;i<n;i++)w[i]-=alpha*v[i];for(const q of vectors){const overlap=dot(q,w);for(let i=0;i<n;i++)w[i]-=overlap*q[i];}const beta=norm(w);betas.push(beta);if(beta<1e-12)break;previous=v;betaPrevious=beta;v=Float64Array.from(w,x=>x/beta);}const T=Array.from({length:alphas.length},(_,i)=>Array.from({length:alphas.length},(_,j)=>i===j?alphas[i]:Math.abs(i-j)===1?betas[Math.min(i,j)]:0));return symmetricEigensystem(T).slice(0,4).map(item=>{const state=new Float64Array(n);for(let k=0;k<vectors.length;k++)for(let i=0;i<n;i++)state[i]+=item.vector[k]*vectors[k][i];let parity=0,reflection=0,meanExcitationCount=0;const excitationSectorWeights=Array(operator.width+1).fill(0);for(let i=0;i<n;i++){const probability=state[i]**2,count=operator.excitationCount[i];parity+=probability*operator.totalParity[i];reflection+=state[i]*state[operator.reflection[i]];meanExcitationCount+=probability*count;excitationSectorWeights[count]+=probability;}return {energy:item.value,residual:Math.abs(betas[alphas.length-1]*item.vector[alphas.length-1]),parityExpectation:parity,reflectionExpectation:reflection,meanExcitationCount,excitationSectorWeights,_state:state};});};
-const records=widths.map(width=>{const operator=makeOperator(width),levels=lanczos(operator,iterations),ground=levels[0].energy,created=operator.applyUniformLowestOddCreator(levels[0]._state),createdNormSquared=dot(created,created),firstMatrixElement=dot(levels[1]._state,created),lowestOddUniformCreator={createdNormSquared,matrixElementSquared:firstMatrixElement**2,normalizedFirstStateOverlapSquared:firstMatrixElement**2/createdNormSquared};return {width,dimension:operator.dimension,levels:levels.map(({_state,...x})=>({...x,gap:x.energy-ground})),firstGap:levels[1].energy-ground,lowestOddUniformCreator};});
+const records=widths.map(width=>{
+  const operator=makeOperator(width),levels=lanczos(operator,iterations),ground=levels[0].energy;
+  const created=operator.applyUniformLowestOddCreator(levels[0]._state),createdNormSquared=dot(created,created);
+  const firstMatrixElement=dot(levels[1]._state,created);
+  const lowestOddUniformCreator={createdNormSquared,matrixElementSquared:firstMatrixElement**2,normalizedFirstStateOverlapSquared:firstMatrixElement**2/createdNormSquared};
+  let dipoleResponse;
+  if(geometry){
+    const driven=applyUniformLocal(physicalDipole,levels[0]._state,roots,width);
+    const steps=Number(args.responseIterations??100);
+    const dipole=responseMeasure(operator,levels[0]._state,ground,driven,steps);
+    const creator=responseMeasure(operator,levels[0]._state,ground,created,steps);
+    let responseConvergence;
+    if(args.responseCheckIterations){
+      const check=responseMeasure(operator,levels[0]._state,ground,driven,Number(args.responseCheckIterations));
+      responseConvergence={iterations:Number(args.responseCheckIterations),
+        relativeStaticChange:Math.abs(check.staticMoment/dipole.staticMoment-1),
+        relativeSlopeChange:Math.abs(check.frequencySquaredSlope/dipole.frequencySquaredSlope-1),
+        relativeFirstMomentChange:Math.abs(check.firstMoment/dipole.firstMoment-1)};
+    }
+    const overlap=dot(driven,created),chargeFirst=dot(levels[1]._state,driven);
+    const localScale=physicalDipole[0][1];
+    let residual2=0,total2=0;
+    for(let a=0;a<roots;a++)for(let b=0;b<roots;b++){
+      const o=+(a===0&&b===1||a===1&&b===0);
+      total2+=physicalDipole[a][b]**2;residual2+=(physicalDipole[a][b]-localScale*o)**2;
+    }
+    const SI=geometry.illustrativeSI;
+    const hbar=1.054571817e-34,epsilon0=8.8541878128e-12;
+    const energyScale=SI?2*Math.PI*hbar*SI.energyScaleHz:null;
+    const dunit=SI?SI.chargeC*SI.pitchM:null;
+    const prefactor=SI?dunit*dunit/(epsilon0*SI.cellVolumeM3*energyScale):null;
+    dipoleResponse={geometry,operatorDefinition:'D=q_c*pitch*sum_cell,sum_i position_i*n_i; compensating charge at x=0',
+      localDimensionlessDipole:physicalDipole,localBestCreatorScale:localScale,
+      localRelativeFrobeniusRemainder:Math.sqrt(residual2/total2),
+      groundDrivenStateFidelity:overlap*overlap/(dot(driven,driven)*createdNormSquared),
+      firstPoleWeightPerSite:chargeFirst**2/width,
+      firstPoleFraction:chargeFirst**2/dipole.totalStrength,
+      dipole,creator,...(responseConvergence?{responseConvergence}:{}),
+      ...(SI?{illustrativeOptical:{prefactor,
+        spectralChi0:prefactor*dipole.staticMoment/width,
+        frequencySquaredSlope:prefactor*(hbar/energyScale)**2*dipole.frequencySquaredSlope/width,
+        firstResonanceHz:SI.energyScaleHz*(levels[1].energy-ground),
+        firstPoleGOverOmega0:Math.sqrt(prefactor*2*(chargeFirst**2/width)/(levels[1].energy-ground)),
+        boundary:'chosen effective geometry and units; no fabricated-device calibration, screening, local-field or electromagnetic contact matching'}}:{})};
+  }
+  return {width,dimension:operator.dimension,levels:levels.map(({_state,...x})=>({...x,gap:x.energy-ground})),firstGap:levels[1].energy-ground,lowestOddUniformCreator,...(dipoleResponse?{dipoleResponse}:{})};
+});
 console.log(JSON.stringify({schemaVersion:"translation-free-e8-projected-chain-output-v1",settings:{cutoff,roots,J,widths,iterations,boundary,dictionary:args.dictionary??null,constantBondOffsetOmitted:true},local:{levels:energies,residuals:local.levels.map(x=>x.residual),boundaryProbabilities:local.diagnostics.levels.map(x=>x.boundaryProbability),parities},records},null,2));

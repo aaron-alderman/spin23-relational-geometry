@@ -54,6 +54,7 @@ test("short articles are discoverable, shareable and machine-readable without du
     "07-exceptional-horizon",
   ];
   const standaloneArticles = [
+    ["household-orientations-and-correction", /What symmetry reveals/u, /Canonical research source →/u],
     ["monster-distributed-search", /parallelize the searches, but serialize the promotions/u, /Canonical research source →/u],
     ["typed-object-signatures", /The dimensional firewall/u, /Complete circulation paper →/u],
     ["conversational-contact", /Why this is the correct starting point/u, /Canonical research source →/u],
@@ -62,6 +63,7 @@ test("short articles are discoverable, shareable and machine-readable without du
     ["local-information-global-identification", /globally two-to-one/u, /Canonical research source →/u],
     ["two-mode-phase", /three-mode loop/u, /Canonical research source →/u],
     ["lithium-niobate-relational-workbench", /Phase matching is an admissibility condition/u, /Canonical research source →/u],
+    ["internal-stress-medium-locomotion", /momentum/iu, /Canonical research source →/u],
     ["lenses-make-many-points", /kind of spectrum everywhere/u, /Canonical research source →/u],
   ];
   const index = readFileSync(join(siteRoot, "articles", "index.html"), "utf8");
@@ -147,6 +149,18 @@ test("short articles are discoverable, shareable and machine-readable without du
   const signatures = readFileSync(join(siteRoot, "articles", "typed-object-signatures.html"), "utf8");
   assert.match(signatures, /<li>whether the object is an observation, claim, objection, inference, or recommendation;<\/li>/u, "wrapped unordered items must remain inside one list item");
   assert.match(signatures, /<li>physics without epistemic typing can overstate what a mathematical isomorphism establishes;<\/li>/u, "wrapped unordered article prose must not become a detached paragraph");
+});
+
+test("the household article publishes its executable and preserves the symmetry boundary", () => {
+  const article = readFileSync(join(siteRoot, "articles", "household-orientations-and-correction.html"), "utf8");
+  assert.match(article, /28 order-sensitive/u);
+  assert.match(article, /Human relational application/u);
+  assert.match(article, /href="\.\.\/explorers\/household\.html"/u);
+  const explorer = readFileSync(join(siteRoot, "explorers", "household.html"), "utf8");
+  assert.match(explorer, /field-household-v2/u);
+  assert.match(explorer, /function simulateAdaptiveHousehold/u);
+  assert.match(explorer, /data-hf="feedback-enabled"/u);
+  assert.doesNotMatch(explorer, /(?:fetch|XMLHttpRequest|WebSocket)\s*\(/u);
 });
 
 test("the public menu exposes a bounded correspondence lane", () => {

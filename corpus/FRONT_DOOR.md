@@ -6,7 +6,7 @@ This is a generated atlas, not a claim of truth or completeness. Its machine-rea
 
 **Authority boundary.** This atlas reports repository structure and declared epistemic surfaces. It does not promote claims, replace source evidence, or grant publication, corpus-admission, runtime, or deployment authority.
 
-**Coverage.** 17 declared roots across 5 routes; 6813 retained inventory objects; 5381 objects reachable through local links; 6813 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
+**Coverage.** 20 declared roots across 6 routes; 12259 retained inventory objects; 5513 objects reachable through local links; 12259 objects explicitly classified; 0 unclassified. The atlas passes its structural checks.
 
 ## Understand the present claim
 
@@ -49,6 +49,16 @@ Read attributed letters and evolving conversations without confusing exchange, a
 |---|---|---|---|
 | [correspondence-index](correspondence/README.md) | attributed interpretive history | routes to bounded letters and conversations; does not create joint endorsement or change claim status | maintained corpus source |
 
+## Explore values relationships and correction
+
+Enter human relational applications through orientation, directed feedback and revisable commitments; preserve synthetic and empirical boundaries.
+
+| Root | Status | Authority | Provenance |
+|---|---|---|---|
+| [orientation-architecture](programmes/orientation/orientation_architecture.md) | conceptual and normative architecture; empirical hypotheses remain open | supplies descriptive coordinates and contestable correction commitments; does not validate applications | maintained orientation manuscript |
+| [the-field](programmes/the-field/README.md) | uncalibrated relational research programme | routes to synthetic examples and their distinct assumptions, sources and checks | maintained programme index |
+| [household-orientations](programmes/the-field/household-orientations-and-correction.md) | published reading route and executable synthetic application | separates values, outcomes and renegotiation; symmetry audit qualifies participant exchange; no universal prescription | household case, v1/v2 execution and bounded exchange audit |
+
 ## Audit authority and provenance
 
 Inspect the exact inventory, publication boundary, repository history, and stewardship constraints.
@@ -66,10 +76,11 @@ A minimum dataset is capability-specific, not one universal subset. The **declar
 
 | Capability | Roots | Declared core files | Observed core bytes | Discoverable files | Observed discoverable bytes |
 |---|---|---:|---:|---:|---:|
-| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 229.8 KiB | 5580 | 97.3 MiB |
-| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 158.7 KiB | 5580 | 97.3 MiB |
-| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 15.2 MiB | 5580 | 97.3 MiB |
-| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 340.1 KiB | 5580 | 97.3 MiB |
+| Interpret faithfully | `reading-contract`, `current-synthesis`, `explanatory-standard`, `glossary` | 4 | 231.5 KiB | 5723 | 130.2 MiB |
+| Choose one bounded research task | `reading-contract`, `role-map`, `open-topics`, `target-set` | 6 | 159.1 KiB | 5723 | 130.2 MiB |
+| Audit claims, provenance, and authority | `reading-contract`, `evidence-spine`, `result-ledger`, `verification-guide`, `document-map`, `corpus-manifest`, `publication-authority` | 11 | 16.4 MiB | 5723 | 130.2 MiB |
+| Design a discriminating experiment | `reading-contract`, `current-synthesis`, `experiment-atlas`, `target-set`, `verification-guide` | 8 | 341.8 KiB | 5723 | 130.2 MiB |
+| Inspect household orientations and adaptive willingness | `orientation-architecture`, `the-field`, `household-orientations` | 19 | 703.2 KiB | 5723 | 130.2 MiB |
 
 These profiles are map-only candidates, not admitted packages. Before extracting one, add the selected capability's exact runtime, provenance and falsification dependencies, then independently qualify the derived artifact. Use the full sealed or canonical corpus when custody, exact release reproduction, history, or unknown future questions matter.
 
@@ -79,22 +90,24 @@ Reachability measures what the declared entrances actually expose through local 
 
 | Zone | Objects | Reachable | Canonical bytes | Explicit classification |
 |---|---:|---:|---:|---|
-| automation | 1 | 0 | 1.7 KiB | repository workflow automation |
-| claims | 1577 | 1569 | 15.5 MiB | append-only claim and provenance ledger |
-| corpus-navigation | 15 | 15 | 143.4 KiB | canonical corpus navigation, vocabulary, and reading rules |
-| evidence | 872 | 699 | 21.0 MiB | data, figures, and retained observations |
-| generated-publication | 9 | 1 | 137.0 KiB | generated deployable reading surfaces |
+| automation | 1 | 0 | 2.1 KiB | repository workflow automation |
+| claims | 1584 | 1575 | 15.5 MiB | append-only claim and provenance ledger |
+| coordination | 1 | 0 | 7.6 KiB | retained workstream coordination brief; not scientific evidence |
+| corpus-navigation | 16 | 16 | 166.6 KiB | canonical corpus navigation, vocabulary, and reading rules |
+| evidence | 934 | 744 | 51.1 MiB | data, figures, and retained observations |
+| generated-publication | 10 | 2 | 170.6 KiB | generated deployable reading surfaces |
 | governance | 2 | 1 | 7.7 KiB | repository and publication governance |
 | integrations | 275 | 5 | 19.9 MiB | application and publication boundary packets |
 | legal | 2 | 2 | 54.0 KiB | legal notices and policy |
-| programmes | 1128 | 843 | 53.8 MiB | bounded research programmes, registers, and closure work |
+| programmes | 1185 | 885 | 54.4 MiB | bounded research programmes, registers, and closure work |
+| publication-artifacts | 6 | 0 | 67.6 MiB | retained application publication archives; not canonical research sources or scientific evidence |
 | reader-editions | 533 | 340 | 6.3 MiB | curated reader-facing editions |
 | registers | 13 | 6 | 55.8 KiB | machine-readable inventory, state, and audit records |
-| repository-front-door | 9 | 5 | 29.5 KiB | root navigation, machine retrieval, agent guidance, stewardship, contribution, legal, and text-identity surfaces |
-| syntheses | 6 | 6 | 336.7 KiB | current and thesis-scale interpretive surfaces |
-| tests | 23 | 3 | 135.5 KiB | repository and publication invariants |
-| tooling | 162 | 39 | 11.3 MiB | tracked root-level corpus inspection utilities |
-| verification | 2186 | 1847 | 7.2 MiB | executable certificates and verification navigation |
+| repository-front-door | 10 | 6 | 31.8 KiB | root navigation, machine retrieval, agent guidance, stewardship, contribution, legal, and text-identity surfaces |
+| syntheses | 6 | 6 | 338.4 KiB | current and thesis-scale interpretive surfaces |
+| tests | 23 | 3 | 136.4 KiB | repository and publication invariants |
+| tooling | 5411 | 44 | 1407.8 MiB | tracked root-level corpus inspection utilities |
+| verification | 2247 | 1878 | 7.6 MiB | executable certificates and verification navigation |
 
 ## Structural contract
 

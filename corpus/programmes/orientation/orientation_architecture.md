@@ -1334,6 +1334,14 @@ Measure reception, verification, integration, enactment, and retention separatel
 
 Study norm change as intervention in a dependency network. Track delayed effects on trust, coordination, exploitation, role clarity, and replacement norms.
 
+The [proposed mathematical layer for The Field](../the-field/README.md) supplies a bounded synthetic worked scenario using 1 Samuel 8. It distinguishes scoped authority, unknown contextual trust, group-specific material challenge conditions and persistent repair history. Its executable arithmetic tests authored assumptions; it is not a validated measure of this architecture, a moral score or a theological result.
+
+The [household orientations worked case](../the-field/household-orientations-v1.md) applies this architecture qualitatively to a public argument about marital responsibilities. It separates participants' values, observed or claimed outcomes, and their practical ability to renegotiate; philosophical agreement and consistency remain distinct from satisfaction and workable coordination. Its attributed atomic claims and conditional comparisons do not establish a preferred household arrangement or validate the framework empirically.
+
+The [executable household companion](../the-field/household-dynamics-v1.md) varies explicit goals, usable capacity and a synthetic willingness-to-review rule over time. Its separate participant deviations, task backlog and resource balances expose how authored assumptions generate trajectories; they are not measurements of happiness, agency or relationship quality.
+
+The [adaptive household successor](../the-field/household-dynamics-v2.md) lets directed request responses and actual agreement execution change each participant's willingness in the next period. Capacity shortfalls, unexplained implementation shortfalls, respectful refusals and dismissal remain distinct, with adjustable observer-specific updates and a fixed-willingness negative control. This closes a synthetic feedback loop without validating a human behavioral law.
+
 ### Mythic invariants
 
 Construct cross-cultural narrative corpora encoded as transformations rather than motifs alone. Control for diffusion and ecology. Compare control-theoretic, developmental, coalitional, and historical explanations.

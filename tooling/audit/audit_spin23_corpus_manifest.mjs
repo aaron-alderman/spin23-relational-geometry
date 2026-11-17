@@ -53,10 +53,15 @@ const excludedDirectories = new Set([
   "node_modules",
   "__pycache__",
 ]);
+const topLevelFiles = readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
+// Push the existing inventory scope into Git's pathspec traversal. The later
+// scope filter remains authoritative; unrelated imported workspaces need not
+// be enumerated merely to discard every one of their paths afterward.
 const candidateFiles = execFileSync(
   "git",
-  trackedOnly ? ["ls-files"] : ["ls-files", "--cached", "--others", "--exclude-standard"],
-  { cwd: root, encoding: "utf8" },
+  [...(trackedOnly ? ["ls-files"] : ["ls-files", "--cached", "--others", "--exclude-standard"]),
+    "--", ...includedDirectories, ...topLevelFiles],
+  { cwd: root, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 },
 ).split(/\r?\n/).filter(Boolean).map(posix);
 const presentCandidateFiles = candidateFiles.filter((file) => existsSync(join(root, file)));
 
@@ -109,7 +114,6 @@ function localMarkdownLinks(file) {
   return links;
 }
 
-const topLevelFiles = readdirSync(root, { withFileTypes: true }).filter((entry) => entry.isFile()).map((entry) => entry.name);
 const numberedDocuments = presentCandidateFiles
   .filter((path) => path.startsWith(`${claimsDirectory}/`))
   .map((path) => ({ path, name: path.split("/").at(-1), match: /^(\d+)_.*\.md$/i.exec(path.split("/").at(-1)) }))
@@ -151,11 +155,10 @@ const repositoryFiles = presentCandidateFiles
   .filter((file) => !file.includes("/") || includedDirectories.some((directory) => file.startsWith(`${directory}/`)))
   .filter((file, index, all) => all.indexOf(file) === index)
   .sort();
-const repositoryEntries = repositoryFiles.map((file) => ({
-  path: file,
-  bytes: canonicalFileBytes(file).length,
-  sha256: sha256(file),
-}));
+const repositoryEntries = repositoryFiles.map((file) => {
+  const bytes = canonicalFileBytes(file);
+  return { path: file, bytes: bytes.length, sha256: createHash("sha256").update(bytes).digest("hex") };
+});
 
 // Accretive ledgers preserve provenance; standalone syntheses must not be
 // forced to narrate repository chronology. `mentionsLatest` remains a useful

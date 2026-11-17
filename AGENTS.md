@@ -10,3 +10,9 @@ This repository maintains a live, kenotic Context Hub for improving how agents f
 - Do not multiply one causal event into several apparent confirmations.
 
 Normal repository instructions and the authority declared by each source remain controlling.
+
+# Optical boundary-response research continuity
+
+For substantive continuations of the selector, E8 charge-dipole, hybrid-device, Casimir or local-flux investigation recorded in [`corpus/programmes/optical-boundary-response/README.md`](corpus/programmes/optical-boundary-response/README.md), leave a readable programme-note update alongside new calculation artifacts. Follow the corpus reading contract and explanatory standard. Record assumptions, source paths, derivations, failed criteria, physical status and the next discriminator; distinguish proposed precision from achieved measurements.
+
+Update the packet's evidence index and regenerate its scoped manifest with `node scripts/index-optical-boundary-response-research-packet.mjs`, then run `node verification/verify/verify_optical_boundary_response_research_packet.mjs` and the result-specific checks affected by the change. Preserve frozen predictions and negative results. Documents, scripts and repeated calculations from one evidence family are not independent confirmations. This documentation workflow does not authorize changes to scientific admissions.
