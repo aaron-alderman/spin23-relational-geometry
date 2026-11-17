@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+import fs from 'node:fs';
+import path from 'node:path';
+const root = path.resolve(import.meta.dirname, '../..');
+const inputArg = process.argv.indexOf('--inputs');
+const inputs = inputArg >= 0 ? process.argv[inputArg + 1].split(',') : Array.from({ length: 9 }, (_, i) => `output/plasma-heart-algebra/custom-cycle-results/packet-${i}.json`);
+const packets = inputs.map(file => JSON.parse(fs.readFileSync(path.resolve(root, file), 'utf8'))).sort((a, b) => a.identity.time - b.identity.time);
+if (packets.length < 2) throw new Error('at least two solver packets are required');
+const period = packets.at(-1).identity.period;
+const trap = (key, component = null) => { let total = 0; for (let i = 0; i < packets.length - 1; i += 1) { const dt = packets[i + 1].identity.time - packets[i].identity.time; const a = component === null ? packets[i].ledger[key] : packets[i].ledger[key][component]; const b = component === null ? packets[i + 1].ledger[key] : packets[i + 1].ledger[key][component]; total += 0.5 * (a + b) * dt; } return total / period; };
+const force = [0, 1, 2].map(i => trap('force', i));
+const materialForce = [0, 1, 2].map(i => trap('materialForce', i));
+const maxwellForce = [0, 1, 2].map(i => trap('maxwellForce', i));
+const photonForce = [0, 1, 2].map(i => trap('photonForce', i));
+const meanTorque = [0, 1, 2].map(i => trap('torque', i));
+const torqueMagnitudes = packets.map(packet => Math.hypot(...packet.ledger.torque));
+const torqueBudgetNm = 0.03;
+const periodicForceClosure = Math.hypot(...packets[0].ledger.force.map((x, i) => x - packets.at(-1).ledger.force[i]));
+const energyResidualMax = Math.max(...packets.map(p => Math.abs(p.ledger.energyResidual)));
+const result = { protocol: 'plasma-heart-solver-cycle/1', samples: packets.length, period, meshIdentity: packets[0].identity.meshIdentity, solverIdentity: packets[0].identity.solverIdentity, meanForceN: force, meanForceMagnitudeN: Math.hypot(...force), meanMaterialForceN: materialForce, meanMaxwellForceN: maxwellForce, meanPhotonForceN: photonForce, meanTorqueNm: meanTorque, meanTorqueMagnitudeNm: Math.hypot(...meanTorque), peakTorqueNm: Math.max(...torqueMagnitudes), torqueClosure: Math.max(...packets.map(packet => Math.hypot(...packet.ledger.torque) - torqueMagnitudes[0])), forceAndTorqueSameOrigin: packets.every(packet => Array.isArray(packet.geometry.forceOrigin)), actuatorTorqueBudgetNm: torqueBudgetNm, withinActuatorBudget: Math.max(...torqueMagnitudes) <= torqueBudgetNm, meanInputPowerW: trap('inputPower'), meanJouleHeatingW: trap('jouleHeating'), meanRadiationPowerW: trap('radiationPower'), meanMassFlux: trap('massFlux'), forceDecompositionResidualN: force.map((x, i) => x - materialForce[i] - maxwellForce[i] - photonForce[i]), periodicForceClosure, periodicClosureQualified: periodicForceClosure < 1e-8, energyResidualMax, energyClosureQualified: energyResidualMax < 1e-8, physicalAdmission: false, scope: 'Cycle average over typed solver packets; mesh refinement, independent closure, and physical admission remain separate gates.' };
+fs.mkdirSync(path.join(root, 'output/plasma-heart-algebra'), { recursive: true });
+fs.writeFileSync(path.join(root, 'output/plasma-heart-algebra/solver-cycle-evaluation.json'), `${JSON.stringify(result, null, 2)}\n`);
+console.log(JSON.stringify(result, null, 2));

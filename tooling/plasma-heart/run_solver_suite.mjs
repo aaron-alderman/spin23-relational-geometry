@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+/** Typed suite orchestration replacing the legacy Python runtime bridge. */
+import { spawnSync } from 'node:child_process'; import fs from 'node:fs'; import path from 'node:path';
+const root = path.resolve(import.meta.dirname, '../..'); const scripts = ['evaluate_feedback_state_space.mjs', 'evaluate_feedback_query.mjs', 'evaluate_3d_cycle_pareto.mjs', 'evaluate_3d_cycle_robust.mjs', 'verify_feedback_algebra.mjs']; const receipts = [];
+for (const script of scripts) { const run = spawnSync(process.execPath, [`tooling/plasma-heart/${script}`], { cwd: root, encoding: 'utf8' }); if (run.status !== 0) throw new Error(`${script} failed: ${run.stderr || run.stdout}`); const lines = run.stdout.trim().split(/\r?\n/); receipts.push({ script, summary: JSON.parse(lines.join('\n')) }); }
+const result = { protocol: 'plasma-heart-typed-suite/1', scripts: receipts.map((x) => x.script), receipts, physicalAdmission: false, scope: 'Typed orchestration only; numerical engines remain evaluators and no physical claim is admitted.' }; fs.writeFileSync(path.join(root, 'output/plasma-heart-algebra/typed-suite-receipt.json'), `${JSON.stringify(result, null, 2)}\n`); console.log(JSON.stringify({ scripts: scripts.length, physicalAdmission: false }, null, 2));

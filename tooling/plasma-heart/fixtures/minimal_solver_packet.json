@@ -1,0 +1,28 @@
+{
+  "identity": { "cycleId": "fixture", "sampleIndex": 0, "time": 0, "period": 1, "meshIdentity": "fixture-mesh", "solverIdentity": "custom-js" },
+  "geometry": {
+    "faceArea": [1, 1],
+    "outwardNormal": [[1, 0, 0], [-1, 0, 0]],
+    "facePosition": [[1, 0, 0], [-1, 0, 0]],
+    "forceOrigin": [0, 0, 0]
+  },
+  "fluid": {
+    "density": [1, 1],
+    "velocity": [[2, 0, 0], [0, 0, 0]],
+    "pressure": [1, 1],
+    "temperature": [300, 300],
+    "speciesDensities": [[1], [1]]
+  },
+  "electromagnetic": {
+    "electricField": [[0, 0, 0], [0, 0, 0]],
+    "magneticField": [[0, 0, 1], [0, 0, 1]],
+    "maxwellStress": [[[0, 0, 0], [0, 0, 0], [0, 0, 0]], [[0, 0, 0], [0, 0, 0], [0, 0, 0]]],
+    "conductivity": [1, 1],
+    "currentDensity": [[1, 0, 0], [0, 0, 0]]
+  },
+  "thermal": { "heatFlux": [[0, 0, 0], [0, 0, 0]], "wallTemperature": [300, 300], "quenchRate": [0, 0] },
+  "chemistry": { "reactionSource": [[0], [0]], "reactionHeat": [0, 0], "transportCoefficients": [[1], [1]] },
+  "radiation": { "radiationPowerFlux": [0, 0], "radiationDirection": [[1, 0, 0], [1, 0, 0]], "emissivityOrClosure": [1, 1] },
+  "ledger": { "inputPower": 0, "energyResidual": 0, "entropyProduction": 0, "force": [0, 0, 0], "torque": [0, 0, 0] },
+  "control": { "stateEstimate": [1, 1], "stateCovariance": [[1, 0], [0, 1]], "controlCandidate": [0, 0, 0, 0], "uncertaintyPenalty": 0, "riskAdjustedScore": 0 }
+}

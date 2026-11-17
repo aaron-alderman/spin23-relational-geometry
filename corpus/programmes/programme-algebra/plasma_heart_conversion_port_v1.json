@@ -1,0 +1,8 @@
+{
+  "protocol": "plasma-heart-conversion-port/1",
+  "authority": "plasma-heart-algebra/1",
+  "requiredFields": ["id", "inputState", "outputState", "constitutiveLaw", "backReaction", "inputPowerW", "outputPowerW", "lossPowerW", "entropyProductionW", "uncertainty", "physicalAdmission"],
+  "ledger": "inputPowerW = outputPowerW + lossPowerW + storageRateW",
+  "admission": { "physicalAdmissionDefault": false, "requiresIndependentClosure": true, "requiresSolverIdentity": true },
+  "statusValues": ["implemented", "catalogued", "prospective"]
+}

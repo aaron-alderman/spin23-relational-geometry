@@ -1,0 +1,94 @@
+{
+  "protocol": "plasma-heart-algebra/1",
+  "status": "authored-algebra-declaration",
+  "authority": "programme-algebra",
+  "purpose": "Solver-independent algebraic contract for the plasma-heart periodic cycle.",
+  "kernelProfile": "physics",
+  "state": {
+    "geometry": ["domain", "orientedBoundary", "forceOrigin", "meshIdentity"],
+    "fluid": ["rho", "velocity", "pressure", "temperature", "speciesDensities"],
+    "fields": ["electricField", "magneticField", "maxwellStress", "conductivity", "currentDensity"],
+    "ports": ["massMomentumPort", "radiationPort", "electricalDrive", "thermalPort", "chemicalPort", "vesselMotion"],
+    "controls": ["driveWaveform", "laserPower", "coolingPower", "vesselMotion"],
+    "epistemics": ["assumptions", "losses", "evidenceRefs", "authorityCeiling", "physicalAdmission"]
+  },
+  "operators": {
+    "surfaceMomentumFlux": "integral_boundary[(rho*(v dot n))*v + p*n - T_EM*n] dA",
+    "photonMomentumFlux": "-integral_radiationPort[(radiationPowerFlux/c)*radiationDirection] dA",
+    "lorentzForceDensity": "currentDensity cross magneticField",
+    "ohmicHeating": "currentDensity dot electricField",
+    "massBalance": "partial_t(rho) + div(rho*v) = reactionMassSource",
+    "momentumBalance": "partial_t(rho*v) + div(rho*v tensor v + p*I - T_EM) = lorentzForceDensity + bodySources",
+    "energyBalance": "partial_t(totalEnergy) + div(energyFlux) = ohmicHeating + reactionHeat + thermalSources",
+    "speciesBalance": "partial_t(rho*Y_s) + div(rho*Y_s*v + diffusiveFlux_s) = reactionSource_s",
+    "inductionClosure": "partial_t(B) = curl(v cross B - resistiveElectricField)",
+    "periodicClosure": "state(t + period) = state(t) within declared tolerance",
+    "stateEstimation": "xhat_(k+1) = xhat_k + K_k*(z_k - H*xhat_k), P_(k+1) = (I - K_k*H)*P_k",
+    "riskAdjustedControlSelection": "u* = argmax_u[solverScore(u)/(1 + uncertaintyPenalty(u))]"
+  },
+  "conversionVariants": [
+    {"id":"fluid-momentum-exhaust","from":"mechanical/thermal/field drive","to":"directed mass-momentum flux","status":"implemented","port":"massMomentumPort","operator":"surfaceMomentumFlux"},
+    {"id":"maxwell-lorentz-actuation","from":"electromagnetic field","to":"force/torque","status":"implemented","port":"electricalDrive","operator":"lorentzForceDensity"},
+    {"id":"electromagnetic-induction","from":"time-varying magnetic flux","to":"current/voltage","status":"implemented","port":"electricalDrive","operator":"inductionClosure"},
+    {"id":"joule-heating","from":"current/electric field","to":"thermal energy","status":"implemented","port":"thermalPort","operator":"ohmicHeating"},
+    {"id":"chemical-reaction","from":"chemical free energy","to":"heat/species/pressure","status":"implemented","port":"chemicalPort","operator":"speciesBalance"},
+    {"id":"thermal-conduction-cooling","from":"temperature gradient","to":"heat rejection","status":"implemented","port":"thermalPort","operator":"energyBalance"},
+    {"id":"radiative-thermalization","from":"photon/radiation power","to":"thermal energy","status":"implemented","port":"radiationPort","operator":"energyBalance"},
+    {"id":"photon-recoil","from":"directed radiation","to":"momentum","status":"implemented","port":"radiationPort","operator":"photonMomentumFlux"},
+    {"id":"actuator-mechanical-drive","from":"electrical control power","to":"vessel/rotor motion","status":"implemented","port":"electricalDrive","operator":"momentumBalance"},
+    {"id":"triboelectric-contact-separation","from":"mechanical contact/separation","to":"surface charge/voltage/current","status":"implemented","port":"electricalDrive","operator":"triboelectricVoltageChargeLaw"},
+    {"id":"seebeck-thermoelectric","from":"temperature gradient","to":"voltage/current","status":"implemented","port":"thermalPort","operator":"seebeckConstitutiveLaw"},
+    {"id":"peltier-thomson","from":"current/temperature coupling","to":"heat transport","status":"implemented","port":"thermalPort","operator":"thermoelectricHeatLaw"},
+    {"id":"nernst-ettಿಂಗshausen","from":"temperature gradient and magnetic field","to":"transverse voltage/heat","status":"catalogued","port":"thermalPort","operator":"magnetothermoelectricLaw"},
+    {"id":"electrochemical-ionic-pumping","from":"chemical/electrical potential","to":"species transport","status":"prospective","port":"chemicalPort","operator":"electrochemicalFluxLaw"},
+    {"id":"piezo-magnetostrictive-acoustic","from":"strain/oscillation","to":"electrical or acoustic energy","status":"prospective","port":"vesselMotion","operator":"constitutiveSolidCoupling"},
+    {"id":"nuclear-mass-energy","from":"nuclear binding energy","to":"particle/thermal/radiation energy","status":"prospective","port":"chemicalPort","operator":"massEnergySourceLaw"},
+    {"id":"capacitive-electrostatic","from":"mechanical displacement","to":"electric field energy","status":"catalogued","port":"electricalDrive","operator":"capacitanceDisplacementLaw"},
+    {"id":"dielectric-elastomer","from":"mechanical strain","to":"variable-capacitance electrical energy","status":"catalogued","port":"vesselMotion","operator":"dielectricElastomerLaw"},
+    {"id":"piezoelectric","from":"elastic strain","to":"charge/voltage","status":"catalogued","port":"vesselMotion","operator":"piezoelectricConstitutiveLaw"},
+    {"id":"pyroelectric","from":"temperature rate","to":"charge/voltage","status":"catalogued","port":"thermalPort","operator":"pyroelectricLaw"},
+    {"id":"thermionic","from":"hot-surface thermal energy","to":"electron current","status":"prospective","port":"electricalDrive","operator":"thermionicEmissionLaw"},
+    {"id":"photoelectric-photovoltaic","from":"photon energy","to":"electrical carriers","status":"prospective","port":"radiationPort","operator":"photocarrierGenerationLaw"},
+    {"id":"photothermal","from":"photon energy","to":"thermal energy","status":"catalogued","port":"radiationPort","operator":"radiativeAbsorptionLaw"},
+    {"id":"thermoacoustic","from":"thermal gradient","to":"acoustic power","status":"prospective","port":"thermalPort","operator":"thermoacousticCycleLaw"},
+    {"id":"magnetocaloric","from":"magnetic field cycle","to":"thermal energy","status":"prospective","port":"electricalDrive","operator":"magnetocaloricLaw"},
+    {"id":"magnetostrictive","from":"magnetic field","to":"mechanical strain","status":"catalogued","port":"electricalDrive","operator":"magnetostrictiveLaw"},
+    {"id":"electrohydrodynamic","from":"electric field","to":"fluid momentum","status":"prospective","port":"electricalDrive","operator":"electrohydrodynamicBodyForce"},
+    {"id":"magnetohydrodynamic","from":"conducting fluid motion","to":"electrical power","status":"catalogued","port":"fields","operator":"mhdInductionLaw"},
+    {"id":"fuel-cell-electrochemical","from":"chemical free energy","to":"electrical power","status":"prospective","port":"chemicalPort","operator":"electrochemicalPotentialLaw"},
+    {"id":"redox-ionic-transport","from":"electrochemical potential","to":"species flux","status":"prospective","port":"chemicalPort","operator":"ionicFluxLaw"},
+    {"id":"phase-change","from":"latent heat","to":"pressure/volume work","status":"prospective","port":"thermalPort","operator":"phaseChangeEnthalpyLaw"},
+    {"id":"elastic-storage","from":"strain energy","to":"mechanical work","status":"catalogued","port":"vesselMotion","operator":"elasticEnergyLaw"},
+    {"id":"acoustic-ultrasonic","from":"pressure-wave energy","to":"mechanical/electrical energy","status":"prospective","port":"vesselMotion","operator":"acousticPowerFluxLaw"},
+    {"id":"radiation-pressure","from":"directed photon flux","to":"mechanical momentum","status":"implemented","port":"radiationPort","operator":"photonMomentumFlux"}
+  ],
+  "conversionVariantSchema": {
+    "required": ["id", "from", "to", "status", "port", "operator"],
+    "statusValues": ["implemented", "catalogued", "prospective"],
+    "rule": "catalogued and prospective variants are design hypotheses; only implemented variants may contribute to a solver receipt, and physicalAdmission remains independently gated"
+  },
+  "symmetryBreaks": [
+    {"id": "geometryAnisotropy", "operator": "orientedBoundary and nonuniform throat/exhaust geometry", "portRequired": true},
+    {"id": "fieldAnisotropy", "operator": "nonuniform Maxwell stress or Lorentz source", "portRequired": true},
+    {"id": "thermalGradient", "operator": "wallTemperature and heatFlux gradient", "portRequired": true},
+    {"id": "chemicalGradient", "operator": "species and reactionSource fields", "portRequired": true},
+    {"id": "radiationDirectionality", "operator": "radiationPowerFlux and radiationDirection", "portRequired": true},
+    {"id": "actuatorTiming", "operator": "phase-locked drive/laser/cooling/motion schedule", "portRequired": true}
+  ],
+  "solverInterface": {
+    "input": "typed state, geometry, boundary orientation, constitutive data, controls, and declared ports",
+    "output": "time-indexed face fields, vector fields, source terms, force/torque, energy/entropy ledgers, mesh/solver identity",
+    "engines": ["OpenFOAM", "Elmer", "SU2", "preCICE", "custom-engine"],
+    "engineAuthority": "numerical evaluator only; algebraic operators and admission rules remain authoritative"
+  },
+  "admission": {
+    "required": ["explicit face momentum fields", "vector Maxwell fields", "species/thermal fields", "radiation port fields", "periodic closure", "independent energy and entropy closure", "mesh convergence", "solver identity"],
+    "forbidden": ["synthetic thrust-port coefficient", "duplicate mass/Maxwell/photon momentum", "promotion from screening to physical admission without evidence"],
+    "physicalAdmissionDefault": false
+  },
+  "retirement": {
+    "pythonRole": "temporary adapter and regression projection only",
+    "retireWhen": ["algebra contract compiled", "solver adapter passes packet linter", "replacement verification covers retained invariants", "rollback/reference decision recorded"],
+    "deletionPolicy": "do not delete until exact replacement paths and retirement manifest exist"
+  }
+}

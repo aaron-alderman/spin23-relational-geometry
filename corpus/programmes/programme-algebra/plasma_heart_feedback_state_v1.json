@@ -1,0 +1,17 @@
+{
+  "protocol": "plasma-heart-feedback-state/1",
+  "authority": "plasma-heart-algebra/1",
+  "stateNames": ["n00", "n01", "n10", "n11", "energy0", "energy1", "wallEnergy", "heatRemoved", "omega0", "omega1", "integral", "controller"],
+  "inputs": ["laserPower", "torque0", "torque1", "wallSetpoint"],
+  "ports": ["opticalPump", "radiativeBath", "quench", "thermalWall", "cooler", "gyro", "energyLedger", "entropyLedger"],
+  "equations": {
+    "quenchCoefficient": "floor + peak*exp(-((wallTemperature-optimum)/width)^2)",
+    "cooler": "heatRemovedDot = (coolingCommand-heatRemoved)/actuatorTime",
+    "gyro": "J*omegaDot = torque - damping*omega - H*R*omega",
+    "controller": "integralDot = wallTemperature-wallSetpoint + antiWindup",
+    "conservation": "species residual = 0; energy and entropy residuals are explicit ledger outputs"
+  },
+  "policies": { "fixed": "constant commands", "regulated": "bounded PI wall regulation", "programmed": "periodic policy requiring time-domain/Floquet evaluation" },
+  "physicalAdmission": false,
+  "scope": "Typed normalized state-space boundary; coefficients remain synthetic until a resolved multiphysics solver supplies constitutive data."
+}
