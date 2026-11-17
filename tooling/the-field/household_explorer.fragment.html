@@ -1,0 +1,240 @@
+<div id="field-household-v1">
+  <style>
+    #field-household-v1 { display: grid; gap: calc(var(--font-size-base) * 1); }
+    #field-household-v1 .hf-heading { display: grid; gap: calc(var(--font-size-base) * .25); }
+    #field-household-v1 .hf-value { display: flex; justify-content: space-between; gap: calc(var(--font-size-base) * .5); }
+    #field-household-v1 .hf-range { display: grid; gap: calc(var(--font-size-base) * .25); }
+    #field-household-v1 .hf-detail { display: grid; gap: calc(var(--font-size-base) * .5); }
+  </style>
+  <div class="hf-heading">
+    <h2>Household over time</h2>
+    <div class="text-small text-muted">Synthetic assumptions · goal bounds, not happiness · 12 periods</div>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Starting orientation<select class="form-select" data-hf="orientation"></select></label>
+    <label class="form-label">Change scenario<select class="form-select" data-hf="change"></select></label>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Edit person<select class="form-select" data-hf="person"><option>A</option><option>B</option></select></label>
+    <label class="form-label">Edit assumptions<select class="form-select" data-hf="phase"><option value="initial">Initially</option><option value="after">From period 5</option></select></label>
+  </div>
+  <div class="viz-controls" data-hf="parameters"></div>
+  <details>
+    <summary>Resources and review assumptions</summary>
+    <div class="viz-controls" data-hf="resources"></div>
+  </details>
+  <div class="text-destructive" role="alert" data-hf="error" hidden></div>
+  <div class="hf-detail">
+    <label class="form-label hf-range"><span class="hf-value"><span>Inspect period</span><output data-hf="period-label" class="tabular-nums">5</output></span><input class="form-range" type="range" min="1" max="12" step="1" value="5" data-hf="period" aria-label="Inspect period"></label>
+    <div data-hf="detail" class="text-small" aria-live="polite"></div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <caption class="sr-only">Paid work, unfinished unpaid tasks, resources and review in every synthetic period. Hours and money are authored units.</caption>
+      <thead><tr><th scope="col" class="text-nowrap">Period</th><th scope="col" class="text-end text-nowrap">A unpaid share</th><th scope="col" class="text-end text-nowrap">A paid h</th><th scope="col" class="text-end text-nowrap">B paid h</th><th scope="col" class="text-end text-nowrap">Unfinished h</th><th scope="col" class="text-end text-nowrap">Unmet expense</th><th scope="col" class="text-end text-nowrap">Reserve</th><th scope="col" class="text-nowrap">Review</th></tr></thead>
+      <tbody data-hf="history"></tbody>
+    </table>
+  </div>
+  <script>
+  (() => {
+    /* HOUSEHOLD_ENGINE */
+    const fixture = /* HOUSEHOLD_FIXTURE */;
+    const root = document.getElementById('field-household-v1');
+    const element = name => root.querySelector(`[data-hf="${name}"]`);
+    const emptyEdits = () => ({ initial: {}, after: {} });
+    let ui = { version: 1, orientation: 'roles', change: 'values', person: 'B', phase: 'after', period: 5, edits: emptyEdits(), resources: {} };
+    const controls = [
+      { key: 'capacity', label: 'Usable capacity', min: 0, max: 100, step: 1, unit: 'h' },
+      { key: 'willingness', label: 'Willingness to review', min: 0, max: 1, step: .05, unit: '' },
+      { key: 'values.paidHours', label: 'Desired paid work', min: 0, max: 80, step: 1, unit: 'h' },
+      { key: 'values.freeHours', label: 'Minimum free time goal', min: 0, max: 40, step: 1, unit: 'h' },
+      { key: 'values.domesticShare', label: 'Preferred unpaid share', min: 0, max: 1, step: .025, unit: '%' },
+      { key: 'values.shareTolerance', label: 'Accepted share deviation', min: 0, max: 1, step: .025, unit: 'pp' },
+      { key: 'values.paidTolerance', label: 'Accepted paid work shortfall', min: 0, max: 20, step: 1, unit: 'h' },
+    ];
+    const resources = [
+      { key: 'domesticHours', label: 'Initial unpaid work due', min: 0, max: 100, step: 1, unit: 'h' },
+      { key: 'expenses', label: 'Recurring expenses', min: 0, max: 500, step: 5, unit: 'units' },
+      { key: 'reserve', label: 'Initial reserve', min: 0, max: 1000, step: 10, unit: 'units' },
+      { key: 'wageA', label: 'A paid work return', min: 0, max: 20, step: .5, unit: 'units/h' },
+      { key: 'wageB', label: 'B paid work return', min: 0, max: 20, step: .5, unit: 'units/h' },
+      { key: 'reviewHours', label: 'Review time per participant', min: 0, max: 4, step: .25, unit: 'h' },
+      { key: 'maxReallocationHours', label: 'Maximum task shift per review', min: 0, max: 32, step: 1, unit: 'h' },
+    ];
+    const format = n => Number(n.toFixed(2)).toLocaleString();
+    function display(value, control) {
+      return control.unit === '%' ? `${format(value * 100)}%`
+        : control.unit === 'pp' ? `${format(value * 100)} pp`
+        : `${format(value)}${control.unit ? ` ${control.unit}` : ''}`;
+    }
+    function mergePatch(left, right) {
+      const merged = { ...copy(left), ...copy(right) };
+      if (left.people || right.people) {
+        const people = new Map((left.people ?? []).map(p => [p.id, copy(p)]));
+        for (const p of right.people ?? []) {
+          const old = people.get(p.id) ?? { id: p.id };
+          people.set(p.id, { ...old, ...copy(p), values: { ...old.values, ...p.values } });
+        }
+        merged.people = [...people.values()];
+      }
+      return merged;
+    }
+    function buildScenario() {
+      const input = createHouseholdScenario(fixture, ui.orientation, ui.change);
+      const initialUpdates = Object.entries(ui.edits.initial).map(([id, patch]) => ({ id, ...copy(patch) }));
+      applyPatch(input.initial, { people: initialUpdates });
+      for (const key of ['domesticHours', 'expenses', 'reserve']) if (ui.resources[key] !== undefined) input.initial[key] = ui.resources[key];
+      ['A', 'B'].forEach((id, i) => { if (ui.resources[`wage${id}`] !== undefined) input.initial.people[i].wage = ui.resources[`wage${id}`]; });
+      for (const key of ['reviewHours', 'maxReallocationHours']) if (ui.resources[key] !== undefined) input.policy[key] = ui.resources[key];
+      const afterUpdates = Object.entries(ui.edits.after).map(([id, patch]) => ({ id, ...copy(patch) }));
+      if (afterUpdates.length) {
+        const event = input.events.find(e => e.period === 5);
+        if (event) event.patch = mergePatch(event.patch, { people: afterUpdates });
+        else input.events.push({ id: 'authored-change-at-5', period: 5, patch: { people: afterUpdates } });
+      }
+      return input;
+    }
+    function editedPerson(input) {
+      const state = copy(input.initial);
+      if (ui.phase === 'after') for (const event of [...input.events].sort((a, b) => a.period - b.period)) {
+        if (event.period <= 5) applyPatch(state, event.patch);
+      }
+      return state.people.find(p => p.id === ui.person);
+    }
+    function parameterValue(person, key) {
+      return key.startsWith('values.') ? person.values[key.split('.')[1]] : person[key];
+    }
+    function save() {
+      const host = window.openai;
+      if (host?.setWidgetState) {
+        const promise = host.setWidgetState({ modelContent: { example: 'the-field-household-v1', assumptions: ui }, privateContent: null });
+        promise?.catch?.(() => {});
+      }
+    }
+    const statuses = {
+      'no-request': 'Within goal bounds',
+      'review-not-open': 'Review not open',
+      'review-time-unavailable': 'No review time',
+      'no-joint-proposal-on-grid': 'No joint proposal found',
+      'revised': 'Allocation revised',
+    };
+    function renderResults() {
+      try {
+        const input = buildScenario();
+        const run = simulateHousehold(input);
+        element('error').hidden = true;
+        const rows = element('history');
+        rows.replaceChildren();
+        for (const row of run.history) {
+          const tr = document.createElement('tr');
+          if (row.period === ui.period) tr.setAttribute('aria-current', 'true');
+          const values = [String(row.period) + (row.period === ui.period ? ' ←' : '') + (row.appliedEvents.length ? ' *' : ''),
+            `${format(row.shareA * 100)}%`, format(row.people[0].paid), format(row.people[1].paid),
+            format(row.backlog), format(row.unmetExpenses), format(row.reserve), statuses[row.review.status]];
+          values.forEach((value, index) => {
+            const td = document.createElement(index === 0 ? 'th' : 'td');
+            if (index === 0) td.scope = 'row';
+            td.className = index > 0 && index < 7 ? 'text-end tabular-nums text-nowrap' : 'text-nowrap';
+            td.textContent = value;
+            tr.append(td);
+          });
+          rows.append(tr);
+        }
+        const row = run.history[ui.period - 1];
+        const gaps = row.people.map(p => `${p.id}: paid shortfall ${format(p.gaps.paid)} h, free shortfall ${format(p.gaps.free)} h, share deviation ${format(p.gaps.role * 100)} pp`).join(' · ');
+        element('detail').textContent = `Period ${row.period} · ${gaps}${row.appliedEvents.length ? ` · change: ${row.appliedEvents.join(', ')}` : ''}`;
+        element('period-label').textContent = String(ui.period);
+        // Expose only synthetic input/output for inspection and offline replay.
+        root.householdRun = run;
+        root.householdScenario = input;
+      } catch (error) {
+        element('error').textContent = error.message;
+        element('error').hidden = false;
+        element('history').replaceChildren();
+        element('detail').textContent = '';
+        root.householdRun = null;
+        root.householdScenario = null;
+      }
+    }
+    function makeRange(control, value, onChange, prefix) {
+      const label = document.createElement('label');
+      label.className = 'form-label hf-range';
+      const header = document.createElement('span');
+      header.className = 'hf-value';
+      const text = document.createElement('span');
+      text.textContent = control.label;
+      const output = document.createElement('output');
+      output.className = 'tabular-nums';
+      output.textContent = display(value, control);
+      const input = document.createElement('input');
+      input.className = 'form-range';
+      input.type = 'range';
+      input.min = control.min; input.max = control.max; input.step = control.step; input.value = value;
+      input.id = `hf-${prefix}-${control.key.replace('.', '-')}`;
+      input.setAttribute('aria-label', control.label);
+      output.htmlFor = input.id;
+      input.addEventListener('input', () => {
+        const value = Number(input.value);
+        output.textContent = display(value, control);
+        onChange(value);
+        renderResults();
+        save();
+      });
+      header.append(text, output); label.append(header, input);
+      return label;
+    }
+    function renderControls() {
+      element('orientation').value = ui.orientation;
+      element('change').value = ui.change;
+      element('person').value = ui.person;
+      element('phase').value = ui.phase;
+      element('period').value = ui.period;
+      const input = buildScenario();
+      const person = editedPerson(input);
+      element('parameters').replaceChildren(...controls.map(control => makeRange(control, parameterValue(person, control.key), value => {
+        const patch = ui.edits[ui.phase][ui.person] ??= {};
+        if (control.key.startsWith('values.')) (patch.values ??= {})[control.key.split('.')[1]] = value;
+        else patch[control.key] = value;
+      }, 'person')));
+      element('resources').replaceChildren(...resources.map(control => {
+        const value = control.key === 'wageA' ? input.initial.people[0].wage
+          : control.key === 'wageB' ? input.initial.people[1].wage
+          : input.initial[control.key] ?? input.policy[control.key];
+        return makeRange(control, value, value => { ui.resources[control.key] = value; }, 'resource');
+      }));
+    }
+    for (const [name, items] of [['orientation', fixture.orientations], ['change', fixture.changes]]) {
+      for (const item of items) {
+        const option = document.createElement('option'); option.value = item.id; option.textContent = item.label;
+        element(name).append(option);
+      }
+    }
+    for (const name of ['orientation', 'change', 'person', 'phase']) element(name).addEventListener('change', () => {
+      ui[name] = element(name).value;
+      if (name === 'orientation') ui.edits = emptyEdits();
+      if (name === 'change') ui.edits.after = {};
+      renderControls(); renderResults(); save();
+    });
+    element('period').addEventListener('input', () => { ui.period = Number(element('period').value); renderResults(); save(); });
+    function restore(saved) {
+      const candidate = saved?.modelContent?.assumptions;
+      if (!candidate || candidate.version !== 1) return;
+      const old = ui;
+      try {
+        ui = copy(candidate);
+        if (!['A', 'B'].includes(ui.person) || !['initial', 'after'].includes(ui.phase)
+          || !Number.isInteger(ui.period) || ui.period < 1 || ui.period > 12) throw new Error('Incompatible saved selection');
+        validateHousehold(buildScenario());
+      } catch { ui = old; }
+    }
+    restore(window.openai?.widgetState);
+    window.addEventListener('openai:set_globals', event => {
+      if (event.detail?.globals?.widgetState) {
+        restore(event.detail.globals.widgetState); renderControls(); renderResults();
+      }
+    });
+    renderControls();
+    renderResults();
+  })();
+  </script>
+</div>
