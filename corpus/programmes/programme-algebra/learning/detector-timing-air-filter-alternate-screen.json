@@ -1,0 +1,172 @@
+{
+  "comparisonPlanSha256": "c2bea28f52bcb72c6b9a86211cf4ac556f95d6ac01b80a57a7f1643af5792318",
+  "energyCalibration": [
+    {
+      "channel": 1,
+      "offset": 0.7773,
+      "slope": 0.12128
+    },
+    {
+      "channel": 2,
+      "offset": -4.6393,
+      "slope": 0.095294
+    }
+  ],
+  "runs": [
+    {
+      "run": "CalibrationSample76_29jan2024_b",
+      "runTimes": [
+        "2024-01-31T08:18:36.429000+01:00",
+        "2024-02-01T10:21:23.923000+01:00"
+      ],
+      "prefixTimestampSpanPicoseconds": 121305418990000,
+      "singles": [
+        {
+          "channel": 1,
+          "recorded": 23660,
+          "acceptedWithoutAdcRails": 23608
+        },
+        {
+          "channel": 2,
+          "recorded": 18659,
+          "acceptedWithoutAdcRails": 18610
+        }
+      ],
+      "wideCounts": {
+        "gateHalfWidthsNanoseconds": [
+          2000
+        ],
+        "promptByGateAndBand": [
+          [
+            15,
+            67,
+            32,
+            8
+          ]
+        ],
+        "shiftedByOffsetGateAndBand": [
+          [
+            [
+              2,
+              13,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              7,
+              1,
+              0
+            ]
+          ],
+          [
+            [
+              2,
+              9,
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              8,
+              1,
+              1
+            ]
+          ]
+        ],
+        "netByGateAndBand": [
+          [
+            13.25,
+            57.75,
+            31.0,
+            7.5
+          ]
+        ]
+      }
+    },
+    {
+      "run": "CalibrationSample76_29jan2024_b_1",
+      "runTimes": [
+        "2024-02-01T10:33:13.974000+01:00",
+        "2024-02-02T14:42:04.008000+01:00"
+      ],
+      "prefixTimestampSpanPicoseconds": 106244433240000,
+      "singles": [
+        {
+          "channel": 1,
+          "recorded": 20691,
+          "acceptedWithoutAdcRails": 20621
+        },
+        {
+          "channel": 2,
+          "recorded": 16062,
+          "acceptedWithoutAdcRails": 16038
+        }
+      ],
+      "wideCounts": {
+        "gateHalfWidthsNanoseconds": [
+          2000
+        ],
+        "promptByGateAndBand": [
+          [
+            9,
+            64,
+            18,
+            3
+          ]
+        ],
+        "shiftedByOffsetGateAndBand": [
+          [
+            [
+              3,
+              5,
+              5,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              11,
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              1,
+              13,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              3,
+              6,
+              2,
+              0
+            ]
+          ]
+        ],
+        "netByGateAndBand": [
+          [
+            6.5,
+            55.25,
+            15.75,
+            2.75
+          ]
+        ]
+      }
+    }
+  ],
+  "supportedBandIndices": [
+    1
+  ],
+  "outcome": "supports-further-screening",
+  "authority": "Two separately started acquisitions on the same spiked filter. Channels 1 and 2 form an alternative geometry, so a supported subset would qualify for its own signed-profile test. This screen is conditional on the original pair failing and uses the same acquired pulses."
+}

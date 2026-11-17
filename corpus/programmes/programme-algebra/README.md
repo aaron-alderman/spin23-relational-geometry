@@ -102,6 +102,16 @@ epistemic-claim and experiment adapters to a 240-proposition argument, a
 conjunctive gate register and a proposed evaluation. Its finite countermodels
 test where local records fail to determine a joint history or a forecast.
 
+The [transition learning replay](learning/README.md) checks what an agent can
+reuse from the AZ-121 → AZ-122 normalization repair and applies the saved
+rule to a separate helium decay question.
+The [run-planning operation](learning/run-planning.md) extends that chain
+from a single detector event to a repeated-trial decision.
+The [calibration bounds operation](learning/calibration-bounds.md) tests a
+run budget against shared uncertainty in the physical inputs.
+The [proposal audit](learning/proposal-audit.md) extracts competing rules
+from a recorded case and preserves ambiguity until a later case can test it.
+
 These are the reader-facing entrances to the lane. The first three are compiled
 from the current corpus and may be regenerated; the conversion register is the
 authored audit of what the compiler does and does not claim.

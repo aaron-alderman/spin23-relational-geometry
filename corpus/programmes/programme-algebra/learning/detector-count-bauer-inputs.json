@@ -1,0 +1,35 @@
+{
+  "source": "https://verso.uidaho.edu/esploro/outputs/graduate/Monte-Carlo-Modeling-and-Covariance-Uncertainty/996943034101851",
+  "mode": "retrospective",
+  "evidenceFamily": "Bauer-2026-Cs137-662-keV",
+  "calibrationBasis": "Chapter 1, section 1.5.1.2: MCNP detector geometry and cobalt-60 dead-layer fit; Cs-137 was a check source.",
+  "sourceBasis": "Appendix A, source certificate 1930-6-1 and Table A.2. Reconstruct the source normalization directly, without using experimental caesium peak areas.",
+  "backgroundBasis": "Appendix A reports net full-energy peak areas from PeakEasy. Compare this processed quantity as published. Raw spectra and background fits are outside this record.",
+  "provenance": {
+    "heldOutAcquisitions": ["Cs137-20cm", "Cs137-30cm", "Cs137-50cm"],
+    "acceptanceEvidence": ["HPGe-geometry", "Co60-dead-layer-fit", "MCNP-Cs137-simulated-peak-areas"],
+    "sourceEvidence": ["Cs137-certificate-1930-6-1", "Cs137-decay-and-emission-factors"]
+  },
+  "sourceNormalization": {
+    "referenceActivityBq": 772000,
+    "decayConstantPerYear": 0.02305,
+    "elapsedYears": 7.6112,
+    "isotopicPurity": 0.9619,
+    "photonYield": 0.899
+  },
+  "acceptanceModel": {
+    "type": "MCNP-check-source",
+    "simulatedHistoriesPerDistance": 2500000000,
+    "geometry": "Coaxial Cs-137 check source at each indicated detector distance"
+  },
+  "acquisitions": [
+    { "id": "Cs137-20cm", "distanceCm": 20, "simulatedNetPeakArea": 2992225, "liveSeconds": 31.14 },
+    { "id": "Cs137-30cm", "distanceCm": 30, "simulatedNetPeakArea": 1475470, "liveSeconds": 116 },
+    { "id": "Cs137-50cm", "distanceCm": 50, "simulatedNetPeakArea": 579611, "liveSeconds": 141.5 }
+  ],
+  "criterion": {
+    "metric": "absolute-relative-error-to-positive-net-count",
+    "maximum": 0.15,
+    "interpretation": "Engineering tolerance carried over from the previous frozen plan. Since Appendix A was already inspected during source triage, this case is retrospective."
+  }
+}

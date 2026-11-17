@@ -1,0 +1,37 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+  "paper": "https://arxiv.org/html/2202.12754",
+  "archives": {
+    "traces": "https://doi.org/10.4121/19103525",
+    "processing": "https://doi.org/10.4121/19102769"
+  },
+  "settingsEvidence": {
+    "member": "Raw_data/dev_B_ID_466.nc",
+    "sha256": "ddac160818b755ac70fc3ea2713ea830770e27fd9ef6249b2602fc3b668c9668",
+    "processingNotebook": "2-processing_raw_data_device_B.ipynb",
+    "notebookSha256": "99e152ce738e8033936df04f9d6ba22e060615fd436ee85054b45974f4a19592",
+    "experiment": "2tone_and_QPP_trace_vs_plunger_at_zero_flux",
+    "runId": 466,
+    "zeroBasedPlungerRow": 75,
+    "plungerMillivolts": 551.75,
+    "timestampCoordinate": "timestamp_qpp",
+    "rowTimestamps": [1625697418115548, 1625697427868390, 1625697437620462, 1625697447372544, 1625697457108836, 1625697466854352, 1625697476632593, 1625697486356997, 1625697496084282, 1625697505854566]
+  },
+  "design": {
+    "calibrationReplicateIndex": 0,
+    "scoreReplicateIndices": [1, 2],
+    "rawSamplesPerBin": 5,
+    "windowSteps": [50],
+    "primaryWindowSteps": 50,
+    "decoder": "Fit the principal I/Q axis and a two-centroid threshold on calibration only. Reuse them unchanged.",
+    "calibrationMinimumSeparationInPooledStandardDeviations": 5,
+    "windowSelection": "Use disjoint contiguous windows from sample zero at each horizon and condition on the first decoded level."
+  },
+  "qualification": {
+    "startingLevels": [0, 1],
+    "stridesInDecodedSamples": [1, 2, 5, 10],
+    "maximumAbsoluteFrequencyError": 0.01,
+    "selection": "Advance one documented plunger row from row 74, use the first repeat for calibration, and hold the next two for scoring. Select by acquisition metadata alone.",
+    "criterion": "Qualify each observable and starting label separately only if all four grids meet the one-percentage-point cutoff on both score repeats. This is the previous point-error rule applied to a distinct setting on the same device."
+  }
+}

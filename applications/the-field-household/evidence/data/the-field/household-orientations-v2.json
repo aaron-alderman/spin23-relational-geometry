@@ -1,0 +1,32 @@
+{
+  "protocol": "the-field/household-fixture/2",
+  "status": "authored-feedback-rules-not-calibrated",
+  "materialFixture": "evidence/data/the-field/household-orientations-v1.json",
+  "feedback": {
+    "enabled": true,
+    "A": { "heardGain": 0.1, "dismissedLoss": 0.25, "keptGain": 0.04, "missedLoss": 0.2, "capacityLoss": 0 },
+    "B": { "heardGain": 0.1, "dismissedLoss": 0.25, "keptGain": 0.04, "missedLoss": 0.2, "capacityLoss": 0 }
+  },
+  "experience": {
+    "A": { "handling": "respectful", "deliveryFraction": 1 },
+    "B": { "handling": "respectful", "deliveryFraction": 1 }
+  },
+  "profiles": [
+    { "id": "constructive", "label": "Respectful responses and kept agreements", "events": [] },
+    { "id": "dismissal", "label": "A dismisses requests from period 5", "events": [
+      { "id": "dismissal-starts", "period": 5, "person": "A", "handling": "dismissive" }
+    ] },
+    { "id": "unkept", "label": "A delivers half the assigned work", "events": [
+      { "id": "implementation-shortfall", "period": 5, "person": "A", "deliveryFraction": 0.5 }
+    ] },
+    { "id": "repair", "label": "Dismissal and shortfall then changed practice", "events": [
+      { "id": "rupture", "period": 5, "person": "A", "handling": "dismissive", "deliveryFraction": 0.5 },
+      { "id": "changed-practice", "period": 9, "person": "A", "handling": "respectful", "deliveryFraction": 1 },
+      { "id": "invitation-to-B", "period": 9, "person": "B", "outreach": "respectful" }
+    ] },
+    { "id": "unknown", "label": "Response quality remains unknown", "events": [
+      { "id": "handling-unknown-A", "period": 1, "person": "A", "handling": "unknown" },
+      { "id": "handling-unknown-B", "period": 1, "person": "B", "handling": "unknown" }
+    ] }
+  ]
+}

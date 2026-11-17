@@ -1,0 +1,14 @@
+{
+  "replacementPlanSha256": "467d5de6ac7a5a7b0b8f03dc3f409628fa31b13ac6f921bf5219eabaa98d797f",
+  "replacementReplaySha256": "c86de02542c5dabc069e04ddafbb0b30a425afe73b2a102816cb87cf647452e3",
+  "referenceOrder": "The earlier fixed permutation, used only as a reproduction check and development workload.",
+  "heldOrderSalts": ["departure-cache-bundle/held-a-v1", "departure-cache-bundle/held-b-v1"],
+  "victimPool": "Use the four oldest entries and extend that prefix only until it can free the required bytes. Compare all feasible subsets of that prefix by dynamic programming over reclaimed bytes. Minimize estimated reread cost, then excess bytes freed, then prefer older entries.",
+  "policies": {
+    "recency": "Evict the oldest entries until the new item fits.",
+    "encoded-cost": "Reuse the earlier one-victim rule based on encoded reread cost within the four least recent entries.",
+    "bundle-bytes": "Price the complete eviction set by summed encoded reread bytes.",
+    "bundle-reuse": "Weight each entry's encoded reread cost by the fraction of completed queries in which it appeared, using one added used and one added unused query. Update counts only after a query completes."
+  },
+  "criterion": "Use the same verified readers, capacities, routing policies, questions and archived answers. Charge actual encoded reads. Report held wins and losses and the number of examined bundle states. Fresh orders are permutations of archived questions rather than new measurements."
+}

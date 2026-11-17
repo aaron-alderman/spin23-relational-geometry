@@ -1,0 +1,61 @@
+{
+  "protocol": "the-field/household-fixture/1",
+  "status": "authored-assumptions-not-measurements",
+  "base": {
+    "protocol": "the-field/household-scenario/1",
+    "id": "household-example",
+    "periods": 12,
+    "initial": {
+      "shareA": 0.125,
+      "domesticHours": 32,
+      "expenses": 160,
+      "reserve": 80,
+      "people": [
+        { "id": "A", "capacity": 60, "wage": 5, "willingness": 0.8,
+          "values": { "paidHours": 36, "freeHours": 8, "domesticShare": 0.125, "shareTolerance": 0.5, "paidTolerance": 2 } },
+        { "id": "B", "capacity": 60, "wage": 4, "willingness": 0.8,
+          "values": { "paidHours": 8, "freeHours": 8, "domesticShare": 0.875, "shareTolerance": 0.25, "paidTolerance": 2 } }
+      ]
+    },
+    "policy": { "maxReallocationHours": 8, "reviewHours": 0.5, "gridSteps": 80 },
+    "events": []
+  },
+  "orientations": [
+    { "id": "roles", "label": "Role-based specialization", "shareA": 0.125, "patch": {}, "events": [] },
+    { "id": "equal", "label": "Equal sharing", "shareA": 0.5,
+      "patch": { "people": [
+        { "id": "A", "values": { "paidHours": 28, "domesticShare": 0.5, "shareTolerance": 0.25 } },
+        { "id": "B", "values": { "paidHours": 28, "domesticShare": 0.5, "shareTolerance": 0.25 } }
+      ] }, "events": [] },
+    { "id": "capacity", "label": "Capacity-based specialization", "shareA": 0.25,
+      "patch": { "people": [
+        { "id": "A", "values": { "paidHours": 36, "domesticShare": 0.25, "shareTolerance": 0.5 } },
+        { "id": "B", "values": { "paidHours": 24, "domesticShare": 0.75, "shareTolerance": 0.5 } }
+      ] }, "events": [] },
+    { "id": "alternating", "label": "Alternating priorities", "shareA": 0.125, "patch": {},
+      "events": [ { "id": "planned-turn", "period": 8, "patch": { "people": [
+        { "id": "A", "values": { "paidHours": 16, "domesticShare": 0.7 } },
+        { "id": "B", "values": { "paidHours": 36, "domesticShare": 0.3 } }
+      ] } } ] }
+  ],
+  "changes": [
+    { "id": "none", "label": "No external change", "events": [] },
+    { "id": "values", "label": "B wants more paid work", "events": [
+      { "id": "changed-values", "period": 5, "patch": { "people": [
+        { "id": "B", "values": { "paidHours": 32, "domesticShare": 0.5 } }
+      ] } }
+    ] },
+    { "id": "capacity", "label": "B has fewer usable hours", "events": [
+      { "id": "changed-capacity", "period": 5, "patch": { "people": [ { "id": "B", "capacity": 36 } ] } }
+    ] },
+    { "id": "demands", "label": "More unpaid work is due", "events": [
+      { "id": "changed-demands", "period": 5, "patch": { "domesticHours": 48 } }
+    ] },
+    { "id": "combined", "label": "Values change then A loses capacity", "events": [
+      { "id": "changed-values", "period": 5, "patch": { "people": [
+        { "id": "B", "values": { "paidHours": 32, "domesticShare": 0.5 } }
+      ] } },
+      { "id": "changed-capacity-later", "period": 9, "patch": { "people": [ { "id": "A", "capacity": 36 } ] } }
+    ] }
+  ]
+}

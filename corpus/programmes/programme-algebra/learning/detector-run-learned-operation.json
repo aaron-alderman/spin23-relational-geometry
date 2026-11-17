@@ -1,0 +1,24 @@
+{
+  "id": "detector-run/minimum-independent-trials",
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+        "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+      }
+    ],
+    "observedSingleTrial": {
+      "BART": 0.0007513993037038029,
+      "LORAX": 0.0018210051832421958
+    },
+    "missingForRunPlanning": "A repetition model, a success target, and the distinction between expected counts and the probability of at least one count."
+  },
+  "operation": {
+    "inputType": "finite-window-registered-peak-probability",
+    "outputType": "minimum-trials-for-one-true-registration",
+    "condition": "independent-identical-bernoulli",
+    "calculation": "For independent identical trials with true-registration probability p, solve (1-p)^n <= 1-target for the smallest integer n."
+  },
+  "limits": "Counts are true registrations from known prepared trials. Requires independence, unchanged probability and live acquisition. An unresolved shared calibration error, correlation, detector dead time, or a false-positive allowance needs a separate model.",
+  "authority": "The detector replay records per-trial probabilities. The run-budget operation follows from the declared Bernoulli model."
+}

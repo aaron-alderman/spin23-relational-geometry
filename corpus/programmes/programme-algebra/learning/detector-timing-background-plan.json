@@ -1,0 +1,38 @@
+{
+  "disagreementScreen": {
+    "file": "detector-timing-disagreement-screen.json",
+    "sha256": "1e17fbd6f6b3b5cbfcd7ac37173d0bbd949c3019411c0b616ed4a03a50a72fb1"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "uppsalaReferencePlan": {
+    "file": "detector-timing-uppsala-inclusive-plan.json",
+    "sha256": "fd9893ae66d3aeb144ecfeb1bad622ec39e45f11ed51341401b4f6f143f2dbfd"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2025-324/1/data/measurements/unshielded_background",
+  "referenceSettings": {
+    "file": "co-settings.xml",
+    "sha256": "7bac9ed11d2f3a4bb9d1fb3a842312dc9b061846fa7e0086e62124138e68f5b5"
+  },
+  "targetSettings": {
+    "file": "unshielded1-settings.xml",
+    "sha256": "4fc069891f70f43d02f2bd696b5d0de2f2ab48217cea5180ab37b4a6b282bca8"
+  },
+  "targetInfo": {
+    "file": "unshielded1-info.txt",
+    "sha256": "68235b836b4caf19f7413bc162dd9b307858dd85dac989462c17fa22a4ff5634"
+  },
+  "target": {
+    "id": "background_1",
+    "fileBytes": 1793987142,
+    "treeEntries": 247698387,
+    "tree": "Data",
+    "relativePath": "background_1/UNFILTERED/SData_background_1.root"
+  },
+  "entryStarts": [1000000, 5200000, 9400000],
+  "entriesPerWindow": 4000000,
+  "design": "Within each previous Uppsala source, take the median absolute difference between the paired disjoint early margins across supported bands. Take the median of those source medians as the tolerance. Keep the same near-tie rule and cobalt reference. Screen the unshielded background windows in declared entry order, pairing the four early blocks only. Score the first changed choice by window and ascending energy band on its final three blocks. Preserve all early agreements and support failures.",
+  "boundary": "The tolerance uses earlier source runs from one instrument. The new background acquisition has matching settings after normalizing the run ID and timed stop. Its windows share a single acquisition. Coincidences are inclusive time-shift-subtracted pairs and may include a mixture of scattering, electronics, and environmental events."
+}

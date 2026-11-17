@@ -1,0 +1,88 @@
+{
+  "node": "v24.22.1",
+  "runner": {
+    "path": "tooling/programme-algebra/replay-transition-lesson.mjs",
+    "sha256": "a88e00aab58feb6524d13e423485de9540cd59b97724cba0c4379cda65748aab"
+  },
+  "operation": {
+    "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+    "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+  },
+  "inputs": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/free.json",
+      "sha256": "7d10c334f5abfdbd702ef788b6dfafc0821a2fd30d88c7f6af55f7d37c86e7a4"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/quench.json",
+      "sha256": "fc6264bb1e4b7cb7d576ed730624075f144e476ef9b43755be47930cf37a61bb"
+    }
+  ],
+  "freeWithoutOperation": {
+    "case": "AZ-127-calcium-40-D5/2-free-250ms",
+    "question": "A single trapped calcium-40 ion starts in 3d 2D5/2. What is the probability it leaves this level within 250 ms during unperturbed free evolution?",
+    "source": {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    "status": "no-operation-discovered",
+    "suppliedRoutes": 0
+  },
+  "freeWithOperation": {
+    "case": "AZ-127-calcium-40-D5/2-free-250ms",
+    "question": "A single trapped calcium-40 ion starts in 3d 2D5/2. What is the probability it leaves this level within 250 ms during unperturbed free evolution?",
+    "source": {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    "suppliedRoutes": 0,
+    "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+    "missing": [],
+    "mismatches": [],
+    "status": "executed",
+    "timeSeconds": 0.25,
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 1.168,
+      "reportedUncertaintySeconds": 0.007,
+      "source": "https://arxiv.org/abs/physics/0002026"
+    },
+    "model": "constant-total-hazard",
+    "probability": 0.19268479299632812,
+    "probabilityAtReportedLifetimeEndpoints": [
+      0.19165469772230664,
+      0.19372597323743698
+    ],
+    "work": {
+      "nominalExponentialEvaluations": 1,
+      "uncertaintyEndpointEvaluations": 2,
+      "microscopicDynamicsRuns": 0
+    }
+  },
+  "quenchWithOperation": {
+    "case": "AZ-127-calcium-40-D5/2-quench-250ms",
+    "question": "What can be established about exit from the initially prepared 3d 2D5/2 level within 250 ms when the proposed 854 nm quench beam is on?",
+    "source": {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    "suppliedRoutes": 0,
+    "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+    "missing": [
+      "survivalModel"
+    ],
+    "mismatches": [
+      {
+        "key": "survivalModel",
+        "expected": "constant-total-hazard",
+        "received": null
+      },
+      {
+        "key": "regime",
+        "expected": "unperturbed-intrinsic-decay",
+        "received": "854-nm-driven-quench"
+      }
+    ],
+    "status": "operation-inapplicable"
+  }
+}

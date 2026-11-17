@@ -1,0 +1,34 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "repeatFreeze": {
+    "file": "detector-timing-repeat-route-frozen.json",
+    "sha256": "f5fae263f82de0a4c3bc814d21dea6f96e68305238e82b9d8dce989757d60e12"
+  },
+  "repeatRoutePlan": {
+    "file": "detector-timing-repeat-route-plan.json",
+    "sha256": "8d2d0ce09dadf5dcb5726824478917c5df0cacff24bc3b6635603f36ab74af8a"
+  },
+  "disagreementPlan": {
+    "file": "detector-timing-disagreement-plan.json",
+    "sha256": "99b0b0f4ad74766e3ed518b527ccfbf3013787b5365926ba2d3cbf33bfef527d"
+  },
+  "disagreementScreen": {
+    "file": "detector-timing-disagreement-screen.json",
+    "sha256": "1e17fbd6f6b3b5cbfcd7ac37173d0bbd949c3019411c0b616ed4a03a50a72fb1"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/sample",
+  "target": {
+    "id": "Filter_UV2404_5feb2024_4",
+    "fileBytes": 145255049,
+    "treeEntries": 19974713,
+    "infoSha256": "9abe619334c50ae5d0b04b700d1b6bf42ed658cfadc376b2d46256631e5ef7df",
+    "settingsSha256": "8269afe20a5b591e834b9fc82dfc6f1fedb6d14e5342028b3f5f290b4c2b6f26"
+  },
+  "entryStarts": [1000000, 10200000],
+  "entriesPerWindow": 9000000,
+  "design": "From the three preceding air-filter runs take the median absolute difference between the two disjoint early validation margins. A margin is reference error minus local error. Preserve the strict choice unless all four early blocks meet the count floor, the pooled single comparison favors local, at least one disjoint margin is positive, and neither disjoint margin is negative by more than the frozen tolerance. Screen the two fresh windows in entry order. Score the first changed choice, or the first fully supported window as an agreement control if none changes.",
+  "boundary": "The tolerance is descriptive variability across three earlier runs of one sample and instrument. The target windows come from one later acquisition of the same filter. An agreement control demonstrates replay behavior while leaving the effect of a changed choice open."
+}

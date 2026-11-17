@@ -1,0 +1,23 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "referencePlanSha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+  "injectionPlan": "return-path-delft-injection-plan.json",
+  "injectionPlanSha256": "272aa528fa8fe449eeb060a7eac77f0fa8c2c1ccbcf545feb38ccc8ebf935380",
+  "scoreReplicateIndices": [7, 8],
+  "newScoreReplicateIndices": [8],
+  "edge": {
+    "guardStartBinOffset": 2,
+    "guardBins": 3,
+    "nativeCenterHalfWidth": 10,
+    "maximumAlignmentShiftNativeSamples": 5,
+    "scoreHalfWidthFromAlignedCenterNativeSamples": 5,
+    "candidateKernelWidthsNativeSamples": [1, 3, 5, 7]
+  },
+  "design": {
+    "selection": "Use frozen HMM edges with three stable bins on each side, starting two bins away from the inferred edge. Both projected split streams must corroborate the plateau labels there.",
+    "alignment": "Fit a rectangular step on one native parity around the frozen edge. The chosen first post-step sample brackets the onset with the previous sample from that parity. Score the other parity against a uniform onset within that bracket, with and without a centered discrete boxcar response. Swap alignment and score parities. Keep both directions under one kernel.",
+    "transfer": "Choose the best overall width on calibration repeat 0 alone. Report all frozen widths' errors on later acquisitions. Compare rectangular and selected-kernel pulse recovery on identical recorded backgrounds and with the original scoring bins. If instantaneous wins calibration, retain the best finite width as a sensitivity arm.",
+    "followUp": "The first score showed equal predictions for two widths. Compute exact equivalence classes on the scoring grid and add an injection arm for the best calibration width outside the instantaneous class.",
+    "boundary": "The fitted edge width is conditional on reconstructed edges, alignment and a boxcar family. It is an effective shape for projected I/Q at this setting and does not independently identify physical transition duration or instrumental bandwidth."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "lossLesson": {
+    "file": "detector-timing-campaign-result.json",
+    "sha256": "13d0044ff94a4cd51991ebd376957f5a5b6a1552dae560419de9587a16ae27b6"
+  },
+  "signedPlan": {
+    "file": "detector-timing-uppsala-signed-plan.json",
+    "sha256": "1c3c9ecccc1f302078dd4a3501b1dcd8fbb190e8f9a78036623e39f48a1aecf2"
+  },
+  "wideReferencePlanSha256": "fd9893ae66d3aeb144ecfeb1bad622ec39e45f11ed51341401b4f6f143f2dbfd",
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2025-324/1/data/measurements/shielded_background",
+  "runs": [
+    {"number": 2, "role": "reference", "infoSha256": "16cf89a5c7e0b6af4d1979f6a580b4a85dbd0ddd1c18e60b12fb00f53372136a", "settingsSha256": "b51fc5651488d434e8dd2933aef16643e2e02d8c55daa0d4f2f1d05f6828c688"},
+    {"number": 3, "role": "reference", "infoSha256": "d9ab459f043eb212ec9541b9644c5c3544a6e056e05d0c0b0b3d52c065b1c2c2", "settingsSha256": "91b6b304c8e04839b1dedd4afad2cf20b38a1b9a7f15eb41cd5687ed311a4793"},
+    {"number": 4, "role": "target", "infoSha256": "bf92b0609b2b733277c44741251aa1dcff5ee581478656fff9ec315a1a71c58a", "settingsSha256": "6000e6304542694470d6330453faf48fede26286aca355f90c23b38d42640709"},
+    {"number": 5, "role": "target", "infoSha256": "e327633023b5ddeaa180ff95f975ceede784455aff26620101928823deb3e067", "settingsSha256": "ec49772662eb9eebdb5e0c67a175f8a1d015e0977e9ea48edee4353878b93109"},
+    {"number": 6, "role": "target", "infoSha256": "7cd3fa053dc83fe1625d82b8cd91c93e3b263819b1d00a74b638a44ebcfe31b0", "settingsSha256": "d638ae075b050a1bc275134792df7978fb49f12361886bbfb291aa50763d9c31"}
+  ],
+  "bandStartsAdc": [0, 150, 450, 1050],
+  "referenceNetWideFloor": 100,
+  "cutFractions": [0.2, 0.3, 0.4, 0.5, 0.6666666666666666, 0.8333333333333334],
+  "design": "Pool matched shielded references 2 and 3 after pairing each separately. Set local centers on the pooled recorded ADC bands and freeze before reading target pulses. The first 20 percent of each held acquisition fits a local profile. The following three 10-percent blocks compare that profile with the frozen reference, requiring the inherited 50-pair floor in each block and the fit. Freeze the mean and median decision rules separately, breaking ties toward the reference. Score the final three blocks for all supported bands, pooling the first half of the target for any local forecast.",
+  "boundary": "The numeric reference is specific to the shielded acquisition settings and raw ADC bands. Target runs are separate acquisitions of one configuration. If references or targets lack support, the corresponding decisions and scores remain withheld."
+}

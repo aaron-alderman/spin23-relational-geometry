@@ -1,0 +1,47 @@
+{
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9177564/",
+  "mode": "retrospective-surface-grid",
+  "evidenceFamily": "Wu-et-al-2022-HPGe-surface-grid-Cs137",
+  "scope": "Forward prediction of the measured 662 keV net area using the paper's quarter-disk geometry and simulated area-averaged efficiency. This is an audit of already published inputs and measurements.",
+  "provenance": {
+    "heldOutAcquisitions": ["cs137-grid-net-area"],
+    "acceptanceEvidence": ["simulated-disk-average"],
+    "sourceEvidence": ["point-source-activity", "DDEP-line-yield"]
+  },
+  "lineage": {
+    "nodes": [
+      { "id": "simulated-disk-average", "dependsOn": ["simulated-point-response", "95-percent-effective-radius"] },
+      { "id": "simulated-point-response", "dependsOn": [] },
+      { "id": "95-percent-effective-radius", "dependsOn": ["simulated-point-response"] },
+      { "id": "point-source-activity", "dependsOn": [] },
+      { "id": "DDEP-line-yield", "dependsOn": [] },
+      { "id": "cs137-grid-net-area", "dependsOn": ["cs137-grid-integral"] },
+      { "id": "cs137-grid-integral", "dependsOn": [], "acquisitionKey": "Wu-et-al-2022-Cs137-grid-215-positions" }
+    ],
+    "predictionRoots": ["simulated-disk-average", "point-source-activity", "DDEP-line-yield"],
+    "outcomes": ["cs137-grid-net-area"]
+  },
+  "sourceNormalization": {
+    "type": "quarter-disk-grid",
+    "pointActivityBq": 24380,
+    "gridRadiusM": 8,
+    "photonYield": 0.8501,
+    "basis": "Grid method and reported standard point-source activity, Table 8 and Eq. 15.",
+    "yieldSource": "https://pubmed.ncbi.nlm.nih.gov/38290201/"
+  },
+  "acceptanceModel": {
+    "type": "disk-average-of-simulated-point-efficiency",
+    "effectiveRadiusM": 5.967,
+    "averageEfficiency": { "probability": 0.00000548, "averagingRadiusM": 5.967 },
+    "comparisonRadiusM": 4.893,
+    "basis": "Tables 3 and 4 and Eq. 9. The paper defines effective contribution distance at 95%, not 90%."
+  },
+  "acquisitions": [
+    { "id": "cs137-grid-net-area", "liveSeconds": 258000, "positions": 215, "secondsPerPosition": 1200 }
+  ],
+  "criterion": {
+    "metric": "absolute-relative-error-to-positive-net-count",
+    "maximum": 0.15,
+    "interpretation": "The previous audit's engineering tolerance. It is not a confidence interval. The outcome was visible during source triage."
+  }
+}

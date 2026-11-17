@@ -1,0 +1,36 @@
+{
+  "protocol":"material-history-removal-evidence/1",
+  "date":"2026-10-30",
+  "scope":"Selected source-reported laboratory ranges and XRD entries, visually checked in primary PDFs. No new experiment, trial-level fit or archaeological attribution.",
+  "records":[
+    {"id":"M-HILLSON-RATE","label":"Hillson–Tester reported bulk rate range","kind":"reported-range","lower":"0.05","upper":"0.1","unit":"g m-2 s-1","areaBasis":"geometric exposed core area","definition":"core mass loss divided by exposed area and NaOH exposure time","evidenceRefs":["external:removal-hillson"],"locator":"Abstract p. 1; Section 4.2 pp. 6–7, Eq. 4","analyticalUncertainty":null,"trialPairingExtracted":false},
+    {"id":"R-HILLSON-2015","label":"Hillson–Tester operating context","kind":"reported-regime","pressureBar":[250,225,200],"jetTemperatureC":[389,370,358],"estimatedImpingedSurfaceTemperatureC":[369,345,328],"reagentNotation":"0.08 m NaOH, as printed; not a wt.% value","evidenceRefs":["external:removal-hillson"],"boundary":"The range is not three extracted paired rate observations. Jet, local face and averaged surface temperature are different quantities."},
+    {"id":"R-CUI-2022","label":"Cui static residue context","kind":"reported-regime","temperatureC":150,"pressureMPa":10,"reactionHours":12,"subject":"Baimiao granite powder residues","treatmentLabels":{"Original":"Original sample","S1":"NaOH/ATMP system","S2":"NaOH/PESA system","S3":"HCl/HF system"},"evidenceRefs":["external:removal-cui"],"locator":"Methods Section 3.2 and Tables 2–3","boundary":"Static powder residue composition is not dynamic-core permeability or stone-shaping performance."},
+    {"id":"M-CUI-ORIGINAL","label":"Original sample","kind":"reported-xrd-row","scheme":"Original","phasePercent":{"Quartz":"20","K-feldspar":"30","Plagioclase":"33","Chlorite":"15","Biotite":"2","Amorphous":null},"evidenceRefs":["external:removal-cui"]},
+    {"id":"M-CUI-S1","label":"S1 residue","kind":"reported-xrd-row","scheme":"S1","phasePercent":{"Quartz":"13","K-feldspar":"22","Plagioclase":"15","Chlorite":"15","Biotite":"2","Amorphous":"33"},"evidenceRefs":["external:removal-cui"]},
+    {"id":"M-CUI-S2","label":"S2 residue","kind":"reported-xrd-row","scheme":"S2","phasePercent":{"Quartz":"15","K-feldspar":"51","Plagioclase":"17","Chlorite":"15","Biotite":"2","Amorphous":null},"evidenceRefs":["external:removal-cui"]},
+    {"id":"M-CUI-S3","label":"S3 residue","kind":"reported-xrd-row","scheme":"S3","phasePercent":{"Quartz":"40","K-feldspar":"23","Plagioclase":"16","Chlorite":null,"Biotite":"2","Amorphous":"19"},"evidenceRefs":["external:removal-cui"]}
+  ],
+  "transcription":{
+    "rateSourceSha256":"5450925a8807ff8487a5490602a8e05bb3c92a7ada933ce73e0a580d8dd4bc85",
+    "xrdSourceSha256":"de85811aa01a7f1e20d1097ea69289e056a1c327922d98fd68dd8cd872737489",
+    "xrdLocator":"Cui et al. 2022 Table 3, PDF p. 9",
+    "visualCheck":"Primary PDF abstract/rate units and Table 3 rendered locally and visually inspected on 30 October 2026.",
+    "xrdUnit":"percent-as-printed",
+    "nullMeaning":"Printed dash, retained as unspecified; not imputed as zero or a measured absence.",
+    "primaryPdfsPublished":false,
+    "figuresPublished":false
+  },
+  "conditionalInputs":{
+    "graniteDensityKgPerM3":2700,
+    "projectedAreaM2":1,
+    "targetDepthM":0.001,
+    "retainedMassFractions":[0.4,0.6,0.8,1],
+    "assumptions":[
+      "Density is an authored granite benchmark, not a measured density from the extracted run records.",
+      "Equivalent planar recession assumes geometric exposed area equals projected area and the selected rate persists; neither is a measured drilling speed or scale-up result.",
+      "Residue-mass fractions are chosen scenarios, not extracted yields. Treating reported XRD percentages as dry-solid mass fractions is an explicit conditional interpretation, not established by the selected table alone.",
+      "Phase inventory is a net stock. It does not separate primary-mineral dissolution from secondary formation of the same phase."
+    ]
+  }
+}

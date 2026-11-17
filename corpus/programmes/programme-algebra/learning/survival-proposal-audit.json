@@ -1,0 +1,140 @@
+{
+  "quantity": "first exit from an intrinsically decaying prepared state",
+  "training": {
+    "receipt": {
+      "path": "corpus/programmes/programme-algebra/learning/az-127-helium-replay.json",
+      "sha256": "94c93daac79cda8ae56954a8a58e713361504ae7db689b91fbabf6a1d4529da4"
+    },
+    "location": "withLesson",
+    "case": "AZ-127-helium-2tripletS1",
+    "lifetimeSource": "https://doi.org/10.1103/PhysRevLett.103.053002",
+    "windowInMeanLifetimes": 0.07623888182973317,
+    "replayProbability": 0.07340516654980762
+  },
+  "challenges": [
+    {
+      "receipt": {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/replay.json",
+        "sha256": "1851a3fd20349b79a5004f1113a340db358da545c56a9b19c00bf1e32ce51f67"
+      },
+      "location": "freeWithOperation",
+      "case": "AZ-127-calcium-40-D5/2-free-250ms",
+      "lifetimeSource": "https://arxiv.org/abs/physics/0002026",
+      "windowInMeanLifetimes": 0.21404109589041098,
+      "replayProbability": 0.19268479299632812
+    },
+    {
+      "receipt": {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/replay.json",
+        "sha256": "3042209bc863b7f86043bdc113da7cbf4c01a610eefc68ec4d6f1f68971d6b28"
+      },
+      "location": "runs.composed.stdout.anyExit",
+      "case": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+      "lifetimeSource": "https://www.bipm.org/documents/d/guest/co-57_report",
+      "windowInMeanLifetimes": 0.7072930413876992,
+      "replayProbability": 0.5070231391259499
+    }
+  ],
+  "maximumAbsoluteReplayError": 1e-12,
+  "candidates": [
+    {
+      "expression": "exponential",
+      "scale": 1,
+      "training": {
+        "case": "AZ-127-helium-2tripletS1",
+        "prediction": 0.07340516654980762,
+        "absoluteError": 0,
+        "passed": true
+      },
+      "challenges": [
+        {
+          "case": "AZ-127-calcium-40-D5/2-free-250ms",
+          "prediction": 0.19268479299632812,
+          "absoluteError": 0,
+          "passed": true
+        },
+        {
+          "case": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+          "prediction": 0.5070231391259499,
+          "absoluteError": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "expression": "clipped-linear",
+      "scale": 0.9628311012449766,
+      "training": {
+        "case": "AZ-127-helium-2tripletS1",
+        "prediction": 0.07340516654980762,
+        "absoluteError": 0,
+        "passed": true
+      },
+      "challenges": [
+        {
+          "case": "AZ-127-calcium-40-D5/2-free-250ms",
+          "prediction": 0.20608542406784605,
+          "absoluteError": 0.013400631071517927,
+          "passed": false
+        },
+        {
+          "case": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+          "prediction": 0.6810037379422272,
+          "absoluteError": 0.17398059881627737,
+          "passed": false
+        }
+      ]
+    },
+    {
+      "expression": "rational",
+      "scale": 1.039106917594023,
+      "training": {
+        "case": "AZ-127-helium-2tripletS1",
+        "prediction": 0.07340516654980762,
+        "absoluteError": 0,
+        "passed": true
+      },
+      "challenges": [
+        {
+          "case": "AZ-127-calcium-40-D5/2-free-250ms",
+          "prediction": 0.1819449246157308,
+          "absoluteError": 0.010739868380597317,
+          "passed": false
+        },
+        {
+          "case": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+          "prediction": 0.4236155406336152,
+          "absoluteError": 0.0834075984923347,
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "survivors": [
+    "exponential"
+  ],
+  "failureBoundary": {
+    "receipt": {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calcium/replay.json",
+      "sha256": "1851a3fd20349b79a5004f1113a340db358da545c56a9b19c00bf1e32ce51f67"
+    },
+    "location": "quenchWithOperation",
+    "case": "AZ-127-calcium-40-D5/2-quench-250ms",
+    "missing": [
+      "survivalModel"
+    ],
+    "mismatches": [
+      {
+        "key": "survivalModel",
+        "expected": "constant-total-hazard",
+        "received": null
+      },
+      {
+        "key": "regime",
+        "expected": "unperturbed-intrinsic-decay",
+        "received": "854-nm-driven-quench"
+      }
+    ]
+  },
+  "authority": "Bounded candidate extraction from software replays. Lifetimes have separate experimental or evaluated sources, while probability labels share the existing implementation."
+}

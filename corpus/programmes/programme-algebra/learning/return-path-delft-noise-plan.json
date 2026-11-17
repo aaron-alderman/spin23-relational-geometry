@@ -1,0 +1,14 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "referencePlanSha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+  "scoreReplicateIndices": [1, 2, 3, 4, 5],
+  "newScoreReplicateIndices": [5],
+  "windowSteps": 50,
+  "stridesInDecodedSamples": [1, 10],
+  "design": {
+    "maxIterations": 30,
+    "absoluteLogLikelihoodTolerance": 0.001,
+    "comparison": "Use the original I/Q axis and averaging. Train two Gaussian emissions and a two-state transition matrix on repeat 0 only. Freeze parameters, decode other repeats with Viterbi, and score the same disjoint windows, grouped by the shared start label. Report excluded windows where start labels differ. Compare a Gaussian HMM initialized from the threshold calibration against the refitted Gaussian HMM on held-out observations using predictive log likelihood.",
+    "boundary": "Decoded first exit and endpoint change are model-dependent. Both decoders can misclassify at the available bandwidth. Disjoint windows can still be statistically dependent."
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "comparisonPlanSha256": "154c800ef21bceac24e525aa0151b548c6a2dc1d2697d6d1592f31c7e6613a2c",
+  "energyCalibration": [
+    {
+      "channel": 3,
+      "offset": 1.2681,
+      "slope": 0.18062
+    },
+    {
+      "channel": 4,
+      "offset": -0.49367,
+      "slope": 0.17945
+    }
+  ],
+  "runs": [
+    {
+      "run": "CalibrationSample76_29jan2024_b",
+      "runTimes": [
+        "2024-01-31T08:18:36.429000+01:00",
+        "2024-02-01T10:21:23.923000+01:00"
+      ],
+      "prefixTimestampSpanPicoseconds": 121305418990000,
+      "singles": [
+        {
+          "channel": 3,
+          "recorded": 23250,
+          "acceptedWithoutAdcRails": 304
+        },
+        {
+          "channel": 4,
+          "recorded": 22651,
+          "acceptedWithoutAdcRails": 22612
+        }
+      ],
+      "wideCounts": {
+        "gateHalfWidthsNanoseconds": [
+          2000
+        ],
+        "promptByGateAndBand": [
+          [
+            0,
+            8,
+            2,
+            2
+          ]
+        ],
+        "shiftedByOffsetGateAndBand": [
+          [
+            [
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              1,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          [
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ]
+        ],
+        "netByGateAndBand": [
+          [
+            0.0,
+            7.5,
+            2.0,
+            2.0
+          ]
+        ]
+      }
+    },
+    {
+      "run": "CalibrationSample76_29jan2024_b_1",
+      "runTimes": [
+        "2024-02-01T10:33:13.974000+01:00",
+        "2024-02-02T14:42:04.008000+01:00"
+      ],
+      "prefixTimestampSpanPicoseconds": 106244433240000,
+      "singles": [
+        {
+          "channel": 3,
+          "recorded": 19044,
+          "acceptedWithoutAdcRails": 19006
+        },
+        {
+          "channel": 4,
+          "recorded": 19678,
+          "acceptedWithoutAdcRails": 19635
+        }
+      ],
+      "wideCounts": {
+        "gateHalfWidthsNanoseconds": [
+          2000
+        ],
+        "promptByGateAndBand": [
+          [
+            14,
+            177,
+            116,
+            25
+          ]
+        ],
+        "shiftedByOffsetGateAndBand": [
+          [
+            [
+              0,
+              7,
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              0,
+              17,
+              2,
+              0
+            ]
+          ],
+          [
+            [
+              1,
+              13,
+              3,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              16,
+              2,
+              1
+            ]
+          ]
+        ],
+        "netByGateAndBand": [
+          [
+            13.25,
+            163.75,
+            114.25,
+            24.25
+          ]
+        ]
+      }
+    }
+  ],
+  "supportedBandIndices": [],
+  "outcome": "insufficient-wide-support",
+  "authority": "Two consecutive separately started acquisitions on the same spiked filter and five-detector apparatus. The first million pulses in the first ROOT file of each run are a bounded sample by file order. This tests the support check on a different archive, while the Uppsala cobalt template remains specific to its original geometry and source."
+}

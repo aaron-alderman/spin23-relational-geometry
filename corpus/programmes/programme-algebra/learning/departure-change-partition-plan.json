@@ -1,0 +1,10 @@
+{
+  "changeIndexPlanSha256": "7c677d453b953cfa3cca52f9cd5a68f733ade0c436263512d4af982ca507d4f7",
+  "changeIndexPreparedSha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4",
+  "changeIndexReplaySha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2",
+  "blockLabels": [1024, 4096],
+  "recordsPerDirectoryPage": 8,
+  "encoding": "Assign a change to the block containing its new label. Encode its zero-based block offset in two bytes. Use fixed-width directory records of payload offset, count and SHA-256 of the complete block. Hash each directory page and pin those hashes in a trusted root receipt.",
+  "design": "Replay every archived parity and Delft threshold question. Open a fresh in-process directory and block cache for each independent question. Compare that with one shared cache per workload region. Verify directory and change bytes only when needed. Keep roots and directory bytes in the cost accounting.",
+  "criterion": "Every decision must match the independent full count. Check both actual and controlled block-boundary cases, and refuse tampered directory or change payloads. Compare total verified bytes with the flat index and packed source under each invocation pattern."
+}

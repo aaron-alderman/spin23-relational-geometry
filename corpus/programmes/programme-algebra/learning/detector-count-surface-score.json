@@ -1,0 +1,40 @@
+{
+  "prediction": {
+    "path": "corpus/programmes/programme-algebra/learning/detector-count-surface-predicted.json",
+    "sha256": "10f5ba07e461f4a9aac987a6dd714573e5f597ae9b52106342965f4a2c077a02"
+  },
+  "observations": {
+    "path": "corpus/programmes/programme-algebra/learning/detector-count-surface-observed.json",
+    "sha256": "7f9f4db87781d5eecb446b78e036a93479907084a5f34feccf5bcd6331567a1e"
+  },
+  "evidenceFamily": "Wu-et-al-2022-HPGe-surface-grid-Cs137",
+  "mode": "retrospective-surface-grid",
+  "results": [
+    {
+      "id": "cs137-grid-net-area",
+      "observedNetPeakArea": 15380,
+      "results": [
+        {
+          "candidate": {
+            "expression": "product",
+            "scale": 1
+          },
+          "predictedNetPeakArea": 16301.819629828151,
+          "relativeError": 0.059936256815874556,
+          "passed": true
+        },
+        {
+          "candidate": {
+            "expression": "acceptance-only",
+            "scale": 0.4693312327943803,
+            "fittedAt": "BART"
+          },
+          "predictedNetPeakArea": 9000.062467543672,
+          "relativeError": -0.41482038572537894,
+          "passed": false
+        }
+      ]
+    }
+  ],
+  "authority": "One published evidence family. Geometry-matched simulated acceptance and published measured net counts. Retrospective, with no new measurement or nanosecond transfer test."
+}

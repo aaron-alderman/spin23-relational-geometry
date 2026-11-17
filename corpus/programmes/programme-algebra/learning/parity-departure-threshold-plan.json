@@ -1,0 +1,16 @@
+{
+  "origin": {
+    "delftAbstentionSha256": "069ee1764b07f2208ba46bb4f40801be8060ed8521b4ed09a7a9decbd26c62e0",
+    "parityPlanSha256": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa",
+    "parityResultSha256": "0fef42fe6d5025a6cfe20138ef1a60cd2c69b926b42dc0263445788d04e3c8d2"
+  },
+  "case": "Iaia et al. Figure 4a, author-decoded QA parity labels",
+  "windows": "Keep the existing parity plan's three fixed nonoverlapping grids of windows. Condition on the exact starting label. Test every integer threshold from one to the number of windows for each starting label and horizon.",
+  "schedules": {
+    "direct": [1],
+    "endpoint-first": ["endpoint", 1],
+    "coarse-to-fine": ["endpoint", 50, 10, 1]
+  },
+  "decision": "After any confirmed departure or full absence, decide whether at least the requested number of windows contain a departure. Each schedule may stop as soon as the count is certified or impossible. Reuse earlier sample comparisons within a question and skip resolved windows. Start each threshold query cold.",
+  "work": "Count inspected post-start labels. Trace ingestion, resolution of the starting label, grid bookkeeping, and wall time are outside this counter."
+}

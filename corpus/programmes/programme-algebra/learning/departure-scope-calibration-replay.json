@@ -1,0 +1,45 @@
+{
+  "planSha256": "2a4dc00a5bd2661e986ef1e77d24691ccc1d2d73f88a7e0825e593832024ffde",
+  "interventionReplaySha256": "e1f848e956e5f9c66ff559342ceccb26f8525a1043a08a23b6336887270b8ac6",
+  "recordedCohortsSha256": null,
+  "boundary": {
+    "pairedCosts": {
+      "short": {
+        "missing": 48,
+        "expand": 1605,
+        "incrementalExpandBytes": 1557
+      },
+      "narrow": {
+        "missing": 2752,
+        "expand": 5788,
+        "incrementalExpandBytes": 3036
+      },
+      "expanding": {
+        "missing": 21065,
+        "expand": 14030,
+        "incrementalExpandBytes": -7035
+      }
+    },
+    "expectedIncrementalBytes": {
+      "shortProbabilityCoefficient": 1557,
+      "narrowProbabilityCoefficient": 3036,
+      "expansionProbabilityCoefficient": -7035
+    },
+    "expansionBreakEvenRange": [
+      0.18121508379888268,
+      0.30145963658028
+    ],
+    "limitingMixes": [
+      "Every nonexpanding stream stops early",
+      "Every nonexpanding stream completes the narrow prefix"
+    ]
+  },
+  "controls": {
+    "trainingCostCases": "both policy choices verified",
+    "controlledEnding": "refused as calibration"
+  },
+  "calibration": {
+    "status": "no-recorded-cohorts",
+    "calibratedExpansionFraction": null
+  }
+}

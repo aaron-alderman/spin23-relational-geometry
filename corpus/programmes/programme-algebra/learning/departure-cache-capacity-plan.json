@@ -1,0 +1,18 @@
+{
+  "liveReplaySha256": "051ac4bec00e39463d5d1d2baebaa4ec84a2fc92450f654f4a53d5c157d54314",
+  "partitionPreparedSha256": "517e51101e27752381753a3b7b1f708fc9e0115711cf25d633b060c7b5d691cb",
+  "flatPreparedSha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4",
+  "flatReplaySha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2",
+  "partitionLabels": 4096,
+  "capacityBytes": [512, 2048, 8192, null],
+  "workload": "Interleave the next archived threshold from each context in round-robin order. Keep parity and Delft as separate immutable traces. Each Delft round visits full-trace contexts and then first-eighth contexts.",
+  "cache": "Share one least-recently-used cache of verified source chunks, directory pages, and change blocks. Weight each by its encoded payload length with a minimum of one byte. Keep the admitted root and common manifest outside this cache and charge any initial root read.",
+  "policies": {
+    "packed": "Use packed source for every question.",
+    "partition": "Use the verified partition for every question.",
+    "alternating": "Alternate packed source and partition to expose interference in the shared cache.",
+    "bounded": "Reevaluate the strict-improvement check against the unpaid root and a conservative packed upper bound. Route to packed if pruning succeeds; otherwise prefer the partition."
+  },
+  "upperBound": "If all relevant packed chunks are already verified and resident, the packed query needs zero new reads. Otherwise charge one read of each possible chunk per window and scan phase, counting a chunk again whenever another window or phase may reload it.",
+  "criterion": "Match archived answers and preserve capacity. Measure first reads, verified rereads after eviction, and which representation evicts which cache entries. Charge encoded reads; do not interpret cache weight as process memory or measure wall time."
+}

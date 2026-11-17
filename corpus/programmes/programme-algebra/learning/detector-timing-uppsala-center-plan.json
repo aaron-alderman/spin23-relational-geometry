@@ -1,0 +1,17 @@
+{
+  "strataPlan": {"file": "detector-timing-uppsala-pooled-strata-plan.json", "sha256": "5ad3f42764c9a24f25b5dc73204a74727594fc5d23e91cb292b5a121038f8393"},
+  "additionalFiles": {
+    "eu152": {"path": "eu152_600s/UNFILTERED/SData_eu152_600s.root", "sha256": "fb5473f4df88d959e06c2e2fdbdb497540ae799858e8b4833387ce7fcca3ddc6"}
+  },
+  "scoreSources": ["na22", "bi207", "eu152"],
+  "previouslyUnscoredSources": ["eu152"],
+  "cobaltCenterTrainingTimeFraction": 0.5,
+  "minimumNetWidePairsInEachCobaltSplit": 12,
+  "offsetCandidatesNanoseconds": [-40, -30, -20, -10, 0, 10, 20, 30, 40],
+  "design": {
+    "fit": "Choose band offsets on the first half of cobalt by maximizing net pair counts at the existing 50 ns gate. Break exact ties by the smallest absolute offset, then the lower signed offset. Calibrate retention for both policies on the separate second half. Require the specified wide net pairs in both halves for a band to be scored.",
+    "score": "Use the inherited 40 percent early target segment and wide counts to predict retentions on the late target segment. Also score the actual paired difference in retention between the two policies. Compare both policies on the same energy support with the same common-center wide reference in every shift.",
+    "newSource": "Europium was chosen from the source inventory before scoring this comparison."
+  },
+  "boundary": "One apparatus and one dataset family. Pulse-energy bands are ADC-derived selectors. Each candidate is an offline gate for inclusive timestamp pairs after time-shift subtraction, not a correction to physical emission time or a full-energy efficiency."
+}

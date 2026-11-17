@@ -1,0 +1,30 @@
+{
+  "priorPlan": {
+    "file": "detector-timing-air-filter-signed-plan.json",
+    "sha256": "2af5e6b64243a8346de15754fcd45af27efc6c5542de67f9ada74ffda0bf0fdc"
+  },
+  "priorResult": {
+    "file": "detector-timing-air-filter-signed-result.json",
+    "sha256": "e3b4520da5640f795e18e02eb88034ca2b8e6270e9f5be9f3ce8164b7945301f"
+  },
+  "carriedTransferPlan": {
+    "file": "detector-timing-air-filter-transfer-plan.json",
+    "sha256": "ff904f7b048622bd8aa7269a3e1213d26488ab0223c6d81ed898f0b709a6dbe2"
+  },
+  "carriedForecast": {
+    "file": "detector-timing-air-filter-transfer-frozen.json",
+    "sha256": "031342e98172cf55b5ec39ce96c56708dc812e4882649dfb7096e1d4a4ae4c4d"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/sample",
+  "target": {
+    "id": "Filter_UV2404_5feb2024",
+    "fileBytes": 1048734094,
+    "treeEntries": 145426800,
+    "infoSha256": "d7bdc2173338a906f836d700203cd49e2be3bddd73a5fd3718bf791a8bcbb213",
+    "settingsSha256": "43f976570cd12ff21241703f1dbd1a07560bf6e7e59ecaa1eacb6df6986640b0"
+  },
+  "cutFractions": [0.2, 0.4, 0.6, 0.8],
+  "favoredPolicy": "unchangedReference",
+  "design": "Carry all three unchanged forecasts into the first acquisition of the measured filter sample UV2404. Use the same entry interval, channels, energy domain, signed bins, time-shift controls and block count floor. Record all five blocks, scoring eligible blocks only. Keep the earlier winner fixed before observing the target.",
+  "boundary": "This case changes the filter sample on the same apparatus with the same recorded settings. Inclusive coincidence excess is conditional on the offline selector and wide reference. Held blocks share one acquisition."
+}

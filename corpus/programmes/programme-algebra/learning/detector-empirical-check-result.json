@@ -1,0 +1,67 @@
+{
+  "evidenceFamily": "Button-Jones-2021-Cs137-validation",
+  "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8312759/",
+  "origin": {
+    "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+    "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+  },
+  "publishedRelativeBiasLimit": 0.15,
+  "results": [
+    {
+      "candidate": {
+        "expression": "product",
+        "scale": 1
+      },
+      "points": [
+        {
+          "referenceBqPerL": 8460,
+          "reportedBqPerL": 8660,
+          "adjustedBqPerL": 8660,
+          "relativeBias": 0.023640661938534313
+        },
+        {
+          "referenceBqPerL": 145000,
+          "reportedBqPerL": 147000,
+          "adjustedBqPerL": 147000,
+          "relativeBias": 0.01379310344827589
+        },
+        {
+          "referenceBqPerL": 290000,
+          "reportedBqPerL": 296000,
+          "adjustedBqPerL": 296000,
+          "relativeBias": 0.020689655172413834
+        }
+      ],
+      "passed": true
+    },
+    {
+      "candidate": {
+        "expression": "acceptance-only",
+        "scale": 0.4693312327943803,
+        "fittedAt": "BART"
+      },
+      "points": [
+        {
+          "referenceBqPerL": 8460,
+          "reportedBqPerL": 8660,
+          "adjustedBqPerL": 15684.019058720822,
+          "relativeBias": 0.8539029620237377
+        },
+        {
+          "referenceBqPerL": 145000,
+          "reportedBqPerL": 147000,
+          "adjustedBqPerL": 266229.88471500704,
+          "relativeBias": 0.8360681704483244
+        },
+        {
+          "referenceBqPerL": 290000,
+          "reportedBqPerL": 296000,
+          "adjustedBqPerL": 536081.944732259,
+          "relativeBias": 0.8485584301112381
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "authority": "Observed activities derive from real detector acquisitions but the paper does not give the raw peak counts here. This checks normalization transfer by holding the measured signal and the study's calibration fixed and changing only the source factor. It is retrospective, uses rounded table means, and carries no independent validation of nanosecond windowing."
+}

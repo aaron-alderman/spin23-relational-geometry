@@ -1,0 +1,22 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-75",
+  "referencePlanSha256": "84ee4c1c316d812b5758769ff303829a86472a9382b987f6567275f791c1d2bf",
+  "priorFrozenSha256": "8846e9082b88eec20773155b25c6019b6d2ba02fb3877aa03021afcaef78ca60",
+  "priorQualificationSha256": "261a06f292243d47dfaa1e9418cfbac2d2d0273800b8570b2e36b8e8e1b07f54",
+  "trainingReplicateIndices": [0, 1, 2],
+  "scoreReplicateIndices": [3, 4, 5],
+  "traceBlocks": 4,
+  "prefixBlock": 0,
+  "scoreBlocks": [1, 2, 3],
+  "windowSteps": 50,
+  "startingLevels": [0, 1],
+  "stridesInDecodedSamples": [1, 2, 5, 10],
+  "maximumAbsoluteFrequencyError": 0.01,
+  "candidates": {
+    "single-repeat": "Use repeat 0's frozen decoder and transition matrix.",
+    "pooled-repeats": "Pool transition counts within each training repeat. Use one matrix over the whole score region.",
+    "matched-time-block": "Pool transition counts within matching quarters of the training repeats. Forecast each score quarter with its matching matrix.",
+    "local-prefix": "Use the same frozen decoder and estimate a matrix from the first quarter of the new repeat. Forecast the remaining quarters without updating."
+  },
+  "criterion": "Keep the decoder frozen and compare every candidate on the same disjoint score windows. Within each held repeat, average the three score-quarter forecasts by starting-label window count. A candidate qualifies an observable and starting label only if every reserved repeat and all four grids meet the one-percentage-point cutoff. Report mean and worst absolute errors. Compute transition estimates from held score quarters only for diagnosis and never for forecasting."
+}

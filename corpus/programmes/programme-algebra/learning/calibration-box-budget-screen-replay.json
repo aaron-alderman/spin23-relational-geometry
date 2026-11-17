@@ -1,0 +1,354 @@
+{
+  "operation": {
+    "id": "calibration-box/reject-at-admitted-corner",
+    "inputType": "admitted-shared-calibration-endpoint-box",
+    "outputType": "fixed-budget-robust-target-decision",
+    "condition": "Use a least favorable corner from the pinned box admission. The detector acceptance and branch share must bound a true registration and trials must be independent and identical at that calibration.",
+    "calculation": "Upper-bound the exit probability by its degree-seven Taylor polynomial on [0,1] and by the linear cap outside that interval. Multiply by the branch share and acceptance to get u. Reject when n*u/(1-u) lies below -log(1-target), with a numerical margin. Otherwise use the exact planner.",
+    "limits": "Only a rejection follows from the ceiling. Ranges describe sensitivity at fixed calibration. The screen cannot admit a new box or substitute for a model of drift, dead time, or trial dependence."
+  },
+  "origin": {
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fixed-trial-budget-replay.json",
+        "sha256": "357c030b56c243f5487020f4ab6f2efd9156428cea32332ce8582dc7c7ffef0e"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+        "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+      }
+    ]
+  },
+  "work": {
+    "decisions": 10,
+    "screenCounts": {
+      "linearUnion": 0,
+      "taylorUnion": 1,
+      "linearLogMiss": 3,
+      "taylorLogMiss": 6
+    },
+    "guardedRobustPlannerCalls": 4,
+    "guardedUpstreamBudgetReplays": 8,
+    "unconditionalUpstreamBudgetReplays": 20
+  },
+  "rows": [
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 1000,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 0.8337209968624282,
+          "linearLogMiss": 1.2936635234262253,
+          "taylorLogMiss": 0.8344166675583035
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": true,
+          "linearLogMiss": true,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.5694835770546812,
+        "cornerProbability": 0.5657124298340958,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 2000,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 2.5873270468524505,
+          "taylorLogMiss": 1.668833335116607
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": true,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.8146556095743673,
+        "cornerProbability": 0.8113943063993948,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 5465,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.0698711555243205,
+          "taylorLogMiss": 4.560087088206129
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.9900056665032492,
+        "cornerProbability": 0.9895177747404311,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 5521,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.14231631283619,
+          "taylorLogMiss": 4.606814421589394
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": false
+        },
+        "decision": "exact",
+        "meetsTarget": false,
+        "nominalProbability": 0.990466392639499,
+        "cornerProbability": 0.989996107351419,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.990466392639499,
+        "cornerProbability": 0.989996107351419,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 5522,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.143609976359616,
+          "taylorLogMiss": 4.607648838256951
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": false
+        },
+        "decision": "exact",
+        "meetsTarget": true,
+        "nominalProbability": 0.9904744238912135,
+        "cornerProbability": 0.9900044476031085,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      },
+      "exact": {
+        "meetsTarget": true,
+        "nominalProbability": 0.9904744238912135,
+        "cornerProbability": 0.9900044476031085,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 1000,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 3.1382262472540603,
+          "taylorLogMiss": 2.022842017921701
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": true,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.8704471937567084,
+        "cornerProbability": 0.8674439140581575,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 2000,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 6.276452494508121,
+          "taylorLogMiss": 4.045684035843402
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.9832160703944881,
+        "cornerProbability": 0.9824288840797789,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 2254,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.073561961310651,
+          "taylorLogMiss": 4.559485908395514
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": true
+        },
+        "decision": "ruled-out-at-corner",
+        "meetsTarget": false,
+        "robustPlannerCalls": 0,
+        "upstreamBudgetReplays": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.9900125379336282,
+        "cornerProbability": 0.9894830729721289,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 2278,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.148879391244749,
+          "taylorLogMiss": 4.608034116825635
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": false
+        },
+        "decision": "exact",
+        "meetsTarget": false,
+        "nominalProbability": 0.9904905835598244,
+        "cornerProbability": 0.9899809521055378,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      },
+      "exact": {
+        "meetsTarget": false,
+        "nominalProbability": 0.9904905835598244,
+        "cornerProbability": 0.9899809521055378,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 2279,
+        "target": 0.99,
+        "requiredLogMiss": 4.60517018598809,
+        "upper": {
+          "linearUnion": 1,
+          "taylorUnion": 1,
+          "linearLogMiss": 7.152017617492003,
+          "taylorLogMiss": 4.610056958843557
+        },
+        "screens": {
+          "linearUnion": false,
+          "taylorUnion": false,
+          "linearLogMiss": false,
+          "taylorLogMiss": false
+        },
+        "decision": "exact",
+        "meetsTarget": true,
+        "nominalProbability": 0.9905099977927738,
+        "cornerProbability": 0.9900011776486298,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      },
+      "exact": {
+        "meetsTarget": true,
+        "nominalProbability": 0.9905099977927738,
+        "cornerProbability": 0.9900011776486298,
+        "robustPlannerCalls": 1,
+        "upstreamBudgetReplays": 2
+      }
+    }
+  ]
+}

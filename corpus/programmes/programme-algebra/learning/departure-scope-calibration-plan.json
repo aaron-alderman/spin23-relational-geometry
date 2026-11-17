@@ -1,0 +1,8 @@
+{
+  "interventionReplaySha256": "e1f848e956e5f9c66ff559342ceccb26f8525a1043a08a23b6336887270b8ac6",
+  "policies": ["missing", "expand"],
+  "unit": "One naturally ended request stream that received an expansion hint before either route made its purchase decision.",
+  "pairedMeasurement": "Replay the exact recorded request stream under both policies. Include the same hint, pricing and verified read costs as in the scope-hint comparison. Keep the request-stream and paired-cost receipts together.",
+  "split": "Declare disjoint evidence families for training and holdout. Choose by summed paired byte difference on training only. Evaluate that frozen choice against both fixed policies in holdout. Count end types for each cohort.",
+  "authority": "Controlled endings test the calculator and expose cost thresholds. They cannot measure what percentage of recorded request streams expand."
+}

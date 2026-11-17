@@ -1,0 +1,29 @@
+{
+  "id": "iron57/resolve-detector-acceptance",
+  "origin": {
+    "case": "AZ-127-iron-57-14.4keV-gamma-100ns",
+    "observedSourceProbability": 0.05309142818072773,
+    "missingForDetectorPrediction": "Absolute acceptance of the specified peak for photons emitted in the stated source geometry and acquisition regime.",
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/iron57.json",
+        "sha256": "b715cd1307c990c47186ea07067df7136a8638d562b293887d34c4995ea464eb"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/replay.json",
+        "sha256": "3042209bc863b7f86043bdc113da7cbf4c01a610eefc68ec4d6f1f68971d6b28"
+      },
+      {
+        "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+        "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+      }
+    ]
+  },
+  "operation": {
+    "inputType": "finite-window-branch-probability",
+    "outputType": "finite-window-registered-peak-probability",
+    "condition": "absolute-peak-acceptance",
+    "calculation": "Multiply the source-event probability by the conditional probability that this detector registers that event in the selected peak."
+  },
+  "limits": "Match the branch, emitted line energy, geometry and event selection. The time window is on emission, with eventual peak registration in a live acquisition. A detector timestamp cutoff, chance counts, or unresolved coincidence summing needs a separate response model."
+}

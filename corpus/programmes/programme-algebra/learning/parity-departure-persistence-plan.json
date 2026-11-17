@@ -1,0 +1,12 @@
+{
+  "parityPlanSha256": "1044f75f4d004193e5cbd599eb45486a7dbf6b1d1290de84605b35f25a643aaa",
+  "overlapReplaySha256": "81074d04efdaf2fc839e33118d57e4448bcd08e5117acd678ff72db2f302e96e",
+  "chunkLabels": 128,
+  "design": "Pack one byte per author-decoded label. Pin the trace member, chunk digests and starting-window indices in a manifest. Save the six source questions' observations as ordered fixed-width index and label records. Prepare the store before replaying the 154 shifted-window queries in a separate invocation. For each query and policy, reopen its payload files with an empty in-process chunk cache.",
+  "policies": {
+    "cold": "Read and hash-check source chunks as needed. Start without saved observations.",
+    "rechecked": "Read the saved sample file and verify each retained sample against lazily loaded source chunks before seeding the new windows.",
+    "pinned": "Check the saved sample file against its trusted preparation receipt hash before seeding new windows. Verify any newly requested source chunks."
+  },
+  "work": "Count requested payload bytes and chunk read calls from the chunk file and saved sample payloads. Record manifest and receipt overhead separately. This is logical file I/O with no requirement to evict the OS page cache. Compare every result against the saved independent shifted-window counts."
+}

@@ -1,0 +1,20 @@
+{
+  "adaptivePlanSha256": "08edb1773e9a99d2df29ab321f67cb1a53006e56b59fe4375f3eff4f5ee26bd6",
+  "adaptiveReplaySha256": "ab1f5d9d5a22f731ff23870d4d26b7728350912406d2d13556887f105fa92fcb",
+  "trace": "delft",
+  "partitionLabels": 4096,
+  "workloads": {
+    "narrow": ["first-eighth"],
+    "expanding": ["first-eighth", "full-trace"],
+    "easy-full": ["easy-full"]
+  },
+  "scope": "Declare the first-eighth or full-trace window support before each phase. Price every partition block intersecting a post-start window and every required directory page, plus the root. Use a hash-pinned table of verified block lengths; charge it and its binding receipt once per regional run. Keep chunk and index caches across phases.",
+  "policies": {
+    "packed": "Keep packed source for the whole stream.",
+    "fixedPartition": "Keep the 4096-label verified partition for the whole stream.",
+    "wholeBudget": "Use the existing smallest whole-index cap.",
+    "regionBudget": "Switch once when a new packed read would exceed the current regional cap. Reprice when the phase expands.",
+    "regionGuard": "Apply the regional budget, and allow the switch only when the unread packed footprint for the current scope exceeds the regional index cap. Reconsider upon scope expansion."
+  },
+  "criterion": "Match all archived answers. Charge root, directory, payload, and region pricing bytes; report pricing separately. For fixed scope, prove at most twice the smaller of the packed stream and regional cap before pricing bytes. For expanding scope, prove retained index reads stay within the final cap and give the separate bound of packed spend at handoff plus that final cap."
+}

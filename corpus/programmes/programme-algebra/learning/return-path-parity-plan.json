@@ -1,0 +1,20 @@
+{
+  "evidenceFamily": "Iaia-et-al-non-Cu-chip-Figure4a",
+  "paper": "https://doi.org/10.1038/s41467-022-33997-0",
+  "dataset": "https://doi.org/10.5281/zenodo.7249678",
+  "trace": {
+    "member": "Figure4a.dat",
+    "sha256": "0f8792b6dd27be7068cec66bbb29e2c6fba1932d80eff6776931ed782ae55148",
+    "samplePeriodSeconds": 0.010002,
+    "timeColumn": "x_QA(digital)",
+    "stateColumn": "y_QA(digital)"
+  },
+  "design": {
+    "initialState": "either author-decoded state, with separately counted denominators",
+    "windowSteps": [100, 250, 500],
+    "primaryWindowSteps": 500,
+    "windowSelection": "Fixed disjoint windows per horizon starting at sample zero, with no window chosen for a particular outcome.",
+    "claim": "A departure and return observed inside one window distinguishes first observed exit from endpoint change for the published state labels.",
+    "limits": "Author-decoded figure excerpt selected by the study to illustrate coincident switching. It supports a path witness and descriptive counts. It cannot independently calibrate or validate stationary rates."
+  }
+}

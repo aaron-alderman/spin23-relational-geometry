@@ -1,0 +1,19 @@
+{
+  "referencePlanSha256": "fd9893ae66d3aeb144ecfeb1bad622ec39e45f11ed51341401b4f6f143f2dbfd",
+  "inclusiveCalibration": {"file": "detector-timing-uppsala-inclusive-calibration.json", "sha256": "a498eb6562d5f736484f844a79ec4e632aad8ddde78971655ddafb8592afda8f"},
+  "additionalFiles": {
+    "bi207": {"path": "bi207_600s/UNFILTERED/SData_bi207_600s.root", "sha256": "2eba563bf635ba791f62f3eb6640f841c502866cf06d26a005467b6b3a40f9bc"}
+  },
+  "scoreSources": ["na22", "bi207"],
+  "previouslyUnscoredSources": ["bi207"],
+  "lowerPulseEnergyBandStartsKeV": [0, 50, 150, 350, 750],
+  "minimumCobaltNetWidePairs": 30,
+  "mixtureTrainingTimeFraction": 0.4,
+  "primaryGateHalfWidthNanoseconds": 50,
+  "design": {
+    "conditioning": "Assign each pair to the lower of the two calibrated pulse energies. The original cobalt center, gate widths, wide reference and shift controls stay fixed. The same bands are used in prompt and shifted pairs.",
+    "support": "Only bands with at least 30 net wide cobalt pairs supply a gate estimate. Score the pooled and mixture-weighted forecasts on common support and report how much of the late excess lies outside it.",
+    "forecast": "Measure energy-band weights from the first 40 percent of each target run using only wide and shifted wide counts. Freeze the weights before scoring narrow retentions from the final 60 percent. Score the original inclusive forecast as a separate benchmark for the whole late run."
+  },
+  "boundary": "One apparatus and one archive family. Pulse energy is a recorded selector, not a ground-truth photon identity. The early target wide counts are conditioning evidence, not independent of that run. The split and time-shift subtraction are descriptive and do not identify intrinsic detector timing or absolute source efficiency."
+}

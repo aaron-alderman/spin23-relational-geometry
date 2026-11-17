@@ -1,0 +1,536 @@
+{
+  "case": "AZ-127 prepared iron-57 136.47 keV level, 122.06 keV emission within 10 ns and eventual full-energy-peak registration",
+  "runtime": "v24.22.1",
+  "localPins": [
+    {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/README.md",
+      "sha256": "3baa4db943aa7ecc54371dfe77474bf292849a795d2cbe453436f302f77db4a0"
+    },
+    {
+      "path": "tooling/programme-algebra/compose-detector-lesson.mjs",
+      "sha256": "5cfa3f6ce0f318ab9a89b4fe96fb591d83cb1a0846b567107a98215fc28a0b34"
+    },
+    {
+      "path": "tooling/programme-algebra/compose-transition-lessons.mjs",
+      "sha256": "3b95a20d7f632a343203d57f4ee635ec33ca27ccf666b6debce9de64fef81319"
+    },
+    {
+      "path": "tooling/programme-algebra/replay-transition-lesson.mjs",
+      "sha256": "a88e00aab58feb6524d13e423485de9540cd59b97724cba0c4379cda65748aab"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+      "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/calcium-learned-operation.json",
+      "sha256": "e50ff0c7c6f903ea8ba75ff6c9d908011e07b083c9f1bfecf4236068a661f036"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/iron57-learned-operation.json",
+      "sha256": "7b0f53ec61385a539ec1ddac4cd5a57818819fc6cf97cac19d2db1c7eb1cec09"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json",
+      "sha256": "e8c1a7dc0f484ff189ccbfde9257913eb890f246512c3434e96e0130978040e7"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/lorax.json",
+      "sha256": "107c4cadcd60f180f82266a31c7d05cba2cfe07b43b87585867737df68fd8b6b"
+    }
+  ],
+  "runs": {
+    "BART": {
+      "composed": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-BART",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "executed",
+          "discovered": [
+            "AZ-127-helium-2tripletS1/constant-hazard-survival",
+            "AZ-127-calcium/resolve-exit-branch",
+            "iron57/resolve-detector-acceptance"
+          ],
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-BART",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "executed",
+            "anyExit": {
+              "case": "AZ-127-iron-57-122keV-10ns-BART/any-exit",
+              "question": "What is the probability of any intrinsic exit in the same window?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "missing": [],
+              "mismatches": [],
+              "status": "executed",
+              "timeSeconds": 1e-8,
+              "lifetime": {
+                "type": "measured-intrinsic-lifetime",
+                "seconds": 1.2594727706960653e-8,
+                "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                "measuredPopulationHalfLife": {
+                  "nanoseconds": 8.73,
+                  "uncertaintyNanoseconds": 0.017,
+                  "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                }
+              },
+              "model": "constant-total-hazard",
+              "probability": 0.5479592845133241,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.547261190852715,
+                0.5486590195641079
+              ],
+              "work": {
+                "nominalExponentialEvaluations": 1,
+                "uncertaintyEndpointEvaluations": 2,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "branch": {
+              "requested": "gamma-122.06-keV",
+              "relativeRates": {
+                "gamma-122.06-keV": 100,
+                "internal-conversion-to-14.4-keV": 2.36,
+                "gamma-136.47-keV": 12.53,
+                "internal-conversion-to-ground": 1.863211
+              },
+              "conditionalBranchShare": 0.8565074925433956,
+              "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+            },
+            "probability": 0.4693312327943803,
+            "probabilityAtReportedLifetimeEndpoints": [
+              0.4687333103435716,
+              0.4699305611081719
+            ],
+            "work": {
+              "learnedOperationsExecuted": 2,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          },
+          "detector": {
+            "name": "BART",
+            "type": "absolute-peak-acceptance",
+            "branch": "gamma-122.06-keV",
+            "lineEnergyKeV": 122.06,
+            "geometry": "Collins et al. (2015) BART geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 30 cm perpendicular distance from the detector window. Table 3 refers to the water-corrected efficiency.",
+            "probability": 0.001601,
+            "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+            "publishedCalibration": {
+              "radionuclide": "cobalt-57",
+              "location": "§2.3.1, Table 3, 122.06 keV row",
+              "percent": 0.1601,
+              "standardUncertaintyPercent": 0.0011,
+              "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf"
+            },
+            "eventSelection": "emission-window-eventual-peak"
+          },
+          "probability": 0.0007513993037038029,
+          "work": {
+            "learnedOperationsExecuted": 3,
+            "nominalExponentialEvaluations": 1,
+            "microscopicDynamicsRuns": 0
+          }
+        }
+      },
+      "withoutHelium": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json --omit-helium",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-BART",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-BART",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "no-complete-chain"
+          }
+        }
+      },
+      "withoutCalcium": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json --omit-calcium",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-BART",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-BART",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival"
+            ],
+            "status": "no-complete-chain"
+          }
+        }
+      },
+      "withoutDetector": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/bart.json --omit-detector",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-BART",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-BART",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the BART full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "executed",
+            "anyExit": {
+              "case": "AZ-127-iron-57-122keV-10ns-BART/any-exit",
+              "question": "What is the probability of any intrinsic exit in the same window?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "missing": [],
+              "mismatches": [],
+              "status": "executed",
+              "timeSeconds": 1e-8,
+              "lifetime": {
+                "type": "measured-intrinsic-lifetime",
+                "seconds": 1.2594727706960653e-8,
+                "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                "measuredPopulationHalfLife": {
+                  "nanoseconds": 8.73,
+                  "uncertaintyNanoseconds": 0.017,
+                  "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                }
+              },
+              "model": "constant-total-hazard",
+              "probability": 0.5479592845133241,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.547261190852715,
+                0.5486590195641079
+              ],
+              "work": {
+                "nominalExponentialEvaluations": 1,
+                "uncertaintyEndpointEvaluations": 2,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "branch": {
+              "requested": "gamma-122.06-keV",
+              "relativeRates": {
+                "gamma-122.06-keV": 100,
+                "internal-conversion-to-14.4-keV": 2.36,
+                "gamma-136.47-keV": 12.53,
+                "internal-conversion-to-ground": 1.863211
+              },
+              "conditionalBranchShare": 0.8565074925433956,
+              "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+            },
+            "probability": 0.4693312327943803,
+            "probabilityAtReportedLifetimeEndpoints": [
+              0.4687333103435716,
+              0.4699305611081719
+            ],
+            "work": {
+              "learnedOperationsExecuted": 2,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          }
+        }
+      }
+    },
+    "LORAX": {
+      "composed": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/lorax.json",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "executed",
+          "discovered": [
+            "AZ-127-helium-2tripletS1/constant-hazard-survival",
+            "AZ-127-calcium/resolve-exit-branch",
+            "iron57/resolve-detector-acceptance"
+          ],
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "executed",
+            "anyExit": {
+              "case": "AZ-127-iron-57-122keV-10ns-LORAX/any-exit",
+              "question": "What is the probability of any intrinsic exit in the same window?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "missing": [],
+              "mismatches": [],
+              "status": "executed",
+              "timeSeconds": 1e-8,
+              "lifetime": {
+                "type": "measured-intrinsic-lifetime",
+                "seconds": 1.2594727706960653e-8,
+                "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                "measuredPopulationHalfLife": {
+                  "nanoseconds": 8.73,
+                  "uncertaintyNanoseconds": 0.017,
+                  "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                }
+              },
+              "model": "constant-total-hazard",
+              "probability": 0.5479592845133241,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.547261190852715,
+                0.5486590195641079
+              ],
+              "work": {
+                "nominalExponentialEvaluations": 1,
+                "uncertaintyEndpointEvaluations": 2,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "branch": {
+              "requested": "gamma-122.06-keV",
+              "relativeRates": {
+                "gamma-122.06-keV": 100,
+                "internal-conversion-to-14.4-keV": 2.36,
+                "gamma-136.47-keV": 12.53,
+                "internal-conversion-to-ground": 1.863211
+              },
+              "conditionalBranchShare": 0.8565074925433956,
+              "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+            },
+            "probability": 0.4693312327943803,
+            "probabilityAtReportedLifetimeEndpoints": [
+              0.4687333103435716,
+              0.4699305611081719
+            ],
+            "work": {
+              "learnedOperationsExecuted": 2,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          },
+          "detector": {
+            "name": "LORAX",
+            "type": "absolute-peak-acceptance",
+            "branch": "gamma-122.06-keV",
+            "lineEnergyKeV": 122.06,
+            "geometry": "Collins et al. (2015) LORAX geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 16.5 cm perpendicular distance from the detector window. Table 3 refers to the water-corrected efficiency.",
+            "probability": 0.00388,
+            "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+            "publishedCalibration": {
+              "radionuclide": "cobalt-57",
+              "location": "§2.3.1, Table 3, 122.06 keV row",
+              "percent": 0.388,
+              "standardUncertaintyPercent": 0.003,
+              "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf"
+            },
+            "eventSelection": "emission-window-eventual-peak"
+          },
+          "probability": 0.0018210051832421958,
+          "work": {
+            "learnedOperationsExecuted": 3,
+            "nominalExponentialEvaluations": 1,
+            "microscopicDynamicsRuns": 0
+          }
+        }
+      },
+      "withoutHelium": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/lorax.json --omit-helium",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "no-complete-chain"
+          }
+        }
+      },
+      "withoutCalcium": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/lorax.json --omit-calcium",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival"
+            ],
+            "status": "no-complete-chain"
+          }
+        }
+      },
+      "withoutDetector": {
+        "command": "node tooling/programme-algebra/compose-detector-lesson.mjs detect corpus/programmes/programme-algebra/learning/fresh-agent-detector/lorax.json --omit-detector",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+          "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+          "suppliedRoutes": 0,
+          "status": "no-complete-chain",
+          "sourceEvent": {
+            "case": "AZ-127-iron-57-122keV-10ns-LORAX",
+            "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+            "source": {
+              "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+              "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+            },
+            "suppliedRoutes": 0,
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch"
+            ],
+            "status": "executed",
+            "anyExit": {
+              "case": "AZ-127-iron-57-122keV-10ns-LORAX/any-exit",
+              "question": "What is the probability of any intrinsic exit in the same window?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "missing": [],
+              "mismatches": [],
+              "status": "executed",
+              "timeSeconds": 1e-8,
+              "lifetime": {
+                "type": "measured-intrinsic-lifetime",
+                "seconds": 1.2594727706960653e-8,
+                "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                "measuredPopulationHalfLife": {
+                  "nanoseconds": 8.73,
+                  "uncertaintyNanoseconds": 0.017,
+                  "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                }
+              },
+              "model": "constant-total-hazard",
+              "probability": 0.5479592845133241,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.547261190852715,
+                0.5486590195641079
+              ],
+              "work": {
+                "nominalExponentialEvaluations": 1,
+                "uncertaintyEndpointEvaluations": 2,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "branch": {
+              "requested": "gamma-122.06-keV",
+              "relativeRates": {
+                "gamma-122.06-keV": 100,
+                "internal-conversion-to-14.4-keV": 2.36,
+                "gamma-136.47-keV": 12.53,
+                "internal-conversion-to-ground": 1.863211
+              },
+              "conditionalBranchShare": 0.8565074925433956,
+              "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+            },
+            "probability": 0.4693312327943803,
+            "probabilityAtReportedLifetimeEndpoints": [
+              0.4687333103435716,
+              0.4699305611081719
+            ],
+            "work": {
+              "learnedOperationsExecuted": 2,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "directArithmeticCheck": {
+    "inputPathway": "Independently substitute the published half-life, photon-intensity ratio, conversion coefficients and efficiencies into the closed form. Assert agreement with both composed receipts to absolute tolerance 1e-15.",
+    "anyExitProbability": 0.5479592845133241,
+    "eventualPhotonShare": 0.8565074925433956,
+    "emissionProbability": 0.4693312327943803,
+    "jointPeakProbability": {
+      "BART": 0.0007513993037038029,
+      "LORAX": 0.0018210051832421958
+    },
+    "loraxToBartRatio": 2.423485321673954
+  },
+  "scope": "Computed transfer of independently published inputs under matched conditional peak acceptance, with no fresh detector or coincidence observation."
+}

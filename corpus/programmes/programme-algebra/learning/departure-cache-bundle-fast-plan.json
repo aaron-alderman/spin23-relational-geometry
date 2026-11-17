@@ -1,0 +1,20 @@
+{
+  "bundlePlanSha256": "a54798b5ae5d224cfd0798dd64119863db13d1386759e30d0140a58290f5d5b7",
+  "bundleReplaySha256": "8d717fffd12220da07730aab408cebf8fb77f57d4ec91504ec5965249a9ec723",
+  "shortcuts": [
+    "Take the whole pool if removing any one entry leaves too few reclaimable bytes.",
+    "With equal weights, take the required number of lowest-cost entries, preserving age ties.",
+    "Take the best feasible single entry if its cost is strictly below the sum of the two lowest entry costs."
+  ],
+  "tiePolicy": "Reuse the exact solver if the single-entry bound ties. Match the full solver on cost, excess space and age.",
+  "selectionTiming": "Record every eviction input from the held reuse-weighted replay, verify both solvers produce identical bundles, and time both on the same input sequence over eight alternating rounds after warmup.",
+  "endToEndTiming": {
+    "rounds": 5,
+    "streams": [
+      {"trace": "delft", "order": "held-1", "capacityBytes": 2048, "route": "partition"},
+      {"trace": "parity", "order": "held-2", "capacityBytes": 512, "route": "alternating"}
+    ],
+    "scope": "Use the earlier Delft win and tight-cache parity stress case. Rotate recency, full solver and guarded solver. Start each run with an empty application cache after warmup. Include application reads and computation, with filesystem paging left in place."
+  },
+  "criterion": "Preserve every chosen bundle and every archived answer. Count bypassed states, actual read bytes and selection time. Keep timing samples separate from reproducible decision evidence."
+}

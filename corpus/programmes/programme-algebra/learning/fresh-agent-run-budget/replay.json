@@ -1,0 +1,902 @@
+{
+  "node": "v24.22.1",
+  "checkoutHead": "b7d7f248b882191175422d2550283d0834d26465",
+  "scope": "The checkout already contained working-tree inputs and runner files. The hashes pin the bytes used.",
+  "localPins": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json",
+      "sha256": "355c5cccabb4e10ca69f7b0f7d4d4a27a448e8d2c767d88d0791a9e935af1fb0"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json",
+      "sha256": "88c362c8bda994a96202f3ca8752855433151724d7e2de33fcbd299b56fa3fd0"
+    },
+    {
+      "path": "tooling/programme-algebra/compose-trial-budget.mjs",
+      "sha256": "1674e4eecabc298615da7c72650e13d4f914e119b065af927a492cd872144c77"
+    },
+    {
+      "path": "tooling/programme-algebra/compose-detector-lesson.mjs",
+      "sha256": "5cfa3f6ce0f318ab9a89b4fe96fb591d83cb1a0846b567107a98215fc28a0b34"
+    },
+    {
+      "path": "tooling/programme-algebra/compose-transition-lessons.mjs",
+      "sha256": "3b95a20d7f632a343203d57f4ee635ec33ca27ccf666b6debce9de64fef81319"
+    },
+    {
+      "path": "tooling/programme-algebra/replay-transition-lesson.mjs",
+      "sha256": "a88e00aab58feb6524d13e423485de9540cd59b97724cba0c4379cda65748aab"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/helium-learned-operation.json",
+      "sha256": "8e2a933663ce605bd8d6750cd71bdac1555e04412e7e3edb8a22f5e310c05184"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/calcium-learned-operation.json",
+      "sha256": "e50ff0c7c6f903ea8ba75ff6c9d908011e07b083c9f1bfecf4236068a661f036"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/iron57-learned-operation.json",
+      "sha256": "7b0f53ec61385a539ec1ddac4cd5a57818819fc6cf97cac19d2db1c7eb1cec09"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/detector-run-learned-operation.json",
+      "sha256": "334422c7b8af497256c28bd5e8bf29a94f88b4cf9ea5386c46f2573c84c44f72"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+      "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-iron57/replay.json",
+      "sha256": "3042209bc863b7f86043bdc113da7cbf4c01a610eefc68ec4d6f1f68971d6b28"
+    },
+    {
+      "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+      "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+    }
+  ],
+  "operationReplay": {
+    "command": "node tooling/programme-algebra/compose-trial-budget.mjs record-detector-run",
+    "exitCode": 0,
+    "stdout": {
+      "id": "detector-run/minimum-independent-trials",
+      "origin": {
+        "sources": [
+          {
+            "path": "corpus/programmes/programme-algebra/learning/fresh-agent-detector/replay.json",
+            "sha256": "4e074054fb5f80c8f333561221701bbd74efab6acb6b42c46b602b47f36283ff"
+          }
+        ],
+        "observedSingleTrial": {
+          "BART": 0.0007513993037038029,
+          "LORAX": 0.0018210051832421958
+        },
+        "missingForRunPlanning": "A repetition model, a success target, and the distinction between expected counts and the probability of at least one count."
+      },
+      "operation": {
+        "inputType": "finite-window-registered-peak-probability",
+        "outputType": "minimum-trials-for-one-true-registration",
+        "condition": "independent-identical-bernoulli",
+        "calculation": "For independent identical trials with true-registration probability p, solve (1-p)^n <= 1-target for the smallest integer n."
+      },
+      "limits": "Counts are true registrations from known prepared trials. Requires independence, unchanged probability and live acquisition. An unresolved shared calibration error, correlation, detector dead time, or a false-positive allowance needs a separate model.",
+      "authority": "The detector replay records per-trial probabilities. The run-budget operation follows from the declared Bernoulli model."
+    }
+  },
+  "independentCheckMethod": "Use the published half-life, relative gamma weights and conversion coefficients directly to compute any-exit probability and the direct gamma share. Multiply by the calibration percent divided by 100. Starting with miss = 1, repeatedly multiply by 1 - p until miss <= 0.05 and compare both adjacent chances with the planner.",
+  "runs": {
+    "BART": {
+      "composed": {
+        "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+          "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+          "suppliedRoutes": 0,
+          "discovered": [
+            "AZ-127-helium-2tripletS1/constant-hazard-survival",
+            "AZ-127-calcium/resolve-exit-branch",
+            "iron57/resolve-detector-acceptance",
+            "detector-run/minimum-independent-trials"
+          ],
+          "perTrial": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "executed",
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch",
+              "iron57/resolve-detector-acceptance"
+            ],
+            "sourceEvent": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discovered": [
+                "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "AZ-127-calcium/resolve-exit-branch"
+              ],
+              "status": "executed",
+              "anyExit": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART/any-exit",
+                "question": "What is the probability of any intrinsic exit in the same window?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "missing": [],
+                "mismatches": [],
+                "status": "executed",
+                "timeSeconds": 2e-8,
+                "lifetime": {
+                  "type": "measured-intrinsic-lifetime",
+                  "seconds": 1.2594727706960653e-8,
+                  "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                  "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                  "measuredPopulationHalfLife": {
+                    "nanoseconds": 8.73,
+                    "uncertaintyNanoseconds": 0.017,
+                    "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                  }
+                },
+                "model": "constant-total-hazard",
+                "probability": 0.7956591915422941,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.7950275706918981,
+                  0.7962913193791676
+                ],
+                "work": {
+                  "nominalExponentialEvaluations": 1,
+                  "uncertaintyEndpointEvaluations": 2,
+                  "microscopicDynamicsRuns": 0
+                }
+              },
+              "branch": {
+                "requested": "gamma-136.47-keV",
+                "relativeRates": {
+                  "gamma-122.06-keV": 100,
+                  "internal-conversion-to-14.4-keV": 2.36,
+                  "gamma-136.47-keV": 12.53,
+                  "internal-conversion-to-ground": 1.863211
+                },
+                "conditionalBranchShare": 0.10732038881568746,
+                "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+              },
+              "probability": 0.08539045380109456,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.08532266800584595,
+                0.08545829400632904
+              ],
+              "work": {
+                "learnedOperationsExecuted": 2,
+                "nominalExponentialEvaluations": 1,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "detector": {
+              "name": "BART",
+              "type": "absolute-peak-acceptance",
+              "branch": "gamma-136.47-keV",
+              "lineEnergyKeV": 136.47,
+              "geometry": "Collins et al. (2015) BART geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 30 cm perpendicular distance from the detector window, with water-normalized attenuation.",
+              "probability": 0.001537,
+              "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+              "publishedCalibration": {
+                "radionuclide": "cobalt-57",
+                "location": "Collins et al. (2015), §2.3.1 Eq. (1) and Table 3, 136.47 keV row",
+                "percent": 0.1537,
+                "standardUncertaintyPercent": 0.0024,
+                "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf",
+                "articleText": "https://www.academia.edu/93004558/Precise_measurements_of_the_absolute_%CE%B3_ray_emission_probabilities_of_223_Ra_and_decay_progeny_in_equilibrium"
+              },
+              "eventSelection": "emission-window-eventual-peak"
+            },
+            "probability": 0.00013124512749228232,
+            "work": {
+              "learnedOperationsExecuted": 3,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          },
+          "targetProbability": 0.95,
+          "status": "executed",
+          "minimumTrials": 22824,
+          "chanceAtMinimum": 0.9500001554230793,
+          "chanceOneFewer": 0.9499935923257286,
+          "expectedCounts": 2.995538789883852,
+          "work": {
+            "learnedOperationsExecuted": 4,
+            "nominalExponentialEvaluations": 1,
+            "microscopicDynamicsRuns": 0
+          }
+        }
+      },
+      "omissions": {
+        "helium": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json --omit-helium",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "no-complete-chain"
+              }
+            }
+          }
+        },
+        "calcium": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json --omit-calcium",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival"
+                ],
+                "status": "no-complete-chain"
+              }
+            }
+          }
+        },
+        "detector": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json --omit-detector",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "executed",
+                "anyExit": {
+                  "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART/any-exit",
+                  "question": "What is the probability of any intrinsic exit in the same window?",
+                  "source": {
+                    "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                    "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                  },
+                  "suppliedRoutes": 0,
+                  "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "missing": [],
+                  "mismatches": [],
+                  "status": "executed",
+                  "timeSeconds": 2e-8,
+                  "lifetime": {
+                    "type": "measured-intrinsic-lifetime",
+                    "seconds": 1.2594727706960653e-8,
+                    "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                    "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                    "measuredPopulationHalfLife": {
+                      "nanoseconds": 8.73,
+                      "uncertaintyNanoseconds": 0.017,
+                      "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                    }
+                  },
+                  "model": "constant-total-hazard",
+                  "probability": 0.7956591915422941,
+                  "probabilityAtReportedLifetimeEndpoints": [
+                    0.7950275706918981,
+                    0.7962913193791676
+                  ],
+                  "work": {
+                    "nominalExponentialEvaluations": 1,
+                    "uncertaintyEndpointEvaluations": 2,
+                    "microscopicDynamicsRuns": 0
+                  }
+                },
+                "branch": {
+                  "requested": "gamma-136.47-keV",
+                  "relativeRates": {
+                    "gamma-122.06-keV": 100,
+                    "internal-conversion-to-14.4-keV": 2.36,
+                    "gamma-136.47-keV": 12.53,
+                    "internal-conversion-to-ground": 1.863211
+                  },
+                  "conditionalBranchShare": 0.10732038881568746,
+                  "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+                },
+                "probability": 0.08539045380109456,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.08532266800584595,
+                  0.08545829400632904
+                ],
+                "work": {
+                  "learnedOperationsExecuted": 2,
+                  "nominalExponentialEvaluations": 1,
+                  "microscopicDynamicsRuns": 0
+                }
+              }
+            }
+          }
+        },
+        "trials": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/bart.json --omit-trials",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "executed",
+              "discovered": [
+                "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "AZ-127-calcium/resolve-exit-branch",
+                "iron57/resolve-detector-acceptance"
+              ],
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the BART full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "executed",
+                "anyExit": {
+                  "case": "AZ-127-iron-57-136.47keV-20ns-95pct-BART/any-exit",
+                  "question": "What is the probability of any intrinsic exit in the same window?",
+                  "source": {
+                    "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                    "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                  },
+                  "suppliedRoutes": 0,
+                  "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "missing": [],
+                  "mismatches": [],
+                  "status": "executed",
+                  "timeSeconds": 2e-8,
+                  "lifetime": {
+                    "type": "measured-intrinsic-lifetime",
+                    "seconds": 1.2594727706960653e-8,
+                    "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                    "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                    "measuredPopulationHalfLife": {
+                      "nanoseconds": 8.73,
+                      "uncertaintyNanoseconds": 0.017,
+                      "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                    }
+                  },
+                  "model": "constant-total-hazard",
+                  "probability": 0.7956591915422941,
+                  "probabilityAtReportedLifetimeEndpoints": [
+                    0.7950275706918981,
+                    0.7962913193791676
+                  ],
+                  "work": {
+                    "nominalExponentialEvaluations": 1,
+                    "uncertaintyEndpointEvaluations": 2,
+                    "microscopicDynamicsRuns": 0
+                  }
+                },
+                "branch": {
+                  "requested": "gamma-136.47-keV",
+                  "relativeRates": {
+                    "gamma-122.06-keV": 100,
+                    "internal-conversion-to-14.4-keV": 2.36,
+                    "gamma-136.47-keV": 12.53,
+                    "internal-conversion-to-ground": 1.863211
+                  },
+                  "conditionalBranchShare": 0.10732038881568746,
+                  "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+                },
+                "probability": 0.08539045380109456,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.08532266800584595,
+                  0.08545829400632904
+                ],
+                "work": {
+                  "learnedOperationsExecuted": 2,
+                  "nominalExponentialEvaluations": 1,
+                  "microscopicDynamicsRuns": 0
+                }
+              },
+              "detector": {
+                "name": "BART",
+                "type": "absolute-peak-acceptance",
+                "branch": "gamma-136.47-keV",
+                "lineEnergyKeV": 136.47,
+                "geometry": "Collins et al. (2015) BART geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 30 cm perpendicular distance from the detector window, with water-normalized attenuation.",
+                "probability": 0.001537,
+                "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+                "publishedCalibration": {
+                  "radionuclide": "cobalt-57",
+                  "location": "Collins et al. (2015), §2.3.1 Eq. (1) and Table 3, 136.47 keV row",
+                  "percent": 0.1537,
+                  "standardUncertaintyPercent": 0.0024,
+                  "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf",
+                  "articleText": "https://www.academia.edu/93004558/Precise_measurements_of_the_absolute_%CE%B3_ray_emission_probabilities_of_223_Ra_and_decay_progeny_in_equilibrium"
+                },
+                "eventSelection": "emission-window-eventual-peak"
+              },
+              "probability": 0.00013124512749228232,
+              "work": {
+                "learnedOperationsExecuted": 3,
+                "nominalExponentialEvaluations": 1,
+                "microscopicDynamicsRuns": 0
+              }
+            }
+          }
+        }
+      },
+      "independentCheck": {
+        "anyExit": 0.7956591915422941,
+        "directGammaShare": 0.10732038881568746,
+        "sourceProbability": 0.08539045380109456,
+        "perTrialProbability": 0.00013124512749228232,
+        "minimumTrials": 22824,
+        "chanceAtMinimum": 0.9500001554230953,
+        "chanceOneFewer": 0.9499935923257448
+      }
+    },
+    "LORAX": {
+      "composed": {
+        "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json",
+        "exitCode": 0,
+        "stdout": {
+          "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+          "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+          "suppliedRoutes": 0,
+          "discovered": [
+            "AZ-127-helium-2tripletS1/constant-hazard-survival",
+            "AZ-127-calcium/resolve-exit-branch",
+            "iron57/resolve-detector-acceptance",
+            "detector-run/minimum-independent-trials"
+          ],
+          "perTrial": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "executed",
+            "discovered": [
+              "AZ-127-helium-2tripletS1/constant-hazard-survival",
+              "AZ-127-calcium/resolve-exit-branch",
+              "iron57/resolve-detector-acceptance"
+            ],
+            "sourceEvent": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "source": {
+                "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+              },
+              "suppliedRoutes": 0,
+              "discovered": [
+                "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "AZ-127-calcium/resolve-exit-branch"
+              ],
+              "status": "executed",
+              "anyExit": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX/any-exit",
+                "question": "What is the probability of any intrinsic exit in the same window?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "missing": [],
+                "mismatches": [],
+                "status": "executed",
+                "timeSeconds": 2e-8,
+                "lifetime": {
+                  "type": "measured-intrinsic-lifetime",
+                  "seconds": 1.2594727706960653e-8,
+                  "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                  "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                  "measuredPopulationHalfLife": {
+                    "nanoseconds": 8.73,
+                    "uncertaintyNanoseconds": 0.017,
+                    "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                  }
+                },
+                "model": "constant-total-hazard",
+                "probability": 0.7956591915422941,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.7950275706918981,
+                  0.7962913193791676
+                ],
+                "work": {
+                  "nominalExponentialEvaluations": 1,
+                  "uncertaintyEndpointEvaluations": 2,
+                  "microscopicDynamicsRuns": 0
+                }
+              },
+              "branch": {
+                "requested": "gamma-136.47-keV",
+                "relativeRates": {
+                  "gamma-122.06-keV": 100,
+                  "internal-conversion-to-14.4-keV": 2.36,
+                  "gamma-136.47-keV": 12.53,
+                  "internal-conversion-to-ground": 1.863211
+                },
+                "conditionalBranchShare": 0.10732038881568746,
+                "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+              },
+              "probability": 0.08539045380109456,
+              "probabilityAtReportedLifetimeEndpoints": [
+                0.08532266800584595,
+                0.08545829400632904
+              ],
+              "work": {
+                "learnedOperationsExecuted": 2,
+                "nominalExponentialEvaluations": 1,
+                "microscopicDynamicsRuns": 0
+              }
+            },
+            "detector": {
+              "name": "LORAX",
+              "type": "absolute-peak-acceptance",
+              "branch": "gamma-136.47-keV",
+              "lineEnergyKeV": 136.47,
+              "geometry": "Collins et al. (2015) LORAX geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 16.5 cm perpendicular distance from the detector window, with water-normalized attenuation.",
+              "probability": 0.0035399999999999997,
+              "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+              "publishedCalibration": {
+                "radionuclide": "cobalt-57",
+                "location": "Collins et al. (2015), §2.3.1 Eq. (1) and Table 3, 136.47 keV row",
+                "percent": 0.354,
+                "standardUncertaintyPercent": 0.006,
+                "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf",
+                "articleText": "https://www.academia.edu/93004558/Precise_measurements_of_the_absolute_%CE%B3_ray_emission_probabilities_of_223_Ra_and_decay_progeny_in_equilibrium"
+              },
+              "eventSelection": "emission-window-eventual-peak"
+            },
+            "probability": 0.0003022822064558747,
+            "work": {
+              "learnedOperationsExecuted": 3,
+              "nominalExponentialEvaluations": 1,
+              "microscopicDynamicsRuns": 0
+            }
+          },
+          "targetProbability": 0.95,
+          "status": "executed",
+          "minimumTrials": 9909,
+          "chanceAtMinimum": 0.9500017457990338,
+          "chanceOneFewer": 0.9499866276464866,
+          "expectedCounts": 2.9953143837712624,
+          "work": {
+            "learnedOperationsExecuted": 4,
+            "nominalExponentialEvaluations": 1,
+            "microscopicDynamicsRuns": 0
+          }
+        }
+      },
+      "omissions": {
+        "helium": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json --omit-helium",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "no-complete-chain"
+              }
+            }
+          }
+        },
+        "calcium": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json --omit-calcium",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival"
+                ],
+                "status": "no-complete-chain"
+              }
+            }
+          }
+        },
+        "detector": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json --omit-detector",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "no-complete-chain",
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "executed",
+                "anyExit": {
+                  "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX/any-exit",
+                  "question": "What is the probability of any intrinsic exit in the same window?",
+                  "source": {
+                    "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                    "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                  },
+                  "suppliedRoutes": 0,
+                  "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "missing": [],
+                  "mismatches": [],
+                  "status": "executed",
+                  "timeSeconds": 2e-8,
+                  "lifetime": {
+                    "type": "measured-intrinsic-lifetime",
+                    "seconds": 1.2594727706960653e-8,
+                    "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                    "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                    "measuredPopulationHalfLife": {
+                      "nanoseconds": 8.73,
+                      "uncertaintyNanoseconds": 0.017,
+                      "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                    }
+                  },
+                  "model": "constant-total-hazard",
+                  "probability": 0.7956591915422941,
+                  "probabilityAtReportedLifetimeEndpoints": [
+                    0.7950275706918981,
+                    0.7962913193791676
+                  ],
+                  "work": {
+                    "nominalExponentialEvaluations": 1,
+                    "uncertaintyEndpointEvaluations": 2,
+                    "microscopicDynamicsRuns": 0
+                  }
+                },
+                "branch": {
+                  "requested": "gamma-136.47-keV",
+                  "relativeRates": {
+                    "gamma-122.06-keV": 100,
+                    "internal-conversion-to-14.4-keV": 2.36,
+                    "gamma-136.47-keV": 12.53,
+                    "internal-conversion-to-ground": 1.863211
+                  },
+                  "conditionalBranchShare": 0.10732038881568746,
+                  "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+                },
+                "probability": 0.08539045380109456,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.08532266800584595,
+                  0.08545829400632904
+                ],
+                "work": {
+                  "learnedOperationsExecuted": 2,
+                  "nominalExponentialEvaluations": 1,
+                  "microscopicDynamicsRuns": 0
+                }
+              }
+            }
+          }
+        },
+        "trials": {
+          "command": "node tooling/programme-algebra/compose-trial-budget.mjs plan corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/lorax.json --omit-trials",
+          "exitCode": 0,
+          "stdout": {
+            "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+            "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+            "suppliedRoutes": 0,
+            "status": "no-complete-chain",
+            "perTrial": {
+              "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+              "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+              "suppliedRoutes": 0,
+              "status": "executed",
+              "discovered": [
+                "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                "AZ-127-calcium/resolve-exit-branch",
+                "iron57/resolve-detector-acceptance"
+              ],
+              "sourceEvent": {
+                "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX",
+                "question": "How many independent, identical, successfully prepared trials give at least a 95% chance of emitting a direct 136.47 keV photon within 20 ns of preparation and eventually registering it in the LORAX full-energy peak in its cobalt-57 calibration geometry and matched live acquisition?",
+                "source": {
+                  "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                  "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                },
+                "suppliedRoutes": 0,
+                "discovered": [
+                  "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "AZ-127-calcium/resolve-exit-branch"
+                ],
+                "status": "executed",
+                "anyExit": {
+                  "case": "AZ-127-iron-57-136.47keV-20ns-95pct-LORAX/any-exit",
+                  "question": "What is the probability of any intrinsic exit in the same window?",
+                  "source": {
+                    "path": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+                    "sha256": "3b13bc08d99aad67e7c2265279171e59b5a7f5fd98ba935444e73b411f5eb12c"
+                  },
+                  "suppliedRoutes": 0,
+                  "discoveredOperation": "AZ-127-helium-2tripletS1/constant-hazard-survival",
+                  "missing": [],
+                  "mismatches": [],
+                  "status": "executed",
+                  "timeSeconds": 2e-8,
+                  "lifetime": {
+                    "type": "measured-intrinsic-lifetime",
+                    "seconds": 1.2594727706960653e-8,
+                    "reportedUncertaintySeconds": 2.4525815695112383e-11,
+                    "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+                    "measuredPopulationHalfLife": {
+                      "nanoseconds": 8.73,
+                      "uncertaintyNanoseconds": 0.017,
+                      "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+                    }
+                  },
+                  "model": "constant-total-hazard",
+                  "probability": 0.7956591915422941,
+                  "probabilityAtReportedLifetimeEndpoints": [
+                    0.7950275706918981,
+                    0.7962913193791676
+                  ],
+                  "work": {
+                    "nominalExponentialEvaluations": 1,
+                    "uncertaintyEndpointEvaluations": 2,
+                    "microscopicDynamicsRuns": 0
+                  }
+                },
+                "branch": {
+                  "requested": "gamma-136.47-keV",
+                  "relativeRates": {
+                    "gamma-122.06-keV": 100,
+                    "internal-conversion-to-14.4-keV": 2.36,
+                    "gamma-136.47-keV": 12.53,
+                    "internal-conversion-to-ground": 1.863211
+                  },
+                  "conditionalBranchShare": 0.10732038881568746,
+                  "source": "https://www.bipm.org/documents/d/guest/co-57_report"
+                },
+                "probability": 0.08539045380109456,
+                "probabilityAtReportedLifetimeEndpoints": [
+                  0.08532266800584595,
+                  0.08545829400632904
+                ],
+                "work": {
+                  "learnedOperationsExecuted": 2,
+                  "nominalExponentialEvaluations": 1,
+                  "microscopicDynamicsRuns": 0
+                }
+              },
+              "detector": {
+                "name": "LORAX",
+                "type": "absolute-peak-acceptance",
+                "branch": "gamma-136.47-keV",
+                "lineEnergyKeV": 136.47,
+                "geometry": "Collins et al. (2015) LORAX geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 16.5 cm perpendicular distance from the detector window, with water-normalized attenuation.",
+                "probability": 0.0035399999999999997,
+                "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+                "publishedCalibration": {
+                  "radionuclide": "cobalt-57",
+                  "location": "Collins et al. (2015), §2.3.1 Eq. (1) and Table 3, 136.47 keV row",
+                  "percent": 0.354,
+                  "standardUncertaintyPercent": 0.006,
+                  "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf",
+                  "articleText": "https://www.academia.edu/93004558/Precise_measurements_of_the_absolute_%CE%B3_ray_emission_probabilities_of_223_Ra_and_decay_progeny_in_equilibrium"
+                },
+                "eventSelection": "emission-window-eventual-peak"
+              },
+              "probability": 0.0003022822064558747,
+              "work": {
+                "learnedOperationsExecuted": 3,
+                "nominalExponentialEvaluations": 1,
+                "microscopicDynamicsRuns": 0
+              }
+            }
+          }
+        }
+      },
+      "independentCheck": {
+        "anyExit": 0.7956591915422941,
+        "directGammaShare": 0.10732038881568746,
+        "sourceProbability": 0.08539045380109456,
+        "perTrialProbability": 0.0003022822064558747,
+        "minimumTrials": 9909,
+        "chanceAtMinimum": 0.9500017457990438,
+        "chanceOneFewer": 0.9499866276464966
+      }
+    }
+  }
+}

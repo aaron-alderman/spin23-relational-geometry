@@ -1,0 +1,3002 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-regional-budget-plan.json",
+      "sha256": "68a99c0e46c3314b642c8fc630e372574257d82210bff228769fff95b19e69f7"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-adaptive-scan-replay.json",
+      "sha256": "ab1f5d9d5a22f731ff23870d4d26b7728350912406d2d13556887f105fa92fcb"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-prepared.json",
+      "sha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-replay.json",
+      "sha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-partition-prepared.json",
+      "sha256": "517e51101e27752381753a3b7b1f708fc9e0115711cf25d633b060c7b5d691cb"
+    }
+  ],
+  "priceReceiptSha256": "e9be6c48abeaeba416e10a00725226d7a58960122ce8e61f557abae44bc2b702",
+  "pricingBytes": {
+    "table": 86,
+    "bindingReceipt": 1421
+  },
+  "control": "Changed price table refused",
+  "trace": "delft",
+  "workloads": [
+    {
+      "workload": "narrow",
+      "phases": [
+        {
+          "name": "first-eighth",
+          "queries": 20,
+          "indexCap": 2119,
+          "directoryBytes": 304,
+          "changeBytes": 1176,
+          "blocks": 6,
+          "directoryPages": 1,
+          "packedFootprint": 2752
+        }
+      ],
+      "queries": 20,
+      "summary": {
+        "packed": {
+          "bytes": 2752,
+          "switch": null
+        },
+        "fixedPartition": {
+          "bytes": 2119,
+          "switch": null
+        },
+        "wholeBudget": {
+          "bytes": 2752,
+          "switch": null
+        },
+        "regionBudget": {
+          "bytes": 5738,
+          "switch": {
+            "question": 6,
+            "representation": "partition-4096",
+            "packedBytesSpent": 2112,
+            "carriedDepartureWitnesses": 38,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 2119
+          }
+        },
+        "regionGuard": {
+          "bytes": 4259,
+          "switch": null
+        }
+      },
+      "runs": {
+        "packed": {
+          "packedBytes": 2752,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 2752,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 2752
+        },
+        "fixedPartition": {
+          "packedBytes": 0,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 1480,
+          "totalBytes": 2119,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                349
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                17,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                91,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                20,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                88,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                33,
+                63
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                40,
+                77
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                168,
+                174
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                50,
+                62
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                84,
+                272
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                60,
+                76
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                95,
+                262
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                363
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                349
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 2119
+        },
+        "wholeBudget": {
+          "packedBytes": 2752,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 2752,
+          "announcedPurchaseCap": 10711,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 2752
+        },
+        "regionBudget": {
+          "packedBytes": 2112,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 1480,
+          "totalBytes": 4231,
+          "announcedPurchaseCap": 2119,
+          "switch": {
+            "question": 6,
+            "representation": "partition-4096",
+            "packedBytesSpent": 2112,
+            "carriedDepartureWitnesses": 38,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 2119
+          },
+          "windowDecisionsCarried": 38,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                91,
+                299
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                20,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                88,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                33,
+                63
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                40,
+                77
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                168,
+                174
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                50,
+                62
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                84,
+                272
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                60,
+                76
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                95,
+                262
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                363
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                349
+              ]
+            }
+          ],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 5738,
+          "verifiedUpperBoundBeforePricing": 4231
+        },
+        "regionGuard": {
+          "packedBytes": 2752,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 2752,
+          "announcedPurchaseCap": 2119,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            }
+          ],
+          "guardDeclines": [
+            {
+              "question": 6,
+              "packedBytesSpent": 2112,
+              "unreadPackedFootprint": 640,
+              "regionalCap": 2119
+            }
+          ],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 4259,
+          "verifiedUpperBoundBeforePricing": 2752
+        }
+      }
+    },
+    {
+      "workload": "expanding",
+      "phases": [
+        {
+          "name": "first-eighth",
+          "queries": 20,
+          "indexCap": 2119,
+          "directoryBytes": 304,
+          "changeBytes": 1176,
+          "blocks": 6,
+          "directoryPages": 1,
+          "packedFootprint": 2752
+        },
+        {
+          "name": "full-trace",
+          "queries": 20,
+          "indexCap": 10711,
+          "directoryBytes": 1634,
+          "changeBytes": 8438,
+          "blocks": 43,
+          "directoryPages": 6,
+          "packedFootprint": 21973
+        }
+      ],
+      "queries": 40,
+      "summary": {
+        "packed": {
+          "bytes": 21973,
+          "switch": null
+        },
+        "fixedPartition": {
+          "bytes": 10361,
+          "switch": null
+        },
+        "wholeBudget": {
+          "bytes": 21065,
+          "switch": {
+            "question": 26,
+            "representation": "partition-4096",
+            "packedBytesSpent": 10704,
+            "carriedDepartureWitnesses": 240,
+            "carriedCompleteAbsences": 0
+          }
+        },
+        "regionBudget": {
+          "bytes": 13980,
+          "switch": {
+            "question": 6,
+            "representation": "partition-4096",
+            "packedBytesSpent": 2112,
+            "carriedDepartureWitnesses": 38,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 2119
+          }
+        },
+        "regionGuard": {
+          "bytes": 22572,
+          "switch": {
+            "question": 26,
+            "representation": "partition-4096",
+            "packedBytesSpent": 10704,
+            "carriedDepartureWitnesses": 240,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 10711
+          }
+        }
+      },
+      "runs": {
+        "packed": {
+          "packedBytes": 21973,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 21973,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                167,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                696,
+                2555
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                173,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                690,
+                2530
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                333,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1391,
+                1591
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                345,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1379,
+                1559
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                499,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                1010,
+                2085
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                517,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                995,
+                2067
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                521,
+                664
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                528,
+                2780
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                543,
+                688
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                544,
+                2756
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 21973
+        },
+        "fixedPartition": {
+          "packedBytes": 0,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 9722,
+          "totalBytes": 10361,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                349
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                17,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                91,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                20,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                88,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                33,
+                63
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                40,
+                77
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                168,
+                174
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                50,
+                62
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                84,
+                272
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                60,
+                76
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                95,
+                262
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                363
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                349
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2756
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                167,
+                653
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                696,
+                2121
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                173,
+                676
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                690,
+                2108
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                333,
+                637
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1391,
+                1548
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                345,
+                666
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1379,
+                1526
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                499,
+                626
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                730,
+                2085
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                517,
+                660
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                735,
+                2067
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                664
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                2780
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                688
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                2756
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 10361
+        },
+        "wholeBudget": {
+          "packedBytes": 10704,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 9722,
+          "totalBytes": 21065,
+          "announcedPurchaseCap": 10711,
+          "switch": {
+            "question": 26,
+            "representation": "partition-4096",
+            "packedBytesSpent": 10704,
+            "carriedDepartureWitnesses": 240,
+            "carriedCompleteAbsences": 0
+          },
+          "windowDecisionsCarried": 240,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                167,
+                665
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                696,
+                2128
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                173,
+                676
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                690,
+                2108
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                333,
+                637
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1391,
+                1548
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                345,
+                666
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1379,
+                1526
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                499,
+                626
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                730,
+                2085
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                517,
+                660
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                735,
+                2067
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                664
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                2780
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                688
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                2756
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 21065
+        },
+        "regionBudget": {
+          "packedBytes": 2112,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 9722,
+          "totalBytes": 12473,
+          "announcedPurchaseCap": 10711,
+          "switch": {
+            "question": 6,
+            "representation": "partition-4096",
+            "packedBytesSpent": 2112,
+            "carriedDepartureWitnesses": 38,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 2119
+          },
+          "windowDecisionsCarried": 38,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                91,
+                299
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                20,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                88,
+                268
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                33,
+                63
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                40,
+                77
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                168,
+                174
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                50,
+                62
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                84,
+                272
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                60,
+                76
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                95,
+                262
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                65
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                363
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                79
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                349
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2756
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                167,
+                653
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                696,
+                2121
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                173,
+                676
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                690,
+                2108
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                333,
+                637
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1391,
+                1548
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                345,
+                666
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1379,
+                1526
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                499,
+                626
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                730,
+                2085
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                517,
+                660
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                735,
+                2067
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                664
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                2780
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                688
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                2756
+              ]
+            }
+          ],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 13980,
+          "verifiedUpperBoundBeforePricing": 12823
+        },
+        "regionGuard": {
+          "packedBytes": 10704,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 9722,
+          "totalBytes": 21065,
+          "announcedPurchaseCap": 10711,
+          "switch": {
+            "question": 26,
+            "representation": "partition-4096",
+            "packedBytesSpent": 10704,
+            "carriedDepartureWitnesses": 240,
+            "carriedCompleteAbsences": 0,
+            "regionalCapAtSwitch": 10711
+          },
+          "windowDecisionsCarried": 240,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                364
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                350
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                17,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                91,
+                311
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                20,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                88,
+                313
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                33,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                177,
+                181
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                40,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                170,
+                174
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                50,
+                66
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                107,
+                272
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                60,
+                80
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                119,
+                262
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                56,
+                65
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                47,
+                363
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                68,
+                79
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": false,
+              "bounds": [
+                67,
+                349
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                167,
+                665
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                696,
+                2128
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                173,
+                676
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                690,
+                2108
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                333,
+                637
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1391,
+                1548
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                345,
+                666
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1379,
+                1526
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                499,
+                626
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                730,
+                2085
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                517,
+                660
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                735,
+                2067
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                9,
+                664
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                1,
+                2780
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                11,
+                688
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": false,
+              "bounds": [
+                0,
+                2756
+              ]
+            }
+          ],
+          "guardDeclines": [
+            {
+              "question": 6,
+              "packedBytesSpent": 2112,
+              "unreadPackedFootprint": 640,
+              "regionalCap": 2119
+            }
+          ],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 22572,
+          "verifiedUpperBoundBeforePricing": 21415
+        }
+      }
+    },
+    {
+      "workload": "easy-full",
+      "phases": [
+        {
+          "name": "easy-full",
+          "queries": 4,
+          "indexCap": 10711,
+          "directoryBytes": 1634,
+          "changeBytes": 8438,
+          "blocks": 43,
+          "directoryPages": 6,
+          "packedFootprint": 21973
+        }
+      ],
+      "queries": 4,
+      "summary": {
+        "packed": {
+          "bytes": 48,
+          "switch": null
+        },
+        "fixedPartition": {
+          "bytes": 1171,
+          "switch": null
+        },
+        "wholeBudget": {
+          "bytes": 48,
+          "switch": null
+        },
+        "regionBudget": {
+          "bytes": 1555,
+          "switch": null
+        },
+        "regionGuard": {
+          "bytes": 1555,
+          "switch": null
+        }
+      },
+      "runs": {
+        "packed": {
+          "packedBytes": 48,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 48,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 48
+        },
+        "fixedPartition": {
+          "packedBytes": 0,
+          "indexProofBytes": 639,
+          "indexDataAndDirectoryBytes": 532,
+          "totalBytes": 1171,
+          "announcedPurchaseCap": null,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "partition-4096",
+              "answer": true,
+              "bounds": [
+                1,
+                2756
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 1171
+        },
+        "wholeBudget": {
+          "packedBytes": 48,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 48,
+          "announcedPurchaseCap": 10711,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            }
+          ],
+          "pricingBytes": 0,
+          "includingPricingBytes": 48
+        },
+        "regionBudget": {
+          "packedBytes": 48,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 48,
+          "announcedPurchaseCap": 10711,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            }
+          ],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 1555,
+          "verifiedUpperBoundBeforePricing": 48
+        },
+        "regionGuard": {
+          "packedBytes": 48,
+          "indexProofBytes": 0,
+          "indexDataAndDirectoryBytes": 0,
+          "totalBytes": 48,
+          "announcedPurchaseCap": 10711,
+          "switch": null,
+          "windowDecisionsCarried": 0,
+          "answers": [
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                665
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2781
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                689
+              ]
+            },
+            {
+              "active": "packed",
+              "answer": true,
+              "bounds": [
+                1,
+                2757
+              ]
+            }
+          ],
+          "guardDeclines": [],
+          "pricingBytes": 1507,
+          "includingPricingBytes": 1555,
+          "verifiedUpperBoundBeforePricing": 48
+        }
+      }
+    }
+  ],
+  "sharedPrefix": {
+    "questions": 20,
+    "narrowOnly": "stops after the prefix",
+    "expanding": "announces the full-trace region after the prefix",
+    "verified": "All policies execute identical representation choices and decisions on the shared prefix."
+  },
+  "authority": "Index caps use only declared window positions and verified block lengths. Prepared-file application bytes include representation proof and price verification. Scope changes share live caches and preserve verified window decisions."
+}

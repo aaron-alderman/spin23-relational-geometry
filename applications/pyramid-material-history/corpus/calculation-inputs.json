@@ -1,0 +1,123 @@
+{
+  "protocol": "material-history-worked-inputs/1",
+  "scope": "Authored calculation inputs; benchmark values are not measurements of pyramid stone",
+  "molarMassGPerMol": {
+    "SiO2": 60.0843,
+    "Na2CO3": 105.9884,
+    "NaOH": 39.997,
+    "CO2": 44.0095,
+    "KAlSi3O8": 278.3315
+  },
+  "quartzDensityKgPerM3": 2650,
+  "areaM2": 1,
+  "depthM": 0.001,
+  "fluxMolPerM2S": [
+    1e-10,
+    1e-8,
+    0.000001
+  ],
+  "secondsPerJulianYear": 31557600,
+  "gasConstantJPerMolK": 8.314462618,
+  "activationEnergyKJPerMol": {
+    "central": 72,
+    "uncertainty": 6
+  },
+  "temperaturesK": {
+    "low": 373.15,
+    "high": 473.15
+  },
+  "detectionScenarios": [
+    {
+      "label": "Good survival and coverage",
+      "formation": 0.9,
+      "survivalGivenFormation": 0.9,
+      "samplingGivenSurvival": 0.8,
+      "assayGivenSample": 0.95
+    },
+    {
+      "label": "Poor survival and coverage",
+      "formation": 0.9,
+      "survivalGivenFormation": 0.1,
+      "samplingGivenSurvival": 0.1,
+      "assayGivenSample": 0.95
+    }
+  ],
+  "assumptions": [
+    "Molar masses are rounded formula masses; carbonate mass agrees with NIST WebBook. No parameter is fitted to the social post.",
+    "Density is an illustrative constant for quartz, not measured granite density. Molar volume is computed as molar mass divided by density.",
+    "Fluxes are a sensitivity sweep, not inferred rates for any carbonate or hydroxide experiment.",
+    "The Arrhenius ratio holds other solution conditions and mechanism fixed within the cited aqueous study's 100–200 °C interval. It is not a molten-salt extrapolation.",
+    "Detection probabilities are hypothetical conditional probabilities. Multiplication uses the chain rule; repeated-context calculations additionally assume independent, equivalent contexts."
+  ],
+  "variation": {
+    "status": "Synthetic teaching examples and conditional scenarios; no new empirical data",
+    "factorialCells": [
+      {
+        "heat": -1,
+        "alkali": -1,
+        "responseMg": 1
+      },
+      {
+        "heat": -1,
+        "alkali": 1,
+        "responseMg": 2
+      },
+      {
+        "heat": 1,
+        "alkali": -1,
+        "responseMg": 5
+      },
+      {
+        "heat": 1,
+        "alkali": 1,
+        "responseMg": 12
+      }
+    ],
+    "sensitivityMultipliers": [
+      0.5,
+      1,
+      2
+    ],
+    "pipeline": {
+      "batchSize": 10,
+      "stages": [
+        {
+          "id": "preparation",
+          "label": "Preparation",
+          "hours": 2
+        },
+        {
+          "id": "treatment",
+          "label": "Treatment",
+          "hours": 8
+        },
+        {
+          "id": "finishing",
+          "label": "Finishing",
+          "hours": 3
+        },
+        {
+          "id": "release",
+          "label": "Inspection/release",
+          "hours": 4
+        }
+      ],
+      "treatmentHours": [
+        8,
+        4,
+        2
+      ]
+    },
+    "housing": {
+      "projectAUD": 532730,
+      "wallPackageAUD": 45000,
+      "markup": 0.15,
+      "contingency": 0.1,
+      "reductions": [
+        0.1,
+        0.2,
+        0.5
+      ]
+    }
+  }
+}

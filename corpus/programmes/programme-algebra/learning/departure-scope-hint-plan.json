@@ -1,0 +1,18 @@
+{
+  "regionalPlanSha256": "68a99c0e46c3314b642c8fc630e372574257d82210bff228769fff95b19e69f7",
+  "regionalPreparedSha256": "e9be6c48abeaeba416e10a00725226d7a58960122ce8e61f557abae44bc2b702",
+  "regionalReplaySha256": "c8c5a0e9ddd9e7e7800697c18e5cd7ce538f7216b999bb9629f012c3b7e08e1c",
+  "scope": "trace-divided-by-8",
+  "shortQuestions": 4,
+  "cases": {
+    "short": "Take only the first round of the narrow replay.",
+    "narrow": "Complete the original narrow replay and stop.",
+    "expanding": "Run the original narrow prefix then the full-trace phase."
+  },
+  "hintPolicy": {
+    "missing": "Use the whole-index budget.",
+    "final": "Stay packed while windows remain in the named scope. If a query expands it, continue with the whole-index budget and the live caches.",
+    "expand": "Load the regional pricing table and use the earlier regional purchase budget."
+  },
+  "criterion": "Pair both hints with all three actual endings. Charge the compact UTF-8 hint payload once and charge regional pricing only when used. Test that false hints affect costs while preserving all answers. Contrast fixed representations, unconditional hint policies and a whole-index policy without a hint. Derive a conditional break-even expansion probability from measured costs and give no population reliability estimate."
+}

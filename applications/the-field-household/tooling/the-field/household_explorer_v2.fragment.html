@@ -1,0 +1,300 @@
+<div id="field-household-v2">
+  <style>
+    #field-household-v2 { display: grid; gap: calc(var(--font-size-base) * 1); }
+    #field-household-v2 .hf-heading { display: grid; gap: calc(var(--font-size-base) * .25); }
+    #field-household-v2 .hf-value { display: flex; justify-content: space-between; gap: calc(var(--font-size-base) * .5); }
+    #field-household-v2 .hf-range { display: grid; gap: calc(var(--font-size-base) * .25); }
+    #field-household-v2 .hf-detail { display: grid; gap: calc(var(--font-size-base) * .5); }
+  </style>
+  <div class="hf-heading">
+    <h2>Willingness shaped by experience</h2>
+    <div class="text-small text-muted">Synthetic feedback · separate participants · 12 periods</div>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Starting orientation<select class="form-select" data-hf="orientation"></select></label>
+    <label class="form-label">Change scenario<select class="form-select" data-hf="change"></select></label>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Edit person<select class="form-select" data-hf="person"><option>A</option><option>B</option></select></label>
+    <label class="form-label">Edit assumptions<select class="form-select" data-hf="phase"><option value="initial">Initially</option><option value="after">From period 5</option></select></label>
+  </div>
+  <div class="viz-controls">
+    <label class="form-label">Response and follow-through pattern<select class="form-select" data-hf="profile"></select></label>
+    <label class="form-check"><input class="form-check-input" type="checkbox" checked data-hf="feedback-enabled"><span class="form-check-label">Learn from experience</span></label>
+  </div>
+  <div class="viz-controls" data-hf="parameters"></div>
+  <details>
+    <summary>Selected person's response and learning rules</summary>
+    <div class="text-small text-muted">Learning rates apply to the whole run; response and delivery edits use the selected phase.</div>
+    <label class="form-label">How this person handles the other's requests<select class="form-select" data-hf="handling"><option value="respectful">Respectful, including refusal</option><option value="dismissive">Dismissive</option><option value="unknown">Unknown</option></select></label>
+    <div class="viz-controls" data-hf="feedback-parameters"></div>
+  </details>
+  <details>
+    <summary>Resources and review assumptions</summary>
+    <div class="viz-controls" data-hf="resources"></div>
+  </details>
+  <div class="text-destructive" role="alert" data-hf="error" hidden></div>
+  <div class="hf-detail">
+    <label class="form-label hf-range"><span class="hf-value"><span>Inspect period</span><output data-hf="period-label" class="tabular-nums">5</output></span><input class="form-range" type="range" min="1" max="12" step="1" value="5" data-hf="period" aria-label="Inspect period"></label>
+    <div data-hf="detail" class="text-small" aria-live="polite"></div>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-sm">
+      <caption class="sr-only">End-of-period willingness, allocation, paid work, unfinished tasks and request handling. Willingness is a synthetic setting, not a trust or character score.</caption>
+      <thead><tr><th scope="col" class="text-nowrap">Period</th><th scope="col" class="text-end text-nowrap">A willingness</th><th scope="col" class="text-end text-nowrap">B willingness</th><th scope="col" class="text-end text-nowrap">A unpaid share</th><th scope="col" class="text-end text-nowrap">A paid h</th><th scope="col" class="text-end text-nowrap">B paid h</th><th scope="col" class="text-end text-nowrap">Unfinished h</th><th scope="col" class="text-nowrap">Review</th></tr></thead>
+      <tbody data-hf="history"></tbody>
+    </table>
+  </div>
+  <script>
+  (() => {
+    /* HOUSEHOLD_ENGINE */
+    const fixture = /* HOUSEHOLD_FIXTURE */;
+    const adaptiveFixture = /* ADAPTIVE_FIXTURE */;
+    const root = document.getElementById('field-household-v2');
+    const element = name => root.querySelector(`[data-hf="${name}"]`);
+    const emptyEdits = () => ({ initial: {}, after: {} });
+    let ui = { version: 2, orientation: 'roles', change: 'values', profile: 'repair', enabled: true,
+      person: 'B', phase: 'after', period: 9, edits: emptyEdits(), resources: {}, learning: {}, experienceEdits: emptyEdits() };
+    const controls = [
+      { key: 'capacity', label: 'Usable capacity', min: 0, max: 100, step: 1, unit: 'h' },
+      { key: 'willingness', label: 'Authored starting willingness', min: 0, max: 1, step: .05, unit: '' },
+      { key: 'values.paidHours', label: 'Desired paid work', min: 0, max: 80, step: 1, unit: 'h' },
+      { key: 'values.freeHours', label: 'Minimum free time goal', min: 0, max: 40, step: 1, unit: 'h' },
+      { key: 'values.domesticShare', label: 'Preferred unpaid share', min: 0, max: 1, step: .025, unit: '%' },
+      { key: 'values.shareTolerance', label: 'Accepted share deviation', min: 0, max: 1, step: .025, unit: 'pp' },
+      { key: 'values.paidTolerance', label: 'Accepted paid work shortfall', min: 0, max: 20, step: 1, unit: 'h' },
+    ];
+    const learningControls = [
+      { key: 'heardGain', label: 'Increase after being heard', min: 0, max: 1, step: .01, unit: '' },
+      { key: 'dismissedLoss', label: 'Decrease after dismissal', min: 0, max: 1, step: .01, unit: '' },
+      { key: 'keptGain', label: 'Increase after kept agreement', min: 0, max: 1, step: .01, unit: '' },
+      { key: 'missedLoss', label: 'Decrease after implementation shortfall', min: 0, max: 1, step: .01, unit: '' },
+      { key: 'capacityLoss', label: 'Decrease after capacity shortfall', min: 0, max: 1, step: .01, unit: '' },
+      { key: 'deliveryFraction', label: 'Achievable unpaid work delivered', min: 0, max: 1, step: .05, unit: '%' },
+    ];
+    const resources = [
+      { key: 'domesticHours', label: 'Initial unpaid work due', min: 0, max: 100, step: 1, unit: 'h' },
+      { key: 'expenses', label: 'Recurring expenses', min: 0, max: 500, step: 5, unit: 'units' },
+      { key: 'reserve', label: 'Initial reserve', min: 0, max: 1000, step: 10, unit: 'units' },
+      { key: 'wageA', label: 'A paid work return', min: 0, max: 20, step: .5, unit: 'units/h' },
+      { key: 'wageB', label: 'B paid work return', min: 0, max: 20, step: .5, unit: 'units/h' },
+      { key: 'reviewHours', label: 'Review time per participant', min: 0, max: 4, step: .25, unit: 'h' },
+      { key: 'maxReallocationHours', label: 'Maximum task shift per review', min: 0, max: 32, step: 1, unit: 'h' },
+    ];
+    const format = n => Number(n.toFixed(2)).toLocaleString();
+    function display(value, control) {
+      return control.unit === '%' ? `${format(value * 100)}%`
+        : control.unit === 'pp' ? `${format(value * 100)} pp`
+        : `${format(value)}${control.unit ? ` ${control.unit}` : ''}`;
+    }
+    function mergePatch(left, right) {
+      const merged = { ...copy(left), ...copy(right) };
+      if (left.people || right.people) {
+        const people = new Map((left.people ?? []).map(p => [p.id, copy(p)]));
+        for (const p of right.people ?? []) {
+          const old = people.get(p.id) ?? { id: p.id };
+          people.set(p.id, { ...old, ...copy(p), values: { ...old.values, ...p.values } });
+        }
+        merged.people = [...people.values()];
+      }
+      return merged;
+    }
+    function buildScenario() {
+      const adaptive = createAdaptiveHousehold(fixture, adaptiveFixture, ui.orientation, ui.change, ui.profile);
+      const input = adaptive.material;
+      const initialUpdates = Object.entries(ui.edits.initial).map(([id, patch]) => ({ id, ...copy(patch) }));
+      applyPatch(input.initial, { people: initialUpdates });
+      for (const key of ['domesticHours', 'expenses', 'reserve']) if (ui.resources[key] !== undefined) input.initial[key] = ui.resources[key];
+      ['A', 'B'].forEach((id, i) => { if (ui.resources[`wage${id}`] !== undefined) input.initial.people[i].wage = ui.resources[`wage${id}`]; });
+      for (const key of ['reviewHours', 'maxReallocationHours']) if (ui.resources[key] !== undefined) input.policy[key] = ui.resources[key];
+      const afterUpdates = Object.entries(ui.edits.after).map(([id, patch]) => ({ id, ...copy(patch) }));
+      if (afterUpdates.length) {
+        const event = input.events.find(e => e.period === 5);
+        if (event) event.patch = mergePatch(event.patch, { people: afterUpdates });
+        else input.events.push({ id: 'authored-change-at-5', period: 5, patch: { people: afterUpdates } });
+      }
+      adaptive.feedback.enabled = ui.enabled;
+      for (const id of ['A', 'B']) {
+        Object.assign(adaptive.feedback[id], ui.learning[id] ?? {});
+        Object.assign(adaptive.experience[id], ui.experienceEdits.initial[id] ?? {});
+        const patch = ui.experienceEdits.after[id];
+        if (patch && Object.keys(patch).length) {
+          const atFive = adaptive.experienceEvents.filter(event => event.period === 5 && event.person === id);
+          for (const event of atFive) for (const key of Object.keys(patch)) delete event[key];
+          adaptive.experienceEvents = adaptive.experienceEvents.filter(event => ['handling', 'deliveryFraction', 'outreach'].some(key => event[key] !== undefined));
+          adaptive.experienceEvents.push({ id: `edited-experience-${id}`, period: 5, person: id, ...copy(patch) });
+        }
+      }
+      return adaptive;
+    }
+    function editedPerson(input) {
+      const state = copy(input.material.initial);
+      if (ui.phase === 'after') for (const event of [...input.material.events].sort((a, b) => a.period - b.period)) {
+        if (event.period <= 5) applyPatch(state, event.patch);
+      }
+      return state.people.find(p => p.id === ui.person);
+    }
+    function parameterValue(person, key) {
+      return key.startsWith('values.') ? person.values[key.split('.')[1]] : person[key];
+    }
+    function editedExperience(input) {
+      const experience = copy(input.experience[ui.person]);
+      if (ui.phase === 'after') for (const event of input.experienceEvents.filter(event => event.period <= 5 && event.person === ui.person)) {
+        for (const key of ['handling', 'deliveryFraction']) if (event[key] !== undefined) experience[key] = event[key];
+      }
+      return experience;
+    }
+    function save() {
+      const host = window.openai;
+      if (host?.setWidgetState) {
+        const promise = host.setWidgetState({ modelContent: { example: 'the-field-household-v2', assumptions: ui }, privateContent: null });
+        promise?.catch?.(() => {});
+      }
+    }
+    const statuses = {
+      'no-request': 'Within goal bounds',
+      'review-not-open': 'Review not open',
+      'review-time-unavailable': 'No review time',
+      'no-joint-proposal-on-grid': 'No joint proposal found',
+      'revised': 'Allocation revised',
+      'request-dismissed': 'Request dismissed',
+    };
+    function renderResults() {
+      try {
+        const input = buildScenario();
+        const run = simulateAdaptiveHousehold(input);
+        element('error').hidden = true;
+        const rows = element('history');
+        rows.replaceChildren();
+        for (const row of run.history) {
+          const tr = document.createElement('tr');
+          if (row.period === ui.period) tr.setAttribute('aria-current', 'true');
+          const values = [String(row.period) + (row.period === ui.period ? ' ←' : '') + (row.appliedEvents.length ? ' *' : ''),
+            format(row.willingnessClosing.A), format(row.willingnessClosing.B), `${format(row.shareA * 100)}%`,
+            format(row.people[0].paid), format(row.people[1].paid), format(row.backlog), statuses[row.review.status]];
+          values.forEach((value, index) => {
+            const td = document.createElement(index === 0 ? 'th' : 'td');
+            if (index === 0) td.scope = 'row';
+            td.className = index > 0 && index < 7 ? 'text-end tabular-nums text-nowrap' : 'text-nowrap';
+            td.textContent = value;
+            tr.append(td);
+          });
+          rows.append(tr);
+        }
+        const row = run.history[ui.period - 1];
+        const updates = row.willingnessUpdates.filter(update => Math.abs(update.delta) > 1e-10)
+          .map(update => `${update.person} ${update.kind}: ${format(update.before)} → ${format(update.after)}`).join(' · ');
+        element('detail').textContent = `Period ${row.period} · ${updates || 'No willingness change'} · reserve ${format(row.reserve)}, unmet expenses ${format(row.unmetExpenses)}`;
+        element('period-label').textContent = String(ui.period);
+        // Expose only synthetic input/output for inspection and offline replay.
+        root.householdRun = run;
+        root.householdScenario = input;
+      } catch (error) {
+        element('error').textContent = error.message;
+        element('error').hidden = false;
+        element('history').replaceChildren();
+        element('detail').textContent = '';
+        root.householdRun = null;
+        root.householdScenario = null;
+      }
+    }
+    function makeRange(control, value, onChange, prefix) {
+      const label = document.createElement('label');
+      label.className = 'form-label hf-range';
+      const header = document.createElement('span');
+      header.className = 'hf-value';
+      const text = document.createElement('span');
+      text.textContent = control.label;
+      const output = document.createElement('output');
+      output.className = 'tabular-nums';
+      output.textContent = display(value, control);
+      const input = document.createElement('input');
+      input.className = 'form-range';
+      input.type = 'range';
+      input.min = control.min; input.max = control.max; input.step = control.step; input.value = value;
+      input.id = `hf-${prefix}-${control.key.replace('.', '-')}`;
+      input.setAttribute('aria-label', control.label);
+      output.htmlFor = input.id;
+      input.addEventListener('input', () => {
+        const value = Number(input.value);
+        output.textContent = display(value, control);
+        onChange(value);
+        renderResults();
+        save();
+      });
+      header.append(text, output); label.append(header, input);
+      return label;
+    }
+    function renderControls() {
+      element('orientation').value = ui.orientation;
+      element('change').value = ui.change;
+      element('person').value = ui.person;
+      element('phase').value = ui.phase;
+      element('period').value = ui.period;
+      element('profile').value = ui.profile;
+      element('feedback-enabled').checked = ui.enabled;
+      const input = buildScenario();
+      const material = input.material;
+      const person = editedPerson(input);
+      const experience = editedExperience(input);
+      element('handling').value = experience.handling;
+      element('feedback-parameters').replaceChildren(...learningControls.map(control => makeRange(control,
+        control.key === 'deliveryFraction' ? experience.deliveryFraction : input.feedback[ui.person][control.key], value => {
+          if (control.key === 'deliveryFraction') (ui.experienceEdits[ui.phase][ui.person] ??= {})[control.key] = value;
+          else (ui.learning[ui.person] ??= {})[control.key] = value;
+        }, 'learning')));
+      element('parameters').replaceChildren(...controls.map(control => makeRange(control, parameterValue(person, control.key), value => {
+        const patch = ui.edits[ui.phase][ui.person] ??= {};
+        if (control.key.startsWith('values.')) (patch.values ??= {})[control.key.split('.')[1]] = value;
+        else patch[control.key] = value;
+      }, 'person')));
+      element('resources').replaceChildren(...resources.map(control => {
+        const value = control.key === 'wageA' ? material.initial.people[0].wage
+          : control.key === 'wageB' ? material.initial.people[1].wage
+          : material.initial[control.key] ?? material.policy[control.key];
+        return makeRange(control, value, value => { ui.resources[control.key] = value; }, 'resource');
+      }));
+    }
+    for (const [name, items] of [['orientation', fixture.orientations], ['change', fixture.changes], ['profile', adaptiveFixture.profiles]]) {
+      for (const item of items) {
+        const option = document.createElement('option'); option.value = item.id; option.textContent = item.label;
+        element(name).append(option);
+      }
+    }
+    for (const name of ['orientation', 'change', 'person', 'phase', 'profile']) element(name).addEventListener('change', () => {
+      ui[name] = element(name).value;
+      if (name === 'orientation') ui.edits = emptyEdits();
+      if (name === 'change') ui.edits.after = {};
+      if (name === 'profile') ui.experienceEdits = emptyEdits();
+      renderControls(); renderResults(); save();
+    });
+    element('handling').addEventListener('change', () => {
+      (ui.experienceEdits[ui.phase][ui.person] ??= {}).handling = element('handling').value;
+      renderResults(); save();
+    });
+    element('feedback-enabled').addEventListener('change', () => {
+      ui.enabled = element('feedback-enabled').checked; renderResults(); save();
+    });
+    element('period').addEventListener('input', () => { ui.period = Number(element('period').value); renderResults(); save(); });
+    function restore(saved) {
+      const candidate = saved?.modelContent?.assumptions;
+      if (!candidate || candidate.version !== 2) return;
+      const old = ui;
+      try {
+        ui = copy(candidate);
+        if (!['A', 'B'].includes(ui.person) || !['initial', 'after'].includes(ui.phase)
+          || !Number.isInteger(ui.period) || ui.period < 1 || ui.period > 12) throw new Error('Incompatible saved selection');
+        validateAdaptiveHousehold(buildScenario());
+      } catch { ui = old; }
+    }
+    restore(window.openai?.widgetState);
+    window.addEventListener('openai:set_globals', event => {
+      if (event.detail?.globals?.widgetState) {
+        restore(event.detail.globals.widgetState); renderControls(); renderResults();
+      }
+    });
+    renderControls();
+    renderResults();
+  })();
+  </script>
+</div>

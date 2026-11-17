@@ -1,0 +1,163 @@
+{
+  "operation": {
+    "id": "run-budget/reject-below-certified-ceiling",
+    "inputType": "admitted-nominal-true-registration-budget",
+    "outputType": "fixed-budget-target-decision",
+    "condition": "Pinned, previously admitted constant-hazard exit, absorbing branch, matched conditional peak acceptance, and independent identical preparations.",
+    "calculation": "Use the union bound with per-trial ceiling min(1, time/lifetime) times the selected branch fraction and peak acceptance. Rule out targets strictly above this ceiling for the run. Otherwise execute the exact planner.",
+    "limits": "Certifies infeasibility only under the admitted nominal model. It does not certify feasibility or extend detector, source, or trial-model admissibility."
+  },
+  "origin": {
+    "lesson": "Compare the most favorable possible result to the requested threshold before spending work on the full calculation.",
+    "sources": [
+      {
+        "path": "corpus/programmes/programme-algebra/learning/detector-timing-gain.md",
+        "sha256": "714586dcc123b1c9151d1465878092245aa79fabd60b3f23d5d586fbf126add3"
+      },
+      {
+        "path": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json",
+        "sha256": "ea970316b1e734a1d59643441fa3ca2c406463a570a8b3675b978553820fa462"
+      }
+    ]
+  },
+  "work": {
+    "decisions": 8,
+    "guardedExactPlannerCalls": 5,
+    "unconditionalExactPlannerCalls": 8
+  },
+  "rows": [
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 2000,
+        "target": 0.95,
+        "upperProbability": 0.3299028752194233,
+        "decision": "ruled-out-by-upper-bound",
+        "meetsTarget": false,
+        "exactPlannerCalls": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.2308793900405844,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 5000,
+        "target": 0.95,
+        "upperProbability": 0.8247571880485582,
+        "decision": "ruled-out-by-upper-bound",
+        "meetsTarget": false,
+        "exactPlannerCalls": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.48121653799016884,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 22823,
+        "target": 0.95,
+        "upperProbability": 1,
+        "decision": "exact",
+        "meetsTarget": false,
+        "probability": 0.9499935923257286,
+        "exactPlannerCalls": 1
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.9499935923257286,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "BART",
+        "trials": 22824,
+        "target": 0.95,
+        "upperProbability": 1,
+        "decision": "exact",
+        "meetsTarget": true,
+        "probability": 0.9500001554230793,
+        "exactPlannerCalls": 1
+      },
+      "exact": {
+        "meetsTarget": true,
+        "probability": 0.9500001554230793,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 2000,
+        "target": 0.95,
+        "upperProbability": 0.7598283528150672,
+        "decision": "ruled-out-by-upper-bound",
+        "meetsTarget": false,
+        "exactPlannerCalls": 0
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.45373758539351383,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 5000,
+        "target": 0.95,
+        "upperProbability": 1,
+        "decision": "exact",
+        "meetsTarget": false,
+        "probability": 0.7794519104452948,
+        "exactPlannerCalls": 1
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.7794519104452948,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 9908,
+        "target": 0.95,
+        "upperProbability": 1,
+        "decision": "exact",
+        "meetsTarget": false,
+        "probability": 0.9499866276464866,
+        "exactPlannerCalls": 1
+      },
+      "exact": {
+        "meetsTarget": false,
+        "probability": 0.9499866276464866,
+        "exactPlannerCalls": 1
+      }
+    },
+    {
+      "guarded": {
+        "case": "LORAX",
+        "trials": 9909,
+        "target": 0.95,
+        "upperProbability": 1,
+        "decision": "exact",
+        "meetsTarget": true,
+        "probability": 0.9500017457990338,
+        "exactPlannerCalls": 1
+      },
+      "exact": {
+        "meetsTarget": true,
+        "probability": 0.9500017457990338,
+        "exactPlannerCalls": 1
+      }
+    }
+  ]
+}

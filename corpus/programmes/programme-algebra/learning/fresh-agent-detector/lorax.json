@@ -1,0 +1,67 @@
+{
+  "id": "AZ-127-iron-57-122keV-10ns-LORAX",
+  "question": "What is the probability of a 122.06 keV photon emitted within 10 ns by a prepared 136.47 keV iron-57 level and eventually registered in the LORAX full-energy peak in its cobalt-57 calibration geometry?",
+  "source": "corpus/programmes/admissibility/admissibility_127_transition_operators_selection_rules_and_lifetime_frontier.md",
+  "targetType": "finite-window-registered-peak-probability",
+  "facts": {
+    "preparation": "One ordinary electronically occupied iron-57 nucleus prepared at time zero in the 136.47 keV (5/2-) level, with no later driving or feeding. The detector comparison treats the emission ensemble as orientation-averaged, with the calibration source placement and attenuation.",
+    "event": "Source emission of the nuclear 122.06 keV photon within 10 ns followed by eventual full-energy-peak registration of that photon, in live acquisition with corrected peak acceptance.",
+    "eventType": "specific-absorbing-exit",
+    "regime": "unperturbed-intrinsic-decay",
+    "timeSeconds": 1e-8,
+    "survivalModel": "constant-total-hazard",
+    "lifetime": {
+      "type": "measured-intrinsic-lifetime",
+      "seconds": 1.2594727706960653e-8,
+      "reportedUncertaintySeconds": 2.4525815695112383e-11,
+      "source": "https://link.springer.com/article/10.1140/epja/s10050-025-01659-6",
+      "measuredPopulationHalfLife": {
+        "nanoseconds": 8.73,
+        "uncertaintyNanoseconds": 0.017,
+        "location": "Bergmann, Javora and Smolyanskiy (2025), §4 Eq. (6), 136.5-keV level."
+      }
+    },
+    "requestedBranch": "gamma-122.06-keV",
+    "branching": {
+      "type": "constant-competing-absorbing-exits",
+      "relativeRates": {
+        "gamma-122.06-keV": 100,
+        "internal-conversion-to-14.4-keV": 2.36,
+        "gamma-136.47-keV": 12.53,
+        "internal-conversion-to-ground": 1.863211
+      },
+      "source": "https://www.bipm.org/documents/d/guest/co-57_report",
+      "evaluatedPhotonWeights": {
+        "gamma122": 100,
+        "gamma136": 12.53,
+        "uncertaintyGamma136": 0.18,
+        "location": "Comments Table 5, Adopted column; scale has gamma(2,1) fixed at 100."
+      },
+      "evaluatedTotalInternalConversionCoefficients": {
+        "gamma122": 0.0236,
+        "uncertaintyGamma122": 0.0004,
+        "gamma136": 0.1487,
+        "uncertaintyGamma136": 0.0021,
+        "location": "Evaluated table §2.2, gamma(2,1)(Fe) and gamma(2,0)(Fe) rows, alpha_T column."
+      }
+    },
+    "lineEnergyKeV": 122.06,
+    "detector": {
+      "name": "LORAX",
+      "type": "absolute-peak-acceptance",
+      "branch": "gamma-122.06-keV",
+      "lineEnergyKeV": 122.06,
+      "geometry": "Collins et al. (2015) LORAX geometry: 1 g aqueous standard in a 2 mL ISO ampoule at 16.5 cm perpendicular distance from the detector window. Table 3 refers to the water-corrected efficiency.",
+      "probability": 0.00388,
+      "source": "https://doi.org/10.1016/j.apradiso.2015.04.008",
+      "publishedCalibration": {
+        "radionuclide": "cobalt-57",
+        "location": "§2.3.1, Table 3, 122.06 keV row",
+        "percent": 0.388,
+        "standardUncertaintyPercent": 0.003,
+        "tableCrosscheck": "https://indico.cern.ch/event/1339442/attachments/2943554/5173805/231Regan.pdf"
+      },
+      "eventSelection": "emission-window-eventual-peak"
+    }
+  }
+}

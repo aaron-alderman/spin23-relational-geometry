@@ -1,0 +1,37 @@
+{
+  "evidenceFamily": "Cowie-et-al-Si-SiO2-trap-Figshare-25378318-HistoryData143-minus7V",
+  "paper": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11536084/",
+  "dataset": "https://doi.org/10.6084/m9.figshare.25378318",
+  "trace": {
+    "file": "HistoryData143.dat",
+    "download": "https://ndownloader.figshare.com/files/44966167",
+    "sha256": "f14abbd86872877c3ddead3794c3bed348785431a3a7283b3898de155ca5fd79",
+    "biasVolts": -7.0,
+    "samplePeriodSeconds": 0.02,
+    "stateReadouts": [
+      "Excitation (V)",
+      "Frequency Shift (Hz)"
+    ]
+  },
+  "design": {
+    "calibrationFraction": 0.4,
+    "windowSeconds": [
+      1,
+      2,
+      4
+    ],
+    "primaryWindowSeconds": 4,
+    "hysteresisHalfWidthAsFractionOfCentroidGap": 0.1,
+    "startState": "low primary readout",
+    "windowSelection": "Fixed disjoint windows per horizon. Count only windows starting in the low primary readout state.",
+    "hypotheses": [
+      "An absorbing departure makes first observed exit and final high state the same event.",
+      "A two-state process with return permits departure followed by a low endpoint."
+    ],
+    "primaryDiscriminator": "Count windows with an observed departure and a low endpoint, and report how many also show that path on the second channel. Compare predicted and observed event frequencies descriptively."
+  },
+  "selection": {
+    "startSample": 14744,
+    "sampleCount": 10256
+  }
+}

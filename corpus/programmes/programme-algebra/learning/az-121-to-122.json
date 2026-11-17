@@ -1,0 +1,30 @@
+{
+  "id": "AZ-121-to-AZ-122",
+  "authority": "Finite numerical model. Material calibration and physical realization remain open.",
+  "journey": [
+    {
+      "id": "AZ-121",
+      "observation": "At the selected energy, the contact bond has a scattering-to-bound overlap of magnitude 0.02147052191385749. The incoming state is normalized per unit energy.",
+      "attempt": "Square the overlap to obtain the chance of capture of an incoming packet.",
+      "inputType": "energy-normalized-amplitude-density",
+      "requestedType": "finite-window-event-probability",
+      "disposition": "refused",
+      "reason": "The squared overlap is still density-normalized. The packet, phonon channels and readout time are missing.",
+      "source": "corpus/programmes/admissibility/admissibility_121_the_capture_matrix_element_is_a_scattering_density_not_a_two_level_number.md"
+    },
+    {
+      "id": "AZ-122",
+      "observation": "Finite matter and phonon sectors evolve together under one Hermitian Hamiltonian.",
+      "inputType": "energy-normalized-amplitude-density",
+      "outputType": "finite-window-event-probability",
+      "bridge": "normalized-state-projection",
+      "admission": "Multiply each continuum bin by sqrt(delta E), form and normalize the incoming packet, and include the bound-plus-one-phonon sector.",
+      "transport": "Evolve the complex state with all eight bond contributions and their phases intact.",
+      "readout": "Project onto bound electron plus one phonon at time 60.",
+      "limits": "Common engineered derivative D=0.2, finite grids, one phonon. The result is reversible over the tested time window.",
+      "disposition": "verified",
+      "source": "corpus/programmes/admissibility/admissibility_122_a_normalized_packet_turns_the_overlap_density_into_a_capture_probability.md",
+      "receipt": "evidence/data/ssh-wavepacket-phonon-capture-gate-v1.json"
+    }
+  ]
+}

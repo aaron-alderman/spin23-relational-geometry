@@ -1,0 +1,23 @@
+{
+  "calibrationPlan": {
+    "file": "detector-timing-tolerance-plan.json",
+    "sha256": "d2a39b24a1ec471f6d1bbf6a948a01a0d4880cea512f7d039b990af3a044ca31"
+  },
+  "frozenCalibration": {
+    "file": "detector-timing-tolerance-calibration.json",
+    "sha256": "7ef856c5abb91d8f87a40486e2eb6e76f23706da0380587c7bd7310914b2ca67"
+  },
+  "archivePrefix": "https://uu.open.care.snd.se/downloads/public/2024-172/1/data/calibration",
+  "target": {
+    "id": "CalirationSample2_26jan2024",
+    "fileBytes": 1054552935,
+    "treeEntries": 146036350,
+    "infoSha256": "df8672e5b6deaddb8ec50048f02c3d12c0cf8ec99c5ff6d242c90e6333d04ff7",
+    "settingsSha256": "203a037d0bb2b880511aba2fefc20026b061a3a904f0a40686aad452469ab913"
+  },
+  "entryStarts": [1000000, 10200000, 19400000],
+  "entriesPerWindow": 9000000,
+  "runOrder": "historical-before-reference",
+  "design": "Carry the frozen near-tie tolerance and reference unchanged to a calibration filter sample excluded from prior analysis. Require matching settings and chronology disjoint from the reference and tolerance training. Screen the three declared windows in entry order. Pair late blocks only for the first fully supported changed choice. Preserve agreements and support failures.",
+  "boundary": "The target is new to these routing experiments and was acquired before the reference runs. This is a held-out historical sample transfer on the same apparatus and settings. Windows in the target share one sample and acquisition."
+}

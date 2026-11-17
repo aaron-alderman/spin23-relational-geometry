@@ -1,0 +1,399 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/budget-cache-replay.json",
+      "sha256": "438df11e66dd623eee8c119423878ee8a36d75ada11c26918a284d2cd1cb80c3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json",
+      "sha256": "51b2d77201f375f71c41943eac6a52da9fe455c108d763eb3d4012a20adfa9a3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/bart.json",
+      "sha256": "32d61d52dfd61797bb7e7ed341a298dba72a37dac75c46af299874d9ea2def69"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/lorax.json",
+      "sha256": "b28f8961d7a0d2a688cf61fe190ee75323299f23b4c2964a4300ef2fc64d7291"
+    }
+  ],
+  "operation": {
+    "id": "calibration-box/reuse-admitted-corner-dependencies",
+    "inputType": "successful-robust-planner-reply",
+    "outputType": "corner-log-miss-with-dependency-identities",
+    "compose": [
+      "constant-total-hazard and window/lifetime -> exit probability",
+      "requested branch and complete ordered corner rates -> branch fraction",
+      "exit key, branch key and matched corner acceptance -> negative log miss per independent preparation"
+    ],
+    "boundary": "Keep case admission and numeric dependency identities separate. Missing or failed admission cannot borrow a result, even when the numeric inputs match. This replay measures post-admission reconstruction; the existing admission call already evaluates the corner."
+  },
+  "postAdmissionEvaluations": {
+    "perStageWithoutReuse": 5,
+    "withReuse": {
+      "exit": 2,
+      "branch": 2,
+      "corner": 4
+    }
+  },
+  "rows": [
+    {
+      "label": "BART",
+      "admission": {
+        "factsSha256": "98806e38a99cd7c9e9bc415af888f4680bba817b72cb5248f89bbc28c47f9267",
+        "replySha256": "91e20faededf1695e174947cdc9140f92e1a9a4583f8a97fd8d23d4de731df4a",
+        "origin": "pinned archived planner run",
+        "status": "executed"
+      },
+      "exit": {
+        "key": "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+        "inputs": [
+          "constant-total-hazard",
+          0.9509278800410819
+        ],
+        "value": 0.6136176593891696,
+        "recordedBy": "BART",
+        "reused": false
+      },
+      "branchShare": {
+        "key": "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+        "inputs": [
+          "gamma-122.06-keV",
+          [
+            [
+              "gamma-122.06-keV",
+              100
+            ],
+            [
+              "internal-conversion-to-14.4-keV",
+              2.4
+            ],
+            [
+              "gamma-136.47-keV",
+              12.71
+            ],
+            [
+              "internal-conversion-to-ground",
+              1.916668
+            ]
+          ]
+        ],
+        "value": 0.8545060857410721,
+        "recordedBy": "BART",
+        "reused": false
+      },
+      "logMiss": {
+        "key": "806e9866cd92f8039d63f6274c7e1346865c7bfbd94fa271119993aef58d5de8",
+        "inputs": [
+          "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+          "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+          0.00159
+        ],
+        "value": 0.0008340483602379818,
+        "recordedBy": "BART",
+        "reused": false
+      },
+      "nominalMinimum": 5465,
+      "boundary": [
+        {
+          "trials": 5521,
+          "meetsTarget": false
+        },
+        {
+          "trials": 5522,
+          "meetsTarget": true
+        }
+      ]
+    },
+    {
+      "label": "shifted-nominal",
+      "admission": {
+        "factsSha256": "7bb9618a8d1df8e639624eb7dd587acc80587fb6492a59cc04494412f343f7b3",
+        "replySha256": "9e5a15f073f290287b97c32be6414ad139c9a6d5871a62b4641cf097f45913a3",
+        "origin": "new exact planner run",
+        "status": "executed"
+      },
+      "exit": {
+        "key": "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+        "inputs": [
+          "constant-total-hazard",
+          0.9509278800410819
+        ],
+        "value": 0.6136176593891696,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "branchShare": {
+        "key": "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+        "inputs": [
+          "gamma-122.06-keV",
+          [
+            [
+              "gamma-122.06-keV",
+              100
+            ],
+            [
+              "internal-conversion-to-14.4-keV",
+              2.4
+            ],
+            [
+              "gamma-136.47-keV",
+              12.71
+            ],
+            [
+              "internal-conversion-to-ground",
+              1.916668
+            ]
+          ]
+        ],
+        "value": 0.8545060857410721,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "logMiss": {
+        "key": "806e9866cd92f8039d63f6274c7e1346865c7bfbd94fa271119993aef58d5de8",
+        "inputs": [
+          "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+          "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+          0.00159
+        ],
+        "value": 0.0008340483602379818,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "nominalMinimum": 5448,
+      "boundary": [
+        {
+          "trials": 5521,
+          "meetsTarget": false
+        },
+        {
+          "trials": 5522,
+          "meetsTarget": true
+        }
+      ]
+    },
+    {
+      "label": "LORAX",
+      "admission": {
+        "factsSha256": "275cbf9e62fcf0827a1b9d26350dddfab3aa20cb3fea64beb73a909a6fcc4a89",
+        "replySha256": "e2192737369d9ea53c396fe6319a26f202f230120420d274a344a60cf6eaa2eb",
+        "origin": "pinned archived planner run",
+        "status": "executed"
+      },
+      "exit": {
+        "key": "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+        "inputs": [
+          "constant-total-hazard",
+          0.9509278800410819
+        ],
+        "value": 0.6136176593891696,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "branchShare": {
+        "key": "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+        "inputs": [
+          "gamma-122.06-keV",
+          [
+            [
+              "gamma-122.06-keV",
+              100
+            ],
+            [
+              "internal-conversion-to-14.4-keV",
+              2.4
+            ],
+            [
+              "gamma-136.47-keV",
+              12.71
+            ],
+            [
+              "internal-conversion-to-ground",
+              1.916668
+            ]
+          ]
+        ],
+        "value": 0.8545060857410721,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "logMiss": {
+        "key": "1c59b3d0740e1b03c7c91120951838a04b2a86cccf9bdd58187aec8e5371c4b8",
+        "inputs": [
+          "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+          "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+          0.00385
+        ],
+        "value": 0.0020207494329907397,
+        "recordedBy": "LORAX",
+        "reused": false
+      },
+      "nominalMinimum": 2254,
+      "boundary": [
+        {
+          "trials": 2278,
+          "meetsTarget": false
+        },
+        {
+          "trials": 2279,
+          "meetsTarget": true
+        }
+      ]
+    },
+    {
+      "label": "shorter-window",
+      "admission": {
+        "factsSha256": "310773bc4a8df5d289c7f54c6354e24a397b67f2768d2f9ebfb3af8fe820415b",
+        "replySha256": "8af8da45f23f4e6d5873d5ec9031a75e840608fae66d5028f67ad814d136c01f",
+        "origin": "new exact planner run",
+        "status": "executed"
+      },
+      "exit": {
+        "key": "be9af1bac49cab3bbf75bb972d3be9fc5beca5b5d8a170e35551e40d62f50d40",
+        "inputs": [
+          "constant-total-hazard",
+          0.9319093224402601
+        ],
+        "value": 0.6061989011638147,
+        "recordedBy": "shorter-window",
+        "reused": false
+      },
+      "branchShare": {
+        "key": "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+        "inputs": [
+          "gamma-122.06-keV",
+          [
+            [
+              "gamma-122.06-keV",
+              100
+            ],
+            [
+              "internal-conversion-to-14.4-keV",
+              2.4
+            ],
+            [
+              "gamma-136.47-keV",
+              12.71
+            ],
+            [
+              "internal-conversion-to-ground",
+              1.916668
+            ]
+          ]
+        ],
+        "value": 0.8545060857410721,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "logMiss": {
+        "key": "41ba375444d21db5be15bde12b4ff694960998f7c66556e1101febf033fbe715",
+        "inputs": [
+          "be9af1bac49cab3bbf75bb972d3be9fc5beca5b5d8a170e35551e40d62f50d40",
+          "9455cc5af3e9010b95ffb1b03772a23d23f13eb0eed4bca29ece66e8d55451b3",
+          0.00159
+        ],
+        "value": 0.0008239603959940005,
+        "recordedBy": "shorter-window",
+        "reused": false
+      },
+      "nominalMinimum": 5532,
+      "boundary": [
+        {
+          "trials": 5589,
+          "meetsTarget": false
+        },
+        {
+          "trials": 5590,
+          "meetsTarget": true
+        }
+      ]
+    },
+    {
+      "label": "higher-competing-rate",
+      "admission": {
+        "factsSha256": "c076f034ee5a146705420910cc8035eba1115e81616f126f41fa1e4ebcec994d",
+        "replySha256": "fcc702a82b6f007e96029f6c8d817d38dd9eb9979b63bb63b7ff56e2d438c13a",
+        "origin": "new exact planner run",
+        "status": "executed"
+      },
+      "exit": {
+        "key": "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+        "inputs": [
+          "constant-total-hazard",
+          0.9509278800410819
+        ],
+        "value": 0.6136176593891696,
+        "recordedBy": "BART",
+        "reused": true
+      },
+      "branchShare": {
+        "key": "a283b495273008cfb8077a7a2942c376c004934fc47d189ac0476110afe67797",
+        "inputs": [
+          "gamma-122.06-keV",
+          [
+            [
+              "gamma-122.06-keV",
+              100
+            ],
+            [
+              "internal-conversion-to-14.4-keV",
+              2.4
+            ],
+            [
+              "gamma-136.47-keV",
+              12.964200000000002
+            ],
+            [
+              "internal-conversion-to-ground",
+              1.916668
+            ]
+          ]
+        ],
+        "value": 0.8526539895663118,
+        "recordedBy": "higher-competing-rate",
+        "reused": false
+      },
+      "logMiss": {
+        "key": "e63b287333ff2b50e2e3ce24937e12fe32bddde93f3b74a83c4509f5aaf84631",
+        "inputs": [
+          "a7bb7d6777ffe1c7cef8f12623337c33c3db0ee63c69cee6b1bf756886e602dc",
+          "a283b495273008cfb8077a7a2942c376c004934fc47d189ac0476110afe67797",
+          0.00159
+        ],
+        "value": 0.0008322398526356715,
+        "recordedBy": "higher-competing-rate",
+        "reused": false
+      },
+      "nominalMinimum": 5465,
+      "boundary": [
+        {
+          "trials": 5533,
+          "meetsTarget": false
+        },
+        {
+          "trials": 5534,
+          "meetsTarget": true
+        }
+      ]
+    },
+    {
+      "label": "incompatible-acquisition",
+      "admission": {
+        "factsSha256": "d8f03aa515ba7043ad695bf3fe5ad68178abe5348666dd15bda217f77d1cba4d",
+        "replySha256": "c005a979bf30dcf68991cfc74e44a8d1ea77e859d008c03403fc5967bb65f17f",
+        "origin": "new exact planner run",
+        "status": "no-complete-chain"
+      }
+    },
+    {
+      "label": "dependent-preparations",
+      "admission": {
+        "factsSha256": "c19f280405a96553512810203849955d65b7fca7c1bb09caf13e52f1e2472a95",
+        "replySha256": "8cc91aa28fba54f7ea8470eb77352020d0d543d1611ab4f98a3dd0e1f645c9ed",
+        "origin": "new exact planner run",
+        "status": "no-complete-chain"
+      }
+    }
+  ]
+}

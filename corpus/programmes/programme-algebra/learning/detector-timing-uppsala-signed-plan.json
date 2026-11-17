@@ -1,0 +1,18 @@
+{
+  "localProfilePlan": {
+    "file": "detector-timing-uppsala-profile-plan.json",
+    "sha256": "ac27f684e919bda3a1abb46c351fe88de326f79d5b57a9683503474edd4e389e"
+  },
+  "cutFractions": [0.4, 0.6, 0.8],
+  "signedBinEdgesNanoseconds": [-200, -100, -50, -10, 0, 10, 50, 100, 200],
+  "translationCandidatesNanoseconds": [-80, -70, -60, -50, -40, -30, -20, -10, 0, 10, 20, 30, 40, 50, 60, 70, 80],
+  "minimumEarlyTargetNetWidePairs": 100,
+  "minimumLateBlockNetWidePairs": 50,
+  "design": {
+    "support": "Keep the previously supported cobalt bands. Apply an early target floor of 100 wide net pairs before fitting and a late floor of 50 wide net pairs before scoring a band in a block. Report the raw counts for excluded bands.",
+    "template": "Build signed-bin profiles from the second half of cobalt with the previously frozen centers. Evaluate translations of that template. Each bin includes its lower edge, and the first and last bins absorb all tails in the unchanged wide reservoirs.",
+    "fit": "Choose one shift per band on the first 40 percent of the target. Minimize half the sum of absolute bin-share discrepancies, breaking ties by absolute shift then lower signed shift.",
+    "score": "Compare the unchanged cobalt profile, translated cobalt profile and early target profile against three consecutive late blocks. A separate best-on-late shift is diagnostic only. Scores condition on the observed wide counts in each band."
+  },
+  "boundary": "Descriptive within-band score on signed background-subtracted net shares. Cobalt template sampling error is common to all scores. The three blocks share an acquisition, and all runs share one instrument. A poor shift result challenges the scanned cobalt template family without identifying the physical mechanism."
+}

@@ -1,0 +1,39 @@
+{
+  "lock": {
+    "path": "corpus/programmes/programme-algebra/learning/detector-count-surface-lock.json",
+    "sha256": "f77b8e0e5e48e38ad456752940535f361930bf927d577a3d5cdb74a10d199cd8"
+  },
+  "evidenceFamily": "Wu-et-al-2022-HPGe-surface-grid-Cs137",
+  "mode": "retrospective-surface-grid",
+  "criterion": {
+    "metric": "absolute-relative-error-to-positive-net-count",
+    "maximum": 0.15,
+    "interpretation": "The previous audit's engineering tolerance. It is not a confidence interval. The outcome was visible during source triage."
+  },
+  "decaysPerSecond": 24380,
+  "sourceFactor": 0.8501,
+  "predictions": [
+    {
+      "id": "cs137-grid-net-area",
+      "exposure": 6290040000,
+      "acceptance": 0.0000030486857456249993,
+      "candidates": [
+        {
+          "candidate": {
+            "expression": "product",
+            "scale": 1
+          },
+          "predictedNetPeakArea": 16301.819629828151
+        },
+        {
+          "candidate": {
+            "expression": "acceptance-only",
+            "scale": 0.4693312327943803,
+            "fittedAt": "BART"
+          },
+          "predictedNetPeakArea": 9000.062467543672
+        }
+      ]
+    }
+  ]
+}

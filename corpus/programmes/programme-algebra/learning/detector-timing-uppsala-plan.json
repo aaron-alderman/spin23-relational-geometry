@@ -1,0 +1,28 @@
+{
+  "dataset": "https://doi.org/10.57804/43jy-vw03",
+  "paper": "https://doi.org/10.1016/j.nima.2026.171461",
+  "evidenceFamily": "Arnqvist-Uppsala-2025-324-V1782-energy-calibration",
+  "archivePrefix": "https://api.researchdata.se/dataset/2025-324/1/file/data/measurements/energy_calibration/",
+  "files": {
+    "co60": {"path": "co60_600s/UNFILTERED/SData_co60_600s.root", "sha256": "db656058da790c3ead4058b1f983be26d38e29871dfe426c9337b480cb489d10"},
+    "cs137": {"path": "cs137_600s/UNFILTERED/SData_cs137_600s.root", "sha256": "fe974b5e30d74459040f758653a052ed5753bf259b431dd15b35ed46a80728f1"},
+    "na22": {"path": "na22_600s/UNFILTERED/SData_na22_600s.root", "sha256": "4f0040dfe239a5162c4653c7dccdcb0fa8132af67f12c2c04f053a322de854e4"}
+  },
+  "measuredChannels": [3, 4],
+  "timestampPicosecondsPerNanosecond": 1000,
+  "energyReferences": [
+    {"source": "cs137", "keV": 661.657, "approximateAdcByChannel": [1920, 1998]},
+    {"source": "co60", "keV": 1173.228, "approximateAdcByChannel": [3406, 3545]},
+    {"source": "co60", "keV": 1332.492, "approximateAdcByChannel": [3869, 4026]}
+  ],
+  "calibrationAdcRadius": 7,
+  "energyGateHalfWidthKeV": 6,
+  "calibrationLinePairKeV": [1173.228, 1332.492],
+  "scoreLinePairKeV": [511.0, 1274.537],
+  "delaySearchNanoseconds": 2000,
+  "alignmentHistogramStepNanoseconds": 20,
+  "gateHalfWidthsNanoseconds": [10, 50, 100, 200, 400],
+  "timeShiftControlsNanoseconds": [-50000, -25000, 25000, 50000],
+  "engineeringTransferToleranceInFraction": 0.1,
+  "boundary": "Predict hardware coincidence retention conditional on two full-energy selections and a wide reference timing window. Offline pair counts with shifted accidentals removed are neither absolute source-to-detector efficiency nor the probability of emission in a physical time window."
+}

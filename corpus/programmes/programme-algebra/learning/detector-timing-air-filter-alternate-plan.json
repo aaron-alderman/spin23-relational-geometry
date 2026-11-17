@@ -1,0 +1,13 @@
+{
+  "originalPlan": {
+    "file": "detector-timing-air-filter-plan.json",
+    "sha256": "154c800ef21bceac24e525aa0151b548c6a2dc1d2697d6d1592f31c7e6613a2c"
+  },
+  "originalScreen": {
+    "file": "detector-timing-air-filter-screen.json",
+    "sha256": "fe4dc3f44cbb54a72f2f1455e200e188582bcc93686208ea48e58f4154534c23"
+  },
+  "channels": [1, 2],
+  "reason": "The first prefix fails the wide-count floor for channels 3 and 4 after an ADC rail failure. Screen the other horizontal pair identified in the apparatus description. Keep the same cached pulse samples and all other screen parameters.",
+  "boundary": "Two separately started acquisitions on the same spiked filter. Channels 1 and 2 form an alternative geometry, so a supported subset would qualify for its own signed-profile test. This screen is conditional on the original pair failing and uses the same acquired pulses."
+}

@@ -1,0 +1,15 @@
+{
+  "evidenceFamily": "Bargerbos-et-al-device-B-run-466-plunger-row-74",
+  "referencePlanSha256": "e1fe7e2a0dca0f065d4759ecc8426f10cc65604ec19f8b5b8863f0e30867901e",
+  "calibrationSha256": "006d0aea2157213bc48da20a512e556afadc7802b2a71d01dd74a087fbb45ee3",
+  "forecastReplaySha256": "0b1869356bbdbed0ae78ce3c120355aa4c79c02163334979062610800afc40c7",
+  "scoreReplicateIndices": [9],
+  "calibrationReplicateIndex": 0,
+  "forecastReferenceReplicateIndex": 3,
+  "windowSteps": 50,
+  "stridesInDecodedSamples": [1, 2, 5, 10],
+  "startingLevels": [0, 1],
+  "maximumAbsoluteFrequencyError": 0.01,
+  "design": "Use repeat 9, the remaining unscored archive member at this device and setting. Use the previously fixed five-sample I/Q decoder, disjoint 50-step windows, and the forecasts already in return-routes-replay.json. Apply exactly the same windows to every retention stride.",
+  "criterion": "Qualify each observable and starting level separately for this matched setting and 50-step horizon if all four grid comparisons differ from the observed frequency by at most one percentage point. This is a point-error requirement on a held trace, not a confidence interval, and it does not qualify any other device, decoder, time horizon, or continuous first-exit probability."
+}

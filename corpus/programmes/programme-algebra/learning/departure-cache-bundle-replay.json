@@ -1,0 +1,3459 @@
+{
+  "sources": [
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-bundle-plan.json",
+      "sha256": "a54798b5ae5d224cfd0798dd64119863db13d1386759e30d0140a58290f5d5b7"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-replacement-plan.json",
+      "sha256": "467d5de6ac7a5a7b0b8f03dc3f409628fa31b13ac6f921bf5219eabaa98d797f"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-replacement-replay.json",
+      "sha256": "c86de02542c5dabc069e04ddafbb0b30a425afe73b2a102816cb87cf647452e3"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-cache-capacity-plan.json",
+      "sha256": "0bc6724a4a3bf1fae2c8a763eea460acd87d37d5b9e8ca83f1f84df592cdc4af"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-partition-prepared.json",
+      "sha256": "517e51101e27752381753a3b7b1f708fc9e0115711cf25d633b060c7b5d691cb"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-prepared.json",
+      "sha256": "5a2e4d9e68325c5dd7a68403485a9bfbd7dd221dee9aa98623f24248d14c73c4"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-index-replay.json",
+      "sha256": "9e342ee3a1994dd0fc204abbe5dba0ea7f9e0ef9a78c690efb888d5fcb88f9c2"
+    },
+    {
+      "path": "corpus/programmes/programme-algebra/learning/departure-change-partition-plan.json",
+      "sha256": "f9e2d37d0dddfdad92f292482b72ae108ef887e8457c5920ecfbd5745f32c781"
+    }
+  ],
+  "controls": {
+    "exactFitBeatSequentialEviction": true,
+    "completedUseWeightCanChangeVictim": true
+  },
+  "heldComparison": {
+    "encoded-cost vs recency": {
+      "better": 9,
+      "equal": 12,
+      "worse": 3,
+      "netBytesSaved": 24492,
+      "bestAndWorstCases": [
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "additionalBytes": -5548
+        },
+        {
+          "trace": "parity",
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "additionalBytes": 2546
+        }
+      ]
+    },
+    "bundle-bytes vs recency": {
+      "better": 11,
+      "equal": 10,
+      "worse": 3,
+      "netBytesSaved": 21780,
+      "bestAndWorstCases": [
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "additionalBytes": -5220
+        },
+        {
+          "trace": "parity",
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "additionalBytes": 2784
+        }
+      ]
+    },
+    "bundle-reuse vs recency": {
+      "better": 12,
+      "equal": 10,
+      "worse": 2,
+      "netBytesSaved": 46441,
+      "bestAndWorstCases": [
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "additionalBytes": -6320
+        },
+        {
+          "trace": "delft",
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "partition",
+          "additionalBytes": 1628
+        }
+      ]
+    },
+    "bundle-bytes vs encoded-cost": {
+      "better": 6,
+      "equal": 10,
+      "worse": 8,
+      "netBytesSaved": -2712,
+      "bestAndWorstCases": [
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "additionalBytes": -1722
+        },
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "additionalBytes": 2812
+        }
+      ]
+    },
+    "bundle-reuse vs bundle-bytes": {
+      "better": 11,
+      "equal": 10,
+      "worse": 3,
+      "netBytesSaved": 24661,
+      "bestAndWorstCases": [
+        {
+          "trace": "delft",
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "additionalBytes": -6680
+        },
+        {
+          "trace": "delft",
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "additionalBytes": 4560
+        }
+      ]
+    }
+  },
+  "traces": [
+    {
+      "trace": "parity",
+      "streams": [
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 10380,
+              "readBytes": {
+                "packed": 9300,
+                "root": 276,
+                "directory": 684,
+                "changes": 120
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 8674,
+                "directory": 608,
+                "changes": 96
+              },
+              "evictions": {
+                "changes displaced packed": 6,
+                "packed displaced packed": 518,
+                "packed displaced directory": 8,
+                "packed displaced changes": 11,
+                "directory displaced packed": 40,
+                "changes displaced changes": 4
+              },
+              "peakCacheWeight": 509
+            },
+            "encoded-cost": {
+              "totalBytes": 12092,
+              "readBytes": {
+                "packed": 11716,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11090,
+                "changes": 0
+              },
+              "evictions": {
+                "changes displaced packed": 1,
+                "packed displaced packed": 714,
+                "packed displaced changes": 12
+              },
+              "peakCacheWeight": 503
+            },
+            "bundle-bytes": {
+              "totalBytes": 12314,
+              "readBytes": {
+                "packed": 11698,
+                "root": 276,
+                "directory": 76,
+                "changes": 264
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11072,
+                "changes": 240
+              },
+              "evictions": {
+                "changes displaced packed": 19,
+                "packed displaced packed": 687,
+                "packed displaced changes": 10
+              },
+              "peakCacheWeight": 511,
+              "selectionWork": {
+                "bundleDecisions": 708,
+                "multiVictimDecisions": 8,
+                "candidateStatesExamined": 6079,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 8818,
+              "readBytes": {
+                "packed": 8418,
+                "root": 276,
+                "directory": 76,
+                "changes": 48
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 7792,
+                "changes": 24
+              },
+              "evictions": {
+                "changes displaced packed": 3,
+                "packed displaced packed": 493,
+                "packed displaced changes": 1,
+                "packed displaced directory": 1
+              },
+              "peakCacheWeight": 511,
+              "selectionWork": {
+                "bundleDecisions": 497,
+                "multiVictimDecisions": 1,
+                "candidateStatesExamined": 4387,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 10002,
+              "readBytes": {
+                "packed": 8770,
+                "root": 276,
+                "directory": 836,
+                "changes": 120
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 8144,
+                "directory": 760,
+                "changes": 96
+              },
+              "evictions": {
+                "packed displaced packed": 477,
+                "packed displaced directory": 11,
+                "directory displaced packed": 43,
+                "packed displaced changes": 9,
+                "changes displaced changes": 2,
+                "changes displaced packed": 6,
+                "directory displaced changes": 2
+              },
+              "peakCacheWeight": 509
+            },
+            "encoded-cost": {
+              "totalBytes": 11614,
+              "readBytes": {
+                "packed": 11238,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 10612,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 687,
+                "packed displaced changes": 11
+              },
+              "peakCacheWeight": 503
+            },
+            "bundle-bytes": {
+              "totalBytes": 11834,
+              "readBytes": {
+                "packed": 11218,
+                "root": 276,
+                "directory": 76,
+                "changes": 264
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 10592,
+                "changes": 240
+              },
+              "evictions": {
+                "packed displaced packed": 657,
+                "packed displaced changes": 10,
+                "changes displaced packed": 19
+              },
+              "peakCacheWeight": 511,
+              "selectionWork": {
+                "bundleDecisions": 677,
+                "multiVictimDecisions": 9,
+                "candidateStatesExamined": 5469,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 7370,
+              "readBytes": {
+                "packed": 6994,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 6368
+              },
+              "evictions": {
+                "packed displaced packed": 407,
+                "packed displaced directory": 1
+              },
+              "peakCacheWeight": 507,
+              "selectionWork": {
+                "bundleDecisions": 408,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 3437,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 9890,
+              "readBytes": {
+                "packed": 8630,
+                "root": 276,
+                "directory": 912,
+                "changes": 72
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 8004,
+                "directory": 836,
+                "changes": 48
+              },
+              "evictions": {
+                "packed displaced packed": 458,
+                "packed displaced directory": 12,
+                "directory displaced packed": 58,
+                "packed displaced changes": 12,
+                "changes displaced changes": 2,
+                "changes displaced packed": 3
+              },
+              "peakCacheWeight": 509
+            },
+            "encoded-cost": {
+              "totalBytes": 12436,
+              "readBytes": {
+                "packed": 12060,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11434,
+                "changes": 0
+              },
+              "evictions": {
+                "packed displaced packed": 741,
+                "packed displaced changes": 14
+              },
+              "peakCacheWeight": 503
+            },
+            "bundle-bytes": {
+              "totalBytes": 12674,
+              "readBytes": {
+                "packed": 12034,
+                "root": 276,
+                "directory": 76,
+                "changes": 288
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 11408,
+                "changes": 264
+              },
+              "evictions": {
+                "packed displaced packed": 707,
+                "packed displaced changes": 11,
+                "changes displaced packed": 20
+              },
+              "peakCacheWeight": 511,
+              "selectionWork": {
+                "bundleDecisions": 729,
+                "multiVictimDecisions": 9,
+                "candidateStatesExamined": 5734,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 7754,
+              "readBytes": {
+                "packed": 7378,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 6752
+              },
+              "evictions": {
+                "packed displaced packed": 431,
+                "packed displaced directory": 1
+              },
+              "peakCacheWeight": 507,
+              "selectionWork": {
+                "bundleDecisions": 432,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 3272,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "encoded-cost": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101
+            },
+            "bundle-bytes": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 376,
+              "readBytes": {
+                "packed": 0,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 101,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 3
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 154,
+          "policies": {
+            "recency": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "encoded-cost": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727
+            },
+            "bundle-bytes": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 1002,
+              "readBytes": {
+                "packed": 626,
+                "root": 276,
+                "directory": 76,
+                "changes": 24
+              },
+              "rereadAfterEvictionBytes": {},
+              "evictions": {},
+              "peakCacheWeight": 727,
+              "selectionWork": {
+                "bundleDecisions": 0,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 0,
+                "entriesWithQueryHistory": 43
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "trace": "delft",
+      "streams": [
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 105567,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69436
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61348
+              },
+              "evictions": {
+                "changes displaced directory": 85,
+                "directory displaced changes": 87,
+                "changes displaced changes": 267,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105567,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69436
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61348
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 117,
+                "changes displaced changes": 237,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 104991,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 68860
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 60772
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 87,
+                "changes displaced changes": 264,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 468,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 1099,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 104991,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 68860
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 60772
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 87,
+                "changes displaced changes": 264,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 468,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 1099,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 189748,
+              "readBytes": {
+                "packed": 114655,
+                "root": 639,
+                "directory": 27284,
+                "changes": 47170
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92730,
+                "directory": 25650,
+                "changes": 39082
+              },
+              "evictions": {
+                "packed displaced packed": 6724,
+                "directory displaced packed": 257,
+                "changes displaced packed": 187,
+                "changes displaced directory": 63,
+                "directory displaced changes": 61,
+                "packed displaced directory": 9,
+                "changes displaced changes": 165,
+                "directory displaced directory": 18,
+                "packed displaced changes": 13
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 185780,
+              "readBytes": {
+                "packed": 114639,
+                "root": 639,
+                "directory": 24244,
+                "changes": 46258
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92714,
+                "directory": 22610,
+                "changes": 38170
+              },
+              "evictions": {
+                "packed displaced packed": 7004,
+                "directory displaced packed": 108,
+                "changes displaced packed": 55,
+                "changes displaced directory": 61,
+                "directory displaced changes": 78,
+                "changes displaced changes": 152,
+                "directory displaced directory": 19,
+                "packed displaced changes": 5
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 185588,
+              "readBytes": {
+                "packed": 114639,
+                "root": 639,
+                "directory": 24244,
+                "changes": 46066
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92714,
+                "directory": 22610,
+                "changes": 37978
+              },
+              "evictions": {
+                "packed displaced packed": 7055,
+                "directory displaced packed": 32,
+                "changes displaced directory": 61,
+                "directory displaced changes": 63,
+                "changes displaced packed": 79,
+                "changes displaced changes": 166,
+                "directory displaced directory": 19,
+                "packed displaced changes": 5
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 7375,
+                "multiVictimDecisions": 24,
+                "candidateStatesExamined": 32753,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 185460,
+              "readBytes": {
+                "packed": 114511,
+                "root": 639,
+                "directory": 24244,
+                "changes": 46066
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 92586,
+                "directory": 22610,
+                "changes": 37978
+              },
+              "evictions": {
+                "packed displaced packed": 7047,
+                "directory displaced packed": 32,
+                "changes displaced directory": 61,
+                "directory displaced changes": 63,
+                "changes displaced packed": 79,
+                "changes displaced changes": 166,
+                "directory displaced directory": 19,
+                "packed displaced changes": 5
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 7367,
+                "multiVictimDecisions": 24,
+                "candidateStatesExamined": 32718,
+                "entriesWithQueryHistory": 1418
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 75271,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 61636
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 11362,
+                "changes": 53548
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 237,
+                "changes displaced directory": 41,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 72211,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 6612,
+                "changes": 64960
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56872,
+                "directory": 4978
+              },
+              "evictions": {
+                "directory displaced changes": 37,
+                "changes displaced changes": 293,
+                "changes displaced directory": 19
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 73783,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12388,
+                "changes": 60756
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 10754,
+                "changes": 52668
+              },
+              "evictions": {
+                "directory displaced changes": 16,
+                "changes displaced changes": 291,
+                "directory displaced directory": 27,
+                "changes displaced directory": 12
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 339,
+                "multiVictimDecisions": 7,
+                "candidateStatesExamined": 1578,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 69399,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 11780,
+                "changes": 56980
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 10146,
+                "changes": 48892
+              },
+              "evictions": {
+                "directory displaced changes": 24,
+                "changes displaced changes": 265,
+                "directory displaced directory": 19,
+                "changes displaced directory": 18
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 317,
+                "multiVictimDecisions": 9,
+                "candidateStatesExamined": 1429,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 170248,
+              "readBytes": {
+                "packed": 112143,
+                "root": 639,
+                "directory": 11172,
+                "changes": 46294
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 90218,
+                "directory": 9538,
+                "changes": 38206
+              },
+              "evictions": {
+                "packed displaced packed": 6039,
+                "directory displaced packed": 262,
+                "changes displaced packed": 639,
+                "directory displaced changes": 45,
+                "changes displaced changes": 140,
+                "changes displaced directory": 25,
+                "packed displaced changes": 48,
+                "packed displaced directory": 12
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 166072,
+              "readBytes": {
+                "packed": 113439,
+                "root": 639,
+                "directory": 5700,
+                "changes": 46294
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 91514,
+                "directory": 4066,
+                "changes": 38206
+              },
+              "evictions": {
+                "packed displaced packed": 6411,
+                "directory displaced packed": 52,
+                "changes displaced packed": 596,
+                "directory displaced changes": 31,
+                "changes displaced changes": 169,
+                "changes displaced directory": 12,
+                "packed displaced directory": 5,
+                "packed displaced changes": 33
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 166364,
+              "readBytes": {
+                "packed": 112175,
+                "root": 639,
+                "directory": 9044,
+                "changes": 44506
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 90250,
+                "directory": 7410,
+                "changes": 36418
+              },
+              "evictions": {
+                "packed displaced packed": 6440,
+                "directory displaced packed": 44,
+                "changes displaced packed": 458,
+                "directory displaced changes": 20,
+                "changes displaced changes": 168,
+                "changes displaced directory": 15,
+                "directory displaced directory": 15,
+                "packed displaced changes": 37
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 6731,
+                "multiVictimDecisions": 72,
+                "candidateStatesExamined": 32202,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 164916,
+              "readBytes": {
+                "packed": 112175,
+                "root": 639,
+                "directory": 8436,
+                "changes": 43666
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 90250,
+                "directory": 6802,
+                "changes": 35578
+              },
+              "evictions": {
+                "packed displaced packed": 6420,
+                "directory displaced packed": 45,
+                "changes displaced packed": 477,
+                "directory displaced changes": 25,
+                "changes displaced changes": 161,
+                "changes displaced directory": 16,
+                "directory displaced directory": 10,
+                "packed displaced changes": 35,
+                "packed displaced directory": 2
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 6706,
+                "multiVictimDecisions": 76,
+                "candidateStatesExamined": 33385,
+                "entriesWithQueryHistory": 1418
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 28351,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4788,
+                "changes": 22924
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 3154,
+                "changes": 14836
+              },
+              "evictions": {
+                "changes displaced directory": 13,
+                "changes displaced changes": 69,
+                "directory displaced changes": 13
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 29163,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 26776
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 18688,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 102,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8186
+            },
+            "bundle-bytes": {
+              "totalBytes": 25647,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 2356,
+                "changes": 22652
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 14564,
+                "directory": 722
+              },
+              "evictions": {
+                "changes displaced changes": 79,
+                "directory displaced changes": 3,
+                "changes displaced directory": 2,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 85,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 377,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 23763,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 3268,
+                "changes": 19856
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 11768,
+                "directory": 1634
+              },
+              "evictions": {
+                "changes displaced changes": 58,
+                "directory displaced changes": 9,
+                "changes displaced directory": 7
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 71,
+                "multiVictimDecisions": 3,
+                "candidateStatesExamined": 328,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "reference",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 141936,
+              "readBytes": {
+                "packed": 100175,
+                "root": 639,
+                "directory": 7524,
+                "changes": 33598
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 78250,
+                "directory": 5890,
+                "changes": 25510
+              },
+              "evictions": {
+                "packed displaced packed": 4511,
+                "directory displaced packed": 266,
+                "changes displaced packed": 1031,
+                "changes displaced changes": 70,
+                "directory displaced directory": 4,
+                "directory displaced changes": 15,
+                "changes displaced directory": 10,
+                "packed displaced changes": 83,
+                "packed displaced directory": 11
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 141796,
+              "readBytes": {
+                "packed": 102351,
+                "root": 639,
+                "directory": 2356,
+                "changes": 36450
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 80426,
+                "changes": 28362,
+                "directory": 722
+              },
+              "evictions": {
+                "packed displaced packed": 4698,
+                "directory displaced packed": 133,
+                "changes displaced packed": 1151,
+                "changes displaced changes": 93,
+                "packed displaced changes": 91,
+                "changes displaced directory": 1,
+                "packed displaced directory": 5
+              },
+              "peakCacheWeight": 8192
+            },
+            "bundle-bytes": {
+              "totalBytes": 141568,
+              "readBytes": {
+                "packed": 100223,
+                "root": 639,
+                "directory": 4484,
+                "changes": 36222
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 78298,
+                "directory": 2850,
+                "changes": 28134
+              },
+              "evictions": {
+                "packed displaced packed": 4706,
+                "directory displaced packed": 204,
+                "changes displaced packed": 901,
+                "changes displaced changes": 94,
+                "directory displaced directory": 3,
+                "directory displaced changes": 3,
+                "packed displaced changes": 86,
+                "changes displaced directory": 11,
+                "packed displaced directory": 1
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 4988,
+                "multiVictimDecisions": 89,
+                "candidateStatesExamined": 28239,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 136836,
+              "readBytes": {
+                "packed": 100191,
+                "root": 639,
+                "directory": 4788,
+                "changes": 31218
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 78266,
+                "directory": 3154,
+                "changes": 23130
+              },
+              "evictions": {
+                "packed displaced packed": 4668,
+                "directory displaced packed": 202,
+                "changes displaced packed": 939,
+                "changes displaced changes": 71,
+                "directory displaced directory": 2,
+                "directory displaced changes": 6,
+                "changes displaced directory": 7,
+                "packed displaced changes": 80,
+                "packed displaced directory": 7
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 4928,
+                "multiVictimDecisions": 94,
+                "candidateStatesExamined": 28882,
+                "entriesWithQueryHistory": 1418
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 86,
+                "directory displaced changes": 87,
+                "changes displaced changes": 268,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 105219,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69088
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61000
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 87,
+                "changes displaced changes": 264,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 469,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 1102,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 106131,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 36404,
+                "changes": 69088
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 34770,
+                "changes": 61000
+              },
+              "evictions": {
+                "changes displaced directory": 91,
+                "directory displaced changes": 90,
+                "changes displaced changes": 261,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 472,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 1108,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 273157,
+              "readBytes": {
+                "packed": 219326,
+                "root": 639,
+                "directory": 20178,
+                "changes": 33014
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 197353,
+                "directory": 18544,
+                "changes": 24926
+              },
+              "evictions": {
+                "packed displaced packed": 13177,
+                "directory displaced packed": 311,
+                "changes displaced packed": 222,
+                "changes displaced directory": 48,
+                "directory displaced changes": 40,
+                "changes displaced changes": 109,
+                "packed displaced directory": 9,
+                "packed displaced changes": 17,
+                "directory displaced directory": 10
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 268369,
+              "readBytes": {
+                "packed": 219326,
+                "root": 639,
+                "directory": 16530,
+                "changes": 31874
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 197353,
+                "directory": 14896,
+                "changes": 23786
+              },
+              "evictions": {
+                "packed displaced packed": 13543,
+                "directory displaced packed": 111,
+                "changes displaced packed": 56,
+                "changes displaced directory": 44,
+                "directory displaced changes": 54,
+                "changes displaced changes": 104,
+                "packed displaced changes": 3,
+                "directory displaced directory": 11
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 267937,
+              "readBytes": {
+                "packed": 219278,
+                "root": 639,
+                "directory": 16530,
+                "changes": 31490
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 197305,
+                "directory": 14896,
+                "changes": 23402
+              },
+              "evictions": {
+                "packed displaced packed": 13601,
+                "directory displaced packed": 34,
+                "changes displaced directory": 44,
+                "directory displaced changes": 45,
+                "changes displaced packed": 65,
+                "changes displaced changes": 111,
+                "packed displaced changes": 3,
+                "directory displaced directory": 11
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 13819,
+                "multiVictimDecisions": 22,
+                "candidateStatesExamined": 58264,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 267905,
+              "readBytes": {
+                "packed": 219246,
+                "root": 639,
+                "directory": 16530,
+                "changes": 31490
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 197273,
+                "directory": 14896,
+                "changes": 23402
+              },
+              "evictions": {
+                "packed displaced packed": 13599,
+                "directory displaced packed": 29,
+                "changes displaced directory": 44,
+                "directory displaced changes": 46,
+                "changes displaced packed": 70,
+                "changes displaced changes": 110,
+                "packed displaced changes": 3,
+                "directory displaced directory": 11
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 13817,
+                "multiVictimDecisions": 22,
+                "candidateStatesExamined": 58271,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 74895,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 61260
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 11362,
+                "changes": 53172
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 234,
+                "changes displaced directory": 41,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 72443,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 7220,
+                "changes": 64584
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56496,
+                "directory": 5586
+              },
+              "evictions": {
+                "directory displaced changes": 41,
+                "changes displaced changes": 286,
+                "changes displaced directory": 21
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 75255,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 10260,
+                "changes": 64356
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 8626,
+                "changes": 56268
+              },
+              "evictions": {
+                "directory displaced changes": 14,
+                "changes displaced changes": 309,
+                "directory displaced directory": 21,
+                "changes displaced directory": 12
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 352,
+                "multiVictimDecisions": 4,
+                "candidateStatesExamined": 1527,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 68575,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 10564,
+                "changes": 57372
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 49284,
+                "directory": 8930
+              },
+              "evictions": {
+                "directory displaced changes": 27,
+                "changes displaced changes": 262,
+                "changes displaced directory": 21,
+                "directory displaced directory": 13
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 316,
+                "multiVictimDecisions": 7,
+                "candidateStatesExamined": 1370,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 259937,
+              "readBytes": {
+                "packed": 217774,
+                "root": 639,
+                "directory": 8930,
+                "changes": 32594
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 195801,
+                "directory": 7296,
+                "changes": 24506
+              },
+              "evictions": {
+                "packed displaced packed": 12502,
+                "directory displaced packed": 336,
+                "changes displaced packed": 683,
+                "packed displaced changes": 50,
+                "packed displaced directory": 18,
+                "directory displaced changes": 24,
+                "changes displaced changes": 90,
+                "changes displaced directory": 11
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 254389,
+              "readBytes": {
+                "packed": 218446,
+                "root": 639,
+                "directory": 4066,
+                "changes": 31238
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 196473,
+                "changes": 23150,
+                "directory": 2432
+              },
+              "evictions": {
+                "packed displaced packed": 12966,
+                "directory displaced packed": 71,
+                "changes displaced packed": 583,
+                "packed displaced changes": 33,
+                "directory displaced changes": 20,
+                "changes displaced changes": 105,
+                "changes displaced directory": 4,
+                "packed displaced directory": 6
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 254809,
+              "readBytes": {
+                "packed": 218158,
+                "root": 639,
+                "directory": 5890,
+                "changes": 30122
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 196185,
+                "changes": 22034,
+                "directory": 4256
+              },
+              "evictions": {
+                "packed displaced packed": 13040,
+                "directory displaced packed": 44,
+                "changes displaced packed": 463,
+                "packed displaced changes": 38,
+                "directory displaced changes": 15,
+                "changes displaced changes": 100,
+                "changes displaced directory": 10,
+                "directory displaced directory": 8,
+                "packed displaced directory": 1
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 13250,
+                "multiVictimDecisions": 68,
+                "candidateStatesExamined": 60887,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 253720,
+              "readBytes": {
+                "packed": 218057,
+                "root": 639,
+                "directory": 5890,
+                "changes": 29134
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 196084,
+                "changes": 21046,
+                "directory": 4256
+              },
+              "evictions": {
+                "packed displaced packed": 13021,
+                "directory displaced packed": 44,
+                "changes displaced packed": 475,
+                "packed displaced changes": 32,
+                "directory displaced changes": 18,
+                "changes displaced changes": 98,
+                "changes displaced directory": 7,
+                "directory displaced directory": 7,
+                "packed displaced directory": 5
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 13225,
+                "multiVictimDecisions": 72,
+                "candidateStatesExamined": 65001,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 28579,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4788,
+                "changes": 23152
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 3154,
+                "changes": 15064
+              },
+              "evictions": {
+                "changes displaced directory": 13,
+                "changes displaced changes": 68,
+                "directory displaced changes": 14
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 29655,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 27268
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 19180,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 107,
+                "changes displaced directory": 2,
+                "directory displaced changes": 1
+              },
+              "peakCacheWeight": 8186
+            },
+            "bundle-bytes": {
+              "totalBytes": 27933,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 2052,
+                "changes": 25242
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 17154,
+                "directory": 418
+              },
+              "evictions": {
+                "changes displaced changes": 90,
+                "directory displaced changes": 4,
+                "changes displaced directory": 4
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 97,
+                "multiVictimDecisions": 1,
+                "candidateStatesExamined": 447,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 23997,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 2964,
+                "changes": 20394
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 12306,
+                "directory": 1330
+              },
+              "evictions": {
+                "changes displaced directory": 7,
+                "changes displaced changes": 60,
+                "directory displaced changes": 9
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 73,
+                "multiVictimDecisions": 3,
+                "candidateStatesExamined": 339,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-1",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 237437,
+              "readBytes": {
+                "packed": 203998,
+                "root": 639,
+                "directory": 6194,
+                "changes": 26606
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 182025,
+                "directory": 4560,
+                "changes": 18518
+              },
+              "evictions": {
+                "packed displaced packed": 10553,
+                "directory displaced packed": 380,
+                "changes displaced packed": 1343,
+                "packed displaced changes": 108,
+                "packed displaced directory": 19,
+                "changes displaced directory": 1,
+                "changes displaced changes": 25,
+                "directory displaced changes": 1
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 234613,
+              "readBytes": {
+                "packed": 205230,
+                "root": 639,
+                "directory": 3458,
+                "changes": 25286
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 183257,
+                "changes": 17198,
+                "directory": 1824
+              },
+              "evictions": {
+                "packed displaced packed": 10894,
+                "directory displaced packed": 209,
+                "changes displaced packed": 1307,
+                "packed displaced changes": 104,
+                "changes displaced changes": 24,
+                "packed displaced directory": 8
+              },
+              "peakCacheWeight": 8192
+            },
+            "bundle-bytes": {
+              "totalBytes": 234143,
+              "readBytes": {
+                "packed": 204494,
+                "root": 639,
+                "directory": 4370,
+                "changes": 24640
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 182521,
+                "changes": 16552,
+                "directory": 2736
+              },
+              "evictions": {
+                "packed displaced packed": 10918,
+                "directory displaced packed": 228,
+                "changes displaced packed": 1182,
+                "packed displaced changes": 103,
+                "changes displaced directory": 6,
+                "changes displaced changes": 21,
+                "directory displaced changes": 1,
+                "packed displaced directory": 5,
+                "directory displaced directory": 2
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 11166,
+                "multiVictimDecisions": 110,
+                "candidateStatesExamined": 55599,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 232533,
+              "readBytes": {
+                "packed": 204430,
+                "root": 639,
+                "directory": 4066,
+                "changes": 23398
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 182457,
+                "changes": 15310,
+                "directory": 2432
+              },
+              "evictions": {
+                "packed displaced packed": 10885,
+                "directory displaced packed": 228,
+                "changes displaced packed": 1189,
+                "packed displaced changes": 97,
+                "changes displaced directory": 1,
+                "changes displaced changes": 21,
+                "directory displaced changes": 1,
+                "packed displaced directory": 11,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 11127,
+                "multiVictimDecisions": 112,
+                "candidateStatesExamined": 55669,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 86,
+                "directory displaced changes": 87,
+                "changes displaced changes": 268,
+                "directory displaced directory": 32
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 105795,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35492,
+                "changes": 69664
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33858,
+                "changes": 61576
+              },
+              "evictions": {
+                "changes displaced directory": 88,
+                "directory displaced changes": 117,
+                "changes displaced changes": 238,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 104687,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 35188,
+                "changes": 68860
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 33554,
+                "changes": 60772
+              },
+              "evictions": {
+                "changes displaced directory": 87,
+                "directory displaced changes": 86,
+                "changes displaced changes": 264,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 467,
+                "multiVictimDecisions": 0,
+                "candidateStatesExamined": 1097,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 107423,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 37924,
+                "changes": 68860
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 36290,
+                "changes": 60772
+              },
+              "evictions": {
+                "changes displaced directory": 96,
+                "directory displaced changes": 96,
+                "changes displaced changes": 254,
+                "directory displaced directory": 30
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 475,
+                "multiVictimDecisions": 1,
+                "candidateStatesExamined": 1117,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 512,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 203404,
+              "readBytes": {
+                "packed": 133631,
+                "root": 639,
+                "directory": 25460,
+                "changes": 43674
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 111658,
+                "directory": 23826,
+                "changes": 35586
+              },
+              "evictions": {
+                "packed displaced packed": 7851,
+                "directory displaced packed": 292,
+                "changes displaced packed": 211,
+                "changes displaced directory": 60,
+                "directory displaced changes": 55,
+                "changes displaced changes": 150,
+                "directory displaced directory": 15,
+                "packed displaced directory": 10,
+                "packed displaced changes": 16
+              },
+              "peakCacheWeight": 512
+            },
+            "encoded-cost": {
+              "totalBytes": 199224,
+              "readBytes": {
+                "packed": 133631,
+                "root": 639,
+                "directory": 22420,
+                "changes": 42534
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 111658,
+                "directory": 20786,
+                "changes": 34446
+              },
+              "evictions": {
+                "packed displaced packed": 8180,
+                "directory displaced packed": 143,
+                "changes displaced packed": 31,
+                "changes displaced directory": 57,
+                "directory displaced changes": 72,
+                "changes displaced changes": 140,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512
+            },
+            "bundle-bytes": {
+              "totalBytes": 198824,
+              "readBytes": {
+                "packed": 133615,
+                "root": 639,
+                "directory": 22420,
+                "changes": 42150
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 111642,
+                "directory": 20786,
+                "changes": 34062
+              },
+              "evictions": {
+                "packed displaced packed": 8246,
+                "directory displaced packed": 39,
+                "changes displaced directory": 57,
+                "directory displaced changes": 58,
+                "changes displaced packed": 65,
+                "changes displaced changes": 151,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 8538,
+                "multiVictimDecisions": 22,
+                "candidateStatesExamined": 34641,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 203384,
+              "readBytes": {
+                "packed": 133615,
+                "root": 639,
+                "directory": 26980,
+                "changes": 42150
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 111642,
+                "directory": 25346,
+                "changes": 34062
+              },
+              "evictions": {
+                "packed displaced packed": 8247,
+                "directory displaced packed": 34,
+                "changes displaced directory": 72,
+                "directory displaced changes": 76,
+                "changes displaced packed": 70,
+                "changes displaced changes": 133,
+                "directory displaced directory": 18,
+                "packed displaced changes": 4
+              },
+              "peakCacheWeight": 512,
+              "selectionWork": {
+                "bundleDecisions": 8552,
+                "multiVictimDecisions": 24,
+                "candidateStatesExamined": 34667,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 2048,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 74895,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 12996,
+                "changes": 61260
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 11362,
+                "changes": 53172
+              },
+              "evictions": {
+                "directory displaced changes": 73,
+                "changes displaced changes": 236,
+                "changes displaced directory": 40,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 71835,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 6612,
+                "changes": 64584
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 56496,
+                "directory": 4978
+              },
+              "evictions": {
+                "directory displaced changes": 37,
+                "changes displaced changes": 292,
+                "changes displaced directory": 18
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 73471,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 9652,
+                "changes": 63180
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 8018,
+                "changes": 55092
+              },
+              "evictions": {
+                "directory displaced changes": 15,
+                "changes displaced changes": 304,
+                "directory displaced directory": 19,
+                "changes displaced directory": 11
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 346,
+                "multiVictimDecisions": 3,
+                "candidateStatesExamined": 1469,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 69523,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 9956,
+                "changes": 58928
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 50840,
+                "directory": 8322
+              },
+              "evictions": {
+                "directory displaced changes": 31,
+                "changes displaced changes": 267,
+                "changes displaced directory": 22,
+                "directory displaced directory": 10
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 318,
+                "multiVictimDecisions": 12,
+                "candidateStatesExamined": 1374,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 2048,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 182992,
+              "readBytes": {
+                "packed": 130287,
+                "root": 639,
+                "directory": 10260,
+                "changes": 41806
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 108314,
+                "directory": 8626,
+                "changes": 33718
+              },
+              "evictions": {
+                "packed displaced packed": 6963,
+                "directory displaced packed": 345,
+                "changes displaced packed": 743,
+                "directory displaced changes": 31,
+                "changes displaced changes": 124,
+                "changes displaced directory": 16,
+                "packed displaced changes": 57,
+                "packed displaced directory": 18
+              },
+              "peakCacheWeight": 2048
+            },
+            "encoded-cost": {
+              "totalBytes": 180768,
+              "readBytes": {
+                "packed": 133231,
+                "root": 639,
+                "directory": 5092,
+                "changes": 41806
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 111258,
+                "changes": 33718,
+                "directory": 3458
+              },
+              "evictions": {
+                "packed displaced packed": 7554,
+                "directory displaced packed": 90,
+                "changes displaced packed": 648,
+                "directory displaced changes": 24,
+                "changes displaced changes": 152,
+                "packed displaced changes": 36,
+                "changes displaced directory": 5,
+                "packed displaced directory": 9
+              },
+              "peakCacheWeight": 2048
+            },
+            "bundle-bytes": {
+              "totalBytes": 180908,
+              "readBytes": {
+                "packed": 131663,
+                "root": 639,
+                "directory": 8132,
+                "changes": 40474
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 109690,
+                "directory": 6498,
+                "changes": 32386
+              },
+              "evictions": {
+                "packed displaced packed": 7552,
+                "directory displaced packed": 54,
+                "changes displaced packed": 550,
+                "directory displaced changes": 21,
+                "changes displaced changes": 143,
+                "changes displaced directory": 12,
+                "packed displaced changes": 42,
+                "directory displaced directory": 12,
+                "packed displaced directory": 2
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 7828,
+                "multiVictimDecisions": 88,
+                "candidateStatesExamined": 38238,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 180356,
+              "readBytes": {
+                "packed": 131567,
+                "root": 639,
+                "directory": 8132,
+                "changes": 40018
+              },
+              "rereadAfterEvictionBytes": {
+                "packed": 109594,
+                "directory": 6498,
+                "changes": 31930
+              },
+              "evictions": {
+                "packed displaced packed": 7543,
+                "directory displaced packed": 54,
+                "changes displaced packed": 550,
+                "directory displaced changes": 24,
+                "changes displaced changes": 143,
+                "changes displaced directory": 12,
+                "packed displaced changes": 36,
+                "directory displaced directory": 9,
+                "packed displaced directory": 6
+              },
+              "peakCacheWeight": 2048,
+              "selectionWork": {
+                "bundleDecisions": 7813,
+                "multiVictimDecisions": 92,
+                "candidateStatesExamined": 39318,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 8192,
+          "route": "partition",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 28807,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 4788,
+                "changes": 23380
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 3154,
+                "changes": 15292
+              },
+              "evictions": {
+                "changes displaced directory": 12,
+                "changes displaced changes": 72,
+                "directory displaced changes": 13
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 27161,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 1748,
+                "changes": 24774
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 16686,
+                "directory": 114
+              },
+              "evictions": {
+                "changes displaced changes": 92,
+                "directory displaced changes": 2,
+                "changes displaced directory": 2
+              },
+              "peakCacheWeight": 8186
+            },
+            "bundle-bytes": {
+              "totalBytes": 28695,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 2356,
+                "changes": 25700
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 17612,
+                "directory": 722
+              },
+              "evictions": {
+                "changes displaced changes": 95,
+                "directory displaced changes": 3,
+                "changes displaced directory": 3,
+                "directory displaced directory": 1
+              },
+              "peakCacheWeight": 8190,
+              "selectionWork": {
+                "bundleDecisions": 101,
+                "multiVictimDecisions": 1,
+                "candidateStatesExamined": 469,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 24085,
+              "readBytes": {
+                "packed": 0,
+                "root": 639,
+                "directory": 3572,
+                "changes": 19874
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 1938,
+                "changes": 11786
+              },
+              "evictions": {
+                "changes displaced directory": 8,
+                "changes displaced changes": 58,
+                "directory displaced changes": 10
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 71,
+                "multiVictimDecisions": 5,
+                "candidateStatesExamined": 330,
+                "entriesWithQueryHistory": 47
+              }
+            }
+          }
+        },
+        {
+          "order": "held-2",
+          "capacityBytes": 8192,
+          "route": "alternating",
+          "questions": 40,
+          "policies": {
+            "recency": {
+              "totalBytes": 156736,
+              "readBytes": {
+                "packed": 115087,
+                "root": 639,
+                "directory": 8132,
+                "changes": 32878
+              },
+              "rereadAfterEvictionBytes": {
+                "directory": 6498,
+                "changes": 24790,
+                "packed": 93114
+              },
+              "evictions": {
+                "packed displaced packed": 4935,
+                "packed displaced changes": 137,
+                "packed displaced directory": 21,
+                "directory displaced changes": 5,
+                "changes displaced directory": 3,
+                "changes displaced changes": 24,
+                "directory displaced directory": 3,
+                "changes displaced packed": 1440,
+                "directory displaced packed": 342
+              },
+              "peakCacheWeight": 8192
+            },
+            "encoded-cost": {
+              "totalBytes": 153732,
+              "readBytes": {
+                "packed": 115087,
+                "root": 639,
+                "directory": 3876,
+                "changes": 34130
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 26042,
+                "packed": 93114,
+                "directory": 2242
+              },
+              "evictions": {
+                "packed displaced packed": 5115,
+                "packed displaced changes": 140,
+                "changes displaced changes": 33,
+                "changes displaced packed": 1488,
+                "directory displaced packed": 171,
+                "packed displaced directory": 10
+              },
+              "peakCacheWeight": 8192
+            },
+            "bundle-bytes": {
+              "totalBytes": 154152,
+              "readBytes": {
+                "packed": 115087,
+                "root": 639,
+                "directory": 6004,
+                "changes": 32422
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 24334,
+                "directory": 4370,
+                "packed": 93114
+              },
+              "evictions": {
+                "packed displaced packed": 5212,
+                "packed displaced changes": 142,
+                "changes displaced changes": 21,
+                "changes displaced directory": 10,
+                "changes displaced packed": 1300,
+                "directory displaced packed": 228,
+                "directory displaced directory": 5,
+                "packed displaced directory": 4,
+                "directory displaced changes": 1
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 5515,
+                "multiVictimDecisions": 121,
+                "candidateStatesExamined": 33314,
+                "entriesWithQueryHistory": 0
+              }
+            },
+            "bundle-reuse": {
+              "totalBytes": 153124,
+              "readBytes": {
+                "packed": 115087,
+                "root": 639,
+                "directory": 6308,
+                "changes": 31090
+              },
+              "rereadAfterEvictionBytes": {
+                "changes": 23002,
+                "directory": 4674,
+                "packed": 93114
+              },
+              "evictions": {
+                "packed displaced packed": 5176,
+                "packed displaced changes": 134,
+                "changes displaced changes": 22,
+                "changes displaced directory": 4,
+                "changes displaced packed": 1305,
+                "directory displaced packed": 247,
+                "directory displaced directory": 5,
+                "packed displaced directory": 12,
+                "directory displaced changes": 1
+              },
+              "peakCacheWeight": 8192,
+              "selectionWork": {
+                "bundleDecisions": 5475,
+                "multiVictimDecisions": 122,
+                "candidateStatesExamined": 33798,
+                "entriesWithQueryHistory": 1421
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "authority": "Order holdouts use the same archived traces and questions. Encoded payload reads and bundle-selection states are separate counters. The frequency score uses completed-query touches and is a prediction, with no future-access guarantee."
+}
