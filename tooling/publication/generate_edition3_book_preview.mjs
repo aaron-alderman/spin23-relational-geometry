@@ -6,6 +6,7 @@ import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, write
 import { basename, dirname, extname, join, normalize, relative, resolve, sep } from "node:path";
 
 const root = resolve(process.cwd());
+const householdPackage = "applications/the-field-household";
 const argValue = name => {
   const index = process.argv.indexOf(name);
   return index >= 0 ? process.argv[index + 1] : null;
@@ -59,7 +60,7 @@ const sourceArticles = [
     slug: "household-orientations-and-correction",
     title: "Household orientations and revisable commitments",
     kicker: "Values, outcomes and the possibility of changing an arrangement",
-    source: "corpus/programmes/the-field/household-orientations-and-correction.md",
+    source: `${householdPackage}/corpus/programmes/the-field/household-orientations-and-correction.md`,
     label: "Human relational application",
     includeIntroduction: true,
     note: "An uncalibrated executable case with directed experience and a participant-exchange audit.",
@@ -1681,7 +1682,7 @@ const resolveMarkdownTarget = (source, target, fromFile = sourceOutputPath(sourc
   if (/^(?:[a-z]+:|#)/iu.test(target)) return target;
   const [pathPart, fragment = ""] = target.split("#", 2);
   const candidate = posix(normalize(join(dirname(source), pathPart))).replace(/^\.\//u, "");
-  if (candidate === "preview/the-field/household-explorer-v2.html") {
+  if (candidate === `${householdPackage}/preview/the-field/household-explorer-v2.html`) {
     return encodePath(relative(dirname(fromFile), join(siteRoot, "explorers", "household.html")));
   }
   if (librarySourceSet.has(candidate)) return `${sourcePageHref(fromFile, candidate)}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`;
@@ -2438,8 +2439,9 @@ mkdirSync(siteRoot, { recursive: true });
 // Compile this executable from its maintained sources during a clean publication
 // build. The preview file is disposable and need not be committed or served by GitHub.
 const householdExplorerOutput = join(siteRoot, "explorers", "household.html");
-execFileSync(process.execPath, [join(root, "tooling/the-field/build_household_explorer_v2.mjs"),
-  "--standalone-output", householdExplorerOutput], { cwd: root, encoding: "utf8" });
+const householdRoot = join(root, householdPackage);
+execFileSync(process.execPath, [join(householdRoot, "tooling/the-field/build_household_explorer_v2.mjs"),
+  "--standalone-output", householdExplorerOutput], { cwd: householdRoot, encoding: "utf8" });
 writeFileSync(householdExplorerOutput, readFileSync(householdExplorerOutput, "utf8")
   .replace("<head>", `<head><meta name="google-site-verification" content="${googleSiteVerificationToken}">`));
 mkdirSync(siteDetailsRoot, { recursive: true });

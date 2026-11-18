@@ -1,0 +1,839 @@
+{
+  "protocol": "the-field/household-symmetry-receipt/1",
+  "evidenceFamily": "the-field-household-v2-local-same-model",
+  "status": "local-algebra-and-finite-comparison-not-empirical-validation",
+  "transformation": "Exchange A and B with all their properties, directed experiences and rates; complement assignment shares; retain the executable agenda and tie-break rules.",
+  "tolerance": 1e-8,
+  "sources": [
+    {
+      "path": "evidence/data/the-field/household-orientations-v1.json",
+      "sha256": "c2a5ea6b25feabc3677ac28ceb3319b452e8bf2dd45af35ecabe375214ee1ef9"
+    },
+    {
+      "path": "evidence/data/the-field/household-orientations-v2.json",
+      "sha256": "37ff856a157ff379fb48d5ac2defdacbfff9a608917cde7082f3adce15c898fb"
+    },
+    {
+      "path": "verification/derive/the_field_household_model_v1.mjs",
+      "sha256": "365ba41f49222c86930e2bb4fd20e7058cac88d5b3467be06298356cf00fea10"
+    },
+    {
+      "path": "verification/derive/the_field_household_model_v2.mjs",
+      "sha256": "acaf200ac244b94a93514851dd23a3886701c713d7ae856e30cf7f1ee51a036e"
+    },
+    {
+      "path": "verification/verify/verify_the_field_household_symmetry_v1.mjs",
+      "sha256": "8b39c81ddb18ba46b17d277204cfbdd28ed51b7380a1b3d4550222808149935f"
+    }
+  ],
+  "localAllocationChecks": 50,
+  "localFeedbackChecks": 48,
+  "scope": "Local rules do not use sex or names. Whole-run exchange need not commute because the period agenda starts at a named participant and ties prefer smaller shareA. No universal role-neutrality or moral equivalence follows.",
+  "comparisons": [
+    {
+      "id": "roles/none/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/none/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/none/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/none/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/none/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/values/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/values/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/values/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.4625,
+        "exchangedShareMappedBack": 0.4625
+      }
+    },
+    {
+      "id": "roles/values/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/values/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/capacity/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/capacity/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/capacity/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/capacity/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/capacity/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/demands/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/demands/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/demands/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/demands/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/demands/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/combined/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "roles/combined/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 9,
+        "fields": [
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.125
+      }
+    },
+    {
+      "id": "roles/combined/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.4625,
+        "exchangedShareMappedBack": 0.4625
+      }
+    },
+    {
+      "id": "roles/combined/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 9,
+        "fields": [
+          "willingness-A"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.125
+      }
+    },
+    {
+      "id": "roles/combined/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/none/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/none/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/none/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/none/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/none/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/values/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/values/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/values/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/values/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/values/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/capacity/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/capacity/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/capacity/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 6,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.707532672,
+        "exchangedShareMappedBack": 0.707532672
+      }
+    },
+    {
+      "id": "equal/capacity/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/capacity/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/demands/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/demands/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/demands/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 6,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.5,
+        "exchangedShareMappedBack": 0.5
+      }
+    },
+    {
+      "id": "equal/demands/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 6,
+        "fields": [
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.5,
+        "exchangedShareMappedBack": 0.5
+      }
+    },
+    {
+      "id": "equal/demands/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/combined/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/combined/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/combined/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/combined/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "equal/combined/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/none/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/none/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/none/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/none/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/none/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/values/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/values/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/values/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 7,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.45753267200000003,
+        "exchangedShareMappedBack": 0.45753267200000003
+      }
+    },
+    {
+      "id": "capacity/values/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/values/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/capacity/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/capacity/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/capacity/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 7,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.45753267200000003,
+        "exchangedShareMappedBack": 0.45753267200000003
+      }
+    },
+    {
+      "id": "capacity/capacity/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/capacity/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/demands/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/demands/dismissal",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/demands/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 6,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.3625,
+        "exchangedShareMappedBack": 0.36250000000000004
+      }
+    },
+    {
+      "id": "capacity/demands/repair",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/demands/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/combined/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "capacity/combined/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 9,
+        "fields": [
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.25,
+        "exchangedShareMappedBack": 0.25
+      }
+    },
+    {
+      "id": "capacity/combined/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 7,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.45753267200000003,
+        "exchangedShareMappedBack": 0.45753267200000003
+      }
+    },
+    {
+      "id": "capacity/combined/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 9,
+        "fields": [
+          "willingness-A"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.25,
+        "exchangedShareMappedBack": 0.25
+      }
+    },
+    {
+      "id": "capacity/combined/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/none/constructive",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.337427626094592,
+        "exchangedShareMappedBack": 0.337427626094592
+      }
+    },
+    {
+      "id": "alternating/none/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.337427626094592
+      }
+    },
+    {
+      "id": "alternating/none/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.22461720259788145,
+        "exchangedShareMappedBack": 0.22461720259788143
+      }
+    },
+    {
+      "id": "alternating/none/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "backlog",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.22461720259788143
+      }
+    },
+    {
+      "id": "alternating/none/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/values/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/values/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.22484515475865596
+      }
+    },
+    {
+      "id": "alternating/values/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/values/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "backlog",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.16702600734598128
+      }
+    },
+    {
+      "id": "alternating/values/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/capacity/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/capacity/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.22484515475865596
+      }
+    },
+    {
+      "id": "alternating/capacity/unkept",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/capacity/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "backlog",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.16702600734598128
+      }
+    },
+    {
+      "id": "alternating/capacity/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/demands/constructive",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.2666184173963947,
+        "exchangedShareMappedBack": 0.2666184173963947
+      }
+    },
+    {
+      "id": "alternating/demands/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.2666184173963947
+      }
+    },
+    {
+      "id": "alternating/demands/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.19141146839858764,
+        "exchangedShareMappedBack": 0.1914114683985877
+      }
+    },
+    {
+      "id": "alternating/demands/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "backlog",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.1914114683985877
+      }
+    },
+    {
+      "id": "alternating/demands/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/combined/constructive",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    },
+    {
+      "id": "alternating/combined/dismissal",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.22484515475865596
+      }
+    },
+    {
+      "id": "alternating/combined/unkept",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 9,
+        "fields": [
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "A",
+        "exchangedRequesterMappedBack": "B",
+        "shareA": 0.5503064136628738,
+        "exchangedShareMappedBack": 0.5503064136628738
+      }
+    },
+    {
+      "id": "alternating/combined/repair",
+      "equivariantOnRecordedOutputs": false,
+      "firstDifference": {
+        "period": 8,
+        "fields": [
+          "assignment",
+          "reserve",
+          "backlog",
+          "willingness-A",
+          "willingness-B"
+        ],
+        "requester": "B",
+        "exchangedRequesterMappedBack": "A",
+        "shareA": 0.125,
+        "exchangedShareMappedBack": 0.16702600734598128
+      }
+    },
+    {
+      "id": "alternating/combined/unknown",
+      "equivariantOnRecordedOutputs": true,
+      "firstDifference": null
+    }
+  ]
+}
