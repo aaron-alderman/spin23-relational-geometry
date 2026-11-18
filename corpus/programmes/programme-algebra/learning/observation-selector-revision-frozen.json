@@ -1,0 +1,146 @@
+{
+  "priorResults": "66b7ef6ce6301dde9bee6bcff1261f0baf009da2d6e74ec17d817185ed2e73fe",
+  "priorLock": "00dcc455f37ad89daf694c48bd081597933dd31e41a44d48336effcc81ed5acc",
+  "runner": "fad7dae06b0919145cba2b95fb6950aa35e333c0796f7f6eefd0dce22b4fef11",
+  "priorModel": {
+    "intercept": 0.0,
+    "slope": 0.5784313725490197
+  },
+  "lossRows": [
+    [
+      "binary",
+      1,
+      "last",
+      1,
+      2
+    ],
+    [
+      "binary",
+      13,
+      "all",
+      1,
+      2
+    ],
+    [
+      "binary",
+      14,
+      "last",
+      1,
+      2
+    ],
+    [
+      "binary",
+      14,
+      "all",
+      1,
+      2
+    ],
+    [
+      "binary",
+      18,
+      "odd",
+      1,
+      2
+    ],
+    [
+      "binary",
+      20,
+      "any",
+      1,
+      2
+    ],
+    [
+      "binary",
+      21,
+      "first",
+      1,
+      2
+    ],
+    [
+      "binary",
+      23,
+      "first",
+      1,
+      2
+    ],
+    [
+      "binary",
+      23,
+      "all",
+      1,
+      2
+    ],
+    [
+      "binary",
+      25,
+      "all",
+      1,
+      2
+    ],
+    [
+      "binary",
+      27,
+      "odd",
+      1,
+      2
+    ],
+    [
+      "binary",
+      29,
+      "last",
+      1,
+      2
+    ],
+    [
+      "binary",
+      31,
+      "first",
+      1,
+      2
+    ]
+  ],
+  "lossFrequency": {
+    "last": 3,
+    "all": 4,
+    "odd": 2,
+    "any": 1,
+    "first": 3
+  },
+  "trials": [
+    {
+      "method": "original-order",
+      "stillLost": 13,
+      "allRegressions": 13,
+      "totalSurvivors": 748
+    },
+    {
+      "method": "count-regressions",
+      "stillLost": 9,
+      "allRegressions": 10,
+      "totalSurvivors": 748
+    },
+    {
+      "method": "excess-survivors",
+      "stillLost": 9,
+      "allRegressions": 10,
+      "totalSurvivors": 748
+    },
+    {
+      "method": "weighted-excess",
+      "stillLost": 8,
+      "allRegressions": 10,
+      "totalSurvivors": 748
+    },
+    {
+      "method": "weighted-ambiguity",
+      "stillLost": 8,
+      "allRegressions": 15,
+      "totalSurvivors": 748
+    }
+  ],
+  "method": "weighted-excess",
+  "omissionMethod": "original-order",
+  "seed": 31987012,
+  "batches": 4,
+  "protocol": "Primary: regressions versus the supplied first probe. Secondary: direct fewer/same/more, unique and total survivors. Each selector takes one aggregate per truth. Four batches of 32 fresh menus in each family; score all six truths."
+}

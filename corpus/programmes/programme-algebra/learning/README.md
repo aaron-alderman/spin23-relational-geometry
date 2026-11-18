@@ -1,5 +1,18 @@
 # Learning from a transition calculation
 
+## Choosing which observations to make
+
+The [observation selector](observation-selector.md) fits a probe-ranking rule
+from archived proposal audits and compares it with a passive first probe.
+The [tie-break revision](observation-selector-revision.md) reduces cases
+where the selector leaves more candidates than that passive probe, with
+the same total number of survivors. The [second-probe experiment](second-probe.md)
+compares conditioning on the first answer with a fixed follow-up at the same
+two-label budget. These are finite exact-label benchmarks. The archived
+parity windows reuse a single decoded trace.
+
+## Learning a transition guard
+
 [AZ-121 → AZ-122](az-121-to-122.json) records the proposed shortcut, why it
 failed, the repair and the scope of the result. The scattering-to-bound
 overlap was an amplitude per square root of energy. The repair formed a

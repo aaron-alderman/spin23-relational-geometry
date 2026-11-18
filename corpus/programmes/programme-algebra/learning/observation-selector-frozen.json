@@ -1,0 +1,154 @@
+{
+  "sources": {
+    "survival-proposal-audit": "752adc67a7f6413f3dfe3f5d42df76aad9e898cf004892d0b40c3a85a7e605dc",
+    "detector-inferred-proposals": "1ded4d830b1340b19b6d405f2b1c65c768f2be9427fba232e2e0ad7da4aa7db8",
+    "detector-proposal-challenge": "f422a4853a4b0712113d101f85bc951b03b9731061a2cf51ed228155fa591d06"
+  },
+  "rows": [
+    {
+      "family": "survival",
+      "probe": "AZ-127-helium-2tripletS1",
+      "predictions": [
+        0.07340516654980762,
+        0.07340516654980762,
+        0.07340516654980762
+      ],
+      "observed": 0.07340516654980762,
+      "disagreement": 0,
+      "eliminatedFraction": 0.0
+    },
+    {
+      "family": "survival",
+      "probe": "AZ-127-calcium-40-D5/2-free-250ms",
+      "predictions": [
+        0.19268479299632812,
+        0.20608542406784605,
+        0.1819449246157308
+      ],
+      "observed": 0.19268479299632812,
+      "disagreement": 1,
+      "eliminatedFraction": 0.6666666666666667
+    },
+    {
+      "family": "survival",
+      "probe": "AZ-127-iron-57-14.4keV-gamma-100ns/any-exit",
+      "predictions": [
+        0.5070231391259499,
+        0.6810037379422272,
+        0.4236155406336152
+      ],
+      "observed": 0.5070231391259499,
+      "disagreement": 1,
+      "eliminatedFraction": 0.6666666666666667
+    },
+    {
+      "family": "detector",
+      "probe": "BART",
+      "predictions": [
+        0.0007513993037038029,
+        0.0007513993037038029
+      ],
+      "observed": 0.0007513993037038029,
+      "disagreement": 0,
+      "eliminatedFraction": 0.0
+    },
+    {
+      "family": "detector",
+      "probe": "LORAX",
+      "predictions": [
+        0.0018210051832421958,
+        0.0018210051832421958
+      ],
+      "observed": 0.0018210051832421958,
+      "disagreement": 0,
+      "eliminatedFraction": 0.0
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#BART.perTrial",
+      "predictions": [
+        0.00013124512749228232,
+        0.0007213621048049626
+      ],
+      "observed": 0.00013124512749228232,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-run-budget/replay.json#LORAX.perTrial",
+      "predictions": [
+        0.0003022822064558747,
+        0.0016614325640921062
+      ],
+      "observed": 0.0003022822064558747,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.nominal.perTrial",
+      "predictions": [
+        0.0008424147765740081,
+        0.0007513993037038029
+      ],
+      "observed": 0.0008424147765740081,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#BART.bound.perTrial",
+      "predictions": [
+        0.000833700638583318,
+        0.0007462366601430647
+      ],
+      "observed": 0.000833700638583318,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.nominal.perTrial",
+      "predictions": [
+        0.002041579845788352,
+        0.0018210051832421958
+      ],
+      "observed": 0.002041579845788352,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    },
+    {
+      "family": "detector",
+      "probe": "corpus/programmes/programme-algebra/learning/fresh-agent-calibration-box/replay.json#LORAX.bound.perTrial",
+      "predictions": [
+        0.002018709093425015,
+        0.0018069252462583644
+      ],
+      "observed": 0.002018709093425015,
+      "disagreement": 1,
+      "eliminatedFraction": 0.5
+    }
+  ],
+  "model": {
+    "intercept": 0.0,
+    "slope": 0.5784313725490197
+  },
+  "leaveOneFamilyOut": {
+    "survival": {
+      "intercept": 0.0,
+      "slope": 0.5
+    },
+    "detector": {
+      "intercept": 5.551115123125783e-17,
+      "slope": 0.6666666666666666
+    }
+  },
+  "noHistory": {
+    "slope": 0,
+    "intercept": 0
+  },
+  "tolerance": 1e-12,
+  "feature": "fraction of candidate pairs with predictions separated by more than twice tolerance",
+  "design": "One observed aggregate per policy per hidden target. First supplied probe for the passive learner and for utility ties. Synthetic test enumerates all six truths on 32 menus of 8 probes for each of two families. Each probe costs four histories of length five. Recorded parity uses equal-sized disjoint blocks, 4 windows of 5 samples, targets endpoint and any. Seed 20261118."
+}

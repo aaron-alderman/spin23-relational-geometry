@@ -1,5 +1,15 @@
 * text=auto eol=lf
 
+# These transition-learning locks and runners bind the original bytes by SHA-256.
+/corpus/programmes/programme-algebra/learning/observation-selector-frozen.json -text !eol whitespace=cr-at-eol
+/corpus/programmes/programme-algebra/learning/observation-selector-test.json -text !eol whitespace=cr-at-eol
+/corpus/programmes/programme-algebra/learning/observation-selector-revision-frozen.json -text !eol whitespace=cr-at-eol
+/corpus/programmes/programme-algebra/learning/observation-selector-revision-test.json -text !eol whitespace=cr-at-eol
+/corpus/programmes/programme-algebra/learning/second-probe-frozen.json -text !eol whitespace=cr-at-eol
+/tooling/programme-algebra/test-observation-selector.py -text !eol whitespace=cr-at-eol,-blank-at-eof
+/tooling/programme-algebra/revise-observation-selector.py -text !eol whitespace=cr-at-eol
+/tooling/programme-algebra/learn-second-probe.py -text !eol whitespace=cr-at-eol
+
 # Preserve source bytes referenced by optical-boundary SHA-256 receipts.
 /corpus/claims/0100-0199/144_null_links_and_cellular_causality.md -text !eol
 /corpus/claims/0100-0199/176_eight_body_diagonal_weyl_walk_and_null_speed_gate.md -text !eol
